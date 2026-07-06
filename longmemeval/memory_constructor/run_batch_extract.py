@@ -42,6 +42,34 @@ def _write_text(path: Path, text: str) -> None:
     path.write_text(text, encoding="utf-8")
 
 
+def _now_str() -> str:
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+
+def _log(msg: str) -> None:
+    print(f"[{_now_str()}] {msg}", flush=True)
+
+
+def _record_identity(record_dir: Path, segments_root: Path) -> str:
+    """
+    Prefer real question_id from summary.json.
+    Fallback to relative path, e.g. question_type/0001_xxx.
+    """
+    summary_path = record_dir / "summary.json"
+    if summary_path.exists():
+        try:
+            summary = json.loads(summary_path.read_text(encoding="utf-8"))
+            qid = _clean(summary.get("question_id"))
+            qtype = _clean(summary.get("question_type"))
+            if qid and qtype:
+                return f"{qtype}/{qid}"
+            if qid:
+                return qid
+        except Exception:
+            pass
+    return record_dir.relative_to(segments_root).as_posix()
+
+
 def _iter_record_dirs(segments_root: Path) -> List[Path]:
     # Support both one-level and two-level directory structures
     two_level = [p.parent for p in sorted(segments_root.glob("*/*/summary.json"))]
@@ -91,11 +119,24 @@ def _process_record(
     rows: List[Dict[str, Any]] = []
     all_memories: List[Dict[str, Any]] = []
     windows_dir = record_dir / "windows"
+    window_paths = _window_paths(windows_dir)
+    window_total = len(window_paths)
+
+    _log(
+        f"[record {record_index}/{records_total}] "
+        f"question_id={record_id} | windows={window_total} | start extraction"
+    )
 
     for window_path in _window_paths(windows_dir):
         window = _load_window(window_path)
         window_idx = int(window.get("window_index", 0))
         overlap_count = overlap if window_idx > 0 else 0
+        _log(
+            f"[record {record_index}/{records_total}] "
+            f"question_id={record_id} | "
+            f"window {window_pos}/{window_total} "
+            f"(window_index={window_idx}) | start"
+        )
         win_dir = out_record_dir / f"window_{window_idx:04d}"
         _ensure_dir(win_dir)
 
@@ -118,6 +159,12 @@ def _process_record(
         attempt = 0
         while attempt < max(1, max_retries):
             attempt += 1
+            _log(
+                f"[record {record_index}/{records_total}] "
+                f"question_id={record_id} | "
+                f"window {window_pos}/{window_total} | "
+                f"attempt {attempt}/{max_retries}"
+            )
             try:
                 response_json = _call_chat(
                     base_url=base_url,
@@ -139,9 +186,16 @@ def _process_record(
                 break
             except Exception as exc:
                 err = f"{type(exc).__name__}: {exc}"
+                _log(
+                    f"[record {record_index}/{records_total}] "
+                    f"question_id={record_id} | "
+                    f"window {window_pos}/{window_total} | "
+                    f"attempt {attempt}/{max_retries} failed: {err}"
+                )
                 if attempt >= max_retries:
                     break
                 time.sleep(min(2 * attempt, 8))
+
 
         if response_json is not None:
             _write_json(win_dir / "raw_response.json", response_json)
@@ -162,6 +216,13 @@ def _process_record(
             "usage": (response_json or {}).get("usage"),
         }
         _write_json(win_dir / "result.json", result)
+        _log(
+            f"[record {record_index}/{records_total}] "
+            f"question_id={record_id} | "
+            f"window {window_pos}/{window_total} | "
+            f"done ok={ok} memories={len(memories)} "
+            f"elapsed={result['elapsed_seconds']:.2f}s"
+        )
         rows.append(result)
 
         for i, m in enumerate(memories):
@@ -187,6 +248,13 @@ def _process_record(
             "memory_count": len(all_memories),
             "memories": all_memories,
         },
+    )
+
+    _log(
+        f"[record {record_index}/{records_total}] "
+        f"question_id={record_id} | finished | "
+        f"ok_windows={summary['ok_count']}/{summary['count']} | "
+        f"total_memories={summary['total_memory_count']}"
     )
     return summary
 
@@ -230,13 +298,20 @@ def run(args: argparse.Namespace) -> Path:
             "resume": bool(args.resume),
         },
     )
+    _log(f"Memory extraction started: total_records={len(record_dirs)} output_root={out_root}")
 
-    for record_dir in record_dirs:
+    for record_index, record_dir in enumerate(record_dirs, start=1):
         rel = _output_rel(record_dir, segments_root)
+        record_id = _record_identity(record_dir, segments_root)
         summary_path = out_root / rel / "summary.json"
         if args.resume and summary_path.exists():
             skipped += 1
             done += 1
+            _log(
+                f"[record {record_index}/{len(record_dirs)}] "
+                f"question_id={record_id} | skipped existing | "
+                f"done={done}/{len(record_dirs)}"
+            )
             continue
 
         _write_json(
@@ -256,6 +331,11 @@ def run(args: argparse.Namespace) -> Path:
             },
         )
         try:
+            _log(
+            f"[record {record_index}/{len(record_dirs)}] "
+            f"question_id={record_id} | start | "
+            f"done={done} failed={failed} skipped={skipped}"
+        )
             _process_record(
                 record_dir=record_dir,
                 segments_root=segments_root,
@@ -267,12 +347,24 @@ def run(args: argparse.Namespace) -> Path:
                 timeout=args.timeout,
                 max_retries=args.max_retries,
                 overlap=args.overlap,
+                record_id: str,
+                record_index: int,
+                records_total: int,
             )
             done += 1
+            _log(
+            f"[record {record_index}/{len(record_dirs)}] "
+            f"question_id={record_id} | record done | "
+            f"done={done}/{len(record_dirs)} failed={failed} skipped={skipped}"
+        )
         except Exception as exc:
             failed += 1
-            failures.append({"record_dir": str(record_dir), "error": f"{type(exc).__name__}: {exc}"})
-            _write_json(failures_path, {"failures": failures})
+            err_msg = f"{type(exc).__name__}: {exc}"
+            failures.append({"record_dir": str(record_dir), "question_id": record_id, "error": err_msg})
+            _log(
+                f"[record {record_index}/{len(record_dirs)}] "
+                f"question_id={record_id} | record failed: {err_msg}"
+            )
 
         _write_json(
             status_path,
@@ -326,6 +418,11 @@ def run(args: argparse.Namespace) -> Path:
             "inflight_record": None,
             "resume": bool(args.resume),
         },
+    )
+    _log(
+        f"Memory extraction completed: "
+        f"done={done}/{len(record_dirs)} failed={failed} skipped={skipped} "
+        f"output_root={out_root}"
     )
     return out_root
 

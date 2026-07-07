@@ -64,6 +64,12 @@ def _write_json(path: Path, payload: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
+def _now_str() -> str:
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+
+def _log(msg: str) -> None:
+    print(f"[{_now_str()}] {msg}", flush=True)
 
 def _call_chat(
     *,
@@ -119,6 +125,16 @@ def _slugify(value: Any) -> str:
     text = re.sub(r"[^a-zA-Z0-9_-]+", "_", str(value or "").strip())
     text = text.strip("_")
     return text or "unknown"
+
+def _question_identity(conv_name: str, item: Dict[str, Any]) -> str:
+    """
+    LongMemEval normally has question_id and question_type in raw row.
+    Fallback to sample_id / index when question_id is missing.
+    """
+    raw = item.get("raw") or {}
+    qtype = str(raw.get("question_type") or conv_name or "unknown").strip() or "unknown"
+    qid = raw.get("question_id") or item.get("sample_id") or f"row_{item.get('index', 0)}"
+    return f"{qtype}/{_slugify(qid)}"
 
 
 def _question_type_from_path(path: Path) -> str:
@@ -191,15 +207,30 @@ def run(args: argparse.Namespace) -> Path:
         },
     )
 
+
     session = requests.Session()
     session.trust_env = False
 
-    total = 0
+    total = sum(
+        len(
+            conv_entry["questions"][: args.max_questions_per_conv]
+            if args.max_questions_per_conv > 0
+            else conv_entry["questions"]
+        )
+        for conv_entry in conversations
+    )
+
     done = 0
     fail = 0
     summary_rows: List[Dict[str, Any]] = []
 
-    for conv_entry in conversations:
+    _log(
+        f"Query analysis started: "
+        f"conversations={len(conversations)} total_questions={total} "
+        f"output_root={run_root}"
+    )
+
+    for conv_pos, conv_entry in enumerate(conversations, start=1):
         conv_name = conv_entry["conv_name"]
         conv_out = run_root / conv_name
         conv_out.mkdir(parents=True, exist_ok=True)
@@ -207,15 +238,25 @@ def run(args: argparse.Namespace) -> Path:
         questions = conv_entry["questions"]
         if args.max_questions_per_conv > 0:
             questions = questions[: args.max_questions_per_conv]
-        total += len(questions)
 
-        for item in questions:
+        _log(
+            f"[conv {conv_pos}/{len(conversations)}] "
+            f"conv_name={conv_name} | questions={len(questions)} | start"
+        )
+
+        for question_pos, item in enumerate(questions, start=1):
             idx = int(item["index"])
             q = item["question"]
             sample_id = str(item.get("sample_id") or f"{idx:04d}")
+            question_id = _question_identity(conv_name, item)
+
+            _log(
+                f"[question {done + fail + 1}/{total}] "
+                f"question_id={question_id} | "
+                f"conv={conv_name} | local={question_pos}/{len(questions)} | start"
+            )
             out_dir = conv_out / sample_id
             out_dir.mkdir(parents=True, exist_ok=True)
-
             result_path = out_dir / "result.json"
             if args.resume and result_path.exists():
                 try:
@@ -223,10 +264,18 @@ def run(args: argparse.Namespace) -> Path:
                     if old.get("ok") is True:
                         done += 1
                         summary_rows.append(old)
+                        _log(
+                            f"[question {done + fail}/{total}] "
+                            f"question_id={question_id} | skipped existing | "
+                            f"done={done} fail={fail}"
+                        )
                         continue
-                except Exception:
-                    pass
-
+                except Exception as exc:
+                    _log(
+                        f"[question {done + fail + 1}/{total}] "
+                        f"question_id={question_id} | resume check failed: "
+                        f"{type(exc).__name__}: {exc}"
+                    )
             question_date = str(item.get("raw", {}).get("question_date") or "").strip()
             prompt = _build_prompt(q, question_date=question_date)
             _write_json(out_dir / "input.json", item["raw"])
@@ -240,6 +289,11 @@ def run(args: argparse.Namespace) -> Path:
             started = time.time()
 
             for attempt in range(1, args.max_retries + 1):
+                _log(
+                    f"[question {done + fail + 1}/{total}] "
+                    f"question_id={question_id} | "
+                    f"attempt {attempt}/{args.max_retries}"
+                )
                 try:
                     response_json = _call_chat(
                         session=session,
@@ -259,6 +313,11 @@ def run(args: argparse.Namespace) -> Path:
                     break
                 except Exception as exc:
                     error = f"{type(exc).__name__}: {exc}"
+                    _log(
+                        f"[question {done + fail + 1}/{total}] "
+                        f"question_id={question_id} | "
+                        f"attempt {attempt}/{args.max_retries} failed: {error}"
+                    )
                     if attempt < args.max_retries:
                         time.sleep(min(2 * attempt, 8))
 
@@ -286,7 +345,11 @@ def run(args: argparse.Namespace) -> Path:
                 done += 1
             else:
                 fail += 1
-
+            _log(
+                f"[question {done + fail}/{total}] "
+                f"question_id={question_id} | done ok={ok} "
+                f"elapsed={elapsed:.2f}s | done={done} fail={fail}"
+            )
             _write_json(
                 run_root / "status.json",
                 {
@@ -294,7 +357,13 @@ def run(args: argparse.Namespace) -> Path:
                     "total": total,
                     "done": done,
                     "fail": fail,
-                    "running": {"conv_name": conv_name, "index": idx},
+                    "running": {
+                        "conv_name": conv_name,
+                        "index": idx,
+                        "question_id": question_id,
+                        "question_pos": question_pos,
+                        "question_count_in_conv": len(questions),
+                    },
                     "updated_at": time.time(),
                 },
             )
@@ -307,9 +376,13 @@ def run(args: argparse.Namespace) -> Path:
         "rows": summary_rows,
     }
     _write_json(run_root / "summary.json", final)
+    _log(
+        f"Query analysis completed: "
+        f"total={total} done={done} fail={fail} output_root={run_root}"
+    )
+
     print(json.dumps(final, ensure_ascii=False, indent=2))
     return run_root
-
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Run LongMemEval query analysis grouped by question type.")

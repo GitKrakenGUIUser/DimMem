@@ -97,6 +97,10 @@ def _process_record(
     timeout: int,
     max_retries: int,
     overlap: int,
+    record_id: str,
+    record_index: int,
+    records_total: int,
+
 ) -> Dict[str, Any]:
     rel = _output_rel(record_dir, segments_root)
     out_record_dir = output_root / rel
@@ -127,8 +131,8 @@ def _process_record(
         f"question_id={record_id} | windows={window_total} | start extraction"
     )
 
-    for window_path in _window_paths(windows_dir):
-        window = _load_window(window_path)
+    for window_pos, window_path in enumerate(window_paths, start=1):
+        window = json.loads(window_path.read_text(encoding="utf-8"))
         window_idx = int(window.get("window_index", 0))
         overlap_count = overlap if window_idx > 0 else 0
         _log(
@@ -347,9 +351,9 @@ def run(args: argparse.Namespace) -> Path:
                 timeout=args.timeout,
                 max_retries=args.max_retries,
                 overlap=args.overlap,
-                record_id: str,
-                record_index: int,
-                records_total: int,
+                record_id=record_id,
+                record_index=record_index,
+                records_total=len(record_dirs),
             )
             done += 1
             _log(

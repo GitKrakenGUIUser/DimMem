@@ -1,0 +1,147 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-09T23:46:00, Tue] 1.User: Hi Chat, can you please create A and B variations for this email. Please do not change the context or add extra length. {Hi|Hey} [Name],
+
+{Email Personalization Variable 2}
+
+Comparative is an analytics solution for payment processors that helps eliminate analyst backlog and reduce the time and cost to deliver insights by 10x.
+
+It’s a significant evolution from the complex, slow, and expensive BI tools of the last 20 years. 
+
+The easiest way to get to a feel for Comparative is to check out this 2-minute demo of how we analyze key metrics like {the number of transactions completed | the number of transactions requested | the number of conversions}.
+
+{Interested in learning | Curious to know | Want to learn} more? We start with a 30-day pilot and would love to chat. Let me know what time is most convenient for you. 
+
+Happy Watching!
+[2023-05-09T23:46:00.500000, Tue] 2.User: Here's 3 subject lines Elevate Your Business Insights
+Streamline Data Analysis
+Maximize Data Potential CAN you create a few more variations
+[2023-05-12T05:11:00, Fri] 3.User: I'm looking for some BBQ sauce recipe recommendations. I tried making my own last weekend, but it was a bit too sweet for my taste.
+[2023-05-12T05:11:00.500000, Fri] 4.User: I was actually at a barbecue party at my friend Alex's house recently and had the most amazing slow-cooked ribs. He used a dry rub made from a secret recipe that his grandfather used to make, and it was incredible. I've been craving for them ever since.
+[2023-05-12T05:11:01, Fri] 5.User: I'm actually planning to try out some new types of wood chips for smoking this weekend. I've heard that applewood is better suited for poultry and pork, so I'm going to try smoking some chicken breasts and see how they turn out.
+[2023-05-12T05:11:01.500000, Fri] 6.User: I was thinking of trying out a new BBQ joint in town called Smokey's that just opened up downtown. Have you heard anything about it?
+[2023-05-12T05:11:02, Fri] 7.User: I've been meaning to try out some new BBQ joints in town, and Smokey's has been on my radar for a while now. I've heard great things about their brisket, and I'm curious to see how it compares to some of the other BBQ spots I've tried.
+[2023-05-12T05:11:02.500000, Fri] 8.User: I'm planning to check out Smokey's with some friends this weekend. I've also been meaning to ask Alex for his secret dry rub recipe, but I keep forgetting.
+[2023-05-21T00:03:00, Sun] 9.User: I'm looking for some book recommendations. Can you suggest some new releases in the sci-fi and fantasy genre?
+[2023-05-21T00:03:00.500000, Sun] 10.User: I'm particularly interested in sci-fi novels that explore the consequences of advanced technology on human relationships. Can you recommend some recent titles that fit this theme?
+[2023-05-21T00:03:01, Sun] 11.User: These recommendations are great, but I'm particularly interested in novels that focus on AI and its impact on human relationships. Can you recommend some recent titles that fit this theme?
+[2023-05-21T00:03:01.500000, Sun] 12.User: I'm actually interested in AI-driven dystopias. Can you recommend some recent titles that fit this theme?
+[2023-05-21T00:03:02, Sun] 13.User: I'm actually interested in AI singularity. Can you recommend some recent titles that fit this theme?
+[2023-05-21T00:03:02.500000, Sun] 14.User: I'm particularly interested in AI-human hybrids. Can you recommend some recent titles that fit this theme?
+[2023-05-21T05:48:00, Sun] 15.User: I'm trying to plan my meals for the week and was wondering if you could give me some inspiration for healthy lunch ideas that can be reheated.

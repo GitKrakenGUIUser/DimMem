@@ -1,0 +1,247 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-25T05:03:00, Thu] 1.User: rewrite it, and expand words for each part up to 70
+[2023-05-25T05:03:00.500000, Thu] 2.User: rewrite it in academic style and each part should not be more than 70 words
+[2023-05-25T05:03:01, Thu] 3.User: test
+[2023-05-25T05:03:01.500000, Thu] 4.User: Task: An IT strategy to ensure the project will deliver a solution that supports the raised
+problem (answers research question and fulfills the objectives)
+This should build on what you wrote in your PID and is a summary of how you will solve the
+business problem and/or business activity and/or solves identified problems and/or has unique
+features to fill the need gap.
+Development results should be reflected in IT strategy as well. Percent of the development
+work done so far and what part of your system is ready, any changes to scope or functionality
+applied.
+
+IT objective that mentioned in PID:
+[2023-05-25T05:03:02, Thu] 5.User: Task: An IT strategy to ensure the project will deliver a solution that supports the raised
+problem (answers research question and fulfills the objectives)
+This should build on what you wrote in your PID and is a summary of how you will solve the
+business problem and/or business activity and/or solves identified problems and/or has unique
+features to fill the need gap.
+Development results should be reflected in IT strategy as well. Percent of the development
+work done so far and what part of your system is ready, any changes to scope or functionality
+applied.
+
+IT objective that mentioned in PID: 
+• To completely develop the backend part of the application using the PHP language framework - Laravel by the beginning of February 2023.
+• To develop an admin panel for administration using the Voyager package of Laravel by the end of 2022.
+• To develop an online job marketplace where employers can submit assignments and performers can complete them by the end of March 2023.
+SurfAndWork allows the customer to find specialists for their task, and gives performers the opportunity to find tasks based on their skills. The main goal of the project is to connect two users. Their further actions take place outside this project. To achieve this, the following steps will be taken:
+• Development of the front-end part of the application for both the client and the administration.
+• Development of the back-end part of the application on Laravel and host the web application on Heroku hosting.
+• Development of API part to work with CRUD.
+• Analyzes and results of primary and secondary studies will be used.
+[2023-05-25T05:03:02.500000, Thu] 6.User: make An IT strategy to ensure the project will deliver a solution that supports the raised
+problem (answers research question and fulfills the objectives). This should build on what you wrote in your PID and is a summary of how you will solve the
+business problem and/or business activity and/or solves identified problems and/or has unique
+features to fill the need gap. This should be more detailed than in PID
+[2023-05-25T04:26:00, Thu] 7.User: I'm looking to take some online courses to improve my skills in AI and machine learning. Can you recommend any good courses on Coursera or edX that cover deep learning and natural language processing? By the way, I've been in the industry for two years now, since completing my Master's degree in Computer Science.
+[2023-05-25T04:26:00.500000, Thu] 8.User: I'm also planning to mentor more students from my alma mater. Can you help me draft a brief email to send to the university's career services department to explore potential opportunities for mentorship?
+[2023-05-25T04:26:01, Thu] 9.User: I'd also like to know more about the conference on emerging technologies I attended last week. Can you provide me with some information on the latest developments in AI, blockchain, and cybersecurity that were discussed at the conference?
+[2023-05-25T04:26:01.500000, Thu] 10.User: I'm interested in learning more about AI-powered cybersecurity, specifically AI-powered threat hunting. Can you tell me more about how it works and its applications in various industries?
+[2023-05-25T04:26:02, Thu] 11.User: I'd like to know more about the potential risks and limitations of AI-powered threat hunting. What are some of the challenges and concerns associated with relying on AI and machine learning for threat detection and response?
+[2023-05-25T04:26:02.500000, Thu] 12.User: I'd like to ask about the potential applications of AI-powered threat hunting in the field of Industrial Control Systems (ICS) security. How can AI-powered threat hunting help protect critical infrastructure and prevent cyber-physical attacks?
+[2023-05-25T21:12:00, Thu] 13.User: Read the following passage and wait for the questions that follow: “You might think that borrowing a match upon the street is a simple thing. But any man who has ever tried it will assure you that it is not, and will be prepared to swear to the truth of my experience of the other evening.
+I was standing on the corner of the street with a firecracker that I wanted to light. I had no match. I waited till a decent, ordinary-looking man came along. Then I said:
+"Excuse me, sir, but could you oblige me with the loan of a match?"
+"A match?" he said, "why certainly." Then he unbuttoned his overcoat and put his hand in the pocket of his waistcoat. "I know I have one," he went on, "and I'd almost swear it's in the bottom pocket—or, hold on, though, I guess it may be in the top—just wait till I put these parcels down on the sidewalk."
+"Oh, don't trouble," I said, "it's really of no consequence."
+"Oh, it's no trouble, I'll have it in a minute; I know there must be one in here somewhere"—he was digging his fingers into his pockets as he spoke—"but you see this isn't the waistcoat I generally…"
+I saw that the man was getting excited about it. "Well, never mind," I protested; "if that isn't the waistcoat that you generally—why, it doesn't matter."
+"Hold on, now, hold on!" the man said, "I've got one of the cursed things in here somewhere. I guess it must be in with my watch. No, it's not there either. Wait till I try my coat. If that confounded tailor only knew enough to make a pocket so that a man could get at it!"
+He was getting pretty well worked up now. He had thrown down his walking-stick and was plunging at his pockets with his teeth set. "It's that cursed young boy of mine," he hissed; "this comes of his fooling in my pockets. By Gad! Perhaps I won't warm him up when I get home. Say, I'll bet that it's in my hip-pocket. You just hold up the tail of my overcoat a second till I…"
+"No, no," I protested again, "please don't take all this trouble, it really doesn't matter. I'm sure you needn't take off your overcoat, and oh, pray don't throw away your letters and things in the snow like that, and tear out your pockets by the roots! Please, please don't trample over your overcoat and put your feet through the parcels. I do hate to hear you swearing at your son, with that peculiar whine in your voice. Don't—please don't tear your clothes so savagely."
+Suddenly the man gave a grunt of exultation, and drew his hand up from inside the lining of his coat.
+"I've got it," he cried. "Here you are!" Then he brought it out under the light.
+It was a toothpick.
+Yielding to the impulse of the moment I pushed him under the wheels of a trolley-car, and ran.”
+Questions:
+1. The narrator was talking with a man who was \_\_\_\_\_\_\_\_\_\_\_
+A. did not like to share his belongings
+B. did not like being disturbed
+C. careful with his belongings
+D. eager to help
+
+2. What was the narrator’s attitude towards the man when the latter was not giving up in his search for a match?
+A. The narrator found the man’s efforts amusing.
+B. The narrator wanted to offer a match to the man.
+C. The narrator wanted the man to stop the search.
+D. The narrator admired the man’s commitment.
+
+3. At the beginning of the story, what was the man carrying?
+A. matches
+B. parcels
+C. an umbrella
+D. a newspaper
+
+4. At the beginning of the story, the narrator wanted \_\_\_\_\_\_\_\_\_\_\_\_\_
+A. a match
+B. a firecracker
+C. a toothpick
+D. a parcel
+5. Choose the correct statement.
+A. The narrator had robbed a man of his matches.
+B. The narrator loaned a match to a man.
+C. The narrator had a delightful time with a man.
+D. The narrator had a horrible experience with a man.
+6. What fault did the man find with his coat?
+A. Its pockets were not stitched properly.
+B. Its pockets were torn by his son.
+C. Its pockets had large holes.
+D. It was too tight to his liking.
+
+7. Throughout the story, the man did not blame \_\_\_\_\_\_\_\_\_\_
+A. his tailor
+B. his son
+C. his wife
+
+8. Choose the correct statement.
+A. The narrator accepted the toothpick offered by the man.
+B. The narrator accepted the match offered by the man.
+C. The narrator did not get the object he asked for.
+D. The narrator chased away the man away from his area at the end.
+
+9. Read the sentences below. Decide the correct order of events. Choose the option that shows the correct order of events.
+1) The man found a toothpick.
+2) The man stepped on his overcoat.
+3) The man searched in his the waistcoat.
+4) The man bit his coat’s pockets.
+A. 3 4 2 1
+B. 4 3 2 1
+C. 4 3 1 2
+D. 3 4 1 2
+10. At the beginning of the story, what was in narrator’s hands?
+A. a match
+B. a firecracker
+C. a toothpick
+D. a parcel
+
+11. At the end, what happened to the man?
+A. The narrator accepted the toothpick offered by the man.
+B. He walked away from the narrator smilingly.
+C. The narrator chased away him away from the area.
+D. The narrator pushed him under a trolley-car.
+
+12. At the end, what did the man pull out from his coat?
+A. a match
+B. a trolley-car
+C. a toothpick
+D. a parcel
+[2023-05-25T05:13:00, Thu] 14.User: Its not the end
+[2023-05-25T05:13:00.500000, Thu] 15.User: Emaad ended up running into his arch-nemesis but he got pushed by him and a car came out of nowhere from the road and might've killed him.

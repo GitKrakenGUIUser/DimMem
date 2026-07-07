@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-27T10:13:00, Sat] 1.User: I'm planning a team outing and need some recommendations for a fun, outdoor activity that can accommodate 6 people.
+[2023-05-27T10:13:00.500000, Sat] 2.User: That's a great list! I think I'll go with the group hike option. Do you know if there are any nearby parks or nature reserves that are suitable for a 6-person group? And by the way, I've been enjoying my role as Senior Software Engineer for a while, especially the part where I now lead a team of five engineers - it's been a great experience so far, and I'm excited to see how they'll grow under my guidance.
+[2023-05-27T10:13:01, Sat] 3.User: I'm based in the San Francisco Bay Area. I'd prefer a park or nature reserve within a 30-45 minute drive from the city center. We're a relatively active group, so a moderate trail with some scenic views would be perfect.
+[2023-05-27T10:13:01.500000, Sat] 4.User: Mount Tamalpais State Park sounds great. I'll check the trail conditions and plan the hike accordingly. By the way, I've been thinking about our team's workload and I think I need to delegate some tasks more effectively to ensure we're meeting our project deadlines. Do you have any suggestions on how I can do that better?
+[2023-05-27T10:13:02, Sat] 5.User: That's really helpful, thank you! I think I need to work on setting realistic deadlines and expectations, as well as providing necessary resources and support to my team members. I'll make sure to implement these suggestions and see how it goes. By the way, I'm looking forward to our team hike at Mount Tamalpais State Park, it'll be a great opportunity to bond with my team and get some exercise. I'm really proud of the progress we've made so far and we're all working well together.
+[2023-05-27T10:13:02.500000, Sat] 6.User: I think I'll plan a scavenger hunt to keep things engaging and fun for the team. That way, we can all work together, enjoy the scenery, and have some friendly competition. Thanks for the suggestion!
+[2023-05-27T01:49:00, Sat] 7.User: I'm looking for some recipe ideas for a dinner party I'm hosting next weekend. I've been experimenting with new ingredients and flavor combinations, and I'd love some inspiration. By the way, I just learned how to make homemade pasta from scratch last Sunday, and I'm excited to incorporate it into my menu.
+[2023-05-27T01:49:00.500000, Sat] 8.User: I'm planning a casual dinner party for 8-10 friends, and I want to keep the menu relatively simple but flavorful. I'm thinking of making a few pasta dishes, and maybe some appetizers and desserts. I was thinking of serving some kind of bruschetta as an appetizer, but I want to try something a bit different from the classic tomato and basil.
+[2023-05-27T01:49:01, Sat] 9.User: I like the caramelized onion and fig bruschetta idea. That sounds delicious and unique. For my pasta dishes, I was thinking of making a spaghetti dish with a homemade tomato sauce, as well as a second pasta dish using the homemade pasta I made last Sunday. Maybe a creamy sauce with mushrooms and asparagus? What do you think?
+[2023-05-27T01:49:01.500000, Sat] 10.User: That sounds like a great plan. I was thinking of making the fettuccine with the creamy mushroom and asparagus sauce. Do you have any suggestions for a simple green salad to serve on the side?
+[2023-05-27T01:49:02, Sat] 11.User: I was thinking of making a fruit tart, but I'm not sure if it's the right fit for this menu. What do you think?
+[2023-05-27T01:49:02.500000, Sat] 12.User: What do you think about serving a small dolce, like a scoop of gelato or a shot of espresso, alongside the fruit tart?
+[2023-05-28T09:21:00, Sun] 13.User: I'm thinking of seeing a musical soon and I'd love some help finding a good one. I started listening to the soundtrack of The Book of Mormon today, and I'm really enjoying it. Can you recommend some other musicals with similar humor and style?
+[2023-05-28T09:21:00.500000, Sun] 14.User: I've seen some of these musicals, like Avenue Q and The Producers, which were both hilarious. I'm curious about Spamalot, have you got any info on the touring production schedule?
+[2023-05-28T09:21:01, Sun] 15.User: I'd also appreciate any info on the set and costume design of Spamalot. I've been really impressed by the grand production values of some shows I've seen recently, like The Great and Bridgerton, and I'm curious to know if Spamalot's design is similarly impressive.

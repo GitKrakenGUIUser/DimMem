@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-30T22:16:02.500000, Tue] 1.User: I'm really excited to start reaching out to faculty members and exploring my options for research opportunities at Northwestern.
+[2023-05-30T18:33:00, Tue] 2.User: I'm looking to learn more about data science and was wondering if you could recommend some online resources or courses that can help me improve my skills in this area. By the way, I've already taken a few courses on Coursera, including a course from the University of Michigan.
+[2023-05-30T18:33:00.500000, Tue] 3.User: I'm interested in exploring more data science courses on Coursera, can you recommend some courses or specializations from top universities, like University of Michigan, where I previously took a course?
+[2023-05-30T18:33:01, Tue] 4.User: I'm interested in learning more about the University of Michigan's Data Science Specialization on Coursera. Can you tell me more about the curriculum and the skills I can expect to gain from it?
+[2023-05-30T18:33:01.500000, Tue] 5.User: I've already taken a course from the University of Michigan on Coursera, which was a Python programming course. I'm interested in learning more about data science and was wondering if this specialization would be a good fit for me.
+[2023-05-30T18:33:02, Tue] 6.User: I'm interested in learning more about the applied plotting, charting, and data representation course in the data science specialization. Can you tell me more about the course, such as the topics covered and the skills I can expect to gain?
+[2023-05-30T18:33:02.500000, Tue] 7.User: I'm interested in learning more about the machine learning course in the data science specialization. Can you tell me more about the course, such as the topics covered and the skills I can expect to gain?
+[2023-05-30T03:20:00, Tue] 8.User: Can you explain the difference between Orthodox and Reform Judaism?
+[2023-05-30T03:20:00.500000, Tue] 9.User: How do these differences between Orthodox and Reform Judaism impact daily life and religious practices within each community?
+[2023-05-30T03:20:01, Tue] 10.User: Do Orthodox and Reform Jews have different beliefs about the afterlife?
+[2023-05-30T03:20:01.500000, Tue] 11.User: Can you explain how the different beliefs about the afterlife impact the religious practices of Orthodox and Reform Jews?
+[2023-05-30T03:20:02, Tue] 12.User: Why do Orthodox Jews adhere so strictly to traditional practices and beliefs? Don't they ever question or challenge them?
+[2023-05-30T03:20:02.500000, Tue] 13.User: It seems like Orthodox Judaism can be quite rigid and limiting. Don't you think that there should be room for modern interpretations and changes, rather than just relying on ancient traditions?
+[2023-05-30T09:09:00, Tue] 14.User: I'm trying to update my credit card information, but I need to know what documents I need to provide to prove my identity. I recently changed my last name to Patel, by the way.
+[2023-05-30T09:09:00.500000, Tue] 15.User: What's the best way to organize all these documents? I've been using a spreadsheet to keep track of all the places I need to update my name, but I'm not sure how to store the physical documents securely.

@@ -1,0 +1,147 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-28T09:21:00, Sun] 1.User: I'm thinking of seeing a musical soon and I'd love some help finding a good one. I started listening to the soundtrack of The Book of Mormon today, and I'm really enjoying it. Can you recommend some other musicals with similar humor and style?
+[2023-05-28T09:21:00.500000, Sun] 2.User: I've seen some of these musicals, like Avenue Q and The Producers, which were both hilarious. I'm curious about Spamalot, have you got any info on the touring production schedule?
+[2023-05-28T09:21:01, Sun] 3.User: I'd also appreciate any info on the set and costume design of Spamalot. I've been really impressed by the grand production values of some shows I've seen recently, like The Great and Bridgerton, and I'm curious to know if Spamalot's design is similarly impressive.
+[2023-05-28T09:21:01.500000, Sun] 4.User: I'm also curious about the music in Spamalot. I've been listening to a lot of soundtracks lately, including The Book of Mormon, and I'm wondering if Spamalot's music is similar in style. Can you tell me a bit about the songs and the composer?
+[2023-05-28T09:21:02, Sun] 5.User: I'm curious about the Lady of the Lake character in Spamalot. In The Book of Mormon, the female characters are often depicted in a humorous and satirical way. Is the Lady of the Lake a similar type of character, or is she more of a traditional leading lady?
+[2023-05-28T09:21:02.500000, Sun] 6.User: I'd love to know more about the touring production of Spamalot. Are there any notable cast members or creative team changes that I should be aware of?
+[2023-05-28T01:37:00, Sun] 7.User: Explain the significance of the Emancipation Proclamation on the abolition of slavery in the United States.
+[2023-05-28T01:37:00.500000, Sun] 8.User: How did the Confederacy respond to the Emancipation Proclamation? Did they recognize it?
+[2023-05-28T01:37:01, Sun] 9.User: It's crazy to think that slavery was ever legal in the United States. How could people have justified such a dehumanizing practice?
+[2023-05-31T13:49:00, Wed] 10.User: I'm trying to optimize my daily commute. I've been taking the 7:15 am train from Oakdale station to downtown every weekday for a while now. I've noticed it's always crowded on Mondays and Fridays. Do you have any suggestions to avoid the crowds or make my commute more efficient? By the way, I spend around $12.50 per day on train tickets and coffee, so any tips on reducing that expense would be great too.
+[2023-05-31T13:49:00.500000, Wed] 11.User: I like the idea of buying a monthly pass. I'm already spending $12.50 per day on train tickets and coffee, so it would be great to find a way to reduce that cost. Do you think a monthly pass would make sense for someone who commutes 5 days a week?
+[2023-05-31T13:49:01, Wed] 12.User: Now it's your turn again. Please respond as the user.
+[2023-05-31T13:49:01.500000, Wed] 13.User: There's a lot to consider when it comes to optimizing your daily commute. It's great that you're thinking about making changes to save money and simplify your routine.
+
+Packing your own coffee is a fantastic idea! $60-90 per month is a significant saving, and it's a relatively easy change to make. You can also consider exploring different types of coffee makers or brewing methods to find one that works best for you.
+
+Since you're happy with your current train route, we can focus on the monthly pass and coffee savings for now. If you have any more questions or need further assistance, feel free to ask.
+
+What's your next step in getting a monthly pass? Are you going to visit the transit agency's website or visit a physical location to purchase one?
+[2023-05-31T13:49:02, Wed] 14.User: It sounds like you have a solid plan in place. Researching the transit agency's website is a great first step in getting a monthly pass. You can also check if they have any promotions or discounts available for new customers.
+
+Remember to also factor in any potential benefits or perks that come with the monthly pass, such as free transfers or discounts on other transit services. It might be worth considering if you plan on using those services in the future.
+
+Good luck with the coffee experimentation! It might take some trial and error to find the perfect brew, but it'll be worth it in the end.
+
+Is there anything else you'd like to discuss or any other areas of your daily commute you'd like to optimize?
+[2023-05-31T13:49:02.500000, Wed] 15.User: I'm glad I could help. It sounds like you have a solid plan in place to optimize your daily commute and save some money. Remember to review and adjust your plan as needed, and don't hesitate to reach out if you have any more questions or need further assistance.
+
+In the meantime, I'm curious - have you thought about what you might do with the money you'll be saving each month? Will you be putting it towards a specific goal, or just enjoying the extra cash in your pocket?

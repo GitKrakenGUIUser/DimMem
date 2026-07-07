@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-04-23T13:03:02.500000, Sun] 1.User: Perfect - But give the answers to me for someone who isnt familiar with the tech space like im explaining to my mom, what it is we do
+[2023-04-23T04:11:00, Sun] 2.User: How did Mubarak's relationships with other Arab leaders compare to his relationships with non-Arab leaders?
+[2023-04-23T04:11:00.500000, Sun] 3.User: Interesting. Do you think his relationships with non-Arab leaders affected his policies towards the region?
+[2023-04-23T04:11:01, Sun] 4.User: Yeah, it's amazing how intertwined politics can be. Do you think Mubarak's relationships with other Arab leaders helped him maintain stability within Egypt during his tenure?
+[2023-04-23T04:11:01.500000, Sun] 5.User: It's interesting to think about how much of an impact relationships between leaders can have on international politics. Do you think there will ever be a time when personal relationships between politicians become less important in decision-making?
+[2023-04-24T06:58:00, Mon] 6.User: Can you explain the differences between a chef and a cook and what unique skills each brings to the kitchen?
+[2023-04-24T06:58:00.500000, Mon] 7.User: That's helpful information. I've always wondered if there's a difference beyond just the job titles. Do chefs and cooks have different levels of authority in the kitchen?
+[2023-04-24T06:58:01, Mon] 8.User: It sounds like being a chef requires a lot of leadership skills. Can a cook transition into becoming a chef, or is it a completely different career path?
+[2023-04-24T06:58:01.500000, Mon] 9.User: It seems like being a chef is a stressful job. How do chefs manage to handle the pressure and stay sane in the kitchen?
+[2023-04-24T06:58:02, Mon] 10.User: It's impressive how chefs can handle so much pressure and still create delicious dishes. What are some of the most important qualities a chef should have to be successful in the culinary industry?
+[2023-04-24T06:58:02.500000, Mon] 11.User: Wow, it sounds like being a chef is a really tough job. Do you think that culinary schools and training programs are necessary to become a successful chef, or can someone learn on the job?
+[2023-04-24T06:58:03, Mon] 12.User: It's interesting to learn about the qualities that a chef should possess. Speaking of adaptability, how do chefs handle it when they run out of an ingredient or if they need to improvise a recipe?
+[2023-04-26T15:22:00, Wed] 13.User: I'm thinking of planning a trip to Europe, possibly to Italy or Spain, and I was wondering if you could recommend some popular destinations and itineraries. By the way, I just got back from a road trip with friends where we rented a car and drove from San Francisco to Los Angeles over the course of 5 days, stopping at some amazing places like Big Sur and Santa Barbara.
+[2023-04-26T15:22:00.500000, Wed] 14.User: That's a lot of great information! I think I'd like to focus on Italy first. What are some must-try foods in Italy, and are there any specific restaurants or cafes I should check out in Rome, Florence, and Venice? By the way, speaking of road trips, the drive from San Francisco to Los Angeles was really scenic, especially along the Pacific Coast Highway. We stopped at some great spots like Monterey and Big Sur.
+[2023-04-26T15:22:01, Wed] 15.User: I think I'll definitely try some of those foods and visit those restaurants and cafes. My favorite part of the drive was probably the hike to McWay Falls in Big Sur - it was challenging, but the views were incredible. And yeah, the Pacific Coast Highway was really scenic, especially around Monterey and Big Sur. By the way, are there any specific scenic drives or routes that I should take in Italy, especially in Tuscany or the Amalfi Coast?

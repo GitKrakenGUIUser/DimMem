@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-06-15T18:11:03, Thu] 1.User: It seems like the government is doing a lot to ensure that these infrastructure projects benefit the economy and the environment, but I wonder if there are any criticisms or opposition to these measures?
+[2023-06-16T23:42:00, Fri] 2.User: Could you suggest some healthy and easy-to-make breakfast ideas for busy mornings?
+[2023-06-16T23:42:00.500000, Fri] 3.User: These ideas sound great! What's the best way to make sure I have time to prepare them on busy mornings?
+[2023-06-16T23:42:01, Fri] 4.User: I think I'll try preparing my ingredients the night before and see how that works. Do you have any recommendations for easy, healthy breakfasts that I can take with me on the go? Sometimes I don't have time to sit down and eat at home.
+[2023-06-16T23:42:01.500000, Fri] 5.User: These are all great suggestions! I especially like the idea of making homemade granola bars. Do you have a recipe you recommend?
+[2023-06-16T23:42:02, Fri] 6.User: These granola bars sound delicious! Do you have any recommendations for the best nut butter to use? I've never made granola bars before.
+[2023-06-16T23:42:02.500000, Fri] 7.User: These suggestions all sound great, but I'm not a big fan of traditional breakfast foods. Do you have any other ideas for healthy and quick breakfasts that are a bit different?
+[2023-06-16T23:01:00, Fri] 8.User: who makes the rules?
+[2023-06-16T23:01:00.500000, Fri] 9.User: how does FINRA make sure firms are honest?
+[2023-06-16T08:39:00, Fri] 10.User: I'm planning a road trip to Yosemite soon and I'm considering renting a car instead of driving my own. Do you think it's worth it, or should I just drive my own car? By the way, I got my car serviced at the local garage last Saturday, and it was a good thing I did - the mechanic found out I needed to replace my air filter.
+[2023-06-16T08:39:00.500000, Fri] 11.User: I think I'll need to do some more research on the road conditions in Yosemite to make a decision. Can you tell me more about the road conditions there, and if there are any specific routes I should avoid or prepare for?
+[2023-06-16T08:39:01, Fri] 12.User: I've heard that some rental cars have better fuel efficiency than others. Do you know what types of fuel-efficient vehicles are commonly available for rent, and how I can find them?
+[2023-06-16T08:39:01.500000, Fri] 13.User: I'll make sure to look into those options. By the way, I've been meaning to wash my car for weeks now, but the weather has been so hot and dry that I haven't had the motivation to do it. Maybe this weekend I'll finally get around to it.
+[2023-06-16T08:39:02, Fri] 14.User: Yeah, I'll definitely keep those tips in mind. And yeah, it'll be nice to have a clean car for the trip, even if I do end up renting one. By the way, I'm also thinking of listing my old motorcycle on Craigslist or Facebook Marketplace. I haven't ridden it in years, and I think it's time to let someone else enjoy it. Do you have any advice on how to price it fairly?
+[2023-06-16T08:39:02.500000, Fri] 15.User: I'm excited for you to sell your motorcycle and make some extra space (and cash) for your next adventure! If you have any more questions or need further guidance on pricing or listing your bike, feel free to ask.

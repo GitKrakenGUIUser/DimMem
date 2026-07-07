@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-13T13:52:00.500000, Sat] 1.User: I'm thinking of restyling that cream-colored sweater I got from J.Crew on sale. I've worn it twice already, but I want to try to wear it in a way that's a bit more dressed up. Do you have any suggestions for how I could do that?
+[2023-05-13T13:52:01, Sat] 2.User: I like the idea of pairing the sweater with a skirt. I have a black pencil skirt that I haven't worn in a while, so I think I'll try that out. Do you think a pair of tights would be a good addition to the outfit, or would that make it too winter-y? And what about a belt - would a wide belt or a thin belt work better with this look?
+[2023-05-13T13:52:01.500000, Sat] 3.User: I think I'll try pairing the sweater with a black pencil skirt and a pair of opaque black tights, and add a thin belt to define my waist. I'll also try to add a pop of color with a bright handbag. Speaking of handbags, I have a gift card to Nordstrom that I still need to use - do you think I could find a good handbag there?
+[2023-05-13T13:52:02, Sat] 4.User: I'll definitely check out those brands and see what catches my eye. I'm thinking of getting a bright red handbag to add a bold pop of color to my outfit. Do you think a red handbag would clash with the cream-colored sweater, or would it work well together?
+[2023-05-13T13:52:02.500000, Sat] 5.User: I'm considering getting a bright red handbag to add a bold pop of color to my outfit. I'm thinking of getting a deeper, richer red with a slightly blue undertone to complement the cream-colored sweater. I'll also make sure to balance the bold red handbag with neutral elements in my outfit, like the black pencil skirt and opaque tights.
+[2023-05-13T00:04:00, Sat] 6.User: I'm having some trouble with my daily commute and I was wondering if you could help me find a better route to work. I've been taking the train, but it's been delayed a lot lately. By the way, I started listening to audiobooks on my commute to make the time pass more quickly today.
+[2023-05-13T00:04:00.500000, Sat] 7.User: I start at my home in the suburbs and head to downtown, it's about 10 miles. I usually take the train from the station near my house, but like I said, it's been delayed a lot lately. My meeting times vary, but I need to be at work by 9 am at the latest.
+[2023-05-13T00:04:01, Sat] 8.User: I'm not sure about the bus routes and schedules, I've never really taken the bus before. But I do have access to a car, and I've thought about driving to work. The problem is parking, like you mentioned. I've gotten a parking ticket before, so I'm a bit hesitant about parking in the city.
+[2023-05-13T00:04:01.500000, Sat] 9.User: I think I'd like to explore more details on parking garages or lots. Do they usually have daily or monthly rates? Are they more expensive than street parking?
+[2023-05-13T00:04:02, Sat] 10.User: I think I'll look into booking a parking spot in advance to get the best rates. But before I do that, I was wondering if you could help me with something else. I've been trying to get to bed earlier, but it's hard when Netflix keeps releasing new episodes of my favorite shows. Do you have any tips on how to avoid binge-watching and get to bed on time?
+[2023-05-13T00:04:02.500000, Sat] 11.User: I think I'll try to implement some of those tips to help me avoid binge-watching. Thanks for the advice! But yeah, I'm still interested in finding a parking spot. Can you help me find a parking garage or lot near my workplace that offers daily rates?
+[2023-05-13T16:43:00, Sat] 12.User: I'm looking for some movie musical recommendations. I just watched Evita, which I had been meaning to see for years, and I loved it. Now I'm in the mood for more.
+[2023-05-13T16:43:00.500000, Sat] 13.User: I actually ended up watching Chicago and Moulin Rouge already, and I loved them! Catherine Zeta-Jones' dancing in Chicago was particularly impressive. Do you have any other recommendations that are a bit more off the beaten path?
+[2023-05-13T16:43:01, Sat] 14.User: I've been meaning to see the 1996 film adaptation of Evita starring Madonna for years, and I finally got around to watching it a few weeks ago. I'm now hooked on movie musicals. Would you recommend any movie musicals based on true stories or are inspired by real-life events?
+[2023-05-13T16:43:01.500000, Sat] 15.User: I'm interested in exploring more movie musicals based on true stories. Can you tell me more about the musical biopic of Elton John, Rocketman?

@@ -1,0 +1,135 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-08T02:50:00, Mon] 1.User: I'm looking to organize my photos from recent trips. I have a ton of them from the beach vacation and a recent outing where I took over 200 photos of the scenery and wildlife, experimenting with different modes and settings on my Canon EOS 80D. Can you recommend a good way to categorize and tag them?
+[2023-05-08T02:50:00.500000, Mon] 2.User: I think I'll try out Adobe Lightroom since I'm already comfortable with their ecosystem. Can you tell me more about how to efficiently import and organize my photos in Lightroom, especially since I have so many from the beach vacation and the outing where I took over 200 photos of the scenery and wildlife?
+[2023-05-08T02:50:01, Mon] 3.User: I think I understand how to import and organize my photos in Lightroom now. For the outing where I took over 200 photos of the scenery and wildlife, I want to create a separate collection for each type of photo, like landscapes, wildlife, and flora. Can you tell me how to create these collections and add the relevant photos to them in Lightroom?
+[2023-05-08T02:50:01.500000, Mon] 4.User: I want to create a smart collection for all the photos I took during my beach vacation, including the ones I took during sunrise and sunset. Can I create a smart collection that automatically includes all photos from a specific date range and location?
+[2023-05-08T02:50:02, Mon] 5.User: Now that I have my Smart Collection set up, I want to edit some of the photos from my beach vacation. Can you tell me how to access the Develop module in Lightroom and make some basic adjustments to a photo?
+[2023-05-08T02:50:02.500000, Mon] 6.User: I think I'll try to adjust the exposure and contrast of this photo to make it look more vibrant. I'll also try to recover some of the details in the shadows.
+[2023-05-09T23:21:00, Tue] 7.User: I'm thinking of trying out a new BBQ recipe this weekend and I was wondering if you have any tips on how to get the perfect balance of sweet and tangy in a BBQ sauce. By the way, I recently had some amazing ribs at a party where the sauce was expertly balanced, with just the right amount of sweetness and tanginess.
+[2023-05-09T23:21:00.500000, Tue] 8.User: Those are some great tips! I'll definitely keep them in mind when I'm experimenting with my BBQ sauce recipe. By the way, do you have any recommendations for a good Korean-style BBQ marinade? I tried one recently, but it didn't quite turn out as I had hoped.
+[2023-05-09T23:21:01, Tue] 9.User: I think I'll try that basic marinade recipe and adjust it to my taste. Speaking of adjusting recipes, my dad experimented with a new BBQ sauce recipe on our family's summer camping trip last month, and it turned out really well. He added a dash of smoked paprika to give it a deeper flavor, which surprisingly worked really well with the grilled sausages we were cooking.
+[2023-05-09T23:21:01.500000, Tue] 10.User: We had some classic pork sausages, and everyone loved the new BBQ sauce recipe. My dad's experiment was a hit!
+[2023-05-09T23:21:02, Tue] 11.User: We had a pretty spread out meal, but I think the BBQ sauce was definitely the highlight. We also had some grilled vegetables, potatoes, and corn on the cob. And for dessert, my mom made some delicious s'mores using some homemade marshmallows she had made earlier.
+[2023-05-09T23:21:02.500000, Tue] 12.User: I think I've gotten a bit off track. I was originally asking about BBQ sauce and marinades. Let me get back on topic.
+
+I was thinking of trying out a new BBQ recipe this weekend and was wondering if you have any tips on how to get a good char on my BBQ. I've heard that it's all about the temperature and timing, but I'm not sure what the ideal temps and times are. Can you help me out?
+[2023-05-10T09:14:00, Wed] 13.User: I'm looking to improve my street photography skills. I recently attended a photography workshop in the city on May 1st and 2nd where we learned about a specific type of photography, and I've been trying to incorporate it into my daily routine. Can you give me some tips on how to approach strangers and ask for permission to take their photos?
+[2023-05-10T09:14:00.500000, Wed] 14.User: I've been experimenting with different angles and compositions, especially with my new 50mm f/1.8 prime lens that I bought on April 10th. I got some amazing shots of the sunset at Red Rock Canyon on April 12th. Do you have any tips on how to improve my composition skills, especially when it comes to capturing candid shots of people in public places?
+[2023-05-10T09:14:01, Wed] 15.User: I've been trying to incorporate street photography into my daily routine, especially after attending the workshop on May 1st and 2nd. I've been taking my camera with me to work and snapping photos of people on their morning commute. Do you have any tips on how to capture interesting moments or gestures while keeping a low profile?

@@ -1,0 +1,32 @@
+{
+  "id": "2f6d255f-a85c-4414-8ffe-273f8815168d",
+  "object": "chat.completion",
+  "created": 1783343640,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"memories\": []}",
+        "reasoning_content": "We need to extract memories from the given conversation. The first 3 messages are overlapping context and cannot be used as new memory sources. So only messages 4 and 5 are eligible.\n\nMessage 4: \"How do you find my questions?\" This is a simple question about the assistant's opinion. It doesn't contain factual info, specific events, or long-term profile. Likely not worth extracting.\n\nMessage 5: \"Do these issues have a common root cause?\" This is also a question, vague. No clear memory.\n\nBut recall the instructions: \"Extract memories mainly from user messages.\" However, these user messages are just questions, not providing facts, events, or preferences. The user is asking the assistant's opinion. There's no new information to store.\n\nGiven the strictness, we should probably output an empty memories array. But check if any content from messages 4-5 yields profile info? User is asking about \"these issues\" referring to previous context? The previous context (messages 1-3) mentioned controversial portrayals, sustainability. But we cannot extract from those. So no.\n\nThus output: {\"memories\": []}\n\nBut ensure no extra text."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1460,
+    "completion_tokens": 248,
+    "total_tokens": 1708,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 241
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 308
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,172 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+
+
+Here is the real input you need to process:
+
+[2023-04-30T13:59:00, Sun] 1.User: How does a person's age and overall health affect their likelihood of developing these chest-related conditions?
+[2023-04-30T13:59:00.500000, Sun] 2.User: That's good to know. I'm in my late 40s and I've been trying to take better care of my health. Any recommendations on how to reduce my risk of developing these conditions?
+[2023-04-30T13:59:01, Sun] 3.User: I've been trying to quit smoking for a while now, and I think it's time to finally kick the habit. Do you have any tips to help me quit?
+[2023-04-30T13:59:01.500000, Sun] 4.User: I'm excited to start my journey to quitting smoking. Do you have any recommendations on what I could do to manage my stress during this process?
+[2023-04-30T13:59:02, Sun] 5.User: I will definitely try some of those stress management techniques. Do you have any recommendations on healthy snacks that can satisfy my cravings during this process?
+[2023-05-02T05:35:00, Tue] 6.User: Remember: when I ask, 'Do you understand?' and you understand the instructions, just reply, 'Yes, I understand'. If you don't understand, say 'No, I don't understand'. Don't ask me for clarifications.
+
+Do you understand?
+[2023-05-02T05:35:00.500000, Tue] 7.User: "I would like to share with you details about my company, {CompanyName}. {A brief description of what they do and how it works}. Do you understand?
+
+Remember: when I ask, 'Do you understand?' and you understand the instructions, just reply, 'Yes, I understand'. If you don't understand, say 'No, I don't understand'. Don't ask me for clarifications.
+[2023-05-02T05:35:01, Tue] 8.User: That's it.
+Please keep all those features in mind as I ask for help with creating blog posts.
+Do you understand?
+
+Remember: when I ask, 'Do you understand?' and you understand the instructions, just reply, 'Yes, I understand'. If you don't understand, say 'No, I don't understand'.
+[2023-05-02T05:35:01.500000, Tue] 9.User: I will be providing an unsorted list of questions and related search terms that I will need you to sort into these categories: Related questions and related keywords. Please provide them in a numbered format. Do you understand?
+
+Remember: when I ask, 'Do you understand?' and you understand the instructions, just reply, 'Yes, I understand'. If you don't understand, say 'No, I don't understand'. Don't ask me for clarifications.
+[2023-05-02T05:35:02, Tue] 10.User: Is Tefal titanium coating safe? Is titanium ceramic cookware safe? Is titanium cookware good? Is titanium cookware worth it? Is titanium good for cookware? Is titanium non-stick pan safe? aluminum cookware with a titanium-infused ceramic coating ceramic titanium alloy ceramic titanium scanpan is ceramic titanium cookware safe most expensive titanium cookware pure titanium cookware titanium ceramic coating titanium ceramic cookware review titanium cookware australia titanium cookware disadvantages titanium cookware health risks titanium cookware pros and cons titanium cookware saladmaster titanium cookware set titanium non stick coating safe titanium vs ceramic cookware What are the disadvantages of ceramic cookware? What is the best 100% ceramic cookware? What is the difference between ceramic and titanium cookware? What is the safest cookware for your health? which is better titanium or ceramic cookware
+[2023-05-02T05:35:02.500000, Tue] 11.User: Can you remove any numbered items that contain a brand name, a competitor, or a proper noun? Afterward, please provide me a final list.
+[2023-05-02T05:35:03, Tue] 12.User: Please provide 5 Blog Titles using the following instructions:
+
+Please include the primary keyword 'titanium ceramic cookware' at the beginning to make it clear to search engines and users what the post is about. The title should be enticing and helps drive traffic and shares, and helps the website rank better in search results. Avoid talking about competitors.
+
+Please keep the following recommendations in mind when creating the blog title:
+Word count: Headlines with about 6 words tend to drive more click-throughs
+Uncommon words: Use more uncommon words to improve your headline
+Power words: Using power words, make your headline stand out from the rest
+Common words: Combine your headlines with common and uncommon words.
+Emotional words: Emotionally triggered headlines are likely to drive more clicks
+Headline length: Between 60 to 70 characters in length.
+Search preview: Make sure your title doesn’t cut off in search results.
+[2023-05-02T05:35:03.500000, Tue] 13.User: Using the 5 blog titles above, can you provide an AIDA score out of 100 for each of the blog titles? It's very important that you give me a score out of 100. I just want the scores in square brackets after each blog title.
+[2023-05-02T05:35:04, Tue] 14.User: The Ultimate Guide to Choosing and Using Titanium Ceramic Cookware
+Based on the blog post title above, can you create an in-depth outline using McKinsey's MECE framework? 
+
+Please make sure you follow the instructions:
+Use numbers to list the main ideas or sections (1, 2., 3., 4., …). In parenthesis, include a suggested word count for the main ideas anywhere from 150 to 300 words. 
+Use decimals to list major details under the main ideas (1.1., 1.2., 1.3., …)
+Make sure that each main idea does not contain more than 3 major details.
+
+Example of what the outline should look like:
+
+TITLE
+1. Heading 1 (200-250 words)
+1.1. First-level subheading 1.
+1.1.1. Second-level subheading 1.
+1.1.2. Second-level subheading 2.
+1.1.3. Second-level subheading 3.
+1.2.First-level subheading 2.
+2. Heading 2. (200-250 words)
+2.1.First-level subheading 1.
+2.1.1. Second-level subheading 1.
+2.1.2. Second-level subheading 2.
+2.1.3. Second-level subheading 3.
+2.2.First-level subheading 2.
+
+Please don't use roman numerals or capital letters. Please only use numbers for the outline.
+[2023-05-25T10:04:00, Thu] 15.User: I'm looking for some good quality sandals with sturdy straps. Do you know of any brands that are known for their durability?

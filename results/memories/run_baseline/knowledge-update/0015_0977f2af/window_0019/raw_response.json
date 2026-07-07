@@ -1,0 +1,32 @@
+{
+  "id": "3e85324a-ae7a-4c64-a84d-ed189e18ac44",
+  "object": "chat.completion",
+  "created": 1783344870,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": [\n    {\n      \"source_id\": 5,\n      \"content\": \"User has earned approximately $25 in cashback rewards through Rakuten (formerly Ebates).\",\n      \"dimension\": {\n        \"memory_type\": \"fact\",\n        \"time\": \"\",\n        \"location\": \"\",\n        \"reason\": \"\",\n        \"purpose\": \"\",\n        \"keywords\": [\"Rakuten\", \"Ebates\", \"cashback rewards\", \"$25\"]\n      }\n    },\n    {\n      \"source_id\": 7,\n      \"content\": \"User decided to purchase rubber floor mats for their car because they have been postponing an oil change and want to avoid stains.\",\n      \"dimension\": {\n        \"memory_type\": \"episodic\",\n        \"time\": \"\",\n        \"location\": \"\",\n        \"reason\": \"postponed oil change and desire to avoid stains\",\n        \"purpose\": \"to avoid stains on the mats\",\n        \"keywords\": [\"rubber floor mats\", \"car\", \"oil change\", \"stains\"]\n      }\n    },\n    {\n      \"source_id\": 9,\n      \"content\": \"User rides a bicycle to work at least once a week to save money on gas and get exercise.\",\n      \"dimension\": {\n        \"memory_type\": \"profile\",\n        \"time\": \"\",\n        \"location\": \"commute to work\",\n        \"reason\": \"to save gas and get exercise\",\n        \"purpose\": \"saving gas and exercising\",\n        \"keywords\": [\"bicycle\", \"commute\", \"work\", \"gas savings\", \"exercise\"]\n      }\n    }\n  ]\n}",
+        "reasoning_content": "We need to extract memories from messages 4 onwards (messages 1-3 are overlap context, not to be extracted). Process chronologically.\n\nMessage 4: User asks about CVS Pharmacy loyalty program double points days or special deals for Extrabucks rewards program. This is a query, not a memory about the user. No extraction.\n\nMessage 5: User asks about Rakuten cashback timing, mentions they have earned $25 in cashback rewards. This is a factual statement about the user's current status: the user has earned around $25 in cashback rewards via Rakuten. That could be a fact memory. Also might be ephemeral but has long-term value if user is tracking cashback. Extract.\n\nMessage 6: User asks about floor mats for car, features to look for. No memory.\n\nMessage 7: User decides to go with rubber mats because they put off oil change, wants to avoid stains. Also asks average lifespan. The decision to choose rubber mats is a specific choice, could be episodic or profile? It's a preference? Prefers rubber mats for car due to pending oil change. That's a specific event/decision. Extract as episodic.\n\nMessage 8: User asks about installation process for rubber mats, DIY? No memory.\n\nMessage 9: User mentions riding bike to work at least once a week to save gas and get exercise. Asks for maintenance tips. This is a habit/behavior: user rides bike to work at least once a week for saving gas and exercise. That's a profile: long-term habit. Also episodic? It's ongoing behavior. Extract as profile.\n\nMessage 10: User mentions meaning to wash car for weeks, dirty with pollen, asks tips. No memory.\n\nMessage 11: User says will wash car this weekend, repeats decision to get rubber floor mats. The decision to wash car this weekend is a plan, but might be one-off. The decision to get rubber mats is repeated from earlier, already extracted. Could extract plan to wash car this weekend? But it's a one-off task, not long-term value. However, user also mentions putting off oil change. That's a repeated fact: user has been putting off getting car's oil changed. Could be fact. But careful not to overextract. Probably no new memory.\n\nLet's list extractions:\n\n1. From message 5: User has earned around $25 in cashback rewards via Rakuten (formerly Ebates). Fact: current status.\n\n2. From message 7: User chose rubber floor mats for car because they have been putting off oil change and want to avoid stains. Episodic: specific decision/event.\n\n3. From message 9: User rides bike to work at least once a week to save on gas and get exercise. Profile: long-term habit.\n\nAlso note: time for these: message timestamps are given. For message 5: 2023-05-28T13:07:02.500000, for 7: 2023-05-30T01:18:00.500000, for 9: 2023-05-30T01:18:01.500000. Use absolute times if relevant. For the fact about Rakuten, no time needed. For the decision, time is the conversation time, but not needed. For the habit, it's ongoing, no specific time.\n\nDetermine memory_type: fact, episodic, profile.\n\nMemory 1: fact. Content: \"User has earned approximately $25 in cashback rewards through Rakuten (formerly Ebates).\" Keywords: Rakuten, Ebates, cashback rewards, $25.\n\nMemory 2: episodic. Content: \"User decided to purchase rubber floor mats for their car because they have been postponing an oil change and want to avoid stains.\" Keywords: rubber floor mats, car, oil change, stains.\n\nMemory 3: profile. Content: \"User rides a bicycle to work at least once a week to save money on gas and get exercise.\" Keywords: bicycle, commute, work, gas savings, exercise.\n\nDimensions: time, location, reason, purpose, keywords. For memory 2, reason: avoiding stains due to postponed oil change. Purpose: to avoid stains. Location: car? Not specific. For memory 3, purpose: save gas, get exercise. Location: work. Not strongly implied that work is location? It says \"to work\", so location is the commute route? Could set location as \"commute to work\". But careful. Maybe set location as \"road\" or \"workplace\"? I'll use \"commute to work\" as location. Time: not specified. Reason: save gas, get exercise. Purpose: same. Keywords: bicycle, commute, work, gas savings, exercise.\n\nFor memory 1: no time, location, reason, purpose. Keywords: Rakuten, Ebates, cashback, $25.\n\nOutput JSON.\n\nEnsure no extra text."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2040,
+    "completion_tokens": 1356,
+    "total_tokens": 3396,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1017
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 888
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

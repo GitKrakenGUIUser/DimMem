@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-11-15T12:14:01.500000, Wed] 1.User: I think I'll start by removing social media apps from my phone's home screen and scheduling social media checks. I've also been thinking about deleting the Facebook and Instagram apps from my phone to avoid temptation. Do you think that's a good idea?
+[2023-11-15T12:14:02, Wed] 2.User: I'll delete the Facebook and Instagram apps from my phone and see how it goes. I can always reinstall them later if I need to. I'm also thinking about unfollowing or muting some accounts on Twitter to declutter my feed and make it more relevant to my interests. Do you have any tips on how to do that effectively?
+[2023-11-15T12:14:02.500000, Wed] 3.User: I'll start by identifying the accounts that don't add value to my feed and unfollowing them. I'll also use Twitter's built-in features like Mute and Not Interested to silence accounts that are noisy or irrelevant. I think categorizing accounts into lists will also help me to better organize my feed and focus on the content that's important to me.
+[2023-11-20T07:10:00, Mon] 4.User: I'm planning a trip to Japan and was wondering if you could recommend some good restaurants in Osaka and Kyoto?
+[2023-11-20T07:10:00.500000, Mon] 5.User: I'm also planning to take a guided Tokyo city tour, do you have any recommendations for things to do in Nara?
+[2023-11-20T07:10:01, Mon] 6.User: I'm actually thinking of adding a day trip to Nara to my Japan itinerary, so this is super helpful. By the way, I booked my Japan trip last month with Happy Trails Travel Agency, and I'm really excited about it.
+[2023-11-20T07:10:01.500000, Mon] 7.User: I'm sure it's a legit agency, don't worry about it. So, can you recommend some good places to stay in Osaka and Kyoto? I'm looking for something convenient and comfortable.
+[2023-11-20T07:10:02, Mon] 8.User: I was thinking of using Kayak to compare prices on hotels, do you think that's a good idea?
+[2023-11-20T07:10:02.500000, Mon] 9.User: I've been using Kayak to compare prices on flights to Rome, too. I've got a price alert set up, and I've been getting notifications every few days.
+[2023-11-23T19:03:00, Thu] 10.User: I'm planning another trip and I need some help with finding a good hotel in Chicago. I've been to the city a few times, but I've only stayed with family, so I've never booked a hotel myself. Can you recommend some good areas to stay in?
+[2023-11-23T19:03:00.500000, Thu] 11.User: I think I'll look into the Loop and River North areas. I've spent time around Millennium Park before, so I'm familiar with the area. Speaking of which, I remember my sister and I walked along the Lake Michigan shoreline when we visited our aunt in April.
+[2023-11-23T19:03:01, Thu] 12.User: I'm thinking of planning a longer trip after this Chicago trip. I've been to a few cities in the US, but I've never been to Europe. I'm considering Paris, Rome, or Barcelona. Have you got any information on these cities or tips for planning a trip to Europe?
+[2023-11-23T19:03:01.500000, Thu] 13.User: I think I'm leaning towards Paris, as I've always been fascinated by the art and history there. I actually just got back from a trip to Paris last month, and it was amazing!
+[2023-11-23T19:03:02, Thu] 14.User: I'm still deciding on the specifics, but I think I'll plan to spend around 5 days in Paris, which should give me enough time to explore the city and its surroundings.
+[2023-11-23T19:03:02.500000, Thu] 15.User: That sounds like a great plan! I think I'll follow a similar itinerary to what I did last month, with a few tweaks to fit my interests and preferences. Speaking of which, I remember that last month's trip to Paris was amazing, and it was actually a 5-day trip as well. We stayed at a hotel near the Eiffel Tower and spent our days exploring the city. It was so much fun!

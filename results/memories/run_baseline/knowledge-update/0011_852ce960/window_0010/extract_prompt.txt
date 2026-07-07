@@ -1,0 +1,144 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-10-27T18:02:02, Fri] 1.User: I think I got cut off! It seems like my previous response was truncated. I apologize for the inconvenience. Here is the rest of the response:
+
+* Body: "I'm particularly drawn to [Company Name]'s commitment to using data to drive business decisions. As a certified Data Analyst, I understand the importance of data quality, data governance, and effective communication of insights to stakeholders. I'm excited to bring my skills and experience to a team that shares my passion for data analysis."
+* Closing: "Thank you for considering my application. I'm looking forward to discussing my qualifications further and learning more about the Data Analyst role at [Company Name]."
+
+Remember to customize your application materials to the specific company and position, and don't hesitate to reach out if you have any questions or need further guidance!
+[2023-10-27T18:02:02.500000, Fri] 2.User: I'm considering applying to the data analysis company I met at the career fair, but I'm not sure if I should mention my research paper presentation at the undergraduate research conference in my application materials. Should I highlight it, and if so, how?
+[2023-10-29T21:04:00, Sun] 3.User: Now for the darkest of the bunch: Path 3. In path 3 Marcus simply misses his gunshot meant to hit Surgey b3cause Surgey notices Marcus acting fishy. The stray bullet hits Dr. Penelope, causing her to bleeding out. In the commotion, Surgey responds by firing back on Marcus as well as the shocked Jillian, killing them both. Without the manpower to fight the zombies, nor the courage to face the US government after the death of three government officials at "his hands", Surgey simply runs. Without military contact the spread from the lab is uncontained, leading to immediate doomsday of continental America. B3cause the military was never alerted to the outbreak at the main lab, they also never check on the situations of the labs dotted throughout the rest of North and South America, leading to more sources of spread for the parasite as well as the zombie masses. As you can imagine, this cripples the America's to essentially an exclusion zone. Additionally, small parasite outbreaks begin being reported across the coasts of Africa, Europe and Russia as boats carrying hidden parasites or infected corpses cross while fleeing the carnage.
+
+Maps in this timeline would follow groups of survivours trying their best to piece together what they can of society while trying not to be eaten alive. Eventually, and rather miraculously, I imagine Surgey would meet a group of survivours while trapped in a bunker somewhere. He would likely have lost his mind at this point and would manipulate this group, telling them that there is a large settlement unaffected in Northern Canada and, if they follow his instructions, they can carpet bomb a border around this region to keep them safe from future hordes. In reality, these bombs would be filled with parasites and aimed at the USSR, a country that Surgey sees as having abandoned him in American hands and refusing to do anything to stop the parasite in the Americas. This, ultimately, results in apocalypse in Europe, Asia, and Africa as well, spelling the end kf the world.
+
+And that's all! It's not entirely fleshed out yet, but I'd love to hear your thoughts anyway:)
+[2023-10-29T21:04:00.500000, Sun] 4.User: This is all going into my game, remember? I'm hopeful that the maps can be presented in a way that leaves it ambiguous what events fall on what timeliness without heavy inspection and deep dive into the story, keeping this mysterious until players have pieced together all the clues and events to get an idea kf the timelines
+[2023-10-29T21:04:01, Sun] 5.User: Thank you!! I know I typed a lot, but I'd love to know if you have any suggestions, criticisms, or potential improvements on any of the 3 paths or the prologue I outlined. I'm definitely interested in your thoughts tk make things as good as they can be
+[2023-10-29T21:04:01.500000, Sun] 6.User: I love the idea of there being more, smaller splits in the timelines as different decisions are made; I'll see what I can do with that idea!
+
+On another note, do you remember the 7 Amplified zombie types we thought up yesterday?
+[2023-10-29T21:04:02, Sun] 7.User: Just to make sure you remember, I'm talking about the Jugernaut, the Hydra, the Skullcrawler, the Beserker, the Lasher, the Hoplite, and the Fissionator.
+[2023-10-29T21:04:02.500000, Sun] 8.User: Cool! I just wanted your opinion on what timeliness they should appear in. Which ones make the most sense to appear in all 3 paths, and which should be more path-exclusive?
+[2023-10-29T21:04:03, Sun] 9.User: Those are all great suggestions, thank you! Do you have any suggestions for maps or events that you think would fit into any of the 3 paths?
+[2023-10-31T09:09:00, Tue] 10.User: What type of content guidelines or policies does TV.com have in place to regulate user-generated material?
+[2023-10-31T09:09:00.500000, Tue] 11.User: That makes sense. It's important for websites to have guidelines in place to prevent inappropriate content. Have you ever come across a website that didn't regulate their user-generated material?
+[2023-10-31T09:09:01, Tue] 12.User: Yeah, it's definitely important for websites to have guidelines and maintain a safe environment for users. It's concerning when people use the internet to spread hate or post inappropriate content.
+[2023-11-01T08:51:00, Wed] 13.User: Great! I can see that you've talked about one protocol for each application. However, I feel that multiple networking protocols from multiple layers of the stack would need to be used, and I'm still slightly unsure.
+[2023-11-01T08:51:00.500000, Wed] 14.User: Nice! This helped. Could you discuss the combination of protocols one might use, hypothetically speaking, at different layers of the networking stack for all those four applications — as well as why you chose those protocols? (Just like the last time you talked about them)
+[2023-11-01T08:51:01, Wed] 15.User: Thanks, this conversation was super helpful, and I am now content!

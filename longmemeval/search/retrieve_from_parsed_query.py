@@ -20,8 +20,18 @@ if str(LONGMEMEVAL_DIR) not in sys.path:
 from models import DimensionMemory
 from utils.local_embedding_client import LocalEmbeddingClient
 
-from search import search_bm25, search_embedding, search_fused, search_structured, search_top15_content_dedup
-
+#from search import search_bm25, search_embedding, search_fused, search_structured, search_top15_content_dedup
+from search import (
+    attach_assistant_context,
+    build_boundary_to_window_source,
+    load_window_assistant_replies,
+    search_bm25,
+    search_embedding,
+    search_fused,
+    search_structured,
+    search_top15_content_dedup,
+)
+from search.rerank import rerank_records
 
 DEFAULT_QUERY_PARSED = SUBMIT_ROOT / "results/query_analysis/parsed.json"
 DEFAULT_MEMORY_DIR = SUBMIT_ROOT / "results/memories"
@@ -99,6 +109,91 @@ def load_records(memory_dir: Path) -> List[Dict[str, Any]]:
             records.append(record)
     return records
 
+def _truthy(value: Any) -> bool:
+    if isinstance(value, bool):
+        return value
+    return _clean(value).lower() in {"1", "true", "yes", "y", "on"}
+
+
+def _resolve_assistant_windows_dir(memory_dir: Path, source_record_dir: str | None) -> Path | None:
+    """
+    Resolve the directory containing window_*_assistant_replies.json.
+
+    In different runs, source_record_dir may be:
+    - an absolute path;
+    - a path relative to memory_dir;
+    - a path relative to memory_dir.parent;
+    - a path relative to project root.
+    """
+    candidates: List[Path] = []
+
+    if source_record_dir:
+        raw = Path(source_record_dir)
+        if raw.is_absolute():
+            candidates.append(raw)
+        else:
+            candidates.extend(
+                [
+                    memory_dir / raw,
+                    memory_dir.parent / raw,
+                    SUBMIT_ROOT / raw,
+                ]
+            )
+
+    candidates.extend(
+        [
+            memory_dir,
+            memory_dir.parent,
+            SUBMIT_ROOT / "results/segments",
+            SUBMIT_ROOT / "results",
+        ]
+    )
+
+    for candidate in candidates:
+        if candidate.exists() and list(candidate.glob("window_*_assistant_replies.json")):
+            return candidate
+
+    return None
+
+
+def _maybe_attach_assistant_context(
+    *,
+    parsed_query: Dict[str, Any],
+    memory_dir: Path,
+    records: List[Dict[str, Any]],
+    force: bool,
+) -> List[Dict[str, Any]]:
+    """
+    Attach assistant_reply only when:
+    - force=True, or
+    - query parser says need_assistant_context=True.
+
+    If the assistant reply files are missing, it safely returns the original records.
+    """
+    need_assistant = force or _truthy(parsed_query.get("need_assistant_context"))
+
+    if not need_assistant:
+        return records
+
+    try:
+        boundary_index, source_record_dir = build_boundary_to_window_source(memory_dir)
+        windows_dir = _resolve_assistant_windows_dir(memory_dir, source_record_dir)
+
+        if not boundary_index or windows_dir is None:
+            return records
+
+        uid_map = load_window_assistant_replies(windows_dir)
+
+        if not uid_map:
+            return records
+
+        return attach_assistant_context(records, boundary_index, uid_map)
+
+    except Exception as exc:
+        print(f"[WARN] failed to attach assistant context: {exc}", file=sys.stderr)
+        return records
+
+
 
 def run_retrieval(
     *,
@@ -106,8 +201,11 @@ def run_retrieval(
     memory_dir: Path,
     output_root: Path,
     top_k: int,
+    final_top_k: int,
     embedding_model: str,
     embedding_device: str,
+    enable_rerank: bool,
+    enable_assistant_context: bool,
 ) -> Path:
     parsed_query = load_parsed_query(query_parsed)
     records = load_records(memory_dir)
@@ -157,12 +255,42 @@ def run_retrieval(
     ranked = search_result["all_ranked_records"]
     top_records = search_result["top_records"]
 
+    # P1 patch: attach assistant reply before rerank/QA.
+    # This is safe: when files are missing or query does not need assistant context,
+    # records are returned unchanged.
+    ranked = _maybe_attach_assistant_context(
+        parsed_query=parsed_query,
+        memory_dir=memory_dir,
+        records=ranked,
+        force=enable_assistant_context,
+    )
+    top_records = _maybe_attach_assistant_context(
+        parsed_query=parsed_query,
+        memory_dir=memory_dir,
+        records=top_records,
+        force=enable_assistant_context,
+    )
+
+    # P1 patch: global rerank after tri-route retrieval.
+    # If disabled, keep original order but still cut to final_top_k.
+    if enable_rerank:
+        top_records = rerank_records(
+            parsed_query=parsed_query,
+            records=ranked,
+            final_top_k=final_top_k,
+        )
+        search_mode = f"{search_mode}_p1_rerank"
+    else:
+        top_records = top_records[:final_top_k]
     experiment = {
         "query_parsed": str(query_parsed),
         "memory_dir": str(memory_dir),
         "output_dir": str(run_dir),
         "question_type": question_type,
         "top_k": top_k,
+        "final_top_k": final_top_k,
+        "enable_rerank": enable_rerank,
+        "enable_assistant_context": enable_assistant_context,
         "embedding_model": embedding_model,
         "embedding_device": embedding_device,
         "record_count": len(records),
@@ -195,14 +323,24 @@ def run_retrieval(
         "keywords": list(mapped_query.get("keywords") or []),
         "record_count": len(records),
         "top_k": top_k,
+        "final_top_k": final_top_k,
+        "enable_rerank": enable_rerank,
+        "enable_assistant_context": enable_assistant_context,
         "output_dir": str(run_dir),
         "top_records": [
             {
                 "rank": i + 1,
                 "score": row.get("score"),
+                "retrieval_score": row.get("retrieval_score"),
+                "rerank_score": row.get("rerank_score"),
+                "rerank_components": row.get("rerank_components"),
+                "retrieval_method": row.get("retrieval_method"),
+                "fusion_sources": row.get("fusion_sources"),
                 "memory_type": row.get("memory_type"),
                 "content": row.get("content"),
                 "source_boundary_id": row.get("source_boundary_id"),
+                "assistant_uid": row.get("assistant_uid"),
+                "has_assistant_reply": bool(_clean(row.get("assistant_reply"))),
                 "score_components": row.get("score_components"),
             }
             for i, row in enumerate(top_records)
@@ -220,7 +358,14 @@ def main() -> None:
     parser.add_argument("--query-parsed", type=Path, default=DEFAULT_QUERY_PARSED)
     parser.add_argument("--memory-dir", type=Path, default=DEFAULT_MEMORY_DIR)
     parser.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
-    parser.add_argument("--top-k", type=int, default=10)
+    parser.add_argument("--top-k", type=int, default=20, help="Per-route retrieval top-k.")
+    parser.add_argument("--final-top-k", type=int, default=15, help="Final records passed to QA.")
+    parser.add_argument("--enable-rerank", action="store_true", help="Enable P1 global rerank.")
+    parser.add_argument(
+        "--enable-assistant-context",
+        action="store_true",
+        help="Force assistant context attachment when assistant reply files are available.",
+    )
     parser.add_argument("--embedding-model", default=DEFAULT_EMBEDDING_MODEL)
     parser.add_argument("--embedding-device", default="cuda")
     args = parser.parse_args()
@@ -230,8 +375,11 @@ def main() -> None:
         memory_dir=args.memory_dir,
         output_root=args.output_root,
         top_k=args.top_k,
+        final_top_k=args.final_top_k,
         embedding_model=args.embedding_model,
         embedding_device=args.embedding_device,
+        enable_rerank=args.enable_rerank,
+        enable_assistant_context=args.enable_assistant_context,
     )
     print((run_dir / "summary.json").read_text(encoding="utf-8"))
 

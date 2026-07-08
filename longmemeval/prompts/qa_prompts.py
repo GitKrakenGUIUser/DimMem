@@ -1,47 +1,39 @@
 from __future__ import annotations
 
-import json
 from typing import Any, Dict, Iterable, List
-
 
 LONGMEMEVAL_QA_PROMPT = """You are answering a question about a user's long-term memory.
 
 You will receive:
 1. The user's original question.
 2. The question timestamp (question_date).
-3. A small set of retrieved memory records.
+3. A small set of retrieved dimensional memory records.
 
-Your job:
-- Use only the retrieved memories as evidence.
-- Prefer explicit facts over guesses.
-- If the evidence is insufficient, say "I don't know".
-- First write a short reasoning paragraph.
-- Then give the final answer.
+Use only the retrieved memories as evidence.
 
-Reasoning rules:
-- Keep the reasoning brief and evidence-grounded.
-- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
-- Resolve temporal questions by comparing the timestamps in the memories when possible.
-- If multiple records conflict, prefer the one with the latest source_time.
-- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
-- Do not invent missing numbers, dates, places, or entities.
-
-Answer rules:
-- The final answer should be concise.
-- If the answer is a count, return the count clearly.
-- If the answer is a date or time difference, state the unit.
-- If multiple answers are acceptable from the evidence, provide the most direct one.
+Important rules:
+- Prefer explicit evidence over guesses.
+- If the evidence is insufficient, answer exactly: I don't know.
+- Use source_time and dimension.time for temporal reasoning.
+- Use dimension.location for location questions.
+- Use dimension.reason and dimension.purpose for why/purpose questions.
+- Use dimension.keywords and memory_type to disambiguate entities and preferences.
+- Use assistant_reply when the question asks what the assistant previously said, suggested, recommended, explained, or asked.
+- If records conflict, prefer the record with the latest source_time, unless the question explicitly asks about an older time.
+- For current/latest/now questions, prefer the most recent relevant record.
+- For count/list/order questions, inspect all retrieved records and avoid counting duplicate memories.
+- Do not invent missing numbers, dates, places, people, preferences, or entities.
 
 Output format:
-Reasoning: <brief reasoning>
-Answer: <final answer>
+Reasoning: <brief evidence-grounded reasoning>
+Answer: <final concise answer>
 
 Retrieved Memories:
 {{retrieved_memories}}
 
 Now answer the question:
-User Question:{{query}}
-Question Date:{{question_date}}
+User Question: {{query}}
+Question Date: {{question_date}}
 """
 
 
@@ -49,40 +41,64 @@ def _clean(value: Any) -> str:
     return str(value or "").strip()
 
 
+def _format_value(value: Any) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, list):
+        return ", ".join(_clean(v) for v in value if _clean(v))
+    if isinstance(value, dict):
+        pairs = []
+        for k, v in value.items():
+            if _clean(v):
+                pairs.append(f"{k}={v}")
+        return "; ".join(pairs)
+    return _clean(value)
+
+
+def _append_if_present(lines: List[str], key: str, value: Any) -> None:
+    text = _format_value(value)
+    if text:
+        lines.append(f"{key}: {text}")
+
+
 def _memory_lines(record: Dict[str, Any], rank: int) -> List[str]:
     lines: List[str] = [f"[{rank}]"]
-    source_time = _clean(record.get("source_time"))
-    content = _clean(record.get("content"))
 
-    if source_time:
-        lines.append(f"source_time: {source_time}")
-    if content:
-        lines.append(f"content: {content}")
+    _append_if_present(lines, "memory_type", record.get("memory_type"))
+    _append_if_present(lines, "source_time", record.get("source_time"))
+    _append_if_present(lines, "content", record.get("content"))
 
     dimension = record.get("dimension")
-    if isinstance(dimension, dict):
-        reason = _clean(dimension.get("reason"))
-        purpose = _clean(dimension.get("purpose"))
-    else:
-        reason = _clean(record.get("reason"))
-        purpose = _clean(record.get("purpose"))
+    if not isinstance(dimension, dict):
+        dimension = {}
 
-    if reason:
-        lines.append(f"reason: {reason}")
-    if purpose:
-        lines.append(f"purpose: {purpose}")
+    _append_if_present(lines, "dimension.time", dimension.get("time"))
+    _append_if_present(lines, "dimension.location", dimension.get("location"))
+    _append_if_present(lines, "dimension.reason", dimension.get("reason"))
+    _append_if_present(lines, "dimension.purpose", dimension.get("purpose"))
+    _append_if_present(lines, "dimension.keywords", dimension.get("keywords"))
+    _append_if_present(lines, "dimension.status", dimension.get("status"))
+    _append_if_present(lines, "dimension.valid_from", dimension.get("valid_from"))
+    _append_if_present(lines, "dimension.valid_to", dimension.get("valid_to"))
+    _append_if_present(lines, "dimension.is_current", dimension.get("is_current"))
 
-    assistant_reply = _clean(record.get("assistant_reply"))
-    if assistant_reply:
-        lines.append(f"assistant_reply: {assistant_reply}")
+    _append_if_present(lines, "assistant_reply", record.get("assistant_reply"))
+
+    # Debug metadata is useful for auditing retrieval errors.
+    _append_if_present(lines, "retrieval_method", record.get("retrieval_method"))
+    _append_if_present(lines, "retrieval_score", record.get("retrieval_score"))
+    _append_if_present(lines, "rerank_score", record.get("rerank_score"))
+    _append_if_present(lines, "source_boundary_id", record.get("source_boundary_id"))
 
     return lines
 
 
 def format_retrieved_memories(records: Iterable[Dict[str, Any]]) -> str:
     blocks: List[str] = []
+
     for idx, record in enumerate(records, start=1):
         blocks.append("\n".join(_memory_lines(record, idx)))
+
     return "\n\n".join(blocks) if blocks else "[No retrieved memories]"
 
 
@@ -96,6 +112,7 @@ def build_qa_prompt(*, query: str, question_date: str, retrieved_records: Iterab
 
 def build_qa_payload(*, query: str, question_date: str, retrieved_records: Iterable[Dict[str, Any]]) -> Dict[str, Any]:
     records = list(retrieved_records)
+
     return {
         "query": _clean(query),
         "question_date": _clean(question_date),

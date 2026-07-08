@@ -52,7 +52,7 @@ def _iter_retrieval_dirs(root: Path) -> Iterable[Tuple[str, str, str, Path]]:
                 if sample_dir.is_dir():
                     yield question_type, method, sample_dir.name, sample_dir
 
-
+'''
 def _filter_record(record: Dict[str, Any]) -> Dict[str, Any]:
     dimension = record.get("dimension") if isinstance(record.get("dimension"), dict) else {}
     out: Dict[str, Any] = {}
@@ -67,7 +67,79 @@ def _filter_record(record: Dict[str, Any]) -> Dict[str, Any]:
         out["dimension"] = out.get("dimension", {})
         out["dimension"]["purpose"] = _clean(dimension.get("purpose"))
     return out
+    '''
+def _filter_record(record: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Keep enough structured evidence for QA.
 
+    Original implementation only kept:
+    - source_time
+    - content
+    - dimension.reason
+    - dimension.purpose
+
+    P1 keeps time/location/keywords/memory_type/retrieval metadata/assistant_reply
+    so that temporal, location, assistant-dependent and preference questions
+    are not forced to answer from content alone.
+    """
+    dimension = record.get("dimension") if isinstance(record.get("dimension"), dict) else {}
+    out: Dict[str, Any] = {}
+
+    top_level_fields = [
+        "source_time",
+        "memory_type",
+        "content",
+        "assistant_reply",
+        "assistant_uid",
+        "session_id",
+        "session_local_user_index",
+        "source_boundary_id",
+        "retrieval_method",
+        "retrieval_rank",
+        "retrieval_score",
+        "rerank_rank",
+        "rerank_score",
+        "fusion_sources",
+        "score_components",
+        "rerank_components",
+    ]
+
+    for key in top_level_fields:
+        value = record.get(key)
+        if isinstance(value, (dict, list)):
+            if value:
+                out[key] = value
+        elif _clean(value):
+            out[key] = _clean(value)
+
+    dimension_fields = [
+        "time",
+        "location",
+        "reason",
+        "purpose",
+        "keywords",
+        "status",
+        "valid_from",
+        "valid_to",
+        "is_current",
+        "supersedes",
+    ]
+
+    dim_out: Dict[str, Any] = {}
+    for key in dimension_fields:
+        value = dimension.get(key)
+        if isinstance(value, (dict, list)):
+            if value:
+                dim_out[key] = value
+        elif isinstance(value, bool):
+            dim_out[key] = value
+        elif _clean(value):
+            dim_out[key] = _clean(value)
+
+    if dim_out:
+        out["dimension"] = dim_out
+
+    return out
 
 
 def _chat(prompt: str, timeout: int = 600) -> Dict[str, Any]:

@@ -26,7 +26,8 @@ from search import (
     load_window_assistant_replies,
     search_top15_content_dedup,
 )
-from search.rerank import rerank_records
+from search.rerank_p2 import rerank_records
+from query_parser.p2_schema import normalize_parsed_query_p2
 
 
 DEFAULT_QUERY_ROOT = SUBMIT_ROOT / "results/query_analysis/run_baseline"
@@ -221,7 +222,7 @@ def run_one_case(
 ) -> Dict[str, Any]:
     started = time.time()
 
-    parsed_query = _load_json(parsed_path)
+    parsed_query = normalize_parsed_query_p2(_load_json(parsed_path))
 
     # Do not re-run query_parser. This only changes the in-memory parse mode for retrieval.
     if force_fused_parse_mode:

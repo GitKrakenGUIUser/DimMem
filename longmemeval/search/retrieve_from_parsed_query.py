@@ -31,7 +31,8 @@ from search import (
     search_structured,
     search_top15_content_dedup,
 )
-from search.rerank import rerank_records
+from search.rerank_p2 import rerank_records
+from query_parser.p2_schema import normalize_parsed_query_p2
 
 DEFAULT_QUERY_PARSED = SUBMIT_ROOT / "results/query_analysis/parsed.json"
 DEFAULT_MEMORY_DIR = SUBMIT_ROOT / "results/memories"
@@ -207,7 +208,8 @@ def run_retrieval(
     enable_rerank: bool,
     enable_assistant_context: bool,
 ) -> Path:
-    parsed_query = load_parsed_query(query_parsed)
+    #parsed_query = load_parsed_query(query_parsed)
+    parsed_query = normalize_parsed_query_p2(load_parsed_query(query_parsed))
     records = load_records(memory_dir)
 
     question_type = query_parsed.parent.parent.name

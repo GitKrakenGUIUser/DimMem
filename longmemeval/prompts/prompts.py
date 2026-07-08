@@ -125,78 +125,112 @@ The first {overlap_count} messages in the input, namely messages numbered 1 to {
 The first {overlap_count} messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message {extract_start_index}.
 '''
 
-LONGMEMEVAL_QUERY_ANALYSIS_PROMPT = """
-You are a memory query parser. Convert natural language questions into structured retrieval queries. Output only valid JSON.
+LONGMEMEVAL_QUERY_ANALYSIS_PROMPT = """ You are a memory query parser. Convert natural language questions into structured retrieval queries for DimMem.
+
+Output only valid JSON.
 
 == Output Format ==
-
 {
   "query_anchor": "",
   "need_assistant_context": false,
+  "query_type": "lookup",
+  "statefulness": "unknown",
   "dimension": {
     "target_memory_type": [],
     "keywords": [],
+    "entities": [],
+    "aliases": [],
     "time": "",
+    "time_range": {
+      "operator": "",
+      "start": "",
+      "end": "",
+      "relative_event": ""
+    },
     "location": ""
   },
-  "answer_dim": ""
+  "answer_dim": "",
+  "parse_confidence": 0.0
 }
 
-== Field Descriptions ==
+== Backward Compatibility ==
+You must still fill the original fields:
+- query_anchor
+- need_assistant_context
+- dimension.target_memory_type
+- dimension.keywords
+- dimension.time
+- dimension.location
+- answer_dim
+
+The extra P2 fields improve retrieval and reranking:
+- query_type
+- statefulness
+- dimension.entities
+- dimension.aliases
+- dimension.time_range
+- parse_confidence
+
+== Field Rules ==
 
 1. query_anchor
-Rewrite the original question into a retrieval-friendly natural language sentence. I/me/my -> the user. Preserve the core intent, time, location, quantity, order, and other key information. This is not a keyword list.
+Rewrite the question into a retrieval-friendly sentence.
+Convert I/me/my to "the user".
+Preserve quantity, order, comparison, recommendation, current/latest, before/after, and assistant-recall intent.
 
-2. need_assistant_context (bool)
-Whether additional assistant response content needs to be retrieved. Defaults to false.
-Set to true when the question contains any of the following features:
-- Mentions a previous conversation: "our previous conversation/chat", "last time", "we discussed/talked about"
-- Asks to recall assistant output: "remind me", "you recommended/mentioned/said/told me/provided/suggested"
-- Retrospective expression + conversation reference: "I'm going/looking back at...", "I wanted to follow up on..." + "our previous..."
+2. need_assistant_context
+Set true when the answer depends on what the assistant previously said, suggested, recommended, explained, provided, or asked.
 
-Example true: "Can you remind me which airline you suggested last time for budget flights?"
-Example false: "How many countries have I visited this year?"
+3. query_type
+Choose exactly one:
+lookup, count, sum, order, compare, recommend, list, abstain_check.
 
-3. dimension.target_memory_type
-Memory types to prioritize for retrieval; multiple values are allowed:
-- fact: stable facts, identity, relationships, status, possessions
-- episodic: specific events, experiences, actions, purchases, trips, progress
-- profile: preferences, habits, interests, goals, style
-Use [] when uncertain.
+4. statefulness
+Choose exactly one:
+current, historical, timeline, unknown.
 
-4. dimension.keywords
-Extract short phrases for key entities, people, objects, tools, locations, activities, topics, etc. Use [] if none.
+5. dimension.target_memory_type
+Use any of: fact, episodic, profile. Use [] when uncertain.
 
-5. dimension.time
-Fill only when there is an explicit time constraint. Format: "on/before/after/around <time>" or "between <start> and <end>".
-- If question_date is available, normalize relative time expressions (today/yesterday/this week/last month, etc. -> specific dates)
-- If the question asks about the time itself, leave this field empty and set answer_dim = "time"
-- Frequency words (daily/weekly/often) are not time constraints
-- Use "" when there is no explicit constraint
+6. dimension.keywords
+Short retrieval phrases: objects, people, tools, projects, places, activities, numbers, named entities.
 
-6. dimension.location
-Fill only when there is an explicit location/platform/scene constraint. If the question asks about the location itself, leave this field empty and set answer_dim = "location". Use "" if none.
+7. dimension.entities
+Canonical entities that must be matched if possible.
 
-7. answer_dim
-The memory field corresponding to the answer:
-- "content": fact/event/profile content
-- "time": time/date/frequency
-- "location": location/platform/scene
-- "reason": reason
-- "purpose": purpose/usage
-- "keywords": key objects such as people/objects/names/tools
-- "": requires calculation/comparison/ranking/reasoning/recommendation/summarization
+8. dimension.aliases
+Alternative names/synonyms/paraphrases for entities.
+
+9. dimension.time
+Only fill when the question contains a time constraint.
+Normalize relative time using Question Date when possible.
+If the question asks for the time/date itself, leave this empty and set answer_dim = "time".
+
+10. dimension.time_range
+Fill when dimension.time is non-empty or the question has before/after/between/current/latest logic.
+operator must be one of:
+on, before, after, around, between, relative_to_event, latest, current, "".
+
+For relative_to_event, put the event phrase in relative_event.
+Example: "before getting the Air Fryer" ->
+"time": "before getting the Air Fryer",
+"time_range": {"operator": "relative_to_event", "start": "before", "end": "", "relative_event": "getting the Air Fryer"}
+
+11. dimension.location
+Only fill explicit location/platform/scene constraints.
+If the question asks for the location itself, leave empty and set answer_dim = "location".
+
+12. answer_dim
+Choose one:
+content, time, location, reason, purpose, keywords, count, sum, order, recommendation, "".
+
+13. parse_confidence
+A number between 0 and 1. Lower when the question is ambiguous.
 
 == Input ==
-
-Question Date:
-{question_date}
-
-Question:
-{question}
+Question Date: {question_date}
+Question: {question}
 """
-
-
 LONGMEMEVAL_OFFLINE_UPDATE_PROMPT = """
 
 """

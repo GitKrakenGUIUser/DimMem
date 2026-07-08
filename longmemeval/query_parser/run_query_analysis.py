@@ -11,6 +11,12 @@ from typing import Any, Dict, List
 
 import requests
 
+try:
+    from p2_schema import normalize_parsed_query_p2
+except Exception:
+    def normalize_parsed_query_p2(parsed, *args, **kwargs):
+        return parsed
+
 
 THIS_FILE = Path(__file__).resolve()
 LONGMEM_ROOT = THIS_FILE.parents[1]
@@ -308,6 +314,13 @@ def run(args: argparse.Namespace) -> Path:
                     parsed = _safe_json_fragment(raw_text)
                     if not isinstance(parsed, dict):
                         raise ValueError("parsed_response_not_object")
+
+                    parsed = normalize_parsed_query_p2(
+                        parsed,
+                        question=q,
+                        question_date=question_date,
+                    )
+
                     ok = True
                     error = None
                     break

@@ -20,6 +20,9 @@ Important rules:
 - Use dimension.keywords and memory_type to disambiguate entities and preferences.
 - Use assistant_reply when the question asks what the assistant previously said, suggested, recommended, explained, provided, or asked.
 - Assistant fallback rule: if assistant_reply is missing but a retrieved memory content directly states the requested item, recommendation, website, tool, term, title, or answer, you may answer from that memory instead of saying I don't know.
+- Assistant direct-search rule: records with retrieval_method=assistant_reply_search are direct evidence of what the assistant previously said. For assistant-dependent questions, prefer these records over incidental attached assistant_reply fields.
+- Relative-event binding rule: records with retrieval_method=relative_event_binding are derived indexes over retrieved memories. Use them to compare the anchor event and candidate evidence for before/after questions, but do not invent facts beyond the listed candidates.
+- For before/after questions, a valid answer can be assembled from multiple retrieved records: one record may identify the anchor event, while another record may identify the candidate answer.
 - Recommendation/preference transfer rule: if the question asks for a recommendation and no exact destination/place/product match exists, use the user's retrieved preferences, constraints, budget, disliked options, and past choices to provide a recommendation-style answer. Do not reject solely because the exact new location is absent.
 - For current/latest/now questions, prefer the most recent relevant record.
 - If records conflict, prefer the record with the latest source_time, unless the question explicitly asks about an older time.

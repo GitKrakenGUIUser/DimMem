@@ -180,11 +180,35 @@ def _statefulness_score(parsed: Dict[str, Any], record: Dict[str, Any], latest_t
 def _assistant_p2_score(parsed: Dict[str, Any], record: Dict[str, Any]) -> float:
     qtype = _lower(parsed.get("query_type"))
     need_ast = bool(parsed.get("need_assistant_context"))
+    method = _lower(record.get("retrieval_method"))
 
-    if need_ast or qtype == "assistant_recall":
-        return 1.0 if _clean(record.get("assistant_reply")) else 0.0
+    if not (need_ast or qtype == "assistant_recall"):
+        return 0.0
 
-    return 0.0
+    if method == "assistant_reply_search":
+        return 1.0
+
+    reply = _clean(record.get("assistant_reply"))
+    if not reply:
+        return 0.0
+
+    # Attached assistant_reply is useful, but direct assistant_reply_search
+    # should outrank incidental attached replies.
+    query_text = " ".join(
+        [
+            _clean(parsed.get("query_anchor")),
+            " ".join(_as_list(parsed.get("keywords"))),
+            " ".join(_as_list(parsed.get("entities"))),
+            " ".join(_as_list(parsed.get("aliases"))),
+        ]
+    )
+    q_tokens = _tokens(query_text)
+    r_tokens = _tokens(reply)
+    if q_tokens and r_tokens:
+        overlap = len(q_tokens & r_tokens) / max(1.0, min(len(q_tokens), 8))
+        return max(0.35, min(0.85, overlap))
+
+    return 0.35
 
 
 def _relative_event_score(parsed: Dict[str, Any], record: Dict[str, Any]) -> float:
@@ -237,14 +261,17 @@ def rerank_records(
         shape_s = _shape_score(pq, rec)
         state_s = _statefulness_score(pq, rec, latest_ts)
         assistant_s = _assistant_p2_score(pq, rec)
-        relative_s = _relative_event_score(pq, rec)
+        relative_s = max(
+            _relative_event_score(pq, rec),
+            float(rec.get("_relative_event_binding_score", 0.0) or 0.0),
+        )
 
         p2_extra = (
-            0.35 * entity_s
-            + 0.25 * shape_s
-            + 0.20 * state_s
-            + 0.12 * assistant_s
-            + 0.08 * relative_s
+            0.30 * entity_s
+            + 0.22 * shape_s
+            + 0.18 * state_s
+            + 0.16 * assistant_s
+            + 0.14 * relative_s
         )
 
         final = 0.72 * base + 0.28 * p2_extra
@@ -259,6 +286,9 @@ def rerank_records(
             "statefulness": round(float(state_s), 6),
             "assistant": round(float(assistant_s), 6),
             "relative_event": round(float(relative_s), 6),
+            "retrieval_method": rec.get("retrieval_method"),
+            "assistant_reply_search": rec.get("_assistant_reply_search"),
+            "relative_event_binding": rec.get("_relative_event_binding"),
             "query_type": pq.get("query_type"),
             "statefulness_label": pq.get("statefulness"),
         }

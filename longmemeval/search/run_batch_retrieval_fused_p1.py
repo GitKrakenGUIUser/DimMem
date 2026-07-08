@@ -34,6 +34,14 @@ from search.p2_runtime import (
     build_full_mapped_query,
     search_mode_name_p2,
 )
+from search.assistant_reply_search import (
+    search_assistant_replies,
+    should_search_assistant_replies,
+)
+from search.relative_event_binding import (
+    apply_relative_event_binding,
+    relative_event_stats,
+)
 
 
 DEFAULT_QUERY_ROOT = SUBMIT_ROOT / "results/query_analysis/run_baseline"
@@ -207,6 +215,8 @@ def _brief_top_records(records: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
                 "assistant_uid": row.get("assistant_uid"),
                 "has_assistant_reply": bool(_clean(row.get("assistant_reply"))),
                 "assistant_debug": row.get("_assistant_context_debug"),
+                "assistant_reply_search": row.get("_assistant_reply_search"),
+                "relative_event_binding": row.get("_relative_event_binding"),
                 "fusion_sources": row.get("fusion_sources"),
                 "score_components": row.get("score_components"),
             }
@@ -265,6 +275,26 @@ def run_one_case(
         force=enable_assistant_context,
     )
 
+    # P2.2: direct assistant reply search route.
+    # This is independent from attach_assistant_context. It retrieves assistant replies
+    # even when normal memory retrieval misses the source memory.
+    assistant_reply_hits = search_assistant_replies(
+        parsed_query=parsed_query,
+        memory_dir=memory_dir,
+        top_k=route_top_k,
+    )
+    if assistant_reply_hits:
+        all_ranked = assistant_reply_hits + all_ranked
+        fused_top_records = assistant_reply_hits + fused_top_records
+
+    # P2.2: relative-event binding for questions like
+    # "before/after getting X". This enriches records and adds a derived binding hint.
+    all_ranked = apply_relative_event_binding(
+        parsed_query=parsed_query,
+        records=all_ranked,
+        final_top_k=max(route_top_k * 3, final_top_k * 2),
+    )
+
     if enable_rerank:
         final_top_records = rerank_records(
             parsed_query=parsed_query,
@@ -321,6 +351,10 @@ def run_one_case(
         "assistant_reply_count_in_final_top": sum(
             1 for row in final_top_records if _clean(row.get("assistant_reply"))
         ),
+        "assistant_reply_search_hit_count": len(assistant_reply_hits),
+        "assistant_reply_search_enabled": should_search_assistant_replies(parsed_query),
+        "assistant_context_stats_final": assistant_context_stats(final_top_records),
+        "relative_event_stats_final": relative_event_stats(final_top_records),
         "output_dir": str(run_dir),
         "top_records": _brief_top_records(final_top_records),
         "elapsed_seconds": time.time() - started,
@@ -337,6 +371,8 @@ def run_one_case(
         "candidate_count": len(fused_top_records),
         "final_top_record_count": len(final_top_records),
         "assistant_reply_count_in_final_top": summary["assistant_reply_count_in_final_top"],
+        "assistant_reply_search_hit_count": len(assistant_reply_hits),
+        "relative_event_stats_final": summary["relative_event_stats_final"],
         "output_dir": str(run_dir),
         "elapsed_seconds": time.time() - started,
     }

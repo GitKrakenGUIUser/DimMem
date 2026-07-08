@@ -39,6 +39,14 @@ from search.p2_runtime import (
     build_full_mapped_query,
     search_mode_name_p2,
 )
+from search.assistant_reply_search import (
+    search_assistant_replies,
+    should_search_assistant_replies,
+)
+from search.relative_event_binding import (
+    apply_relative_event_binding,
+    relative_event_stats,
+)
 
 DEFAULT_QUERY_PARSED = SUBMIT_ROOT / "results/query_analysis/parsed.json"
 DEFAULT_MEMORY_DIR = SUBMIT_ROOT / "results/memories"
@@ -257,8 +265,6 @@ def run_retrieval(
             top_k=top_k,
         )
     search_mode = search_result["search_mode"]
-    run_dir = output_root / question_type / search_mode / query_parsed.parent.name
-    run_dir.mkdir(parents=True, exist_ok=True)
     mapped_query = build_full_mapped_query(parsed_query, search_result)
     ranked = search_result["all_ranked_records"]
     top_records = search_result["top_records"]
@@ -279,6 +285,27 @@ def run_retrieval(
         force=enable_assistant_context,
     )
 
+    # P2.2: direct assistant reply search route.
+    # This retrieves assistant replies as independent evidence, instead of only
+    # attaching assistant text to already-retrieved memory records.
+    assistant_reply_hits = search_assistant_replies(
+        parsed_query=parsed_query,
+        memory_dir=memory_dir,
+        top_k=top_k,
+    )
+    if assistant_reply_hits:
+        ranked = assistant_reply_hits + ranked
+        top_records = assistant_reply_hits + top_records
+
+    # P2.2: relative-event binding for questions such as
+    # "before/after getting X". It adds a derived binding hint and marks
+    # candidate records before rerank.
+    ranked = apply_relative_event_binding(
+        parsed_query=parsed_query,
+        records=ranked,
+        final_top_k=max(top_k * 3, final_top_k * 2),
+    )
+
     # P2 patch: global rerank after tri-route retrieval.
     # If disabled, keep original order but still cut to final_top_k.
     if enable_rerank:
@@ -290,6 +317,9 @@ def run_retrieval(
         search_mode = f"{search_mode}_p2_rerank"
     else:
         top_records = top_records[:final_top_k]
+
+    run_dir = output_root / question_type / search_mode / query_parsed.parent.name
+    run_dir.mkdir(parents=True, exist_ok=True)
     experiment = {
         "query_parsed": str(query_parsed),
         "memory_dir": str(memory_dir),
@@ -334,6 +364,10 @@ def run_retrieval(
         "final_top_k": final_top_k,
         "enable_rerank": enable_rerank,
         "enable_assistant_context": enable_assistant_context,
+        "assistant_reply_search_hit_count": len(assistant_reply_hits),
+        "assistant_reply_search_enabled": should_search_assistant_replies(parsed_query),
+        "assistant_context_stats_final": assistant_context_stats(top_records),
+        "relative_event_stats_final": relative_event_stats(top_records),
         "output_dir": str(run_dir),
         "top_records": [
             {
@@ -352,6 +386,8 @@ def run_retrieval(
                 "assistant_uid": row.get("assistant_uid"),
                 "has_assistant_reply": bool(_clean(row.get("assistant_reply"))),
                 "assistant_debug": row.get("_assistant_context_debug"),
+                "assistant_reply_search": row.get("_assistant_reply_search"),
+                "relative_event_binding": row.get("_relative_event_binding"),
                 "score_components": row.get("score_components"),
             }
             for i, row in enumerate(top_records)

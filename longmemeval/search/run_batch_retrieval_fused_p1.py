@@ -28,11 +28,17 @@ from search import (
 )
 from search.rerank_p2 import rerank_records
 from query_parser.p2_schema import normalize_parsed_query_p2
+from search.p2_runtime import (
+    attach_assistant_context_robust,
+    assistant_context_stats,
+    build_full_mapped_query,
+    search_mode_name_p2,
+)
 
 
 DEFAULT_QUERY_ROOT = SUBMIT_ROOT / "results/query_analysis/run_baseline"
 DEFAULT_MEMORY_ROOT = SUBMIT_ROOT / "results/memories/run_baseline"
-DEFAULT_OUTPUT_ROOT = SUBMIT_ROOT / "results/retrieval/run_baseline_fused_p1"
+DEFAULT_OUTPUT_ROOT = SUBMIT_ROOT / "results/retrieval/run_baseline_fused_p2"
 DEFAULT_EMBEDDING_MODEL = "/data/aios-weights/embeddings/all-MiniLM-L6-v2"
 
 
@@ -67,8 +73,7 @@ def _truthy(value: Any) -> bool:
 
 
 def _search_mode_name(route_top_k: int, final_top_k: int, enable_rerank: bool) -> str:
-    suffix = "p1_rerank" if enable_rerank else "no_rerank"
-    return f"tri_fused_{suffix}_route{route_top_k}_final{final_top_k}"
+    return search_mode_name_p2(route_top_k, final_top_k, enable_rerank)
 
 
 def _iter_cases(query_root: Path) -> Iterable[Tuple[str, str, Path]]:
@@ -190,6 +195,8 @@ def _brief_top_records(records: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
                 "score": row.get("score"),
                 "retrieval_score": row.get("retrieval_score"),
                 "rerank_score": row.get("rerank_score"),
+                "rerank_score_p1": row.get("rerank_score_p1"),
+                "rerank_components_p2": row.get("rerank_components_p2"),
                 "rerank_components": row.get("rerank_components"),
                 "retrieval_method": row.get("retrieval_method"),
                 "retrieval_rank": row.get("retrieval_rank"),
@@ -199,6 +206,7 @@ def _brief_top_records(records: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
                 "source_boundary_id": row.get("source_boundary_id"),
                 "assistant_uid": row.get("assistant_uid"),
                 "has_assistant_reply": bool(_clean(row.get("assistant_reply"))),
+                "assistant_debug": row.get("_assistant_context_debug"),
                 "fusion_sources": row.get("fusion_sources"),
                 "score_components": row.get("score_components"),
             }
@@ -244,13 +252,13 @@ def run_one_case(
     all_ranked = list(search_result.get("all_ranked_records") or [])
     fused_top_records = list(search_result.get("top_records") or [])
 
-    all_ranked = _maybe_attach_assistant_context(
+    all_ranked = attach_assistant_context_robust(
         parsed_query=parsed_query,
         memory_dir=memory_dir,
         records=all_ranked,
         force=enable_assistant_context,
     )
-    fused_top_records = _maybe_attach_assistant_context(
+    fused_top_records = attach_assistant_context_robust(
         parsed_query=parsed_query,
         memory_dir=memory_dir,
         records=fused_top_records,
@@ -266,7 +274,7 @@ def run_one_case(
     else:
         final_top_records = fused_top_records[:final_top_k]
 
-    mapped_query = search_result.get("mapped_query_analysis") or {}
+    mapped_query = build_full_mapped_query(parsed_query, search_result)
     sub_results = search_result.get("sub_results") or {}
 
     experiment = {
@@ -337,8 +345,8 @@ def run_one_case(
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
-            "Batch P1 fused retrieval for LongMemEval. "
-            "Runs BM25 + Structured + MiniLM, each route top-k, then optional P1 rerank."
+            "Batch P2 fused retrieval for LongMemEval. "
+            "Runs BM25 + Structured + MiniLM, each route top-k, then optional P2 rerank."
         )
     )
 
@@ -358,7 +366,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
         "--output-root",
         type=Path,
         default=DEFAULT_OUTPUT_ROOT,
-        help="Output retrieval root, e.g. ./results/retrieval/run_baseline_fused_p1",
+        help="Output retrieval root, e.g. ./results/retrieval/run_baseline_fused_p2",
     )
 
     parser.add_argument("--route-top-k", type=int, default=20)
@@ -375,7 +383,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--enable-rerank",
         action="store_true",
-        help="Enable P1 global rerank after fused retrieval.",
+        help="Enable P2 global rerank after fused retrieval.",
     )
     parser.add_argument(
         "--enable-assistant-context",
@@ -421,7 +429,7 @@ def main() -> None:
     search_mode = _search_mode_name(args.route_top_k, args.final_top_k, args.enable_rerank)
 
     _log(
-        "Batch P1 fused retrieval started: "
+        "Batch P2 fused retrieval started: "
         f"cases={len(cases)} "
         f"route_top_k={args.route_top_k} "
         f"final_top_k={args.final_top_k} "
@@ -604,7 +612,7 @@ def main() -> None:
     _write_json(output_root / "summary.json", final)
 
     _log(
-        "Batch P1 fused retrieval completed: "
+        "Batch P2 fused retrieval completed: "
         f"total={len(cases)} done={done} failed={failed} skipped={skipped} "
         f"output_root={output_root}"
     )

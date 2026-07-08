@@ -33,6 +33,12 @@ from search import (
 )
 from search.rerank_p2 import rerank_records
 from query_parser.p2_schema import normalize_parsed_query_p2
+from search.p2_runtime import (
+    attach_assistant_context_robust,
+    assistant_context_stats,
+    build_full_mapped_query,
+    search_mode_name_p2,
+)
 
 DEFAULT_QUERY_PARSED = SUBMIT_ROOT / "results/query_analysis/parsed.json"
 DEFAULT_MEMORY_DIR = SUBMIT_ROOT / "results/memories"
@@ -253,27 +259,27 @@ def run_retrieval(
     search_mode = search_result["search_mode"]
     run_dir = output_root / question_type / search_mode / query_parsed.parent.name
     run_dir.mkdir(parents=True, exist_ok=True)
-    mapped_query = search_result["mapped_query_analysis"]
+    mapped_query = build_full_mapped_query(parsed_query, search_result)
     ranked = search_result["all_ranked_records"]
     top_records = search_result["top_records"]
 
-    # P1 patch: attach assistant reply before rerank/QA.
+    # P2 patch: attach assistant reply before rerank/QA.
     # This is safe: when files are missing or query does not need assistant context,
     # records are returned unchanged.
-    ranked = _maybe_attach_assistant_context(
+    ranked = attach_assistant_context_robust(
         parsed_query=parsed_query,
         memory_dir=memory_dir,
         records=ranked,
         force=enable_assistant_context,
     )
-    top_records = _maybe_attach_assistant_context(
+    top_records = attach_assistant_context_robust(
         parsed_query=parsed_query,
         memory_dir=memory_dir,
         records=top_records,
         force=enable_assistant_context,
     )
 
-    # P1 patch: global rerank after tri-route retrieval.
+    # P2 patch: global rerank after tri-route retrieval.
     # If disabled, keep original order but still cut to final_top_k.
     if enable_rerank:
         top_records = rerank_records(
@@ -281,7 +287,7 @@ def run_retrieval(
             records=ranked,
             final_top_k=final_top_k,
         )
-        search_mode = f"{search_mode}_p1_rerank"
+        search_mode = f"{search_mode}_p2_rerank"
     else:
         top_records = top_records[:final_top_k]
     experiment = {
@@ -335,6 +341,8 @@ def run_retrieval(
                 "score": row.get("score"),
                 "retrieval_score": row.get("retrieval_score"),
                 "rerank_score": row.get("rerank_score"),
+                "rerank_score_p1": row.get("rerank_score_p1"),
+                "rerank_components_p2": row.get("rerank_components_p2"),
                 "rerank_components": row.get("rerank_components"),
                 "retrieval_method": row.get("retrieval_method"),
                 "fusion_sources": row.get("fusion_sources"),
@@ -343,6 +351,7 @@ def run_retrieval(
                 "source_boundary_id": row.get("source_boundary_id"),
                 "assistant_uid": row.get("assistant_uid"),
                 "has_assistant_reply": bool(_clean(row.get("assistant_reply"))),
+                "assistant_debug": row.get("_assistant_context_debug"),
                 "score_components": row.get("score_components"),
             }
             for i, row in enumerate(top_records)
@@ -362,7 +371,7 @@ def main() -> None:
     parser.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
     parser.add_argument("--top-k", type=int, default=20, help="Per-route retrieval top-k.")
     parser.add_argument("--final-top-k", type=int, default=15, help="Final records passed to QA.")
-    parser.add_argument("--enable-rerank", action="store_true", help="Enable P1 global rerank.")
+    parser.add_argument("--enable-rerank", action="store_true", help="Enable P2 global rerank.")
     parser.add_argument(
         "--enable-assistant-context",
         action="store_true",

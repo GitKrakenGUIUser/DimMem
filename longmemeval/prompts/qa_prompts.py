@@ -13,14 +13,17 @@ Use only the retrieved memories as evidence.
 
 Important rules:
 - Prefer explicit evidence over guesses.
-- If the evidence is insufficient, answer exactly: I don't know.
+- If the evidence is truly insufficient, answer exactly: I don't know.
 - Use source_time and dimension.time for temporal reasoning.
 - Use dimension.location for location questions.
 - Use dimension.reason and dimension.purpose for why/purpose questions.
 - Use dimension.keywords and memory_type to disambiguate entities and preferences.
-- Use assistant_reply when the question asks what the assistant previously said, suggested, recommended, explained, or asked.
-- If records conflict, prefer the record with the latest source_time, unless the question explicitly asks about an older time.
+- Use assistant_reply when the question asks what the assistant previously said, suggested, recommended, explained, provided, or asked.
+- Assistant fallback rule: if assistant_reply is missing but a retrieved memory content directly states the requested item, recommendation, website, tool, term, title, or answer, you may answer from that memory instead of saying I don't know.
+- Recommendation/preference transfer rule: if the question asks for a recommendation and no exact destination/place/product match exists, use the user's retrieved preferences, constraints, budget, disliked options, and past choices to provide a recommendation-style answer. Do not reject solely because the exact new location is absent.
 - For current/latest/now questions, prefer the most recent relevant record.
+- If records conflict, prefer the record with the latest source_time, unless the question explicitly asks about an older time.
+- For before/after/order questions, compare source_time and dimension.time across all relevant records.
 - For count/list/order questions, inspect all retrieved records and avoid counting duplicate memories.
 - Do not invent missing numbers, dates, places, people, preferences, or entities.
 
@@ -49,8 +52,12 @@ def _format_value(value: Any) -> str:
     if isinstance(value, dict):
         pairs = []
         for k, v in value.items():
-            if _clean(v):
-                pairs.append(f"{k}={v}")
+            if isinstance(v, (list, dict)):
+                txt = _format_value(v)
+            else:
+                txt = _clean(v)
+            if txt:
+                pairs.append(f"{k}={txt}")
         return "; ".join(pairs)
     return _clean(value)
 
@@ -84,10 +91,11 @@ def _memory_lines(record: Dict[str, Any], rank: int) -> List[str]:
 
     _append_if_present(lines, "assistant_reply", record.get("assistant_reply"))
 
-    # Debug metadata is useful for auditing retrieval errors.
     _append_if_present(lines, "retrieval_method", record.get("retrieval_method"))
     _append_if_present(lines, "retrieval_score", record.get("retrieval_score"))
     _append_if_present(lines, "rerank_score", record.get("rerank_score"))
+    _append_if_present(lines, "rerank_score_p1", record.get("rerank_score_p1"))
+    _append_if_present(lines, "rerank_components_p2", record.get("rerank_components_p2"))
     _append_if_present(lines, "source_boundary_id", record.get("source_boundary_id"))
 
     return lines

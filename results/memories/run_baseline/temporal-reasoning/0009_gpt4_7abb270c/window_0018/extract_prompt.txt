@@ -1,0 +1,167 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-03-04T13:19:00.500000, Sat] 1.User: That's really helpful, thanks for the tips! I'll definitely experiment with different arrangements. Speaking of natural light, I also removed them last weekend, and it's amazing how much brighter my bedroom feels now. Do you have any suggestions on what kind of window treatments would be best for my bedroom?
+[2023-03-04T13:19:01, Sat] 2.User: I meant to say that I removed the heavy drapes from the windows in my bedroom last weekend, not the curtains. Now, can you tell me more about plantation shutters? Are they expensive and difficult to install?
+[2023-03-04T13:19:01.500000, Sat] 3.User: I'm still deciding on what to do with my couch in the living room. Do you have any suggestions on how to incorporate a home office area into the room without making it look cluttered?
+[2023-03-04T13:19:02, Sat] 4.User: That's a great idea about using a room divider to separate the office area from the rest of the living room. I was thinking of setting up my home office in the spare bedroom, but now I'm considering using a corner of the living room instead. Do you have any suggestions on how to choose the right desk and chair for my home office?
+[2023-03-04T13:19:02.500000, Sat] 5.User: I'm glad you found the suggestions helpful! Choosing the right desk and chair can make a big difference in your comfort and productivity. Remember to consider your specific needs, the size and style of your living room, and your personal preferences when making your selection. If you have any more questions or need further guidance, feel free to ask!
+[2023-03-04T14:26:00, Sat] 6.User: From now own, I need you to keep your response nice and concise
+[2023-03-04T14:26:00.500000, Sat] 7.User: I am planning a discord bot project that listens to JIRA webhook and determine who to mention in a discord server based on the type of events invoked. I need your suggestions on this project.
+[2023-03-04T14:26:01, Sat] 8.User: Can you suggest the minimum viable product requirements for this project?
+[2023-03-04T14:26:01.500000, Sat] 9.User: Here is a draft of the data model that I have design, can you give some suggestions based on this? 
+
+User
+---------
+- jira id: string
+- discord id: string
+- type: UserType
+- excludedRules: EventRule[]
+
+EventRule
+--------
+- type: string // webhook event type
+- targets: UserType[]
+- exclusion: User[]
+- includeInvokedUser: boolean
+
+UserType
+-------
+- users: User[]
+- name: string
+- registeredRules: EventRule[]
+
+relations are, between User and EventRule there is many to many, between UserType to EventRule there is many to many, and from UserType to User there is one to many.
+[2023-03-04T14:26:02, Sat] 10.User: Is there any issue with the basic design that I have provided?
+[2023-03-04T20:16:00, Sat] 11.User: rewrite the following considering this is the company motto:
+"Revolutionizing humanity seashore boundaries one raft at a time"
+
+Welcome to GMBM LTD, a pioneering company that is revolutionizing marine settlements. We have developed and patented a unique solution that addresses two major challenges in the industry: congestion in seaports and the rising cost and scarcity of real estate. Our innovative solution is cost-effective, efficient and has the potential to disrupt the industry.
+
+Our patented technology involves the construction of sea rafts using inside-concreted bottoms of shipping containers, which are capable of movement on both water and land. These rafts can also be connected to each other to form an array of rafts with power lift adaptability for various purposes. The rafts also feature hydraulic freight and passenger elevators that allow them to rise and lower from the platform.
+
+Our goal at GMBM LTD is to transform the way seaport operations and real estate development are conducted. We are committed to reducing congestion in seaports and providing an alternative to the high prices and shortages of traditional real estate development. Our target market includes seaport operators, shipping companies and real estate developers.
+
+At GMBM LTD, we are convinced that our solution has the potential to not only enhance the efficiency of seaport operations but also provide a new option for real estate development. We invite you to join us on this exciting journey and be a part of shaping the future of marine settlements. Together, we can create a brighter tomorrow.
+[2023-03-04T20:16:00.500000, Sat] 12.User: Please provide five possible options for the paragraph explaining the company's purpose and why we exist. 
+write in a formal style and inspiring tone of voice and focus. 
+focus equally on both solutions.
+dont focus on marine settlements industry
+[2023-03-04T20:16:01, Sat] 13.User: Write it again in a way that conveys confidence in the idea and the ability of the company to implement such a revolutionary change without sounding like a sales pitch
+[2023-03-04T20:16:01.500000, Sat] 14.User: Rewrite it so the reader believes the solution exists and that the company can make the changes it wants to make to the industry
+[2023-03-04T20:16:02, Sat] 15.User: Please write to me based on what exists and what are the five values that guide your company

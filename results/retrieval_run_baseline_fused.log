@@ -1,0 +1,406 @@
+[2026-07-07 19:49:57] Batch fused retrieval started: cases=30 route_top_k=20 final_top_k=15 query_root=/home/bowenzheng/projects/DimMemTest-test/DimMem/results/query_analysis/run_baseline memory_root=/home/bowenzheng/projects/DimMemTest-test/DimMem/results/memories/run_baseline output_root=/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4043.21it/s]
+/home/bowenzheng/projects/DimMemTest-test/DimMem/longmemeval/utils/local_embedding_client.py:60: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  self.embedding_dim = int(self._model.get_sentence_embedding_dimension())
+[2026-07-07 19:50:03] [case 1/30] question_id=knowledge-update/0006_031748ae_abs | start
+[2026-07-07 19:50:11] [case 1/30] question_id=knowledge-update/0006_031748ae_abs | done | records=166 candidates=43 final_top=15 elapsed=8.57s | done=1 failed=0 skipped=0
+[2026-07-07 19:50:11] [case 2/30] question_id=knowledge-update/0011_852ce960 | start
+[2026-07-07 19:50:12] [case 2/30] question_id=knowledge-update/0011_852ce960 | done | records=126 candidates=46 final_top=15 elapsed=0.22s | done=2 failed=0 skipped=0
+[2026-07-07 19:50:12] [case 3/30] question_id=knowledge-update/0012_07741c45 | start
+[2026-07-07 19:50:12] [case 3/30] question_id=knowledge-update/0012_07741c45 | done | records=156 candidates=42 final_top=15 elapsed=0.24s | done=3 failed=0 skipped=0
+[2026-07-07 19:50:12] [case 4/30] question_id=knowledge-update/0015_0977f2af | start
+[2026-07-07 19:50:12] [case 4/30] question_id=knowledge-update/0015_0977f2af | done | records=162 candidates=50 final_top=15 elapsed=0.29s | done=4 failed=0 skipped=0
+[2026-07-07 19:50:12] [case 5/30] question_id=knowledge-update/0019_618f13b2 | start
+[2026-07-07 19:50:15] [case 5/30] question_id=knowledge-update/0019_618f13b2 | done | records=146 candidates=42 final_top=15 elapsed=3.28s | done=5 failed=0 skipped=0
+[2026-07-07 19:50:15] [case 6/30] question_id=multi-session/0000_88432d0a_abs | start
+[2026-07-07 19:50:28] [case 6/30] question_id=multi-session/0000_88432d0a_abs | done | records=204 candidates=47 final_top=15 elapsed=12.81s | done=6 failed=0 skipped=0
+[2026-07-07 19:50:28] [case 7/30] question_id=multi-session/0001_51c32626 | start
+[2026-07-07 19:50:38] [case 7/30] question_id=multi-session/0001_51c32626 | done | records=147 candidates=45 final_top=15 elapsed=9.35s | done=7 failed=0 skipped=0
+[2026-07-07 19:50:38] [case 8/30] question_id=multi-session/0003_73d42213 | start
+[2026-07-07 19:50:46] [case 8/30] question_id=multi-session/0003_73d42213 | done | records=155 candidates=42 final_top=15 elapsed=8.89s | done=8 failed=0 skipped=0
+[2026-07-07 19:50:46] [case 9/30] question_id=multi-session/0010_bc149d6b | start
+[2026-07-07 19:50:55] [case 9/30] question_id=multi-session/0010_bc149d6b | done | records=167 candidates=46 final_top=15 elapsed=8.53s | done=9 failed=0 skipped=0
+[2026-07-07 19:50:55] [case 10/30] question_id=multi-session/0013_a9f6b44c | start
+[2026-07-07 19:50:55] [case 10/30] question_id=multi-session/0013_a9f6b44c | done | records=204 candidates=38 final_top=15 elapsed=0.37s | done=10 failed=0 skipped=0
+[2026-07-07 19:50:55] [case 11/30] question_id=multi-session/0018_3fdac837 | start
+[2026-07-07 19:50:56] [case 11/30] question_id=multi-session/0018_3fdac837 | done | records=201 candidates=37 final_top=15 elapsed=0.34s | done=11 failed=0 skipped=0
+[2026-07-07 19:50:56] [case 12/30] question_id=multi-session/0021_6d550036 | start
+[2026-07-07 19:50:56] [case 12/30] question_id=multi-session/0021_6d550036 | done | records=145 candidates=48 final_top=15 elapsed=0.23s | done=12 failed=0 skipped=0
+[2026-07-07 19:50:56] [case 13/30] question_id=multi-session/0026_a3332713 | start
+[2026-07-07 19:50:56] [case 13/30] question_id=multi-session/0026_a3332713 | done | records=204 candidates=42 final_top=15 elapsed=0.31s | done=13 failed=0 skipped=0
+[2026-07-07 19:50:56] [case 14/30] question_id=single-session-assistant/0008_ceb54acb | start
+[2026-07-07 19:50:58] [case 14/30] question_id=single-session-assistant/0008_ceb54acb | done | records=185 candidates=52 final_top=15 elapsed=1.54s | done=14 failed=0 skipped=0
+[2026-07-07 19:50:58] [case 15/30] question_id=single-session-assistant/0027_28bcfaac | start
+[2026-07-07 19:50:58] [case 15/30] question_id=single-session-assistant/0027_28bcfaac | done | records=172 candidates=46 final_top=15 elapsed=0.26s | done=15 failed=0 skipped=0
+[2026-07-07 19:50:58] [case 16/30] question_id=single-session-assistant/0028_18dcd5a5 | start
+[2026-07-07 19:50:58] [case 16/30] question_id=single-session-assistant/0028_18dcd5a5 | done | records=147 candidates=46 final_top=15 elapsed=0.24s | done=16 failed=0 skipped=0
+[2026-07-07 19:50:58] [case 17/30] question_id=single-session-preference/0002_0edc2aef | start
+[2026-07-07 19:50:59] [case 17/30] question_id=single-session-preference/0002_0edc2aef | done | records=185 candidates=49 final_top=15 elapsed=0.28s | done=17 failed=0 skipped=0
+[2026-07-07 19:50:59] [case 18/30] question_id=single-session-preference/0029_1da05512 | start
+[2026-07-07 19:50:59] [case 18/30] question_id=single-session-preference/0029_1da05512 | done | records=166 candidates=48 final_top=15 elapsed=0.24s | done=18 failed=0 skipped=0
+[2026-07-07 19:50:59] [case 19/30] question_id=single-session-user/0005_726462e0 | start
+[2026-07-07 19:50:59] [case 19/30] question_id=single-session-user/0005_726462e0 | done | records=189 candidates=48 final_top=15 elapsed=0.29s | done=19 failed=0 skipped=0
+[2026-07-07 19:50:59] [case 20/30] question_id=single-session-user/0017_58bf7951 | start
+[2026-07-07 19:50:59] [case 20/30] question_id=single-session-user/0017_58bf7951 | done | records=157 candidates=44 final_top=15 elapsed=0.23s | done=20 failed=0 skipped=0
+[2026-07-07 19:50:59] [case 21/30] question_id=single-session-user/0023_60d45044 | start
+[2026-07-07 19:51:00] [case 21/30] question_id=single-session-user/0023_60d45044 | done | records=157 candidates=50 final_top=15 elapsed=0.24s | done=21 failed=0 skipped=0
+[2026-07-07 19:51:00] [case 22/30] question_id=single-session-user/0024_d52b4f67 | start
+[2026-07-07 19:51:00] [case 22/30] question_id=single-session-user/0024_d52b4f67 | done | records=152 candidates=46 final_top=15 elapsed=0.25s | done=22 failed=0 skipped=0
+[2026-07-07 19:51:00] [case 23/30] question_id=temporal-reasoning/0004_gpt4_1e4a8aeb | start
+[2026-07-07 19:51:00] [case 23/30] question_id=temporal-reasoning/0004_gpt4_1e4a8aeb | done | records=172 candidates=45 final_top=15 elapsed=0.24s | done=23 failed=0 skipped=0
+[2026-07-07 19:51:00] [case 24/30] question_id=temporal-reasoning/0007_gpt4_f420262d | start
+[2026-07-07 19:51:00] [case 24/30] question_id=temporal-reasoning/0007_gpt4_f420262d | done | records=188 candidates=41 final_top=15 elapsed=0.27s | done=24 failed=0 skipped=0
+[2026-07-07 19:51:00] [case 25/30] question_id=temporal-reasoning/0009_gpt4_7abb270c | start
+[2026-07-07 19:51:01] [case 25/30] question_id=temporal-reasoning/0009_gpt4_7abb270c | done | records=183 candidates=50 final_top=15 elapsed=0.26s | done=25 failed=0 skipped=0
+[2026-07-07 19:51:01] [case 26/30] question_id=temporal-reasoning/0014_982b5123_abs | start
+[2026-07-07 19:51:01] [case 26/30] question_id=temporal-reasoning/0014_982b5123_abs | done | records=184 candidates=49 final_top=15 elapsed=0.29s | done=26 failed=0 skipped=0
+[2026-07-07 19:51:01] [case 27/30] question_id=temporal-reasoning/0016_71017277 | start
+[2026-07-07 19:51:01] [case 27/30] question_id=temporal-reasoning/0016_71017277 | done | records=180 candidates=53 final_top=15 elapsed=0.26s | done=27 failed=0 skipped=0
+[2026-07-07 19:51:01] [case 28/30] question_id=temporal-reasoning/0020_gpt4_b5700ca9 | start
+[2026-07-07 19:51:01] [case 28/30] question_id=temporal-reasoning/0020_gpt4_b5700ca9 | done | records=205 candidates=45 final_top=15 elapsed=0.30s | done=28 failed=0 skipped=0
+[2026-07-07 19:51:01] [case 29/30] question_id=temporal-reasoning/0022_gpt4_4929293a | start
+[2026-07-07 19:51:02] [case 29/30] question_id=temporal-reasoning/0022_gpt4_4929293a | done | records=188 candidates=35 final_top=15 elapsed=0.26s | done=29 failed=0 skipped=0
+[2026-07-07 19:51:02] [case 30/30] question_id=temporal-reasoning/0025_993da5e2 | start
+[2026-07-07 19:51:02] [case 30/30] question_id=temporal-reasoning/0025_993da5e2 | done | records=166 candidates=39 final_top=15 elapsed=0.24s | done=30 failed=0 skipped=0
+[2026-07-07 19:51:02] Batch fused retrieval completed: total=30 done=30 failed=0 skipped=0 output_root=/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused
+{
+  "output_root": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused",
+  "total": 30,
+  "done": 30,
+  "failed": 0,
+  "skipped": 0,
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "rows": [
+    {
+      "question_type": "knowledge-update",
+      "sample_id": "0006_031748ae_abs",
+      "ok": true,
+      "error": null,
+      "record_count": 166,
+      "candidate_count": 43,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/knowledge-update/tri_fused_route20_final15/0006_031748ae_abs",
+      "elapsed_seconds": 8.570427417755127
+    },
+    {
+      "question_type": "knowledge-update",
+      "sample_id": "0011_852ce960",
+      "ok": true,
+      "error": null,
+      "record_count": 126,
+      "candidate_count": 46,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/knowledge-update/tri_fused_route20_final15/0011_852ce960",
+      "elapsed_seconds": 0.21709084510803223
+    },
+    {
+      "question_type": "knowledge-update",
+      "sample_id": "0012_07741c45",
+      "ok": true,
+      "error": null,
+      "record_count": 156,
+      "candidate_count": 42,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/knowledge-update/tri_fused_route20_final15/0012_07741c45",
+      "elapsed_seconds": 0.24462223052978516
+    },
+    {
+      "question_type": "knowledge-update",
+      "sample_id": "0015_0977f2af",
+      "ok": true,
+      "error": null,
+      "record_count": 162,
+      "candidate_count": 50,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/knowledge-update/tri_fused_route20_final15/0015_0977f2af",
+      "elapsed_seconds": 0.2885904312133789
+    },
+    {
+      "question_type": "knowledge-update",
+      "sample_id": "0019_618f13b2",
+      "ok": true,
+      "error": null,
+      "record_count": 146,
+      "candidate_count": 42,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/knowledge-update/tri_fused_route20_final15/0019_618f13b2",
+      "elapsed_seconds": 3.2810354232788086
+    },
+    {
+      "question_type": "multi-session",
+      "sample_id": "0000_88432d0a_abs",
+      "ok": true,
+      "error": null,
+      "record_count": 204,
+      "candidate_count": 47,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/multi-session/tri_fused_route20_final15/0000_88432d0a_abs",
+      "elapsed_seconds": 12.810150146484375
+    },
+    {
+      "question_type": "multi-session",
+      "sample_id": "0001_51c32626",
+      "ok": true,
+      "error": null,
+      "record_count": 147,
+      "candidate_count": 45,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/multi-session/tri_fused_route20_final15/0001_51c32626",
+      "elapsed_seconds": 9.346191644668579
+    },
+    {
+      "question_type": "multi-session",
+      "sample_id": "0003_73d42213",
+      "ok": true,
+      "error": null,
+      "record_count": 155,
+      "candidate_count": 42,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/multi-session/tri_fused_route20_final15/0003_73d42213",
+      "elapsed_seconds": 8.889487028121948
+    },
+    {
+      "question_type": "multi-session",
+      "sample_id": "0010_bc149d6b",
+      "ok": true,
+      "error": null,
+      "record_count": 167,
+      "candidate_count": 46,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/multi-session/tri_fused_route20_final15/0010_bc149d6b",
+      "elapsed_seconds": 8.534815073013306
+    },
+    {
+      "question_type": "multi-session",
+      "sample_id": "0013_a9f6b44c",
+      "ok": true,
+      "error": null,
+      "record_count": 204,
+      "candidate_count": 38,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/multi-session/tri_fused_route20_final15/0013_a9f6b44c",
+      "elapsed_seconds": 0.36789822578430176
+    },
+    {
+      "question_type": "multi-session",
+      "sample_id": "0018_3fdac837",
+      "ok": true,
+      "error": null,
+      "record_count": 201,
+      "candidate_count": 37,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/multi-session/tri_fused_route20_final15/0018_3fdac837",
+      "elapsed_seconds": 0.34229183197021484
+    },
+    {
+      "question_type": "multi-session",
+      "sample_id": "0021_6d550036",
+      "ok": true,
+      "error": null,
+      "record_count": 145,
+      "candidate_count": 48,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/multi-session/tri_fused_route20_final15/0021_6d550036",
+      "elapsed_seconds": 0.23349618911743164
+    },
+    {
+      "question_type": "multi-session",
+      "sample_id": "0026_a3332713",
+      "ok": true,
+      "error": null,
+      "record_count": 204,
+      "candidate_count": 42,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/multi-session/tri_fused_route20_final15/0026_a3332713",
+      "elapsed_seconds": 0.3076639175415039
+    },
+    {
+      "question_type": "single-session-assistant",
+      "sample_id": "0008_ceb54acb",
+      "ok": true,
+      "error": null,
+      "record_count": 185,
+      "candidate_count": 52,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/single-session-assistant/tri_fused_route20_final15/0008_ceb54acb",
+      "elapsed_seconds": 1.541349172592163
+    },
+    {
+      "question_type": "single-session-assistant",
+      "sample_id": "0027_28bcfaac",
+      "ok": true,
+      "error": null,
+      "record_count": 172,
+      "candidate_count": 46,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/single-session-assistant/tri_fused_route20_final15/0027_28bcfaac",
+      "elapsed_seconds": 0.2550981044769287
+    },
+    {
+      "question_type": "single-session-assistant",
+      "sample_id": "0028_18dcd5a5",
+      "ok": true,
+      "error": null,
+      "record_count": 147,
+      "candidate_count": 46,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/single-session-assistant/tri_fused_route20_final15/0028_18dcd5a5",
+      "elapsed_seconds": 0.23556780815124512
+    },
+    {
+      "question_type": "single-session-preference",
+      "sample_id": "0002_0edc2aef",
+      "ok": true,
+      "error": null,
+      "record_count": 185,
+      "candidate_count": 49,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/single-session-preference/tri_fused_route20_final15/0002_0edc2aef",
+      "elapsed_seconds": 0.2794229984283447
+    },
+    {
+      "question_type": "single-session-preference",
+      "sample_id": "0029_1da05512",
+      "ok": true,
+      "error": null,
+      "record_count": 166,
+      "candidate_count": 48,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/single-session-preference/tri_fused_route20_final15/0029_1da05512",
+      "elapsed_seconds": 0.24173378944396973
+    },
+    {
+      "question_type": "single-session-user",
+      "sample_id": "0005_726462e0",
+      "ok": true,
+      "error": null,
+      "record_count": 189,
+      "candidate_count": 48,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/single-session-user/tri_fused_route20_final15/0005_726462e0",
+      "elapsed_seconds": 0.2880120277404785
+    },
+    {
+      "question_type": "single-session-user",
+      "sample_id": "0017_58bf7951",
+      "ok": true,
+      "error": null,
+      "record_count": 157,
+      "candidate_count": 44,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/single-session-user/tri_fused_route20_final15/0017_58bf7951",
+      "elapsed_seconds": 0.231858491897583
+    },
+    {
+      "question_type": "single-session-user",
+      "sample_id": "0023_60d45044",
+      "ok": true,
+      "error": null,
+      "record_count": 157,
+      "candidate_count": 50,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/single-session-user/tri_fused_route20_final15/0023_60d45044",
+      "elapsed_seconds": 0.23682165145874023
+    },
+    {
+      "question_type": "single-session-user",
+      "sample_id": "0024_d52b4f67",
+      "ok": true,
+      "error": null,
+      "record_count": 152,
+      "candidate_count": 46,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/single-session-user/tri_fused_route20_final15/0024_d52b4f67",
+      "elapsed_seconds": 0.25373387336730957
+    },
+    {
+      "question_type": "temporal-reasoning",
+      "sample_id": "0004_gpt4_1e4a8aeb",
+      "ok": true,
+      "error": null,
+      "record_count": 172,
+      "candidate_count": 45,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/temporal-reasoning/tri_fused_route20_final15/0004_gpt4_1e4a8aeb",
+      "elapsed_seconds": 0.2370586395263672
+    },
+    {
+      "question_type": "temporal-reasoning",
+      "sample_id": "0007_gpt4_f420262d",
+      "ok": true,
+      "error": null,
+      "record_count": 188,
+      "candidate_count": 41,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/temporal-reasoning/tri_fused_route20_final15/0007_gpt4_f420262d",
+      "elapsed_seconds": 0.2748076915740967
+    },
+    {
+      "question_type": "temporal-reasoning",
+      "sample_id": "0009_gpt4_7abb270c",
+      "ok": true,
+      "error": null,
+      "record_count": 183,
+      "candidate_count": 50,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/temporal-reasoning/tri_fused_route20_final15/0009_gpt4_7abb270c",
+      "elapsed_seconds": 0.264620304107666
+    },
+    {
+      "question_type": "temporal-reasoning",
+      "sample_id": "0014_982b5123_abs",
+      "ok": true,
+      "error": null,
+      "record_count": 184,
+      "candidate_count": 49,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/temporal-reasoning/tri_fused_route20_final15/0014_982b5123_abs",
+      "elapsed_seconds": 0.294109582901001
+    },
+    {
+      "question_type": "temporal-reasoning",
+      "sample_id": "0016_71017277",
+      "ok": true,
+      "error": null,
+      "record_count": 180,
+      "candidate_count": 53,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/temporal-reasoning/tri_fused_route20_final15/0016_71017277",
+      "elapsed_seconds": 0.25537586212158203
+    },
+    {
+      "question_type": "temporal-reasoning",
+      "sample_id": "0020_gpt4_b5700ca9",
+      "ok": true,
+      "error": null,
+      "record_count": 205,
+      "candidate_count": 45,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/temporal-reasoning/tri_fused_route20_final15/0020_gpt4_b5700ca9",
+      "elapsed_seconds": 0.29651808738708496
+    },
+    {
+      "question_type": "temporal-reasoning",
+      "sample_id": "0022_gpt4_4929293a",
+      "ok": true,
+      "error": null,
+      "record_count": 188,
+      "candidate_count": 35,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/temporal-reasoning/tri_fused_route20_final15/0022_gpt4_4929293a",
+      "elapsed_seconds": 0.2555239200592041
+    },
+    {
+      "question_type": "temporal-reasoning",
+      "sample_id": "0025_993da5e2",
+      "ok": true,
+      "error": null,
+      "record_count": 166,
+      "candidate_count": 39,
+      "final_top_record_count": 15,
+      "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/temporal-reasoning/tri_fused_route20_final15/0025_993da5e2",
+      "elapsed_seconds": 0.237379789352417
+    }
+  ]
+}

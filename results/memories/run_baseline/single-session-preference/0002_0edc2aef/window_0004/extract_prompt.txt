@@ -1,0 +1,191 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-22T05:12:02.500000, Mon] 1.User: I'll respond as the user. Here's my next message:
+
+I'm thinking of starting a book club with some friends. Do you have any tips on how to organize one and make it successful?
+[2023-05-22T06:36:00, Mon] 2.User: I'm thinking of hosting a family game night soon and want to plan some fun activities. Do you have any suggestions for games that are good for a big group? By the way, I played Scattergories with my family three Sundays ago at my cousin's birthday party, and it was a blast - even though I didn't do so well, haha!
+[2023-05-22T06:36:00.500000, Mon] 3.User: I like those suggestions, especially Taboo and What Do You Meme. I think my family would really enjoy those. Do you have any recommendations for games that are a bit more strategic, like Ticket to Ride?
+[2023-05-22T06:36:01, Mon] 4.User: That's a lot of great suggestions! I think my family would enjoy Forbidden Island and Pandemic. Can you tell me more about Azul? I've been wanting to try it out since I had a great experience at a board game cafe last weekend.
+[2023-05-22T06:36:01.500000, Mon] 5.User: I'm glad you told me more about Azul. I think I'll definitely consider getting it after my great experience at the board game cafe. I've been meaning to buy the expansion pack for Ticket to Ride since I saw it at the game store near my house last month, but I haven't gotten around to it yet. Do you have any recommendations for other games that are similar to Ticket to Ride?
+[2023-05-22T06:36:02, Mon] 6.User: That's really helpful, thanks! I think I'll check out Elfenland and Trains, they seem like great options. By the way, speaking of trains, I won a game against my roommate, Mike, two weeks ago, playing Ticket to Ride, completing six out of my eight destination tickets. It was a close game, but I managed to sneak in a lucky move at the end.
+[2023-05-22T06:36:02.500000, Mon] 7.User: I think I'll check out those expansions, thanks for the suggestion! Maybe Mike and I can try them out together. Anyway, I should get back to planning my family game night. Do you have any more recommendations for games that are good for a big group?
+[2023-05-22T14:24:00, Mon] 8.User: im going to keep feeding you more of Justin's writing. After, please write three to five bullets compelling statements about what you learned from Justin, through his writing: Justin McDonald is a copywriter who is passionate about the art of handwriting old ads. He rewrites hundreds of them daily, long-hand, for fun. His love for this practice is inspired by the belief that it helps him develop his copywriting skills and stay connected to the roots of the industry. Justin's daily handwritten ads can be found on his website and social media platforms, providing a unique perspective on the history of advertising and its relevance to modern-day marketing.
+
+Justin's dedication to the craft of copywriting extends beyond his daily handwritten ads. He offers a monthly printed newsletter for $100 that covers a range of topics such as copywriting, small business management, entrepreneurship, personal selling, and personal development. He also provides daily email tips on these subjects, giving his subscribers insights into his copywriting process and approach to business. Additionally, he takes on freelance copywriting projects and consulting sessions remotely through various communication channels.
+
+Justin's expertise in copywriting has also led him to create his own eBooks and publish a book on the subject. He frequently offers special deals and promotions for his products, ensuring that his subscribers have access to the latest and most relevant information in the industry. Furthermore, Justin engages in affiliate marketing and joint ventures, expanding his reach and building his network of contacts.
+
+In conclusion, Justin McDonald is a copywriter who is dedicated to developing his skills and sharing his knowledge with others. His daily handwritten ads and newsletter provide a unique perspective on the history of advertising and its relevance to modern marketing. His commitment to offering valuable insights on copywriting, small business management, entrepreneurship, personal selling, and personal development make him an excellent resource for anyone looking to improve their skills in these areas. With his range of products and services, Justin offers something for everyone in the world of copywriting and beyond.
+[2023-05-22T14:24:00.500000, Mon] 9.User: here's another one of his emails. Give me three to five bulleted statements, about one or two lines of text each bullet, on what you learned about Justin through the following piece of writing: Build it and they will NOT come.
+How many times have we heard this phase, “Build it and they will come!”
+That's 100% total nonsense.
+Honestly, this is the kind of mindset that made me wanna quit going to school.
+I mean what they teach you in college, and lower education, especially in public schools, is total bull crap.
+Basically, school teaches you how-to “be” and stay poor. Yes, that's right I'm knocking schools today.
+Believe me, there's plenty of value in the education a student gets in public school systems, don't get me wrong.
+And speaking of VALUE, it's funny how little people value the public library or public school system these days. But anyways...
+A lot of the bologna they teach us in bid-ness school is to create a product and get that MBA.
+Worse... invent something from scratch (which nowadays I strongly advise anyone reading to not EVER do ANYTHING from scratch, and will be something I will be talking more about.)
+Why invent and innovate??? 
+Why re-invent the wheel... over...and over... and over again like a damn hamster wheel?
+The schools of business these days are pretty much saying that us “kids” best create something really “unique” and “what-people-want” garbage.
+Then once the student makes this thing or whatever the deliverable they want to sell, it's time to:
+START SELLING!
+Yup, create a product and pick a market (or niche) to sell it to. Then, it's all arithmetic and marketing, which many believe is advertising.
+Then we all get this illusion marketing is advertising.
+And... that advertising is really the mass marketed advertisements you see during half-time, or every 5-10 minutes between TV shows or whatever you stream for FREE on the internet/tube.
+I'm sorry this is just plain wrung, wrong, wrong.
+You should know by know it all starts with the consumer, the prospect you're going after.
+You can go ahead and try to build something and (hope) they will come.
+Look around you. Look at the businesses around you. Look at the new ones.
+Do you see any businesses that are struggling to stay afloat?
+Have you noticed some of the businesses offering incredible deals and discounts?
+Does it ever bother you when someone just tries to jump down your throat to buy something?
+Ever get annoyed by irritating and tacky signs or billboards?
+I'm guessing you answered “yes” to at lest one of those questions.
+My point being is that you can't just “build” something and expect people to buy it.
+Look at how so many restaurants operate:
+customer randomly shows up
+they get fed
+customer pays
+customer leaves
+the restaurant hopes they come back
+None of the schools these days emphasize on processes versus selling products.
+Hard lesson you'll learn of you just go to school to learn all the ropes in business.
+If you build it first, then expect people to respond, you know what happens?
+You get grandma to buy one or two, or your parents to buy three, maybe a sibling or niece or nephew and a couple, possibly a nice neighbor and some of your co-workers. Then that;'s it. You're finished. Nobody else buys again.
+See what I mean?
+This is why I stress having a proper marketing plan for your product. 
+But, not only have a decent and money generating marking action -plan, but also have the right timing and segmentation in the process.
+Having things go outta sequence can make a whole marketing plan go to the waste side. 
+Your hard earned dollars and time could be wasted by implementing the wrong strategy at the wrong time.
+Anyway, that's all I have for you today.
+Peace,
+If you like to hear more just send me an email at: justinmcdonald.medium@gmail.com
+
+P.S. If you need results driven action plans for your products or business feel to drop me a line...
+I can help with your ad copy or consult you through these difficult times.
+I have very decent rates for my copywriting service and have a special offer on the table for my consulting services over the next few weeks.
+JustinMcDonald.Copywriting@gmail.com or JustinMcDonald.Consulting@gmail.com
+[2023-05-22T18:21:00, Mon] 10.User: I'm thinking of starting an exercise routine to improve my overall health. Can you recommend some low-impact exercises that are easy on the back? I've also been experiencing more frequent backaches lately, which I attribute to my age and lack of exercise.
+[2023-05-22T18:21:00.500000, Mon] 11.User: That's a lot of great information, thanks! I think I'll start with some gentle yoga poses and walking. Do you have any recommendations for a beginner-friendly yoga app or online resource that can guide me through the poses and help me track my progress?
+[2023-05-22T18:21:01, Mon] 12.User: I think I'll try out Yoga With Adriene's app, I've heard great things about her gentle approach. Can you recommend any online resources or apps that can help me track my daily walking progress and provide some motivation?
+[2023-05-22T18:21:01.500000, Mon] 13.User: I'll give Walkmeter a try, I like the idea of having audio cues and customizable goals. Do you have any tips on how to stay safe while walking, especially in the early morning or evening when it's dark?
+[2023-05-22T18:21:02, Mon] 14.User: I think I'll also consider getting a reflective vest or armband to increase my visibility while walking in the early morning or evening. Do you have any advice on how to stay motivated to continue exercising and making healthy lifestyle changes over time?
+[2023-05-22T18:21:02.500000, Mon] 15.User: I think I'll start by setting specific goals for myself, like exercising three times a week, and tracking my progress with a journal. It's also a good idea to find an exercise buddy or accountability partner to provide moral support and encouragement. Rewarding myself with non-food items, like a new workout outfit, will also help to stay motivated.

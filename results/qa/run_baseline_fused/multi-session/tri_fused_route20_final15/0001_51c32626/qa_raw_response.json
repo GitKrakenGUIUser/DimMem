@@ -1,0 +1,32 @@
+{
+  "id": "c40cd1a1-a1ca-4251-b9b6-688f42b7a8c7",
+  "object": "chat.completion",
+  "created": 1783427789,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: The retrieved memories mention that the user worked on a research paper on sentiment analysis submitted to ACL, but none of the records provide a specific submission date or timestamp for that event. No memory explicitly answers the question of when the paper was submitted. Therefore, the evidence is insufficient to determine the submission date.\n\nAnswer: I don't know.",
+        "reasoning_content": "We need to answer: \"When did I submit my research paper on sentiment analysis?\" Based on retrieved memories. The question date is 2023-05-30. Memories: [1] says user's master's thesis was on NLP and previously worked on a research paper on sentiment analysis submitted to ACL. No specific submission date given. Other memories mention sentiment analysis background but no submission date. Memory [1] mentions 'previously worked on a research paper on sentiment analysis that was submitted to ACL' but no date. No memory gives a submission date. So insufficient evidence."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 985,
+    "completion_tokens": 187,
+    "total_tokens": 1172,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 116
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 729
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

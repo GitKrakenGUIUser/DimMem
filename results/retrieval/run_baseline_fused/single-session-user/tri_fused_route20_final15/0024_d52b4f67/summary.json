@@ -1,0 +1,561 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "single-session-user",
+  "sample_id": "0024_d52b4f67",
+  "query_text": "Find the location where the user attended their cousin's wedding.",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 152,
+  "fused_candidate_count_before_final_cut": 46,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/single-session-user/tri_fused_route20_final15/0024_d52b4f67",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 22.176159354987124,
+      "memory_type": "episodic",
+      "content": "User attended their cousin's wedding at the Grand Ballroom during the weekend of May 20-21, 2023.",
+      "source_boundary_id": "17_0128",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 22.176159354987124,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 22.176159354987124
+        },
+        {
+          "method": "structured",
+          "rank": 1,
+          "score": 1.0
+        },
+        {
+          "method": "minilm",
+          "rank": 1,
+          "score": 0.7211075312100074
+        }
+      ],
+      "score_components": {
+        "bm25_score": 22.176159354987124,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 10.13980794149075,
+      "memory_type": "episodic",
+      "content": "User attended a wedding expo with friend Emily a few weeks before May 28, 2023.",
+      "source_boundary_id": "17_0130",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 10.13980794149075,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 10.13980794149075
+        },
+        {
+          "method": "structured",
+          "rank": 14,
+          "score": 0.4444444444444445
+        },
+        {
+          "method": "minilm",
+          "rank": 2,
+          "score": 0.5179640142822628
+        }
+      ],
+      "score_components": {
+        "bm25_score": 10.13980794149075,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 8.046277389463539,
+      "memory_type": "episodic",
+      "content": "User is looking for a gift for their mother's birthday on June 15, 2023.",
+      "source_boundary_id": "17_0125",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 8.046277389463539,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 8.046277389463539
+        },
+        {
+          "method": "structured",
+          "rank": 13,
+          "score": 0.4444444444444445
+        },
+        {
+          "method": "minilm",
+          "rank": 5,
+          "score": 0.3430820391903178
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.046277389463539,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 7.004296432894274,
+      "memory_type": "episodic",
+      "content": "User asked about methods to determine Poisson's ratio.",
+      "source_boundary_id": "11_0091",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 7.004296432894274,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 7.004296432894274
+        },
+        {
+          "method": "structured",
+          "rank": 6,
+          "score": 0.4444444444444445
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.004296432894274,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 6.682722497888353,
+      "memory_type": "fact",
+      "content": "The user is based in New York City.",
+      "source_boundary_id": "5_0044",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 6.682722497888353,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 6.682722497888353
+        },
+        {
+          "method": "minilm",
+          "rank": 6,
+          "score": 0.32586599851610726
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.682722497888353,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 5.346639795270889,
+      "memory_type": "episodic",
+      "content": "The user attended a writing workshop in October 2022 to focus on their writing goals.",
+      "source_boundary_id": "4_0035",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 5.346639795270889,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 5.346639795270889
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.346639795270889,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 4.986858366628836,
+      "memory_type": "episodic",
+      "content": "User asked about the role of percent elongation in a stress-strain diagram.",
+      "source_boundary_id": "11_0089",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 4.986858366628836,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 4.986858366628836
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.986858366628836,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 4.81907898084679,
+      "memory_type": "episodic",
+      "content": "User expressed concern about Fox News's political agenda and asked how to ensure accurate and unbiased news.",
+      "source_boundary_id": "11_0095",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 4.81907898084679,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 4.81907898084679
+        },
+        {
+          "method": "structured",
+          "rank": 10,
+          "score": 0.4444444444444445
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.81907898084679,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 4.75003419884022,
+      "memory_type": "episodic",
+      "content": "The user attended a Billie Eilish concert in Philadelphia.",
+      "source_boundary_id": "18_0147",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 4.75003419884022,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 4.75003419884022
+        },
+        {
+          "method": "minilm",
+          "rank": 9,
+          "score": 0.2829338614532093
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.75003419884022,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 4.037806740538247,
+      "memory_type": "episodic",
+      "content": "The user attended a jazz night at a local bar on 2023-05-29.",
+      "source_boundary_id": "18_0148",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 4.037806740538247,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 4.037806740538247
+        },
+        {
+          "method": "minilm",
+          "rank": 18,
+          "score": 0.23448681664959284
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.037806740538247,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 3.8243518468054,
+      "memory_type": "fact",
+      "content": "User set a budget of $100 for the mother's birthday gift.",
+      "source_boundary_id": "17_0127",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 3.8243518468054,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 3.8243518468054
+        },
+        {
+          "method": "minilm",
+          "rank": 11,
+          "score": 0.2758338415877713
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.8243518468054,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 3.7254571328417283,
+      "memory_type": "fact",
+      "content": "The user is planning to establish a children's entertainment playcentre business.",
+      "source_boundary_id": "3_0028",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 3.7254571328417283,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 3.7254571328417283
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.7254571328417283,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 3.46116990019104,
+      "memory_type": "episodic",
+      "content": "The user attended a weekend-long writing workshop at a mountain retreat center in October 2022.",
+      "source_boundary_id": "3_0029",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 3.46116990019104,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 3.46116990019104
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.46116990019104,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 3.3775765595714904,
+      "memory_type": "episodic",
+      "content": "User expressed confusion about Poisson's ratio.",
+      "source_boundary_id": "11_0090",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 3.3775765595714904,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 3.3775765595714904
+        },
+        {
+          "method": "structured",
+          "rank": 5,
+          "score": 0.4444444444444445
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.3775765595714904,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 3.113750273237472,
+      "memory_type": "episodic",
+      "content": "User plans to check out L'Occitane and Jo Malone London for a skincare gift.",
+      "source_boundary_id": "17_0129",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 3.113750273237472,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 3.113750273237472
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.113750273237472,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 0.25318050384521484
+}

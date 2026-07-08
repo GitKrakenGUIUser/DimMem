@@ -1,0 +1,215 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-21T18:22:02, Sun] 1.User: Can you organize it in a table?
+[2023-05-22T05:37:00, Mon] 2.User: "X [m] Y [m] Wert [nT]"
+"-0.463 22.455 -31.270"
+"-0.463 22.523 -32.160"
+"-0.462 22.591 -31.510"
+"-0.461 22.658 -29.810"
+"-0.460 22.726 -21.040"
+"-0.459 22.794 -9.470"
+"-0.458 22.862 7.670"
+"-0.457 22.930 23.600"
+"-0.456 22.998 45.450"
+"-0.455 23.064 62.750"
+"-0.453 23.131 80.960"
+"-0.451 23.198 95.470"
+"-0.449 23.264 107.750"
+"-0.448 23.331 114.040"
+"-0.446 23.397 115.670"
+"-0.444 23.464 103.890"
+"-0.442 23.531 84.100"
+"-0.440 23.597 62.860"
+"-0.439 23.664 54.750"
+"-0.437 23.731 39.430"
+"-0.435 23.797 24.030"
+"-0.433 23.864 12.880"
+"-0.432 23.930 5.890"
+"-0.430 23.997 -2.080"
+"-0.428 24.064 -5.590"
+"-0.426 24.130 -8.650"
+"-0.424 24.197 -10.520"
+"-0.423 24.264 -12.500"
+"-0.421 24.330 -12.680"
+"-0.422 24.402 -11.770"
+"-0.423 24.475 -12.410"
+"-0.424 24.547 -12.170"
+"-0.426 24.619 -10.430"
+"-0.427 24.691 -10.040"
+"-0.428 24.763 -8.530"
+"-0.429 24.835 -10.720"
+"-0.431 24.907 -8.540"
+"-0.432 24.979 -7.570"
+"-0.433 25.051 -8.840"
+"-0.434 25.124 -6.020"
+"-0.436 25.196 -6.870"
+"-0.437 25.268 -5.130"
+"-0.438 25.340 -4.880"
+"-0.439 25.412 -4.480"
+"-0.440 25.484 -4.290"
+"-0.442 25.556 -4.770"
+"-0.443 25.628 -1.960"
+"-0.444 25.700 -1.990"
+"-0.445 25.773 -2.820"
+"-0.447 25.843 -2.150"
+"-0.449 25.914 -1.400"
+"-0.451 25.985 -2.390"
+"-0.452 26.056 -1.030"
+"-0.454 26.127 -1.860"
+"-0.456 26.198 -2.710"
+"-0.457 26.269 -2.560"
+"-0.459 26.340 -3.880"
+"-0.461 26.410 -2.020"
+"-0.463 26.481 -0.640"
+"-0.464 26.552 -0.340"
+"-0.466 26.623 -0.290"
+"-0.468 26.694 0.060"
+"-0.470 26.765 0.130"
+"-0.471 26.836 -0.800"
+"-0.473 26.906 -0.370"
+"-0.475 26.977 -0.220"
+"-0.477 27.048 1.500"
+"-0.478 27.119 0.950"
+"-0.480 27.190 0.350"
+Load into a data farame df
+[2023-05-22T06:33:00, Mon] 3.User: The spirit takes Newman to a high mountaintop and tempts him to throw himself down so that Kramer will catch him mid air.
+[2023-05-22T06:33:00.500000, Mon] 4.User: Continue. No one catches Newman.
+[2023-05-22T06:33:01, Mon] 5.User: Newman returns to his apartment as though he never left it. The gang is still there partying. Newman can fly now.
+[2023-05-22T08:15:00, Mon] 6.User: can you re do the checklist in a graphical form i can print and write on
+[2023-05-22T08:15:00.500000, Mon] 7.User: can you re do the checklist in as a table with checkboxes please
+[2023-05-22T08:15:01, Mon] 8.User: Here is a checklist of areas that you should consider when establishing a children's entertainment playcentre business:
+
+Business planning: Develop a comprehensive business plan that outlines your vision for the playcentre, including details about your target market, products and services, marketing and sales strategies, and financial plan.
+
+Location and facility: Identify a suitable location for the playcentre, taking into consideration factors such as accessibility, parking, and proximity to potential customers. Determine the size and layout of the facility, and make any necessary renovations or improvements.
+
+Equipment and supplies: Purchase or lease the necessary equipment and supplies for the playcentre, including interactive exhibits and activities, party supplies, and café equipment.
+
+Staffing: Hire and train a team of professionals to manage and operate the playcentre, including a manager, supervisors, and customer service staff.
+
+Marketing and sales: Implement a marketing and sales strategy to attract and retain customers, including online marketing efforts, local advertising, and partnerships with schools and other organizations.
+
+Financial management: Develop and maintain a financial plan for the playcentre, including budgeting, forecasting, and tracking revenue and expenses. can you simply and shorten them and display them in a table spreadsheet format so that i may print and tick them off once acheived?
+[2023-05-22T08:15:01.500000, Mon] 9.User: what industry is a kids playcentre in
+[2023-05-22T08:15:02, Mon] 10.User: how many playcentre are they in near south london in 2020
+[2023-05-22T08:15:02.500000, Mon] 11.User: ta
+[2023-05-22T11:46:00, Mon] 12.User: Hi! I'm looking to improve my writing skills, and I was wondering if you could recommend some online resources for writing fiction. By the way, I recently got back into writing after taking a weekend-long writing workshop at a retreat center in the mountains back in October, and I'm eager to keep the momentum going.
+[2023-05-22T11:46:00.500000, Mon] 13.User: I'd like to focus on character development, as I've been struggling to create relatable and believable characters. Do you have any resources or exercises that can help me with that?
+[2023-05-22T11:46:01, Mon] 14.User: I think I'll start with the character interviews. I've heard of this exercise before, but I've never actually tried it. I'll give it a shot and see what kind of insights I can gain from my characters. By the way, I've been doing daily journaling since my mindfulness workshop in February, and it's really helped me clarify my thoughts and feelings. I'm hoping this character interview exercise will have a similar effect on my writing.
+[2023-05-22T11:46:01.500000, Mon] 15.User: I think I'll write the answers in a separate document, at least to start with. That way, I can really focus on getting into my character's head without worrying about fitting it into the story just yet. I might even try to do a few interviews with different characters to see how they interact with each other. Speaking of which, I've been meaning to work on my dialogue skills, so this exercise could be a great way to practice that as well. Do you have any tips on writing realistic dialogue?

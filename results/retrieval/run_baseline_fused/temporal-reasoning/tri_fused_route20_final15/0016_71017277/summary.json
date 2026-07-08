@@ -1,0 +1,526 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "temporal-reasoning",
+  "sample_id": "0016_71017277",
+  "query_text": "The user received a piece of jewelry last Saturday, which was on 2023-03-04, from someone.",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 180,
+  "fused_candidate_count_before_final_cut": 53,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/temporal-reasoning/tri_fused_route20_final15/0016_71017277",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 14.711514805899899,
+      "memory_type": "fact",
+      "content": "User inherited a crystal chandelier from their great-grandmother on 2023-03-04.",
+      "source_boundary_id": "14_0140",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 14.711514805899899,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 14.711514805899899
+        },
+        {
+          "method": "minilm",
+          "rank": 1,
+          "score": 0.508866405628544
+        }
+      ],
+      "score_components": {
+        "bm25_score": 14.711514805899899,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 11.785439787834624,
+      "memory_type": "episodic",
+      "content": "On 2023-03-04, the user sanded and primed a wooden rocking chair as part of a refurbishing project.",
+      "source_boundary_id": "19_0174",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 11.785439787834624,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 11.785439787834624
+        }
+      ],
+      "score_components": {
+        "bm25_score": 11.785439787834624,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 10.658822198934493,
+      "memory_type": "episodic",
+      "content": "On 2023-03-04, the user changed the target to Kirkwood Ski Resort for the food truck operation request.",
+      "source_boundary_id": "15_0147",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 10.658822198934493,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 10.658822198934493
+        },
+        {
+          "method": "structured",
+          "rank": 6,
+          "score": 0.6
+        }
+      ],
+      "score_components": {
+        "bm25_score": 10.658822198934493,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 10.584250554716,
+      "memory_type": "episodic",
+      "content": "User has read and loved 'The Seven Husbands of Evelyn Hugo', which was narrated by Julia Whelan.",
+      "source_boundary_id": "7_0077",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 10.584250554716,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 10.584250554716
+        }
+      ],
+      "score_components": {
+        "bm25_score": 10.584250554716,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 9.634931461024745,
+      "memory_type": "episodic",
+      "content": "The user asked for recommendations of true-crime podcasts similar to 'Last Seen' on 2023-02-10.",
+      "source_boundary_id": "4_0034",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 9.634931461024745,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 9.634931461024745
+        }
+      ],
+      "score_components": {
+        "bm25_score": 9.634931461024745,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 9.560690219130887,
+      "memory_type": "episodic",
+      "content": "On 2023-02-04, the user achieved a personal best of 12,345 steps while running errands.",
+      "source_boundary_id": "4_0039",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 9.560690219130887,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 9.560690219130887
+        }
+      ],
+      "score_components": {
+        "bm25_score": 9.560690219130887,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 8.287790804178602,
+      "memory_type": "episodic",
+      "content": "On 2023-03-04, the user planned to contact Northstar Ski Resort to request permission to operate their food truck there.",
+      "source_boundary_id": "15_0146",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 8.287790804178602,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 8.287790804178602
+        },
+        {
+          "method": "structured",
+          "rank": 5,
+          "score": 0.6
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.287790804178602,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 8.084042900365873,
+      "memory_type": "fact",
+      "content": "The user's foam roller arrived on 2023-03-02.",
+      "source_boundary_id": "4_0043",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 8.084042900365873,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 8.084042900365873
+        },
+        {
+          "method": "minilm",
+          "rank": 2,
+          "score": 0.48544812217467387
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.084042900365873,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 7.998400136406149,
+      "memory_type": "fact",
+      "content": "As of 2023-03-01, User had never tried Huachinango a la Veracruzana.",
+      "source_boundary_id": "12_0127",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 7.998400136406149,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 7.998400136406149
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.998400136406149,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 7.37871834599068,
+      "memory_type": "episodic",
+      "content": "User completed a set of Marvel Comic's 'The Avengers' action figures in the week of February 8-14, 2023, after 6 months of searching for the last Black Widow figure.",
+      "source_boundary_id": "7_0083",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 7.37871834599068,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 7.37871834599068
+        },
+        {
+          "method": "minilm",
+          "rank": 17,
+          "score": 0.3305445128042754
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.37871834599068,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 7.190226375410652,
+      "memory_type": "episodic",
+      "content": "The user listens to the true-crime podcast 'Last Seen' and is currently on episode 7.",
+      "source_boundary_id": "3_0031",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 7.190226375410652,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 7.190226375410652
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.190226375410652,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 6.919096945021556,
+      "memory_type": "episodic",
+      "content": "On 2023-02-28, User had last changed their car's oil about 5,000 miles prior and planned to check the car manual for the recommended oil change interval.",
+      "source_boundary_id": "12_0122",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 6.919096945021556,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 6.919096945021556
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.919096945021556,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 6.837810936955117,
+      "memory_type": "episodic",
+      "content": "The user made chicken fajitas using a recipe from the NYT Cooking app on 2023-02-28.",
+      "source_boundary_id": "13_0132",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 6.837810936955117,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 6.837810936955117
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.837810936955117,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 6.628838773413003,
+      "memory_type": "episodic",
+      "content": "User is considering using wire-wrapped jewelry-making tools to create decorative accents for the wooden coasters.",
+      "source_boundary_id": "20_0179",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 6.628838773413003,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 6.628838773413003
+        },
+        {
+          "method": "structured",
+          "rank": 1,
+          "score": 0.9999999999999999
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.628838773413003,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 6.4381564744146145,
+      "memory_type": "episodic",
+      "content": "On 2023-02-28, User noticed their car's battery was draining faster than usual and planned to have it checked at a local mechanic.",
+      "source_boundary_id": "12_0120",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 6.4381564744146145,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 6.4381564744146145
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.4381564744146145,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 0.2548518180847168
+}

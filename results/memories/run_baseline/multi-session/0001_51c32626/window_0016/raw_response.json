@@ -1,0 +1,32 @@
+{
+  "id": "7a9da2a3-01e7-46ec-8392-ee7baa9b3d53",
+  "object": "chat.completion",
+  "created": 1783346702,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": [\n    {\n      \"source_id\": 1,\n      \"content\": \"User plans a trip to San Francisco next week and needs a hotel with a good gym.\",\n      \"dimension\": {\n        \"memory_type\": \"episodic\",\n        \"time\": \"2023-06-05\",\n        \"location\": \"San Francisco\",\n        \"reason\": \"\",\n        \"purpose\": \"To find a hotel with a good gym for the trip.\",\n        \"keywords\": [\"San Francisco\", \"hotel\", \"gym\", \"trip\"]\n      }\n    }\n  ]\n}",
+        "reasoning_content": "We need to extract memories from messages 4 onwards. Messages 1-3 are overlap context, not to be used as new memory sources. So start from message 4.\n\nLet's go through each user message from 4 to 15 and extract relevant information for long-term memory.\n\nMessage 4: User asks if electric lift chairs can also be used as massage chairs. This is a query, not a stable fact or event. It's a one-off question, no long-term value. Skip.\n\nMessage 5: User asks if electric lift chairs can be used as a rocket ship to go to the moon. This is humorous, not a real question. No memory value.\n\nMessage 6: User expresses surprise that electric lift chairs can't go to the moon, asks about affordable space exploration options like jetpack or hot air balloon. This is a fictional scenario, no real memory.\n\nMessage 7: User says they will stick to exploring backyard, asks for gardening tips. This shows an interest in gardening? But it's a one-off, not a clear long-term profile. Could be interpreted as a temporary shift. However, the user asks for tips - that's a current task, not long-term. Probably skip.\n\nMessage 8: User plans a trip to San Francisco next week, needs help finding a hotel with a good gym. This is a specific future plan. Extract as episodic: user plans a trip to San Francisco next week and wants a hotel with a good gym. Time: \"next week\" relative to message timestamp 2023-05-29T13:37. Next week could be around 2023-06-05? But exact date not given. We can say \"next week\" but normalized? The instruction says normalize relative time based on message timestamp. So \"next week\" would be the week starting 2023-06-05? But that's ambiguous. Better to use the relative expression? The format expects absolute date if available. Since it's not specific, we can leave time as \"\" or note the date of the message? Actually, the message timestamp is 2023-05-29, Monday. \"Next week\" means the week starting Monday 2023-06-05. But we don't know which days. We could put \"2023-06-05\" as approximate? Or just leave empty? I think it's better to include the relative time as part of content, and set time to the date of the message? The rule says: \"Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.\" So \"next week\" should be converted to a date range. But we don't know exact day. Let's put the start of next week: 2023-06-05. That seems reasonable. But also the purpose: finding hotel with good gym. Location: San Francisco. So we can create a memory.\n\nMessage 9: User asks about prices and deals for those hotels. This is a follow-up to the previous plan. Not a separate long-term memory.\n\nMessage 10: User asks if hotels offer free breakfast or healthy food restaurant. Again follow-up.\n\nMessage 11: User asks if hotels have spa/wellness center, fitness classes, personal training. Follow-up.\n\nMessage 12: User asks about shuttle service. Follow-up.\n\nMessage 13: User asks best way to get to Fisherman's Wharf from hotel. This is a specific query about transportation. Could be part of the trip plan. But not a standalone memory.\n\nMessage 14: User asks what can be made with hamburger meat, Funyuns, and Goldfish. This is a cooking question. It's a one-off, not a long-term preference? Possibly indicates interest in cooking with limited ingredients. But not strong enough for profile.\n\nMessage 15: User repeats with \"No other ingredients\". Still one-off.\n\nThus, only message 8 has clear long-term value: a specific plan. Also, the user's interest in self-care and assistive technology from earlier messages (1-3) are overlap, not extracted. So only one memory.\n\nLet's construct.\n\nsource_id: sequentially? The output format has source_id. But the instructions say \"source_id\" in the example is 1. We'll use 1 for the first memory.\n\ncontent: \"User plans a trip to San Francisco next week and needs a hotel with a good gym.\"\n\ndimension: memory_type: \"episodic\" (specific future plan). time: \"2023-06-05\" (start of next week from 2023-05-29 Monday). location: \"San Francisco\". reason: \"\" (not explicitly stated). purpose: \"To stay at a hotel with a good gym\" (implied, but explicitly stated \"need help finding a hotel with a good gym\" so purpose is to have a good gym). We'll put \"To find a hotel with a good gym for the trip.\" keywords: [\"San Francisco\", \"hotel\", \"gym\", \"trip\"].\n\nBut careful: The user says \"I'm planning a trip to San Francisco next week and I need help finding a hotel with a good gym.\" So purpose is to find a hotel with good gym. We'll include that.\n\nNo other memories.\n\nCheck if any from message 7: gardening tips? That's a one-off query, not a long-term interest. Skip.\n\nThus output JSON.\n\nAlso ensure no extra text."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1956,
+    "completion_tokens": 1250,
+    "total_tokens": 3206,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1123
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 804
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

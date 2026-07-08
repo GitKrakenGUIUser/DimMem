@@ -1,0 +1,210 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-28T10:37:01.500000, Sun] 1.User: I think I remember the event was on February 10th at the local library. It was a book reading event and there was a Q&A session afterwards. Does that help?
+[2023-05-28T10:37:02, Sun] 2.User: I'm not sure about the author, but I'm interested in exploring more magical realism books. Can you recommend some authors or books that might be similar to what I've been reading lately?
+[2023-05-28T10:37:02.500000, Sun] 3.User: I'm interested in reading more about magical realism in different cultures. Can you recommend some books or authors that explore magical realism in non-Western settings or cultures?
+[2023-05-28T15:35:00, Sun] 4.User: write a grants aim page on molecular subtypes and endometrial cancer
+[2023-05-28T16:54:00, Sun] 5.User: Assume that today's date is 12/31/2022 and we're writing a monthly business report about our team's performance. We want to summarize how many sales we had in August 2022, how that compared month over month, and how that changed year over year. We also want to include how many unique buyers we had that month.
+"""
+
+Given the following content to extract from:
+"""
+month,sales\_usd,sales\_usd\_MoM,sales\_usd\_YoY,unique\_buyers,unique\_buyers\_MoM,unique\_buyers\_YoY,total\_transactions,total\_transactions\_MoM,total\_transactions\_YoY,avg\_sale,avg\_sale\_MoM,avg\_sale\_YoY
+12/1/2022,"1,447,098",-30.3%,-96.3%,"8,308",-17.1%,-83.3%,"128,477",-13.4%,-90.6%,$11.26,-19.5%,-60.3%
+11/1/2022,"2,074,764",-22.4%,-91.8%,"10,023",-25.5%,-84.5%,"148,440",-21.4%,-88.5%,$13.98,-1.3%,-28.8%
+10/1/2022,"2,674,792",-42.9%,-93.5%,"13,462",5.9%,-79.5%,"188,864",-10.8%,-83.3%,$14.16,-36.0%,-60.9%
+9/1/2022,"4,683,073",-33.5%,-76.9%,"12,712",-17.3%,-73.2%,"211,829",-49.9%,-67.9%,$22.11,32.9%,-28.1%
+8/1/2022,"7,042,031",-15.6%,-81.2%,"15,369",-12.4%,-73.3%,"423,164",-22.8%,-49.2%,$16.64,9.3%,-63.0%
+7/1/2022,"8,338,866",8.0%,-62.5%,"17,552",-30.3%,-70.8%,"547,841",43.1%,-46.4%,$15.22,-24.6%,-30.1%
+6/1/2022,"7,722,164",-44.6%,-83.0%,"25,200",-27.9%,-66.9%,"382,749",-51.3%,-76.9%,$20.18,13.9%,-26.3%
+5/1/2022,"13,931,450",-47.2%,-65.9%,"34,936",-6.7%,-69.4%,"786,680",-24.1%,-40.4%,$17.71,-30.5%,-42.8%
+4/1/2022,"26,402,816",-10.4%,-67.9%,"37,440",-8.3%,-68.8%,"1,036,816",-14.9%,-17.9%,$25.47,5.2%,-60.9%
+3/1/2022,"29,475,484",-38.1%,-85.8%,"40,828",-44.3%,-77.8%,"1,217,918",-29.1%,-8.2%,$24.20,-12.7%,-84.6%
+2/1/2022,"47,606,739",-19.3%,-78.8%,"73,304",13.7%,-9.3%,"1,716,666",-6.1%,39.3%,$27.73,-14.1%,-84.7%
+1/1/2022,"59,020,026",52.0%,45.6%,"64,494",29.4%,236.2%,"1,828,283",33.5%,261.6%,$32.28,13.9%,-59.8%
+12/1/2021,"38,837,806",53.9%,4368.4%,"49,829",-22.9%,5375.7%,"1,369,789",6.6%,4173.1%,$28.35,44.4%,4.6%
+11/1/2021,"25,236,903",-38.3%,7724.6%,"64,650",-1.7%,13120.9%,"1,285,372",14.0%,12898.0%,$19.63,-45.8%,-39.8%
+10/1/2021,"40,869,575",101.5%,4791.9%,"65,769",38.7%,7048.8%,"1,127,610",70.9%,5627.1%,$36.24,17.9%,-14.6%
+9/1/2021,"20,282,690",-45.9%,9012.7%,"47,434",-17.7%,10302.2%,"659,935",-20.8%,9081.1%,$30.73,-31.7%,-0.7%
+8/1/2021,"37,502,857",68.6%,24144.8%,"57,618",-4.0%,18308.3%,"833,278",-18.4%,12506.3%,$45.01,106.8%,92.4%
+7/1/2021,"22,245,483",-51.0%,266249.2%,"60,027",-21.1%,171405.7%,"1,021,688",-38.4%,385442.6%,$21.77,-20.5%,-30.9%
+6/1/2021,"45,367,753",11.0%,,"76,032",-33.5%,,"1,657,712",25.6%,,$27.37,-11.6%,
+5/1/2021,"40,855,232",-50.4%,,"114,264",-4.8%,,"1,319,971",4.5%,,$30.95,-52.5%,
+4/1/2021,"82,309,626",-60.5%,,"120,057",-34.8%,,"1,263,374",-4.8%,,$65.15,-58.5%,
+3/1/2021,"208,285,837",-7.0%,,"184,008",127.7%,,"1,327,028",7.7%,,$156.96,-13.7%,
+2/1/2021,"224,070,124",452.6%,,"80,822",321.3%,,"1,232,459",143.8%,,$181.81,126.7%,
+1/1/2021,"40,547,118",4565.1%,,"19,185",2008.2%,,"505,572",1477.2%,,$80.20,195.8%,
+12/1/2020,"869,161",169.5%,,910,86.1%,,"32,056",224.2%,,$27.11,-16.9%,
+11/1/2020,"322,531",-61.4%,,489,-46.8%,,"9,889",-49.8%,,$32.62,-23.1%,
+10/1/2020,"835,451",275.4%,,920,101.8%,,"19,689",173.9%,,$42.43,37.0%,
+9/1/2020,"222,576",43.9%,,456,45.7%,,"7,188",8.7%,,$30.96,32.3%,
+8/1/2020,"154,684",1752.1%,,313,794.3%,,"6,610",2394.3%,,$23.40,-25.8%,
+7/1/2020,"8,352",,,35,,,265,,,$31.52,,
+Given the following format to mirror:
+"""
+In November 2022, we saw $2,074,764 of sales (-22.4% MoM; -91.8% YoY) across 10,023 unique buyers.
+"""
+
+Extract the text from the following content relevant to the question:
+"""
+month,sales\_usd,sales\_usd\_MoM,sales\_usd\_YoY,unique\_buyers,unique\_buyers\_MoM,unique\_buyers\_YoY,total\_transactions,total\_transactions\_MoM,total\_transactions\_YoY,avg\_sale,avg\_sale\_MoM,avg\_sale\_YoY
+12/1/2022,"1,447,098",-30.3%,-96.3%,"8,308",-17.1%,-83.3%,"128,477",-13.4%,-90.6%,$11.26,-19.5%,-60.3%
+11/1/2022,"2,074,764",-22.4%,-91.8%,"10,023",-25.5%,-84.5%,"148,440",-21.4%,-88.5%,$13.98,-1.3%,-28.8%
+10/1/2022,"2,674,792",-42.9%,-93.5%,"13,462",5.9%,-79.5%,"188,864",-10.8%,-83.3%,$14.16,-36.0%,-60.9%
+9/1/2022,"4,683,073",-33.5%,-76.9%,"12,712",-17.3%,-73.2%,"211,829",-49.9%,-67.9%,$22.11,32.9%,-28.1%
+8/1/2022,"7,042,031",-15.6%,-81.2%,"15,369",-12.4%,-73.3%,"423,164",-22.8%,-49.2%,$16.64,9.3%,-63.0%
+7/1/2022,"8,338,866",8.0%,-62.5%,"17,552",-30.3%,-70.8%,"547,841",43.1%,-46.4%,$15.22,-24.6%,-30.1%
+6/1/2022,"7,722,164",-44.6%,-83.0%,"25,200",-27.9%,-66.9%,"382,749",-51.3%,-76.9%,$20.18,13.9%,-26.3%
+5/1/2022,"13,931,450",-47.2%,-65.9%,"34,936",-6.7%,-69.4%,"786,680",-24.1%,-40.4%,$17.71,-30.5%,-42.8%
+4/1/2022,"26,402,816",-10.4%,-67.9%,"37,440",-8.3%,-68.8%,"1,036,816",-14.9%,-17.9%,$25.47,5.2%,-60.9%
+3/1/2022,"29,475,484",-38.1%,-85.8%,"40,828",-44.3%,-77.8%,"1,217,918",-29.1%,-8.2%,$24.20,-12.7%,-84.6%
+2/1/2022,"47,606,739",-19.3%,-78.8%,"73,304",13.7%,-9.3%,"1,716,666",-6.1%,39.3%,$27.73,-14.1%,-84.7%
+1/1/2022,"59,020,026",52.0%,45.6%,"64,494",29.4%,236.2%,"1,828,283",33.5%,261.6%,$32.28,13.9%,-59.8%
+12/1/2021,"38,837,806",53.9%,4368.4%,"49,829",-22.9%,5375.7%,"1,369,789",6.6%,4173.1%,$28.35,44.4%,4.6%
+11/1/2021,"25,236,903",-38.3%,7724.6%,"64,650",-1.7%,13120.9%,"1,285,372",14.0%,12898.0%,$19.63,-45.8%,-39.8%
+10/1/2021,"40,869,575",101.5%,4791.9%,"65,769",38.7%,7048.8%,"1,127,610",70.9%,5627.1%,$36.24,17.9%,-14.6%
+9/1/2021,"20,282,690",-45.9%,9012.7%,"47,434",-17.7%,10302.2%,"659,935",-20.8%,9081.1%,$30.73,-31.7%,-0.7%
+8/1/2021,"37,502,857",68.6%,24144.8%,"57,618",-4.0%,18308.3%,"833,278",-18.4%,12506.3%,$45.01,106.8%,92.4%
+7/1/2021,"22,245,483",-51.0%,266249.2%,"60,027",-21.1%,171405.7%,"1,021,688",-38.4%,385442.6%,$21.77,-20.5%,-30.9%
+6/1/2021,"45,367,753",11.0%,,"76,032",-33.5%,,"1,657,712",25.6%,,$27.37,-11.6%,
+5/1/2021,"40,855,232",-50.4%,,"114,264",-4.8%,,"1,319,971",4.5%,,$30.95,-52.5%,
+4/1/2021,"82,309,626",-60.5%,,"120,057",-34.8%,,"1,263,374",-4.8%,,$65.15,-58.5%,
+3/1/2021,"208,285,837",-7.0%,,"184,008",127.7%,,"1,327,028",7.7%,,$156.96,-13.7%,
+2/1/2021,"224,070,124",452.6%,,"80,822",321.3%,,"1,232,459",143.8%,,$181.81,126.7%,
+1/1/2021,"40,547,118",4565.1%,,"19,185",2008.2%,,"505,572",1477.2%,,$80.20,195.8%,
+12/1/2020,"869,161",169.5%,,910,86.1%,,"32,056",224.2%,,$27.11,-16.9%,
+11/1/2020,"322,531",-61.4%,,489,-46.8%,,"9,889",-49.8%,,$32.62,-23.1%,
+10/1/2020,"835,451",275.4%,,920,101.8%,,"19,689",173.9%,,$42.43,37.0%,
+9/1/2020,"222,576",43.9%,,456,45.7%,,"7,188",8.7%,,$30.96,32.3%,
+8/1/2020,"154,684",1752.1%,,313,794.3%,,"6,610",2394.3%,,$23.40,-25.8%,
+7/1/2020,"8,352",,,35,,,265,,,$31.52,,
+"""
+
+Summarize the extracted text from the content above in the format to mirror:
+"""
+[2023-05-29T00:04:00, Mon] 6.User: Can you provide any insights into the faculty and support staff available to students enrolled in online Master of Science programs?
+[2023-05-29T00:04:00.500000, Mon] 7.User: How do I know if the faculty members of online Master of Science programs are reputable and have the necessary qualifications?
+[2023-05-29T00:04:01, Mon] 8.User: Can the faculty members of online Master of Science programs offer the same support and guidance as those in traditional on-campus programs?
+[2023-05-29T00:04:01.500000, Mon] 9.User: I'm still hesitant about enrolling in an online Master of Science program because I'm not sure if the level of interaction with faculty and support staff will be sufficient. Can you provide more information on how students can connect with faculty and staff members outside of virtual office hours?
+[2023-05-29T00:04:02, Mon] 10.User: Can you give me an idea of the workload and time commitment required for an online Master of Science program? I am worried about balancing my other commitments while taking the program.
+[2023-05-29T02:55:00, Mon] 11.User: What are some of the traditional tattoo designs and techniques used by Maori tribes in New Zealand?
+[2023-05-29T02:55:00.500000, Mon] 12.User: Can you tell me more about the significance of tapu in Maori tattooing?
+[2023-05-29T02:55:01, Mon] 13.User: Wow, the Maori culture sounds so fascinating. Can you tell me more about the history of ta moko and how it has evolved over time?
+[2023-05-29T02:55:01.500000, Mon] 14.User: That's really interesting. Do you think that non-Maori people should get traditional ta moko tattoos as a form of cultural appreciation, or would that be considered cultural appropriation?
+[2023-05-29T02:55:02, Mon] 15.User: Have you heard of any examples of non-Maori individuals getting ta moko tattoos without fully understanding or respecting its significance? That sounds disrespectful and offensive.

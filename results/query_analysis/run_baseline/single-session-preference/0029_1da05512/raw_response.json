@@ -1,0 +1,32 @@
+{
+  "id": "246db75f-6a1f-4791-b140-4e6118daf181",
+  "object": "chat.completion",
+  "created": 1783356330,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"The user is trying to decide whether to buy a NAS device now or wait, and is asking for advice.\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [],\n    \"keywords\": [\"NAS device\", \"buy\", \"now\", \"wait\"],\n    \"time\": \"\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"\"\n}",
+        "reasoning_content": "We need to parse the question: \"I'm trying to decide whether to buy a NAS device now or wait. What do you think?\" This is a request for advice, not a memory retrieval. It does not ask to recall previous information. No explicit time or location constraints. The user is asking for an opinion. So query_anchor should be a retrieval-friendly sentence but the user is asking for assistant's opinion, so maybe we can rephrase as \"The user is considering whether to buy a NAS device now or wait, and wants advice.\" However, the output format expects a retrieval query, but the question is not about retrieving memory. Since it's a question asking for opinion, we might set need_assistant_context false, no specific memory type, keywords might include \"NAS device\", \"buy\", \"now\", \"wait\", but no time/location. answer_dim is empty because it requires reasoning/recommendation. So output JSON accordingly."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 695,
+    "completion_tokens": 282,
+    "total_tokens": 977,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 192
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 55
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,137 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-28T03:49:00.500000, Sun] 1.User: It seems like a lot needs to change in the education system. Do you think there is any resistance from educators to implement these changes?
+[2023-05-28T03:49:01, Sun] 2.User: It's good to know that there are initiatives to implement these changes. I hope that the resistance from educators can be overcome so that students can receive the skills they need to succeed in the ever-evolving workforce.
+[2023-05-28T03:49:01.500000, Sun] 3.User: I think it's important for students to also learn about financial literacy and managing their personal finances. Do you think this should be included in the curriculum as well?
+[2023-05-28T07:36:00, Sun] 4.User: How can I measure my agility drill performance and progress over time?
+[2023-05-28T07:36:00.500000, Sun] 5.User: Great ideas! I think I'll start with time myself and record my repetitions in a journal. Can you recommend any good agility drills to start with?
+[2023-05-28T07:36:01, Sun] 6.User: Do you have any tips for avoiding injury while doing agility drills?
+[2023-05-28T07:36:01.500000, Sun] 7.User: I'll be sure to follow them to avoid injury. Do you recommend doing agility drills every day or taking rest days in between?
+[2023-05-28T07:36:02, Sun] 8.User: That sounds like great advice! I'll definitely incorporate rest days into my training routine. Do you have any recommendations for low-intensity exercises I can do on rest days?
+[2023-05-28T07:36:02.500000, Sun] 9.User: I like the idea of trying out yoga on my rest days! Do you have any favorite yoga poses for improving agility?
+[2023-05-28T07:36:03, Sun] 10.User: I'll definitely try those out on my rest days. Do you have any tips for finding a good yoga class or instructor online?
+[2023-05-29T01:02:00, Mon] 11.User: I'm trying to organize my grocery expenses for the past few weeks. Can you help me keep track of how much I've spent on groceries recently?
+[2023-05-29T01:02:00.500000, Mon] 12.User: I can definitely provide some details. So, I went to Walmart last Sunday and spent around $50. The day before, I ordered some groceries online from Target, which were delivered on Monday morning. I used a 10% off coupon on that order, so I ended up saving around $8. A week prior to that, I went to Trader Joe's with my sister and we spent around $75. I've also been regularly shopping at Aldi's, usually stopping by every 10-14 days, and I usually spend around $30-40 per trip. Oh, and I also stopped by the local farmer's market two weekends ago, but I don't have the exact amount I spent there.
+[2023-05-29T01:02:01, Mon] 13.User: Please respond with the next message from the user's perspective.
+[2023-05-29T01:02:01.500000, Mon] 14.User: Here's a revised response that's more concise and focused on the task at hand:
+
+"I think $25 is a good estimate for the farmer's market trip. Also, can we break down the Aldi's trips into separate entries instead of a total amount? I'd like to see how much I'm spending each time."
+[2023-05-29T01:02:02, Mon] 15.User: Here's my next response as the user:
+
+"Can you also help me track my savings from using coupons and discounts? In this case, I saved $8 from the 10% off coupon on my Target order. Is there a way to add that to the breakdown?"

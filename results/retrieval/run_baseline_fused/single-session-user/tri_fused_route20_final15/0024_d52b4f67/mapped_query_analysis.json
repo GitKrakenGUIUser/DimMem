@@ -1,0 +1,53 @@
+{
+  "query_text": "Find the location where the user attended their cousin's wedding.",
+  "query_anchor": "Find the location where the user attended their cousin's wedding.",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "cousin's wedding"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "Find the location where the user attended their cousin's wedding.",
+      "keywords": [
+        "cousin's wedding"
+      ],
+      "query_terms": [
+        "find",
+        "the",
+        "location",
+        "where",
+        "user",
+        "attended",
+        "their",
+        "cousin",
+        "s",
+        "wedding"
+      ]
+    },
+    "structured": {
+      "query_text": "Find the location where the user attended their cousin's wedding.",
+      "rewrite": "Find the location where the user attended their cousin's wedding.",
+      "intent": "lookup",
+      "answer_field": "location",
+      "content_query": "Find the location where the user attended their cousin's wedding.",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "cousin's wedding"
+      ],
+      "canonical_text": "Find the location where the user attended their cousin's wedding."
+    },
+    "minilm": {
+      "query_text": "Find the location where the user attended their cousin's wedding."
+    }
+  }
+}

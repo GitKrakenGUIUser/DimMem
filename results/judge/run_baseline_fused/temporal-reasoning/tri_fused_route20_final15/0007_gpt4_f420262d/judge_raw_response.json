@@ -1,0 +1,32 @@
+{
+  "id": "66dfb117-158c-4330-af51-5eca91589bf8",
+  "object": "chat.completion",
+  "created": 1783427993,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\":\"WRONG\"}",
+        "reasoning_content": "We need to determine if the generated answer matches the gold answer. Gold answer is \"American Airlines\". Generated answer is \"I don't know.\" This does not provide the airline, so it is wrong. Explanation: The generated answer does not give the correct airline. Label: WRONG."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 405,
+    "completion_tokens": 65,
+    "total_tokens": 470,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 58
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 149
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

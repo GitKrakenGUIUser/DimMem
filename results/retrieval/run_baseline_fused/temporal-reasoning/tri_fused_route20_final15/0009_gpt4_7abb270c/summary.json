@@ -1,0 +1,536 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "temporal-reasoning",
+  "sample_id": "0009_gpt4_7abb270c",
+  "query_text": "What is the chronological order of the six museums the user visited, from earliest to latest?",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 183,
+  "fused_candidate_count_before_final_cut": 50,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/temporal-reasoning/tri_fused_route20_final15/0009_gpt4_7abb270c",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 7.921917320803857,
+      "memory_type": "episodic",
+      "content": "The user plans to use Artsy and ArtNet and local art museums to find contemporary artists.",
+      "source_boundary_id": "17_0169",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 7.921917320803857,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 7.921917320803857
+        },
+        {
+          "method": "structured",
+          "rank": 1,
+          "score": 1.0
+        },
+        {
+          "method": "minilm",
+          "rank": 16,
+          "score": 0.3639842196517334
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.921917320803857,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 6.371619555144905,
+      "memory_type": "episodic",
+      "content": "User visited the Metropolitan Museum of Art and saw the golden mask of Pharaoh Tutankhamun, which impressed them, and took photos to remember the details.",
+      "source_boundary_id": "12_0111",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 6.371619555144905,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 6.371619555144905
+        },
+        {
+          "method": "minilm",
+          "rank": 11,
+          "score": 0.4028856420711324
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.371619555144905,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 6.362156575769895,
+      "memory_type": "episodic",
+      "content": "The user visited the Metropolitan Museum of Art to see the Ancient Egyptian Artifacts exhibition and was impressed by the golden mask of Pharaoh Tutankhamun.",
+      "source_boundary_id": "17_0172",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 6.362156575769895,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 6.362156575769895
+        },
+        {
+          "method": "minilm",
+          "rank": 6,
+          "score": 0.44988136340979146
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.362156575769895,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 5.409170445600827,
+      "memory_type": "episodic",
+      "content": "The user plans to visit the outer market of Tsukiji Fish Market from Shibuya.",
+      "source_boundary_id": "16_0161",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 5.409170445600827,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 5.409170445600827
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.409170445600827,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 5.40630074524145,
+      "memory_type": "episodic",
+      "content": "User plans to ask for feedback or advice from members of the 'Foodie Frenzy' group.",
+      "source_boundary_id": "13_0124",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 5.40630074524145,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 5.40630074524145
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.40630074524145,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 5.375848115011702,
+      "memory_type": "episodic",
+      "content": "On 2023-02-09, the user needed to order essential oils, specifically lavender oil, for their diffuser and asked for online store recommendations.",
+      "source_boundary_id": "5_0055",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 5.375848115011702,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 5.375848115011702
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.375848115011702,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 5.041613416766918,
+      "memory_type": "episodic",
+      "content": "On 2023-02-10, the user planned to write an essay about ancient civilizations and visited the 'Ancient Egyptian Artifacts' exhibition, where they took photos of artifacts.",
+      "source_boundary_id": "5_0058",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 5.041613416766918,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 5.041613416766918
+        },
+        {
+          "method": "minilm",
+          "rank": 8,
+          "score": 0.41807029703133136
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.041613416766918,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 4.782849450101234,
+      "memory_type": "episodic",
+      "content": "User is considering upgrading to a 4K OLED TV from LG or Sony.",
+      "source_boundary_id": "all_memories_0005",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 4.782849450101234,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 4.782849450101234
+        },
+        {
+          "method": "structured",
+          "rank": 3,
+          "score": 0.33333333333333337
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.782849450101234,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 4.659636873386207,
+      "memory_type": "episodic",
+      "content": "User plans to purchase a Dell XPS laptop from the Dell website and is looking for student discounts.",
+      "source_boundary_id": "all_memories_0004",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 4.659636873386207,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 4.659636873386207
+        },
+        {
+          "method": "structured",
+          "rank": 2,
+          "score": 0.33333333333333337
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.659636873386207,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 4.262401894311981,
+      "memory_type": "fact",
+      "content": "The user is a fan of 'The Sandman' comic book series.",
+      "source_boundary_id": "4_0045",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 4.262401894311981,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 4.262401894311981
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.262401894311981,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 4.210963494412336,
+      "memory_type": "profile",
+      "content": "User is interested in learning more about the history of space exploration.",
+      "source_boundary_id": "2_0023",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 4.210963494412336,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 4.210963494412336
+        },
+        {
+          "method": "minilm",
+          "rank": 19,
+          "score": 0.32379449048626197
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.210963494412336,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 4.098306466132638,
+      "memory_type": "fact",
+      "content": "User is associated with GMBM LTD, a company that has patented technology for sea rafts made from inside-concreted bottoms of shipping containers, capable of movement on water and land, connectable into arrays with power lift adaptability and hydraulic freight and passenger elevators, aimed at reducing seaport congestion and providing alternative real estate.",
+      "source_boundary_id": "18_0182",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 4.098306466132638,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 4.098306466132638
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.098306466132638,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 4.0641516066736125,
+      "memory_type": "episodic",
+      "content": "The user plans to visit Tokyo Tower from Shibuya.",
+      "source_boundary_id": "16_0160",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 4.0641516066736125,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 4.0641516066736125
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.0641516066736125,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 4.048531529730018,
+      "memory_type": "episodic",
+      "content": "User visited Tokyo Tower during a previous trip and posted a photo on Instagram that received significant engagement.",
+      "source_boundary_id": "15_0155",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 4.048531529730018,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 4.048531529730018
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.048531529730018,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 3.992462839436083,
+      "memory_type": "profile",
+      "content": "User is interested in learning more about the history of feminist art in the 1970s.",
+      "source_boundary_id": "2_0024",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 3.992462839436083,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 3.992462839436083
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.992462839436083,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 0.2640800476074219
+}

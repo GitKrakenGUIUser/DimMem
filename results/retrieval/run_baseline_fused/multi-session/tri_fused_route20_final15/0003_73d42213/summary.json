@@ -1,0 +1,566 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "multi-session",
+  "sample_id": "0003_73d42213",
+  "query_text": "What time did the user reach the clinic on Monday, 2023/05/29?",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 155,
+  "fused_candidate_count_before_final_cut": 42,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/multi-session/tri_fused_route20_final15/0003_73d42213",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 10.487183851778225,
+      "memory_type": "episodic",
+      "content": "On 2023-05-29, the user asked the assistant to identify the specific Buddhist sutta that prohibits monks from giving food to naked ascetics.",
+      "source_boundary_id": "16_0125",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 10.487183851778225,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 10.487183851778225
+        }
+      ],
+      "score_components": {
+        "bm25_score": 10.487183851778225,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 8.95712315504781,
+      "memory_type": "episodic",
+      "content": "The user wore their favourite yoga pants to the gym on 2023-05-18.",
+      "source_boundary_id": "all_memories_0002",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 8.95712315504781,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 8.95712315504781
+        },
+        {
+          "method": "structured",
+          "rank": 3,
+          "score": 0.15789473684210525
+        },
+        {
+          "method": "minilm",
+          "rank": 6,
+          "score": 0.37725195867859473
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.95712315504781,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 7.081389319781364,
+      "memory_type": "fact",
+      "content": "The user started participating in the choir at St. Mary's Church, with their first time on October 15th.",
+      "source_boundary_id": "1_0007",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 7.081389319781364,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 7.081389319781364
+        },
+        {
+          "method": "minilm",
+          "rank": 7,
+          "score": 0.37612942214294043
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.081389319781364,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 6.87764630105641,
+      "memory_type": "episodic",
+      "content": "The user plans to play Apex Legends on 2023-05-21 with friends and asked for tips on playing Wraith and Octane.",
+      "source_boundary_id": "3_0031",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 6.87764630105641,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 6.87764630105641
+        },
+        {
+          "method": "structured",
+          "rank": 16,
+          "score": 0.15789473684210525
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.87764630105641,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 6.813432360259779,
+      "memory_type": "profile",
+      "content": "User wants a clinic within one hour drive from home.",
+      "source_boundary_id": "19_0146",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 6.813432360259779,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 6.813432360259779
+        },
+        {
+          "method": "structured",
+          "rank": 2,
+          "score": 0.5263157894736843
+        },
+        {
+          "method": "minilm",
+          "rank": 3,
+          "score": 0.5724897630039172
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.813432360259779,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 6.764794489975902,
+      "memory_type": "episodic",
+      "content": "On 2023-05-27, the user sought inspiring quotes about forgiveness after recently hearing a sermon on the topic.",
+      "source_boundary_id": "13_0102",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 6.764794489975902,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 6.764794489975902
+        },
+        {
+          "method": "minilm",
+          "rank": 13,
+          "score": 0.31796053026225085
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.764794489975902,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 6.745956553373649,
+      "memory_type": "episodic",
+      "content": "User needs to reschedule a follow-up doctor appointment and wants to find a nearby clinic.",
+      "source_boundary_id": "19_0143",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 6.745956553373649,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 6.745956553373649
+        },
+        {
+          "method": "structured",
+          "rank": 1,
+          "score": 0.6842105263157896
+        },
+        {
+          "method": "minilm",
+          "rank": 2,
+          "score": 0.5887211262141928
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.745956553373649,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 6.506134981839049,
+      "memory_type": "episodic",
+      "content": "On 2023-05-27, the user engaged in a discussion about women's empowerment in Islamic societies, focusing on entrepreneurship and economic empowerment.",
+      "source_boundary_id": "13_0101",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 6.506134981839049,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 6.506134981839049
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.506134981839049,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 6.308485028926806,
+      "memory_type": "episodic",
+      "content": "On 2023-05-27, the user expressed being moved by the passage in Romans 8 about not being separated from God's love.",
+      "source_boundary_id": "13_0104",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 6.308485028926806,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 6.308485028926806
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.308485028926806,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 6.134153264368683,
+      "memory_type": "episodic",
+      "content": "On 2023-05-27, the user asked for details to make Herby Parmesan Popcorn, including the amount of popcorn kernels and the process of combining ingredients.",
+      "source_boundary_id": "13_0099",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 6.134153264368683,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 6.134153264368683
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.134153264368683,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 6.041049000254288,
+      "memory_type": "episodic",
+      "content": "On 2023-05-27, the user asked about adding garlic powder to the herb mixture of Herby Parmesan Popcorn for extra flavor.",
+      "source_boundary_id": "13_0100",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 6.041049000254288,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 6.041049000254288
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.041049000254288,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 5.909905453831067,
+      "memory_type": "profile",
+      "content": "User struggles to resist checking their phone in the evenings while trying to limit screen time.",
+      "source_boundary_id": "5_0051",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 5.909905453831067,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 5.909905453831067
+        },
+        {
+          "method": "minilm",
+          "rank": 18,
+          "score": 0.26778884613771514
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.909905453831067,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 5.8078115030826645,
+      "memory_type": "fact",
+      "content": "User moved into a new apartment approximately three months before 2023-05-26, i.e., around February 2023.",
+      "source_boundary_id": "11_0087",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 5.8078115030826645,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 5.8078115030826645
+        },
+        {
+          "method": "minilm",
+          "rank": 9,
+          "score": 0.3466078443023428
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.8078115030826645,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 5.626057407607018,
+      "memory_type": "episodic",
+      "content": "On 2023-05-27, the user recalled attending a Bible study group at their friend Emily's house where they discussed forgiveness and brought homemade cookies.",
+      "source_boundary_id": "13_0103",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 5.626057407607018,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 5.626057407607018
+        },
+        {
+          "method": "minilm",
+          "rank": 15,
+          "score": 0.3100368126474974
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.626057407607018,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 5.400471765239489,
+      "memory_type": "episodic",
+      "content": "User had a doctor's appointment on 2023-05-15; left home at 7 AM, took a half-day off work, and returned to the office around 1:00 PM.",
+      "source_boundary_id": "2_0016",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 5.400471765239489,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 5.400471765239489
+        },
+        {
+          "method": "structured",
+          "rank": 9,
+          "score": 0.15789473684210525
+        },
+        {
+          "method": "minilm",
+          "rank": 1,
+          "score": 0.7055862133773209
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.400471765239489,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 8.888871431350708
+}

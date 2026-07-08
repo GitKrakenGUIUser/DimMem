@@ -1,0 +1,185 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-27T19:37:03, Sat] 1.User: I also think it's important to educate ourselves on the root causes of the conflicts in the region and work towards addressing those issues in a sustainable way. It's not just about treating the symptoms, but rather, finding long-term solutions.
+[2023-05-27T14:28:00, Sat] 2.User: I'm having some trouble sleeping due to the noise from a construction site near my place. Can you recommend some effective earplugs or white noise apps that can help me block out the noise? By the way, I've been staying up late to finish this TV series and it's been affecting my morning routine - I've been waking up around 8:30 am instead of my usual 7:00 am.
+[2023-05-27T14:28:00.500000, Sat] 3.User: What are some relaxing activities I can do before bed to help me unwind? I've been taking a warm bath every other night, but I'm looking for some other options.
+[2023-05-27T14:28:01, Sat] 4.User: I've been meaning to try meditation and deep breathing exercises. Do you have any recommendations for a meditation app or a specific routine I can follow for a beginner like me? Oh, and by the way, I've been having some pretty vivid dreams lately, do you think it's related to the melatonin supplements I've been taking?
+[2023-05-27T14:28:01.500000, Sat] 5.User: I think I'll start with the Headspace app and try to meditate for 5-10 minutes, 2-3 times a week. I'm also curious about the dream journal idea, I'll try to keep track of my dreams for a week or two to see if I notice any patterns. By the way, I've been going to bed pretty late lately, usually between 12:30 am to 1:30 am, do you think that could be affecting my sleep quality and dreams as well?
+[2023-05-27T14:28:02, Sat] 6.User: I'd like to try to establish a more consistent sleep schedule, but I'm worried that I'll have trouble falling asleep earlier since I've been staying up late to watch my TV series. Do you have any tips on how to wind down and prepare for an earlier bedtime?
+[2023-05-27T14:28:02.500000, Sat] 7.User: I think I'll try to establish a pre-bedtime routine to help me wind down and prepare for an earlier bedtime. I'll start by setting a specific TV time and limiting my screen time before bed. I'll also try to create a calming ambiance in my bedroom by dimming the lights and playing soothing music. Do you have any recommendations for calming music or nature sounds that can help me relax?
+[2023-05-27T10:37:00, Sat] 8.User: Hey Assistant, I need your help creating Midjourney command for AI Art Suffixes. 
+ 
+The command for this kind of suffix should be in this format.
+ 
+`/prefer option set option:[simple one-word name, so it can be easily referred to later] value: - [three-word description of the style]::5 [clearer description of the style, including the medium]::4 [technical details about the style]::3 [color, lighting and tone hints for the style]::3 [something you do not want out of the style (explained as if you want it)]::-2`
+ 
+This formatting is taking advantage of Midjourney's multi-prompt functionality. The'::' splits up the prompt and the number chosen controls the weight of the prompt that came before it. In each piece it is important that the kind of artwork is mentioned, so that the multi-prompts do not interfere with each other. Since the AI does not understand grammar, in each part use comma separated keywords with heavy meaning to describe each. 
+ 
+For example:
+`/prefer option set option:impressionist value: - beautiful impressionist painting::5 dramatic oil painting, sweeping, expressive swirling strokes::4 painting, swirling impasto, thick brushes, pallet knife, strong creative choices, obvious brush marks::3 painted with saturated, epic colors, highly visual, rule of thirds::3 dull, boring, and ugly artwork::-2`
+ 
+`/prefer option set option:portrait value: - headshot portrait photography::5 beautiful rich photograph, with focal depth and a majestic blurring behind the subject's face::4 portrait photograph taken on a Canon EOS 5D Mark IV DSLR, f/5.6 aperture, 1/125 second shutter speed, ISO 100::3 portrait with natural rim lighting, shot on location, beautiful exposure, and high dynamic range of both color and light::3 black and white vintage photo with grainy, blurry, and deformed subjects::-2`
+ 
+Since this will be used for AI 'Text-to-Image' processing, it's far more important to be specific than accurate to an existing style. Make bold and interesting choices when you invent your own art style.
+ 
+Please start by describing a visually appealing art style with clear detail so someone would be inspired to try the command. (Write in the format of persuasive ad copy) Then provide the command itself (as a code block so it can be easily copy and pasted). Repeat this task for three tries based on the following specification:
+ 
+I would like three options for creating images of futuristic shamans. Please create aerial, kingdom, and natural.
+[2023-05-27T10:37:00.500000, Sat] 9.User: Hey Assistant, I need your help creating Midjourney command for AI Art Suffixes. 
+ 
+The command for this kind of suffix should be in this format.
+ 
+`/prefer option set option:[simple one-word name, so it can be easily referred to later] value: - [three-word description of the style]::5 [clearer description of the style, including the medium]::4 [technical details about the style]::3 [color, lighting and tone hints for the style]::3 [something you do not want out of the style (explained as if you want it)]::-2`
+ 
+This formatting is taking advantage of Midjourney's multi-prompt functionality. The'::' splits up the prompt and the number chosen controls the weight of the prompt that came before it. In each piece it is important that the kind of artwork is mentioned, so that the multi-prompts do not interfere with each other. Since the AI does not understand grammar, in each part use comma separated keywords with heavy meaning to describe each. 
+ 
+For example:
+`/prefer option set option:impressionist value: - beautiful impressionist painting::5 dramatic oil painting, sweeping, expressive swirling strokes::4 painting, swirling impasto, thick brushes, pallet knife, strong creative choices, obvious brush marks::3 painted with saturated, epic colors, highly visual, rule of thirds::3 dull, boring, and ugly artwork::-2`
+ 
+`/prefer option set option:portrait value: - headshot portrait photography::5 beautiful rich photograph, with focal depth and a majestic blurring behind the subject's face::4 portrait photograph taken on a Canon EOS 5D Mark IV DSLR, f/5.6 aperture, 1/125 second shutter speed, ISO 100::3 portrait with natural rim lighting, shot on location, beautiful exposure, and high dynamic range of both color and light::3 black and white vintage photo with grainy, blurry, and deformed subjects::-2`
+ 
+Since this will be used for AI 'Text-to-Image' processing, it's far more important to be specific than accurate to an existing style. Make bold and interesting choices when you invent your own art style.
+ 
+Please start by describing a visually appealing art style with clear detail so someone would be inspired to try the command. (Write in the format of persuasive ad copy) Then provide the command itself (as a code block so it can be easily copy and pasted). Repeat this task for three tries based on the following specification:
+ 
+I would like three options for creating images of futuristic shamans. Please create aerial, kingdom, and natural. 
+ 
+#----------------------------------------------------------------------------------------------------------------------------------#
+ 
+Now could you help me create Midjourney commands for generating artworks with those styles (--aerial, --kingdom, and --natural)
+Format:
+`/imagine prompt:[Scene] with [Traits], [Lighting], [Mood]. --[Parameter] --ar [w:h]'
+ 
+Scene, traits, lighting, and mood can be brief descriptions in plain English. Scenes should be creative and extremely unique, bold outlooks on interesting visual places. Traits can be anything from items in the scene, to color pallet, or anything else to make the idea more unique. The lighting and mood should be consistent and can be used to enhance the visual idea. 
+ 
+Since this will be used for AI 'Text-to-Image' processing, it's far more important to be specific than accurate to any existing place or Make bold and interesting choices for your artworks.
+ 
+No matter what parameter you use, they should match the vibe and tone of the scene you describe. For best results, please only make landscapes and architecture for these styles. 
+ 
+Special Note: I would love to incorporate the idea of fractals (fractal architecture, or fractal plant growth) into as many of the prompts as possible.
+ 
+I will use these as wallpapers so please make the aspect ratio 16:9. 
+ 
+Please create 5 /imagine commands in the previously described format. Please make sure the parameter used is right for the image you are generating. Please put each command into code blocks so they can be easily copied.
+[2023-05-27T17:39:00, Sat] 10.User: I'm looking for some new workout playlists to listen to during my runs. Can you recommend some popular ones?
+[2023-05-27T17:39:00.500000, Sat] 11.User: Can you recommend some good running shoes for a 5K race?
+[2023-05-27T17:39:01, Sat] 12.User: What's the difference between a neutral and stability shoe, and which one would you recommend for me?
+[2023-05-27T17:39:01.500000, Sat] 13.User: I've been doing a lot of running lately, so I think I need a shoe that provides good support and cushioning. Would a stability shoe be a good choice for me?
+[2023-05-27T17:39:02, Sat] 14.User: I'm thinking about getting a new tennis racket. Do you have any recommendations?
+[2023-05-27T17:39:02.500000, Sat] 15.User: I'm looking for a racket that provides more power and spin. I've been playing with Coach Thompson for a few weeks now, and I think I'm ready for a racket that can help me take my game to the next level. What do you think about the Babolat Pure Aero?

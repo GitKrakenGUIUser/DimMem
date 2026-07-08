@@ -1,0 +1,551 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "knowledge-update",
+  "sample_id": "0011_852ce960",
+  "query_text": "The amount the user was pre-approved for when they got their mortgage from Wells Fargo",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 126,
+  "fused_candidate_count_before_final_cut": 46,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/knowledge-update/tri_fused_route20_final15/0011_852ce960",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 37.012506733747834,
+      "memory_type": "fact",
+      "content": "User was pre-approved for a $400,000 mortgage from Wells Fargo.",
+      "source_boundary_id": "14_0117",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 37.012506733747834,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 37.012506733747834
+        },
+        {
+          "method": "structured",
+          "rank": 1,
+          "score": 1.0
+        },
+        {
+          "method": "minilm",
+          "rank": 1,
+          "score": 0.8976941945462695
+        }
+      ],
+      "score_components": {
+        "bm25_score": 37.012506733747834,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 19.311048855737617,
+      "memory_type": "fact",
+      "content": "The user is buying a house for $325,000 and has pre-approval from Wells Fargo for $350,000.",
+      "source_boundary_id": "1_0010",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 19.311048855737617,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 19.311048855737617
+        },
+        {
+          "method": "structured",
+          "rank": 3,
+          "score": 0.6444444444444445
+        },
+        {
+          "method": "minilm",
+          "rank": 2,
+          "score": 0.7961804339993865
+        }
+      ],
+      "score_components": {
+        "bm25_score": 19.311048855737617,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 16.92023272696183,
+      "memory_type": "episodic",
+      "content": "The user is buying a $325,000 house, has a pre-approval for $350,000 from Wells Fargo, and is finalizing the budget including closing costs.",
+      "source_boundary_id": "all_memories_0009",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 16.92023272696183,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 16.92023272696183
+        },
+        {
+          "method": "structured",
+          "rank": 2,
+          "score": 0.6444444444444445
+        },
+        {
+          "method": "minilm",
+          "rank": 3,
+          "score": 0.7602795973443881
+        }
+      ],
+      "score_components": {
+        "bm25_score": 16.92023272696183,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 5.9468423271632265,
+      "memory_type": "episodic",
+      "content": "The user is considering buying a coffee table from West Elm for their living room and is looking for sales and promotions.",
+      "source_boundary_id": "7_0050",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 5.9468423271632265,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 5.9468423271632265
+        },
+        {
+          "method": "minilm",
+          "rank": 18,
+          "score": 0.1998185561138312
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.9468423271632265,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 5.112948559208469,
+      "memory_type": "episodic",
+      "content": "User is considering applying to the data analysis company they met at the career fair and is unsure whether to mention their research paper presentation.",
+      "source_boundary_id": "9_0069",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 5.112948559208469,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 5.112948559208469
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.112948559208469,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 4.685533794159473,
+      "memory_type": "episodic",
+      "content": "User plans to apply for internships this summer and attended a career fair last month where they met potential companies.",
+      "source_boundary_id": "9_0066",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 4.685533794159473,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 4.685533794159473
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.685533794159473,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 4.620519899392279,
+      "memory_type": "episodic",
+      "content": "The user participated in the 'Ride for a Reason' charity cycling event on 2023-03-25 with about 200 participants, which was a great experience.",
+      "source_boundary_id": "1_0016",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 4.620519899392279,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 4.620519899392279
+        },
+        {
+          "method": "structured",
+          "rank": 14,
+          "score": 0.33333333333333337
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.620519899392279,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 4.617947505681263,
+      "memory_type": "episodic",
+      "content": "The user decided to delete the Facebook and Instagram apps from their phone on 2023-11-15.",
+      "source_boundary_id": "11_0083",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 4.617947505681263,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 4.617947505681263
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.617947505681263,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 4.574899541670741,
+      "memory_type": "episodic",
+      "content": "The user asked for lesser-known advice from popular therapists on 2023-11-26.",
+      "source_boundary_id": "13_0104",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 4.574899541670741,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 4.574899541670741
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.574899541670741,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 4.524802080421842,
+      "memory_type": "fact",
+      "content": "User is interested in a data analysis company they met at the career fair.",
+      "source_boundary_id": "9_0068",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 4.524802080421842,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 4.524802080421842
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.524802080421842,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 4.199343143795256,
+      "memory_type": "fact",
+      "content": "The user has received a job offer from a rival company for a technical lead position.",
+      "source_boundary_id": "2_0020",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 4.199343143795256,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 4.199343143795256
+        },
+        {
+          "method": "structured",
+          "rank": 17,
+          "score": 0.33333333333333337
+        },
+        {
+          "method": "minilm",
+          "rank": 17,
+          "score": 0.20504023318430667
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.199343143795256,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 4.124010288720399,
+      "memory_type": "fact",
+      "content": "The user's laptop battery drains quickly even when not in use and has been worsening over time.",
+      "source_boundary_id": "11_0075",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 4.124010288720399,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 4.124010288720399
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.124010288720399,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 4.11931967117065,
+      "memory_type": "episodic",
+      "content": "User planned to schedule a home insurance policy with Liberty Mutual for the new home.",
+      "source_boundary_id": "15_0122",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 4.11931967117065,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 4.11931967117065
+        },
+        {
+          "method": "minilm",
+          "rank": 12,
+          "score": 0.22989565130334103
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.11931967117065,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 3.8497967846594237,
+      "memory_type": "episodic",
+      "content": "The user planned to remove social media apps from their phone's home screen and schedule social media checks on 2023-11-15.",
+      "source_boundary_id": "11_0082",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 3.8497967846594237,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 3.8497967846594237
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.8497967846594237,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 3.6179856767546177,
+      "memory_type": "episodic",
+      "content": "The user asked for recommendations for cable organizers and labels to declutter their desk on 2023-11-11.",
+      "source_boundary_id": "11_0077",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 3.6179856767546177,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 3.6179856767546177
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.6179856767546177,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 0.21653985977172852
+}

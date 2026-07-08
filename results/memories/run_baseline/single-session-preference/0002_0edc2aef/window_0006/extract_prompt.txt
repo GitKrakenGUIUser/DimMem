@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-24T01:38:02, Wed] 1.User: I've been thinking about joining a ukulele meetup group in my area to stay motivated and learn from others. Do you have any tips on how to find a good meetup group, and what to expect from these types of groups?
+[2023-05-24T01:38:02.500000, Wed] 2.User: I think I'll search for ukulele meetup groups in my area and see what's available. I've been playing for a bit, but I'm still a beginner, so it would be great to learn from others and get feedback on my playing. Do you think I should mention my Fender acoustic guitar and experience with that in my introduction to the group, or is that not relevant?
+[2023-05-24T09:24:00, Wed] 3.User: I just inherited a vintage 1960s Omega Seamaster watch and I'm looking to get it appraised and insured. Can you recommend any reputable appraisers or insurance companies that specialize in rare watches? By the way, I've had a good experience with antique dealers lately - I recently bought a rare 18th-century Chinese vase at an antique fair for $500, and I'm hopeful it'll turn out to be a valuable find.
+[2023-05-24T09:24:00.500000, Wed] 4.User: I've already scheduled an appointment with a local expert to appraise my great-grandfather's antique violin, which is supposedly a rare 19th-century Italian make. Do you think I should ask the same expert to take a look at my 18th-century Chinese vase as well, or would it be better to find a separate expert who specializes in Asian antiques?
+[2023-05-24T09:24:01, Wed] 5.User: I understand your point about finding a separate expert for the vase. I'll definitely look into that. By the way, do you think I should also consider getting my 1913 Liberty Head nickel appraised as well, considering its rarity and value?
+[2023-05-24T09:24:01.500000, Wed] 6.User: I apologize for any confusion. Yeah, I do have a 1913 Liberty Head nickel, and I acquired it from an online dealer in Germany. I've been storing it in a safe deposit box at the bank, but I think I'll move it to a more secure location soon. Anyway, back to my Omega Seamaster watch - do you think I should also consider getting it serviced or restored to maintain its value and condition?
+[2023-05-24T09:24:02, Wed] 7.User: I understand your concerns, but I assure you that all the items I mentioned are genuine and I have the necessary documentation to prove it. I apologize if my previous messages seemed suspicious or unclear. Let's focus on the Omega Seamaster watch - can you recommend any reputable watchmakers or dealers in my area that can help me service and restore it?
+[2023-05-24T09:24:02.500000, Wed] 8.User: I'm still a bit concerned about the authenticity of your items, but I'll try to focus on providing helpful information. Since you mentioned you bought the 18th-century Chinese vase at an antique fair for $500, I'm wondering if you have any documentation or proof of purchase that can help establish its provenance?
+[2023-05-24T21:39:00, Wed] 9.User: Suggest flows on actions for each role and suggest what video to create to show users how to use and how to do some actions as create task, assign users, Change status, and more
+[2023-05-25T00:13:00, Thu] 10.User: How has Japan learned from its past experiences with natural disasters, such as the 2011 earthquake and tsunami, and how have they improved their disaster response systems?
+[2023-05-25T00:13:00.500000, Thu] 11.User: It's impressive to see how much Japan has improved their disaster response systems since the 2011 earthquake and tsunami. Have they faced any major natural disasters since then?
+[2023-05-25T00:13:01, Thu] 12.User: Wow, it's amazing to see how Japan is constantly improving their disaster response systems. Do you think other countries could learn from their approaches and implement similar systems?
+[2023-05-25T00:13:01.500000, Thu] 13.User: It's impressive to see how Japan has been able to develop such advanced disaster response systems. How long did it take for them to implement these changes after the 2011 earthquake and tsunami?
+[2023-05-25T03:27:00, Thu] 14.User: I'm looking into getting new floor mats for my car. Do you have any recommendations or reviews on WeatherTech floor mats?
+[2023-05-25T03:27:00.500000, Thu] 15.User: I'm actually due for an oil change soon too, and I'm glad I got one recently because the guy at the Exxon station told me my oil was pretty dirty. By the way, I got a free coupon from my last maintenance visit, so it only cost me $25 instead of the usual price. Anyway, back to the floor mats, do you think WeatherTech mats would be a good fit for my car, considering I have a pretty dirty driving habit?

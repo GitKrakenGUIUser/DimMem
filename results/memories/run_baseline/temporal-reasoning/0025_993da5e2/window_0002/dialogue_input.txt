@@ -1,0 +1,96 @@
+[2023-05-26T05:58:01.500000, Fri] 1.User: It's impressive to see how Airbus is committed to investing in innovation and creativity in the aerospace industry. I wonder what challenges they face in this pursuit?
+[2023-05-26T10:37:00, Fri] 2.User: A famous scientist first observed a solar planet's orbit is not quite right, then he did some calculations and predicted there must be another planet nearby to interfere its orbit. who is the scientist and what is the planet later discovered?
+[2023-05-26T10:37:00.500000, Fri] 3.User: When the prediction was made
+[2023-05-26T10:37:01, Fri] 4.User: Give me scientific examples to support predictions made first from theories but only decades later the predictions were proved by empirical evidence.
+[2023-05-26T04:13:00, Fri] 5.User: Would these apps be useful to faculty, students, or both?
+[2023-05-26T19:57:00, Fri] 6.User: Today we are gonna create Images with a Diffusion model. I am gonna feed you some information about it. Understood?
+[2023-05-26T19:57:00.500000, Fri] 7.User: This is how Midjourney work:
+Midjourney is another AI-powered tool that generates images from user prompts. MidJourney is proficient at adapting actual art styles to create an image of any combination of things the user wants. It excels at creating environments, especially fantasy and sci-fi scenes, with dramatic lighting that looks like rendered concept art from a video game. How does Midjourney work?
+Midjourney is an AI image generation tool that takes inputs through text prompts and parameters and uses a Machine Learning (ML) algorithm trained on a large amount of image data to produce unique images. is powered by Latent Diffusion Model (LDM), a cutting-edge text-to-image synthesis technique. Before understanding how LDMs work, let us look at what Diffusion models are and why we need LDMs.
+
+Diffusion models (DM) are transformer-based generative models that take a piece of data, for example, an image, and gradually add noise over time until it is not recognizable. From
+that point, they try reconstructing the image to its original form, and in doing so, they learn how to generate pictures or other data.
+
+The issue with DMs is that the powerful ones often consume hundreds of GPU days, and inference is quite expensive due to sequential evaluations. To enable DM training on limited computational resources without compromising their quality as well as flexibility, DMs are applied in the latent space of powerful pre-trained autoencoders.
+
+Training a diffusion model on such a representation makes it possible to achieve an optimal point between complexity reduction and detail preservation, significantly improving visual fidelity. Introducing a cross-attention layer to the model architecture turns the diffusion model into a powerful and flexible generator for generally conditioned inputs such as text and bounding boxes, enabling high-resolution convolution-based synthesis.
+
+But wait, I have more info. Just answer with UNDERSTOOD
+[2023-05-26T19:57:01, Fri] 8.User: Version Light
+Midjourney routinely releases new model versions to improve efficiency, coherency, and quality. The latest model is the default, but other models can be used using the --version or --v parameter or by using the /settings command and selecting a model version. Different models excel at different types of images. Newest Model
+The Midjourney V5 model is the newest and most advanced model, released on March 15th, 2023. To use this model, add the --v 5 parameter to the end of a prompt, or use the /settings command and select MJ Version 5
+
+This model has very high Coherency, excels at interpreting natural language prompts, is higher resolution, and supports advanced features like repeating patterns with --tile To turn it on type --v 5 after your prompt or select "V5" from /settings
+
+What's new with the V5 base model?
+Much wider stylistic range and more responsive to prompting
+Much higher image quality (2x resolution increase) improved dynamic range
+More detailed images. Details more likely to be correct. Less unwanted text.
+Improved performance with image prompting
+Supports --tile argument for seamless tiling (experimental)
+Supports --ar aspect ratios greater than 2:1 (experimental)
+Supports --iw for weighing image prompts versus text prompts
+
+Style and prompting for V5
+Today’s test is basically a ‘pro’ mode of the model.
+It’s MUCH more ‘unopinionated’ than v3 and v4, and is tuned to provide a wide diversity of outputs and to be very responsive to your inputs.
+The tradeoff here is that it may be harder to use. Short prompts may not work as well. You should try to write longer, more explicit text about what you want (ie: “cinematic photo with dramatic lighting”)
+Please chat with each other in prompt-chat to figure out how to use v5.
+We hope to have a ‘friendly’ default styling for v5 before we switch it to default. When this happens we will still let you turn it off and get back to something like this ‘raw’ mode today.
+
+Please note
+This is an alpha test and things will change. DO NOT rely on this exact model being available in the future. It will be significantly modified as we take V5 to full release.
+Right now there is no V5 upsampler, the default resolution of V5 is the same as upscaled V4. If you click upscale it will just instantly give you that one image by itself.
+
+Community Standards:
+This model can generate much more realistic imagery than anything we've released before.
+We’ve increased the number of moderators, improved moderation tooling, and will be enforcing our community standards with increased strictness and rigor. Don't be a jerk or create images to cause drama.
+
+More about V5:
+V5 is our second model trained on our AI supercluster and has been in the works for 5 months. It uses significantly different neural architectures and new aesthetic techniques. V5 isn't the final step, but we hope you all feel the progression of something deep and unfathomable in the power of our collective human imagination.
+But wait i have more info. 
+
+Just answer with UNDERSTOOD
+[2023-05-26T19:57:01.500000, Fri] 9.User: Basic Parameters Aspect Ratios
+--aspect, or --ar Change the aspect ratio of a generation.
+
+Chaos
+--chaos Change how varied the results will be. Higher values produce more unusual and unexpected generations.
+
+No
+--no Negative prompting, --no plants would try to remove plants from the image.
+
+Quality
+--quality <.25, .5, 1, or 2>, or --q <.25, .5, 1, or 2> How much rendering quality time you want to spend. The default value is 1. Higher values cost more and lower values cost less.
+
+Seed
+--seed The Midjourney bot uses a seed number to create a field of visual noise, like television static, as a starting point to generate the initial image grids. Seed numbers are generated randomly for each image but can be specified with the --seed or
+--sameseed parameter. Using the same seed number and prompt will produce similar ending images.
+
+Stop
+--stop Use the --stop parameter to finish a Job partway through the process. Stopping a Job at an earlier percentage can create blurrier, less detailed results.
+
+Style
+--style <4a, 4b or 4c> Switch between versions of the Midjourney Model Version 4
+
+Stylize
+--stylize , or --s parameter influences how strongly Midjourney's default aesthetic style is applied to Jobs.
+
+Uplight
+--uplight Use an alternative "light" upscaler when selecting the U buttons. The results are closer to the original grid image. The upscaled image is less detailed and smoother.
+
+Upbeta
+--upbeta Use an alternative beta upscaler when selecting the U buttons. The results are closer to the original grid image. The upscaled image has significantly fewer added details. Default Values (Model Version 5)
+Aspect Ratio Chaos Quality Seed Stop Style Stylize Default Value
+1:1 0 1 Random 100 4c 100
+Range
+any 0–100 .25 .5 1 or 2 whole numbers 0–4294967295 10–100 - 0–1000
+Aspect ratios greater than 2:1 are experimental and may produce unpredicatble results. But wait, I have more info. 
+
+Just answer with UNDERSTOOD
+[2023-05-26T00:20:00, Fri] 10.User: I'm looking to try out some new workout playlists for my Zumba classes. Can you recommend some upbeat songs to add to my playlist? By the way, I just got back from a tough HIIT class on Saturday morning two weeks ago, and I'm still feeling the burn!
+[2023-05-26T00:20:00.500000, Fri] 11.User: Can you recommend some strength training exercises I can do at home to improve my overall fitness? I've been focusing on cardio with Zumba and HIIT, but I want to work on my strength, especially since I'm trying to reach my goal of doing 10 push-ups in a row.
+[2023-05-26T00:20:01, Fri] 12.User: That's really helpful, thanks! I've actually been working on my planks in my Zumba classes, and I managed to hold one for 45 seconds last Tuesday, which is a new personal best. Do you have any exercises that can help improve my core strength further, especially for planks?
+[2023-05-26T00:20:01.500000, Fri] 13.User: That's awesome, thanks for the tips! I've been trying to focus on my core strength in my Zumba classes, and I've noticed it's helping with my overall fitness. Speaking of fitness, I'm actually planning to take a fitness assessment at my gym next Saturday. Do you have any advice on how to prepare for it?
+[2023-05-26T00:20:02, Fri] 14.User: I'm planning to take my fitness assessment next Saturday, and I was wondering if you have any advice on how to make the most out of it. I've been trying to improve my overall fitness lately, especially since I took my first HIIT class two weeks ago on a Saturday morning - it was definitely a challenge!
+[2023-05-26T00:20:02.500000, Fri] 15.User: Can you recommend some healthy meal ideas that can help me fuel my body for my fitness assessment next Saturday? I've been trying to eat healthier lately, and I'm looking for some inspiration.

@@ -1,0 +1,63 @@
+{
+  "query_text": "What new kitchen gadget did the user invest in before getting the Air Fryer?",
+  "query_anchor": "What new kitchen gadget did the user invest in before getting the Air Fryer?",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "before getting the Air Fryer",
+    "location": "",
+    "keywords": [
+      "kitchen gadget",
+      "Air Fryer"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "What new kitchen gadget did the user invest in before getting the Air Fryer?",
+      "keywords": [
+        "kitchen gadget",
+        "Air Fryer"
+      ],
+      "query_terms": [
+        "what",
+        "new",
+        "kitchen",
+        "gadget",
+        "did",
+        "the",
+        "user",
+        "invest",
+        "in",
+        "before",
+        "getting",
+        "air",
+        "fryer"
+      ]
+    },
+    "structured": {
+      "query_text": "What new kitchen gadget did the user invest in before getting the Air Fryer?",
+      "rewrite": "What new kitchen gadget did the user invest in before getting the Air Fryer?",
+      "intent": "lookup",
+      "answer_field": "keywords",
+      "content_query": "What new kitchen gadget did the user invest in before getting the Air Fryer?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {
+        "time": [
+          "before getting the Air Fryer"
+        ]
+      },
+      "keywords": [
+        "kitchen gadget",
+        "Air Fryer"
+      ],
+      "canonical_text": "What new kitchen gadget did the user invest in before getting the Air Fryer?"
+    },
+    "minilm": {
+      "query_text": "What new kitchen gadget did the user invest in before getting the Air Fryer?"
+    }
+  }
+}

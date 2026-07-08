@@ -1,0 +1,877 @@
+[
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User attended their cousin's wedding at the Grand Ballroom during the weekend of May 20-21, 2023.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "Grand Ballroom",
+      "reason": "cousin's wedding",
+      "purpose": "",
+      "keywords": [
+        "cousin's wedding",
+        "Grand Ballroom",
+        "May 2023"
+      ]
+    },
+    "entities": [
+      "cousin's wedding",
+      "Grand Ballroom",
+      "May 2023"
+    ],
+    "embedding_text": "User attended their cousin's wedding at the Grand Ballroom during the weekend of May 20-21, 2023.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0128",
+    "source_time": "2023-05-28 19:17:01",
+    "record_time": "2026-07-07T19:51:00.042864",
+    "score": 22.176159354987124,
+    "score_components": {
+      "bm25_score": 22.176159354987124,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 22.176159354987124,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 22.176159354987124
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 1.0
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.7211075312100074
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User attended a wedding expo with friend Emily a few weeks before May 28, 2023.",
+    "dimension": {
+      "time": "2023-05",
+      "location": "",
+      "reason": "wedding expo",
+      "purpose": "",
+      "keywords": [
+        "wedding expo",
+        "friend Emily"
+      ]
+    },
+    "entities": [
+      "wedding expo",
+      "friend Emily"
+    ],
+    "embedding_text": "User attended a wedding expo with friend Emily a few weeks before May 28, 2023.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0130",
+    "source_time": "2023-05-28 19:17:02.500000",
+    "record_time": "2026-07-07T19:51:00.042875",
+    "score": 10.13980794149075,
+    "score_components": {
+      "bm25_score": 10.13980794149075,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 10.13980794149075,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 10.13980794149075
+      },
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.4444444444444445
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.5179640142822628
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User is looking for a gift for their mother's birthday on June 15, 2023.",
+    "dimension": {
+      "time": "2023-06-15",
+      "location": "",
+      "reason": "mother's birthday",
+      "purpose": "to find a gift",
+      "keywords": [
+        "mother",
+        "birthday",
+        "gift"
+      ]
+    },
+    "entities": [
+      "mother",
+      "birthday",
+      "gift"
+    ],
+    "embedding_text": "User is looking for a gift for their mother's birthday on June 15, 2023.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0125",
+    "source_time": "2023-05-28 19:17:00",
+    "record_time": "2026-07-07T19:51:00.042846",
+    "score": 8.046277389463539,
+    "score_components": {
+      "bm25_score": 8.046277389463539,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 8.046277389463539,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 8.046277389463539
+      },
+      {
+        "method": "structured",
+        "rank": 13,
+        "score": 0.4444444444444445
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.3430820391903178
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User asked about methods to determine Poisson's ratio.",
+    "dimension": {
+      "time": "2023-05-25T05:43:02",
+      "location": "",
+      "reason": "",
+      "purpose": "to learn ways to find Poisson's ratio",
+      "keywords": [
+        "Poisson's ratio",
+        "methods",
+        "determination"
+      ]
+    },
+    "entities": [
+      "Poisson's ratio",
+      "methods",
+      "determination"
+    ],
+    "embedding_text": "User asked about methods to determine Poisson's ratio.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0091",
+    "source_time": "2023-05-25 05:43:00",
+    "record_time": "2026-07-07T19:51:00.042630",
+    "score": 7.004296432894274,
+    "score_components": {
+      "bm25_score": 7.004296432894274,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 7.004296432894274,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 7.004296432894274
+      },
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.4444444444444445
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "fact",
+    "content": "The user is based in New York City.",
+    "dimension": {
+      "time": "",
+      "location": "New York City",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "user",
+        "New York City",
+        "location"
+      ]
+    },
+    "entities": [
+      "user",
+      "New York City",
+      "location"
+    ],
+    "embedding_text": "The user is based in New York City.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0044",
+    "source_time": "2023-05-22 16:19:00.500000",
+    "record_time": "2026-07-07T19:51:00.042263",
+    "score": 6.682722497888353,
+    "score_components": {
+      "bm25_score": 6.682722497888353,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 6.682722497888353,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 6.682722497888353
+      },
+      {
+        "method": "minilm",
+        "rank": 6,
+        "score": 0.32586599851610726
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user attended a writing workshop in October 2022 to focus on their writing goals.",
+    "dimension": {
+      "time": "2022-10",
+      "location": "",
+      "reason": "to focus on writing goals",
+      "purpose": "improve writing goals",
+      "keywords": [
+        "writing workshop",
+        "October",
+        "character development"
+      ]
+    },
+    "entities": [
+      "writing workshop",
+      "October",
+      "character development"
+    ],
+    "embedding_text": "The user attended a writing workshop in October 2022 to focus on their writing goals.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0035",
+    "source_time": "2023-05-22 11:46:02",
+    "record_time": "2026-07-07T19:51:00.042208",
+    "score": 5.346639795270889,
+    "score_components": {
+      "bm25_score": 5.346639795270889,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 5.346639795270889,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 5.346639795270889
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User asked about the role of percent elongation in a stress-strain diagram.",
+    "dimension": {
+      "time": "2023-05-25T05:43:00.500000",
+      "location": "",
+      "reason": "",
+      "purpose": "to understand where percent elongation fits in a stress-strain diagram",
+      "keywords": [
+        "percent elongation",
+        "stress-strain diagram",
+        "ductility"
+      ]
+    },
+    "entities": [
+      "percent elongation",
+      "stress-strain diagram",
+      "ductility"
+    ],
+    "embedding_text": "User asked about the role of percent elongation in a stress-strain diagram.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0089",
+    "source_time": "2023-05-24 22:21:00.500000",
+    "record_time": "2026-07-07T19:51:00.042618",
+    "score": 4.986858366628836,
+    "score_components": {
+      "bm25_score": 4.986858366628836,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 4.986858366628836,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 4.986858366628836
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User expressed concern about Fox News's political agenda and asked how to ensure accurate and unbiased news.",
+    "dimension": {
+      "time": "2023-05-26T07:00:01.500000",
+      "location": "",
+      "reason": "",
+      "purpose": "to find ways to ensure accurate and unbiased news",
+      "keywords": [
+        "Fox News",
+        "political agenda",
+        "accurate news",
+        "unbiased news"
+      ]
+    },
+    "entities": [
+      "Fox News",
+      "political agenda",
+      "accurate news",
+      "unbiased news"
+    ],
+    "embedding_text": "User expressed concern about Fox News's political agenda and asked how to ensure accurate and unbiased news.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0095",
+    "source_time": "2023-05-25 05:43:02",
+    "record_time": "2026-07-07T19:51:00.042657",
+    "score": 4.81907898084679,
+    "score_components": {
+      "bm25_score": 4.81907898084679,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 4.81907898084679,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 4.81907898084679
+      },
+      {
+        "method": "structured",
+        "rank": 10,
+        "score": 0.4444444444444445
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user attended a Billie Eilish concert in Philadelphia.",
+    "dimension": {
+      "time": "",
+      "location": "Philadelphia",
+      "reason": "",
+      "purpose": "entertainment",
+      "keywords": [
+        "Billie Eilish",
+        "concert",
+        "Philadelphia"
+      ]
+    },
+    "entities": [
+      "Billie Eilish",
+      "concert",
+      "Philadelphia"
+    ],
+    "embedding_text": "The user attended a Billie Eilish concert in Philadelphia.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0147",
+    "source_time": "2023-05-29 17:49:00",
+    "record_time": "2026-07-07T19:51:00.042978",
+    "score": 4.75003419884022,
+    "score_components": {
+      "bm25_score": 4.75003419884022,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 4.75003419884022,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 4.75003419884022
+      },
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.2829338614532093
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user attended a jazz night at a local bar on 2023-05-29.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "local bar",
+      "reason": "",
+      "purpose": "enjoying live music",
+      "keywords": [
+        "jazz night",
+        "local bar",
+        "live music"
+      ]
+    },
+    "entities": [
+      "jazz night",
+      "local bar",
+      "live music"
+    ],
+    "embedding_text": "The user attended a jazz night at a local bar on 2023-05-29.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0148",
+    "source_time": "2023-05-29 17:49:00",
+    "record_time": "2026-07-07T19:51:00.042987",
+    "score": 4.037806740538247,
+    "score_components": {
+      "bm25_score": 4.037806740538247,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 4.037806740538247,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 4.037806740538247
+      },
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.23448681664959284
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "fact",
+    "content": "User set a budget of $100 for the mother's birthday gift.",
+    "dimension": {
+      "time": "2023-06-15",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "budget",
+        "$100",
+        "mother's birthday gift"
+      ]
+    },
+    "entities": [
+      "budget",
+      "$100",
+      "mother's birthday gift"
+    ],
+    "embedding_text": "User set a budget of $100 for the mother's birthday gift.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0127",
+    "source_time": "2023-05-28 19:17:00.500000",
+    "record_time": "2026-07-07T19:51:00.042858",
+    "score": 3.8243518468054,
+    "score_components": {
+      "bm25_score": 3.8243518468054,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 3.8243518468054,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 3.8243518468054
+      },
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.2758338415877713
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "fact",
+    "content": "The user is planning to establish a children's entertainment playcentre business.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "children's entertainment playcentre",
+        "business planning",
+        "playcentre business"
+      ]
+    },
+    "entities": [
+      "children's entertainment playcentre",
+      "business planning",
+      "playcentre business"
+    ],
+    "embedding_text": "The user is planning to establish a children's entertainment playcentre business.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0028",
+    "source_time": "2023-05-21 18:22:02",
+    "record_time": "2026-07-07T19:51:00.042162",
+    "score": 3.7254571328417283,
+    "score_components": {
+      "bm25_score": 3.7254571328417283,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 3.7254571328417283,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 3.7254571328417283
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user attended a weekend-long writing workshop at a mountain retreat center in October 2022.",
+    "dimension": {
+      "time": "2022-10",
+      "location": "mountain retreat center",
+      "reason": "to improve writing skills",
+      "purpose": "to get back into writing",
+      "keywords": [
+        "writing workshop",
+        "mountain retreat",
+        "fiction writing",
+        "October 2022"
+      ]
+    },
+    "entities": [
+      "writing workshop",
+      "mountain retreat",
+      "fiction writing",
+      "October 2022"
+    ],
+    "embedding_text": "The user attended a weekend-long writing workshop at a mountain retreat center in October 2022.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0029",
+    "source_time": "2023-05-22 05:37:00",
+    "record_time": "2026-07-07T19:51:00.042168",
+    "score": 3.46116990019104,
+    "score_components": {
+      "bm25_score": 3.46116990019104,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 3.46116990019104,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 3.46116990019104
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User expressed confusion about Poisson's ratio.",
+    "dimension": {
+      "time": "2023-05-25T05:43:01.500000",
+      "location": "",
+      "reason": "",
+      "purpose": "to clarify confusion about Poisson's ratio",
+      "keywords": [
+        "Poisson's ratio",
+        "confusion"
+      ]
+    },
+    "entities": [
+      "Poisson's ratio",
+      "confusion"
+    ],
+    "embedding_text": "User expressed confusion about Poisson's ratio.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0090",
+    "source_time": "2023-05-24 22:21:01",
+    "record_time": "2026-07-07T19:51:00.042624",
+    "score": 3.3775765595714904,
+    "score_components": {
+      "bm25_score": 3.3775765595714904,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 3.3775765595714904,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 3.3775765595714904
+      },
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.4444444444444445
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User plans to check out L'Occitane and Jo Malone London for a skincare gift.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "looking for a skincare gift for mother",
+      "purpose": "to find a suitable gift",
+      "keywords": [
+        "L'Occitane",
+        "Jo Malone London",
+        "skincare gift"
+      ]
+    },
+    "entities": [
+      "L'Occitane",
+      "Jo Malone London",
+      "skincare gift"
+    ],
+    "embedding_text": "User plans to check out L'Occitane and Jo Malone London for a skincare gift.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0129",
+    "source_time": "2023-05-28 19:17:02",
+    "record_time": "2026-07-07T19:51:00.042869",
+    "score": 3.113750273237472,
+    "score_components": {
+      "bm25_score": 3.113750273237472,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 3.113750273237472,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 3.113750273237472
+      }
+    ]
+  }
+]

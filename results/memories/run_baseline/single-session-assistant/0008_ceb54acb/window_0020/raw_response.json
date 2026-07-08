@@ -1,0 +1,32 @@
+{
+  "id": "0943b4fc-a894-40c0-8cc4-6ea8c6d358ac",
+  "object": "chat.completion",
+  "created": 1783351242,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": [\n    {\n      \"source_id\": 4,\n      \"content\": \"The user plans to do strength training on Tuesdays and Thursdays (their rest days) and keep spinning classes on Mondays, Wednesdays, and Fridays to maintain cardiovascular fitness while adding strength training.\",\n      \"dimension\": {\n        \"memory_type\": \"episodic\",\n        \"time\": \"\",\n        \"location\": \"\",\n        \"reason\": \"\",\n        \"purpose\": \"to maintain cardiovascular fitness while adding strength training\",\n        \"keywords\": [\"strength training\", \"spinning classes\", \"Tuesdays\", \"Thursdays\", \"Mondays\", \"Wednesdays\", \"Fridays\", \"rest days\", \"cardiovascular fitness\"]\n      }\n    }\n  ]\n}",
+        "reasoning_content": "We need to extract memories from the conversation. The first three messages are overlap context and not to be used as new memory sources. So we only consider message 4. Message 4 is from the user: \"I think I can fit in strength training on my rest days, so I'll try to do strength training on Tuesdays and Thursdays, and keep my spinning classes on Mondays, Wednesdays, and Fridays. That way, I can still maintain my cardiovascular fitness while adding strength training to my routine. Thanks for the advice!\"\n\nThis message contains a decision/plan about scheduling strength training and spinning classes. It is a specific plan (episodic). Also the user mentions they have done a sprint triathlon before on April 1st (mentioned in message 1 but that's overlap, but we can use it for context? Actually message 1 is overlap and not allowed to extract from. But the user in message 4 does not repeat that. However, from message 1 (overlap) we know the user has done a sprint triathlon on April 1st. But since message 1 is not to be extracted, we cannot extract that fact from it. However, the user's plan in message 4 is about strength training and spinning. We can extract the plan: The user plans to do strength training on Tuesdays and Thursdays, and keep spinning classes on Mondays, Wednesdays, and Fridays. This is a future plan. Also the purpose is to maintain cardiovascular fitness while adding strength training. So we can create an episodic memory.\n\nAlso note: The user's mention of \"rest days\" implies that Tuesdays and Thursdays are rest days from something else, but not specified further. We'll keep the plan as stated.\n\nThere is also a hint of a previous triathlon on April 1st, but since it's in overlap, we should not extract it. However, if it were not overlap, it would be a fact. But per rules, we only consider message 4. So we extract one memory.\n\nThe time: The message timestamp is 2023-05-30T20:11:02.500000. The plan is for future days (Tuesdays and Thursdays). But we don't know specific dates. The plan is recurring. We can set time to \"\" or maybe \"weekly\" but it's not a specific date. Since there is no absolute date, we leave time as \"\".\n\nLocation: not mentioned.\n\nReason: The user wants to maintain cardiovascular fitness while adding strength training. That's purpose? Actually purpose: \"to maintain cardiovascular fitness while adding strength training\". We can put that in purpose.\n\nKeywords: strength training, spinning classes, Tuesdays, Thursdays, Mondays, Wednesdays, Fridays, rest days, cardiovascular fitness.\n\nmemory_type: episodic (a plan/action).\n\ncontent: The user plans to do strength training on Tuesdays and Thursdays (their rest days) and keep spinning classes on Mondays, Wednesdays, and Fridays to maintain cardiovascular fitness while adding strength training.\n\nWe need to make it self-contained. It should refer to the user. Since the user is the speaker, we use \"The user\".\n\nThus, output JSON with one memory.\n\nAlso ensure no extra text."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1588,
+    "completion_tokens": 847,
+    "total_tokens": 2435,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 680
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 436
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

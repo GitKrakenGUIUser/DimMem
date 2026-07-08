@@ -1,0 +1,668 @@
+{
+  "run_root": "results/query_analysis/run_baseline",
+  "total": 30,
+  "done": 30,
+  "fail": 0,
+  "rows": [
+    {
+      "conv_name": "multi-session",
+      "index": 0,
+      "question": "How many times did I bake egg tarts in the past two weeks?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 4.332662582397461,
+      "usage": {
+        "prompt_tokens": 690,
+        "completion_tokens": 364,
+        "total_tokens": 1054,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 262
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 690
+      },
+      "output_dir": "results/query_analysis/run_baseline/multi-session/0000_88432d0a_abs"
+    },
+    {
+      "conv_name": "multi-session",
+      "index": 1,
+      "question": "When did I submit my research paper on sentiment analysis?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 2.552497625350952,
+      "usage": {
+        "prompt_tokens": 686,
+        "completion_tokens": 210,
+        "total_tokens": 896,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 127
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 46
+      },
+      "output_dir": "results/query_analysis/run_baseline/multi-session/0001_51c32626"
+    },
+    {
+      "conv_name": "multi-session",
+      "index": 3,
+      "question": "What time did I reach the clinic on Monday?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 2.9377388954162598,
+      "usage": {
+        "prompt_tokens": 685,
+        "completion_tokens": 264,
+        "total_tokens": 949,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 167
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 45
+      },
+      "output_dir": "results/query_analysis/run_baseline/multi-session/0003_73d42213"
+    },
+    {
+      "conv_name": "multi-session",
+      "index": 10,
+      "question": "What is the total weight of the new feed I purchased in the past two months?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 4.042698621749878,
+      "usage": {
+        "prompt_tokens": 692,
+        "completion_tokens": 396,
+        "total_tokens": 1088,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 281
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 52
+      },
+      "output_dir": "results/query_analysis/run_baseline/multi-session/0010_bc149d6b"
+    },
+    {
+      "conv_name": "multi-session",
+      "index": 13,
+      "question": "How many bikes did I service or plan to service in March?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 3.6722679138183594,
+      "usage": {
+        "prompt_tokens": 688,
+        "completion_tokens": 309,
+        "total_tokens": 997,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 205
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 48
+      },
+      "output_dir": "results/query_analysis/run_baseline/multi-session/0013_a9f6b44c"
+    },
+    {
+      "conv_name": "multi-session",
+      "index": 18,
+      "question": "What is the total number of days I spent in Japan and Chicago?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 3.399548292160034,
+      "usage": {
+        "prompt_tokens": 689,
+        "completion_tokens": 272,
+        "total_tokens": 961,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 191
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 49
+      },
+      "output_dir": "results/query_analysis/run_baseline/multi-session/0018_3fdac837"
+    },
+    {
+      "conv_name": "multi-session",
+      "index": 21,
+      "question": "How many projects have I led or am currently leading?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 5.330723524093628,
+      "usage": {
+        "prompt_tokens": 686,
+        "completion_tokens": 378,
+        "total_tokens": 1064,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 294
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 46
+      },
+      "output_dir": "results/query_analysis/run_baseline/multi-session/0021_6d550036"
+    },
+    {
+      "conv_name": "multi-session",
+      "index": 26,
+      "question": "What is the total amount I spent on gifts for my coworker and brother?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 3.0152206420898438,
+      "usage": {
+        "prompt_tokens": 691,
+        "completion_tokens": 260,
+        "total_tokens": 951,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 167
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 51
+      },
+      "output_dir": "results/query_analysis/run_baseline/multi-session/0026_a3332713"
+    },
+    {
+      "conv_name": "single-session-preference",
+      "index": 2,
+      "question": "Can you suggest a hotel for my upcoming trip to Miami?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 7.2036073207855225,
+      "usage": {
+        "prompt_tokens": 687,
+        "completion_tokens": 630,
+        "total_tokens": 1317,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 546
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 47
+      },
+      "output_dir": "results/query_analysis/run_baseline/single-session-preference/0002_0edc2aef"
+    },
+    {
+      "conv_name": "single-session-preference",
+      "index": 29,
+      "question": "I'm trying to decide whether to buy a NAS device now or wait. What do you think?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 3.8145580291748047,
+      "usage": {
+        "prompt_tokens": 695,
+        "completion_tokens": 282,
+        "total_tokens": 977,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 192
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 55
+      },
+      "output_dir": "results/query_analysis/run_baseline/single-session-preference/0029_1da05512"
+    },
+    {
+      "conv_name": "temporal-reasoning",
+      "index": 4,
+      "question": "How many days passed between the day I attended the gardening workshop and the day I planted the tomato saplings?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 3.7885231971740723,
+      "usage": {
+        "prompt_tokens": 697,
+        "completion_tokens": 349,
+        "total_tokens": 1046,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 248
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 57
+      },
+      "output_dir": "results/query_analysis/run_baseline/temporal-reasoning/0004_gpt4_1e4a8aeb"
+    },
+    {
+      "conv_name": "temporal-reasoning",
+      "index": 7,
+      "question": "What was the airline that I flied with on Valentine's day?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 6.20945405960083,
+      "usage": {
+        "prompt_tokens": 689,
+        "completion_tokens": 596,
+        "total_tokens": 1285,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 502
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 49
+      },
+      "output_dir": "results/query_analysis/run_baseline/temporal-reasoning/0007_gpt4_f420262d"
+    },
+    {
+      "conv_name": "temporal-reasoning",
+      "index": 9,
+      "question": "What is the order of the six museums I visited from earliest to latest?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 3.3736977577209473,
+      "usage": {
+        "prompt_tokens": 690,
+        "completion_tokens": 281,
+        "total_tokens": 971,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 198
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 50
+      },
+      "output_dir": "results/query_analysis/run_baseline/temporal-reasoning/0009_gpt4_7abb270c"
+    },
+    {
+      "conv_name": "temporal-reasoning",
+      "index": 14,
+      "question": "When did I book the Airbnb in Sacramento?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 4.557017803192139,
+      "usage": {
+        "prompt_tokens": 684,
+        "completion_tokens": 433,
+        "total_tokens": 1117,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 350
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 44
+      },
+      "output_dir": "results/query_analysis/run_baseline/temporal-reasoning/0014_982b5123_abs"
+    },
+    {
+      "conv_name": "temporal-reasoning",
+      "index": 16,
+      "question": "I received a piece of jewelry last Saturday from whom?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 3.311361789703369,
+      "usage": {
+        "prompt_tokens": 686,
+        "completion_tokens": 310,
+        "total_tokens": 996,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 211
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 46
+      },
+      "output_dir": "results/query_analysis/run_baseline/temporal-reasoning/0016_71017277"
+    },
+    {
+      "conv_name": "temporal-reasoning",
+      "index": 20,
+      "question": "How many days ago did I attend the Maundy Thursday service at the Episcopal Church?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 7.2439844608306885,
+      "usage": {
+        "prompt_tokens": 692,
+        "completion_tokens": 717,
+        "total_tokens": 1409,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 628
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 52
+      },
+      "output_dir": "results/query_analysis/run_baseline/temporal-reasoning/0020_gpt4_b5700ca9"
+    },
+    {
+      "conv_name": "temporal-reasoning",
+      "index": 22,
+      "question": "Which event happened first, my cousin's wedding or Michael's engagement party?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 3.3360745906829834,
+      "usage": {
+        "prompt_tokens": 690,
+        "completion_tokens": 275,
+        "total_tokens": 965,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 185
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 50
+      },
+      "output_dir": "results/query_analysis/run_baseline/temporal-reasoning/0022_gpt4_4929293a"
+    },
+    {
+      "conv_name": "temporal-reasoning",
+      "index": 25,
+      "question": "How long had I been using the new area rug when I rearranged my living room furniture?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 9.6806800365448,
+      "usage": {
+        "prompt_tokens": 694,
+        "completion_tokens": 864,
+        "total_tokens": 1558,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 768
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 54
+      },
+      "output_dir": "results/query_analysis/run_baseline/temporal-reasoning/0025_993da5e2"
+    },
+    {
+      "conv_name": "single-session-user",
+      "index": 5,
+      "question": "What was the discount I got on my first purchase from the new clothing brand?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 3.985478162765503,
+      "usage": {
+        "prompt_tokens": 691,
+        "completion_tokens": 384,
+        "total_tokens": 1075,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 296
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 51
+      },
+      "output_dir": "results/query_analysis/run_baseline/single-session-user/0005_726462e0"
+    },
+    {
+      "conv_name": "single-session-user",
+      "index": 17,
+      "question": "What play did I attend at the local community theater?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 4.586763858795166,
+      "usage": {
+        "prompt_tokens": 686,
+        "completion_tokens": 435,
+        "total_tokens": 1121,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 349
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 46
+      },
+      "output_dir": "results/query_analysis/run_baseline/single-session-user/0017_58bf7951"
+    },
+    {
+      "conv_name": "single-session-user",
+      "index": 23,
+      "question": "What type of rice is my favorite?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 9.667127132415771,
+      "usage": {
+        "prompt_tokens": 683,
+        "completion_tokens": 201,
+        "total_tokens": 884,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 121
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 43
+      },
+      "output_dir": "results/query_analysis/run_baseline/single-session-user/0023_60d45044"
+    },
+    {
+      "conv_name": "single-session-user",
+      "index": 24,
+      "question": "Where did I attend my cousin's wedding?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 2.646212577819824,
+      "usage": {
+        "prompt_tokens": 684,
+        "completion_tokens": 202,
+        "total_tokens": 886,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 123
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 44
+      },
+      "output_dir": "results/query_analysis/run_baseline/single-session-user/0024_d52b4f67"
+    },
+    {
+      "conv_name": "knowledge-update",
+      "index": 6,
+      "question": "How many engineers do I lead when I just started my new role as Software Engineer Manager?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 7.797727346420288,
+      "usage": {
+        "prompt_tokens": 693,
+        "completion_tokens": 705,
+        "total_tokens": 1398,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 608
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 53
+      },
+      "output_dir": "results/query_analysis/run_baseline/knowledge-update/0006_031748ae_abs"
+    },
+    {
+      "conv_name": "knowledge-update",
+      "index": 11,
+      "question": "What was the amount I was pre-approved for when I got my mortgage from Wells Fargo?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 5.1834187507629395,
+      "usage": {
+        "prompt_tokens": 693,
+        "completion_tokens": 434,
+        "total_tokens": 1127,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 340
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 53
+      },
+      "output_dir": "results/query_analysis/run_baseline/knowledge-update/0011_852ce960"
+    },
+    {
+      "conv_name": "knowledge-update",
+      "index": 12,
+      "question": "Where do I currently keep my old sneakers?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 2.658348560333252,
+      "usage": {
+        "prompt_tokens": 685,
+        "completion_tokens": 233,
+        "total_tokens": 918,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 157
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 45
+      },
+      "output_dir": "results/query_analysis/run_baseline/knowledge-update/0012_07741c45"
+    },
+    {
+      "conv_name": "knowledge-update",
+      "index": 15,
+      "question": "What new kitchen gadget did I invest in before getting the Air Fryer?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 9.98593807220459,
+      "usage": {
+        "prompt_tokens": 690,
+        "completion_tokens": 944,
+        "total_tokens": 1634,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 849
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 50
+      },
+      "output_dir": "results/query_analysis/run_baseline/knowledge-update/0015_0977f2af"
+    },
+    {
+      "conv_name": "knowledge-update",
+      "index": 19,
+      "question": "How many times have I worn my new black Converse Chuck Taylor All Star sneakers?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 4.684389114379883,
+      "usage": {
+        "prompt_tokens": 693,
+        "completion_tokens": 298,
+        "total_tokens": 991,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 208
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 53
+      },
+      "output_dir": "results/query_analysis/run_baseline/knowledge-update/0019_618f13b2"
+    },
+    {
+      "conv_name": "single-session-assistant",
+      "index": 8,
+      "question": "In our previous chat, you suggested 'sexual compulsions' and a few other options for alternative terms for certain behaviors. Can you remind me what the other four options were?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 5.2044289112091064,
+      "usage": {
+        "prompt_tokens": 710,
+        "completion_tokens": 434,
+        "total_tokens": 1144,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 332
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 70
+      },
+      "output_dir": "results/query_analysis/run_baseline/single-session-assistant/0008_ceb54acb"
+    },
+    {
+      "conv_name": "single-session-assistant",
+      "index": 27,
+      "question": "I'm going back to our previous conversation about music theory. You mentioned some online resources for learning music theory. Can you remind me of the website you recommended for free lessons and exercises?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 8.144989013671875,
+      "usage": {
+        "prompt_tokens": 712,
+        "completion_tokens": 782,
+        "total_tokens": 1494,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 660
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 72
+      },
+      "output_dir": "results/query_analysis/run_baseline/single-session-assistant/0027_28bcfaac"
+    },
+    {
+      "conv_name": "single-session-assistant",
+      "index": 28,
+      "question": "I'm going back to our previous chat about the Lost Temple of the Djinn one-shot. Can you remind me how many mummies the party will face in the temple?",
+      "ok": true,
+      "error": null,
+      "elapsed_seconds": 5.6128106117248535,
+      "usage": {
+        "prompt_tokens": 710,
+        "completion_tokens": 584,
+        "total_tokens": 1294,
+        "prompt_tokens_details": {
+          "cached_tokens": 640
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 473
+        },
+        "prompt_cache_hit_tokens": 640,
+        "prompt_cache_miss_tokens": 70
+      },
+      "output_dir": "results/query_analysis/run_baseline/single-session-assistant/0028_18dcd5a5"
+    }
+  ]
+}

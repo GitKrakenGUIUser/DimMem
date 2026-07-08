@@ -1,0 +1,32 @@
+{
+  "id": "15c78115-24d9-4a79-8a54-bd9fb55a63eb",
+  "object": "chat.completion",
+  "created": 1783358023,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": [\n    {\n      \"source_id\": 1,\n      \"content\": \"The user has always been fascinated by trains, especially high-speed trains.\",\n      \"dimension\": {\n        \"memory_type\": \"profile\",\n        \"time\": \"\",\n        \"location\": \"\",\n        \"reason\": \"\",\n        \"purpose\": \"\",\n        \"keywords\": [\"trains\", \"high-speed trains\"]\n      }\n    }\n  ]\n}",
+        "reasoning_content": "We need to extract structured memories from the conversation, skipping first 3 messages (overlap). Messages 4-15 are valid. Let's examine each.\n\nMessage 4: \"not of Jordan the country, rather the basketball player.\" This is a clarification about a previous request (message 3). It's a one-off correction, no long-term value. Probably skip.\n\nMessage 5: \"continue\" - meaningless small talk, skip.\n\nMessage 6: \"unique meanings 500 words and give examples that are unique or relatable practical advice about 711 Angel Number Soulmate Meaning\" - This is a specific request for content about angel numbers. It shows user interest in spiritual/numerology topics? Possibly a profile: user interested in angel numbers and soulmate meanings. But it's a single request, not necessarily a long-term profile. However, it could be a fact about what the user asked. But the instruction: extract if it helps understand user's future needs. Could extract as episodic: user asked for meanings and examples about 711 Angel Number Soulmate Meaning. But we need to see if it's trivial. I think it's a specific request, not a long-term profile. But since it's a topic of interest, maybe profile? Let's consider: the user asks for \"unique meanings 500 words\" - that's a request for content generation. Not a stable preference. Might skip.\n\nMessage 7: \"What are the key principles behind the design of high-speed trains, and how do they differ from traditional trains?\" - A factual question about high-speed trains. No long-term value about user.\n\nMessage 8: \"Wow, it's amazing how much goes into designing high-speed trains. Do you think they will ever replace traditional trains completely?\" - More discussion, no extraction.\n\nMessage 9: \"I see, that makes sense. Do you know any countries that have particularly impressive high-speed train systems?\" - Still just conversation.\n\nMessage 10: \"I've always been fascinated by trains, especially high-speed ones. Have you ever ridden on a high-speed train before?\" - This reveals a long-term interest: user has always been fascinated by trains, especially high-speed ones. That is a profile: user is fascinated by trains, especially high-speed trains. Also asks if assistant has ridden - but that's not about user. So we can extract: User has always been fascinated by trains, especially high-speed trains. That's a stable interest/profile.\n\nMessage 11: \"What about pairing with my 年糕?\" - This is likely about food/drinks? \"年糕\" is rice cake. Possibly pairing with wine or something? But context unclear. Might be a casual query, not long-term.\n\nMessage 12: \"How about 髮菜蠔豉燜冬菇?\" - Another Chinese dish. User might be discussing food or menu. Could indicate user is interested in Chinese cuisine? But single mention, not strong.\n\nMessage 13: \"How do the interactions between pH and pollution impact the food chain in Sydney Harbour?\" - Scientific question, no user info.\n\nMessage 14: \"So what can be done to reduce the pollution and prevent these negative impacts on the food chain and ecosystem of Sydney Harbour?\" - Follow-up.\n\nMessage 15: \"Do you think the government and regulatory bodies are doing enough to address pollution in Sydney Harbour?\" - Opinion question.\n\nSo the only clearly extractable memory is from message 10: user's long-term fascination with trains, especially high-speed trains. That is a profile.\n\nAlso, message 6 might be extractable as episodic: user requested explanation about 711 Angel Number Soulmate Meaning with examples and practical advice. But it's a one-time request. However, if we consider it as a fact that the user is interested in angel numbers? But it's a single query, not repeated. Could still be a fact about what the user asked. But the instruction says \"simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.\" This is a one-off task. I'll skip.\n\nMessage 4 is a correction, skip.\n\nThus only one memory: user's fascination with trains.\n\nNow check output format. Need source_id numbering from 4? Actually we need to assign source_id based on the message number? The format shows source_id: 1, but we can assign sequential numbers. Better to use the message number? The instruction says \"source_id\" but no specific rule. I'll use sequential numbers starting from 1 for the extracted memories. Since only one memory, source_id 1.\n\nContent: self-contained sentence: \"The user has always been fascinated by trains, especially high-speed trains.\"\n\nDimension: memory_type: profile (long-term interest). time: \"\" because no specific time, just general. location: \"\". reason: \"\" (not stated). purpose: \"\". keywords: [\"trains\", \"high-speed trains\", \"fascination\"]? But keywords should be short words or noun phrases. \"trains\", \"high-speed trains\". \"fascination\" is not a noun phrase? Could use \"fascination with trains\". But better to use \"trains\", \"high-speed trains\". Also \"user\" is not needed. So keywords: [\"trains\", \"high-speed trains\"]. Also \"fascinated\" is implied.\n\nBut let's see if we need to include \"always\" - that indicates long-term, but not a keyword.\n\nThus output JSON.\n\nAlso check if there is any overlapping context: first 3 messages are overlap, so we skip them. Message 4 onward we consider. Good.\n\nNow produce JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1870,
+    "completion_tokens": 1250,
+    "total_tokens": 3120,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1158
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 718
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

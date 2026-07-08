@@ -1,0 +1,862 @@
+[
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "profile",
+    "content": "The user is interested in learning music theory, has been intimidated by it, and wants to improve their playing.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to take their playing to the next level",
+      "purpose": "to learn music theory",
+      "keywords": [
+        "music theory",
+        "learning",
+        "playing improvement"
+      ]
+    },
+    "entities": [
+      "music theory",
+      "learning",
+      "playing improvement"
+    ],
+    "embedding_text": "The user is interested in learning music theory, has been intimidated by it, and wants to improve their playing.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0008",
+    "source_time": "2023-05-20 08:21:00.500000",
+    "record_time": "2026-07-07T19:50:58.270270",
+    "score": 19.920047671866005,
+    "score_components": {
+      "bm25_score": 19.920047671866005,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 19.920047671866005,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 19.920047671866005
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.7291194547755725
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user plans to learn music theory using MusicTheory.net and YouTube channels to improve their playing.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "",
+      "purpose": "improve playing",
+      "keywords": [
+        "music theory",
+        "MusicTheory.net",
+        "YouTube",
+        "learning plan"
+      ]
+    },
+    "entities": [
+      "music theory",
+      "MusicTheory.net",
+      "YouTube",
+      "learning plan"
+    ],
+    "embedding_text": "The user plans to learn music theory using MusicTheory.net and YouTube channels to improve their playing.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0010",
+    "source_time": "2023-05-20 08:21:02.500000",
+    "record_time": "2026-07-07T19:50:58.270283",
+    "score": 15.252801322876588,
+    "score_components": {
+      "bm25_score": 15.252801322876588,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 15.252801322876588,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 15.252801322876588
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.4833333333333334
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.6694629414178447
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "profile",
+    "content": "The user is considering enrolling in an online Master of Science program and is concerned about the level of faculty interaction, support, and workload.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "online Master of Science program",
+        "faculty interaction",
+        "workload"
+      ]
+    },
+    "entities": [
+      "online Master of Science program",
+      "faculty interaction",
+      "workload"
+    ],
+    "embedding_text": "The user is considering enrolling in an online Master of Science program and is concerned about the level of faculty interaction, support, and workload.",
+    "source_message_ids": [
+      "19"
+    ],
+    "source_boundary_id": "19_0170",
+    "source_time": "2023-05-29 00:04:00",
+    "record_time": "2026-07-07T19:50:58.271307",
+    "score": 12.458109946614556,
+    "score_components": {
+      "bm25_score": 12.458109946614556,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 12.458109946614556,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 12.458109946614556
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "User agreed to try a screen-free dinner and wind-down routine, but expressed concern about limiting Netflix time as it is used for unwinding.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to reduce screen time",
+      "purpose": "to balance relaxation and screen reduction",
+      "keywords": [
+        "screen-free dinner",
+        "wind-down routine",
+        "Netflix",
+        "relaxation",
+        "screen time reduction"
+      ]
+    },
+    "entities": [
+      "screen-free dinner",
+      "wind-down routine",
+      "Netflix",
+      "relaxation",
+      "screen time reduction"
+    ],
+    "embedding_text": "User agreed to try a screen-free dinner and wind-down routine, but expressed concern about limiting Netflix time as it is used for unwinding.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0047",
+    "source_time": "2023-05-23 01:16:01",
+    "record_time": "2026-07-07T19:50:58.270514",
+    "score": 11.16658539311152,
+    "score_components": {
+      "bm25_score": 11.16658539311152,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 11.16658539311152,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 11.16658539311152
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.37500000000000006
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "profile",
+    "content": "The user is frustrated about the spread of fake news on social media and thinks there should be stricter regulations on what can be posted.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "fake news",
+        "social media regulation",
+        "frustration"
+      ]
+    },
+    "entities": [
+      "fake news",
+      "social media regulation",
+      "frustration"
+    ],
+    "embedding_text": "The user is frustrated about the spread of fake news on social media and thinks there should be stricter regulations on what can be posted.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0084",
+    "source_time": "2023-05-25 03:50:03",
+    "record_time": "2026-07-07T19:50:58.270815",
+    "score": 11.031803594719836,
+    "score_components": {
+      "bm25_score": 11.031803594719836,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 11.031803594719836,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 11.031803594719836
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "User was nervous before their first dance class because they had never taken a dance class before.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "no previous dance experience",
+      "purpose": "",
+      "keywords": [
+        "nervous",
+        "first dance class",
+        "no previous experience"
+      ]
+    },
+    "entities": [
+      "nervous",
+      "first dance class",
+      "no previous experience"
+    ],
+    "embedding_text": "User was nervous before their first dance class because they had never taken a dance class before.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0139",
+    "source_time": "2023-05-26 10:56:02.500000",
+    "record_time": "2026-07-07T19:50:58.271129",
+    "score": 10.129928150010821,
+    "score_components": {
+      "bm25_score": 10.129928150010821,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 10.129928150010821,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 10.129928150010821
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "profile",
+    "content": "The user is interested in learning about shorebird migration patterns and habitats.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "shorebird migration",
+        "habitats"
+      ]
+    },
+    "entities": [
+      "shorebird migration",
+      "habitats"
+    ],
+    "embedding_text": "The user is interested in learning about shorebird migration patterns and habitats.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0121",
+    "source_time": "2023-05-26 08:13:01.500000",
+    "record_time": "2026-07-07T19:50:58.271028",
+    "score": 9.421428845660634,
+    "score_components": {
+      "bm25_score": 9.421428845660634,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 9.421428845660634,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 9.421428845660634
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user sold their old leather jacket online for a good price.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "leather jacket",
+        "online sale",
+        "decluttering"
+      ]
+    },
+    "entities": [
+      "leather jacket",
+      "online sale",
+      "decluttering"
+    ],
+    "embedding_text": "The user sold their old leather jacket online for a good price.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0156",
+    "source_time": "2023-05-27 13:22:01.500000",
+    "record_time": "2026-07-07T19:50:58.271226",
+    "score": 9.148006093551324,
+    "score_components": {
+      "bm25_score": 9.148006093551324,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 9.148006093551324,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 9.148006093551324
+      },
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.37500000000000006
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user asked about how the music scene in Nashville, Tennessee has changed over the past decade.",
+    "dimension": {
+      "time": "2023-05-26T04:32:00",
+      "location": "Nashville, Tennessee",
+      "reason": "",
+      "purpose": "to learn about Nashville music scene evolution",
+      "keywords": [
+        "Nashville music scene",
+        "change over decade"
+      ]
+    },
+    "entities": [
+      "Nashville music scene",
+      "change over decade"
+    ],
+    "embedding_text": "The user asked about how the music scene in Nashville, Tennessee has changed over the past decade.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0101",
+    "source_time": "2023-05-26 04:32:00",
+    "record_time": "2026-07-07T19:50:58.270914",
+    "score": 9.044120125718464,
+    "score_components": {
+      "bm25_score": 9.044120125718464,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 9.044120125718464,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 9.044120125718464
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.37500000000000006
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.43530795102499964
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "User is attempting to get back on track with their bedtime routine after a week of staying up until 1 am due to work projects.",
+    "dimension": {
+      "time": "2023-05-23",
+      "location": "",
+      "reason": "to recover from exception week",
+      "purpose": "to resume normal routine",
+      "keywords": [
+        "bedtime routine",
+        "late nights",
+        "work projects",
+        "get back on track"
+      ]
+    },
+    "entities": [
+      "bedtime routine",
+      "late nights",
+      "work projects",
+      "get back on track"
+    ],
+    "embedding_text": "User is attempting to get back on track with their bedtime routine after a week of staying up until 1 am due to work projects.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0048",
+    "source_time": "2023-05-23 01:16:02",
+    "record_time": "2026-07-07T19:50:58.270520",
+    "score": 8.75694316449659,
+    "score_components": {
+      "bm25_score": 8.75694316449659,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 8.75694316449659,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 8.75694316449659
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user is interested in learning more about the City Theater Academy and the Performing Arts Conservatory.",
+    "dimension": {
+      "time": "2023-05-23",
+      "location": "",
+      "reason": "",
+      "purpose": "gather information about theater programs",
+      "keywords": [
+        "City Theater Academy",
+        "Performing Arts Conservatory"
+      ]
+    },
+    "entities": [
+      "City Theater Academy",
+      "Performing Arts Conservatory"
+    ],
+    "embedding_text": "The user is interested in learning more about the City Theater Academy and the Performing Arts Conservatory.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0054",
+    "source_time": "2023-05-23 13:37:01.500000",
+    "record_time": "2026-07-07T19:50:58.270555",
+    "score": 8.571174213963058,
+    "score_components": {
+      "bm25_score": 8.571174213963058,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 8.571174213963058,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 8.571174213963058
+      },
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.3158127940153714
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user is interested in the City Theater Academy's Certificate Program and wants to know about the application process and audition requirements.",
+    "dimension": {
+      "time": "2023-05-23",
+      "location": "",
+      "reason": "",
+      "purpose": "learn about application and audition",
+      "keywords": [
+        "City Theater Academy Certificate Program",
+        "application",
+        "audition"
+      ]
+    },
+    "entities": [
+      "City Theater Academy Certificate Program",
+      "application",
+      "audition"
+    ],
+    "embedding_text": "The user is interested in the City Theater Academy's Certificate Program and wants to know about the application process and audition requirements.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0055",
+    "source_time": "2023-05-23 13:37:02",
+    "record_time": "2026-07-07T19:50:58.270561",
+    "score": 8.405252599982953,
+    "score_components": {
+      "bm25_score": 8.405252599982953,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 8.405252599982953,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 8.405252599982953
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user plans to read a variety of newspapers to be critical of news.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to know impartiality",
+      "purpose": "critical reading",
+      "keywords": [
+        "diverse news sources",
+        "critical reading",
+        "newspapers"
+      ]
+    },
+    "entities": [
+      "diverse news sources",
+      "critical reading",
+      "newspapers"
+    ],
+    "embedding_text": "The user plans to read a variety of newspapers to be critical of news.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0083",
+    "source_time": "2023-05-25 03:50:02.500000",
+    "record_time": "2026-07-07T19:50:58.270809",
+    "score": 8.1963137963981,
+    "score_components": {
+      "bm25_score": 8.1963137963981,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 8.1963137963981,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 8.1963137963981
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "profile",
+    "content": "User reads literary fiction and wants to discover more authors in that genre.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to discover more authors",
+      "keywords": [
+        "literary fiction",
+        "reading",
+        "authors"
+      ]
+    },
+    "entities": [
+      "literary fiction",
+      "reading",
+      "authors"
+    ],
+    "embedding_text": "User reads literary fiction and wants to discover more authors in that genre.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0166",
+    "source_time": "2023-05-28 10:37:00",
+    "record_time": "2026-07-07T19:50:58.271283",
+    "score": 8.067378280062991,
+    "score_components": {
+      "bm25_score": 8.067378280062991,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 8.067378280062991,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 8.067378280062991
+      },
+      {
+        "method": "minilm",
+        "rank": 20,
+        "score": 0.2997167216293689
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user plans to continue watching Servant to find out what is going on with Leanne.",
+    "dimension": {
+      "time": "2023-05-21",
+      "location": "",
+      "reason": "to figure out what is going on with Leanne",
+      "purpose": "to understand Leanne's character",
+      "keywords": [
+        "Servant",
+        "Leanne"
+      ]
+    },
+    "entities": [
+      "Servant",
+      "Leanne"
+    ],
+    "embedding_text": "The user plans to continue watching Servant to find out what is going on with Leanne.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0025",
+    "source_time": "2023-05-21 19:08:01",
+    "record_time": "2026-07-07T19:50:58.270386",
+    "score": 7.862928829679998,
+    "score_components": {
+      "bm25_score": 7.862928829679998,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 7.862928829679998,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 7.862928829679998
+      },
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.33333333333333337
+      }
+    ]
+  }
+]

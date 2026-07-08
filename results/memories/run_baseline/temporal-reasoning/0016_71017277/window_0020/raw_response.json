@@ -1,0 +1,32 @@
+{
+  "id": "e50a7f5c-99e2-4936-9892-bfbabd9bff27",
+  "object": "chat.completion",
+  "created": 1783359707,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": [\n    {\n      \"source_id\": 4,\n      \"content\": \"User decides to make matching wooden coasters for a rocking chair using leftover wood scraps from their craft room to declutter and have a fun creative challenge.\",\n      \"dimension\": {\n        \"memory_type\": \"episodic\",\n        \"time\": \"\",\n        \"location\": \"craft room\",\n        \"reason\": \"to declutter and have a fun challenge\",\n        \"purpose\": \"make matching coasters for rocking chair\",\n        \"keywords\": [\"leftover wood scraps\", \"wooden coasters\", \"rocking chair\", \"craft room\", \"declutter\"]\n      }\n    },\n    {\n      \"source_id\": 5,\n      \"content\": \"User is considering using wire-wrapped jewelry-making tools to create decorative accents for the wooden coasters.\",\n      \"dimension\": {\n        \"memory_type\": \"episodic\",\n        \"time\": \"\",\n        \"location\": \"\",\n        \"reason\": \"\",\n        \"purpose\": \"decorative accents for coasters\",\n        \"keywords\": [\"wire-wrapped jewelry-making tools\", \"decorative accents\", \"coasters\"]\n      }\n    }\n  ]\n}",
+        "reasoning_content": "We need to extract memories from messages 4 and 5 (since 1-3 are overlapping context). Message 4: User decides to use leftover wood scraps from craft room for coasters, reasoning: declutter and fun challenge. Message 5: User thinking of using wire-wrapped jewelry-making tools for decorative accents on coasters. Extract as episodic (decision/plan). Also note user's preference for using scraps (profile?) but it's a specific decision. Better to keep as episodic. Possibly also profile: user likes repurposing/decluttering? But not strong enough. Let's output two memories.\n\nMemory1: source_id 4, content: User decides to make matching wooden coasters for a rocking chair using leftover wood scraps from their craft room to declutter and have a fun creative challenge. dimension: memory_type episodic, time \"\" (no specific time given, just decision), location \"craft room\", reason \"to declutter and have a fun challenge\", purpose \"make matching coasters for rocking chair\", keywords [\"leftover wood scraps\", \"wooden coasters\", \"rocking chair\", \"craft room\", \"declutter\"].\n\nMemory2: source_id 5, content: User is considering using wire-wrapped jewelry-making tools to create decorative accents for the wooden coasters. dimension: memory_type episodic, time \"\", location \"\", reason \"\", purpose \"decorative accents for coasters\", keywords [\"wire-wrapped jewelry-making tools\", \"decorative accents\", \"coasters\"].\n\nCheck if any profile: user likes repurposing? But one event doesn't make profile. So okay.\n\nOutput JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1614,
+    "completion_tokens": 584,
+    "total_tokens": 2198,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 332
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 462
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

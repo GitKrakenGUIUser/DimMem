@@ -1,0 +1,135 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-23T03:25:01, Tue] 1.User: What should I look for in databases to find the relevant articles, tell me what to write in the search bar.
+[2023-05-23T07:20:00, Tue] 2.User: I'm planning to start training for a marathon and I'm looking for some advice on how to create a training plan. By the way, I just volunteered at a local food bank's fundraising gala last week, where I helped serve food and drinks to attendees, and the event raised over $50,000 for the food bank. Do you have any templates or resources that can help me create a structured training plan?
+[2023-05-23T07:20:00.500000, Tue] 3.User: I've heard that nutrition plays a big role in marathon training. Can you recommend some healthy meal ideas or snacks that can help with my energy levels during training?
+[2023-05-23T07:20:01, Tue] 4.User: That's really helpful, thank you! I'll definitely try to incorporate some of these meal and snack ideas into my training. By the way, I was thinking about my volunteering experience at the food bank's fundraising gala, and it made me realize how important it is to support our local community. Do you have any information on how I can find more volunteer opportunities in my area?
+[2023-05-23T07:20:01.500000, Tue] 5.User: That's really helpful, thank you! I'll definitely check out those resources. By the way, speaking of giving back to the community, I was thinking about my charity run for cancer research last month, where I managed to complete the 5K course in 32 minutes, beating my personal best time by 5 minutes.
+[2023-05-23T07:20:02, Tue] 6.User: It was a fantastic experience! It was actually my first charity run, and I was a bit nervous at first, but the atmosphere was so energetic and supportive that it really motivated me to push myself. Plus, knowing that I was running for a good cause made it even more meaningful.
+
+I've been thinking about doing more charity runs and events in the future, actually. Do you have any recommendations for finding charity runs or events in my area?
+[2023-05-23T07:20:02.500000, Tue] 7.User: I'm excited to start searching for more charity runs and events in my area. Thanks for the helpful tips! By the way, I've been thinking about my experience volunteering at the food bank's fundraising gala, and it reminded me of the importance of giving back to the community. Do you have any advice on how to stay motivated and engaged in volunteering and charity work over time?
+[2023-05-23T19:41:00, Tue] 8.User: I'm looking for some advice on how to style my new ankle boots. I just got them at H&M and I'm not sure what to wear them with. By the way, I tried on a pair of UGG boots at Nordstrom Rack today, but they didn't quite fit right. Do you have any suggestions for me?
+[2023-05-23T19:41:00.500000, Tue] 9.User: They're ankle boots with a block heel, black in color, and made of suede. I'd say my personal style is a mix of casual and trendy, and I usually dress according to my mood. I've been wearing them with my distressed denim jeans from H&M, but I want to try pairing them with a dress or a skirt. Do you have any suggestions for that?
+[2023-05-23T19:41:01, Tue] 10.User: I like the idea of pairing my boots with a flowy dress, especially the floral one. Do you think I could also wear these boots with a flowy sundress I got from ASOS? It's a really light color and I'm worried it might not go well with the black boots.
+[2023-05-23T19:41:01.500000, Tue] 11.User: I think I'll try pairing the boots with the flowy sundress and add a denim jacket to layer over it. I also have a floppy hat that might add a nice touch to the outfit. Do you have any suggestions for makeup and hair to complete the look?
+[2023-05-23T19:41:02, Tue] 12.User: I'm excited to try out this look. I think I'll also add a belt to my dress to define my waist and create a more feminine silhouette. Do you have any suggestions for belts that would work well with this outfit?
+[2023-05-23T19:41:02.500000, Tue] 13.User: I think I'll go with a brown leather belt with a simple buckle. It'll add a nice touch of rustic charm to my outfit. Thanks for the advice! By the way, I've been meaning to check out the new Sephora store that just opened up in the mall. Have you heard anything about it?
+[2023-05-24T08:29:00, Wed] 14.User: I'm feeling a bit lonely lately and I was thinking of trying to meet new people. Do you have any suggestions on how to do that? By the way, it's been tough since my best friend moved to a new city for work a few weeks ago, and we're not hanging out as much anymore.
+[2023-05-24T08:29:00.500000, Wed] 15.User: I think I'll try joining a club or group that aligns with my interests. I've been wanting to try out a new hiking trail near my house, but I've been putting it off because I don't have anyone to go with.

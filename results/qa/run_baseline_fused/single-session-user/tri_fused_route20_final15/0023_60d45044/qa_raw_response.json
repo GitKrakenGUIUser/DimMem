@@ -1,0 +1,32 @@
+{
+  "id": "718a9df9-aa03-4d39-a684-ebed99311882",
+  "object": "chat.completion",
+  "created": 1783427979,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: Memory [1] explicitly states that the user's favorite rice is Japanese short-grain rice. This fact is clear, directly relevant, and has no conflicting records regarding rice preference.\n\nAnswer: Japanese short-grain rice.",
+        "reasoning_content": "We need to answer: \"What type of rice is my favorite?\" based on retrieved memories. The question timestamp is 2023-05-30. Memory [1] explicitly states \"The user's favorite rice is Japanese short-grain rice.\" That's directly relevant, no conflicts. So final answer is Japanese short-grain rice."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1141,
+    "completion_tokens": 116,
+    "total_tokens": 1257,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 68
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 885
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

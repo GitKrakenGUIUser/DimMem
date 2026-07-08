@@ -1,0 +1,899 @@
+[
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user attended a Maundy Thursday service at an Episcopal Church on April 6, 2023.",
+    "dimension": {
+      "time": "2023-04-06",
+      "location": "Episcopal Church",
+      "reason": "",
+      "purpose": "religious observance",
+      "keywords": [
+        "Maundy Thursday",
+        "Episcopal Church",
+        "religious service"
+      ]
+    },
+    "entities": [
+      "Maundy Thursday",
+      "Episcopal Church",
+      "religious service"
+    ],
+    "embedding_text": "The user attended a Maundy Thursday service at an Episcopal Church on April 6, 2023.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0093",
+    "source_time": "2023-04-06 22:22:01.500000",
+    "record_time": "2026-07-07T19:51:01.625080",
+    "score": 32.78776080142875,
+    "score_components": {
+      "bm25_score": 32.78776080142875,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 32.78776080142875,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 32.78776080142875
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 1.0
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.8514925693224918
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "On March 29, 2023, the user attended an Easter Sunday service at their local church, where a sermon on renewal and forgiveness inspired reflection on their values and priorities.",
+    "dimension": {
+      "time": "2023-03-29",
+      "location": "local church",
+      "reason": "Easter Sunday service and sermon on renewal and forgiveness",
+      "purpose": "to attend church and reflect",
+      "keywords": [
+        "Easter",
+        "church",
+        "sermon",
+        "renewal",
+        "forgiveness",
+        "reflection"
+      ]
+    },
+    "entities": [
+      "Easter",
+      "church",
+      "sermon",
+      "renewal",
+      "forgiveness",
+      "reflection"
+    ],
+    "embedding_text": "On March 29, 2023, the user attended an Easter Sunday service at their local church, where a sermon on renewal and forgiveness inspired reflection on their values and priorities.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0055",
+    "source_time": "2023-03-24 21:33:02",
+    "record_time": "2026-07-07T19:51:01.624852",
+    "score": 13.558345305716749,
+    "score_components": {
+      "bm25_score": 13.558345305716749,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 13.558345305716749,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 13.558345305716749
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.46666666666666673
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.44693328943206395
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "User plans to start a workout routine at 2-3 days per week.",
+    "dimension": {
+      "time": "2023-04-06",
+      "location": "",
+      "reason": "",
+      "purpose": "to build a consistent exercise habit",
+      "keywords": [
+        "workout frequency",
+        "2-3 days per week",
+        "exercise plan"
+      ]
+    },
+    "entities": [
+      "workout frequency",
+      "2-3 days per week",
+      "exercise plan"
+    ],
+    "embedding_text": "User plans to start a workout routine at 2-3 days per week.",
+    "source_message_ids": [
+      "19"
+    ],
+    "source_boundary_id": "19_0185",
+    "source_time": "2023-04-06 04:29:00.500000",
+    "record_time": "2026-07-07T19:51:01.625642",
+    "score": 8.859601069833092,
+    "score_components": {
+      "bm25_score": 8.859601069833092,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 8.859601069833092,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 8.859601069833092
+      },
+      {
+        "method": "minilm",
+        "rank": 20,
+        "score": 0.24078351461353678
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user planned to invite friends from their church to volunteer at the food bank.",
+    "dimension": {
+      "time": "2023-04-06",
+      "location": "church and food bank",
+      "reason": "to volunteer together",
+      "purpose": "group volunteering",
+      "keywords": [
+        "church",
+        "friends",
+        "food bank",
+        "group volunteer"
+      ]
+    },
+    "entities": [
+      "church",
+      "friends",
+      "food bank",
+      "group volunteer"
+    ],
+    "embedding_text": "The user planned to invite friends from their church to volunteer at the food bank.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0095",
+    "source_time": "2023-04-06 22:22:02",
+    "record_time": "2026-07-07T19:51:01.625092",
+    "score": 7.519956801583945,
+    "score_components": {
+      "bm25_score": 7.519956801583945,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 7.519956801583945,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 7.519956801583945
+      },
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.4
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.35744715889247103
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user volunteered at an Easter Egg Hunt event in late March or early April 2023.",
+    "dimension": {
+      "time": "2023-03-30 to 2023-04-05",
+      "location": "",
+      "reason": "",
+      "purpose": "community service",
+      "keywords": [
+        "Easter Egg Hunt",
+        "volunteer"
+      ]
+    },
+    "entities": [
+      "Easter Egg Hunt",
+      "volunteer"
+    ],
+    "embedding_text": "The user volunteered at an Easter Egg Hunt event in late March or early April 2023.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0090",
+    "source_time": "2023-04-06 22:22:00",
+    "record_time": "2026-07-07T19:51:01.625063",
+    "score": 6.337774872113953,
+    "score_components": {
+      "bm25_score": 6.337774872113953,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 6.337774872113953,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 6.337774872113953
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.4
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.4104742064092963
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "fact",
+    "content": "The user attends a local church.",
+    "dimension": {
+      "time": "",
+      "location": "local church",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "local church",
+        "attendance"
+      ]
+    },
+    "entities": [
+      "local church",
+      "attendance"
+    ],
+    "embedding_text": "The user attends a local church.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0056",
+    "source_time": "2023-03-24 21:33:02.500000",
+    "record_time": "2026-07-07T19:51:01.624858",
+    "score": 6.323211225414933,
+    "score_components": {
+      "bm25_score": 6.323211225414933,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 6.323211225414933,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 6.323211225414933
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.38827859707999834
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "fact",
+    "content": "The user's church group is interested in adopting a specific project at the food bank, such as organizing a food drive or helping with a special event.",
+    "dimension": {
+      "time": "2023-04-06",
+      "location": "food bank",
+      "reason": "to make a significant impact",
+      "purpose": "to contribute to food bank's mission",
+      "keywords": [
+        "church group",
+        "food bank",
+        "food drive",
+        "special event",
+        "adopt project"
+      ]
+    },
+    "entities": [
+      "church group",
+      "food bank",
+      "food drive",
+      "special event",
+      "adopt project"
+    ],
+    "embedding_text": "The user's church group is interested in adopting a specific project at the food bank, such as organizing a food drive or helping with a special event.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0096",
+    "source_time": "2023-04-06 22:22:02.500000",
+    "record_time": "2026-07-07T19:51:01.625098",
+    "score": 5.791505358009296,
+    "score_components": {
+      "bm25_score": 5.791505358009296,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 5.791505358009296,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 5.791505358009296
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user plans to attend a costume party and dress as Roxie Hart or Velma Kelly from the musical Chicago, inspired by flapper-inspired looks and sassy attitude.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "inspired by the musical Chicago",
+      "purpose": "to attend a costume party",
+      "keywords": [
+        "costume party",
+        "Chicago",
+        "Roxie Hart",
+        "Velma Kelly",
+        "flapper"
+      ]
+    },
+    "entities": [
+      "costume party",
+      "Chicago",
+      "Roxie Hart",
+      "Velma Kelly",
+      "flapper"
+    ],
+    "embedding_text": "The user plans to attend a costume party and dress as Roxie Hart or Velma Kelly from the musical Chicago, inspired by flapper-inspired looks and sassy attitude.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0053",
+    "source_time": "2023-03-24 21:33:01",
+    "record_time": "2026-07-07T19:51:01.624840",
+    "score": 5.167449214798248,
+    "score_components": {
+      "bm25_score": 5.167449214798248,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 5.167449214798248,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 5.167449214798248
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "fact",
+    "content": "User has a sleep schedule on Tuesdays and Thursdays: wakes up at 6:30 AM and goes to bed by 10:30 PM the previous night.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to establish a consistent sleep schedule",
+      "purpose": "improve sleep quality",
+      "keywords": [
+        "sleep schedule",
+        "Tuesday",
+        "Thursday",
+        "wake up 6:30 AM",
+        "bedtime 10:30 PM"
+      ]
+    },
+    "entities": [
+      "sleep schedule",
+      "Tuesday",
+      "Thursday",
+      "wake up 6:30 AM",
+      "bedtime 10:30 PM"
+    ],
+    "embedding_text": "User has a sleep schedule on Tuesdays and Thursdays: wakes up at 6:30 AM and goes to bed by 10:30 PM the previous night.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0077",
+    "source_time": "2023-03-31 19:02:00.500000",
+    "record_time": "2026-07-07T19:51:01.624984",
+    "score": 5.095181366149119,
+    "score_components": {
+      "bm25_score": 5.095181366149119,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 5.095181366149119,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 5.095181366149119
+      },
+      {
+        "method": "minilm",
+        "rank": 10,
+        "score": 0.28270878270428756
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "profile",
+    "content": "The user prefers volunteer opportunities related to community service or helping the underprivileged, is available on weekday evenings, and is open to a regular volunteer schedule.",
+    "dimension": {
+      "time": "",
+      "location": "local community",
+      "reason": "",
+      "purpose": "to volunteer",
+      "keywords": [
+        "community service",
+        "underprivileged",
+        "weekday evenings",
+        "regular schedule"
+      ]
+    },
+    "entities": [
+      "community service",
+      "underprivileged",
+      "weekday evenings",
+      "regular schedule"
+    ],
+    "embedding_text": "The user prefers volunteer opportunities related to community service or helping the underprivileged, is available on weekday evenings, and is open to a regular volunteer schedule.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0092",
+    "source_time": "2023-04-06 22:22:00.500000",
+    "record_time": "2026-07-07T19:51:01.625074",
+    "score": 4.508557693847925,
+    "score_components": {
+      "bm25_score": 4.508557693847925,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 4.508557693847925,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 4.508557693847925
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user has seen West Side Story and Les Misérables, and watched Hamilton on Disney+ about a month ago; they are still obsessed with the Hamilton soundtrack.",
+    "dimension": {
+      "time": "2023-02",
+      "location": "Disney+",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "West Side Story",
+        "Les Misérables",
+        "Hamilton",
+        "Disney+",
+        "soundtrack",
+        "obsession"
+      ]
+    },
+    "entities": [
+      "West Side Story",
+      "Les Misérables",
+      "Hamilton",
+      "Disney+",
+      "soundtrack",
+      "obsession"
+    ],
+    "embedding_text": "The user has seen West Side Story and Les Misérables, and watched Hamilton on Disney+ about a month ago; they are still obsessed with the Hamilton soundtrack.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0046",
+    "source_time": "2023-03-24 21:33:00.500000",
+    "record_time": "2026-07-07T19:51:01.624799",
+    "score": 4.300057009648822,
+    "score_components": {
+      "bm25_score": 4.300057009648822,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 4.300057009648822,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 4.300057009648822
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "profile",
+    "content": "The user is interested in volunteering to give back to the community.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "volunteer",
+        "community service",
+        "giving back"
+      ]
+    },
+    "entities": [
+      "volunteer",
+      "community service",
+      "giving back"
+    ],
+    "embedding_text": "The user is interested in volunteering to give back to the community.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0091",
+    "source_time": "2023-04-06 22:22:00",
+    "record_time": "2026-07-07T19:51:01.625068",
+    "score": 4.256627273329375,
+    "score_components": {
+      "bm25_score": 4.256627273329375,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 4.256627273329375,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 4.256627273329375
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user plans to order fabric swatches from West Elm and Crate and Barrel.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to see how they match the new sofa bed",
+      "keywords": [
+        "fabric swatches",
+        "West Elm",
+        "Crate and Barrel"
+      ]
+    },
+    "entities": [
+      "fabric swatches",
+      "West Elm",
+      "Crate and Barrel"
+    ],
+    "embedding_text": "The user plans to order fabric swatches from West Elm and Crate and Barrel.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0173",
+    "source_time": "2023-04-06 16:54:01",
+    "record_time": "2026-07-07T19:51:01.625542",
+    "score": 4.018791622484034,
+    "score_components": {
+      "bm25_score": 4.018791622484034,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 4.018791622484034,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 4.018791622484034
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "profile",
+    "content": "The user plans to set aside every Sunday morning to review transactions and update their expense spreadsheet, and intends to use an automated expense tracking service and browser extension.",
+    "dimension": {
+      "time": "Sunday morning",
+      "location": "",
+      "reason": "to ensure accuracy before the new week begins",
+      "purpose": "to keep track of purchases",
+      "keywords": [
+        "Sunday morning",
+        "transaction review",
+        "spreadsheet",
+        "expense tracking",
+        "browser extension",
+        "automated service"
+      ]
+    },
+    "entities": [
+      "Sunday morning",
+      "transaction review",
+      "spreadsheet",
+      "expense tracking",
+      "browser extension",
+      "automated service"
+    ],
+    "embedding_text": "The user plans to set aside every Sunday morning to review transactions and update their expense spreadsheet, and intends to use an automated expense tracking service and browser extension.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0044",
+    "source_time": "2023-03-24 10:26:02.500000",
+    "record_time": "2026-07-07T19:51:01.624786",
+    "score": 3.820584086470225,
+    "score_components": {
+      "bm25_score": 3.820584086470225,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 3.820584086470225,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 3.820584086470225
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "profile",
+    "content": "The user expresses interest in architecture as a reflection of society's values and traditions, and is curious about how modern architecture evolves with changing societal norms.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "architecture",
+        "societal values",
+        "modern architecture",
+        "cultural reflection"
+      ]
+    },
+    "entities": [
+      "architecture",
+      "societal values",
+      "modern architecture",
+      "cultural reflection"
+    ],
+    "embedding_text": "The user expresses interest in architecture as a reflection of society's values and traditions, and is curious about how modern architecture evolves with changing societal norms.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0180",
+    "source_time": "2023-04-06 17:18:01",
+    "record_time": "2026-07-07T19:51:01.625583",
+    "score": 3.734589580738869,
+    "score_components": {
+      "bm25_score": 3.734589580738869,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 3.734589580738869,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 3.734589580738869
+      }
+    ]
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "query_text": "the number of bikes the user serviced or planned to service in March 2023",
+  "query_anchor": "the number of bikes the user serviced or planned to service in March 2023",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "between 2023/03/01 and 2023/03/31",
+    "location": "",
+    "keywords": [
+      "bikes",
+      "service",
+      "plan"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "the number of bikes the user serviced or planned to service in March 2023",
+      "keywords": [
+        "bikes",
+        "service",
+        "plan"
+      ],
+      "query_terms": [
+        "the",
+        "number",
+        "of",
+        "bikes",
+        "user",
+        "serviced",
+        "or",
+        "planned",
+        "to",
+        "service",
+        "in",
+        "march",
+        "2023",
+        "plan"
+      ]
+    },
+    "structured": {
+      "query_text": "the number of bikes the user serviced or planned to service in March 2023",
+      "rewrite": "the number of bikes the user serviced or planned to service in March 2023",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "the number of bikes the user serviced or planned to service in March 2023",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {
+        "time": [
+          "between 2023/03/01 and 2023/03/31"
+        ]
+      },
+      "keywords": [
+        "bikes",
+        "service",
+        "plan"
+      ],
+      "canonical_text": "the number of bikes the user serviced or planned to service in March 2023"
+    },
+    "minilm": {
+      "query_text": "the number of bikes the user serviced or planned to service in March 2023"
+    }
+  }
+}

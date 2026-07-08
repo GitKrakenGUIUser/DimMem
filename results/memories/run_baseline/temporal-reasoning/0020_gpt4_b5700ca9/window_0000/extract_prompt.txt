@@ -1,0 +1,127 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+
+
+Here is the real input you need to process:
+
+[2023-03-08T02:56:00, Wed] 1.User: I'm having some issues with my Fitbit Charge 3, can you help me troubleshoot why it's not syncing with my phone?
+[2023-03-08T02:56:00.500000, Wed] 2.User: My digital thermometer has been acting up lately, showing inconsistent readings. Do you think it's a battery issue or something else?
+[2023-03-08T02:56:01, Wed] 3.User: I've been using my blood pressure monitor to track my readings, and I've noticed my systolic pressure has been a bit high lately. Can you give me some general tips on how to lower it through diet and exercise?
+[2023-03-08T02:56:01.500000, Wed] 4.User: I've been taking my omega-3 supplements daily, and I've noticed an improvement in my skin and hair. Can you tell me more about the benefits of omega-3s and how they work?
+[2023-03-08T02:56:02, Wed] 5.User: I'm thinking of getting a new yoga mat since my current one is getting a bit worn out. Do you have any recommendations for a good yoga mat that can provide good grip and support?
+[2023-03-08T02:56:02.500000, Wed] 6.User: I'm thinking of getting an air purifier for my home, especially since I have allergies and my current air purifier is old. Can you recommend some good air purifiers that can help with allergies?
+[2023-03-09T03:13:00, Thu] 7.User: How do animals communicate with each other?
+[2023-03-09T03:13:00.500000, Thu] 8.User: Do animals use the same communication methods across all species or do they vary?
+[2023-03-09T03:13:01, Thu] 9.User: Can animals communicate with human language?
+[2023-03-09T03:13:01.500000, Thu] 10.User: But some people claim that their pets can understand them and respond appropriately. Are they wrong?
+[2023-03-09T03:13:02, Thu] 11.User: But can't animals communicate more effectively through body language and other non-verbal means, since they don't have the same level of cognitive ability as humans to process complex language?
+[2023-03-10T21:26:00, Fri] 12.User: I'm planning to volunteer at the local food bank soon and I was wondering if you could provide me with some information on the current food shortage situation in our area. By the way, I recently participated in the "Walk for Hunger" event on May 15th and our team managed to raise $1,500 for the food bank, which was amazing to see!
+[2023-03-10T21:26:00.500000, Fri] 13.User: That's really helpful, thanks! I'll definitely reach out to the food bank directly to get a better understanding of their current needs. I'm also curious to know if there are any other volunteer opportunities in the community that I can get involved with. Do you know of any organizations or events that I can look into?
+[2023-03-10T21:26:01, Fri] 14.User: I'll definitely check out those resources to find more volunteer opportunities. By the way, have you heard about the "Walk for Hunger" event that took place on May 15th? It was amazing to see over 2,000 people come together to raise funds for the local food bank.
+[2023-03-10T21:26:01.500000, Fri] 15.User: I'm interested in learning more about the "Feeding America" organization you mentioned earlier. Can you tell me more about their mission and how they support food banks across the country?

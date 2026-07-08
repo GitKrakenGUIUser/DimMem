@@ -1,0 +1,870 @@
+[
+  {
+    "user_id": "0014_982b5123_abs",
+    "memory_type": "episodic",
+    "content": "The user previously stayed in Haight-Ashbury for a best friend's wedding and booked the Airbnb three months in advance.",
+    "dimension": {
+      "time": "",
+      "location": "Haight-Ashbury, San Francisco",
+      "reason": "for a best friend's wedding",
+      "purpose": "to attend the wedding",
+      "keywords": [
+        "Haight-Ashbury",
+        "Airbnb",
+        "best friend's wedding",
+        "booked three months in advance"
+      ]
+    },
+    "entities": [
+      "Haight-Ashbury",
+      "Airbnb",
+      "best friend's wedding",
+      "booked three months in advance"
+    ],
+    "embedding_text": "The user previously stayed in Haight-Ashbury for a best friend's wedding and booked the Airbnb three months in advance.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0171",
+    "source_time": "2023-05-27 02:21:01",
+    "record_time": "2026-07-07T19:51:01.075100",
+    "score": 7.4797503035360995,
+    "score_components": {
+      "bm25_score": 7.4797503035360995,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 7.4797503035360995,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 7.4797503035360995
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.4615384615384615
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.5835717843502222
+      }
+    ]
+  },
+  {
+    "user_id": "0014_982b5123_abs",
+    "memory_type": "episodic",
+    "content": "User is considering accommodation options: a hostel in Shinjuku for $30/night or an Airbnb in Harajuku for $50/night.",
+    "dimension": {
+      "time": "",
+      "location": "Shinjuku, Tokyo; Harajuku, Tokyo",
+      "reason": "",
+      "purpose": "To decide accommodation for Japan trip.",
+      "keywords": [
+        "hostel",
+        "Shinjuku",
+        "Airbnb",
+        "Harajuku",
+        "$30",
+        "$50",
+        "accommodation"
+      ]
+    },
+    "entities": [
+      "hostel",
+      "Shinjuku",
+      "Airbnb",
+      "Harajuku",
+      "$30",
+      "$50",
+      "accommodation"
+    ],
+    "embedding_text": "User is considering accommodation options: a hostel in Shinjuku for $30/night or an Airbnb in Harajuku for $50/night.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0143",
+    "source_time": "2023-05-27 09:36:00",
+    "record_time": "2026-07-07T19:51:01.074937",
+    "score": 6.891094697184487,
+    "score_components": {
+      "bm25_score": 6.891094697184487,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 6.891094697184487,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 6.891094697184487
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.4615384615384615
+      }
+    ]
+  },
+  {
+    "user_id": "0014_982b5123_abs",
+    "memory_type": "episodic",
+    "content": "User participated in an online book club discussion of 'The Seven Husbands of Evelyn Hugo' by Taylor Jenkins Reid.",
+    "dimension": {
+      "time": "",
+      "location": "online",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "book club",
+        "The Seven Husbands of Evelyn Hugo",
+        "Taylor Jenkins Reid",
+        "online discussion"
+      ]
+    },
+    "entities": [
+      "book club",
+      "The Seven Husbands of Evelyn Hugo",
+      "Taylor Jenkins Reid",
+      "online discussion"
+    ],
+    "embedding_text": "User participated in an online book club discussion of 'The Seven Husbands of Evelyn Hugo' by Taylor Jenkins Reid.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0128",
+    "source_time": "2023-05-27 06:53:01.500000",
+    "record_time": "2026-07-07T19:51:01.074847",
+    "score": 6.066166657105206,
+    "score_components": {
+      "bm25_score": 6.066166657105206,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 6.066166657105206,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 6.066166657105206
+      }
+    ]
+  },
+  {
+    "user_id": "0014_982b5123_abs",
+    "memory_type": "profile",
+    "content": "User seeks book recommendations similar to 'The Nightingale' by Kristin Hannah.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "book recommendations",
+        "similar to The Nightingale"
+      ]
+    },
+    "entities": [
+      "book recommendations",
+      "similar to The Nightingale"
+    ],
+    "embedding_text": "User seeks book recommendations similar to 'The Nightingale' by Kristin Hannah.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0153",
+    "source_time": "2023-05-27 18:44:01",
+    "record_time": "2026-07-07T19:51:01.074996",
+    "score": 6.025103284880288,
+    "score_components": {
+      "bm25_score": 6.025103284880288,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 6.025103284880288,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 6.025103284880288
+      }
+    ]
+  },
+  {
+    "user_id": "0014_982b5123_abs",
+    "memory_type": "episodic",
+    "content": "User attended Billie Eilish concert at Los Angeles Forum with best friend Emily, sang along to songs including 'Bad Guy' and 'When the Party's Over'.",
+    "dimension": {
+      "time": "",
+      "location": "Los Angeles Forum",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Billie Eilish",
+        "concert",
+        "Los Angeles Forum",
+        "Emily",
+        "Bad Guy",
+        "When the Party's Over"
+      ]
+    },
+    "entities": [
+      "Billie Eilish",
+      "concert",
+      "Los Angeles Forum",
+      "Emily",
+      "Bad Guy",
+      "When the Party's Over"
+    ],
+    "embedding_text": "User attended Billie Eilish concert at Los Angeles Forum with best friend Emily, sang along to songs including 'Bad Guy' and 'When the Party's Over'.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0034",
+    "source_time": "2023-05-27 19:08:02.500000",
+    "record_time": "2026-07-07T19:51:01.074220",
+    "score": 5.6903247369724586,
+    "score_components": {
+      "bm25_score": 5.6903247369724586,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 5.6903247369724586,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 5.6903247369724586
+      }
+    ]
+  },
+  {
+    "user_id": "0014_982b5123_abs",
+    "memory_type": "fact",
+    "content": "User is interested in the book 'The Royal We' by Heather Cocks and Jessica Morgan, particularly its themes of identity, class, privilege, fame, and social media scrutiny.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "Heard positive reviews about the book's satire.",
+      "purpose": "",
+      "keywords": [
+        "The Royal We",
+        "Heather Cocks",
+        "Jessica Morgan",
+        "identity",
+        "class",
+        "privilege",
+        "fame",
+        "social media scrutiny"
+      ]
+    },
+    "entities": [
+      "The Royal We",
+      "Heather Cocks",
+      "Jessica Morgan",
+      "identity",
+      "class",
+      "privilege",
+      "fame",
+      "social media scrutiny"
+    ],
+    "embedding_text": "User is interested in the book 'The Royal We' by Heather Cocks and Jessica Morgan, particularly its themes of identity, class, privilege, fame, and social media scrutiny.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0129",
+    "source_time": "2023-05-27 06:53:02",
+    "record_time": "2026-07-07T19:51:01.074854",
+    "score": 5.408798140376578,
+    "score_components": {
+      "bm25_score": 5.408798140376578,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 5.408798140376578,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 5.408798140376578
+      }
+    ]
+  },
+  {
+    "user_id": "0014_982b5123_abs",
+    "memory_type": "fact",
+    "content": "User read 'The 7 1/2 Deaths of Evelyn Hardcastle' by Stuart Turton, finishing on March 20, 2023, as a library e-book borrow.",
+    "dimension": {
+      "time": "2023-03-20",
+      "location": "online library",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "The 7 1/2 Deaths of Evelyn Hardcastle",
+        "Stuart Turton",
+        "library e-book",
+        "finished date"
+      ]
+    },
+    "entities": [
+      "The 7 1/2 Deaths of Evelyn Hardcastle",
+      "Stuart Turton",
+      "library e-book",
+      "finished date"
+    ],
+    "embedding_text": "User read 'The 7 1/2 Deaths of Evelyn Hardcastle' by Stuart Turton, finishing on March 20, 2023, as a library e-book borrow.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0151",
+    "source_time": "2023-05-27 18:44:00",
+    "record_time": "2026-07-07T19:51:01.074984",
+    "score": 4.806877948669044,
+    "score_components": {
+      "bm25_score": 4.806877948669044,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 4.806877948669044,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 4.806877948669044
+      }
+    ]
+  },
+  {
+    "user_id": "0014_982b5123_abs",
+    "memory_type": "fact",
+    "content": "User's birthday is February 15, 2023, when they turned 32 years old.",
+    "dimension": {
+      "time": "2023-02-15",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "birthday",
+        "age",
+        "32"
+      ]
+    },
+    "entities": [
+      "birthday",
+      "age",
+      "32"
+    ],
+    "embedding_text": "User's birthday is February 15, 2023, when they turned 32 years old.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0131",
+    "source_time": "2023-05-27 02:26:00",
+    "record_time": "2026-07-07T19:51:01.074866",
+    "score": 4.788324053099137,
+    "score_components": {
+      "bm25_score": 4.788324053099137,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 4.788324053099137,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 4.788324053099137
+      }
+    ]
+  },
+  {
+    "user_id": "0014_982b5123_abs",
+    "memory_type": "episodic",
+    "content": "The user plans to purchase a smart timer for their new IKEA lamp to automatically turn it off when leaving the room.",
+    "dimension": {
+      "time": "",
+      "location": "living room at home",
+      "reason": "forgets to turn off the lamp",
+      "purpose": "save energy and automate lighting",
+      "keywords": [
+        "smart timer",
+        "IKEA lamp",
+        "energy efficiency"
+      ]
+    },
+    "entities": [
+      "smart timer",
+      "IKEA lamp",
+      "energy efficiency"
+    ],
+    "embedding_text": "The user plans to purchase a smart timer for their new IKEA lamp to automatically turn it off when leaving the room.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0099",
+    "source_time": "2023-05-27 23:04:01.500000",
+    "record_time": "2026-07-07T19:51:01.074678",
+    "score": 4.398977010498897,
+    "score_components": {
+      "bm25_score": 4.398977010498897,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 4.398977010498897,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 4.398977010498897
+      }
+    ]
+  },
+  {
+    "user_id": "0014_982b5123_abs",
+    "memory_type": "profile",
+    "content": "User prefers psychological thriller books.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "psychological thriller",
+        "book genre preference"
+      ]
+    },
+    "entities": [
+      "psychological thriller",
+      "book genre preference"
+    ],
+    "embedding_text": "User prefers psychological thriller books.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0150",
+    "source_time": "2023-05-27 09:36:02.500000",
+    "record_time": "2026-07-07T19:51:01.074978",
+    "score": 4.3396045400378656,
+    "score_components": {
+      "bm25_score": 4.3396045400378656,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 4.3396045400378656,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 4.3396045400378656
+      }
+    ]
+  },
+  {
+    "user_id": "0014_982b5123_abs",
+    "memory_type": "profile",
+    "content": "User enjoys historical fiction novels with strong female characters and thrilling plots, similar to 'The Nightingale' and 'The Alice Network'.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "historical fiction",
+        "strong female characters",
+        "thrilling plots",
+        "book preference"
+      ]
+    },
+    "entities": [
+      "historical fiction",
+      "strong female characters",
+      "thrilling plots",
+      "book preference"
+    ],
+    "embedding_text": "User enjoys historical fiction novels with strong female characters and thrilling plots, similar to 'The Nightingale' and 'The Alice Network'.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0157",
+    "source_time": "2023-05-27 10:30:00",
+    "record_time": "2026-07-07T19:51:01.075019",
+    "score": 4.087617665804637,
+    "score_components": {
+      "bm25_score": 4.087617665804637,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 4.087617665804637,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 4.087617665804637
+      }
+    ]
+  },
+  {
+    "user_id": "0014_982b5123_abs",
+    "memory_type": "profile",
+    "content": "User enjoys thriller books featuring strong female characters.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "thriller",
+        "strong female characters",
+        "book preference"
+      ]
+    },
+    "entities": [
+      "thriller",
+      "strong female characters",
+      "book preference"
+    ],
+    "embedding_text": "User enjoys thriller books featuring strong female characters.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0156",
+    "source_time": "2023-05-27 18:44:02.500000",
+    "record_time": "2026-07-07T19:51:01.075013",
+    "score": 4.015115162666539,
+    "score_components": {
+      "bm25_score": 4.015115162666539,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 4.015115162666539,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 4.015115162666539
+      }
+    ]
+  },
+  {
+    "user_id": "0014_982b5123_abs",
+    "memory_type": "profile",
+    "content": "The user is interested in watching the musical 'The Prom' on Netflix.",
+    "dimension": {
+      "time": "",
+      "location": "Netflix",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "The Prom",
+        "Netflix",
+        "musical"
+      ]
+    },
+    "entities": [
+      "The Prom",
+      "Netflix",
+      "musical"
+    ],
+    "embedding_text": "The user is interested in watching the musical 'The Prom' on Netflix.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0075",
+    "source_time": "2023-05-27 01:39:01",
+    "record_time": "2026-07-07T19:51:01.074536",
+    "score": 2.4899604167552707,
+    "score_components": {
+      "bm25_score": 2.4899604167552707,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 2.4899604167552707,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 2.4899604167552707
+      }
+    ]
+  },
+  {
+    "user_id": "0014_982b5123_abs",
+    "memory_type": "profile",
+    "content": "The user is fascinated by the process of creating music and lyrics in musicals and is interested in the work of songwriters.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "songwriting",
+        "musicals",
+        "music",
+        "lyrics",
+        "songwriters"
+      ]
+    },
+    "entities": [
+      "songwriting",
+      "musicals",
+      "music",
+      "lyrics",
+      "songwriters"
+    ],
+    "embedding_text": "The user is fascinated by the process of creating music and lyrics in musicals and is interested in the work of songwriters.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0077",
+    "source_time": "2023-05-27 01:39:02",
+    "record_time": "2026-07-07T19:51:01.074549",
+    "score": 2.48839302595019,
+    "score_components": {
+      "bm25_score": 2.48839302595019,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 2.48839302595019,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 2.48839302595019
+      }
+    ]
+  },
+  {
+    "user_id": "0014_982b5123_abs",
+    "memory_type": "episodic",
+    "content": "The user's professor mentioned a research project about the impact of AI on the job market, which sparked the user's interest in the role of education in preparing students for the future of work.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "professor",
+        "research project",
+        "AI",
+        "job market",
+        "education",
+        "future of work"
+      ]
+    },
+    "entities": [
+      "professor",
+      "research project",
+      "AI",
+      "job market",
+      "education",
+      "future of work"
+    ],
+    "embedding_text": "The user's professor mentioned a research project about the impact of AI on the job market, which sparked the user's interest in the role of education in preparing students for the future of work.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0016",
+    "source_time": "2023-05-27 15:49:01",
+    "record_time": "2026-07-07T19:51:01.074108",
+    "score": 2.3447815310155935,
+    "score_components": {
+      "bm25_score": 2.3447815310155935,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 2.3447815310155935,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 2.3447815310155935
+      },
+      {
+        "method": "structured",
+        "rank": 9,
+        "score": 0.23076923076923075
+      }
+    ]
+  }
+]

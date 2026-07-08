@@ -1,0 +1,58 @@
+{
+  "query_text": "When did the user book the Airbnb in Sacramento?",
+  "query_anchor": "When did the user book the Airbnb in Sacramento?",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "",
+    "location": "Sacramento",
+    "keywords": [
+      "Airbnb",
+      "Sacramento"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "When did the user book the Airbnb in Sacramento?",
+      "keywords": [
+        "Airbnb",
+        "Sacramento"
+      ],
+      "query_terms": [
+        "when",
+        "did",
+        "the",
+        "user",
+        "book",
+        "airbnb",
+        "in",
+        "sacramento"
+      ]
+    },
+    "structured": {
+      "query_text": "When did the user book the Airbnb in Sacramento?",
+      "rewrite": "When did the user book the Airbnb in Sacramento?",
+      "intent": "lookup",
+      "answer_field": "time",
+      "content_query": "When did the user book the Airbnb in Sacramento?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {
+        "location": [
+          "Sacramento"
+        ]
+      },
+      "keywords": [
+        "Airbnb",
+        "Sacramento"
+      ],
+      "canonical_text": "When did the user book the Airbnb in Sacramento?"
+    },
+    "minilm": {
+      "query_text": "When did the user book the Airbnb in Sacramento?"
+    }
+  }
+}

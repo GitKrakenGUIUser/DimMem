@@ -1,0 +1,32 @@
+{
+  "id": "b62eee4d-a61b-40f6-9386-8ef6247f0a19",
+  "object": "chat.completion",
+  "created": 1783356422,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"How many times has the user worn their new black Converse Chuck Taylor All Star sneakers?\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"black Converse Chuck Taylor All Star sneakers\"],\n    \"time\": \"\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"\"\n}",
+        "reasoning_content": "We need to parse the question: \"How many times have I worn my new black Converse Chuck Taylor All Star sneakers?\" Question date is 2023/06/18. This asks about the count of wearing a specific item. It's a memory query about frequency/occurrences. No time constraint explicit (no \"this year\" etc.), but \"new\" might imply since acquisition, but not explicit. No location. Need assistant context? No, it's about user's own memory. Target memory type: episodic (events of wearing). Keywords: \"black Converse Chuck Taylor All Star sneakers\". Answer dimension: requires counting, so empty or maybe \"content\"? Actually answer_dim should be \"\" because it's a count/summary. For query_anchor: rewrite as \"How many times has the user worn their new black Converse Chuck Taylor All Star sneakers?\" need_assistant_context false. dimension.time: \"\" because no explicit time. dimension.location: \"\". answer_dim: \"\" since it's counting."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 693,
+    "completion_tokens": 298,
+    "total_tokens": 991,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 208
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 53
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

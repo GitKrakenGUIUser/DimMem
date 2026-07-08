@@ -1,0 +1,32 @@
+{
+  "id": "3b6aaac0-d9e5-42b3-8735-a2950b204f8e",
+  "object": "chat.completion",
+  "created": 1783427795,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: The question asks for the time the user reached the clinic on Monday, with the question date being 2023-05-30 (Tuesday). The most recent Monday is 2023-05-29. None of the retrieved memories contain any information about the user visiting a clinic on that date. Memory [15] mentions a doctor's appointment on 2023-05-15 (a different Monday), but the question is clearly about the Monday immediately preceding the question date. Other memories mention clinic-related desires but no specific visit times. Therefore, the evidence is insufficient.\n\nAnswer: I don't know",
+        "reasoning_content": "We need to answer: \"What time did I reach the clinic on Monday?\" with question date 2023/05/30 (Tuesday). So Monday would be 2023/05/29. Look at memories: Memory [1] is from 2023-05-29 11:41:01, content about Buddhist sutta. Memory [15] mentions a doctor's appointment on 2023-05-15 (Monday? 2023-05-15 is a Monday? Let's check: 2023-05-30 is Tuesday, so 2023-05-29 Monday, 2023-05-28 Sunday, 2023-05-27 Saturday, 2023-05-26 Friday, 2023-05-25 Thursday, 2023-05-24 Wednesday, 2023-05-23 Tuesday, 2023-05-22 Monday, 2023-05-21 Sunday, 2023-05-20 Saturday, 2023-05-19 Friday, 2023-05-18 Thursday, 2023-05-17 Wednesday, 2023-05-16 Tuesday, 2023-05-15 Monday. So memory [15] is about a doctor's appointment on Monday 2023-05-15, but the question asks \"on Monday\" relative to question date 2023/05/30 (Tue) - that would be yesterday, Monday 2023-05-29. There is no memory about a clinic visit on 2023-05-29. Memory [5] and [7] talk about wanting a clinic within one hour drive, but no time of reaching. No memory gives time of reaching a clinic on that Monday. So insufficient evidence. Answer: I don't know."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1130,
+    "completion_tokens": 499,
+    "total_tokens": 1629,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 374
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 874
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

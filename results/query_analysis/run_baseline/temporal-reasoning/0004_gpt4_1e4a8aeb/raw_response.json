@@ -1,0 +1,32 @@
+{
+  "id": "803cc4d0-fc7c-4f93-a9e6-65bdb465aaaa",
+  "object": "chat.completion",
+  "created": 1783356334,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"Find the dates when the user attended the gardening workshop and when the user planted the tomato saplings, then calculate the number of days between those two events.\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"gardening workshop\", \"tomato saplings\"],\n    \"time\": \"\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"\"\n}",
+        "reasoning_content": "We need to parse the question: \"How many days passed between the day I attended the gardening workshop and the day I planted the tomato saplings?\" This is asking for a calculation (difference in days) between two events. It references two specific memories: attending a gardening workshop and planting tomato saplings. Both are events (episodic memories). No explicit time constraint given, but we need to retrieve the dates of those events. The answer dimension is not a simple field; it requires calculation, so answer_dim should be \"\". The query_anchor should be a retrieval-friendly sentence: \"the day the user attended the gardening workshop and the day the user planted the tomato saplings\" but with the intent to find the dates. Since it's asking for a difference, we need both dates. need_assistant_context is false because it's not referring to a previous conversation. memory type: both are episodic. keywords: \"gardening workshop\", \"tomato saplings\". time: no explicit time constraint, but we need to retrieve the time of each event. However, the field \"time\" is for an explicit constraint; we leave empty. location: none. answer_dim: \"\" because it's calculation. So output accordingly."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 697,
+    "completion_tokens": 349,
+    "total_tokens": 1046,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 248
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 57
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

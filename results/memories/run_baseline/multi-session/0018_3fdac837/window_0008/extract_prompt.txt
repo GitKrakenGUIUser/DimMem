@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-23T19:41:02.500000, Tue] 1.User: I think I'll go with a brown leather belt with a simple buckle. It'll add a nice touch of rustic charm to my outfit. Thanks for the advice! By the way, I've been meaning to check out the new Sephora store that just opened up in the mall. Have you heard anything about it?
+[2023-05-24T08:29:00, Wed] 2.User: I'm feeling a bit lonely lately and I was thinking of trying to meet new people. Do you have any suggestions on how to do that? By the way, it's been tough since my best friend moved to a new city for work a few weeks ago, and we're not hanging out as much anymore.
+[2023-05-24T08:29:00.500000, Wed] 3.User: I think I'll try joining a club or group that aligns with my interests. I've been wanting to try out a new hiking trail near my house, but I've been putting it off because I don't have anyone to go with.
+[2023-05-24T08:29:01, Wed] 4.User: I'll definitely try out Meetup.com and search for hiking groups in my area. I'm also going to ask my coworkers if they know of any good hiking spots or groups. I've been feeling a bit isolated since my best friend moved away, so I'm hoping this will help me meet some new people who share my interests.
+[2023-05-24T08:29:01.500000, Wed] 5.User: I'll feel great if I meet new people who share my interest in hiking. I'm hoping to find a group of friends to explore with, but I'd also be happy to find a new hiking buddy. Either way, it'll be nice to have someone to share the experience with and discuss our adventures afterwards. It'll also be nice to have some accountability to get me out on the trails more often.
+[2023-05-24T08:29:02, Wed] 6.User: I think the most exciting part is the possibility of finding a new hiking buddy or group of friends to share the experience with. It'll be great to have someone to talk to about our hikes, share tips and recommendations, and learn from each other's experiences. Plus, it'll be nice to have some company on the trails and not feel so alone.
+[2023-05-24T08:29:02.500000, Wed] 7.User: What do you think is the most important quality or trait you're looking for in a hiking buddy or group? Is it someone who shares your sense of adventure, has similar hiking experience, or something else entirely?
+[2023-05-25T09:09:00, Thu] 8.User: I'm looking for some interior design inspiration for my new apartment. Do you have any suggestions for a living room layout? By the way, my mom was just giving me some advice on decorating my place last weekend, after my brother left around 5 pm and she stayed for a bit longer.
+[2023-05-25T09:09:00.500000, Thu] 9.User: My living room is around 12 by 15 feet, and it's a rectangular shape. I already have a sectional sofa and a coffee table, and I'm thinking of a modern minimalist style with a neutral color palette, maybe some whites, grays, and beiges. There's a large window on one wall, and I'd like to make the most of the natural light.
+[2023-05-25T09:09:01, Thu] 10.User: I like the sound of Layout 1, but I'm not sure about the floor lamp. Do you think a table lamp would work better instead? And do you have any suggestions for some modern minimalist wall decor that would complement my neutral color palette?
+[2023-05-25T09:09:01.500000, Thu] 11.User: I think a table lamp would be a great choice for my living room. For wall decor, I'm interested in the geometric prints. Do you have any recommendations for online stores or websites where I can find some simple and affordable geometric prints?
+[2023-05-25T09:09:02, Thu] 12.User: I'll check out those websites. By the way, I was thinking of asking my mom for her opinion on the geometric prints I choose, since she was just giving me some decorating advice last weekend, after my brother left around 5 pm and she stayed for a bit longer. Do you think that's a good idea?
+[2023-05-25T09:09:02.500000, Thu] 13.User: I think I'll take your advice and wait until I've narrowed down my options before seeking my mom's opinion. Thanks for the suggestion! Now, I'm curious about how to care for my new geometric prints once I get them. Do you have any tips on how to hang and maintain them?
+[2023-05-25T18:26:00, Thu] 14.User: I'm looking for some gift ideas for my family members. I've already got a few gifts recently, like a set of kitchen utensils for my sister, which cost around $70. Do you have any suggestions for a gift for my mom?
+[2023-05-25T18:26:00.500000, Thu] 15.User: I like the idea of a personalized jewelry, but I'm not sure if it's something my mom would wear. Do you have any suggestions for a photo album or frame that would be similar in quality to the one I got for my mom's anniversary, which took around an hour to customize and cost around $40?

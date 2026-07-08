@@ -1,0 +1,137 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-24T00:03:00.500000, Wed] 1.User: I used og:graph html on my page - my og:image is 1200x628 pixels, but on twitter when I tweet a link to the page, the preview image defaults to 360x360 pixels. 
+Do I need to add  to my code to ensure that twitter shows my link preview image at 1200x628 pixels?
+[2023-05-24T00:03:01, Wed] 2.User: Great reply. So my "twitter:image" can be the same image (URL) as my "og:image" image (URL). In other words, is 1200x628 pixels the correct size for the "twitter:image" image?
+[2023-05-24T00:03:01.500000, Wed] 3.User: Also, in my og:graph code I have these image parameters:
+The image is already sized to 1200x628 pixels, so can I remove these and instead add:
+
+ ?/
+[2023-05-24T00:03:02, Wed] 4.User: Gotcha. Issue resolved. Excellent conversation, thank you.
+[2023-05-24T00:47:00, Wed] 5.User: I'm trying to plan some new content for my social media channels and I was wondering if you could suggest some popular art-related hashtags on TikTok and Instagram that I could use to reach a wider audience. By the way, I've been having some success on TikTok lately - my most popular video, a time-lapse of me drawing a portrait, got 1,200 views!
+[2023-05-24T00:47:00.500000, Wed] 6.User: Thanks for the suggestions! I'll definitely try them out. I'm also thinking of collaborating with other artists on TikTok to reach a wider audience. Do you know how I can find other artists in my niche who might be interested in collaborating?
+[2023-05-24T00:47:01, Wed] 7.User: I'm thinking of doing a Q&A session on TikTok, where I answer questions about my art process, inspiration, and more. Do you think this is a good idea, and if so, how can I promote it to get more viewers?
+[2023-05-24T00:47:01.500000, Wed] 8.User: I'll ask some questions during the Q&A session about my art process, like how I come up with ideas and what inspires me, as well as some tips and tricks I've learned along the way. By the way, speaking of my art, my most popular video on TikTok, a time-lapse of me drawing a portrait, got 1,200 views! Do you think I should share some behind-the-scenes content from that video during the Q&A session?
+[2023-05-24T00:47:02, Wed] 9.User: That's a great idea! I think I'll share some behind-the-scenes content from my portrait drawing video, like my sketchbook pages and reference images. I'll also share some tips on the art supplies I used and my thought process behind certain creative decisions. Do you think I should also share some of my other art pieces or projects during the Q&A session to give my audience a better sense of my artistic style and range?
+[2023-05-24T00:47:02.500000, Wed] 10.User: I think I'll share a selection of my art pieces that showcase my range and style, including some drawings, paintings, and digital art. I'll also share some personal projects that hold special meaning to me, and explain the story behind them. This will give my audience a better understanding of my artistic vision and style. Thanks for the suggestions!
+[2023-05-24T03:01:00, Wed] 11.User: I'm thinking of rearranging the layout of my living room to make the most of the new sectional sofa that's arriving soon. Can you give me some tips on how to create a cozy and inviting space? By the way, I did a major decluttering session and vacuumed the entire living room three weekends ago, so I'm excited to build on that clean slate.
+[2023-05-24T03:01:00.500000, Wed] 12.User: I like the ideas about creating a focal point and adding rugs and texture to define different zones within the room. What are some popular rug styles and materials that would complement a light gray sectional sofa with a subtle pattern?
+[2023-05-24T03:01:01, Wed] 13.User: I'm considering getting a Moroccan-inspired rug with a subtle pattern to add some global chic to my living room. Do you have any tips on how to choose the right size of rug for my space?
+[2023-05-24T03:01:01.500000, Wed] 14.User: Thanks for the tips! I think I'll measure my room and furniture again to determine the ideal rug size. Since I did a major decluttering session and vacuumed the entire living room recently, I want to make sure the rug complements the clean and minimalist vibe I'm going for. Do you have any recommendations for online stores or websites that offer a wide selection of Moroccan-inspired rugs in various sizes and materials?
+[2023-05-24T03:01:02, Wed] 15.User: I think I'll check out some of those websites and read reviews to find the perfect Moroccan-inspired rug for my living room. Since I've already decluttered and vacuumed the entire room, I want to make sure the rug complements the clean and minimalist vibe I'm going for. Do you have any tips on how to maintain and clean a Moroccan-inspired rug to keep it looking its best?

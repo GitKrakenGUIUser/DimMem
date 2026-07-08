@@ -1,0 +1,129 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+
+
+Here is the real input you need to process:
+
+[2023-05-20T04:11:00, Sat] 1.User: I'm looking for some recipe ideas for a dinner party I'm hosting this weekend. Can you suggest some Italian dishes that are easy to make and always a crowd-pleaser?
+[2023-05-20T04:11:00.500000, Sat] 2.User: I've been experimenting with Italian cuisine recently, and I actually took a cooking class focused on it a few weeks ago. We made a delicious Spaghetti Bolognese, and I was surprised by how easy it was to whip up the sauce. Do you have any suggestions for a unique Italian dish that I could serve as an appetizer that's a bit different from the usual bruschetta or caprese skewers?
+[2023-05-20T04:11:01, Sat] 3.User: I'm really intrigued by the Fried Zucchini Flowers. I've never had them before, but they sound delicious! Do you have a recipe I could follow, and do I need any special ingredients or equipment? Also, by the way, I've been keeping track of all the recipes I've tried and cooking classes I've attended in a spreadsheet - it's become my go-to resource for meal planning. Speaking of cooking classes, do you think I could find a class that focuses on Korean BBQ? I've been wanting to learn more about working with ingredients like tofu and tempeh.
+[2023-05-20T04:11:01.500000, Sat] 4.User: I've been wanting to try Korean BBQ for a while now, and I think taking a class would be a great way to learn about the different techniques and ingredients. By the way, speaking of classes, do you think you could help me figure out when I took my first cooking class? I remember it was a beginner's class focused on Italian cuisine, and we made a delicious Spaghetti Bolognese.
+[2023-05-20T04:11:02, Sat] 5.User: I think I remember! It was a weekday, in the morning, and it was during the winter season. I remember it was a one-time class, and it was held at a local culinary school. The instructor was Chef Maria, and she was fantastic! We made a delicious Spaghetti Bolognese, and I was surprised by how easy it was to whip up the sauce.
+[2023-05-20T04:11:02.500000, Sat] 6.User: Wait, I think I can help you figure out the date of your first cooking class! You mentioned it was a weekday, in the morning, during the winter season, and you made a Spaghetti Bolognese with Chef Maria. I think I can make an educated guess...
+
+Given your fond memory of that class, I'm going to take a stab in the dark and say that your first cooking class was on February 10th. Am I correct?
+[2023-05-20T07:17:00, Sat] 7.User: I'm thinking of getting a new plant, an orchid maybe. Do you have any tips for a beginner like me? By the way, I've been taking care of my indoor plants for about 3 months now and I've noticed a significant improvement in the air quality of my living room.
+[2023-05-20T07:17:00.500000, Sat] 8.User: I have 5 plants at home, including a snake plant, a spider plant, a peace lily, a dracaena, and a basil plant. I water them every Sunday morning. Do you have any tips on how to keep them pest-free?
+[2023-05-20T07:17:01, Sat] 9.User: I've actually been having some issues with pests on the spider plant, so I've been treating it with neem oil every few days. Do you have any advice on how to get rid of them completely?
+[2023-05-20T07:17:01.500000, Sat] 10.User: I'm also considering getting a humidifier to improve the air quality and humidity around my plants. Do you think that would be a good investment?
+[2023-05-20T07:17:02, Sat] 11.User: That's really helpful! I think I'll definitely consider getting a humidifier for my plants. I've also been thinking about fertilizing them more regularly. Do you have any tips on how to fertilize my plants effectively?
+[2023-05-20T07:17:02.500000, Sat] 12.User: I'm thinking of fertilizing my peace lily, which has started blooming again after I fertilized it last week. Do you have any specific tips on how to fertilize a peace lily?
+[2023-05-20T13:40:00, Sat] 13.User: I've been craving Italian food a lot lately, especially pasta dishes. I was thinking of trying out a new recipe, maybe something with seafood. Do you have any recommendations? By the way, I had the carne asada tacos at the new Mexican place that just opened up near my house recently, and it was amazing!
+[2023-05-20T13:40:00.500000, Sat] 14.User: The Spaghetti alle Vongole sounds great, I love clams! Do you have a simple recipe I can follow, maybe with some tips on how to prepare the clams?
+[2023-05-20T13:40:01, Sat] 15.User: That sounds like a great recipe! I'm excited to try it out. You know, speaking of seafood, I've been meaning to try out a Korean-style seafood soup called jjamppong. Have you heard of it? Do you have any information on how to make it?

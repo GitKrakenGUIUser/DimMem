@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-04-19T21:30:01, Wed] 1.User: I've tried Moodfit before, but I'm interested in trying something new. Can you tell me more about Daylio? How does it work and what kind of insights does it provide?
+[2023-04-19T21:30:01.500000, Wed] 2.User: I'm interested in trying Daylio. Can I set specific goals for myself and track my progress towards them in the app?
+[2023-04-19T21:30:02, Wed] 3.User: I'm interested in setting a goal to reduce my anxiety levels. Can I set a specific objective in Daylio to track my anxiety levels and receive insights on how to improve?
+[2023-04-19T21:30:02.500000, Wed] 4.User: I'd like to set a reminder to review my anxiety objective in Daylio every week to track my progress and make adjustments as needed. Can I set reminders in the app?
+[2023-04-24T21:50:00, Mon] 5.User: What was the writing process like for the album's closing track?
+[2023-04-24T21:50:00.500000, Mon] 6.User: Oh, my apologies. I was referring to the album "Blonde" by Frank Ocean. Specifically, I was wondering about the writing process for the closing track "Futura Free." Can you tell me more about that?
+[2023-04-24T21:50:01, Mon] 7.User: That's really interesting. I wonder if recording conversations on your iPhone is a common technique for musicians. Do you know of any other artists that have used a similar method in their writing process?
+[2023-04-24T21:50:01.500000, Mon] 8.User: Do you think Frank Ocean's experimental approach to writing "Futura Free" made it a more unique and memorable track compared to his other songs on "Blonde"?
+[2023-04-24T21:50:02, Mon] 9.User: I never realized how much the recording process could influence the final product. It's amazing how these little details can add so much to a song. Do you have any other examples of unconventional recording techniques that have been used in music?
+[2023-04-24T21:50:02.500000, Mon] 10.User: Wow, it's amazing to learn about all these unconventional recording techniques. It really shows how far artists are willing to go to create a unique sound. But do you think there's a limit to how far an artist should push the boundaries? Could these techniques end up becoming gimmicks rather than genuine expressions of creativity?
+[2023-04-24T07:06:00, Mon] 11.User: I'm interested in learning more about antique furniture restoration. I recently acquired a 19th-century French armoire, which my great-great-grandparents brought over when they immigrated to the US. Do you know any recommended restoration services or techniques to keep it in great condition?
+[2023-04-24T07:06:00.500000, Mon] 12.User: I'm particularly interested in learning more about the finishing techniques used on my armoire. I'd like to know if the original finish can be preserved or if it needs to be refinished. Can you recommend any resources or experts in the field who can guide me through this process?
+[2023-04-24T07:06:01, Mon] 13.User: I'm also curious about the history behind the armoire's design and craftsmanship. Since it's a 19th-century French armoire, I'd love to learn more about the style and era it represents. Can you recommend any resources or experts who could provide insight into the armoire's design, construction, and historical context?
+[2023-04-24T07:06:01.500000, Mon] 14.User: I'd like to learn more about the historical context of the armoire, specifically about the immigration process of my great-great-grandparents and how they might have acquired the armoire. Can you recommend any resources or experts who could provide insight into the immigration experience and the role of furniture in it?
+[2023-04-24T07:06:02, Mon] 15.User: I'd like to learn more about the specific immigration experience of my great-great-grandparents and how they acquired the armoire. Can you help me find resources or experts who could provide more information on the immigration process during the 19th century, particularly for French immigrants coming to the United States?

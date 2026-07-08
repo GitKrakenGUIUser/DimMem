@@ -1,0 +1,22 @@
+{
+  "conv_name": "temporal-reasoning",
+  "index": 14,
+  "question": "When did I book the Airbnb in Sacramento?",
+  "ok": true,
+  "error": null,
+  "elapsed_seconds": 4.557017803192139,
+  "usage": {
+    "prompt_tokens": 684,
+    "completion_tokens": 433,
+    "total_tokens": 1117,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 350
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 44
+  },
+  "output_dir": "results/query_analysis/run_baseline/temporal-reasoning/0014_982b5123_abs"
+}

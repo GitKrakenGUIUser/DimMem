@@ -1,0 +1,878 @@
+[
+  {
+    "user_id": "0001_51c32626",
+    "memory_type": "fact",
+    "content": "User's master's thesis was on natural language processing, and he previously worked on a research paper on sentiment analysis that was submitted to ACL.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "master's thesis",
+        "NLP",
+        "sentiment analysis",
+        "ACL"
+      ]
+    },
+    "entities": [
+      "master's thesis",
+      "NLP",
+      "sentiment analysis",
+      "ACL"
+    ],
+    "embedding_text": "User's master's thesis was on natural language processing, and he previously worked on a research paper on sentiment analysis that was submitted to ACL.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0024",
+    "source_time": "2023-05-22 05:18:02",
+    "record_time": "2026-07-07T19:50:28.702783",
+    "score": 17.447295323032456,
+    "score_components": {
+      "bm25_score": 17.447295323032456,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 17.447295323032456,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 17.447295323032456
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.6090775469609739
+      }
+    ]
+  },
+  {
+    "user_id": "0001_51c32626",
+    "memory_type": "fact",
+    "content": "The user has a thesis background in sentiment analysis and is exploring NLP approaches for sentiment analysis.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "sentiment analysis",
+        "thesis",
+        "NLP"
+      ]
+    },
+    "entities": [
+      "sentiment analysis",
+      "thesis",
+      "NLP"
+    ],
+    "embedding_text": "The user has a thesis background in sentiment analysis and is exploring NLP approaches for sentiment analysis.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0129",
+    "source_time": "2023-05-29 23:07:01.500000",
+    "record_time": "2026-07-07T19:50:28.703496",
+    "score": 10.584120149258414,
+    "score_components": {
+      "bm25_score": 10.584120149258414,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 10.584120149258414,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 10.584120149258414
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.4391778852118375
+      }
+    ]
+  },
+  {
+    "user_id": "0001_51c32626",
+    "memory_type": "profile",
+    "content": "The user is interested in hybrid CNN-RNN architectures for sentiment analysis.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "hybrid CNN-RNN",
+        "sentiment analysis"
+      ]
+    },
+    "entities": [
+      "hybrid CNN-RNN",
+      "sentiment analysis"
+    ],
+    "embedding_text": "The user is interested in hybrid CNN-RNN architectures for sentiment analysis.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0131",
+    "source_time": "2023-05-29 23:07:02.500000",
+    "record_time": "2026-07-07T19:50:28.703507",
+    "score": 9.916545173573304,
+    "score_components": {
+      "bm25_score": 9.916545173573304,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 9.916545173573304,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 9.916545173573304
+      },
+      {
+        "method": "minilm",
+        "rank": 10,
+        "score": 0.2780611852576719
+      }
+    ]
+  },
+  {
+    "user_id": "0001_51c32626",
+    "memory_type": "profile",
+    "content": "The user is interested in applying sentiment analysis architectures to social media text data.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "social media",
+        "sentiment analysis",
+        "text data"
+      ]
+    },
+    "entities": [
+      "social media",
+      "sentiment analysis",
+      "text data"
+    ],
+    "embedding_text": "The user is interested in applying sentiment analysis architectures to social media text data.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0132",
+    "source_time": "2023-05-30 01:51:00",
+    "record_time": "2026-07-07T19:50:28.703513",
+    "score": 9.576159098809317,
+    "score_components": {
+      "bm25_score": 9.576159098809317,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 9.576159098809317,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 9.576159098809317
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.4760093063945424
+      }
+    ]
+  },
+  {
+    "user_id": "0001_51c32626",
+    "memory_type": "profile",
+    "content": "The user is specifically interested in deep learning techniques, such as CNN and RNN, for sentiment analysis.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "deep learning",
+        "CNN",
+        "RNN",
+        "sentiment analysis"
+      ]
+    },
+    "entities": [
+      "deep learning",
+      "CNN",
+      "RNN",
+      "sentiment analysis"
+    ],
+    "embedding_text": "The user is specifically interested in deep learning techniques, such as CNN and RNN, for sentiment analysis.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0130",
+    "source_time": "2023-05-29 23:07:02",
+    "record_time": "2026-07-07T19:50:28.703502",
+    "score": 9.258621422281067,
+    "score_components": {
+      "bm25_score": 9.258621422281067,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 9.258621422281067,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 9.258621422281067
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.41706543761177745
+      }
+    ]
+  },
+  {
+    "user_id": "0001_51c32626",
+    "memory_type": "profile",
+    "content": "User has prior experience with sentiment analysis and prefers using TF-IDF for feature extraction.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "sentiment analysis experience",
+        "TF-IDF",
+        "feature extraction"
+      ]
+    },
+    "entities": [
+      "sentiment analysis experience",
+      "TF-IDF",
+      "feature extraction"
+    ],
+    "embedding_text": "User has prior experience with sentiment analysis and prefers using TF-IDF for feature extraction.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0027",
+    "source_time": "2023-05-22 05:30:00.500000",
+    "record_time": "2026-07-07T19:50:28.702802",
+    "score": 8.886240498507414,
+    "score_components": {
+      "bm25_score": 8.886240498507414,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 8.886240498507414,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 8.886240498507414
+      },
+      {
+        "method": "structured",
+        "rank": 17,
+        "score": 0.33333333333333337
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.4601236732096976
+      }
+    ]
+  },
+  {
+    "user_id": "0001_51c32626",
+    "memory_type": "fact",
+    "content": "The user started playing The Witcher 3 in 2022 but did not finish it.",
+    "dimension": {
+      "time": "2022",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "The Witcher 3",
+        "gaming"
+      ]
+    },
+    "entities": [
+      "The Witcher 3",
+      "gaming"
+    ],
+    "embedding_text": "The user started playing The Witcher 3 in 2022 but did not finish it.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0095",
+    "source_time": "2023-05-28 14:09:00.500000",
+    "record_time": "2026-07-07T19:50:28.703292",
+    "score": 6.081348566864237,
+    "score_components": {
+      "bm25_score": 6.081348566864237,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 6.081348566864237,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 6.081348566864237
+      }
+    ]
+  },
+  {
+    "user_id": "0001_51c32626",
+    "memory_type": "episodic",
+    "content": "User plans to research the job market and salary ranges for MBA graduates.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to make informed decision",
+      "purpose": "to evaluate career outcomes",
+      "keywords": [
+        "job market",
+        "salary ranges",
+        "MBA graduates",
+        "career research"
+      ]
+    },
+    "entities": [
+      "job market",
+      "salary ranges",
+      "MBA graduates",
+      "career research"
+    ],
+    "embedding_text": "User plans to research the job market and salary ranges for MBA graduates.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0075",
+    "source_time": "2023-05-27 22:16:01.500000",
+    "record_time": "2026-07-07T19:50:28.703171",
+    "score": 5.150462074355946,
+    "score_components": {
+      "bm25_score": 5.150462074355946,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 5.150462074355946,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 5.150462074355946
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.41666666666666674
+      }
+    ]
+  },
+  {
+    "user_id": "0001_51c32626",
+    "memory_type": "profile",
+    "content": "User is interested in participating in charity walks and runs that support cancer research or awareness.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "charity walks",
+        "cancer awareness",
+        "cancer research"
+      ]
+    },
+    "entities": [
+      "charity walks",
+      "cancer awareness",
+      "cancer research"
+    ],
+    "embedding_text": "User is interested in participating in charity walks and runs that support cancer research or awareness.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0052",
+    "source_time": "2023-05-26 21:32:01",
+    "record_time": "2026-07-07T19:50:28.702960",
+    "score": 5.083803828600538,
+    "score_components": {
+      "bm25_score": 5.083803828600538,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 5.083803828600538,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 5.083803828600538
+      }
+    ]
+  },
+  {
+    "user_id": "0001_51c32626",
+    "memory_type": "fact",
+    "content": "User requested an explanation of procrustes analysis in R, including syntax details and visualization code.",
+    "dimension": {
+      "time": "2023-05-30",
+      "location": "",
+      "reason": "",
+      "purpose": "learn procrustes analysis",
+      "keywords": [
+        "procrustes analysis",
+        "R",
+        "visualization",
+        "code"
+      ]
+    },
+    "entities": [
+      "procrustes analysis",
+      "R",
+      "visualization",
+      "code"
+    ],
+    "embedding_text": "User requested an explanation of procrustes analysis in R, including syntax details and visualization code.",
+    "source_message_ids": [
+      "19"
+    ],
+    "source_boundary_id": "19_0146",
+    "source_time": "2023-05-30 07:29:00",
+    "record_time": "2026-07-07T19:50:28.703596",
+    "score": 4.853557736311719,
+    "score_components": {
+      "bm25_score": 4.853557736311719,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 4.853557736311719,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 4.853557736311719
+      },
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.27602788011677903
+      }
+    ]
+  },
+  {
+    "user_id": "0001_51c32626",
+    "memory_type": "episodic",
+    "content": "User is researching online MBA programs at the University of Florida and Arizona State University.",
+    "dimension": {
+      "time": "",
+      "location": "online",
+      "reason": "to evaluate program options",
+      "purpose": "to decide on MBA program",
+      "keywords": [
+        "University of Florida",
+        "Arizona State University",
+        "online MBA",
+        "program research"
+      ]
+    },
+    "entities": [
+      "University of Florida",
+      "Arizona State University",
+      "online MBA",
+      "program research"
+    ],
+    "embedding_text": "User is researching online MBA programs at the University of Florida and Arizona State University.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0074",
+    "source_time": "2023-05-27 22:16:01",
+    "record_time": "2026-07-07T19:50:28.703087",
+    "score": 4.822614135079901,
+    "score_components": {
+      "bm25_score": 4.822614135079901,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 4.822614135079901,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 4.822614135079901
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.41666666666666674
+      }
+    ]
+  },
+  {
+    "user_id": "0001_51c32626",
+    "memory_type": "episodic",
+    "content": "On 2023-05-21, user and their sister binge-watched three episodes of their favorite show on the couch in the living room.",
+    "dimension": {
+      "time": "2023-05-21",
+      "location": "living room",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "sister",
+        "binge-watching",
+        "TV show",
+        "couch",
+        "living room"
+      ]
+    },
+    "entities": [
+      "sister",
+      "binge-watching",
+      "TV show",
+      "couch",
+      "living room"
+    ],
+    "embedding_text": "On 2023-05-21, user and their sister binge-watched three episodes of their favorite show on the couch in the living room.",
+    "source_message_ids": [
+      "19"
+    ],
+    "source_boundary_id": "19_0139",
+    "source_time": "2023-05-30 06:10:00",
+    "record_time": "2026-07-07T19:50:28.703554",
+    "score": 4.4935098215356515,
+    "score_components": {
+      "bm25_score": 4.4935098215356515,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 4.4935098215356515,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 4.4935098215356515
+      }
+    ]
+  },
+  {
+    "user_id": "0001_51c32626",
+    "memory_type": "fact",
+    "content": "User figured out how to use the yogurt-making function on their Instant Pot.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Instant Pot",
+        "yogurt function"
+      ]
+    },
+    "entities": [
+      "Instant Pot",
+      "yogurt function"
+    ],
+    "embedding_text": "User figured out how to use the yogurt-making function on their Instant Pot.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0084",
+    "source_time": "2023-05-28 09:36:02.500000",
+    "record_time": "2026-07-07T19:50:28.703230",
+    "score": 3.9430400315918535,
+    "score_components": {
+      "bm25_score": 3.9430400315918535,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 3.9430400315918535,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 3.9430400315918535
+      }
+    ]
+  },
+  {
+    "user_id": "0001_51c32626",
+    "memory_type": "episodic",
+    "content": "User sold their old bass guitar on Craigslist.",
+    "dimension": {
+      "time": "",
+      "location": "Craigslist",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "bass guitar",
+        "Craigslist",
+        "sale"
+      ]
+    },
+    "entities": [
+      "bass guitar",
+      "Craigslist",
+      "sale"
+    ],
+    "embedding_text": "User sold their old bass guitar on Craigslist.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0065",
+    "source_time": "2023-05-27 02:06:01.500000",
+    "record_time": "2026-07-07T19:50:28.703035",
+    "score": 3.8347472685895623,
+    "score_components": {
+      "bm25_score": 3.8347472685895623,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 3.8347472685895623,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 3.8347472685895623
+      }
+    ]
+  },
+  {
+    "user_id": "0001_51c32626",
+    "memory_type": "episodic",
+    "content": "User started making their own yogurt on 2023-05-28.",
+    "dimension": {
+      "time": "2023-05-28",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "homemade yogurt",
+        "Instant Pot"
+      ]
+    },
+    "entities": [
+      "homemade yogurt",
+      "Instant Pot"
+    ],
+    "embedding_text": "User started making their own yogurt on 2023-05-28.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0085",
+    "source_time": "2023-05-28 09:36:03",
+    "record_time": "2026-07-07T19:50:28.703236",
+    "score": 3.6911843314283246,
+    "score_components": {
+      "bm25_score": 3.6911843314283246,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 3.6911843314283246,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 3.6911843314283246
+      },
+      {
+        "method": "minilm",
+        "rank": 15,
+        "score": 0.2509190251302645
+      }
+    ]
+  }
+]

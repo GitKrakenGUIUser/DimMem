@@ -1,0 +1,32 @@
+{
+  "id": "572a4d67-e859-41d6-b43e-8f25521248ff",
+  "object": "chat.completion",
+  "created": 1783350409,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": [\n    {\n      \"source_id\": 4,\n      \"content\": \"The user attended a houseplant workshop at a local nursery and learned propagation tips.\",\n      \"dimension\": {\n        \"memory_type\": \"episodic\",\n        \"time\": \"\",\n        \"location\": \"local nursery\",\n        \"reason\": \"\",\n        \"purpose\": \"learn propagation tips\",\n        \"keywords\": [\"houseplant workshop\", \"local nursery\", \"propagation\"]\n      }\n    },\n    {\n      \"source_id\": 5,\n      \"content\": \"The user is propagating a succulent from a leaf cutting; the cutting has been in water for three weeks and roots are forming.\",\n      \"dimension\": {\n        \"memory_type\": \"episodic\",\n        \"time\": \"\",\n        \"location\": \"\",\n        \"reason\": \"\",\n        \"purpose\": \"propagate succulent\",\n        \"keywords\": [\"succulent\", \"leaf cutting\", \"water propagation\", \"roots\"]\n      }\n    },\n    {\n      \"source_id\": 6,\n      \"content\": \"The user got the succulent leaf cutting from a friend and does not know the succulent type.\",\n      \"dimension\": {\n        \"memory_type\": \"fact\",\n        \"time\": \"\",\n        \"location\": \"\",\n        \"reason\": \"\",\n        \"purpose\": \"\",\n        \"keywords\": [\"succulent\", \"leaf cutting\", \"friend\", \"unknown type\"]\n      }\n    },\n    {\n      \"source_id\": 7,\n      \"content\": \"The user is trying neem oil on an African violet that has been struggling with spider mites.\",\n      \"dimension\": {\n        \"memory_type\": \"episodic\",\n        \"time\": \"\",\n        \"location\": \"\",\n        \"reason\": \"African violet has spider mites\",\n        \"purpose\": \"treat spider mites with neem oil\",\n        \"keywords\": [\"neem oil\", \"African violet\", \"spider mites\"]\n      }\n    }\n  ]\n}",
+        "reasoning_content": "We need to extract memories from messages 4 onward (since first 3 are overlapping context). Messages 4-15 contain user statements about plant activities, propagation, workshop attendance, and then a series of requests for analysis and avatar creation. The latter messages (8-15) seem to be task instructions for the assistant, not long-term memories about the user. They are one-off operation instructions, temporary formatting requests, and speculative avatar creation. They lack long-term value. So focus on messages 4-7 about plant propagation, workshop, succulent, neem oil.\n\nExtract:\n- User attended a houseplant workshop at a local nursery and learned propagation tips (episodic, event). \n- User is propagating a succulent from a leaf cutting, sitting in water for three weeks, roots forming (episodic, current action).\n- User got the leaf cutting from a friend, doesn't know the succulent type (fact).\n- User is trying neem oil on African violet for spider mites (action, episodic).\n- Also consider first 3 messages are overlapping and not used, but they contain info about fertilizing spider plant, watering snake plant on Feb 10, considering humidifier. But those are in first 3, so skip. Only extract from 4 onward.\n\nThus memories:\n1. User attended a houseplant workshop at a local nursery and learned propagation tips.\n2. User is propagating a succulent from a leaf cutting; the cutting has been in water for three weeks and roots are forming.\n3. User got the succulent leaf cutting from a friend and does not know the succulent type.\n4. User is trying neem oil on an African violet that has been struggling with spider mites.\n\nNo time normalization needed except \"recently\" is vague. Use empty time. Location for workshop: \"local nursery\". Keywords.\n\nMessages 8-15: These are about analyzing benefits, formatting, product description, customer avatar. They are task instructions, not long-term user profile. The user is directing the assistant, but that is a temporary interaction style. Not extracting. The avatar creation is hypothetical, not user's own identity. Skip.\n\nSo output JSON with 4 memories."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1945,
+    "completion_tokens": 855,
+    "total_tokens": 2800,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 442
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 793
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

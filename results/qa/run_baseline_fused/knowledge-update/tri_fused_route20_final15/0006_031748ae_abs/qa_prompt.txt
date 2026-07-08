@@ -1,0 +1,100 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-05-24 09:15:00
+content: The user is a Senior Software Engineer leading a team of 4 engineers.
+
+[2]
+source_time: 2023-05-27 10:13:00.500000
+content: User is a Senior Software Engineer.
+
+[3]
+source_time: 2023-05-27 10:13:00.500000
+content: User leads a team of five engineers.
+
+[4]
+source_time: 2023-05-25 12:30:00
+content: The user plans to organize a team outing for 5 people, including 4 engineers and manager Rachel.
+reason: team building
+purpose: team building
+
+[5]
+source_time: 2023-05-25 19:20:02.500000
+content: The user has many instruments.
+
+[6]
+source_time: 2023-05-24 09:15:00.500000
+content: The user's manager is Rachel.
+
+[7]
+source_time: 2023-05-13 13:52:01.500000
+content: User started listening to audiobooks on their commute on 2023-05-13.
+reason: to pass time
+purpose: make commute more enjoyable
+
+[8]
+source_time: 2023-05-05 13:54:00
+content: The user is interested in learning how to write jokes.
+
+[9]
+source_time: 2023-05-17 14:24:02
+content: The user has applied to volunteer as an usher at their local theater.
+
+[10]
+source_time: 2023-05-08 20:00:00
+content: The user is interested in a fictional character named Alaric whose mentor is a wise old engineer named Gaius.
+
+[11]
+source_time: 2023-05-27 01:49:00.500000
+content: User started listening to The Book of Mormon soundtrack on May 28, 2023 and enjoys it.
+
+[12]
+source_time: 2023-05-13 16:43:02.500000
+content: The user has a daily commute where they listen to music.
+
+[13]
+source_time: 2023-05-22 07:47:00.500000
+content: User believes that social media plays a big role in promoting diversity and representation by amplifying marginalized voices and stories.
+
+[14]
+source_time: 2023-05-13 16:43:02.500000
+content: The user became hooked on the Hamilton soundtrack after several listens and has been listening to it daily on their commute for two weeks as of May 13, 2023.
+
+[15]
+source_time: 2023-05-17 08:47:00
+content: The user recently tried a new fajita seasoning in a chicken fajita recipe.
+
+Now answer the question:
+User Question:How many engineers do I lead when I just started my new role as Software Engineer Manager?
+Question Date:2023/06/06 (Tue) 08:19

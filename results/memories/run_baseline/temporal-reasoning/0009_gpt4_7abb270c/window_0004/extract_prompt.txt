@@ -1,0 +1,144 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-01-22T20:21:02, Sun] 1.User: That's a great point about the art world being all about community and shared passion. I did have a few interesting conversations during the reception, actually. I met a few artists who were working on projects related to feminist art and we exchanged contact information to potentially collaborate in the future. I also met a curator who was interested in learning more about my own artistic practice and offered some valuable advice on how to get my work seen by a wider audience.
+
+It's always exciting to meet like-minded individuals who share your passions and are working towards similar goals. And you're right, you never know what opportunities might arise from those connections. I'm looking forward to seeing how those conversations might develop in the future.
+
+Speaking of artistic practice, I've been thinking about exploring more interactive and immersive art installations. Do you have any recommendations for artists or exhibitions that I should check out for inspiration?
+[2023-01-22T20:21:02.500000, Sun] 2.User: I'm really interested in exploring themes related to identity, memory, and the human experience. I think interactive and immersive installations can be a powerful way to engage audiences and create a sense of empathy and connection.
+
+I've been thinking about creating an installation that incorporates sound, light, and texture to recreate the sensation of being in a specific environment or memory. For example, I might create an installation that simulates the experience of walking through a forest, complete with the sounds of birds chirping and leaves rustling, and the scent of damp earth.
+
+I'm also interested in exploring the idea of collective memory and how our individual experiences are shaped by our shared cultural and historical contexts. I might create an installation that incorporates found objects, images, and sounds from different cultures and time periods to create a sense of shared human experience.
+
+Do you have any thoughts on how I could approach these themes and ideas? Are there any specific technologies or techniques that you think would be well-suited to creating these kinds of installations
+[2023-01-22T17:03:00, Sun] 3.User: Hani Kazmi
+Give me a sample itinerary for a trip from London to Madeira with a couple of days stopover in Madrid
+[2023-01-27T11:21:00, Fri] 4.User: I'm looking for some new TV shows to watch. Can you recommend something similar to "Stranger Things" or "The Crown"?
+[2023-01-27T11:21:00.500000, Fri] 5.User: I've been meaning to check out "The Haunting of Hill House" since I finished "Stranger Things". By the way, have you got any recommendations for podcasts similar to "My Favorite Murder"? I really enjoy listening to true crime stories during my daily commute.
+[2023-01-27T11:21:01, Fri] 6.User: I've been listening to "My Favorite Murder" for over a year now, and I'm always looking for new true crime podcasts to listen to. I think I'll check out "Crime Junkie" and "Last Podcast on the Left" first, since they sound like they have a similar tone to "My Favorite Murder". By the way, I've been really into TV shows lately, and I just realized I've been watching a lot of Netflix originals. Do you think I can get a list of all the Netflix original shows that have been released this year?
+[2023-01-27T11:21:01.500000, Fri] 7.User: That's a great list, thanks! I've been meaning to check out "The Sandman" since I'm a big fan of the comic book series. By the way, I realized I've been watching a lot of Netflix originals lately, and I think it's because I finally got my new Netflix subscription around the 15th of March. Do you have any recommendations for shows similar to "Brooklyn Nine-Nine", which is one of my favorite comedies?
+[2023-01-27T11:21:02, Fri] 8.User: I'm really enjoying the variety of shows and movies on Netflix. I've been binge-watching a lot of TV shows lately, especially since I got my new subscription. Speaking of which, do you think you can help me find some documentaries similar to "Tiger King"? I loved the wild ride that documentary took me on!
+[2023-01-27T11:21:02.500000, Fri] 9.User: I think it's the combination of the characters, the stories, and the sheer absurdity of the situations that makes documentaries like "Tiger King" so captivating. There's something fascinating about exploring the lives of people who are often larger than life, and the wild and unpredictable nature of their stories. Additionally, I think the fact that these stories are true and not scripted makes them even more compelling.
+[2023-01-28T04:55:00, Sat] 10.User: Are there any specific techniques or methods for evaluating the reliability of a belief or truth?
+[2023-01-28T04:55:00.500000, Sat] 11.User: Can you suggest some specific red flags or warning signs that might indicate that a belief or truth is unreliable or questionable?
+[2023-01-28T04:55:01, Sat] 12.User: It seems like evaluating the reliability of a belief or truth can be quite challenging. How can someone differentiate between conflicting sources of information?
+[2023-01-28T04:55:01.500000, Sat] 13.User: I'm still finding it difficult to determine which source of information is credible when they all seem to have different biases and opinions. How can I be sure that I'm not just confirming my own beliefs and ignoring evidence to the contrary?
+[2023-01-28T04:55:02, Sat] 14.User: I don't understand why evaluating reliable sources is so important. Can't I just believe what I want to believe?
+[2023-01-28T04:55:02.500000, Sat] 15.User: But can't people have beliefs that are based on faith or personal experience? How do we evaluate the reliability of those beliefs?

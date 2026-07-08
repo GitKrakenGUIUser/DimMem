@@ -1,0 +1,107 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-03-20 17:29:01
+content: The user had their road bike serviced at Pedal Power on March 10, 2023, where the brake pads and cables were replaced.
+
+[2]
+source_time: 2023-03-20 01:05:02
+content: User planned to mow their lawn on the weekend after March 20, 2023.
+purpose: lawn care
+
+[3]
+source_time: 2023-03-20 21:42:00.500000
+content: The user plans to declutter their desk and workspace on the weekend of March 25-26, 2023.
+purpose: declutter
+
+[4]
+source_time: 2023-03-20 17:01:00
+content: The user planned a trip to Europe in April 2023.
+purpose: travel
+
+[5]
+source_time: 2023-03-20 10:35:01.500000
+content: The user planned a 40-60 mile bike ride on the weekend of March 25-26, 2023, in the San Francisco Bay Area, including crossing the Golden Gate Bridge on Route 1 (Marin Headlands and Highway 1), preferring paved roads with hills and scenic coastal/rural views.
+
+[6]
+source_time: 2023-03-20 05:14:02
+content: User plans to check out restaurants in the downtown area this weekend (around March 25-26, 2023).
+purpose: find lunch or dinner
+
+[7]
+source_time: 2023-03-20 14:57:01
+content: User watched a lot of documentaries on Netflix in the three months prior to March 20, 2023.
+
+[8]
+source_time: 2023-03-20 02:04:00.500000
+content: The user had their Toyota Camry serviced at the Toyota dealership on January 10, 2023, for $250, including air filter replacement, oil change, and tire rotation.
+reason: Vehicle maintenance
+purpose: To maintain the car
+
+[9]
+source_time: 2023-03-20 00:12:01.500000
+content: User is interested in a Thule Hitch Bike Rack for two bikes.
+
+[10]
+source_time: 2023-03-20 10:35:01
+content: On March 2, 2023, the user cleaned and lubricated the chain of their road bike, which improved shifting performance.
+reason: To improve shifting performance
+
+[11]
+source_time: 2023-03-20 16:48:00
+content: The user is planning to build a small cabin on the inherited plot of land, which is located in a rural area.
+purpose: to build a cabin
+
+[12]
+source_time: 2023-03-20 14:31:02.500000
+content: User is considering canceling their HBO subscription and comparing it with Hulu to see which streaming service offers more shows they would be interested in.
+reason: wanting to decide which service to keep
+purpose: find better streaming service
+
+[13]
+source_time: 2023-03-20 00:35:02.500000
+content: User moved into a new house as of March 20, 2023.
+
+[14]
+source_time: 2023-03-20 12:18:02
+content: The user plans to try Dinnerly meal kit service.
+
+[15]
+source_time: 2023-03-20 05:14:02.500000
+content: User plans to check out thrift stores in the downtown area near the Zara location this weekend (around March 25-26, 2023).
+purpose: thrift shopping
+
+Now answer the question:
+User Question:How many bikes did I service or plan to service in March?
+Question Date:2023/03/20 (Mon) 23:57

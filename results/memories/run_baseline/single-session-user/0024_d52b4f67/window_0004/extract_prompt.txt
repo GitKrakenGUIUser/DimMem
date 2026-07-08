@@ -1,0 +1,137 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-22T11:46:00.500000, Mon] 1.User: I'd like to focus on character development, as I've been struggling to create relatable and believable characters. Do you have any resources or exercises that can help me with that?
+[2023-05-22T11:46:01, Mon] 2.User: I think I'll start with the character interviews. I've heard of this exercise before, but I've never actually tried it. I'll give it a shot and see what kind of insights I can gain from my characters. By the way, I've been doing daily journaling since my mindfulness workshop in February, and it's really helped me clarify my thoughts and feelings. I'm hoping this character interview exercise will have a similar effect on my writing.
+[2023-05-22T11:46:01.500000, Mon] 3.User: I think I'll write the answers in a separate document, at least to start with. That way, I can really focus on getting into my character's head without worrying about fitting it into the story just yet. I might even try to do a few interviews with different characters to see how they interact with each other. Speaking of which, I've been meaning to work on my dialogue skills, so this exercise could be a great way to practice that as well. Do you have any tips on writing realistic dialogue?
+[2023-05-22T11:46:02, Mon] 4.User: I think I'll start with my main character, Emily, and see how she responds to some of these questions. I might even try to do a few interviews with her at different points in the story to see how she changes and grows. Thanks for the tips on dialogue too, I'll definitely keep those in mind as I'm writing. By the way, I've been thinking about the writing workshop I took back in October, and how it really helped me focus on my writing goals. I'm hoping this character interview exercise will have a similar effect on my character development.
+[2023-05-22T11:46:02.500000, Mon] 5.User: I think Emily will be a bit hesitant at first, but once she opens up, she'll be pretty candid about her thoughts and feelings. I'm hoping to explore her motivations and desires more deeply, especially when it comes to her relationships and career goals. I have a sense that she's struggling with some inner conflicts, and I want to understand what's driving those conflicts and how they'll impact her decisions throughout the story.
+
+I'm also curious to see how she'll respond to some of the more personal questions, like her greatest fear or most painful memory. I have a feeling that she's been carrying around some emotional baggage for a while, and I want to get to the root of that. By understanding her vulnerabilities, I hope to make her a more relatable and sympathetic character.
+
+Overall, I'm excited to dig deeper into Emily's psyche and see what insights I can uncover. I have a feeling that this exercise will not only help me develop her character but also inform the direction of the
+[2023-05-22T11:59:00, Mon] 6.User: I'm planning a trip to Sequoia National Park and I'm wondering if you can recommend some hiking trails for me. By the way, I just got back from a 5-day camping trip to Yosemite National Park with my friends Rachel and Mike about three weeks ago, and I'm still on a high from that trip!
+[2023-05-22T11:59:00.500000, Mon] 7.User: I'm particularly interested in the Alta Peak Trail. Can you tell me more about the difficulty level and what kind of preparations I should make for the hike?
+[2023-05-22T11:59:01, Mon] 8.User: I'm planning to camp at the Lodgepole Campground, which I've heard has some great amenities. Do you know if the campground has showers and laundry facilities? Also, are there any good restaurants or food options nearby?
+[2023-05-22T11:59:01.500000, Mon] 9.User: I'm really looking forward to staying at Lodgepole Campground. I've heard the scenery around the campground is just amazing. By the way, speaking of camping, I just got back from a 5-day camping trip to Yosemite National Park with my friends Rachel and Mike about three weeks ago, and we had an amazing time hiking to Vernal Falls and Mirror Lake.
+[2023-05-22T11:59:02, Mon] 10.User: Yeah, it was an amazing trip! I'm really excited to explore Sequoia National Park now. Can you tell me more about the General Sherman Tree and the other giant sequoia groves? Are there any specific trails or viewpoints that I shouldn't miss?
+[2023-05-22T11:59:02.500000, Mon] 11.User: I'm so excited to explore the giant sequoias! I've heard that the Crystal Cave is also a must-see, but I'm not sure if it's open year-round. Can you tell me more about the cave and if it's accessible during my visit?
+[2023-05-22T13:47:00, Mon] 12.User: How does Boeing's focus on safety impact its competitive advantage in the market?
+[2023-05-22T13:47:00.500000, Mon] 13.User: It's good to know that Boeing places a strong emphasis on safety, but how does their focus on cost-cutting impact their commitment to safety?
+[2023-05-22T13:47:01, Mon] 14.User: It seems that Boeing's recent issues with the 737 MAX have put a dent in their reputation for safety. Do you think they will be able to recover and regain the trust of customers?
+[2023-05-22T13:47:01.500000, Mon] 15.User: Do you think Boeing's competitors will be able to gain an advantage from the issues with the 737 MAX?

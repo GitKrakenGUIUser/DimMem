@@ -1,0 +1,22 @@
+{
+  "conv_name": "temporal-reasoning",
+  "index": 20,
+  "question": "How many days ago did I attend the Maundy Thursday service at the Episcopal Church?",
+  "ok": true,
+  "error": null,
+  "elapsed_seconds": 7.2439844608306885,
+  "usage": {
+    "prompt_tokens": 692,
+    "completion_tokens": 717,
+    "total_tokens": 1409,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 628
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 52
+  },
+  "output_dir": "results/query_analysis/run_baseline/temporal-reasoning/0020_gpt4_b5700ca9"
+}

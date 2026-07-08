@@ -1,0 +1,32 @@
+{
+  "id": "fa759b6c-a029-401e-b74b-97065d511b2d",
+  "object": "chat.completion",
+  "created": 1783359037,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": [\n    {\n      \"source_id\": 10,\n      \"content\": \"The user buys organic produce and believes it benefits personal health, the environment, and farm workers.\",\n      \"dimension\": {\n        \"memory_type\": \"profile\",\n        \"time\": \"\",\n        \"location\": \"\",\n        \"reason\": \"\",\n        \"purpose\": \"\",\n        \"keywords\": [\"organic produce\", \"personal health\", \"environment\", \"farm workers\"]\n      }\n    }\n  ]\n}",
+        "reasoning_content": "We need to extract memories from messages 4-10. The first 3 messages are overlapping context, so ignore them. Let's analyze each message from 4 to 10.\n\nMessage 4: User: \"It's good to know that there are measures that can be taken to improve the global economy. Are there any specific countries or regions that are currently driving economic growth?\" This is a question about global economy; no factual, episodic, or profile info to extract.\n\nMessage 5: User: \"It's interesting to see how the global economy is changing and evolving. Do you think there will be any new emerging economies in the future?\" Again, just a question.\n\nMessage 6: User: \"It's exciting to think about the potential for new emerging economies in the future. Do you think the global economy will become more evenly distributed among countries?\" Another question.\n\nMessage 7: User: \"It's interesting to consider how the global economy will continue to evolve in the future. I wonder how factors like climate change and environmental sustainability will play a role.\" Question.\n\nMessage 8: User: \"What are the primary factors driving the rise in demand for organic produce in the United States?\" Question.\n\nMessage 9: User: \"I've also heard that buying organic produce is better for the welfare of farm workers. Is that true?\" Question, but also expresses an assumption/interest in organic produce and farm worker welfare. Could be a profile hint: user is interested in organic produce and its social benefits. But it's just a question, not a statement of preference. However, the user says \"I've also heard that buying organic produce is better for the welfare of farm workers.\" This indicates that the user has knowledge or interest in this topic. Might be too weak to extract as a profile.\n\nMessage 10: User: \"That's really great to hear! I feel like I'm not only doing something good for myself by buying organic produce, but also for the environment and for the people who work on the farms.\" This is a reaction to the assistant's response (which we don't see). The user expresses a positive feeling about buying organic produce, implying they buy organic produce. This can be extracted as a profile: The user values buying organic produce for personal health, environmental, and social benefits. Also implies the user purchases organic produce.\n\nSo possible extracts: \n- Profile: The user buys organic produce and believes it benefits personal health, the environment, and farm workers.\n- Could also be a fact about the user's behavior, but since it's a preference/behavior pattern, profile is appropriate.\n\nAlso note message 1 (overlapping) contains a past event: driving to sister's place, helping move, detour due to landslide. But that's in the first 3 messages, so we cannot extract from it. The instructions say \"The first 3 messages ... must not be used as new memory sources.\" So ignore.\n\nThus only message 10 yields extractable content. Message 9 might be indirectly supporting.\n\nLet's craft the memory. Content should be self-contained: \"The user buys organic produce and believes it benefits personal health, the environment, and farm workers.\" But the user's statement is \"I feel like I'm not only doing something good for myself by buying organic produce, but also for the environment and for the people who work on the farms.\" So it's clear they buy organic produce. We can include that.\n\nMemory type: profile.\n\nTime: no specific time, the statement is present tense, general habit. Use \"\".\n\nLocation: \"\".\n\nReason: The content implies reasons: personal health, environment, farm worker welfare. But reason is for the memory? Actually reason field is for cause of the event. This is a profile, not an event. So leave empty.\n\nPurpose: \"\".\n\nKeywords: \"organic produce\", \"buying organic\", \"personal health\", \"environment\", \"farm workers\" – but keywords should be short noun phrases. Use: [\"organic produce\", \"personal health\", \"environment\", \"farm workers\"].\n\nAlternatively, just [\"organic produce\", \"farm workers\", \"environment\"] but \"personal health\" is also relevant.\n\nAlso, note that the user expressed interest in organic produce earlier (message 8-9). But extract only from message 10.\n\nOne memory should suffice. If we want to be atomic, we could separate into multiple, but the content is a single statement. I'll output one memory.\n\nNow output JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1847,
+    "completion_tokens": 1016,
+    "total_tokens": 2863,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 913
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 695
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

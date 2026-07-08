@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-21T03:40:00.500000, Sun] 1.User: That's really helpful, thanks! I've tried some of those tips before, but I'll definitely keep them in mind for my Europe trip. Another thing I'm considering is the type of activities I want to do while I'm there. When I was in Japan, I was able to change my plans on a whim and explore whatever caught my interest, which was really liberating. Do you have any recommendations for flexible tour operators or travel companies that can accommodate spontaneous changes in plans?
+[2023-05-21T03:40:01, Sun] 2.User: I'll definitely look into those tour operators and travel companies. Another thing I'm thinking about is how to make the most of my solo travel experience. In the past, I've found that solo travel can be really empowering and confidence-boosting, but it also means I have to navigate unfamiliar streets and transportation systems on my own, which can be challenging. Do you have any tips on how to overcome language barriers and navigate unfamiliar places as a solo traveler?
+[2023-05-21T03:40:01.500000, Sun] 3.User: That's really helpful! I'm definitely going to keep those tips in mind. I've also been thinking about how to stay safe while traveling solo, especially at night. Do you have any advice on how to stay safe in unfamiliar cities, especially when walking alone at night?
+[2023-05-21T03:40:02, Sun] 4.User: I'm thinking about the type of accommodations I want to stay in while I'm in Europe. When I was in Japan, I stayed in a mix of hostels and hotels, and I found that hostels were a great way to meet other travelers. Do you have any recommendations for social hostels or budget-friendly accommodations in Europe that can help me meet other travelers?
+[2023-05-21T03:40:02.500000, Sun] 5.User: I'm thinking about the type of transportation I'll use while I'm in Europe. When I was in Japan, I relied heavily on public transportation, and it was really efficient and convenient. Do you have any recommendations for transportation options in Europe, such as trains, buses, or car rentals, and how to navigate them?
+[2023-05-21T15:45:00, Sun] 6.User: I've been having some issues with my internet connection lately, and I'm wondering if you can help me troubleshoot the problem. By the way, I recently upgraded my router to a TP-Link Archer AX50, which I bought online from Amazon for around $150, and it's been a huge improvement so far.
+[2023-05-21T15:45:00.500000, Sun] 7.User: I'm experiencing slow internet speeds, especially in the evening when multiple devices are connected. The issues started a few days ago, and it's affecting all devices connected to the router. I haven't noticed any specific patterns, but I did restart the router a few times, which seemed to temporarily fix the issue. However, the problem persists. I haven't checked my ISP's status page yet, but I'll do that now.
+[2023-05-21T15:45:01, Sun] 8.User: I've checked my ISP's status page, and there are no reported outages or maintenance in my area. I'm still experiencing slow internet speeds, especially in the evening. I'm not sure about the router configuration or firmware updates, so I might need some guidance on that.
+[2023-05-21T15:45:01.500000, Sun] 9.User: Can you walk me through the process of updating the firmware on my TP-Link Archer AX50 router? I'm not sure how to do that.
+[2023-05-21T15:45:02, Sun] 10.User: I'm not very tech-savvy, so I appreciate the step-by-step guide. Just to confirm, I should download the firmware file from TP-Link's website and then upload it to my router through the router's web interface, right? And I should make sure not to interrupt the update process or turn off the router during the update. Is that correct?
+[2023-05-21T15:45:02.500000, Sun] 11.User: Now that we've covered the firmware update process, I'd like to go back to the original issue you mentioned - the slow internet speeds. Have you noticed any changes in your internet speed since you upgraded to the TP-Link Archer AX50 router? And have you tried any of the troubleshooting steps I mentioned earlier, such as checking for channel congestion or device interference?
+[2023-05-21T16:14:00, Sun] 12.User: How do you make a kubernetes daemonset tolerate any taints?
+[2023-05-21T23:32:00, Sun] 13.User: For all my future prompts , always answer in short blocks, after each one stop and ask me if to continue. please confirm
+[2023-05-22T01:18:00, Mon] 14.User: I'm thinking of upgrading my car's suspension for better handling on the track. I just attended a car maintenance workshop on preparing cars for track days and got some valuable feedback from experienced drivers and mechanics, which made me realize how important it is to get it right. Can you give me some general advice on what to consider when choosing coilovers?
+[2023-05-22T01:18:00.500000, Mon] 15.User: I'm trying to decide between two coilover brands, Ohlins and KW. I've heard great things about both, but I'm not sure which one would be a better fit for my car. Can you tell me more about the differences between them?

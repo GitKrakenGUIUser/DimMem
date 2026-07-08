@@ -1,0 +1,546 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "multi-session",
+  "sample_id": "0000_88432d0a_abs",
+  "query_text": "How many times did the user bake egg tarts in the past two weeks?",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 204,
+  "fused_candidate_count_before_final_cut": 47,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/multi-session/tri_fused_route20_final15/0000_88432d0a_abs",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 11.07791466600014,
+      "memory_type": "episodic",
+      "content": "The user has been standing for the entire commute ride for the two weeks prior to 2023-05-27.",
+      "source_boundary_id": "12_0116",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 11.07791466600014,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 11.07791466600014
+        }
+      ],
+      "score_components": {
+        "bm25_score": 11.07791466600014,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 7.321722228271259,
+      "memory_type": "episodic",
+      "content": "As of 2023-05-20, the user has been watching 'The Crown' season 3 for two weeks and is currently on episode 7.",
+      "source_boundary_id": "1_0018",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 7.321722228271259,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 7.321722228271259
+        },
+        {
+          "method": "structured",
+          "rank": 13,
+          "score": 0.19999999999999998
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.321722228271259,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 6.187159576849329,
+      "memory_type": "profile",
+      "content": "The user goes to the gym three times a week, which has improved their energy levels, mood, and focus.",
+      "source_boundary_id": "7_0075",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 6.187159576849329,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 6.187159576849329
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.187159576849329,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 5.368380186445391,
+      "memory_type": "episodic",
+      "content": "User used oven convection setting for the first time on May 25, 2023 to bake cookies.",
+      "source_boundary_id": "16_0154",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 5.368380186445391,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 5.368380186445391
+        },
+        {
+          "method": "structured",
+          "rank": 3,
+          "score": 0.36666666666666664
+        },
+        {
+          "method": "minilm",
+          "rank": 5,
+          "score": 0.4179763925537592
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.368380186445391,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 5.282049130970206,
+      "memory_type": "episodic",
+      "content": "User plans to bake chicken wings for dinner on May 28, 2023.",
+      "source_boundary_id": "16_0153",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 5.282049130970206,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 5.282049130970206
+        },
+        {
+          "method": "structured",
+          "rank": 2,
+          "score": 0.36666666666666664
+        },
+        {
+          "method": "minilm",
+          "rank": 14,
+          "score": 0.337244008074591
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.282049130970206,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 4.92701768730064,
+      "memory_type": "episodic",
+      "content": "User attempted a sourdough bread recipe on 2023-05-23, but the dough did not rise and the bread turned out dense and heavy.",
+      "source_boundary_id": "17_0163",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 4.92701768730064,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 4.92701768730064
+        },
+        {
+          "method": "minilm",
+          "rank": 8,
+          "score": 0.3914248280154388
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.92701768730064,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 4.022000402098257,
+      "memory_type": "profile",
+      "content": "The user runs on Sundays and does bodyweight exercises at home 2-3 times per week to improve strength and endurance.",
+      "source_boundary_id": "5_0056",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 4.022000402098257,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 4.022000402098257
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.022000402098257,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 3.920611717509638,
+      "memory_type": "episodic",
+      "content": "User used convection setting on oven to bake cookies on 2023-05-25, achieving crispy outside and chewy inside.",
+      "source_boundary_id": "17_0162",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 3.920611717509638,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 3.920611717509638
+        },
+        {
+          "method": "structured",
+          "rank": 4,
+          "score": 0.36666666666666664
+        },
+        {
+          "method": "minilm",
+          "rank": 12,
+          "score": 0.3775661097842534
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.920611717509638,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 3.7373339741104736,
+      "memory_type": "fact",
+      "content": "The user has been spending time alone focusing on hobbies and recharging for a few weeks as of 2023-05-24.",
+      "source_boundary_id": "7_0065",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 3.7373339741104736,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 3.7373339741104736
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.7373339741104736,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 3.617450180106858,
+      "memory_type": "fact",
+      "content": "The user owns a new stand mixer and has been using it extensively since acquiring it a few weeks before 2023-05-20.",
+      "source_boundary_id": "1_0015",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 3.617450180106858,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 3.617450180106858
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.617450180106858,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 3.4397057631182415,
+      "memory_type": "fact",
+      "content": "User has been taking guitar lessons for two months as of 2023-05-22, practices 30 minutes daily, and has progressed from beginner to intermediate level.",
+      "source_boundary_id": "4_0040",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 3.4397057631182415,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 3.4397057631182415
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.4397057631182415,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 3.237291920370932,
+      "memory_type": "episodic",
+      "content": "As of 2023-05-20, the user has been watching the 'Daily Dose of Laughter' playlist on Peacock every morning for about three weeks.",
+      "source_boundary_id": "1_0021",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 3.237291920370932,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 3.237291920370932
+        },
+        {
+          "method": "structured",
+          "rank": 14,
+          "score": 0.19999999999999998
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.237291920370932,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 3.0495518644824435,
+      "memory_type": "episodic",
+      "content": "The user baked a chocolate cake for her sister's birthday party last weekend (around May 13-14, 2023) and found that espresso powder enhanced the flavor.",
+      "source_boundary_id": "all_memories_0005",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 3.0495518644824435,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 3.0495518644824435
+        },
+        {
+          "method": "structured",
+          "rank": 1,
+          "score": 0.36666666666666664
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.0495518644824435,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 2.5156950196204186,
+      "memory_type": "profile",
+      "content": "The user is interested in music festivals in the United States.",
+      "source_boundary_id": "12_0125",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 2.5156950196204186,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 2.5156950196204186
+        }
+      ],
+      "score_components": {
+        "bm25_score": 2.5156950196204186,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 2.347558629884268,
+      "memory_type": "profile",
+      "content": "The user is interested in restaurant recommendations near Wells Fargo Center in Philadelphia.",
+      "source_boundary_id": "12_0123",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 2.347558629884268,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 2.347558629884268
+        }
+      ],
+      "score_components": {
+        "bm25_score": 2.347558629884268,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 12.809558391571045
+}

@@ -1,0 +1,32 @@
+{
+  "id": "2938851d-c49c-4766-be29-3ac10786796d",
+  "object": "chat.completion",
+  "created": 1783427800,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\": \"WRONG\"}",
+        "reasoning_content": "We need to determine if the generated answer \"I don't know\" is correct relative to the gold answer \"9:00 AM\". The generated answer does not provide any time, it simply states lack of knowledge. This is not touching on the same topic; it's a refusal. Therefore it should be WRONG."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 404,
+    "completion_tokens": 72,
+    "total_tokens": 476,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 148
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,2959 @@
+[
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user attended a Maundy Thursday service at an Episcopal Church on April 6, 2023.",
+    "dimension": {
+      "time": "2023-04-06",
+      "location": "Episcopal Church",
+      "reason": "",
+      "purpose": "religious observance",
+      "keywords": [
+        "Maundy Thursday",
+        "Episcopal Church",
+        "religious service"
+      ]
+    },
+    "entities": [
+      "Maundy Thursday",
+      "Episcopal Church",
+      "religious service"
+    ],
+    "embedding_text": "The user attended a Maundy Thursday service at an Episcopal Church on April 6, 2023.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0093",
+    "source_time": "2023-04-06 22:22:01.500000",
+    "record_time": "2026-07-07T19:51:01.625080",
+    "score": 32.78776080142875,
+    "score_components": {
+      "bm25_score": 32.78776080142875,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 32.78776080142875,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 32.78776080142875
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 1.0
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.8514925693224918
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "On March 29, 2023, the user attended an Easter Sunday service at their local church, where a sermon on renewal and forgiveness inspired reflection on their values and priorities.",
+    "dimension": {
+      "time": "2023-03-29",
+      "location": "local church",
+      "reason": "Easter Sunday service and sermon on renewal and forgiveness",
+      "purpose": "to attend church and reflect",
+      "keywords": [
+        "Easter",
+        "church",
+        "sermon",
+        "renewal",
+        "forgiveness",
+        "reflection"
+      ]
+    },
+    "entities": [
+      "Easter",
+      "church",
+      "sermon",
+      "renewal",
+      "forgiveness",
+      "reflection"
+    ],
+    "embedding_text": "On March 29, 2023, the user attended an Easter Sunday service at their local church, where a sermon on renewal and forgiveness inspired reflection on their values and priorities.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0055",
+    "source_time": "2023-03-24 21:33:02",
+    "record_time": "2026-07-07T19:51:01.624852",
+    "score": 13.558345305716749,
+    "score_components": {
+      "bm25_score": 13.558345305716749,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 13.558345305716749,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 13.558345305716749
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.46666666666666673
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.44693328943206395
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "User plans to start a workout routine at 2-3 days per week.",
+    "dimension": {
+      "time": "2023-04-06",
+      "location": "",
+      "reason": "",
+      "purpose": "to build a consistent exercise habit",
+      "keywords": [
+        "workout frequency",
+        "2-3 days per week",
+        "exercise plan"
+      ]
+    },
+    "entities": [
+      "workout frequency",
+      "2-3 days per week",
+      "exercise plan"
+    ],
+    "embedding_text": "User plans to start a workout routine at 2-3 days per week.",
+    "source_message_ids": [
+      "19"
+    ],
+    "source_boundary_id": "19_0185",
+    "source_time": "2023-04-06 04:29:00.500000",
+    "record_time": "2026-07-07T19:51:01.625642",
+    "score": 8.859601069833092,
+    "score_components": {
+      "bm25_score": 8.859601069833092,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 8.859601069833092,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 8.859601069833092
+      },
+      {
+        "method": "minilm",
+        "rank": 20,
+        "score": 0.24078351461353678
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user planned to invite friends from their church to volunteer at the food bank.",
+    "dimension": {
+      "time": "2023-04-06",
+      "location": "church and food bank",
+      "reason": "to volunteer together",
+      "purpose": "group volunteering",
+      "keywords": [
+        "church",
+        "friends",
+        "food bank",
+        "group volunteer"
+      ]
+    },
+    "entities": [
+      "church",
+      "friends",
+      "food bank",
+      "group volunteer"
+    ],
+    "embedding_text": "The user planned to invite friends from their church to volunteer at the food bank.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0095",
+    "source_time": "2023-04-06 22:22:02",
+    "record_time": "2026-07-07T19:51:01.625092",
+    "score": 7.519956801583945,
+    "score_components": {
+      "bm25_score": 7.519956801583945,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 7.519956801583945,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 7.519956801583945
+      },
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.4
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.35744715889247103
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user volunteered at an Easter Egg Hunt event in late March or early April 2023.",
+    "dimension": {
+      "time": "2023-03-30 to 2023-04-05",
+      "location": "",
+      "reason": "",
+      "purpose": "community service",
+      "keywords": [
+        "Easter Egg Hunt",
+        "volunteer"
+      ]
+    },
+    "entities": [
+      "Easter Egg Hunt",
+      "volunteer"
+    ],
+    "embedding_text": "The user volunteered at an Easter Egg Hunt event in late March or early April 2023.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0090",
+    "source_time": "2023-04-06 22:22:00",
+    "record_time": "2026-07-07T19:51:01.625063",
+    "score": 6.337774872113953,
+    "score_components": {
+      "bm25_score": 6.337774872113953,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 6.337774872113953,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 6.337774872113953
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.4
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.4104742064092963
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "fact",
+    "content": "The user attends a local church.",
+    "dimension": {
+      "time": "",
+      "location": "local church",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "local church",
+        "attendance"
+      ]
+    },
+    "entities": [
+      "local church",
+      "attendance"
+    ],
+    "embedding_text": "The user attends a local church.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0056",
+    "source_time": "2023-03-24 21:33:02.500000",
+    "record_time": "2026-07-07T19:51:01.624858",
+    "score": 6.323211225414933,
+    "score_components": {
+      "bm25_score": 6.323211225414933,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 6.323211225414933,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 6.323211225414933
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.38827859707999834
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "fact",
+    "content": "The user's church group is interested in adopting a specific project at the food bank, such as organizing a food drive or helping with a special event.",
+    "dimension": {
+      "time": "2023-04-06",
+      "location": "food bank",
+      "reason": "to make a significant impact",
+      "purpose": "to contribute to food bank's mission",
+      "keywords": [
+        "church group",
+        "food bank",
+        "food drive",
+        "special event",
+        "adopt project"
+      ]
+    },
+    "entities": [
+      "church group",
+      "food bank",
+      "food drive",
+      "special event",
+      "adopt project"
+    ],
+    "embedding_text": "The user's church group is interested in adopting a specific project at the food bank, such as organizing a food drive or helping with a special event.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0096",
+    "source_time": "2023-04-06 22:22:02.500000",
+    "record_time": "2026-07-07T19:51:01.625098",
+    "score": 5.791505358009296,
+    "score_components": {
+      "bm25_score": 5.791505358009296,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 5.791505358009296,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 5.791505358009296
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user plans to attend a costume party and dress as Roxie Hart or Velma Kelly from the musical Chicago, inspired by flapper-inspired looks and sassy attitude.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "inspired by the musical Chicago",
+      "purpose": "to attend a costume party",
+      "keywords": [
+        "costume party",
+        "Chicago",
+        "Roxie Hart",
+        "Velma Kelly",
+        "flapper"
+      ]
+    },
+    "entities": [
+      "costume party",
+      "Chicago",
+      "Roxie Hart",
+      "Velma Kelly",
+      "flapper"
+    ],
+    "embedding_text": "The user plans to attend a costume party and dress as Roxie Hart or Velma Kelly from the musical Chicago, inspired by flapper-inspired looks and sassy attitude.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0053",
+    "source_time": "2023-03-24 21:33:01",
+    "record_time": "2026-07-07T19:51:01.624840",
+    "score": 5.167449214798248,
+    "score_components": {
+      "bm25_score": 5.167449214798248,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 5.167449214798248,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 5.167449214798248
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "fact",
+    "content": "User has a sleep schedule on Tuesdays and Thursdays: wakes up at 6:30 AM and goes to bed by 10:30 PM the previous night.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to establish a consistent sleep schedule",
+      "purpose": "improve sleep quality",
+      "keywords": [
+        "sleep schedule",
+        "Tuesday",
+        "Thursday",
+        "wake up 6:30 AM",
+        "bedtime 10:30 PM"
+      ]
+    },
+    "entities": [
+      "sleep schedule",
+      "Tuesday",
+      "Thursday",
+      "wake up 6:30 AM",
+      "bedtime 10:30 PM"
+    ],
+    "embedding_text": "User has a sleep schedule on Tuesdays and Thursdays: wakes up at 6:30 AM and goes to bed by 10:30 PM the previous night.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0077",
+    "source_time": "2023-03-31 19:02:00.500000",
+    "record_time": "2026-07-07T19:51:01.624984",
+    "score": 5.095181366149119,
+    "score_components": {
+      "bm25_score": 5.095181366149119,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 5.095181366149119,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 5.095181366149119
+      },
+      {
+        "method": "minilm",
+        "rank": 10,
+        "score": 0.28270878270428756
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "profile",
+    "content": "The user prefers volunteer opportunities related to community service or helping the underprivileged, is available on weekday evenings, and is open to a regular volunteer schedule.",
+    "dimension": {
+      "time": "",
+      "location": "local community",
+      "reason": "",
+      "purpose": "to volunteer",
+      "keywords": [
+        "community service",
+        "underprivileged",
+        "weekday evenings",
+        "regular schedule"
+      ]
+    },
+    "entities": [
+      "community service",
+      "underprivileged",
+      "weekday evenings",
+      "regular schedule"
+    ],
+    "embedding_text": "The user prefers volunteer opportunities related to community service or helping the underprivileged, is available on weekday evenings, and is open to a regular volunteer schedule.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0092",
+    "source_time": "2023-04-06 22:22:00.500000",
+    "record_time": "2026-07-07T19:51:01.625074",
+    "score": 4.508557693847925,
+    "score_components": {
+      "bm25_score": 4.508557693847925,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 4.508557693847925,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 4.508557693847925
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user has seen West Side Story and Les Misérables, and watched Hamilton on Disney+ about a month ago; they are still obsessed with the Hamilton soundtrack.",
+    "dimension": {
+      "time": "2023-02",
+      "location": "Disney+",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "West Side Story",
+        "Les Misérables",
+        "Hamilton",
+        "Disney+",
+        "soundtrack",
+        "obsession"
+      ]
+    },
+    "entities": [
+      "West Side Story",
+      "Les Misérables",
+      "Hamilton",
+      "Disney+",
+      "soundtrack",
+      "obsession"
+    ],
+    "embedding_text": "The user has seen West Side Story and Les Misérables, and watched Hamilton on Disney+ about a month ago; they are still obsessed with the Hamilton soundtrack.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0046",
+    "source_time": "2023-03-24 21:33:00.500000",
+    "record_time": "2026-07-07T19:51:01.624799",
+    "score": 4.300057009648822,
+    "score_components": {
+      "bm25_score": 4.300057009648822,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 4.300057009648822,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 4.300057009648822
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "profile",
+    "content": "The user is interested in volunteering to give back to the community.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "volunteer",
+        "community service",
+        "giving back"
+      ]
+    },
+    "entities": [
+      "volunteer",
+      "community service",
+      "giving back"
+    ],
+    "embedding_text": "The user is interested in volunteering to give back to the community.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0091",
+    "source_time": "2023-04-06 22:22:00",
+    "record_time": "2026-07-07T19:51:01.625068",
+    "score": 4.256627273329375,
+    "score_components": {
+      "bm25_score": 4.256627273329375,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 4.256627273329375,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 4.256627273329375
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user plans to order fabric swatches from West Elm and Crate and Barrel.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to see how they match the new sofa bed",
+      "keywords": [
+        "fabric swatches",
+        "West Elm",
+        "Crate and Barrel"
+      ]
+    },
+    "entities": [
+      "fabric swatches",
+      "West Elm",
+      "Crate and Barrel"
+    ],
+    "embedding_text": "The user plans to order fabric swatches from West Elm and Crate and Barrel.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0173",
+    "source_time": "2023-04-06 16:54:01",
+    "record_time": "2026-07-07T19:51:01.625542",
+    "score": 4.018791622484034,
+    "score_components": {
+      "bm25_score": 4.018791622484034,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 4.018791622484034,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 4.018791622484034
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "profile",
+    "content": "The user plans to set aside every Sunday morning to review transactions and update their expense spreadsheet, and intends to use an automated expense tracking service and browser extension.",
+    "dimension": {
+      "time": "Sunday morning",
+      "location": "",
+      "reason": "to ensure accuracy before the new week begins",
+      "purpose": "to keep track of purchases",
+      "keywords": [
+        "Sunday morning",
+        "transaction review",
+        "spreadsheet",
+        "expense tracking",
+        "browser extension",
+        "automated service"
+      ]
+    },
+    "entities": [
+      "Sunday morning",
+      "transaction review",
+      "spreadsheet",
+      "expense tracking",
+      "browser extension",
+      "automated service"
+    ],
+    "embedding_text": "The user plans to set aside every Sunday morning to review transactions and update their expense spreadsheet, and intends to use an automated expense tracking service and browser extension.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0044",
+    "source_time": "2023-03-24 10:26:02.500000",
+    "record_time": "2026-07-07T19:51:01.624786",
+    "score": 3.820584086470225,
+    "score_components": {
+      "bm25_score": 3.820584086470225,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 3.820584086470225,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 3.820584086470225
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "profile",
+    "content": "The user expresses interest in architecture as a reflection of society's values and traditions, and is curious about how modern architecture evolves with changing societal norms.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "architecture",
+        "societal values",
+        "modern architecture",
+        "cultural reflection"
+      ]
+    },
+    "entities": [
+      "architecture",
+      "societal values",
+      "modern architecture",
+      "cultural reflection"
+    ],
+    "embedding_text": "The user expresses interest in architecture as a reflection of society's values and traditions, and is curious about how modern architecture evolves with changing societal norms.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0180",
+    "source_time": "2023-04-06 17:18:01",
+    "record_time": "2026-07-07T19:51:01.625583",
+    "score": 3.734589580738869,
+    "score_components": {
+      "bm25_score": 3.734589580738869,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 3.734589580738869,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 3.734589580738869
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "fact",
+    "content": "The user has pets at home.",
+    "dimension": {
+      "time": "",
+      "location": "home",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "pets"
+      ]
+    },
+    "entities": [
+      "pets"
+    ],
+    "embedding_text": "The user has pets at home.",
+    "source_message_ids": [
+      "20"
+    ],
+    "source_boundary_id": "20_0192",
+    "source_time": "2023-04-06 18:22:02",
+    "record_time": "2026-07-07T19:51:01.625681",
+    "score": 3.5966195588978724,
+    "score_components": {
+      "bm25_score": 3.5966195588978724,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 16,
+    "retrieval_score": 3.5966195588978724,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 16,
+        "score": 3.5966195588978724
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user requested interpretations of how exotic languages from the Dungeons & Dragons Player's Handbook sound to people who do not speak them.",
+    "dimension": {
+      "time": "2023-03-12",
+      "location": "",
+      "reason": "",
+      "purpose": "to understand the auditory experience of exotic languages",
+      "keywords": [
+        "Dungeons & Dragons",
+        "Player's Handbook",
+        "exotic languages",
+        "language sounds",
+        "interpretation"
+      ]
+    },
+    "entities": [
+      "Dungeons & Dragons",
+      "Player's Handbook",
+      "exotic languages",
+      "language sounds",
+      "interpretation"
+    ],
+    "embedding_text": "The user requested interpretations of how exotic languages from the Dungeons & Dragons Player's Handbook sound to people who do not speak them.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0023",
+    "source_time": "2023-03-12 08:44:01",
+    "record_time": "2026-07-07T19:51:01.624585",
+    "score": 3.49288297145975,
+    "score_components": {
+      "bm25_score": 3.49288297145975,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 17,
+    "retrieval_score": 3.49288297145975,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 17,
+        "score": 3.49288297145975
+      },
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user plans to volunteer at their local food bank.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "volunteer",
+      "keywords": [
+        "volunteer",
+        "food bank"
+      ]
+    },
+    "entities": [
+      "volunteer",
+      "food bank"
+    ],
+    "embedding_text": "The user plans to volunteer at their local food bank.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0013",
+    "source_time": "2023-03-10 21:26:00",
+    "record_time": "2026-07-07T19:51:01.624525",
+    "score": 3.100694319711645,
+    "score_components": {
+      "bm25_score": 3.100694319711645,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 18,
+    "retrieval_score": 3.100694319711645,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 18,
+        "score": 3.100694319711645
+      },
+      {
+        "method": "structured",
+        "rank": 11,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "fact",
+    "content": "The user has an upcoming project at work that is causing anxiety.",
+    "dimension": {
+      "time": "",
+      "location": "work",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "work project",
+        "anxiety"
+      ]
+    },
+    "entities": [
+      "work project",
+      "anxiety"
+    ],
+    "embedding_text": "The user has an upcoming project at work that is causing anxiety.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0060",
+    "source_time": "2023-03-25 06:29:01.500000",
+    "record_time": "2026-07-07T19:51:01.624880",
+    "score": 3.0407964983559115,
+    "score_components": {
+      "bm25_score": 3.0407964983559115,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 19,
+    "retrieval_score": 3.0407964983559115,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 19,
+        "score": 3.0407964983559115
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "User wants recipes for homemade cleaning solutions.",
+    "dimension": {
+      "time": "2023-04-06",
+      "location": "",
+      "reason": "",
+      "purpose": "to use natural cleaning products at home",
+      "keywords": [
+        "homemade cleaning solutions",
+        "recipes"
+      ]
+    },
+    "entities": [
+      "homemade cleaning solutions",
+      "recipes"
+    ],
+    "embedding_text": "User wants recipes for homemade cleaning solutions.",
+    "source_message_ids": [
+      "19"
+    ],
+    "source_boundary_id": "19_0190",
+    "source_time": "2023-04-06 18:22:00.500000",
+    "record_time": "2026-07-07T19:51:01.625670",
+    "score": 2.6921821350951314,
+    "score_components": {
+      "bm25_score": 2.6921821350951314,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 20,
+    "retrieval_score": 2.6921821350951314,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 20,
+        "score": 2.6921821350951314
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user experienced syncing issues with their Fitbit Charge 3 on 2023-03-08.",
+    "dimension": {
+      "time": "2023-03-08",
+      "location": "",
+      "reason": "",
+      "purpose": "troubleshoot",
+      "keywords": [
+        "Fitbit Charge 3",
+        "syncing issue",
+        "troubleshoot"
+      ]
+    },
+    "entities": [
+      "Fitbit Charge 3",
+      "syncing issue",
+      "troubleshoot"
+    ],
+    "embedding_text": "The user experienced syncing issues with their Fitbit Charge 3 on 2023-03-08.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0001",
+    "source_time": "2023-03-08 02:56:00",
+    "record_time": "2026-07-07T19:51:01.624448",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user experienced syncing issues with their Fitbit Charge 3 on 2023-03-08. | Fitbit Charge 3 | syncing issue | troubleshoot | 2023-03-08 | troubleshoot | Fitbit Charge 3 | syncing issue | troubleshoot"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 5,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user reported inconsistent readings from their digital thermometer on 2023-03-08.",
+    "dimension": {
+      "time": "2023-03-08",
+      "location": "",
+      "reason": "",
+      "purpose": "troubleshoot",
+      "keywords": [
+        "digital thermometer",
+        "inconsistent readings",
+        "troubleshoot"
+      ]
+    },
+    "entities": [
+      "digital thermometer",
+      "inconsistent readings",
+      "troubleshoot"
+    ],
+    "embedding_text": "The user reported inconsistent readings from their digital thermometer on 2023-03-08.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0003",
+    "source_time": "2023-03-08 02:56:00.500000",
+    "record_time": "2026-07-07T19:51:01.624463",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user reported inconsistent readings from their digital thermometer on 2023-03-08. | digital thermometer | inconsistent readings | troubleshoot | 2023-03-08 | troubleshoot | digital thermometer | inconsistent readings | troubleshoot"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 6,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user noticed their systolic pressure has been high from their blood pressure monitor on 2023-03-08.",
+    "dimension": {
+      "time": "2023-03-08",
+      "location": "",
+      "reason": "",
+      "purpose": "seeking tips to lower it",
+      "keywords": [
+        "systolic pressure",
+        "high",
+        "diet and exercise"
+      ]
+    },
+    "entities": [
+      "systolic pressure",
+      "high",
+      "diet and exercise"
+    ],
+    "embedding_text": "The user noticed their systolic pressure has been high from their blood pressure monitor on 2023-03-08.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0005",
+    "source_time": "2023-03-08 02:56:01",
+    "record_time": "2026-07-07T19:51:01.624475",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user noticed their systolic pressure has been high from their blood pressure monitor on 2023-03-08. | systolic pressure | high | diet and exercise | 2023-03-08 | seeking tips to lower it | systolic pressure | high | diet and exercise"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 7,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 7,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user noticed an improvement in their skin and hair after taking omega-3 supplements daily as of 2023-03-08.",
+    "dimension": {
+      "time": "2023-03-08",
+      "location": "",
+      "reason": "taking omega-3 supplements",
+      "purpose": "wants more info on benefits",
+      "keywords": [
+        "omega-3",
+        "skin improvement",
+        "hair improvement"
+      ]
+    },
+    "entities": [
+      "omega-3",
+      "skin improvement",
+      "hair improvement"
+    ],
+    "embedding_text": "The user noticed an improvement in their skin and hair after taking omega-3 supplements daily as of 2023-03-08.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0007",
+    "source_time": "2023-03-08 02:56:01.500000",
+    "record_time": "2026-07-07T19:51:01.624488",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user noticed an improvement in their skin and hair after taking omega-3 supplements daily as of 2023-03-08. | omega-3 | skin improvement | hair improvement | 2023-03-08 | taking omega-3 supplements | wants more info on benefits | omega-3 | skin improvement | hair improvement"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 8,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 8,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user plans to buy a new yoga mat with good grip and support.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "current mat is worn out",
+      "purpose": "get a good yoga mat",
+      "keywords": [
+        "yoga mat",
+        "grip",
+        "support",
+        "purchase"
+      ]
+    },
+    "entities": [
+      "yoga mat",
+      "grip",
+      "support",
+      "purchase"
+    ],
+    "embedding_text": "The user plans to buy a new yoga mat with good grip and support.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0009",
+    "source_time": "2023-03-08 02:56:02",
+    "record_time": "2026-07-07T19:51:01.624500",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to buy a new yoga mat with good grip and support. | yoga mat | grip | support | purchase | current mat is worn out | get a good yoga mat | yoga mat | grip | support | purchase"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 9,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 9,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user plans to buy an air purifier to help with allergies.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "current air purifier is old and user has allergies",
+      "purpose": "help with allergies",
+      "keywords": [
+        "air purifier",
+        "allergies",
+        "purchase"
+      ]
+    },
+    "entities": [
+      "air purifier",
+      "allergies",
+      "purchase"
+    ],
+    "embedding_text": "The user plans to buy an air purifier to help with allergies.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0012",
+    "source_time": "2023-03-08 02:56:02.500000",
+    "record_time": "2026-07-07T19:51:01.624519",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to buy an air purifier to help with allergies. | air purifier | allergies | purchase | current air purifier is old and user has allergies | help with allergies | air purifier | allergies | purchase"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 10,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user participated in the 'Walk for Hunger' event on 2023-05-15 and their team raised $1,500 for the food bank.",
+    "dimension": {
+      "time": "2023-05-15",
+      "location": "",
+      "reason": "",
+      "purpose": "raise funds for food bank",
+      "keywords": [
+        "Walk for Hunger",
+        "fundraising",
+        "$1,500",
+        "food bank"
+      ]
+    },
+    "entities": [
+      "Walk for Hunger",
+      "fundraising",
+      "$1,500",
+      "food bank"
+    ],
+    "embedding_text": "The user participated in the 'Walk for Hunger' event on 2023-05-15 and their team raised $1,500 for the food bank.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0014",
+    "source_time": "2023-03-10 21:26:00",
+    "record_time": "2026-07-07T19:51:01.624531",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user participated in the 'Walk for Hunger' event on 2023-05-15 and their team raised $1,500 for the food bank. | Walk for Hunger | fundraising | $1,500 | food bank | 2023-05-15 | raise funds for food bank | Walk for Hunger | fundraising | $1,500 | food bank"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 12,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "User participated in the 'Walk for Hunger' event on May 15th and raised $1,500 for the local food bank.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to raise funds for the local food bank",
+      "keywords": [
+        "Walk for Hunger",
+        "local food bank",
+        "$1500"
+      ]
+    },
+    "entities": [
+      "Walk for Hunger",
+      "local food bank",
+      "$1500"
+    ],
+    "embedding_text": "User participated in the 'Walk for Hunger' event on May 15th and raised $1,500 for the local food bank.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0017",
+    "source_time": "2023-03-10 21:26:00.500000",
+    "record_time": "2026-07-07T19:51:01.624549",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User participated in the 'Walk for Hunger' event on May 15th and raised $1,500 for the local food bank. | Walk for Hunger | local food bank | $1500 | to raise funds for the local food bank | Walk for Hunger | local food bank | $1500"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 13,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 13,
+        "score": 0.33333333333333337
+      },
+      {
+        "method": "minilm",
+        "rank": 15,
+        "score": 0.26653100101841976
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user inquired about the impact of the casino industry on job creation and unemployment in Atlantic City, and discussed economic recovery and diversification efforts.",
+    "dimension": {
+      "time": "2023-03-13",
+      "location": "Atlantic City",
+      "reason": "",
+      "purpose": "to understand economic impact",
+      "keywords": [
+        "casino industry",
+        "Atlantic City",
+        "job creation",
+        "unemployment",
+        "economic recovery",
+        "diversification"
+      ]
+    },
+    "entities": [
+      "casino industry",
+      "Atlantic City",
+      "job creation",
+      "unemployment",
+      "economic recovery",
+      "diversification"
+    ],
+    "embedding_text": "The user inquired about the impact of the casino industry on job creation and unemployment in Atlantic City, and discussed economic recovery and diversification efforts.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0024",
+    "source_time": "2023-03-13 07:30:00",
+    "record_time": "2026-07-07T19:51:01.624591",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user inquired about the impact of the casino industry on job creation and unemployment in Atlantic City, and discussed economic recovery and diversification efforts. | casino industry | Atlantic City | job creation | unemployment | economic recovery | diversification | 2023-03-13 | Atlantic City | to understand economic impact | casino industry | Atlantic City | job creation | unemployment | economic recovery | diversification"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 15,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user played The Last of Us Part II for 5 hours straight on the afternoon of 2023-03-19.",
+    "dimension": {
+      "time": "2023-03-19 afternoon",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "The Last of Us Part II",
+        "5-hour gaming session",
+        "Sunday afternoon"
+      ]
+    },
+    "entities": [
+      "The Last of Us Part II",
+      "5-hour gaming session",
+      "Sunday afternoon"
+    ],
+    "embedding_text": "The user played The Last of Us Part II for 5 hours straight on the afternoon of 2023-03-19.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0026",
+    "source_time": "2023-03-18 22:56:01",
+    "record_time": "2026-07-07T19:51:01.624604",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user played The Last of Us Part II for 5 hours straight on the afternoon of 2023-03-19. | The Last of Us Part II | 5-hour gaming session | Sunday afternoon | 2023-03-19 afternoon | The Last of Us Part II | 5-hour gaming session | Sunday afternoon"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 16,
+        "score": 0.33333333333333337
+      },
+      {
+        "method": "minilm",
+        "rank": 13,
+        "score": 0.27171673525087553
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user plans to buy a gaming desk to complement the new AKRacing Core Series chair.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to complete gaming station setup",
+      "purpose": "to complement new chair",
+      "keywords": [
+        "gaming desk",
+        "AKRacing Core Series"
+      ]
+    },
+    "entities": [
+      "gaming desk",
+      "AKRacing Core Series"
+    ],
+    "embedding_text": "The user plans to buy a gaming desk to complement the new AKRacing Core Series chair.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0030",
+    "source_time": "2023-03-19 14:59:00.500000",
+    "record_time": "2026-07-07T19:51:01.624627",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to buy a gaming desk to complement the new AKRacing Core Series chair. | gaming desk | AKRacing Core Series | to complete gaming station setup | to complement new chair | gaming desk | AKRacing Core Series"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 17,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user plans to set up a new gaming station with an AKRacing Core Series chair and an Arozzi Verona Pro desk.",
+    "dimension": {
+      "time": "",
+      "location": "user's home gaming station",
+      "reason": "improve gaming experience",
+      "purpose": "to have a dedicated comfortable gaming setup",
+      "keywords": [
+        "gaming station",
+        "AKRacing Core Series",
+        "Arozzi Verona Pro"
+      ]
+    },
+    "entities": [
+      "gaming station",
+      "AKRacing Core Series",
+      "Arozzi Verona Pro"
+    ],
+    "embedding_text": "The user plans to set up a new gaming station with an AKRacing Core Series chair and an Arozzi Verona Pro desk.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0032",
+    "source_time": "2023-03-19 14:59:01.500000",
+    "record_time": "2026-07-07T19:51:01.624639",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to set up a new gaming station with an AKRacing Core Series chair and an Arozzi Verona Pro desk. | gaming station | AKRacing Core Series | Arozzi Verona Pro | user's home gaming station | improve gaming experience | to have a dedicated comfortable gaming setup | gaming station | AKRacing Core Series | Arozzi Verona Pro"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 18,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user plans to play Overwatch with friends online and try new strategies learned from Twitch streams.",
+    "dimension": {
+      "time": "",
+      "location": "online",
+      "reason": "",
+      "purpose": "to improve gaming experience",
+      "keywords": [
+        "Overwatch",
+        "Twitch streams",
+        "strategies",
+        "friends"
+      ]
+    },
+    "entities": [
+      "Overwatch",
+      "Twitch streams",
+      "strategies",
+      "friends"
+    ],
+    "embedding_text": "The user plans to play Overwatch with friends online and try new strategies learned from Twitch streams.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0033",
+    "source_time": "2023-03-19 14:59:02",
+    "record_time": "2026-07-07T19:51:01.624645",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to play Overwatch with friends online and try new strategies learned from Twitch streams. | Overwatch | Twitch streams | strategies | friends | online | to improve gaming experience | Overwatch | Twitch streams | strategies | friends"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 19,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user plans to check accessibility information for the British Museum on its website before visiting.",
+    "dimension": {
+      "time": "",
+      "location": "British Museum website",
+      "reason": "to ensure accessibility",
+      "purpose": "to plan an accessible visit",
+      "keywords": [
+        "British Museum",
+        "accessibility information",
+        "website",
+        "plan ahead"
+      ]
+    },
+    "entities": [
+      "British Museum",
+      "accessibility information",
+      "website",
+      "plan ahead"
+    ],
+    "embedding_text": "The user plans to check accessibility information for the British Museum on its website before visiting.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0038",
+    "source_time": "2023-03-23 07:14:01",
+    "record_time": "2026-07-07T19:51:01.624673",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to check accessibility information for the British Museum on its website before visiting. | British Museum | accessibility information | website | plan ahead | British Museum website | to ensure accessibility | to plan an accessible visit | British Museum | accessibility information | website | plan ahead"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 20,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 20,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user participated in a 'Charity Cycle' event with friends.",
+    "dimension": {
+      "time": "around 2023-04-06",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Charity Cycle",
+        "friends"
+      ]
+    },
+    "entities": [
+      "Charity Cycle",
+      "friends"
+    ],
+    "embedding_text": "The user participated in a 'Charity Cycle' event with friends.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0103",
+    "source_time": "2023-04-06 04:28:01.500000",
+    "record_time": "2026-07-07T19:51:01.625139",
+    "score": 0.3207215152523059,
+    "score_components": {
+      "dense_cosine_score": 0.3207215152523059,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 6,
+    "retrieval_score": 0.3207215152523059,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 6,
+        "score": 0.3207215152523059
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user decided to volunteer at a food bank and requested contact information and an application form on April 6, 2023.",
+    "dimension": {
+      "time": "2023-04-06",
+      "location": "food bank",
+      "reason": "to give back to community",
+      "purpose": "to volunteer",
+      "keywords": [
+        "food bank",
+        "volunteer",
+        "application"
+      ]
+    },
+    "entities": [
+      "food bank",
+      "volunteer",
+      "application"
+    ],
+    "embedding_text": "The user decided to volunteer at a food bank and requested contact information and an application form on April 6, 2023.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0094",
+    "source_time": "2023-04-06 22:22:01.500000",
+    "record_time": "2026-07-07T19:51:01.625085",
+    "score": 0.32032066574556467,
+    "score_components": {
+      "dense_cosine_score": 0.32032066574556467,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 7,
+    "retrieval_score": 0.32032066574556467,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 7,
+        "score": 0.32032066574556467
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "Around March 29, 2023, the user planned to start a gratitude journal and practice morning gratitude daily.",
+    "dimension": {
+      "time": "2023-03-29",
+      "location": "",
+      "reason": "to develop a gratitude habit",
+      "purpose": "to practice gratitude regularly",
+      "keywords": [
+        "gratitude journal",
+        "morning gratitude",
+        "daily practice"
+      ]
+    },
+    "entities": [
+      "gratitude journal",
+      "morning gratitude",
+      "daily practice"
+    ],
+    "embedding_text": "Around March 29, 2023, the user planned to start a gratitude journal and practice morning gratitude daily.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0057",
+    "source_time": "2023-03-25 06:29:00",
+    "record_time": "2026-07-07T19:51:01.624863",
+    "score": 0.30834453067495404,
+    "score_components": {
+      "dense_cosine_score": 0.30834453067495404,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 8,
+    "retrieval_score": 0.30834453067495404,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 8,
+        "score": 0.30834453067495404
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user recently participated in a charity cycle event and feels active afterwards.",
+    "dimension": {
+      "time": "around 2023-04-06",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "charity cycle",
+        "active"
+      ]
+    },
+    "entities": [
+      "charity cycle",
+      "active"
+    ],
+    "embedding_text": "The user recently participated in a charity cycle event and feels active afterwards.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0100",
+    "source_time": "2023-04-06 04:28:00",
+    "record_time": "2026-07-07T19:51:01.625122",
+    "score": 0.2867738710342659,
+    "score_components": {
+      "dense_cosine_score": 0.2867738710342659,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 9,
+    "retrieval_score": 0.2867738710342659,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.2867738710342659
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user plans to host a garden party for friends and family in a few weeks from April 6, 2023 and wants to prepare his backyard for the event.",
+    "dimension": {
+      "time": "",
+      "location": "backyard",
+      "reason": "",
+      "purpose": "garden party for friends and family",
+      "keywords": [
+        "garden party",
+        "backyard preparation",
+        "spring"
+      ]
+    },
+    "entities": [
+      "garden party",
+      "backyard preparation",
+      "spring"
+    ],
+    "embedding_text": "The user plans to host a garden party for friends and family in a few weeks from April 6, 2023 and wants to prepare his backyard for the event.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0177",
+    "source_time": "2023-04-06 16:54:02.500000",
+    "record_time": "2026-07-07T19:51:01.625566",
+    "score": 0.2767032102142282,
+    "score_components": {
+      "dense_cosine_score": 0.2767032102142282,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 11,
+    "retrieval_score": 0.2767032102142282,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.2767032102142282
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "On 2023-03-31, the user reported having trouble sleeping on Fridays because they know they have the weekend off, and asked for tips to wind down and go to bed at a decent hour.",
+    "dimension": {
+      "time": "2023-03-31",
+      "location": "",
+      "reason": "anticipation of weekend off",
+      "purpose": "to improve Friday night sleep",
+      "keywords": [
+        "trouble sleeping",
+        "Fridays",
+        "weekend off",
+        "wind down",
+        "bedtime tips"
+      ]
+    },
+    "entities": [
+      "trouble sleeping",
+      "Fridays",
+      "weekend off",
+      "wind down",
+      "bedtime tips"
+    ],
+    "embedding_text": "On 2023-03-31, the user reported having trouble sleeping on Fridays because they know they have the weekend off, and asked for tips to wind down and go to bed at a decent hour.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0076",
+    "source_time": "2023-03-31 19:02:00",
+    "record_time": "2026-07-07T19:51:01.624977",
+    "score": 0.2757161038623982,
+    "score_components": {
+      "dense_cosine_score": 0.2757161038623982,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.2757161038623982,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.2757161038623982
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "fact",
+    "content": "The user's parents got married when they were 25 and had the user when they were 27.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "parents",
+        "marriage age",
+        "birth age"
+      ]
+    },
+    "entities": [
+      "parents",
+      "marriage age",
+      "birth age"
+    ],
+    "embedding_text": "The user's parents got married when they were 25 and had the user when they were 27.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0166",
+    "source_time": "2023-04-06 13:42:01.500000",
+    "record_time": "2026-07-07T19:51:01.625503",
+    "score": 0.2710147679941795,
+    "score_components": {
+      "dense_cosine_score": 0.2710147679941795,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.2710147679941795,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 14,
+        "score": 0.2710147679941795
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "fact",
+    "content": "The user ordered a $400 desk from West Elm for their home office, scheduled to arrive on 2023-04-12.",
+    "dimension": {
+      "time": "2023-04-12",
+      "location": "",
+      "reason": "",
+      "purpose": "to stay organized and focused in home office",
+      "keywords": [
+        "desk",
+        "West Elm",
+        "$400",
+        "home office",
+        "arrival date"
+      ]
+    },
+    "entities": [
+      "desk",
+      "West Elm",
+      "$400",
+      "home office",
+      "arrival date"
+    ],
+    "embedding_text": "The user ordered a $400 desk from West Elm for their home office, scheduled to arrive on 2023-04-12.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0174",
+    "source_time": "2023-04-06 16:54:01.500000",
+    "record_time": "2026-07-07T19:51:01.625548",
+    "score": 0.2583567736007296,
+    "score_components": {
+      "dense_cosine_score": 0.2583567736007296,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.2583567736007296,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 16,
+        "score": 0.2583567736007296
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user went on a hike at a nearby state park on the 17th and captured landscape photos with dappled light effects.",
+    "dimension": {
+      "time": "",
+      "location": "nearby state park",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "hike",
+        "state park",
+        "landscape photos",
+        "dappled light"
+      ]
+    },
+    "entities": [
+      "hike",
+      "state park",
+      "landscape photos",
+      "dappled light"
+    ],
+    "embedding_text": "The user went on a hike at a nearby state park on the 17th and captured landscape photos with dappled light effects.",
+    "source_message_ids": [
+      "20"
+    ],
+    "source_boundary_id": "20_0195",
+    "source_time": "2023-04-06 06:57:00",
+    "record_time": "2026-07-07T19:51:01.625698",
+    "score": 0.2502326429749358,
+    "score_components": {
+      "dense_cosine_score": 0.2502326429749358,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.2502326429749358,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 17,
+        "score": 0.2502326429749358
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "fact",
+    "content": "The user has always wanted to visit the British Museum.",
+    "dimension": {
+      "time": "",
+      "location": "British Museum",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "British Museum"
+      ]
+    },
+    "entities": [
+      "British Museum"
+    ],
+    "embedding_text": "The user has always wanted to visit the British Museum.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0036",
+    "source_time": "2023-03-23 07:14:00",
+    "record_time": "2026-07-07T19:51:01.624661",
+    "score": 0.24902684654078405,
+    "score_components": {
+      "dense_cosine_score": 0.24902684654078405,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.24902684654078405,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.24902684654078405
+      }
+    ]
+  },
+  {
+    "user_id": "0020_gpt4_b5700ca9",
+    "memory_type": "episodic",
+    "content": "The user plans to invite friends who participated in the 'Charity Cycle' event to join the walkathon and offer incentives to motivate fundraising.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "motivate fundraising",
+      "keywords": [
+        "invite friends",
+        "Charity Cycle",
+        "incentives",
+        "fundraising"
+      ]
+    },
+    "entities": [
+      "invite friends",
+      "Charity Cycle",
+      "incentives",
+      "fundraising"
+    ],
+    "embedding_text": "The user plans to invite friends who participated in the 'Charity Cycle' event to join the walkathon and offer incentives to motivate fundraising.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0104",
+    "source_time": "2023-04-06 04:28:01.500000",
+    "record_time": "2026-07-07T19:51:01.625144",
+    "score": 0.24414636807436457,
+    "score_components": {
+      "dense_cosine_score": 0.24414636807436457,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.24414636807436457,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 19,
+        "score": 0.24414636807436457
+      }
+    ]
+  }
+]

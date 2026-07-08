@@ -1,0 +1,32 @@
+{
+  "id": "d9b9a6f6-7aad-4612-a41e-61fe76de168c",
+  "object": "chat.completion",
+  "created": 1783427945,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\": \"WRONG\"}",
+        "reasoning_content": "We need to evaluate if the generated answer 'I don't know.' is correct relative to the gold answer. The gold answer is a specific suggestion about the user's preferences for hotels in Miami. The generated answer does not provide any suggestion or touch on the same topic; it simply says 'I don't know.' This does not match the gold answer. Therefore, it is WRONG."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 455,
+    "completion_tokens": 86,
+    "total_tokens": 541,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 199
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

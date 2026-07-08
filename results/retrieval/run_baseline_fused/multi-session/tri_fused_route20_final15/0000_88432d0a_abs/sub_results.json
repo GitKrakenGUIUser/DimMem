@@ -1,0 +1,3536 @@
+{
+  "bm25": {
+    "mapped_query_analysis": {
+      "query_text": "How many times did the user bake egg tarts in the past two weeks?",
+      "keywords": [
+        "bake",
+        "egg tarts"
+      ],
+      "query_terms": [
+        "how",
+        "many",
+        "times",
+        "did",
+        "the",
+        "user",
+        "bake",
+        "egg",
+        "tarts",
+        "in",
+        "past",
+        "two",
+        "weeks"
+      ]
+    },
+    "top_records": [
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user has been standing for the entire commute ride for the two weeks prior to 2023-05-27.",
+        "dimension": {
+          "time": "2023-05-13 to 2023-05-27",
+          "location": "commute",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "commute",
+            "standing",
+            "two weeks"
+          ]
+        },
+        "entities": [
+          "commute",
+          "standing",
+          "two weeks"
+        ],
+        "embedding_text": "The user has been standing for the entire commute ride for the two weeks prior to 2023-05-27.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0116",
+        "source_time": "2023-05-27 02:28:00.500000",
+        "record_time": "2026-07-07T19:50:15.894205",
+        "score": 11.07791466600014,
+        "score_components": {
+          "bm25_score": 11.07791466600014,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "As of 2023-05-20, the user has been watching 'The Crown' season 3 for two weeks and is currently on episode 7.",
+        "dimension": {
+          "time": "2023-05-06 to 2023-05-20",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "The Crown",
+            "season 3",
+            "episode 7",
+            "watching"
+          ]
+        },
+        "entities": [
+          "The Crown",
+          "season 3",
+          "episode 7",
+          "watching"
+        ],
+        "embedding_text": "As of 2023-05-20, the user has been watching 'The Crown' season 3 for two weeks and is currently on episode 7.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0018",
+        "source_time": "2023-05-20 16:25:01.500000",
+        "record_time": "2026-07-07T19:50:15.892969",
+        "score": 7.321722228271259,
+        "score_components": {
+          "bm25_score": 7.321722228271259,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "profile",
+        "content": "The user goes to the gym three times a week, which has improved their energy levels, mood, and focus.",
+        "dimension": {
+          "time": "",
+          "location": "gym",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "gym",
+            "three times a week",
+            "energy",
+            "mood",
+            "focus"
+          ]
+        },
+        "entities": [
+          "gym",
+          "three times a week",
+          "energy",
+          "mood",
+          "focus"
+        ],
+        "embedding_text": "The user goes to the gym three times a week, which has improved their energy levels, mood, and focus.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0075",
+        "source_time": "2023-05-24 18:53:02.500000",
+        "record_time": "2026-07-07T19:50:15.893761",
+        "score": 6.187159576849329,
+        "score_components": {
+          "bm25_score": 6.187159576849329,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "User used oven convection setting for the first time on May 25, 2023 to bake cookies.",
+        "dimension": {
+          "time": "2023-05-25",
+          "location": "home",
+          "reason": "experimenting with convection",
+          "purpose": "bake cookies",
+          "keywords": [
+            "oven convection",
+            "first time",
+            "cookies"
+          ]
+        },
+        "entities": [
+          "oven convection",
+          "first time",
+          "cookies"
+        ],
+        "embedding_text": "User used oven convection setting for the first time on May 25, 2023 to bake cookies.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0154",
+        "source_time": "2023-05-28 20:13:00.500000",
+        "record_time": "2026-07-07T19:50:15.894628",
+        "score": 5.368380186445391,
+        "score_components": {
+          "bm25_score": 5.368380186445391,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "User plans to bake chicken wings for dinner on May 28, 2023.",
+        "dimension": {
+          "time": "2023-05-28",
+          "location": "home",
+          "reason": "for dinner",
+          "purpose": "to achieve crispy skin",
+          "keywords": [
+            "bake chicken wings",
+            "crispy skin"
+          ]
+        },
+        "entities": [
+          "bake chicken wings",
+          "crispy skin"
+        ],
+        "embedding_text": "User plans to bake chicken wings for dinner on May 28, 2023.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0153",
+        "source_time": "2023-05-28 20:13:00",
+        "record_time": "2026-07-07T19:50:15.894617",
+        "score": 5.282049130970206,
+        "score_components": {
+          "bm25_score": 5.282049130970206,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "User attempted a sourdough bread recipe on 2023-05-23, but the dough did not rise and the bread turned out dense and heavy.",
+        "dimension": {
+          "time": "2023-05-23",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "sourdough bread",
+            "baking failure"
+          ]
+        },
+        "entities": [
+          "sourdough bread",
+          "baking failure"
+        ],
+        "embedding_text": "User attempted a sourdough bread recipe on 2023-05-23, but the dough did not rise and the bread turned out dense and heavy.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0163",
+        "source_time": "2023-05-28 20:13:02.500000",
+        "record_time": "2026-07-07T19:50:15.894725",
+        "score": 4.92701768730064,
+        "score_components": {
+          "bm25_score": 4.92701768730064,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "profile",
+        "content": "The user runs on Sundays and does bodyweight exercises at home 2-3 times per week to improve strength and endurance.",
+        "dimension": {
+          "time": "",
+          "location": "home; trail near local park",
+          "reason": "improve strength and endurance",
+          "purpose": "",
+          "keywords": [
+            "running",
+            "Sunday runs",
+            "bodyweight exercises",
+            "strength",
+            "endurance",
+            "trail"
+          ]
+        },
+        "entities": [
+          "running",
+          "Sunday runs",
+          "bodyweight exercises",
+          "strength",
+          "endurance",
+          "trail"
+        ],
+        "embedding_text": "The user runs on Sundays and does bodyweight exercises at home 2-3 times per week to improve strength and endurance.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0056",
+        "source_time": "2023-05-22 10:09:00.500000",
+        "record_time": "2026-07-07T19:50:15.893549",
+        "score": 4.022000402098257,
+        "score_components": {
+          "bm25_score": 4.022000402098257,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "User used convection setting on oven to bake cookies on 2023-05-25, achieving crispy outside and chewy inside.",
+        "dimension": {
+          "time": "2023-05-25",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "convection oven",
+            "cookies"
+          ]
+        },
+        "entities": [
+          "convection oven",
+          "cookies"
+        ],
+        "embedding_text": "User used convection setting on oven to bake cookies on 2023-05-25, achieving crispy outside and chewy inside.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0162",
+        "source_time": "2023-05-28 20:13:02",
+        "record_time": "2026-07-07T19:50:15.894714",
+        "score": 3.920611717509638,
+        "score_components": {
+          "bm25_score": 3.920611717509638,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "fact",
+        "content": "The user has been spending time alone focusing on hobbies and recharging for a few weeks as of 2023-05-24.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "alone time",
+            "hobbies",
+            "recharge",
+            "reflection"
+          ]
+        },
+        "entities": [
+          "alone time",
+          "hobbies",
+          "recharge",
+          "reflection"
+        ],
+        "embedding_text": "The user has been spending time alone focusing on hobbies and recharging for a few weeks as of 2023-05-24.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0065",
+        "source_time": "2023-05-24 06:03:02.500000",
+        "record_time": "2026-07-07T19:50:15.893651",
+        "score": 3.7373339741104736,
+        "score_components": {
+          "bm25_score": 3.7373339741104736,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "fact",
+        "content": "The user owns a new stand mixer and has been using it extensively since acquiring it a few weeks before 2023-05-20.",
+        "dimension": {
+          "time": "a few weeks before 2023-05-20",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "stand mixer",
+            "user",
+            "new acquisition"
+          ]
+        },
+        "entities": [
+          "stand mixer",
+          "user",
+          "new acquisition"
+        ],
+        "embedding_text": "The user owns a new stand mixer and has been using it extensively since acquiring it a few weeks before 2023-05-20.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0015",
+        "source_time": "2023-05-20 16:25:00",
+        "record_time": "2026-07-07T19:50:15.892932",
+        "score": 3.617450180106858,
+        "score_components": {
+          "bm25_score": 3.617450180106858,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "fact",
+        "content": "User has been taking guitar lessons for two months as of 2023-05-22, practices 30 minutes daily, and has progressed from beginner to intermediate level.",
+        "dimension": {
+          "time": "2023-05-22",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "guitar lessons",
+            "practice",
+            "30 minutes daily",
+            "beginner",
+            "intermediate"
+          ]
+        },
+        "entities": [
+          "guitar lessons",
+          "practice",
+          "30 minutes daily",
+          "beginner",
+          "intermediate"
+        ],
+        "embedding_text": "User has been taking guitar lessons for two months as of 2023-05-22, practices 30 minutes daily, and has progressed from beginner to intermediate level.",
+        "source_message_ids": [
+          "4"
+        ],
+        "source_boundary_id": "4_0040",
+        "source_time": "2023-05-21 21:29:02.500000",
+        "record_time": "2026-07-07T19:50:15.893234",
+        "score": 3.4397057631182415,
+        "score_components": {
+          "bm25_score": 3.4397057631182415,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "As of 2023-05-20, the user has been watching the 'Daily Dose of Laughter' playlist on Peacock every morning for about three weeks.",
+        "dimension": {
+          "time": "past three weeks before 2023-05-20",
+          "location": "Peacock",
+          "reason": "",
+          "purpose": "to start the day on a positive note",
+          "keywords": [
+            "Daily Dose of Laughter",
+            "Peacock",
+            "morning routine"
+          ]
+        },
+        "entities": [
+          "Daily Dose of Laughter",
+          "Peacock",
+          "morning routine"
+        ],
+        "embedding_text": "As of 2023-05-20, the user has been watching the 'Daily Dose of Laughter' playlist on Peacock every morning for about three weeks.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0021",
+        "source_time": "2023-05-20 17:26:00",
+        "record_time": "2026-07-07T19:50:15.893009",
+        "score": 3.237291920370932,
+        "score_components": {
+          "bm25_score": 3.237291920370932,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user baked a chocolate cake for her sister's birthday party last weekend (around May 13-14, 2023) and found that espresso powder enhanced the flavor.",
+        "dimension": {
+          "time": "2023-05-13 to 2023-05-14",
+          "location": "",
+          "reason": "sister's birthday party",
+          "purpose": "bake a cake for sister's birthday",
+          "keywords": [
+            "user",
+            "baked",
+            "chocolate cake",
+            "sister",
+            "birthday",
+            "espresso powder"
+          ]
+        },
+        "entities": [
+          "user",
+          "baked",
+          "chocolate cake",
+          "sister",
+          "birthday",
+          "espresso powder"
+        ],
+        "embedding_text": "The user baked a chocolate cake for her sister's birthday party last weekend (around May 13-14, 2023) and found that espresso powder enhanced the flavor.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0005",
+        "source_time": "2023-05-20 16:25:00",
+        "record_time": "2026-07-07T19:50:15.892802",
+        "score": 3.0495518644824435,
+        "score_components": {
+          "bm25_score": 3.0495518644824435,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "profile",
+        "content": "The user is interested in music festivals in the United States.",
+        "dimension": {
+          "time": "",
+          "location": "United States",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "music festivals",
+            "United States",
+            "interest"
+          ]
+        },
+        "entities": [
+          "music festivals",
+          "United States",
+          "interest"
+        ],
+        "embedding_text": "The user is interested in music festivals in the United States.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0125",
+        "source_time": "2023-05-27 08:05:00.500000",
+        "record_time": "2026-07-07T19:50:15.894303",
+        "score": 2.5156950196204186,
+        "score_components": {
+          "bm25_score": 2.5156950196204186,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "profile",
+        "content": "The user is interested in restaurant recommendations near Wells Fargo Center in Philadelphia.",
+        "dimension": {
+          "time": "",
+          "location": "Wells Fargo Center, Philadelphia",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "restaurants",
+            "Wells Fargo Center",
+            "Philadelphia"
+          ]
+        },
+        "entities": [
+          "restaurants",
+          "Wells Fargo Center",
+          "Philadelphia"
+        ],
+        "embedding_text": "The user is interested in restaurant recommendations near Wells Fargo Center in Philadelphia.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0123",
+        "source_time": "2023-05-27 08:05:00",
+        "record_time": "2026-07-07T19:50:15.894282",
+        "score": 2.347558629884268,
+        "score_components": {
+          "bm25_score": 2.347558629884268,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "fact",
+        "content": "The user lives in Tokyo.",
+        "dimension": {
+          "time": "2023-05-20",
+          "location": "Tokyo",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "user",
+            "Tokyo",
+            "residence"
+          ]
+        },
+        "entities": [
+          "user",
+          "Tokyo",
+          "residence"
+        ],
+        "embedding_text": "The user lives in Tokyo.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0000",
+        "source_time": "2023-05-20 00:01:01",
+        "record_time": "2026-07-07T19:50:15.892714",
+        "score": 2.2824560123860467,
+        "score_components": {
+          "bm25_score": 2.2824560123860467,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "profile",
+        "content": "User is interested in visual storytelling in filmmaking.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "visual storytelling",
+            "filmmaking"
+          ]
+        },
+        "entities": [
+          "visual storytelling",
+          "filmmaking"
+        ],
+        "embedding_text": "User is interested in visual storytelling in filmmaking.",
+        "source_message_ids": [
+          "4"
+        ],
+        "source_boundary_id": "4_0049",
+        "source_time": "2023-05-22 01:44:01",
+        "record_time": "2026-07-07T19:50:15.893470",
+        "score": 2.236011926119487,
+        "score_components": {
+          "bm25_score": 2.236011926119487,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "fact",
+        "content": "The user currently lives in Roppongi.",
+        "dimension": {
+          "time": "2023-05-20",
+          "location": "Roppongi",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "user",
+            "Roppongi",
+            "residence"
+          ]
+        },
+        "entities": [
+          "user",
+          "Roppongi",
+          "residence"
+        ],
+        "embedding_text": "The user currently lives in Roppongi.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0002",
+        "source_time": "2023-05-20 00:01:01.500000",
+        "record_time": "2026-07-07T19:50:15.892761",
+        "score": 2.229255534929695,
+        "score_components": {
+          "bm25_score": 2.229255534929695,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "profile",
+        "content": "The user is specifically interested in combining clay with wire and fabric to create unique textures in sculpting.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "clay",
+            "wire",
+            "fabric",
+            "textures"
+          ]
+        },
+        "entities": [
+          "clay",
+          "wire",
+          "fabric",
+          "textures"
+        ],
+        "embedding_text": "The user is specifically interested in combining clay with wire and fabric to create unique textures in sculpting.",
+        "source_message_ids": [
+          "10"
+        ],
+        "source_boundary_id": "10_0098",
+        "source_time": "2023-05-26 12:04:01",
+        "record_time": "2026-07-07T19:50:15.894010",
+        "score": 2.225768862053397,
+        "score_components": {
+          "bm25_score": 2.225768862053397,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "fact",
+        "content": "The user is interested in virtual reality technology.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "virtual reality",
+            "VR",
+            "interest"
+          ]
+        },
+        "entities": [
+          "virtual reality",
+          "VR",
+          "interest"
+        ],
+        "embedding_text": "The user is interested in virtual reality technology.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0170",
+        "source_time": "2023-05-28 20:27:01.500000",
+        "record_time": "2026-07-07T19:50:15.894799",
+        "score": 2.0827243330212273,
+        "score_components": {
+          "bm25_score": 2.0827243330212273,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      }
+    ]
+  },
+  "structured": {
+    "mapped_query_analysis": {
+      "query_text": "How many times did the user bake egg tarts in the past two weeks?",
+      "rewrite": "How many times did the user bake egg tarts in the past two weeks?",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "How many times did the user bake egg tarts in the past two weeks?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {
+        "time": [
+          "between 2023/05/16 and 2023/05/30"
+        ]
+      },
+      "keywords": [
+        "bake",
+        "egg tarts"
+      ],
+      "canonical_text": "How many times did the user bake egg tarts in the past two weeks?"
+    },
+    "top_records": [
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user baked a chocolate cake for her sister's birthday party last weekend (around May 13-14, 2023) and found that espresso powder enhanced the flavor.",
+        "dimension": {
+          "time": "2023-05-13 to 2023-05-14",
+          "location": "",
+          "reason": "sister's birthday party",
+          "purpose": "bake a cake for sister's birthday",
+          "keywords": [
+            "user",
+            "baked",
+            "chocolate cake",
+            "sister",
+            "birthday",
+            "espresso powder"
+          ]
+        },
+        "entities": [
+          "user",
+          "baked",
+          "chocolate cake",
+          "sister",
+          "birthday",
+          "espresso powder"
+        ],
+        "embedding_text": "The user baked a chocolate cake for her sister's birthday party last weekend (around May 13-14, 2023) and found that espresso powder enhanced the flavor.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0005",
+        "source_time": "2023-05-20 16:25:00",
+        "record_time": "2026-07-07T19:50:15.892802",
+        "score": 0.36666666666666664,
+        "structural_score": 0.36666666666666664,
+        "score_components": {
+          "score": 0.36666666666666664,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-20T16:25:00",
+                "end": "2023-05-20T16:25:00",
+                "granularity": "datetime",
+                "raw": "2023-05-20T16:25:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.3333333333333333,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.3333333333333333
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user baked a chocolate cake for her sister's birthday party last weekend (around May 13-14, 2023) and found that espresso powder enhanced the flavor. | user | baked | chocolate cake | sister | birthday | espresso powder | 2023-05-13 to 2023-05-14 | sister's birthday party | bake a cake for sister's birthday | user | baked | chocolate cake | sister | birthday | espresso powder"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "User plans to bake chicken wings for dinner on May 28, 2023.",
+        "dimension": {
+          "time": "2023-05-28",
+          "location": "home",
+          "reason": "for dinner",
+          "purpose": "to achieve crispy skin",
+          "keywords": [
+            "bake chicken wings",
+            "crispy skin"
+          ]
+        },
+        "entities": [
+          "bake chicken wings",
+          "crispy skin"
+        ],
+        "embedding_text": "User plans to bake chicken wings for dinner on May 28, 2023.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0153",
+        "source_time": "2023-05-28 20:13:00",
+        "record_time": "2026-07-07T19:50:15.894617",
+        "score": 0.36666666666666664,
+        "structural_score": 0.36666666666666664,
+        "score_components": {
+          "score": 0.36666666666666664,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-28T00:00:00",
+                "end": "2023-05-28T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-05-28"
+              },
+              {
+                "start": "2023-05-28T20:13:00",
+                "end": "2023-05-28T20:13:00",
+                "granularity": "datetime",
+                "raw": "2023-05-28T20:13:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.3333333333333333,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.3333333333333333
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to bake chicken wings for dinner on May 28, 2023. | bake chicken wings | crispy skin | 2023-05-28 | home | for dinner | to achieve crispy skin | bake chicken wings | crispy skin"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "User used oven convection setting for the first time on May 25, 2023 to bake cookies.",
+        "dimension": {
+          "time": "2023-05-25",
+          "location": "home",
+          "reason": "experimenting with convection",
+          "purpose": "bake cookies",
+          "keywords": [
+            "oven convection",
+            "first time",
+            "cookies"
+          ]
+        },
+        "entities": [
+          "oven convection",
+          "first time",
+          "cookies"
+        ],
+        "embedding_text": "User used oven convection setting for the first time on May 25, 2023 to bake cookies.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0154",
+        "source_time": "2023-05-28 20:13:00.500000",
+        "record_time": "2026-07-07T19:50:15.894628",
+        "score": 0.36666666666666664,
+        "structural_score": 0.36666666666666664,
+        "score_components": {
+          "score": 0.36666666666666664,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-25T00:00:00",
+                "end": "2023-05-25T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-05-25"
+              },
+              {
+                "start": "2023-05-28T20:13:00.500000",
+                "end": "2023-05-28T20:13:00.500000",
+                "granularity": "datetime",
+                "raw": "2023-05-28T20:13:00.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.3333333333333333,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.3333333333333333
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User used oven convection setting for the first time on May 25, 2023 to bake cookies. | oven convection | first time | cookies | 2023-05-25 | home | experimenting with convection | bake cookies | oven convection | first time | cookies"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "User used convection setting on oven to bake cookies on 2023-05-25, achieving crispy outside and chewy inside.",
+        "dimension": {
+          "time": "2023-05-25",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "convection oven",
+            "cookies"
+          ]
+        },
+        "entities": [
+          "convection oven",
+          "cookies"
+        ],
+        "embedding_text": "User used convection setting on oven to bake cookies on 2023-05-25, achieving crispy outside and chewy inside.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0162",
+        "source_time": "2023-05-28 20:13:02",
+        "record_time": "2026-07-07T19:50:15.894714",
+        "score": 0.36666666666666664,
+        "structural_score": 0.36666666666666664,
+        "score_components": {
+          "score": 0.36666666666666664,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-25T00:00:00",
+                "end": "2023-05-25T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-05-25"
+              },
+              {
+                "start": "2023-05-28T20:13:02",
+                "end": "2023-05-28T20:13:02",
+                "granularity": "datetime",
+                "raw": "2023-05-28T20:13:02"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.3333333333333333,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.3333333333333333
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User used convection setting on oven to bake cookies on 2023-05-25, achieving crispy outside and chewy inside. | convection oven | cookies | 2023-05-25 | convection oven | cookies"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user baked a chocolate cake for their sister's birthday party using a new online recipe, and it turned out well.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "sister's birthday party",
+          "purpose": "",
+          "keywords": [
+            "chocolate cake",
+            "sister's birthday",
+            "new recipe",
+            "online"
+          ]
+        },
+        "entities": [
+          "chocolate cake",
+          "sister's birthday",
+          "new recipe",
+          "online"
+        ],
+        "embedding_text": "The user baked a chocolate cake for their sister's birthday party using a new online recipe, and it turned out well.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0057",
+        "source_time": "2023-05-22 10:09:01",
+        "record_time": "2026-07-07T19:50:15.893561",
+        "score": 0.3,
+        "structural_score": 0.3,
+        "score_components": {
+          "score": 0.3,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-22T10:09:01",
+                "end": "2023-05-22T10:09:01",
+                "granularity": "datetime",
+                "raw": "2023-05-22T10:09:01"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user baked a chocolate cake for their sister's birthday party using a new online recipe, and it turned out well. | chocolate cake | sister's birthday | new recipe | online | sister's birthday party | chocolate cake | sister's birthday | new recipe | online"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user plans a trip to Nikko to go hiking and visit onsens.",
+        "dimension": {
+          "time": "",
+          "location": "Nikko",
+          "reason": "",
+          "purpose": "go hiking and visit onsens",
+          "keywords": [
+            "user",
+            "Nikko",
+            "trip",
+            "hiking",
+            "onsen"
+          ]
+        },
+        "entities": [
+          "user",
+          "Nikko",
+          "trip",
+          "hiking",
+          "onsen"
+        ],
+        "embedding_text": "The user plans a trip to Nikko to go hiking and visit onsens.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0003",
+        "source_time": "2023-05-20 00:01:00",
+        "record_time": "2026-07-07T19:50:15.892775",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-20T00:01:00",
+                "end": "2023-05-20T00:01:00",
+                "granularity": "datetime",
+                "raw": "2023-05-20T00:01:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans a trip to Nikko to go hiking and visit onsens. | user | Nikko | trip | hiking | onsen | Nikko | go hiking and visit onsens | user | Nikko | trip | hiking | onsen"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user overslept by 30 minutes on Tuesday, May 16, 2023.",
+        "dimension": {
+          "time": "2023-05-16",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "user",
+            "overslept",
+            "Tuesday",
+            "30 minutes"
+          ]
+        },
+        "entities": [
+          "user",
+          "overslept",
+          "Tuesday",
+          "30 minutes"
+        ],
+        "embedding_text": "The user overslept by 30 minutes on Tuesday, May 16, 2023.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0004",
+        "source_time": "2023-05-20 08:53:00",
+        "record_time": "2026-07-07T19:50:15.892788",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-16T00:00:00",
+                "end": "2023-05-16T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-05-16"
+              },
+              {
+                "start": "2023-05-20T08:53:00",
+                "end": "2023-05-20T08:53:00",
+                "granularity": "datetime",
+                "raw": "2023-05-20T08:53:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user overslept by 30 minutes on Tuesday, May 16, 2023. | user | overslept | Tuesday | 30 minutes | 2023-05-16 | user | overslept | Tuesday | 30 minutes"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user plans to gradually adjust her wake-up time by setting the alarm 15 minutes earlier each day to wake up earlier on Mondays.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "to wake up earlier on Mondays",
+          "purpose": "adjust wake-up time",
+          "keywords": [
+            "user",
+            "alarm",
+            "15 minutes earlier",
+            "gradual adjustment",
+            "Mondays"
+          ]
+        },
+        "entities": [
+          "user",
+          "alarm",
+          "15 minutes earlier",
+          "gradual adjustment",
+          "Mondays"
+        ],
+        "embedding_text": "The user plans to gradually adjust her wake-up time by setting the alarm 15 minutes earlier each day to wake up earlier on Mondays.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0006",
+        "source_time": "2023-05-20 08:53:02.500000",
+        "record_time": "2026-07-07T19:50:15.892815",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-20T08:53:02.500000",
+                "end": "2023-05-20T08:53:02.500000",
+                "granularity": "datetime",
+                "raw": "2023-05-20T08:53:02.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to gradually adjust her wake-up time by setting the alarm 15 minutes earlier each day to wake up earlier on Mondays. | user | alarm | 15 minutes earlier | gradual adjustment | Mondays | to wake up earlier on Mondays | adjust wake-up time | user | alarm | 15 minutes earlier | gradual adjustment | Mondays"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user plans to implement a no-screen rule for one hour before bed, replacing that time with reading or listening to calming music.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "to improve sleep quality",
+          "purpose": "limit screen time before bed",
+          "keywords": [
+            "user",
+            "no-screen rule",
+            "bedtime",
+            "reading",
+            "music"
+          ]
+        },
+        "entities": [
+          "user",
+          "no-screen rule",
+          "bedtime",
+          "reading",
+          "music"
+        ],
+        "embedding_text": "The user plans to implement a no-screen rule for one hour before bed, replacing that time with reading or listening to calming music.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0007",
+        "source_time": "2023-05-20 08:53:02",
+        "record_time": "2026-07-07T19:50:15.892829",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-20T08:53:02",
+                "end": "2023-05-20T08:53:02",
+                "granularity": "datetime",
+                "raw": "2023-05-20T08:53:02"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to implement a no-screen rule for one hour before bed, replacing that time with reading or listening to calming music. | user | no-screen rule | bedtime | reading | music | to improve sleep quality | limit screen time before bed | user | no-screen rule | bedtime | reading | music"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user plans to drink a glass of water immediately after waking up to help wake up refreshed.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "to wake up refreshed",
+          "purpose": "drink water immediately after waking",
+          "keywords": [
+            "user",
+            "hydration",
+            "water",
+            "wake-up"
+          ]
+        },
+        "entities": [
+          "user",
+          "hydration",
+          "water",
+          "wake-up"
+        ],
+        "embedding_text": "The user plans to drink a glass of water immediately after waking up to help wake up refreshed.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0008",
+        "source_time": "2023-05-20 08:53:01",
+        "record_time": "2026-07-07T19:50:15.892841",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-20T08:53:01",
+                "end": "2023-05-20T08:53:01",
+                "granularity": "datetime",
+                "raw": "2023-05-20T08:53:01"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to drink a glass of water immediately after waking up to help wake up refreshed. | user | hydration | water | wake-up | to wake up refreshed | drink water immediately after waking | user | hydration | water | wake-up"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user is looking for a new apartment in Tokyo with a convenient commute to Roppongi that balances affordability and amenities.",
+        "dimension": {
+          "time": "",
+          "location": "Tokyo",
+          "reason": "for more convenient commute to Roppongi",
+          "purpose": "find new apartment with balance of affordability and amenities",
+          "keywords": [
+            "user",
+            "apartment",
+            "Roppongi",
+            "commute",
+            "affordability",
+            "amenities"
+          ]
+        },
+        "entities": [
+          "user",
+          "apartment",
+          "Roppongi",
+          "commute",
+          "affordability",
+          "amenities"
+        ],
+        "embedding_text": "The user is looking for a new apartment in Tokyo with a convenient commute to Roppongi that balances affordability and amenities.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0009",
+        "source_time": "2023-05-20 00:01:01.500000",
+        "record_time": "2026-07-07T19:50:15.892856",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-20T00:01:01.500000",
+                "end": "2023-05-20T00:01:01.500000",
+                "granularity": "datetime",
+                "raw": "2023-05-20T00:01:01.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user is looking for a new apartment in Tokyo with a convenient commute to Roppongi that balances affordability and amenities. | user | apartment | Roppongi | commute | affordability | amenities | Tokyo | for more convenient commute to Roppongi | find new apartment with balance of affordability and amenities | user | apartment | Roppongi | commute | affordability | amenities"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "On 2023-05-13, the user made a delicious whole wheat baguette.",
+        "dimension": {
+          "time": "2023-05-13",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "whole wheat baguette",
+            "baking",
+            "2023-05-13"
+          ]
+        },
+        "entities": [
+          "whole wheat baguette",
+          "baking",
+          "2023-05-13"
+        ],
+        "embedding_text": "On 2023-05-13, the user made a delicious whole wheat baguette.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0017",
+        "source_time": "2023-05-20 16:25:01",
+        "record_time": "2026-07-07T19:50:15.892955",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-13T00:00:00",
+                "end": "2023-05-13T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-05-13"
+              },
+              {
+                "start": "2023-05-20T16:25:01",
+                "end": "2023-05-20T16:25:01",
+                "granularity": "datetime",
+                "raw": "2023-05-20T16:25:01"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "On 2023-05-13, the user made a delicious whole wheat baguette. | whole wheat baguette | baking | 2023-05-13 | 2023-05-13 | whole wheat baguette | baking | 2023-05-13"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "As of 2023-05-20, the user has been watching 'The Crown' season 3 for two weeks and is currently on episode 7.",
+        "dimension": {
+          "time": "2023-05-06 to 2023-05-20",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "The Crown",
+            "season 3",
+            "episode 7",
+            "watching"
+          ]
+        },
+        "entities": [
+          "The Crown",
+          "season 3",
+          "episode 7",
+          "watching"
+        ],
+        "embedding_text": "As of 2023-05-20, the user has been watching 'The Crown' season 3 for two weeks and is currently on episode 7.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0018",
+        "source_time": "2023-05-20 16:25:01.500000",
+        "record_time": "2026-07-07T19:50:15.892969",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-20T16:25:01.500000",
+                "end": "2023-05-20T16:25:01.500000",
+                "granularity": "datetime",
+                "raw": "2023-05-20T16:25:01.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "As of 2023-05-20, the user has been watching 'The Crown' season 3 for two weeks and is currently on episode 7. | The Crown | season 3 | episode 7 | watching | 2023-05-06 to 2023-05-20 | The Crown | season 3 | episode 7 | watching"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "As of 2023-05-20, the user has been watching the 'Daily Dose of Laughter' playlist on Peacock every morning for about three weeks.",
+        "dimension": {
+          "time": "past three weeks before 2023-05-20",
+          "location": "Peacock",
+          "reason": "",
+          "purpose": "to start the day on a positive note",
+          "keywords": [
+            "Daily Dose of Laughter",
+            "Peacock",
+            "morning routine"
+          ]
+        },
+        "entities": [
+          "Daily Dose of Laughter",
+          "Peacock",
+          "morning routine"
+        ],
+        "embedding_text": "As of 2023-05-20, the user has been watching the 'Daily Dose of Laughter' playlist on Peacock every morning for about three weeks.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0021",
+        "source_time": "2023-05-20 17:26:00",
+        "record_time": "2026-07-07T19:50:15.893009",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-20T17:26:00",
+                "end": "2023-05-20T17:26:00",
+                "granularity": "datetime",
+                "raw": "2023-05-20T17:26:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "As of 2023-05-20, the user has been watching the 'Daily Dose of Laughter' playlist on Peacock every morning for about three weeks. | Daily Dose of Laughter | Peacock | morning routine | past three weeks before 2023-05-20 | Peacock | to start the day on a positive note | Daily Dose of Laughter | Peacock | morning routine"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "On 2023-04-15, the user ran a marathon and achieved a personal best time.",
+        "dimension": {
+          "time": "2023-04-15",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "marathon",
+            "personal best",
+            "2023-04-15"
+          ]
+        },
+        "entities": [
+          "marathon",
+          "personal best",
+          "2023-04-15"
+        ],
+        "embedding_text": "On 2023-04-15, the user ran a marathon and achieved a personal best time.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0022",
+        "source_time": "2023-05-20 17:26:00.500000",
+        "record_time": "2026-07-07T19:50:15.893021",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-15T00:00:00",
+                "end": "2023-04-15T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-04-15"
+              },
+              {
+                "start": "2023-05-20T17:26:00.500000",
+                "end": "2023-05-20T17:26:00.500000",
+                "granularity": "datetime",
+                "raw": "2023-05-20T17:26:00.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "On 2023-04-15, the user ran a marathon and achieved a personal best time. | marathon | personal best | 2023-04-15 | 2023-04-15 | marathon | personal best | 2023-04-15"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "As of 2023-05-20, the user is training for a sprint triathlon and seeking to improve swimming endurance.",
+        "dimension": {
+          "time": "2023-05-20",
+          "location": "",
+          "reason": "",
+          "purpose": "to improve swimming endurance for the sprint triathlon",
+          "keywords": [
+            "sprint triathlon",
+            "training",
+            "swimming endurance"
+          ]
+        },
+        "entities": [
+          "sprint triathlon",
+          "training",
+          "swimming endurance"
+        ],
+        "embedding_text": "As of 2023-05-20, the user is training for a sprint triathlon and seeking to improve swimming endurance.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0023",
+        "source_time": "2023-05-20 17:26:01",
+        "record_time": "2026-07-07T19:50:15.893033",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-20T00:00:00",
+                "end": "2023-05-20T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-05-20"
+              },
+              {
+                "start": "2023-05-20T17:26:01",
+                "end": "2023-05-20T17:26:01",
+                "granularity": "datetime",
+                "raw": "2023-05-20T17:26:01"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "As of 2023-05-20, the user is training for a sprint triathlon and seeking to improve swimming endurance. | sprint triathlon | training | swimming endurance | 2023-05-20 | to improve swimming endurance for the sprint triathlon | sprint triathlon | training | swimming endurance"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user attended an outdoor music festival in April 2023 and ate a spicy BBQ sauce from a food vendor.",
+        "dimension": {
+          "time": "2023-04",
+          "location": "outdoor music festival",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "BBQ sauce",
+            "spicy",
+            "outdoor music festival",
+            "food vendor"
+          ]
+        },
+        "entities": [
+          "BBQ sauce",
+          "spicy",
+          "outdoor music festival",
+          "food vendor"
+        ],
+        "embedding_text": "The user attended an outdoor music festival in April 2023 and ate a spicy BBQ sauce from a food vendor.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0027",
+        "source_time": "2023-05-20 20:17:01",
+        "record_time": "2026-07-07T19:50:15.893081",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-01T00:00:00",
+                "end": "2023-04-30T23:59:59.999999",
+                "granularity": "month",
+                "raw": "2023-04"
+              },
+              {
+                "start": "2023-05-20T20:17:01",
+                "end": "2023-05-20T20:17:01",
+                "granularity": "datetime",
+                "raw": "2023-05-20T20:17:01"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user attended an outdoor music festival in April 2023 and ate a spicy BBQ sauce from a food vendor. | BBQ sauce | spicy | outdoor music festival | food vendor | 2023-04 | outdoor music festival | BBQ sauce | spicy | outdoor music festival | food vendor"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user attended their cousin's housewarming party around April 30, 2023, and tried a new BBQ sauce recipe.",
+        "dimension": {
+          "time": "2023-04-30",
+          "location": "cousin's housewarming party",
+          "reason": "",
+          "purpose": "trying a new BBQ sauce recipe",
+          "keywords": [
+            "BBQ sauce",
+            "recipe",
+            "cousin's housewarming party"
+          ]
+        },
+        "entities": [
+          "BBQ sauce",
+          "recipe",
+          "cousin's housewarming party"
+        ],
+        "embedding_text": "The user attended their cousin's housewarming party around April 30, 2023, and tried a new BBQ sauce recipe.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0028",
+        "source_time": "2023-05-20 20:17:01.500000",
+        "record_time": "2026-07-07T19:50:15.893093",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-30T00:00:00",
+                "end": "2023-04-30T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-04-30"
+              },
+              {
+                "start": "2023-05-20T20:17:01.500000",
+                "end": "2023-05-20T20:17:01.500000",
+                "granularity": "datetime",
+                "raw": "2023-05-20T20:17:01.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user attended their cousin's housewarming party around April 30, 2023, and tried a new BBQ sauce recipe. | BBQ sauce | recipe | cousin's housewarming party | 2023-04-30 | cousin's housewarming party | trying a new BBQ sauce recipe | BBQ sauce | recipe | cousin's housewarming party"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "On 2023-05-21, the user had the car's oil changed, tires rotated, and air filter replaced.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "",
+          "reason": "to improve fuel efficiency",
+          "purpose": "improve fuel efficiency",
+          "keywords": [
+            "car maintenance",
+            "oil change",
+            "tire rotation",
+            "air filter"
+          ]
+        },
+        "entities": [
+          "car maintenance",
+          "oil change",
+          "tire rotation",
+          "air filter"
+        ],
+        "embedding_text": "On 2023-05-21, the user had the car's oil changed, tires rotated, and air filter replaced.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0032",
+        "source_time": "2023-05-21 11:48:00",
+        "record_time": "2026-07-07T19:50:15.893140",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-21T00:00:00",
+                "end": "2023-05-21T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-05-21"
+              },
+              {
+                "start": "2023-05-21T11:48:00",
+                "end": "2023-05-21T11:48:00",
+                "granularity": "datetime",
+                "raw": "2023-05-21T11:48:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "On 2023-05-21, the user had the car's oil changed, tires rotated, and air filter replaced. | car maintenance | oil change | tire rotation | air filter | 2023-05-21 | to improve fuel efficiency | improve fuel efficiency | car maintenance | oil change | tire rotation | air filter"
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user planned a 240-mile road trip for the weekend.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "road trip",
+            "240 miles",
+            "weekend"
+          ]
+        },
+        "entities": [
+          "road trip",
+          "240 miles",
+          "weekend"
+        ],
+        "embedding_text": "The user planned a 240-mile road trip for the weekend.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0033",
+        "source_time": "2023-05-21 11:48:00.500000",
+        "record_time": "2026-07-07T19:50:15.893151",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-21T11:48:00.500000",
+                "end": "2023-05-21T11:48:00.500000",
+                "granularity": "datetime",
+                "raw": "2023-05-21T11:48:00.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user planned a 240-mile road trip for the weekend. | road trip | 240 miles | weekend | road trip | 240 miles | weekend"
+        }
+      }
+    ]
+  },
+  "minilm": {
+    "mapped_query_analysis": {
+      "query_text": "How many times did the user bake egg tarts in the past two weeks?"
+    },
+    "top_records": [
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "fact",
+        "content": "User made a whole wheat baguette on 2023-05-27.",
+        "dimension": {
+          "time": "2023-05-27",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "whole wheat baguette"
+          ]
+        },
+        "entities": [
+          "whole wheat baguette"
+        ],
+        "embedding_text": "User made a whole wheat baguette on 2023-05-27.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0161",
+        "source_time": "2023-05-28 20:13:01.500000",
+        "record_time": "2026-07-07T19:50:15.894704",
+        "score": 0.4637458381351435,
+        "score_components": {
+          "dense_cosine_score": 0.4637458381351435,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "User attempted a new sourdough bread recipe on 2023-05-16, but the result was not as expected.",
+        "dimension": {
+          "time": "2023-05-16",
+          "location": "",
+          "reason": "trying new recipe",
+          "purpose": "make bread",
+          "keywords": [
+            "sourdough bread",
+            "recipe",
+            "2023-05-16"
+          ]
+        },
+        "entities": [
+          "sourdough bread",
+          "recipe",
+          "2023-05-16"
+        ],
+        "embedding_text": "User attempted a new sourdough bread recipe on 2023-05-16, but the result was not as expected.",
+        "source_message_ids": [
+          "4"
+        ],
+        "source_boundary_id": "4_0052",
+        "source_time": "2023-05-22 01:44:02.500000",
+        "record_time": "2026-07-07T19:50:15.893501",
+        "score": 0.4623912911371293,
+        "score_components": {
+          "dense_cosine_score": 0.4623912911371293,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user cooked a breakfast of scrambled eggs and whole-grain toast at 10am on 2023-05-21.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "home",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "breakfast",
+            "scrambled eggs",
+            "whole-grain toast"
+          ]
+        },
+        "entities": [
+          "breakfast",
+          "scrambled eggs",
+          "whole-grain toast"
+        ],
+        "embedding_text": "The user cooked a breakfast of scrambled eggs and whole-grain toast at 10am on 2023-05-21.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0069",
+        "source_time": "2023-05-24 18:53:00.500000",
+        "record_time": "2026-07-07T19:50:15.893694",
+        "score": 0.4370294348379085,
+        "score_components": {
+          "dense_cosine_score": 0.4370294348379085,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user baked a chocolate cake for their sister's birthday party using a new online recipe, and it turned out well.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "sister's birthday party",
+          "purpose": "",
+          "keywords": [
+            "chocolate cake",
+            "sister's birthday",
+            "new recipe",
+            "online"
+          ]
+        },
+        "entities": [
+          "chocolate cake",
+          "sister's birthday",
+          "new recipe",
+          "online"
+        ],
+        "embedding_text": "The user baked a chocolate cake for their sister's birthday party using a new online recipe, and it turned out well.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0057",
+        "source_time": "2023-05-22 10:09:01",
+        "record_time": "2026-07-07T19:50:15.893561",
+        "score": 0.4316624396822496,
+        "score_components": {
+          "dense_cosine_score": 0.4316624396822496,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "User used oven convection setting for the first time on May 25, 2023 to bake cookies.",
+        "dimension": {
+          "time": "2023-05-25",
+          "location": "home",
+          "reason": "experimenting with convection",
+          "purpose": "bake cookies",
+          "keywords": [
+            "oven convection",
+            "first time",
+            "cookies"
+          ]
+        },
+        "entities": [
+          "oven convection",
+          "first time",
+          "cookies"
+        ],
+        "embedding_text": "User used oven convection setting for the first time on May 25, 2023 to bake cookies.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0154",
+        "source_time": "2023-05-28 20:13:00.500000",
+        "record_time": "2026-07-07T19:50:15.894628",
+        "score": 0.4179763925537592,
+        "score_components": {
+          "dense_cosine_score": 0.4179763925537592,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user tried a sourdough bread recipe with their starter on May 16, 2023, and the bread turned out dense and heavy.",
+        "dimension": {
+          "time": "2023-05-16",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "sourdough bread",
+            "dense",
+            "heavy",
+            "recipe",
+            "starter"
+          ]
+        },
+        "entities": [
+          "sourdough bread",
+          "dense",
+          "heavy",
+          "recipe",
+          "starter"
+        ],
+        "embedding_text": "The user tried a sourdough bread recipe with their starter on May 16, 2023, and the bread turned out dense and heavy.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0054",
+        "source_time": "2023-05-22 01:44:02.500000",
+        "record_time": "2026-07-07T19:50:15.893525",
+        "score": 0.4107967954035033,
+        "score_components": {
+          "dense_cosine_score": 0.4107967954035033,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "On 2023-05-13, the user made a delicious whole wheat baguette.",
+        "dimension": {
+          "time": "2023-05-13",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "whole wheat baguette",
+            "baking",
+            "2023-05-13"
+          ]
+        },
+        "entities": [
+          "whole wheat baguette",
+          "baking",
+          "2023-05-13"
+        ],
+        "embedding_text": "On 2023-05-13, the user made a delicious whole wheat baguette.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0017",
+        "source_time": "2023-05-20 16:25:01",
+        "record_time": "2026-07-07T19:50:15.892955",
+        "score": 0.3967355688571099,
+        "score_components": {
+          "dense_cosine_score": 0.3967355688571099,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "User attempted a sourdough bread recipe on 2023-05-23, but the dough did not rise and the bread turned out dense and heavy.",
+        "dimension": {
+          "time": "2023-05-23",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "sourdough bread",
+            "baking failure"
+          ]
+        },
+        "entities": [
+          "sourdough bread",
+          "baking failure"
+        ],
+        "embedding_text": "User attempted a sourdough bread recipe on 2023-05-23, but the dough did not rise and the bread turned out dense and heavy.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0163",
+        "source_time": "2023-05-28 20:13:02.500000",
+        "record_time": "2026-07-07T19:50:15.894725",
+        "score": 0.3914248280154388,
+        "score_components": {
+          "dense_cosine_score": 0.3914248280154388,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "profile",
+        "content": "User experiments with different types of flour for baking.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "baking",
+            "flour types"
+          ]
+        },
+        "entities": [
+          "baking",
+          "flour types"
+        ],
+        "embedding_text": "User experiments with different types of flour for baking.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0155",
+        "source_time": "2023-05-28 20:13:00.500000",
+        "record_time": "2026-07-07T19:50:15.894639",
+        "score": 0.3907263405783465,
+        "score_components": {
+          "dense_cosine_score": 0.3907263405783465,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "fact",
+        "content": "The user created a sourdough starter approximately on April 22, 2023, and feeds it once daily with all-purpose flour and water in a 1:1:1 ratio.",
+        "dimension": {
+          "time": "2023-04-22",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "sourdough starter",
+            "all-purpose flour",
+            "water",
+            "1:1:1 ratio",
+            "daily feeding"
+          ]
+        },
+        "entities": [
+          "sourdough starter",
+          "all-purpose flour",
+          "water",
+          "1:1:1 ratio",
+          "daily feeding"
+        ],
+        "embedding_text": "The user created a sourdough starter approximately on April 22, 2023, and feeds it once daily with all-purpose flour and water in a 1:1:1 ratio.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0053",
+        "source_time": "2023-05-22 01:44:02",
+        "record_time": "2026-07-07T19:50:15.893514",
+        "score": 0.38663965338844125,
+        "score_components": {
+          "dense_cosine_score": 0.38663965338844125,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "User plans to try a new whole wheat bread recipe this weekend.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "whole wheat bread",
+            "new recipe"
+          ]
+        },
+        "entities": [
+          "whole wheat bread",
+          "new recipe"
+        ],
+        "embedding_text": "User plans to try a new whole wheat bread recipe this weekend.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0158",
+        "source_time": "2023-05-28 20:13:02",
+        "record_time": "2026-07-07T19:50:15.894672",
+        "score": 0.38414117483084675,
+        "score_components": {
+          "dense_cosine_score": 0.38414117483084675,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "User used convection setting on oven to bake cookies on 2023-05-25, achieving crispy outside and chewy inside.",
+        "dimension": {
+          "time": "2023-05-25",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "convection oven",
+            "cookies"
+          ]
+        },
+        "entities": [
+          "convection oven",
+          "cookies"
+        ],
+        "embedding_text": "User used convection setting on oven to bake cookies on 2023-05-25, achieving crispy outside and chewy inside.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0162",
+        "source_time": "2023-05-28 20:13:02",
+        "record_time": "2026-07-07T19:50:15.894714",
+        "score": 0.3775661097842534,
+        "score_components": {
+          "dense_cosine_score": 0.3775661097842534,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user attended their cousin's housewarming party around April 30, 2023, and tried a new BBQ sauce recipe.",
+        "dimension": {
+          "time": "2023-04-30",
+          "location": "cousin's housewarming party",
+          "reason": "",
+          "purpose": "trying a new BBQ sauce recipe",
+          "keywords": [
+            "BBQ sauce",
+            "recipe",
+            "cousin's housewarming party"
+          ]
+        },
+        "entities": [
+          "BBQ sauce",
+          "recipe",
+          "cousin's housewarming party"
+        ],
+        "embedding_text": "The user attended their cousin's housewarming party around April 30, 2023, and tried a new BBQ sauce recipe.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0028",
+        "source_time": "2023-05-20 20:17:01.500000",
+        "record_time": "2026-07-07T19:50:15.893093",
+        "score": 0.340854118028223,
+        "score_components": {
+          "dense_cosine_score": 0.340854118028223,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "User plans to bake chicken wings for dinner on May 28, 2023.",
+        "dimension": {
+          "time": "2023-05-28",
+          "location": "home",
+          "reason": "for dinner",
+          "purpose": "to achieve crispy skin",
+          "keywords": [
+            "bake chicken wings",
+            "crispy skin"
+          ]
+        },
+        "entities": [
+          "bake chicken wings",
+          "crispy skin"
+        ],
+        "embedding_text": "User plans to bake chicken wings for dinner on May 28, 2023.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0153",
+        "source_time": "2023-05-28 20:13:00",
+        "record_time": "2026-07-07T19:50:15.894617",
+        "score": 0.337244008074591,
+        "score_components": {
+          "dense_cosine_score": 0.337244008074591,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "profile",
+        "content": "User has prior experience with sourdough starters.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "sourdough starter"
+          ]
+        },
+        "entities": [
+          "sourdough starter"
+        ],
+        "embedding_text": "User has prior experience with sourdough starters.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0164",
+        "source_time": "2023-05-28 20:26:00",
+        "record_time": "2026-07-07T19:50:15.894736",
+        "score": 0.3335377587880689,
+        "score_components": {
+          "dense_cosine_score": 0.3335377587880689,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "fact",
+        "content": "User maintains a sourdough starter.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "sourdough starter"
+          ]
+        },
+        "entities": [
+          "sourdough starter"
+        ],
+        "embedding_text": "User maintains a sourdough starter.",
+        "source_message_ids": [
+          "4"
+        ],
+        "source_boundary_id": "4_0051",
+        "source_time": "2023-05-22 01:44:02",
+        "record_time": "2026-07-07T19:50:15.893491",
+        "score": 0.3204371863283073,
+        "score_components": {
+          "dense_cosine_score": 0.3204371863283073,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user plans to try a breakfast burrito with scrambled eggs, black beans, and avocado.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "breakfast burrito",
+            "scrambled eggs",
+            "black beans",
+            "avocado"
+          ]
+        },
+        "entities": [
+          "breakfast burrito",
+          "scrambled eggs",
+          "black beans",
+          "avocado"
+        ],
+        "embedding_text": "The user plans to try a breakfast burrito with scrambled eggs, black beans, and avocado.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0073",
+        "source_time": "2023-05-24 18:53:02",
+        "record_time": "2026-07-07T19:50:15.893737",
+        "score": 0.3195487783316549,
+        "score_components": {
+          "dense_cosine_score": 0.3195487783316549,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "profile",
+        "content": "The user is cooking more meals at home and trying to eat healthier.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "home cooking",
+            "healthy eating"
+          ]
+        },
+        "entities": [
+          "home cooking",
+          "healthy eating"
+        ],
+        "embedding_text": "The user is cooking more meals at home and trying to eat healthier.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0070",
+        "source_time": "2023-05-24 18:53:00.500000",
+        "record_time": "2026-07-07T19:50:15.893704",
+        "score": 0.3186085568251966,
+        "score_components": {
+          "dense_cosine_score": 0.3186085568251966,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "profile",
+        "content": "The user enjoys experimenting with different types of flour in baking, such as whole wheat flour.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "baking",
+            "flour",
+            "experimentation"
+          ]
+        },
+        "entities": [
+          "baking",
+          "flour",
+          "experimentation"
+        ],
+        "embedding_text": "The user enjoys experimenting with different types of flour in baking, such as whole wheat flour.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0016",
+        "source_time": "2023-05-20 16:25:00.500000",
+        "record_time": "2026-07-07T19:50:15.892944",
+        "score": 0.3034003758517488,
+        "score_components": {
+          "dense_cosine_score": 0.3034003758517488,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0000_88432d0a_abs",
+        "memory_type": "episodic",
+        "content": "The user plans to try a new coffee recipe on the weekend of 2023-05-27.",
+        "dimension": {
+          "time": "2023-05-27",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "coffee recipe",
+            "weekend"
+          ]
+        },
+        "entities": [
+          "coffee recipe",
+          "weekend"
+        ],
+        "embedding_text": "The user plans to try a new coffee recipe on the weekend of 2023-05-27.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0066",
+        "source_time": "2023-05-24 18:53:00",
+        "record_time": "2026-07-07T19:50:15.893661",
+        "score": 0.30066419186764015,
+        "score_components": {
+          "dense_cosine_score": 0.30066419186764015,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      }
+    ]
+  }
+}

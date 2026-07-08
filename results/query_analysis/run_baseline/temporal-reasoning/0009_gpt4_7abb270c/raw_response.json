@@ -1,0 +1,32 @@
+{
+  "id": "253e08fd-4ede-46a6-99b8-3883c02151dd",
+  "object": "chat.completion",
+  "created": 1783356344,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"What is the chronological order of the six museums the user visited, from earliest to latest?\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"museums\"],\n    \"time\": \"\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"\"\n}",
+        "reasoning_content": "We need to parse the question: \"What is the order of the six museums I visited from earliest to latest?\" \n- Query anchor: Rewrite with \"the user\" instead of \"I\". The question asks for the chronological order of six museum visits.\n- need_assistant_context: No mention of previous conversation or assistant suggestions. So false.\n- dimension.target_memory_type: This is about events (visits), so episodic.\n- dimension.keywords: \"museums\", \"six museums\" but we extract \"museums\" as keyword. Also possibly \"visited\" but that's implied. So keywords: [\"museums\"].\n- dimension.time: No explicit time constraint, just ordering from earliest to latest. So empty.\n- dimension.location: No explicit location constraint. Museums are locations but the question asks about the order, not location itself. So empty.\n- answer_dim: Requires ordering (ranking/comparison) so empty string.\n\nThus output JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 690,
+    "completion_tokens": 281,
+    "total_tokens": 971,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 198
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 50
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

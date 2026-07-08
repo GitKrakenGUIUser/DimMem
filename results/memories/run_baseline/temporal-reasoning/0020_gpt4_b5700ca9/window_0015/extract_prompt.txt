@@ -1,0 +1,174 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-04-06T04:49:01.500000, Thu] 1.User: I'm already doing some of these, but I'd like to try to create a bee hotel. Do you have any tips on how to build a simple bee hotel?
+[2023-04-06T04:49:02, Thu] 2.User: I'm actually thinking of building a trellis for my climbing plants like peas and cucumbers. Do you have any tips on how to build a simple trellis?
+[2023-04-06T04:49:02.500000, Thu] 3.User: I'm thinking of adding some marigolds to my garden, which I've heard can help attract beneficial insects. Do you have any tips on how to grow marigolds?
+[2023-04-06T02:25:00, Thu] 4.User: Fees must be paid to Flywire in one of two ways
+
+Two transactions, one of principal to PayZen from user, and one of fee to Flywire
+
+One transaction, where PayZen immediately routes monies to Flywire via ACH.
+
+We follow a similar process for sweeping funds to different investor accounts
+
+Current State
+
+Future State
+
+We would need to route $3.95 to FW for each payment collected.
+
+ 
+
+Balance Adjustment Offboard
+If FW cancels the plan due to the balance increasing beyond $30k, we must follow a different cancelation process as per our normal cancellation process.
+
+Normal Cancelation Process
+
+Please see Cancel Plan Automation for details. TL;DR we will refund the patient if they paid PayZen more than what was owed. This will not be done via an API, our staff will manage.
+
+We have to update the plan when this happens and send a webhook to Flywire.
+
+Provider Funded Offboard
+
+If a plan is adjusted to be over $30k, our partners must tell us why the plan is canceled, specifically for this reason; TL;DR cancelation logic will be that we refund all funds to the provider and mark adjustments / net-settle as we typically do (we do not refund patient payments to the patient, but to the provider and simply mark down the balance)—Balance Adjustment | General Rules .
+
+ 
+
+Asset Purchase Requirements
+Support the ability for FW to create plans in PayZen with existing balances
+
+Create a new endpoint for FW to onboard these servicing transfer plans
+
+Follow the process we used to board plans with Scratch (Migration endpoint w/ Peach)
+
+Create payment plan agreements and receivables for these individuals, collate records from FW of when users agreed to their terms.
+
+:art: User interaction and design
+We must present users a new total payment plan amount for modification purposes. We must call out that the service fee is a “Flywire Fee.” We can leverage the same heuristics as FW, see below. FW document this here.
+[2023-04-06T02:25:00.500000, Thu] 5.User: I just pasted product specs of a feature called Partner API V2. I pasted it in batches, so treat it as one document. Can you create test cases for me for these specs? Include also edge cases.
+[2023-04-06T08:17:00, Thu] 6.User: How has the construction industry evolved in recent years to meet the changing needs of your city's population?
+[2023-04-06T08:17:00.500000, Thu] 7.User: That's really interesting. Have you seen any specific examples of these changes in cities around the world?
+[2023-04-06T08:17:01, Thu] 8.User: Wow, these examples are really impressive! Do you think these changes will become the norm in the industry or just remain isolated examples?
+[2023-04-06T08:17:01.500000, Thu] 9.User: I hope so! It's reassuring to know that the construction industry is working towards a more sustainable future. Do you have any suggestions for how individuals can contribute to this effort?
+[2023-04-06T08:17:02, Thu] 10.User: I think those are all great suggestions, especially choosing sustainable materials and supporting government policies. Do you know of any resources where I can learn more about sustainable building practices?
+[2023-04-06T08:17:02.500000, Thu] 11.User: I'm going to check those out and try to incorporate more sustainable practices into my home. Do you have any other tips for reducing my carbon footprint in everyday life?
+[2023-04-06T02:19:00, Thu] 12.User: I'm looking for some coffee brewing tips. I recently started trying a new medium roast coffee blend, but it's come out a bit too strong for my taste. Do you have any advice on adjusting the brewing time or ratio of coffee to water? By the way, I've also been trying to cut down on the amount of sugar I add to my coffee.
+[2023-04-06T02:19:00.500000, Thu] 13.User: Can you give me more information about the different types of coffee roasts and how it affects the flavor?
+[2023-04-06T02:19:01, Thu] 14.User: I'm currently trying a medium roast, but I think I might need to adjust the brewing time as it's coming out a bit too strong. Do you think a medium-dark roast would be a good option for me to try, considering I want a smoother flavor?
+[2023-04-06T02:19:01.500000, Thu] 15.User: I see what you mean about the roast level affecting the flavor. I'm thinking of trying a medium-dark roast to see if it's a better fit for my taste. Do you think the flavor profile of a medium-dark roast would pair well with my recent decision to cut down on sugar in my coffee?

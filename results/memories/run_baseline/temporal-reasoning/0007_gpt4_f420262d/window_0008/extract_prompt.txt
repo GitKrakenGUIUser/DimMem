@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2022-12-17T13:38:02, Sat] 1.User: I'll go check my email now. Thanks for the reminder!
+[2022-12-17T13:38:02.500000, Sat] 2.User: I'm back! I checked my email, and yes, I did receive the points for my purchase last Wednesday at The Daily Grind. I'll go update my spreadsheet now. By the way, can you help me with another question? How can I use the spreadsheet to track my progress towards a specific reward, like the free drink at The Daily Grind?
+[2023-01-05T14:54:00, Thu] 3.User: I'm looking for some new workout outfit ideas. I've been obsessed with the new Athleta store that opened up at the outdoor mall near my house about two months ago. I've been there at least five times since it opened, and I've bought something every single time.
+[2023-01-05T14:54:00.500000, Thu] 4.User: I'm more into neutral tones, and I've been loving the Salutation collection. I usually do yoga and strength training, and I like clothes that are both functional and fashionable.
+[2023-01-05T14:54:01, Thu] 5.User: I love the Salutation collection, and I appreciate the outfit ideas. I think I'll try to mix and match some of the pieces. By the way, have you heard about any upcoming promotions or sales at Athleta? My friend Rachel, who's a sales associate at the store, always gives me a heads up about their promotions.
+[2023-01-05T14:54:01.500000, Thu] 6.User: I'd also love to get some recommendations on workout accessories, like yoga mats and bags. Do you have any suggestions or favorites?
+[2023-01-05T14:54:02, Thu] 7.User: I've been meaning to get a new yoga mat, and the Athleta x Manduka eKO SuperLite Yoga Mat sounds like a great option. I'll definitely check it out. By the way, speaking of shopping, I've been wanting to try out that new indie bookshop that opened up in the arts district. Have you heard anything about it?
+[2023-01-05T14:54:02.500000, Thu] 8.User: I remember you mentioning earlier that you finally made it to the indie bookshop last Saturday and that the store is adorable, and the owner is super knowledgeable about literature. You even ended up buying two novels and a book of poetry, and the owner gave you a 10% discount since it was your first purchase. Would you recommend the bookshop to others, and is there anything in particular that you liked about it?
+[2023-01-15T01:09:00, Sun] 9.User: I'm planning a trip to Miami later this year and I'm considering redeeming my Delta SkyMiles. I just earned 10,000 miles on my Delta SkyMiles card after taking a round-trip flight from Boston to Atlanta today, by the way. Can you help me find the best way to redeem these miles for a free trip to Miami?
+[2023-01-15T01:09:00.500000, Sun] 10.User: Yeah, I'm pretty flexible with my travel dates, so I'll definitely check out the award calendar tool on Delta's website. By the way, do you think I could use my miles to book a flight on American Airlines, since I've had some experience with them recently, like that terrible in-flight entertainment system on my flight from New York to Los Angeles on February 10th?
+[2023-01-15T01:09:01, Sun] 11.User: I'll definitely check out the award calendar tool. Speaking of airline loyalty programs, I recently got approved for the Citi AAdvantage Executive credit card, which comes with a 50,000-mile bonus after spending $5,000 in the first 3 months. Do you think it's a good idea to focus on earning more miles with American Airlines or should I diversify my miles across different airlines?
+[2023-01-15T01:09:01.500000, Sun] 12.User: I'm considering applying for the Chase Sapphire Preferred card, as it seems like a great option for diversifying my miles. I've heard that Chase Ultimate Rewards points are highly valued and can be transferred to multiple airline partners. Do you think this is a good choice, and are there any other credit cards or loyalty programs that I should consider?
+[2023-01-15T01:09:02, Sun] 13.User: I'm considering applying for the Chase Sapphire Preferred card, as it seems like a great option for diversifying my miles. Can you also tell me more about the Chase Ultimate Rewards portal and how it works? I'd like to know more about how I can redeem my points for travel bookings and what kind of travel insurance and assistance is offered.
+[2023-01-17T12:23:00, Tue] 14.User: I'm planning to visit some art museums in the next few weeks and I was wondering if you could recommend some exhibitions or events that I shouldn't miss. By the way, I really enjoyed the "Street Photography" exhibition at the Photography Museum last weekend, I spent about 2 hours there on March 14th, but this is not in February.
+[2023-01-17T12:23:00.500000, Tue] 15.User: I'm actually looking for some recommendations on photography exhibitions, do you know of any other museums that have a strong focus on photography?

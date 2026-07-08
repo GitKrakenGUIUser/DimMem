@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-25T02:39:00, Thu] 1.User: I'm thinking of getting a head start on my holiday shopping this year. I began thinking about Christmas gifts around late November, so I'm hoping to avoid the last-minute rush. Do you have any tips on how to create a budget and stick to it?
+[2023-05-25T02:39:00.500000, Thu] 2.User: I like the idea of categorizing my expenses. I'm thinking of allocating a bigger budget for gifts and a smaller one for decorations. How can I come up with a realistic budget for each person on my list?
+[2023-05-25T02:39:01, Thu] 3.User: I'll definitely consider those tips to come up with a realistic budget for each person. I'm thinking of making a spreadsheet to track my spending and stay organized. Do you have any recommendations for budgeting apps or tools to help me stay on track?
+[2023-05-25T02:39:01.500000, Thu] 4.User: I think I'll try out Mint and see how it works for me. I've heard good things about it. By the way, I've already started thinking about gifts and I've been browsing online marketplaces like Amazon and eBay during my lunch breaks at work, creating a list of potential gifts for each person.
+[2023-05-25T02:39:02, Thu] 5.User: I'm thinking of taking advantage of the Black Friday sales to get a head start on my holiday shopping. Do you have any tips on how to navigate Black Friday sales and find the best deals?
+[2023-05-25T02:39:02.500000, Thu] 6.User: I think I'll definitely take advantage of Black Friday sales to get a head start on my holiday shopping. I've already been browsing online marketplaces like Amazon and eBay during my lunch breaks at work, creating a list of potential gifts for each person.
+[2023-05-25T03:50:00, Thu] 7.User: What are some of the ethical challenges that newspapers have faced in the digital age, such as fake news or the need to remain impartial in an era of heightened political polarization?
+[2023-05-25T03:50:00.500000, Thu] 8.User: Yeah, I've definitely noticed a lot of sensational headlines lately. It's hard to know what to trust anymore.
+[2023-05-25T03:50:01, Thu] 9.User: Yeah, I've been trying to fact-check more and read articles from different sources. It can be overwhelming though, there's so much information out there!
+[2023-05-25T03:50:01.500000, Thu] 10.User: It's just tiring to constantly fact-check everything. I wish there was an easier way to know what's true and what's not.
+[2023-05-25T03:50:02, Thu] 11.User: I also worry that some news outlets have their own agenda and twist stories to fit their narrative. How can we know if a newspaper is truly impartial?
+[2023-05-25T03:50:02.500000, Thu] 12.User: Yeah, it's important to be critical of what we read and where it comes from. I'm definitely going to try to read a variety of newspapers from now on.
+[2023-05-25T03:50:03, Thu] 13.User: It's frustrating to see how easy it is for fake news to spread on social media. Do you think there should be stricter regulations on what can be posted?
+[2023-05-25T09:08:00, Thu] 14.User: I'm trying to plan a trip to Seoul and I was wondering if you could recommend some must-try dishes and restaurants in the city. My grandmother used to make the best kimchi, and I'd love to try some authentic Korean cuisine while I'm there.
+[2023-05-25T09:08:00.500000, Thu] 15.User: Can you recommend any language exchange programs or apps that I can use to practice my Korean language skills while I'm traveling in Seoul? Maybe something that can connect me with locals or other language learners?

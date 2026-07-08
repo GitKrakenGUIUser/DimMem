@@ -1,0 +1,201 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-23T20:05:00, Tue] 1.User: In the following question, statements 1 and 6 are respectively the first and the last sentences of a paragraph and statements A, B, C and D come in between them. Rearrange A, B, C and D in such a way that they make a coherent paragraph together with statements 1 and 6. Select the correct order from the given choices.
+1. The question whether India should manufacture nuclear weapons or not has been asked very often.
+A. Hence there is no alternative at the disposal of India but to make atomic weapons.
+B. Pakistan has already declared its intention to make the atom bomb.
+C. In this context, we need to strengthen our defence and security so as to maintain the morale of the people.
+D. Vast majority of the population is always afraid of a fresh attack by that nation.
+6. Even though the production of atom bomb is very expensive, India cannot give us the proposal.
+
+DBCA
+
+DBAC
+
+BADC
+
+BDCA
+[2023-05-23T20:05:00.500000, Tue] 2.User: Tarun walks from his house at 4 km/ hr and reaches his school 5 minutes late. The next day he decides to walk at 5 km/hr. He reaches 15 minutes early. What is the distance from his school to his house?
+[2023-05-23T20:05:01, Tue] 3.User: Two trains are travelling on parallel tracks in the same direction, at speeds of 50 km/hr and 32 km/hr respectively. The faster train crosses the last bogie of the slower train, measuring 18 m in 18 seconds. The length of the slower train is
+[2023-05-23T20:05:01.500000, Tue] 4.User: Two trains are travelling on parallel tracks in the same direction, at speeds of 50 km/hr and 32 km/hr respectively. The faster train crosses the last bogie of the slower train, measuring 18 m in 18 seconds. The length of the slower train is
+
+0.072 km
+
+720 m
+
+0.09 km
+
+144 m
+[2023-05-23T20:05:02, Tue] 5.User: In a school they conduct a grand admission test for new students to join. This test has got 500 questions in it. A student Yash who is fond of this school since his early days writes the admission test and answered only 80% of the initial 250 questions correctly. If he needs to get an overall score of 60% in that test , how many questions he needs to attend without mistake in the remaining questions ?
+
+145
+
+100
+
+120
+
+160
+[2023-05-23T20:05:02.500000, Tue] 6.User: From a well shuffled pack of 52 cards, a card is drawn at random. Find the probability that the drawn card is a king or a queen.
+
+8/13
+
+11/13
+
+2/13
+
+None of these
+[2023-05-23T20:05:03, Tue] 7.User: Directions: In the following questions, only one Conclusion is possible and three statements are given. From this you have to take the statements to be true even if they seem to be at variance with commonly known facts and then decide which of the given statement logically follows.
+Statements:
+
+All halls are tyres.
+
+Some tyres are wheels.
+
+All wheels are cars.
+Conclusions
+
+I. Some cars are wheels.
+
+II. Some cars are tyres.
+
+III. Some wheels are halls.
+
+Only I and II follows
+
+Only III follows
+
+None of the above
+
+Only I follows
+[2023-05-23T23:54:00, Tue] 8.User: I'm thinking of starting a writing blog to share my experiences and tips with others. I've already registered a domain name and set up a basic website, but I'm struggling to come up with content ideas. Can you suggest some topics that might be interesting to readers? By the way, I've been writing in my journal every morning for about 20-30 minutes before starting my day, and it's really helped me process my thoughts and emotions - maybe I could write about that too?
+[2023-05-23T23:54:00.500000, Tue] 9.User: That's a lot of great ideas! I think I'll start with writing about my journaling routine and how it's helped me process my thoughts and emotions. Do you have any suggestions on how to structure a blog post, like how long it should be, how many paragraphs, and what kind of tone to use?
+[2023-05-23T23:54:01, Tue] 10.User: I think I'll start with a more personal approach, sharing how I got back into journaling after a six-month gap, and how it's helped me process my thoughts and emotions. I'll also try to keep my first post relatively short and concise, around 300-400 words. Can you suggest any ways to make my writing more engaging and conversational, without being too casual or informal?
+[2023-05-23T23:54:01.500000, Tue] 11.User: That's really helpful, thanks! I think I'll try to incorporate some of those tips into my writing. One thing I'm still unsure about is how to conclude my post. Do you have any suggestions on how to wrap up my story and leave my readers with something to think about?
+[2023-05-23T23:54:02, Tue] 12.User: I'm going to try to wrap up my post by summarizing my main points and leaving my readers with a thought-provoking question. Here's my revised conclusion:
+
+"In conclusion, getting back into journaling has been a game-changer for me. It's helped me process my thoughts and emotions, gain clarity, and develop a more positive mindset. As I continue on this journey, I'm excited to see how it will shape me and help me grow. How about you? What's holding you back from starting your own journaling practice, and what do you hope to achieve from it?"
+
+Let me know if this looks good or if I need to make any adjustments!
+[2023-05-23T23:54:02.500000, Tue] 13.User: I think you're ready to publish your post! Your conclusion looks great, and you've done a wonderful job of summarizing your main points and leaving your readers with a thought-provoking question. Remember to proofread your post one more time for any grammar or spelling errors, and then hit that publish button!
+
+If you need any further assistance or have any other questions, feel free to ask. Otherwise, I wish you all the best with your blog post, and I hope it resonates with your readers!
+
+(And don't forget to promote your post on social media and engage with your readers in the comments!)
+[2023-05-24T10:57:00, Wed] 14.User: I'm considering buying a new lens for my Canon EOS 80D camera. I've had it for a while now, and I remember buying it from B&H Photo in New York City during a trip with friends in August 2018. Can you help me find a good prime lens for portraits?
+[2023-05-24T10:57:00.500000, Wed] 15.User: I'm actually looking for a lens that's a bit wider than 50mm. I've been using the EF 50mm f/1.8 STM that came with my camera, but I want something that can capture more of the scene. Do you have any recommendations for a wide-angle prime lens that's around $300-$500?

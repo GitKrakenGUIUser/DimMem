@@ -1,0 +1,32 @@
+{
+  "id": "b8810b38-4fc9-4cc2-b1ac-e77bf883367c",
+  "object": "chat.completion",
+  "created": 1783356298,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"When did the user submit their research paper on sentiment analysis?\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"research paper\", \"sentiment analysis\"],\n    \"time\": \"\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"time\"\n}",
+        "reasoning_content": "We need to parse the question: \"When did I submit my research paper on sentiment analysis?\" The user asks for the time of a specific event: submitting a research paper on sentiment analysis. There is no mention of previous conversation, so need_assistant_context is false. The memory type is episodic (specific event). Keywords: \"research paper\", \"sentiment analysis\". The question asks for time, so answer_dim should be \"time\", and time field should be left empty because the question itself asks for the time. Location is not explicit. Query anchor: rewrite to \"When did the user submit their research paper on sentiment analysis?\""
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 686,
+    "completion_tokens": 210,
+    "total_tokens": 896,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 127
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 46
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

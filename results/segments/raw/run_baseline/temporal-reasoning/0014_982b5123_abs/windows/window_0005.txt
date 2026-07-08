@@ -1,0 +1,67 @@
+[2023-05-27T19:37:03, Sat] 1.User: I also think it's important to educate ourselves on the root causes of the conflicts in the region and work towards addressing those issues in a sustainable way. It's not just about treating the symptoms, but rather, finding long-term solutions.
+[2023-05-27T14:28:00, Sat] 2.User: I'm having some trouble sleeping due to the noise from a construction site near my place. Can you recommend some effective earplugs or white noise apps that can help me block out the noise? By the way, I've been staying up late to finish this TV series and it's been affecting my morning routine - I've been waking up around 8:30 am instead of my usual 7:00 am.
+[2023-05-27T14:28:00.500000, Sat] 3.User: What are some relaxing activities I can do before bed to help me unwind? I've been taking a warm bath every other night, but I'm looking for some other options.
+[2023-05-27T14:28:01, Sat] 4.User: I've been meaning to try meditation and deep breathing exercises. Do you have any recommendations for a meditation app or a specific routine I can follow for a beginner like me? Oh, and by the way, I've been having some pretty vivid dreams lately, do you think it's related to the melatonin supplements I've been taking?
+[2023-05-27T14:28:01.500000, Sat] 5.User: I think I'll start with the Headspace app and try to meditate for 5-10 minutes, 2-3 times a week. I'm also curious about the dream journal idea, I'll try to keep track of my dreams for a week or two to see if I notice any patterns. By the way, I've been going to bed pretty late lately, usually between 12:30 am to 1:30 am, do you think that could be affecting my sleep quality and dreams as well?
+[2023-05-27T14:28:02, Sat] 6.User: I'd like to try to establish a more consistent sleep schedule, but I'm worried that I'll have trouble falling asleep earlier since I've been staying up late to watch my TV series. Do you have any tips on how to wind down and prepare for an earlier bedtime?
+[2023-05-27T14:28:02.500000, Sat] 7.User: I think I'll try to establish a pre-bedtime routine to help me wind down and prepare for an earlier bedtime. I'll start by setting a specific TV time and limiting my screen time before bed. I'll also try to create a calming ambiance in my bedroom by dimming the lights and playing soothing music. Do you have any recommendations for calming music or nature sounds that can help me relax?
+[2023-05-27T10:37:00, Sat] 8.User: Hey Assistant, I need your help creating Midjourney command for AI Art Suffixes. 
+ 
+The command for this kind of suffix should be in this format.
+ 
+`/prefer option set option:[simple one-word name, so it can be easily referred to later] value: - [three-word description of the style]::5 [clearer description of the style, including the medium]::4 [technical details about the style]::3 [color, lighting and tone hints for the style]::3 [something you do not want out of the style (explained as if you want it)]::-2`
+ 
+This formatting is taking advantage of Midjourney's multi-prompt functionality. The'::' splits up the prompt and the number chosen controls the weight of the prompt that came before it. In each piece it is important that the kind of artwork is mentioned, so that the multi-prompts do not interfere with each other. Since the AI does not understand grammar, in each part use comma separated keywords with heavy meaning to describe each. 
+ 
+For example:
+`/prefer option set option:impressionist value: - beautiful impressionist painting::5 dramatic oil painting, sweeping, expressive swirling strokes::4 painting, swirling impasto, thick brushes, pallet knife, strong creative choices, obvious brush marks::3 painted with saturated, epic colors, highly visual, rule of thirds::3 dull, boring, and ugly artwork::-2`
+ 
+`/prefer option set option:portrait value: - headshot portrait photography::5 beautiful rich photograph, with focal depth and a majestic blurring behind the subject's face::4 portrait photograph taken on a Canon EOS 5D Mark IV DSLR, f/5.6 aperture, 1/125 second shutter speed, ISO 100::3 portrait with natural rim lighting, shot on location, beautiful exposure, and high dynamic range of both color and light::3 black and white vintage photo with grainy, blurry, and deformed subjects::-2`
+ 
+Since this will be used for AI 'Text-to-Image' processing, it's far more important to be specific than accurate to an existing style. Make bold and interesting choices when you invent your own art style.
+ 
+Please start by describing a visually appealing art style with clear detail so someone would be inspired to try the command. (Write in the format of persuasive ad copy) Then provide the command itself (as a code block so it can be easily copy and pasted). Repeat this task for three tries based on the following specification:
+ 
+I would like three options for creating images of futuristic shamans. Please create aerial, kingdom, and natural.
+[2023-05-27T10:37:00.500000, Sat] 9.User: Hey Assistant, I need your help creating Midjourney command for AI Art Suffixes. 
+ 
+The command for this kind of suffix should be in this format.
+ 
+`/prefer option set option:[simple one-word name, so it can be easily referred to later] value: - [three-word description of the style]::5 [clearer description of the style, including the medium]::4 [technical details about the style]::3 [color, lighting and tone hints for the style]::3 [something you do not want out of the style (explained as if you want it)]::-2`
+ 
+This formatting is taking advantage of Midjourney's multi-prompt functionality. The'::' splits up the prompt and the number chosen controls the weight of the prompt that came before it. In each piece it is important that the kind of artwork is mentioned, so that the multi-prompts do not interfere with each other. Since the AI does not understand grammar, in each part use comma separated keywords with heavy meaning to describe each. 
+ 
+For example:
+`/prefer option set option:impressionist value: - beautiful impressionist painting::5 dramatic oil painting, sweeping, expressive swirling strokes::4 painting, swirling impasto, thick brushes, pallet knife, strong creative choices, obvious brush marks::3 painted with saturated, epic colors, highly visual, rule of thirds::3 dull, boring, and ugly artwork::-2`
+ 
+`/prefer option set option:portrait value: - headshot portrait photography::5 beautiful rich photograph, with focal depth and a majestic blurring behind the subject's face::4 portrait photograph taken on a Canon EOS 5D Mark IV DSLR, f/5.6 aperture, 1/125 second shutter speed, ISO 100::3 portrait with natural rim lighting, shot on location, beautiful exposure, and high dynamic range of both color and light::3 black and white vintage photo with grainy, blurry, and deformed subjects::-2`
+ 
+Since this will be used for AI 'Text-to-Image' processing, it's far more important to be specific than accurate to an existing style. Make bold and interesting choices when you invent your own art style.
+ 
+Please start by describing a visually appealing art style with clear detail so someone would be inspired to try the command. (Write in the format of persuasive ad copy) Then provide the command itself (as a code block so it can be easily copy and pasted). Repeat this task for three tries based on the following specification:
+ 
+I would like three options for creating images of futuristic shamans. Please create aerial, kingdom, and natural. 
+ 
+#----------------------------------------------------------------------------------------------------------------------------------#
+ 
+Now could you help me create Midjourney commands for generating artworks with those styles (--aerial, --kingdom, and --natural)
+Format:
+`/imagine prompt:[Scene] with [Traits], [Lighting], [Mood]. --[Parameter] --ar [w:h]'
+ 
+Scene, traits, lighting, and mood can be brief descriptions in plain English. Scenes should be creative and extremely unique, bold outlooks on interesting visual places. Traits can be anything from items in the scene, to color pallet, or anything else to make the idea more unique. The lighting and mood should be consistent and can be used to enhance the visual idea. 
+ 
+Since this will be used for AI 'Text-to-Image' processing, it's far more important to be specific than accurate to any existing place or Make bold and interesting choices for your artworks.
+ 
+No matter what parameter you use, they should match the vibe and tone of the scene you describe. For best results, please only make landscapes and architecture for these styles. 
+ 
+Special Note: I would love to incorporate the idea of fractals (fractal architecture, or fractal plant growth) into as many of the prompts as possible.
+ 
+I will use these as wallpapers so please make the aspect ratio 16:9. 
+ 
+Please create 5 /imagine commands in the previously described format. Please make sure the parameter used is right for the image you are generating. Please put each command into code blocks so they can be easily copied.
+[2023-05-27T17:39:00, Sat] 10.User: I'm looking for some new workout playlists to listen to during my runs. Can you recommend some popular ones?
+[2023-05-27T17:39:00.500000, Sat] 11.User: Can you recommend some good running shoes for a 5K race?
+[2023-05-27T17:39:01, Sat] 12.User: What's the difference between a neutral and stability shoe, and which one would you recommend for me?
+[2023-05-27T17:39:01.500000, Sat] 13.User: I've been doing a lot of running lately, so I think I need a shoe that provides good support and cushioning. Would a stability shoe be a good choice for me?
+[2023-05-27T17:39:02, Sat] 14.User: I'm thinking about getting a new tennis racket. Do you have any recommendations?
+[2023-05-27T17:39:02.500000, Sat] 15.User: I'm looking for a racket that provides more power and spin. I've been playing with Coach Thompson for a few weeks now, and I think I'm ready for a racket that can help me take my game to the next level. What do you think about the Babolat Pure Aero?

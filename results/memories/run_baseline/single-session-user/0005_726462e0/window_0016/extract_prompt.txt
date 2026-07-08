@@ -1,0 +1,159 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-27T06:54:01.500000, Sat] 1.User: Yeah, I named Billy and Whiskers based on their personalities. Billy is a bit of a troublemaker, always getting into mischief and causing trouble, so the name just fit. Whiskers, on the other hand, has these super long whiskers that are really distinctive, so that's how she got her name. They're both great goats, and I'm glad I got them. Anyway, back to the hay - do you think I should get a hay analyzer to test the quality of the hay?
+[2023-05-27T06:54:02, Sat] 2.User: I'll consider getting a hay analyzer to test the quality of the hay. That way, I can ensure I'm providing the best possible feed for my horses and goats. Speaking of which, I need to remember to separate Billy from the others during feeding time to make sure everyone gets their fair share. He can be a bit aggressive when it comes to food.
+[2023-05-27T06:54:02.500000, Sat] 3.User: That's a great idea about providing enrichment activities for the goats. I'll definitely look into that. I've noticed they do get bored sometimes and start chewing on things they shouldn't, so maybe some toys or puzzle feeders would help keep them occupied. 
+
+By the way, I've been meaning to ask - do you have any recommendations for a good fencing material for the pigpen? I've been thinking about adding some extra insulation or pads to the fence to make it safer for Porky.
+[2023-05-27T10:40:00, Sat] 4.User: I'm thinking of planning a trip to Asia and I was wondering if you could recommend some popular destinations for solo travelers. By the way, I recently went on a week-long vacation to Hawaii with my immediate family, including my parents and younger sibling, and it was a blast, but I've also had some amazing experiences traveling solo, like my trip to Japan last year.
+[2023-05-27T10:40:00.500000, Sat] 5.User: I'm interested in visiting Vietnam and trying all the local cuisine. As I mentioned earlier, my family and I tried a lot of traditional Hawaiian dishes when we were in Hawaii, and I loved the experience of bonding over food. Can you recommend some must-try dishes and restaurants in Vietnam?
+[2023-05-27T10:40:01, Sat] 6.User: I'm excited to try all the local cuisine in Vietnam. Since I've had experience traveling with family, I'm thinking of taking a cooking class where I can learn to make some of these dishes myself. Do you know of any good cooking schools or classes in Vietnam that would be suitable for solo travelers?
+[2023-05-27T10:40:01.500000, Sat] 7.User: I'm thinking of booking a cooking class in Hanoi. Do you know if they usually provide recipes and notes after the class, so I can try to recreate the dishes when I get back home?
+[2023-05-27T10:40:02, Sat] 8.User: I'm thinking of booking a cooking class in Hanoi, but I'm also interested in exploring the local markets. Are there any cooking classes that offer a market tour before the class, so I can learn more about the local ingredients and see where they're sourced from?
+[2023-05-27T10:40:02.500000, Sat] 9.User: I'm interested in exploring the local markets in Hanoi, and I think a market tour before the cooking class would be a great way to learn more about the local ingredients and see where they're sourced from. Can you recommend any specific markets in Hanoi that are good for a market tour?
+[2023-05-27T22:21:00, Sat] 10.User: Help me draft a list of interactive community engagement activities that the BHS Communication and Engagement Team could leverage to support this upcoming event:
+
+Interfaith Community Services is inviting you to be an exhibitor at our Second Annual “Change Your Mind” Festival, scheduled for May 6th, 2023, at the Bandshell in Oceanside! Your involvement in this festival is an opportunity for your business to help educate several generations about the importance and impact of maintaining good mental health.
+The Change Your Mind Festival is designed to be an experience where people can to look past the stigmas and misconceptions often associated with mental health. In the festival marketplace, we welcome our exhibitors to showcase and highlight their goods as they relate to these topics.
+During the “Change Your Mind” Festival, Interfaith will offer a full day of wellness activities for our guests. Workshops, panels, and breakout sessions will include topics such as Destigmatizing mental health, The Happiness project, how to deal with depression in the family, Healing through the Arts, and various related subjects. We will also have unique experiences and activities such as; Reiki, Gong Meditation, drumming therapy, Sound Baths, Yoga for teens, and much more.
+Community Sponsors are the primary source of funding for this festival and will help ensure its success. We thank you for your consideration and contribution!
+Exhibitor/Vendor Package: $250 Includes Pre- and post-event publicity
+8ft table, tablecloth, 2 Chairs -Signage
+Details: Saturday, May 6th from 11 am – 4 pm
+Junior Seau Pier Amphitheatre, Oceanside
+By partnering with Interfaith on this annual “Change Your Mind” Festival you will earn wide exposure and build even more brand awareness throughout North San Diego County, as well as branding your organization as a leader in the community in which you operate. We value our partnership and want you to be involved in this amazing day
+Some potential activities include:
+1. Naloxone Training and Distribution - either hosted by HRCSD or one of their subcontractors. It could also be a great opportunity to highlight the call to action to become a Naloxone Distributor. Maya and I have also briefly brainstormed some ideas how we could partner with OSI/LiveWoW to develop a Train the Trainer program where certain Outreach staff who go out with the bus get trained to train the community on how to use naloxone, properly track and document said distribution activities, and reinforce the idea that we want to flood the community with naloxone, and "It's Up 2 Us" to do that together. People want to help tackle this crisis, let's empower them to do so. This would involve coordination with Stephanie Lao and Population Health. 
+
+2. Culturally tailored presentations on mental health through the Breaking Down Barriers contract and their cultural brokers to speak specifically to mental health challenges and stigma facing the Hispanic and African American communities. 
+
+3. Rerouting some of the SBCM art pieces to this event to amplify the voices of lived experience
+4. Using this event as a kick-off for both MIHMM in North as well as Fentanyl Awareness Day on May 9th. 
+
+and any other ideas you can generate.
+[2023-05-27T22:21:00.500000, Sat] 11.User: Summarize this for me:
+Passing along an opportunity to enhance the 2nd Annual Change Your Mind Mental Health Festival on May 6th, which is designed to promote culturally responsive and positive mental health and self-care practices. I propose that BHS participate in this event and showcase recent additions to the region such as the Crisis Stabilization Units, Leave Behind kits, Fentanyl Campaign, etc. There are various sponsorship levels ranging from $25k to $250. The $25k title sponsorship offers several C&E benefits like an Opening Announcement on the Main Stage, 5 additional announcements throughout the event, and a chance for Leadership to participate in a podcast with Greg Anglea on SUD or MH topics.
+
+Moreover, we have heard in recent community conversations, listening sessions, UCSD focus groups, key informant interviews, and other engagement channels that there is a misconception in North County about the lack of Behavioral health resources in the area. Therefore, sponsoring the Change Your Mind festival would provide an excellent opportunity for us to promote awareness of the available resources and address this misconception. We could present a North-specific One Pager, Fentanyl Awareness Materials, announce the Youth Challenge, build an interest list for presentations, promote CEP, host culturally tailored workshops with Breaking Down Barriers, and more.
+
+I would love to discuss this opportunity further and explore possibilities for our department to get involved! This seems like a ripe opportunity to collaborate with OEqC to enhance work already being done in the community.
+[2023-05-28T03:49:00, Sun] 12.User: How do you think we can enhance the educational system to better prepare students for the workforce in the 21st century?
+[2023-05-28T03:49:00.500000, Sun] 13.User: It seems like a lot needs to change in the education system. Do you think there is any resistance from educators to implement these changes?
+[2023-05-28T03:49:01, Sun] 14.User: It's good to know that there are initiatives to implement these changes. I hope that the resistance from educators can be overcome so that students can receive the skills they need to succeed in the ever-evolving workforce.
+[2023-05-28T03:49:01.500000, Sun] 15.User: I think it's important for students to also learn about financial literacy and managing their personal finances. Do you think this should be included in the curriculum as well?

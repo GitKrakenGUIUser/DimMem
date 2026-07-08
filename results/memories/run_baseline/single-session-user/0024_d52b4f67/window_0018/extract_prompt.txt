@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-28T22:32:00.500000, Sun] 1.User: I'll definitely check out "Guns, Germs, and Steel" and "A Short History of Nearly Everything". I've heard great things about them. By the way, do you have any recommendations for indie magazines or newsletters that cover topics like sustainable living, photography, or social impact? I've been enjoying flipping through some indie magazines I picked up at a bookstore recently, and I'm looking to discover more.
+[2023-05-28T22:32:01, Sun] 2.User: These recommendations are really helpful. I'll definitely check out Delayed Gratification and The Plant Magazine. I've been enjoying reading about sustainable cities and taking notes on potential ideas for my own community. Speaking of community, do you have any recommendations for local news sources or online platforms that can help me stay informed about what's happening in my neighborhood?
+[2023-05-28T22:32:01.500000, Sun] 3.User: That's really helpful! I'll definitely check out Nextdoor and some of the local online forums to stay informed about what's happening in my neighborhood. By the way, do you have any recommendations for audiobooks or podcasts that focus on local history or community development? I've been enjoying listening to audiobooks on my daily commute, and I think it would be great to learn more about the history and development of my own community.
+[2023-05-28T22:32:02, Sun] 4.User: I'll definitely check out some of those podcasts and audiobooks. I've been enjoying listening to podcasts on my daily commute, and it would be great to learn more about my own community. By the way, do you have any recommendations for local events or meetups that focus on sustainable living, community development, or local history? I've been meeting up with an old friend at a bookstore, and it's been great to discuss these topics with someone who shares my interests.
+[2023-05-28T22:32:02.500000, Sun] 5.User: I'll definitely check out some of those meetups and events. I've been enjoying discussing these topics with my friend at the bookstore, and it would be great to meet more people who share my interests. By the way, do you have any recommendations for apps or online platforms that can help me reduce my environmental impact or live more sustainably? I've been trying to cut down on my screen time, and I think it would be great to find tools that can help me live more eco-friendly.
+[2023-05-29T16:46:00, Mon] 6.User: why is the separation of powers important to democracy
+[2023-05-29T16:46:00.500000, Mon] 7.User: how does the separation of powers works in practice in Israel?
+[2023-05-29T17:04:00, Mon] 8.User: I'm planning a new trip to California and I'm looking for some recommendations on what to do in LA. By the way, my family and I really loved our last trip there - we spent 7 days in LA and had a blast!
+[2023-05-29T17:04:00.500000, Mon] 9.User: I'm actually thinking of visiting some beaches this time. Can you recommend some good restaurants near Santa Monica Pier or Venice Beach?
+[2023-05-29T17:04:01, Mon] 10.User: I'm thinking of trying out some seafood this time. What are the average prices for seafood dishes at these restaurants?
+[2023-05-29T17:04:01.500000, Mon] 11.User: I'm thinking of trying out The Lobster at Santa Monica Pier. Can you tell me if they have any vegetarian or vegan options?
+[2023-05-29T17:04:02, Mon] 12.User: I'm actually thinking of trying out their seafood tower. Can you tell me more about it?
+[2023-05-29T17:04:02.500000, Mon] 13.User: I'm going to ask about the freshness of the seafood and if they have any sustainable practices in place.
+[2023-05-29T17:49:00, Mon] 14.User: I'm trying to find some new music to listen to. I've been to a lot of great concerts lately, like the Billie Eilish show in Philly. But in between those big events, I've also really enjoyed some smaller local music nights, like a jazz night at a local bar today, enjoying live music in a more intimate setting. Do you have any recommendations for new artists or albums I might like?
+[2023-05-29T17:49:00.500000, Mon] 15.User: I'll definitely check out these recommendations! I'm especially interested in the jazz section since I had such a great time at the jazz night at the local bar today. Do you know of any good jazz clubs or live music venues in my area that I might want to check out?

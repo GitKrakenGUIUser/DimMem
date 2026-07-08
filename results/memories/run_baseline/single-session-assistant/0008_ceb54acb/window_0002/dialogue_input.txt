@@ -1,0 +1,44 @@
+[2023-05-22T11:05:01.500000, Mon] 1.User: I'll definitely check out these recommendations. I've been trying to explore more fantasy and sci-fi books lately, and it's great to get suggestions from someone who understands my reading preferences. By the way, do you have any recommendations for non-fiction audiobooks? I've been listening to a lot of fiction, but I want to branch out and learn more about self-improvement and productivity.
+[2023-05-22T11:05:02, Mon] 2.User: I've been meaning to explore more non-fiction books, especially on self-improvement and productivity. These recommendations sound really interesting, especially "The 7 Habits of Highly Effective People" and "Atomic Habits". I've heard a lot about these books, but I've never gotten around to reading them. Do you think it's better to listen to non-fiction audiobooks at a faster speed, since they're more informative and less focused on storytelling?
+[2023-05-22T11:05:02.500000, Mon] 3.User: I think I'll start with "The 7 Habits of Highly Effective People" and see how it goes. I'll probably start with a comfortable speed and adjust as needed. Thanks for the recommendations and tips!
+[2023-05-22T13:52:00, Mon] 4.User: Please adopt persona of a computational social science expert, with research on twitter and topic modeling
+[2023-05-22T13:52:00.500000, Mon] 5.User: How can I remove warnings in the output from a Jupyter notebook
+[2023-05-22T13:52:01, Mon] 6.User: How do i remove output from a cell in jupyter notebook?
+[2023-05-22T13:52:01.500000, Mon] 7.User: There is no cell menu
+[2023-05-22T13:52:02, Mon] 8.User: I have a twitter dataset with 4800 tweets, each of which have the keyword "academic writing anxiety" in them. Here is how I'm doing topic modeling on them:
+[2023-05-22T13:52:02.500000, Mon] 9.User: #Now that we have our data with tweets about academic writing anxiety and their metadata, lets try and apply some topic modelling to extract relevant topics from these tweets. 
+#Lets try and LDA based topic model on this 
+
+# Create a id2word dictionary
+id2word = Dictionary(clean\_tweets\_df['tokens'])
+
+print(len(id2word))
+
+# Filtering Extremes
+id2word.filter\_extremes(no\_below=100, no\_above=0.7)
+print(len(id2word))
+
+# Creating a corpus object 
+corpus = [id2word.doc2bow(d) for d in clean\_tweets\_df['tokens']]
+
+# Instantiating a Base LDA model 
+base\_model = LdaMulticore(corpus=corpus, num\_topics=3, id2word=id2word, workers=2, passes=5, random\_state=42)
+#Filtering the words
+words = [re.findall(r'\"([^\"]\*)\"',t[1]) for t in base\_model.print\_topics()]
+
+# Create Topics
+topics = [' '.join(t[0:10]) for t in words]
+
+# Getting the topics
+for id, t in enumerate(topics): 
+ print(f"------ Topic {id} ------")
+ print(t, end="\n\n")
+
+# Obtain topic probabilities for each tweet
+topic\_probabilities = base\_model.get\_document\_topics(corpus)
+[2023-05-23T00:02:00, Tue] 10.User: include options where 1. the documents can be submitted online. 2. if the documents to be verified are not yet stored in the blockchain, the request is sent and has to be approved by an authorized government agency such as the BIR for the income tax return or the office of permits and licenses for the business permit document. 3. once approved and verified by the concerned agency, integrate automatic storing of the said verified documents in the blockchain. 4. integrate novel and non-obvious AI method in this algorithm. include a pseudo code algorithm on this
+[2023-05-23T00:51:00, Tue] 11.User: How does the Federal Reserve use interest rates to influence the economy, and what are the potential consequences of these policy decisions?
+[2023-05-23T00:51:00.500000, Tue] 12.User: So how often does the Federal Reserve adjust interest rates? And how does it decide when to make a change?
+[2023-05-23T00:51:01, Tue] 13.User: Wow, I had no idea the Federal Reserve had so much influence over the economy. It's interesting to know they have to balance between promoting economic growth and maintaining financial stability.
+[2023-05-23T00:51:01.500000, Tue] 14.User: It's fascinating to learn about the different tools the Federal Reserve can use to support the economy during a crisis. Do you know of any examples of when they had to do so in the past?
+[2023-05-23T00:51:02, Tue] 15.User: It's impressive how much the Federal Reserve can do. I'm also curious about how their decisions impact everyday people like me. Does a change in interest rates affect my personal finances?

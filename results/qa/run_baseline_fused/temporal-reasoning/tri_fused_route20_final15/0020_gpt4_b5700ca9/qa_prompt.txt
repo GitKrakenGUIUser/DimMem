@@ -1,0 +1,113 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-04-06 22:22:01.500000
+content: The user attended a Maundy Thursday service at an Episcopal Church on April 6, 2023.
+purpose: religious observance
+
+[2]
+source_time: 2023-03-24 21:33:02
+content: On March 29, 2023, the user attended an Easter Sunday service at their local church, where a sermon on renewal and forgiveness inspired reflection on their values and priorities.
+reason: Easter Sunday service and sermon on renewal and forgiveness
+purpose: to attend church and reflect
+
+[3]
+source_time: 2023-04-06 04:29:00.500000
+content: User plans to start a workout routine at 2-3 days per week.
+purpose: to build a consistent exercise habit
+
+[4]
+source_time: 2023-04-06 22:22:02
+content: The user planned to invite friends from their church to volunteer at the food bank.
+reason: to volunteer together
+purpose: group volunteering
+
+[5]
+source_time: 2023-04-06 22:22:00
+content: The user volunteered at an Easter Egg Hunt event in late March or early April 2023.
+purpose: community service
+
+[6]
+source_time: 2023-03-24 21:33:02.500000
+content: The user attends a local church.
+
+[7]
+source_time: 2023-04-06 22:22:02.500000
+content: The user's church group is interested in adopting a specific project at the food bank, such as organizing a food drive or helping with a special event.
+reason: to make a significant impact
+purpose: to contribute to food bank's mission
+
+[8]
+source_time: 2023-03-24 21:33:01
+content: The user plans to attend a costume party and dress as Roxie Hart or Velma Kelly from the musical Chicago, inspired by flapper-inspired looks and sassy attitude.
+reason: inspired by the musical Chicago
+purpose: to attend a costume party
+
+[9]
+source_time: 2023-03-31 19:02:00.500000
+content: User has a sleep schedule on Tuesdays and Thursdays: wakes up at 6:30 AM and goes to bed by 10:30 PM the previous night.
+reason: to establish a consistent sleep schedule
+purpose: improve sleep quality
+
+[10]
+source_time: 2023-04-06 22:22:00.500000
+content: The user prefers volunteer opportunities related to community service or helping the underprivileged, is available on weekday evenings, and is open to a regular volunteer schedule.
+purpose: to volunteer
+
+[11]
+source_time: 2023-03-24 21:33:00.500000
+content: The user has seen West Side Story and Les Misérables, and watched Hamilton on Disney+ about a month ago; they are still obsessed with the Hamilton soundtrack.
+
+[12]
+source_time: 2023-04-06 22:22:00
+content: The user is interested in volunteering to give back to the community.
+
+[13]
+source_time: 2023-04-06 16:54:01
+content: The user plans to order fabric swatches from West Elm and Crate and Barrel.
+purpose: to see how they match the new sofa bed
+
+[14]
+source_time: 2023-03-24 10:26:02.500000
+content: The user plans to set aside every Sunday morning to review transactions and update their expense spreadsheet, and intends to use an automated expense tracking service and browser extension.
+reason: to ensure accuracy before the new week begins
+purpose: to keep track of purchases
+
+[15]
+source_time: 2023-04-06 17:18:01
+content: The user expresses interest in architecture as a reflection of society's values and traditions, and is curious about how modern architecture evolves with changing societal norms.
+
+Now answer the question:
+User Question:How many days ago did I attend the Maundy Thursday service at the Episcopal Church?
+Question Date:2023/04/10 (Mon) 10:28

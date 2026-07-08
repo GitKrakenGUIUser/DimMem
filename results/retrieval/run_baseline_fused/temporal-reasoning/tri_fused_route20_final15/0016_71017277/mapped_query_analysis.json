@@ -1,0 +1,64 @@
+{
+  "query_text": "The user received a piece of jewelry last Saturday, which was on 2023-03-04, from someone.",
+  "query_anchor": "The user received a piece of jewelry last Saturday, which was on 2023-03-04, from someone.",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "on 2023-03-04",
+    "location": "",
+    "keywords": [
+      "jewelry"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "The user received a piece of jewelry last Saturday, which was on 2023-03-04, from someone.",
+      "keywords": [
+        "jewelry"
+      ],
+      "query_terms": [
+        "the",
+        "user",
+        "received",
+        "a",
+        "piece",
+        "of",
+        "jewelry",
+        "last",
+        "saturday",
+        "which",
+        "was",
+        "on",
+        "2023",
+        "03",
+        "04",
+        "from",
+        "someone"
+      ]
+    },
+    "structured": {
+      "query_text": "The user received a piece of jewelry last Saturday, which was on 2023-03-04, from someone.",
+      "rewrite": "The user received a piece of jewelry last Saturday, which was on 2023-03-04, from someone.",
+      "intent": "lookup",
+      "answer_field": "keywords",
+      "content_query": "The user received a piece of jewelry last Saturday, which was on 2023-03-04, from someone.",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {
+        "time": [
+          "on 2023-03-04"
+        ]
+      },
+      "keywords": [
+        "jewelry"
+      ],
+      "canonical_text": "The user received a piece of jewelry last Saturday, which was on 2023-03-04, from someone."
+    },
+    "minilm": {
+      "query_text": "The user received a piece of jewelry last Saturday, which was on 2023-03-04, from someone."
+    }
+  }
+}

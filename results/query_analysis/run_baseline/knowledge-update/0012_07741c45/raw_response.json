@@ -1,0 +1,32 @@
+{
+  "id": "f03f3a61-8cc1-4cb9-8e6a-3072e09362b4",
+  "object": "chat.completion",
+  "created": 1783356410,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"Where does the user currently keep their old sneakers?\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"fact\"],\n    \"keywords\": [\"old sneakers\"],\n    \"time\": \"\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"location\"\n}",
+        "reasoning_content": "We need to parse the question: \"Where do I currently keep my old sneakers?\" The question date is 2023/06/23. The user is asking about location of old sneakers. This is a fact about current storage location. No mention of previous conversations, so need_assistant_context false. target_memory_type: fact (stable possession). Keywords: \"old sneakers\". Time: \"currently\" is a present state, not a specific time constraint, so leave empty. Location: the question asks about location, so answer_dim should be \"location\". However, careful: the field dimension.location is for explicit location constraint, but here the question asks about location, so we set dimension.location=\"\" and answer_dim=\"location\". So the JSON.\n\nOutput JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 685,
+    "completion_tokens": 233,
+    "total_tokens": 918,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 157
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 45
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

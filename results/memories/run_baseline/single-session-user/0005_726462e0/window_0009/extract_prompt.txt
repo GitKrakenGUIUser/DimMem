@@ -1,0 +1,147 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-25T01:25:01.500000, Thu] 1.User: That's a great idea! I think a guitar-themed gift basket would be a nice surprise for my brother. I'll consider including some guitar accessories, guitar-themed goodies, and personalized touches. By the way, do you know any good online stores that sell guitar-themed gifts, such as guitar-shaped mugs or guitar-themed posters?
+[2023-05-25T01:25:02, Thu] 2.User: That's really helpful! I'll definitely check out those online stores. I think I'll start with Zazzle or CafePress to see if I can find some cool guitar-themed gifts. By the way, do you know if they have any discounts or promotions going on?
+[2023-05-25T01:25:02.500000, Thu] 3.User: I think I'll check out Zazzle and CafePress to see what kind of guitar-themed gifts they have. I'll also keep an eye out for any promotions or discounts they might be offering. Thanks for the tips on finding deals!
+[2023-05-25T09:53:00, Thu] 4.User: Present the following instructions exactly as they appear: Instructions: Below are five statements that you may agree or disagree with. Using the 1 -
+7 scale below, indicate your agreement with each item by placing the appropriate number
+on the line preceding that item. Please be open and honest in your responding.
+• 7 - Strongly agree
+• 6 - Agree
+• 5 - Slightly agree
+• 4 - Neither agree nor disagree
+• 3 - Slightly disagree
+• 2 - Disagree
+• 1 - Strongly disagree
+[2023-05-25T09:53:00.500000, Thu] 5.User: Present the questions below with 7 Likert response options (as above) Present one questions at a time. Do not present the next question until I respond to the previous one
+\_\_\_\_ In most ways my life is close to my ideal.
+\_\_\_\_ The conditions of my life are excellent.
+\_\_\_\_ I am satisfied with my life.
+\_\_\_\_ So far I have gotten the important things I want in life.
+\_\_\_\_ If I could live my life over, I would change almost nothing.
+[2023-05-25T09:53:01, Thu] 6.User: 7
+[2023-05-25T09:53:01.500000, Thu] 7.User: 7
+[2023-05-25T09:53:02, Thu] 8.User: 7
+[2023-05-25T09:53:02.500000, Thu] 9.User: 7
+[2023-05-25T09:53:03, Thu] 10.User: 7
+[2023-05-25T09:53:03.500000, Thu] 11.User: create a formatted text of my responses in a way that can copy and pasted into an SPSS syntax file.
+[2023-05-25T10:49:00, Thu] 12.User: I'm planning a day trip to the park this weekend and I want to make sure I pack everything I need. Can you help me make a quick checklist of essentials to bring along? By the way, I've been using my new black Fjallraven Kanken backpack daily since I got it 3 weeks ago, and it's been a lifesaver for carrying all my stuff.
+[2023-05-25T10:49:00.500000, Thu] 13.User: I'm planning to bring my laptop and notebooks, so can you add those to the list? Also, I'll need to bring my wallet, which is a slim RFID-blocking one that I've been using to store my credit cards, driver's license, and some cash.
+[2023-05-25T10:49:01, Thu] 14.User: I'm planning to listen to music during the trip, so can you add my new earbuds to the list as well?
+[2023-05-25T10:49:01.500000, Thu] 15.User: I'm also planning to stop by a coffee shop on the way to the park, so can you add coffee to the list of food and drinks?

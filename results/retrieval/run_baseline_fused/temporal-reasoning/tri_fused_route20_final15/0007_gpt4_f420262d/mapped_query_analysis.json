@@ -1,0 +1,61 @@
+{
+  "query_text": "What airline did the user fly with on Valentine's Day?",
+  "query_anchor": "What airline did the user fly with on Valentine's Day?",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "on 2023/02/14",
+    "location": "",
+    "keywords": [
+      "airline",
+      "Valentine's Day"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "What airline did the user fly with on Valentine's Day?",
+      "keywords": [
+        "airline",
+        "Valentine's Day"
+      ],
+      "query_terms": [
+        "what",
+        "airline",
+        "did",
+        "the",
+        "user",
+        "fly",
+        "with",
+        "on",
+        "valentine",
+        "s",
+        "day"
+      ]
+    },
+    "structured": {
+      "query_text": "What airline did the user fly with on Valentine's Day?",
+      "rewrite": "What airline did the user fly with on Valentine's Day?",
+      "intent": "lookup",
+      "answer_field": "keywords",
+      "content_query": "What airline did the user fly with on Valentine's Day?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {
+        "time": [
+          "on 2023/02/14"
+        ]
+      },
+      "keywords": [
+        "airline",
+        "Valentine's Day"
+      ],
+      "canonical_text": "What airline did the user fly with on Valentine's Day?"
+    },
+    "minilm": {
+      "query_text": "What airline did the user fly with on Valentine's Day?"
+    }
+  }
+}

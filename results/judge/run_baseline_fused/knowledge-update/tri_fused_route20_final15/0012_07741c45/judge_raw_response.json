@@ -1,0 +1,32 @@
+{
+  "id": "26a4e84d-a060-4919-b06f-0b42dae20c7b",
+  "object": "chat.completion",
+  "created": 1783427725,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\": \"WRONG\"}",
+        "reasoning_content": "We need to compare the generated answer \"under the bed\" with the gold answer \"in a shoe rack in my closet\". They are different locations. The question asks where the user currently keeps old sneakers. The gold answer specifies a specific location (shoe rack in closet). The generated answer says under the bed. These are different. Even with generous grading, touching on same topic means location of sneakers, but the actual location differs. So it's wrong."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 405,
+    "completion_tokens": 101,
+    "total_tokens": 506,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 93
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 149
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

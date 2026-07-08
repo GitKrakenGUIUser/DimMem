@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-04-06T21:12:00, Thu] 1.User: I'm thinking of planning a garden party for my friends and family in a few weeks. Can you give me some tips on how to prepare my backyard for the event, considering the current spring weather? By the way, I've been enjoying the warmer days so much that it's hard to believe I had to shovel snow from my driveway at least four times between January and February!
+[2023-04-06T21:12:00.500000, Thu] 2.User: I totally agree! And speaking of seasons, I was thinking of planning a BBQ for my family gathering soon. Do you have any recommendations for some delicious seasonal recipes that would complement the spring weather? Maybe something with fresh asparagus or strawberries?
+[2023-04-06T21:12:01, Thu] 3.User: That sounds amazing! I'm definitely going to try out some of those recipes. By the way, I was thinking of asking my family to help with the BBQ prep, like chopping veggies and setting up the grill. Do you have any tips on how to delegate tasks efficiently, so everyone knows what they need to do?
+[2023-04-06T21:12:01.500000, Thu] 4.User: Now that I have a better idea of how to delegate tasks, I'm thinking of creating a playlist to set the mood for our BBQ gathering. Do you have any recommendations for some upbeat spring-inspired tunes to get everyone in a festive mood?
+[2023-04-06T21:12:02, Thu] 5.User: I think I'll add a few more songs to the playlist, like "School's Out" by Alice Cooper and "Summertime" by DJ Jazzy Jeff & The Fresh Prince. Those always get people in a fun, carefree mood. By the way, speaking of spring and summer, I was thinking of planning a cycling trip soon. Do you have any tips on how to prepare for a long bike ride, considering the weather and road conditions?
+[2023-04-06T21:12:02.500000, Thu] 6.User: I think I'll add a few more songs to the playlist, like "Born to Be Wild" by Steppenwolf and "Life is a Highway" by Rascal Flatts. Those always get people in a fun, adventurous mood. By the way, speaking of adventure, I was thinking of planning a road trip soon. Do you have any tips on how to prepare for a long road trip, considering the road conditions and weather?
+[2023-04-06T04:29:00, Thu] 7.User: Can you recommend an effective workout routine for someone who has not exercised in a while?
+[2023-04-06T04:29:00.500000, Thu] 8.User: That sounds great! Do you have any suggestions for how often I should do this workout routine each week?
+[2023-04-06T04:29:01, Thu] 9.User: I'll definitely start with 2-3 days per week and work my way up. Do you have any tips for staying motivated to exercise?
+[2023-04-06T04:29:01.500000, Thu] 10.User: I'll definitely try to mix up my routine and schedule workouts like appointments. Do you have any suggestions for fun exercises to try?
+[2023-04-06T04:29:02, Thu] 11.User: I never thought about trying dance fitness classes, that sounds like a lot of fun! Are there any other fun cardio workouts you recommend?
+[2023-04-06T04:29:02.500000, Thu] 12.User: I've always been interested in kickboxing, but I'm not sure where to start. Do you have any tips for beginners?
+[2023-04-06T04:29:03, Thu] 13.User: I definitely need help with my form, so joining a class with a coach sounds like a good idea. Do you have any recommendations for finding a kickboxing class near me?
+[2023-04-06T18:22:00, Thu] 14.User: What are some eco-friendly ways to clean and maintain our homes?
+[2023-04-06T18:22:00.500000, Thu] 15.User: I really like the idea of using natural cleaning products, do you have any specific recipes for homemade cleaning solutions?

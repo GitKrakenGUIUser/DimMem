@@ -1,0 +1,851 @@
+[
+  {
+    "user_id": "0015_0977f2af",
+    "memory_type": "fact",
+    "content": "The user acquired an Air Fryer on 2023-05-20.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Air Fryer"
+      ]
+    },
+    "entities": [
+      "Air Fryer"
+    ],
+    "embedding_text": "The user acquired an Air Fryer on 2023-05-20.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0148",
+    "source_time": "2023-05-21 22:54:00.500000",
+    "record_time": "2026-07-07T19:50:12.321797",
+    "score": 14.023214811562266,
+    "score_components": {
+      "bm25_score": 14.023214811562266,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 14.023214811562266,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 14.023214811562266
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.7525381926195738
+      }
+    ]
+  },
+  {
+    "user_id": "0015_0977f2af",
+    "memory_type": "episodic",
+    "content": "The user plans to make crispy sweet potato fries using the Air Fryer.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "sweet potato fries",
+        "Air Fryer"
+      ]
+    },
+    "entities": [
+      "sweet potato fries",
+      "Air Fryer"
+    ],
+    "embedding_text": "The user plans to make crispy sweet potato fries using the Air Fryer.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0149",
+    "source_time": "2023-05-21 22:54:00.500000",
+    "record_time": "2026-07-07T19:50:12.321804",
+    "score": 13.134163795425419,
+    "score_components": {
+      "bm25_score": 13.134163795425419,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 13.134163795425419,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 13.134163795425419
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.39999999999999997
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.5456721455451923
+      }
+    ]
+  },
+  {
+    "user_id": "0015_0977f2af",
+    "memory_type": "fact",
+    "content": "The user is a sales representative who closed 50 net new deals in the past year (likely 2022).",
+    "dimension": {
+      "time": "2022",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "sales representative",
+        "net new deals",
+        "50 deals"
+      ]
+    },
+    "entities": [
+      "sales representative",
+      "net new deals",
+      "50 deals"
+    ],
+    "embedding_text": "The user is a sales representative who closed 50 net new deals in the past year (likely 2022).",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0012",
+    "source_time": "2023-04-22 23:57:00.500000",
+    "record_time": "2026-07-07T19:50:12.320913",
+    "score": 6.104090487547297,
+    "score_components": {
+      "bm25_score": 6.104090487547297,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 6.104090487547297,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 6.104090487547297
+      },
+      {
+        "method": "minilm",
+        "rank": 16,
+        "score": 0.3087899176256268
+      }
+    ]
+  },
+  {
+    "user_id": "0015_0977f2af",
+    "memory_type": "fact",
+    "content": "The user had not cooked with gochujang before.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "gochujang"
+      ]
+    },
+    "entities": [
+      "gochujang"
+    ],
+    "embedding_text": "The user had not cooked with gochujang before.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0076",
+    "source_time": "2023-05-21 05:48:01.500000",
+    "record_time": "2026-07-07T19:50:12.321379",
+    "score": 5.815819398998901,
+    "score_components": {
+      "bm25_score": 5.815819398998901,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 5.815819398998901,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 5.815819398998901
+      }
+    ]
+  },
+  {
+    "user_id": "0015_0977f2af",
+    "memory_type": "fact",
+    "content": "The user is considering buying a smartwatch, high-tech gadget, or experience-based gift for their brother's birthday and is looking for deals or reviews.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "brother's birthday",
+      "purpose": "find a suitable gift",
+      "keywords": [
+        "smartwatch",
+        "high-tech gadget",
+        "experience gift",
+        "brother's birthday",
+        "deals",
+        "reviews"
+      ]
+    },
+    "entities": [
+      "smartwatch",
+      "high-tech gadget",
+      "experience gift",
+      "brother's birthday",
+      "deals",
+      "reviews"
+    ],
+    "embedding_text": "The user is considering buying a smartwatch, high-tech gadget, or experience-based gift for their brother's birthday and is looking for deals or reviews.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0106",
+    "source_time": "2023-05-21 13:25:00",
+    "record_time": "2026-07-07T19:50:12.321557",
+    "score": 5.6459216960281795,
+    "score_components": {
+      "bm25_score": 5.6459216960281795,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 5.6459216960281795,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 5.6459216960281795
+      }
+    ]
+  },
+  {
+    "user_id": "0015_0977f2af",
+    "memory_type": "profile",
+    "content": "User enjoys reading sci-fi and fantasy books and is looking for new releases in those genres.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "sci-fi",
+        "fantasy",
+        "book recommendations",
+        "new releases"
+      ]
+    },
+    "entities": [
+      "sci-fi",
+      "fantasy",
+      "book recommendations",
+      "new releases"
+    ],
+    "embedding_text": "User enjoys reading sci-fi and fantasy books and is looking for new releases in those genres.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0069",
+    "source_time": "2023-05-21 00:03:00",
+    "record_time": "2026-07-07T19:50:12.321338",
+    "score": 5.549876525359381,
+    "score_components": {
+      "bm25_score": 5.549876525359381,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 5.549876525359381,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 5.549876525359381
+      }
+    ]
+  },
+  {
+    "user_id": "0015_0977f2af",
+    "memory_type": "episodic",
+    "content": "User attended a 5-day business conference in Tokyo approximately 3 weeks before May 21, 2023.",
+    "dimension": {
+      "time": "2023-04-30",
+      "location": "Tokyo",
+      "reason": "business conference",
+      "purpose": "",
+      "keywords": [
+        "business conference",
+        "Tokyo",
+        "5-day trip"
+      ]
+    },
+    "entities": [
+      "business conference",
+      "Tokyo",
+      "5-day trip"
+    ],
+    "embedding_text": "User attended a 5-day business conference in Tokyo approximately 3 weeks before May 21, 2023.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0108",
+    "source_time": "2023-05-21 00:27:00",
+    "record_time": "2026-07-07T19:50:12.321568",
+    "score": 5.1708657335168695,
+    "score_components": {
+      "bm25_score": 5.1708657335168695,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 5.1708657335168695,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 5.1708657335168695
+      }
+    ]
+  },
+  {
+    "user_id": "0015_0977f2af",
+    "memory_type": "fact",
+    "content": "The user owns a new Instant Pot.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Instant Pot"
+      ]
+    },
+    "entities": [
+      "Instant Pot"
+    ],
+    "embedding_text": "The user owns a new Instant Pot.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0075",
+    "source_time": "2023-05-21 05:48:00.500000",
+    "record_time": "2026-07-07T19:50:12.321373",
+    "score": 4.784590118677227,
+    "score_components": {
+      "bm25_score": 4.784590118677227,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 4.784590118677227,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 4.784590118677227
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.4400732523364583
+      }
+    ]
+  },
+  {
+    "user_id": "0015_0977f2af",
+    "memory_type": "profile",
+    "content": "The user is concerned that being older than most colleagues may hinder adapting to new technologies.",
+    "dimension": {
+      "time": "2023-05-21",
+      "location": "",
+      "reason": "age compared to colleagues",
+      "purpose": "",
+      "keywords": [
+        "age",
+        "adaptability",
+        "new technologies",
+        "concern"
+      ]
+    },
+    "entities": [
+      "age",
+      "adaptability",
+      "new technologies",
+      "concern"
+    ],
+    "embedding_text": "The user is concerned that being older than most colleagues may hinder adapting to new technologies.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0138",
+    "source_time": "2023-05-21 20:16:00.500000",
+    "record_time": "2026-07-07T19:50:12.321739",
+    "score": 4.6824674060134575,
+    "score_components": {
+      "bm25_score": 4.6824674060134575,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 4.6824674060134575,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 4.6824674060134575
+      }
+    ]
+  },
+  {
+    "user_id": "0015_0977f2af",
+    "memory_type": "profile",
+    "content": "User feels motivated to take on a new fitness challenge after the 5K personal best.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "fitness motivation",
+        "personal best"
+      ]
+    },
+    "entities": [
+      "fitness motivation",
+      "personal best"
+    ],
+    "embedding_text": "User feels motivated to take on a new fitness challenge after the 5K personal best.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0025",
+    "source_time": "2023-04-27 13:45:00",
+    "record_time": "2026-07-07T19:50:12.320995",
+    "score": 3.9130343474343854,
+    "score_components": {
+      "bm25_score": 3.9130343474343854,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 3.9130343474343854,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 3.9130343474343854
+      }
+    ]
+  },
+  {
+    "user_id": "0015_0977f2af",
+    "memory_type": "episodic",
+    "content": "The user has been carbo-loading for a few days before the 2023-05-27 cycling event to ensure sufficient energy for the ride.",
+    "dimension": {
+      "time": "2023-05-18 to 2023-05-21",
+      "location": "",
+      "reason": "to have energy for the cycling event",
+      "purpose": "ensure energy",
+      "keywords": [
+        "carbo-loading",
+        "cycling event"
+      ]
+    },
+    "entities": [
+      "carbo-loading",
+      "cycling event"
+    ],
+    "embedding_text": "The user has been carbo-loading for a few days before the 2023-05-27 cycling event to ensure sufficient energy for the ride.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0101",
+    "source_time": "2023-05-21 13:07:01.500000",
+    "record_time": "2026-07-07T19:50:12.321527",
+    "score": 3.91211012769768,
+    "score_components": {
+      "bm25_score": 3.91211012769768,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 3.91211012769768,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 3.91211012769768
+      }
+    ]
+  },
+  {
+    "user_id": "0015_0977f2af",
+    "memory_type": "episodic",
+    "content": "User is considering trying a new BBQ joint called Smokey's that recently opened downtown.",
+    "dimension": {
+      "time": "",
+      "location": "Smokey's downtown",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Smokey's",
+        "BBQ joint",
+        "downtown"
+      ]
+    },
+    "entities": [
+      "Smokey's",
+      "BBQ joint",
+      "downtown"
+    ],
+    "embedding_text": "User is considering trying a new BBQ joint called Smokey's that recently opened downtown.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0066",
+    "source_time": "2023-05-12 05:11:01.500000",
+    "record_time": "2026-07-07T19:50:12.321319",
+    "score": 3.3494289830837403,
+    "score_components": {
+      "bm25_score": 3.3494289830837403,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 3.3494289830837403,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 3.3494289830837403
+      },
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.3356724642688037
+      }
+    ]
+  },
+  {
+    "user_id": "0015_0977f2af",
+    "memory_type": "episodic",
+    "content": "The user plans to tell a manager that they achieved 156% attainment of a $420,000 quota, with over 50 deals averaging $15,000 each, including cross-sells and upsells, and 82% net new.",
+    "dimension": {
+      "time": "2023-04-23",
+      "location": "",
+      "reason": "to communicate performance to manager",
+      "purpose": "to present a favorable performance report",
+      "keywords": [
+        "quota attainment",
+        "156%",
+        "$420,000",
+        "average deal size $15,000",
+        "cross-sell",
+        "upsell",
+        "net new 82%"
+      ]
+    },
+    "entities": [
+      "quota attainment",
+      "156%",
+      "$420,000",
+      "average deal size $15,000",
+      "cross-sell",
+      "upsell",
+      "net new 82%"
+    ],
+    "embedding_text": "The user plans to tell a manager that they achieved 156% attainment of a $420,000 quota, with over 50 deals averaging $15,000 each, including cross-sells and upsells, and 82% net new.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0013",
+    "source_time": "2023-04-22 23:57:01",
+    "record_time": "2026-07-07T19:50:12.320920",
+    "score": 3.2910291246416374,
+    "score_components": {
+      "bm25_score": 3.2910291246416374,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 3.2910291246416374,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 3.2910291246416374
+      },
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.19999999999999998
+      }
+    ]
+  },
+  {
+    "user_id": "0015_0977f2af",
+    "memory_type": "episodic",
+    "content": "The user plans to participate in the 'Art in the Park' sculpture festival on June 15-16, 2023.",
+    "dimension": {
+      "time": "2023-06-15 to 2023-06-16",
+      "location": "nearby city",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Art in the Park",
+        "sculpture festival",
+        "amateur"
+      ]
+    },
+    "entities": [
+      "Art in the Park",
+      "sculpture festival",
+      "amateur"
+    ],
+    "embedding_text": "The user plans to participate in the 'Art in the Park' sculpture festival on June 15-16, 2023.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0055",
+    "source_time": "2023-05-08 18:28:00.500000",
+    "record_time": "2026-07-07T19:50:12.321176",
+    "score": 2.7394073665724745,
+    "score_components": {
+      "bm25_score": 2.7394073665724745,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 2.7394073665724745,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 2.7394073665724745
+      }
+    ]
+  },
+  {
+    "user_id": "0015_0977f2af",
+    "memory_type": "profile",
+    "content": "User is interested in trying Tteokbokki in Seoul and Pad Thai in Bangkok during the upcoming trip.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Tteokbokki",
+        "Seoul",
+        "Pad Thai",
+        "Bangkok",
+        "street food"
+      ]
+    },
+    "entities": [
+      "Tteokbokki",
+      "Seoul",
+      "Pad Thai",
+      "Bangkok",
+      "street food"
+    ],
+    "embedding_text": "User is interested in trying Tteokbokki in Seoul and Pad Thai in Bangkok during the upcoming trip.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0112",
+    "source_time": "2023-05-21 00:27:02.500000",
+    "record_time": "2026-07-07T19:50:12.321592",
+    "score": 2.449377944168993,
+    "score_components": {
+      "bm25_score": 2.449377944168993,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 2.449377944168993,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 2.449377944168993
+      }
+    ]
+  }
+]

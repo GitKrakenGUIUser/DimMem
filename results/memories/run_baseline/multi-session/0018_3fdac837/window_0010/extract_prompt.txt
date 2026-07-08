@@ -1,0 +1,139 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-26T00:39:02.500000, Fri] 1.User: I've been searching for the original 1991 UK pressing of "Loveless" on Creation Records, which is notoriously hard to find. I've heard that only a limited number of copies were pressed, and it's become a holy grail for many My Bloody Valentine fans.
+
+What draws me to this particular pressing is the unique sound quality and the fact that it's a piece of music history. I've heard that the original pressing has a warmer, more analog sound compared to later reissues, and I'd love to experience it firsthand.
+
+I've been scouring online marketplaces, record stores, and collector forums, but so far, I haven't had any luck. I've even considered reaching out to other collectors and dealers to see if they have any leads.
+
+Do you think you could help me brainstorm some strategies or point me in the right direction? I'd really appreciate any advice or guidance you could offer!
+[2023-05-26T02:36:00, Fri] 2.User: I'm thinking of creating a YouTube channel to showcase my collection and share tips with other collectors. Do you have any advice on how to get started and grow an audience? By the way, I've actually been branching out from vinyl records and exploring other areas, like coins and sports cards, which has been really fascinating.
+[2023-05-26T02:36:00.500000, Fri] 3.User: That's super helpful! I was thinking of focusing on the stories behind my collections, like how I acquired certain items and the history behind them. For my coins, I've been researching the different minting processes and learning about the historical events that led to certain coin designs.
+[2023-05-26T02:36:01, Fri] 4.User: Now that I have a better understanding of how to approach my YouTube channel, I'm thinking of showcasing my sports cards collection next. I've been focusing on vintage baseball cards from the 50s and 60s, and I've learned a lot about the players and teams from that era. Do you have any specific tips on how to showcase sports cards in a video, such as how to display them or what kind of information to share?
+[2023-05-26T02:36:01.500000, Fri] 5.User: That's really helpful! I was thinking of doing a video on my favorite vintage baseball cards from the 1950s, and I have a few rare ones featuring players like Mickey Mantle and Willie Mays. Do you have any tips on how to price or appraise vintage baseball cards, especially if they're in good condition?
+[2023-05-26T02:36:02, Fri] 6.User: That's really helpful! I was thinking of doing a video on my favorite vintage baseball cards from the 1950s, and I have a few rare ones featuring players like Mickey Mantle and Willie Mays. I also have some coins from my grandfather's collection that I've been researching, and I'd love to share some of the interesting history behind them. Do you have any tips on how to incorporate my coin collection into my YouTube channel, especially since it's not directly related to sports cards or vinyl records?
+[2023-05-26T02:36:02.500000, Fri] 7.User: I'd like to explore the idea of creating a separate coin-focused series on my channel. I think it would be really interesting to delve deeper into the history and significance of each coin, and share my research with my audience. Do you have any tips on how to structure a coin-focused series, and how to make it engaging and informative for my viewers?
+[2023-05-26T15:16:00, Fri] 8.User: I'm thinking of rearranging my living room and want to know if you can give me some tips on how to maximize the space for my growing plant collection.
+[2023-05-26T15:16:00.500000, Fri] 9.User: I'm thinking of adding a few more plants to my collection, does the assistant have any recommendations for plants that would thrive in a low-light environment, since my living room doesn't get a lot of direct sunlight?
+[2023-05-26T15:16:01, Fri] 10.User: I actually just got three new plants recently, a snake plant, a spider plant, and a peace lily, during the spring sale at the local nursery. I'm excited to see them grow and thrive in my living room. Do you have any tips on how to keep them healthy and happy?
+[2023-05-26T15:16:01.500000, Fri] 11.User: I'm glad I got those plants during the spring sale, it was a great deal! I ended up spending about an hour and a half at the nursery picking out the healthiest ones and chatting with the staff about their care.
+[2023-05-26T15:16:02, Fri] 12.User: I was thinking of repotting my fiddle leaf fig tree soon. Do you have any tips on how to do it successfully?
+[2023-05-26T15:16:02.500000, Fri] 13.User: I actually repotted my fiddle leaf fig tree about two weeks ago, and it's doing great so far. I spent about an hour and a half on the project, making sure to handle the roots carefully and add some fertilizer to the new soil.
+[2023-05-27T00:33:00, Sat] 14.User: Project management tools this is user for?
+[2023-05-27T00:33:00.500000, Sat] 15.User: Source control tools?

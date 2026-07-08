@@ -1,0 +1,36 @@
+[2023-05-20T03:38:00, Sat] 1.User: hi
+[2023-05-20T03:38:00.500000, Sat] 2.User: i have a table with the following rows:
+O-22-040-ART13-PI3-K08
+O-22-082-ART13-PI3-K09
+O-22-048-ART13-PI3-K010
+O-22-082-ART13-PI3-K011
+O-22-055-ART12-PI4-K08
+O-22-040-ART12-PI4-K09
+O-22-073-ART4-PI4-K01
+O-22-073-ART4-PI4-K02
+
+I have to transform the data using a power BI DAX formula. 
+The count of the characters in each line should be 22.
+The format should be something like 
+O-22-056-ART12-PI4-K02
+O-22-055-ART12-PI4-K03
+O-22-055-ART12-PI4-K04
+
+some of the formulas have a wrong format, such as 
+O-22-082-ART13-PI3-K011, which should be O-22-082-ART13-PI3-K11 or
+O-22-073-ART4-PI4-K01, which should be O-22-073-ART04-PI4-K01.
+
+How can i transform the column using power bi DAX logic?
+[2023-05-20T03:38:01, Sat] 3.User: the formula creates a syntax error. CONCATENATE() seems to only take two arguments
+[2023-05-20T03:38:01.500000, Sat] 4.User: in your example O-22-XXX- has only 7 characters, but it has 9, please count every letter or string as a character and correct the formula
+[2023-05-20T03:38:02, Sat] 5.User: please replace Table1[Column] with ObjectiveName and account for the fact that my examples didnt show 24 characters, but 23.
+[2023-05-20T03:59:00, Sat] 6.User: I'm looking to learn more about camera straps. I recently got a new one that I really like, but I'm curious about other options out there. Do you have any recommendations or popular brands that you can suggest? By the way, I've been loving my new camera bag, which I got on February 22nd - it's so much more compact and easier to carry around than my old one!
+[2023-05-20T03:59:00.500000, Sat] 7.User: I'm actually planning to upgrade my camera body soon, so I was wondering if the straps you mentioned are compatible with different camera brands and models.
+[2023-05-20T03:59:01, Sat] 8.User: I'm planning to upgrade my camera body soon, and I'm thinking of switching to a newer model with better video capabilities. Do you know if there are any specific camera straps that are more suitable for video production, or any features I should look out for? By the way, my newer camera bag has been a game-changer for me - it's so much lighter and easier to carry around than my old one, which I bought from a different brand on February 22nd.
+[2023-05-20T03:59:01.500000, Sat] 9.User: I'm actually thinking of getting a newer camera body that can shoot 4K video at 60fps. Do you know if there are any specific camera straps that are designed specifically for 4K video production or if there are any features I should look out for in a strap that can support that?
+[2023-05-20T03:59:02, Sat] 10.User: I'm actually planning to upgrade my camera body to a newer model that can shoot 4K video at 60fps, and I'm looking for a strap that can support that. I've heard that some straps have features like built-in stabilizers or anti-twist pads that can help reduce camera movement and vibrations during video capture. Do you think those features are worth considering, or are they just marketing gimmicks?
+[2023-05-20T03:59:02.500000, Sat] 11.User: I'd like to ask about the comfort and ergonomics of the straps you mentioned. How do they fare in terms of weight distribution and padding? I've had issues with straps digging into my shoulder or neck during extended shoots, and I'm looking for something that can provide better comfort and support.
+[2023-05-20T08:57:00, Sat] 12.User: I was thinking of trying out a new recipe for chicken enchiladas this weekend. Can you give me some suggestions for sides that would go well with it?
+[2023-05-20T08:57:00.500000, Sat] 13.User: I think I'll try the Mexican Rice and Roasted Vegetables. By the way, do you have any tips on how to organize my spice rack? It's been getting cluttered lately.
+[2023-05-20T08:57:01, Sat] 14.User: I was thinking of reorganizing my kitchen cabinets too. Do you have any advice on how to keep them tidy?
+[2023-05-20T08:57:01.500000, Sat] 15.User: I actually organized my kitchen cabinets about three weeks ago, and it's made a huge difference in my cooking routine. I was able to get rid of some old gadgets I never used and rearranged everything to make the most of my space. Now, I'm thinking of reorganizing my kitchen utensils drawer. Do you have any tips on how to keep it tidy?

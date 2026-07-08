@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-30T03:02:00.500000, Tue] 1.User: I'll call their customer service now. By the way, do you think I could get a good price for my grandmother's antique pearl necklace if I decide to sell it? It was appraised for around $2,000.
+[2023-05-30T03:02:01, Tue] 2.User: Can you help me find some reputable online marketplaces or dealers that specialize in antique jewelry, in case I decide to sell my grandmother's pearl necklace?
+[2023-05-30T03:02:01.500000, Tue] 3.User: I've been thinking about selling my grandmother's antique pearl necklace to help fund my upcoming trip to Europe. I'm considering selling it to a local jewelry shop, but I'm not sure if I'll get a good price. Do you think I could get a better deal if I sell it to a dealer or online marketplace that specializes in antique jewelry, or would the commission fees eat into the profit?
+[2023-05-30T03:02:02, Tue] 4.User: I think I'll research some online marketplaces and dealers specializing in antique jewelry to see what kind of prices they offer for similar pearl necklaces. By the way, I recently purchased a silver cuff from a boutique store online, and I've been wearing it almost every day since then. It's become my go-to accessory.
+[2023-05-30T03:02:02.500000, Tue] 5.User: I love the simple yet elegant design of the silver cuff. It's modern and understated, which makes it easy to pair with different outfits. The quality of the silver is also exceptional, and it feels sturdy and well-made. I've received so many compliments on it, and it's become a great conversation starter!
+[2023-05-30T15:51:00, Tue] 6.User: I'm considering freezing my eggs soon and I've been doing some research, but I'm not sure about the process and costs involved. Can you walk me through the general procedure and give me an idea of how much it typically costs? By the way, my sister, who's only three years older than me, is 35 now, and it's crazy to think about how fast time has flown by.
+[2023-05-30T15:51:00.500000, Tue] 7.User: I'm also curious to know more about the success rates of egg freezing. What are the chances of a frozen egg resulting in a healthy pregnancy and birth, and does my age play a significant role in this?
+[2023-05-30T15:51:01, Tue] 8.User: That's really helpful, thanks for explaining the success rates in detail. Since I'm still considering egg freezing, I'd like to know more about the potential risks and side effects involved. Are there any long-term risks to my health, and what are the common side effects I might experience during the process?
+[2023-05-30T15:51:01.500000, Tue] 9.User: I'm still a bit concerned about the potential risks and side effects, especially the long-term risks to my health. Can you tell me more about the research on the impact of ovulation induction medications on ovarian reserve and the potential increased risk of ovarian cancer?
+[2023-05-30T15:51:02, Tue] 10.User: I'd like to know more about the alternatives to egg freezing. Are there other ways to preserve my fertility, and what are the pros and cons of each option?
+[2023-05-30T15:51:02.500000, Tue] 11.User: I'm interested in learning more about natural fertility preservation methods. Can you tell me more about the techniques and strategies that can help preserve my fertility naturally?
+[2023-05-30T18:02:00, Tue] 12.User: I'm looking for some healthy meal prep ideas to help me recover from my recent health issues. I've been dealing with a lot lately, including a nasty flu that kept me bedridden for almost two weeks, and I'm trying to focus on getting my health back on track. Do you have any suggestions for easy and nutritious meals that can help boost my immune system?
+[2023-05-30T18:02:00.500000, Tue] 13.User: I'm glad you provided these suggestions. I think I'll start with the Citrus and Berry Parfait for breakfast, as it's easy to prepare and incorporates some of the immune-boosting ingredients. Do you have any recommendations for staying hydrated, especially since I'm still recovering from the flu and need to make sure I'm drinking enough water throughout the day?
+[2023-05-30T18:02:01, Tue] 14.User: I'm glad you mentioned electrolyte-rich drinks because I've been feeling a bit fatigued lately. Do you think coconut water would be a good option for me, considering my recent flu and upcoming knee surgery?
+[2023-05-30T18:02:01.500000, Tue] 15.User: That's really helpful, thanks! I'll definitely consider adding coconut water to my hydration routine. Can you also suggest some healthy snack options that are easy to prepare and won't exacerbate my knee pain? I've been experiencing some discomfort and stiffness, especially after sitting for long periods.

@@ -1,0 +1,3006 @@
+[
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User attended their cousin's wedding at the Grand Ballroom during the weekend of May 20-21, 2023.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "Grand Ballroom",
+      "reason": "cousin's wedding",
+      "purpose": "",
+      "keywords": [
+        "cousin's wedding",
+        "Grand Ballroom",
+        "May 2023"
+      ]
+    },
+    "entities": [
+      "cousin's wedding",
+      "Grand Ballroom",
+      "May 2023"
+    ],
+    "embedding_text": "User attended their cousin's wedding at the Grand Ballroom during the weekend of May 20-21, 2023.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0128",
+    "source_time": "2023-05-28 19:17:01",
+    "record_time": "2026-07-07T19:51:00.042864",
+    "score": 22.176159354987124,
+    "score_components": {
+      "bm25_score": 22.176159354987124,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 22.176159354987124,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 22.176159354987124
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 1.0
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.7211075312100074
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User attended a wedding expo with friend Emily a few weeks before May 28, 2023.",
+    "dimension": {
+      "time": "2023-05",
+      "location": "",
+      "reason": "wedding expo",
+      "purpose": "",
+      "keywords": [
+        "wedding expo",
+        "friend Emily"
+      ]
+    },
+    "entities": [
+      "wedding expo",
+      "friend Emily"
+    ],
+    "embedding_text": "User attended a wedding expo with friend Emily a few weeks before May 28, 2023.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0130",
+    "source_time": "2023-05-28 19:17:02.500000",
+    "record_time": "2026-07-07T19:51:00.042875",
+    "score": 10.13980794149075,
+    "score_components": {
+      "bm25_score": 10.13980794149075,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 10.13980794149075,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 10.13980794149075
+      },
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.4444444444444445
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.5179640142822628
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User is looking for a gift for their mother's birthday on June 15, 2023.",
+    "dimension": {
+      "time": "2023-06-15",
+      "location": "",
+      "reason": "mother's birthday",
+      "purpose": "to find a gift",
+      "keywords": [
+        "mother",
+        "birthday",
+        "gift"
+      ]
+    },
+    "entities": [
+      "mother",
+      "birthday",
+      "gift"
+    ],
+    "embedding_text": "User is looking for a gift for their mother's birthday on June 15, 2023.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0125",
+    "source_time": "2023-05-28 19:17:00",
+    "record_time": "2026-07-07T19:51:00.042846",
+    "score": 8.046277389463539,
+    "score_components": {
+      "bm25_score": 8.046277389463539,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 8.046277389463539,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 8.046277389463539
+      },
+      {
+        "method": "structured",
+        "rank": 13,
+        "score": 0.4444444444444445
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.3430820391903178
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User asked about methods to determine Poisson's ratio.",
+    "dimension": {
+      "time": "2023-05-25T05:43:02",
+      "location": "",
+      "reason": "",
+      "purpose": "to learn ways to find Poisson's ratio",
+      "keywords": [
+        "Poisson's ratio",
+        "methods",
+        "determination"
+      ]
+    },
+    "entities": [
+      "Poisson's ratio",
+      "methods",
+      "determination"
+    ],
+    "embedding_text": "User asked about methods to determine Poisson's ratio.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0091",
+    "source_time": "2023-05-25 05:43:00",
+    "record_time": "2026-07-07T19:51:00.042630",
+    "score": 7.004296432894274,
+    "score_components": {
+      "bm25_score": 7.004296432894274,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 7.004296432894274,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 7.004296432894274
+      },
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.4444444444444445
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "fact",
+    "content": "The user is based in New York City.",
+    "dimension": {
+      "time": "",
+      "location": "New York City",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "user",
+        "New York City",
+        "location"
+      ]
+    },
+    "entities": [
+      "user",
+      "New York City",
+      "location"
+    ],
+    "embedding_text": "The user is based in New York City.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0044",
+    "source_time": "2023-05-22 16:19:00.500000",
+    "record_time": "2026-07-07T19:51:00.042263",
+    "score": 6.682722497888353,
+    "score_components": {
+      "bm25_score": 6.682722497888353,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 6.682722497888353,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 6.682722497888353
+      },
+      {
+        "method": "minilm",
+        "rank": 6,
+        "score": 0.32586599851610726
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user attended a writing workshop in October 2022 to focus on their writing goals.",
+    "dimension": {
+      "time": "2022-10",
+      "location": "",
+      "reason": "to focus on writing goals",
+      "purpose": "improve writing goals",
+      "keywords": [
+        "writing workshop",
+        "October",
+        "character development"
+      ]
+    },
+    "entities": [
+      "writing workshop",
+      "October",
+      "character development"
+    ],
+    "embedding_text": "The user attended a writing workshop in October 2022 to focus on their writing goals.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0035",
+    "source_time": "2023-05-22 11:46:02",
+    "record_time": "2026-07-07T19:51:00.042208",
+    "score": 5.346639795270889,
+    "score_components": {
+      "bm25_score": 5.346639795270889,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 5.346639795270889,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 5.346639795270889
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User asked about the role of percent elongation in a stress-strain diagram.",
+    "dimension": {
+      "time": "2023-05-25T05:43:00.500000",
+      "location": "",
+      "reason": "",
+      "purpose": "to understand where percent elongation fits in a stress-strain diagram",
+      "keywords": [
+        "percent elongation",
+        "stress-strain diagram",
+        "ductility"
+      ]
+    },
+    "entities": [
+      "percent elongation",
+      "stress-strain diagram",
+      "ductility"
+    ],
+    "embedding_text": "User asked about the role of percent elongation in a stress-strain diagram.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0089",
+    "source_time": "2023-05-24 22:21:00.500000",
+    "record_time": "2026-07-07T19:51:00.042618",
+    "score": 4.986858366628836,
+    "score_components": {
+      "bm25_score": 4.986858366628836,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 4.986858366628836,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 4.986858366628836
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User expressed concern about Fox News's political agenda and asked how to ensure accurate and unbiased news.",
+    "dimension": {
+      "time": "2023-05-26T07:00:01.500000",
+      "location": "",
+      "reason": "",
+      "purpose": "to find ways to ensure accurate and unbiased news",
+      "keywords": [
+        "Fox News",
+        "political agenda",
+        "accurate news",
+        "unbiased news"
+      ]
+    },
+    "entities": [
+      "Fox News",
+      "political agenda",
+      "accurate news",
+      "unbiased news"
+    ],
+    "embedding_text": "User expressed concern about Fox News's political agenda and asked how to ensure accurate and unbiased news.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0095",
+    "source_time": "2023-05-25 05:43:02",
+    "record_time": "2026-07-07T19:51:00.042657",
+    "score": 4.81907898084679,
+    "score_components": {
+      "bm25_score": 4.81907898084679,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 4.81907898084679,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 4.81907898084679
+      },
+      {
+        "method": "structured",
+        "rank": 10,
+        "score": 0.4444444444444445
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user attended a Billie Eilish concert in Philadelphia.",
+    "dimension": {
+      "time": "",
+      "location": "Philadelphia",
+      "reason": "",
+      "purpose": "entertainment",
+      "keywords": [
+        "Billie Eilish",
+        "concert",
+        "Philadelphia"
+      ]
+    },
+    "entities": [
+      "Billie Eilish",
+      "concert",
+      "Philadelphia"
+    ],
+    "embedding_text": "The user attended a Billie Eilish concert in Philadelphia.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0147",
+    "source_time": "2023-05-29 17:49:00",
+    "record_time": "2026-07-07T19:51:00.042978",
+    "score": 4.75003419884022,
+    "score_components": {
+      "bm25_score": 4.75003419884022,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 4.75003419884022,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 4.75003419884022
+      },
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.2829338614532093
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user attended a jazz night at a local bar on 2023-05-29.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "local bar",
+      "reason": "",
+      "purpose": "enjoying live music",
+      "keywords": [
+        "jazz night",
+        "local bar",
+        "live music"
+      ]
+    },
+    "entities": [
+      "jazz night",
+      "local bar",
+      "live music"
+    ],
+    "embedding_text": "The user attended a jazz night at a local bar on 2023-05-29.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0148",
+    "source_time": "2023-05-29 17:49:00",
+    "record_time": "2026-07-07T19:51:00.042987",
+    "score": 4.037806740538247,
+    "score_components": {
+      "bm25_score": 4.037806740538247,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 4.037806740538247,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 4.037806740538247
+      },
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.23448681664959284
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "fact",
+    "content": "User set a budget of $100 for the mother's birthday gift.",
+    "dimension": {
+      "time": "2023-06-15",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "budget",
+        "$100",
+        "mother's birthday gift"
+      ]
+    },
+    "entities": [
+      "budget",
+      "$100",
+      "mother's birthday gift"
+    ],
+    "embedding_text": "User set a budget of $100 for the mother's birthday gift.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0127",
+    "source_time": "2023-05-28 19:17:00.500000",
+    "record_time": "2026-07-07T19:51:00.042858",
+    "score": 3.8243518468054,
+    "score_components": {
+      "bm25_score": 3.8243518468054,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 3.8243518468054,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 3.8243518468054
+      },
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.2758338415877713
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "fact",
+    "content": "The user is planning to establish a children's entertainment playcentre business.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "children's entertainment playcentre",
+        "business planning",
+        "playcentre business"
+      ]
+    },
+    "entities": [
+      "children's entertainment playcentre",
+      "business planning",
+      "playcentre business"
+    ],
+    "embedding_text": "The user is planning to establish a children's entertainment playcentre business.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0028",
+    "source_time": "2023-05-21 18:22:02",
+    "record_time": "2026-07-07T19:51:00.042162",
+    "score": 3.7254571328417283,
+    "score_components": {
+      "bm25_score": 3.7254571328417283,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 3.7254571328417283,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 3.7254571328417283
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user attended a weekend-long writing workshop at a mountain retreat center in October 2022.",
+    "dimension": {
+      "time": "2022-10",
+      "location": "mountain retreat center",
+      "reason": "to improve writing skills",
+      "purpose": "to get back into writing",
+      "keywords": [
+        "writing workshop",
+        "mountain retreat",
+        "fiction writing",
+        "October 2022"
+      ]
+    },
+    "entities": [
+      "writing workshop",
+      "mountain retreat",
+      "fiction writing",
+      "October 2022"
+    ],
+    "embedding_text": "The user attended a weekend-long writing workshop at a mountain retreat center in October 2022.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0029",
+    "source_time": "2023-05-22 05:37:00",
+    "record_time": "2026-07-07T19:51:00.042168",
+    "score": 3.46116990019104,
+    "score_components": {
+      "bm25_score": 3.46116990019104,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 3.46116990019104,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 3.46116990019104
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User expressed confusion about Poisson's ratio.",
+    "dimension": {
+      "time": "2023-05-25T05:43:01.500000",
+      "location": "",
+      "reason": "",
+      "purpose": "to clarify confusion about Poisson's ratio",
+      "keywords": [
+        "Poisson's ratio",
+        "confusion"
+      ]
+    },
+    "entities": [
+      "Poisson's ratio",
+      "confusion"
+    ],
+    "embedding_text": "User expressed confusion about Poisson's ratio.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0090",
+    "source_time": "2023-05-24 22:21:01",
+    "record_time": "2026-07-07T19:51:00.042624",
+    "score": 3.3775765595714904,
+    "score_components": {
+      "bm25_score": 3.3775765595714904,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 3.3775765595714904,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 3.3775765595714904
+      },
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.4444444444444445
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User plans to check out L'Occitane and Jo Malone London for a skincare gift.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "looking for a skincare gift for mother",
+      "purpose": "to find a suitable gift",
+      "keywords": [
+        "L'Occitane",
+        "Jo Malone London",
+        "skincare gift"
+      ]
+    },
+    "entities": [
+      "L'Occitane",
+      "Jo Malone London",
+      "skincare gift"
+    ],
+    "embedding_text": "User plans to check out L'Occitane and Jo Malone London for a skincare gift.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0129",
+    "source_time": "2023-05-28 19:17:02",
+    "record_time": "2026-07-07T19:51:00.042869",
+    "score": 3.113750273237472,
+    "score_components": {
+      "bm25_score": 3.113750273237472,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 3.113750273237472,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 3.113750273237472
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "profile",
+    "content": "The user enjoys listening to podcasts on their daily commute.",
+    "dimension": {
+      "time": "",
+      "location": "daily commute",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "podcasts",
+        "daily commute"
+      ]
+    },
+    "entities": [
+      "podcasts",
+      "daily commute"
+    ],
+    "embedding_text": "The user enjoys listening to podcasts on their daily commute.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0143",
+    "source_time": "2023-05-28 22:32:02",
+    "record_time": "2026-07-07T19:51:00.042954",
+    "score": 2.9936479444882895,
+    "score_components": {
+      "bm25_score": 2.9936479444882895,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 16,
+    "retrieval_score": 2.9936479444882895,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 16,
+        "score": 2.9936479444882895
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user chose Giannis Antetokounmpo for their fantasy basketball team.",
+    "dimension": {
+      "time": "2023-05-26",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "fantasy basketball",
+        "Giannis Antetokounmpo"
+      ]
+    },
+    "entities": [
+      "fantasy basketball",
+      "Giannis Antetokounmpo"
+    ],
+    "embedding_text": "The user chose Giannis Antetokounmpo for their fantasy basketball team.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0103",
+    "source_time": "2023-05-26 15:49:00",
+    "record_time": "2026-07-07T19:51:00.042706",
+    "score": 2.9349758758914755,
+    "score_components": {
+      "bm25_score": 2.9349758758914755,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 17,
+    "retrieval_score": 2.9349758758914755,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 17,
+        "score": 2.9349758758914755
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "profile",
+    "content": "The user is eager to improve their fiction writing skills.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "fiction writing",
+        "writing improvement",
+        "eager"
+      ]
+    },
+    "entities": [
+      "fiction writing",
+      "writing improvement",
+      "eager"
+    ],
+    "embedding_text": "The user is eager to improve their fiction writing skills.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0030",
+    "source_time": "2023-05-22 06:33:00",
+    "record_time": "2026-07-07T19:51:00.042173",
+    "score": 2.8785594106512384,
+    "score_components": {
+      "bm25_score": 2.8785594106512384,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 18,
+    "retrieval_score": 2.8785594106512384,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 18,
+        "score": 2.8785594106512384
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "profile",
+    "content": "The user is interested in improving their dialogue writing skills.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "dialogue writing",
+        "realistic dialogue",
+        "writing skills"
+      ]
+    },
+    "entities": [
+      "dialogue writing",
+      "realistic dialogue",
+      "writing skills"
+    ],
+    "embedding_text": "The user is interested in improving their dialogue writing skills.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0034",
+    "source_time": "2023-05-22 08:15:00.500000",
+    "record_time": "2026-07-07T19:51:00.042202",
+    "score": 2.8242709294313104,
+    "score_components": {
+      "bm25_score": 2.8242709294313104,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 19,
+    "retrieval_score": 2.8242709294313104,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 19,
+        "score": 2.8242709294313104
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "profile",
+    "content": "User questions the effectiveness and morality of peacekeeping missions in general, citing British Army's controversial and deadly missions in Iraq and Somalia as reasons.",
+    "dimension": {
+      "time": "2023-05-23",
+      "location": "",
+      "reason": "due to British Army's controversial and deadly missions in Iraq and Somalia",
+      "purpose": "",
+      "keywords": [
+        "peacekeeping",
+        "effectiveness",
+        "morality",
+        "British Army",
+        "Iraq",
+        "Somalia"
+      ]
+    },
+    "entities": [
+      "peacekeeping",
+      "effectiveness",
+      "morality",
+      "British Army",
+      "Iraq",
+      "Somalia"
+    ],
+    "embedding_text": "User questions the effectiveness and morality of peacekeeping missions in general, citing British Army's controversial and deadly missions in Iraq and Somalia as reasons.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0049",
+    "source_time": "2023-05-22 22:37:01",
+    "record_time": "2026-07-07T19:51:00.042299",
+    "score": 2.8213717170730264,
+    "score_components": {
+      "bm25_score": 2.8213717170730264,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 20,
+    "retrieval_score": 2.8213717170730264,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 20,
+        "score": 2.8213717170730264
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "On 2023-05-20, user inquired about OTIS's employee support programs, including mental health resources, remote work accommodations, work-life balance initiatives, training and development programs, and diversity and inclusion initiatives.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "OTIS",
+        "employee support",
+        "work-life balance",
+        "training",
+        "diversity"
+      ]
+    },
+    "entities": [
+      "OTIS",
+      "employee support",
+      "work-life balance",
+      "training",
+      "diversity"
+    ],
+    "embedding_text": "On 2023-05-20, user inquired about OTIS's employee support programs, including mental health resources, remote work accommodations, work-life balance initiatives, training and development programs, and diversity and inclusion initiatives.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0018",
+    "source_time": "2023-05-20 21:48:00",
+    "record_time": "2026-07-07T19:51:00.042096",
+    "score": 0.4444444444444445,
+    "structural_score": 0.4444444444444445,
+    "score_components": {
+      "score": 0.4444444444444445,
+      "answer_field_score": 0.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.3333333333333333,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.3333333333333333
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "On 2023-05-20, user inquired about OTIS's employee support programs, including mental health resources, remote work accommodations, work-life balance initiatives, training and development programs, and diversity and inclusion initiatives. | OTIS | employee support | work-life balance | training | diversity | 2023-05-20 | OTIS | employee support | work-life balance | training | diversity"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 2,
+    "retrieval_score": 0.4444444444444445,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.4444444444444445
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user plans to explore Emily's motivations and inner conflicts related to relationships and career goals to make her relatable.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to make character relatable",
+      "purpose": "character development",
+      "keywords": [
+        "Emily",
+        "motivations",
+        "inner conflicts",
+        "relationships",
+        "career goals"
+      ]
+    },
+    "entities": [
+      "Emily",
+      "motivations",
+      "inner conflicts",
+      "relationships",
+      "career goals"
+    ],
+    "embedding_text": "The user plans to explore Emily's motivations and inner conflicts related to relationships and career goals to make her relatable.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0037",
+    "source_time": "2023-05-22 11:46:02.500000",
+    "record_time": "2026-07-07T19:51:00.042220",
+    "score": 0.4444444444444445,
+    "structural_score": 0.4444444444444445,
+    "score_components": {
+      "score": 0.4444444444444445,
+      "answer_field_score": 0.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.3333333333333333,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.3333333333333333
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to explore Emily's motivations and inner conflicts related to relationships and career goals to make her relatable. | Emily | motivations | inner conflicts | relationships | career goals | to make character relatable | character development | Emily | motivations | inner conflicts | relationships | career goals"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 3,
+    "retrieval_score": 0.4444444444444445,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.4444444444444445
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user met a tourist named Anna who was attending a conference for her work in sustainable energy, which sparked the user's interest in learning more about sustainable energy.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "The user met Anna and learned about her work in sustainable energy.",
+      "purpose": "",
+      "keywords": [
+        "Anna",
+        "tourist",
+        "sustainable energy",
+        "conference",
+        "meeting"
+      ]
+    },
+    "entities": [
+      "Anna",
+      "tourist",
+      "sustainable energy",
+      "conference",
+      "meeting"
+    ],
+    "embedding_text": "The user met a tourist named Anna who was attending a conference for her work in sustainable energy, which sparked the user's interest in learning more about sustainable energy.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0045",
+    "source_time": "2023-05-22 16:19:00",
+    "record_time": "2026-07-07T19:51:00.042269",
+    "score": 0.4444444444444445,
+    "structural_score": 0.4444444444444445,
+    "score_components": {
+      "score": 0.4444444444444445,
+      "answer_field_score": 0.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.3333333333333333,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.3333333333333333
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user met a tourist named Anna who was attending a conference for her work in sustainable energy, which sparked the user's interest in learning more about sustainable energy. | Anna | tourist | sustainable energy | conference | meeting | The user met Anna and learned about her work in sustainable energy. | Anna | tourist | sustainable energy | conference | meeting"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 4,
+    "retrieval_score": 0.4444444444444445,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.4444444444444445
+      },
+      {
+        "method": "minilm",
+        "rank": 8,
+        "score": 0.30285942352621525
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User asked about how Fox News has shifted its focus in recent years.",
+    "dimension": {
+      "time": "2023-05-26T07:00:00",
+      "location": "",
+      "reason": "",
+      "purpose": "to understand Fox News's shift in focus",
+      "keywords": [
+        "Fox News",
+        "shift",
+        "focus",
+        "recent years"
+      ]
+    },
+    "entities": [
+      "Fox News",
+      "shift",
+      "focus",
+      "recent years"
+    ],
+    "embedding_text": "User asked about how Fox News has shifted its focus in recent years.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0092",
+    "source_time": "2023-05-25 05:43:00.500000",
+    "record_time": "2026-07-07T19:51:00.042637",
+    "score": 0.4444444444444445,
+    "structural_score": 0.4444444444444445,
+    "score_components": {
+      "score": 0.4444444444444445,
+      "answer_field_score": 0.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.3333333333333333,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.3333333333333333
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User asked about how Fox News has shifted its focus in recent years. | Fox News | shift | focus | recent years | 2023-05-26T07:00:00 | to understand Fox News's shift in focus | Fox News | shift | focus | recent years"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 7,
+    "retrieval_score": 0.4444444444444445,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 7,
+        "score": 0.4444444444444445
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User asked for an example of a Fox News program that aligns with conservative politics.",
+    "dimension": {
+      "time": "2023-05-26T07:00:00.500000",
+      "location": "",
+      "reason": "",
+      "purpose": "to get an example of Fox News's conservative alignment",
+      "keywords": [
+        "Fox News",
+        "program",
+        "conservative politics",
+        "example"
+      ]
+    },
+    "entities": [
+      "Fox News",
+      "program",
+      "conservative politics",
+      "example"
+    ],
+    "embedding_text": "User asked for an example of a Fox News program that aligns with conservative politics.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0093",
+    "source_time": "2023-05-25 05:43:01",
+    "record_time": "2026-07-07T19:51:00.042646",
+    "score": 0.4444444444444445,
+    "structural_score": 0.4444444444444445,
+    "score_components": {
+      "score": 0.4444444444444445,
+      "answer_field_score": 0.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.3333333333333333,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.3333333333333333
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User asked for an example of a Fox News program that aligns with conservative politics. | Fox News | program | conservative politics | example | 2023-05-26T07:00:00.500000 | to get an example of Fox News's conservative alignment | Fox News | program | conservative politics | example"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 8,
+    "retrieval_score": 0.4444444444444445,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 8,
+        "score": 0.4444444444444445
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User expressed opinion that Fox News pushes a political agenda instead of objective news and questioned whether viewers are aware of this bias.",
+    "dimension": {
+      "time": "2023-05-26T07:00:01",
+      "location": "",
+      "reason": "",
+      "purpose": "to discuss Fox News's bias and viewer awareness",
+      "keywords": [
+        "Fox News",
+        "political agenda",
+        "bias",
+        "viewer awareness"
+      ]
+    },
+    "entities": [
+      "Fox News",
+      "political agenda",
+      "bias",
+      "viewer awareness"
+    ],
+    "embedding_text": "User expressed opinion that Fox News pushes a political agenda instead of objective news and questioned whether viewers are aware of this bias.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0094",
+    "source_time": "2023-05-25 05:43:01.500000",
+    "record_time": "2026-07-07T19:51:00.042652",
+    "score": 0.4444444444444445,
+    "structural_score": 0.4444444444444445,
+    "score_components": {
+      "score": 0.4444444444444445,
+      "answer_field_score": 0.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.3333333333333333,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.3333333333333333
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User expressed opinion that Fox News pushes a political agenda instead of objective news and questioned whether viewers are aware of this bias. | Fox News | political agenda | bias | viewer awareness | 2023-05-26T07:00:01 | to discuss Fox News's bias and viewer awareness | Fox News | political agenda | bias | viewer awareness"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 9,
+    "retrieval_score": 0.4444444444444445,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 9,
+        "score": 0.4444444444444445
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User listened to Prince's 'Purple Rain' with LGBTQ+ friends in college, experiencing a powerful moment of unity and acceptance.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Prince",
+        "Purple Rain",
+        "LGBTQ+",
+        "friends",
+        "college",
+        "unity",
+        "acceptance"
+      ]
+    },
+    "entities": [
+      "Prince",
+      "Purple Rain",
+      "LGBTQ+",
+      "friends",
+      "college",
+      "unity",
+      "acceptance"
+    ],
+    "embedding_text": "User listened to Prince's 'Purple Rain' with LGBTQ+ friends in college, experiencing a powerful moment of unity and acceptance.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0096",
+    "source_time": "2023-05-26 13:18:01",
+    "record_time": "2026-07-07T19:51:00.042664",
+    "score": 0.4444444444444445,
+    "structural_score": 0.4444444444444445,
+    "score_components": {
+      "score": 0.4444444444444445,
+      "answer_field_score": 0.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.3333333333333333,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.3333333333333333
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User listened to Prince's 'Purple Rain' with LGBTQ+ friends in college, experiencing a powerful moment of unity and acceptance. | Prince | Purple Rain | LGBTQ+ | friends | college | unity | acceptance | Prince | Purple Rain | LGBTQ+ | friends | college | unity | acceptance"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 11,
+    "retrieval_score": 0.4444444444444445,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 11,
+        "score": 0.4444444444444445
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user watched Novak Djokovic's straight-sets win over Daniil Medvedev in the Australian Open tennis tournament on 2023-05-26.",
+    "dimension": {
+      "time": "2023-05-26",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Novak Djokovic",
+        "Daniil Medvedev",
+        "Australian Open",
+        "tennis",
+        "2023-05-26"
+      ]
+    },
+    "entities": [
+      "Novak Djokovic",
+      "Daniil Medvedev",
+      "Australian Open",
+      "tennis",
+      "2023-05-26"
+    ],
+    "embedding_text": "The user watched Novak Djokovic's straight-sets win over Daniil Medvedev in the Australian Open tennis tournament on 2023-05-26.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0100",
+    "source_time": "2023-05-26 14:18:01.500000",
+    "record_time": "2026-07-07T19:51:00.042688",
+    "score": 0.4444444444444445,
+    "structural_score": 0.4444444444444445,
+    "score_components": {
+      "score": 0.4444444444444445,
+      "answer_field_score": 0.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.3333333333333333,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.3333333333333333
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user watched Novak Djokovic's straight-sets win over Daniil Medvedev in the Australian Open tennis tournament on 2023-05-26. | Novak Djokovic | Daniil Medvedev | Australian Open | tennis | 2023-05-26 | 2023-05-26 | Novak Djokovic | Daniil Medvedev | Australian Open | tennis | 2023-05-26"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.4444444444444445,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 12,
+        "score": 0.4444444444444445
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User is involved in a community user group in the UK and plans to write a constitution for it.",
+    "dimension": {
+      "time": "",
+      "location": "UK",
+      "reason": "",
+      "purpose": "to create a constitution for the group",
+      "keywords": [
+        "user",
+        "community user group",
+        "UK",
+        "constitution"
+      ]
+    },
+    "entities": [
+      "user",
+      "community user group",
+      "UK",
+      "constitution"
+    ],
+    "embedding_text": "User is involved in a community user group in the UK and plans to write a constitution for it.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0006",
+    "source_time": "2023-05-20 03:09:02",
+    "record_time": "2026-07-07T19:51:00.042020",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User is involved in a community user group in the UK and plans to write a constitution for it. | user | community user group | UK | constitution | UK | to create a constitution for the group | user | community user group | UK | constitution"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 15,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User is interested in setting SMART goals for their campaign.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to apply SMART framework to campaign",
+      "keywords": [
+        "user",
+        "SMART goals",
+        "campaign"
+      ]
+    },
+    "entities": [
+      "user",
+      "SMART goals",
+      "campaign"
+    ],
+    "embedding_text": "User is interested in setting SMART goals for their campaign.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0011",
+    "source_time": "2023-05-20 13:24:00.500000",
+    "record_time": "2026-07-07T19:51:00.042051",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 0.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User is interested in setting SMART goals for their campaign. | user | SMART goals | campaign | to apply SMART framework to campaign | user | SMART goals | campaign"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 16,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User wants to set up a content calendar for the next 6 weeks for their campaign.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to plan campaign content",
+      "keywords": [
+        "user",
+        "content calendar",
+        "6 weeks",
+        "campaign"
+      ]
+    },
+    "entities": [
+      "user",
+      "content calendar",
+      "6 weeks",
+      "campaign"
+    ],
+    "embedding_text": "User wants to set up a content calendar for the next 6 weeks for their campaign.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0012",
+    "source_time": "2023-05-20 13:24:01",
+    "record_time": "2026-07-07T19:51:00.042058",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 0.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User wants to set up a content calendar for the next 6 weeks for their campaign. | user | content calendar | 6 weeks | campaign | to plan campaign content | user | content calendar | 6 weeks | campaign"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 17,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User wants guidance on social media posting frequency for their campaign.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to determine posting frequency",
+      "keywords": [
+        "user",
+        "social media posting frequency",
+        "campaign"
+      ]
+    },
+    "entities": [
+      "user",
+      "social media posting frequency",
+      "campaign"
+    ],
+    "embedding_text": "User wants guidance on social media posting frequency for their campaign.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0013",
+    "source_time": "2023-05-20 13:24:01.500000",
+    "record_time": "2026-07-07T19:51:00.042064",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 0.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User wants guidance on social media posting frequency for their campaign. | user | social media posting frequency | campaign | to determine posting frequency | user | social media posting frequency | campaign"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 18,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User wants to measure the success of their campaign using key metrics.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to track campaign performance",
+      "keywords": [
+        "user",
+        "campaign success",
+        "key metrics"
+      ]
+    },
+    "entities": [
+      "user",
+      "campaign success",
+      "key metrics"
+    ],
+    "embedding_text": "User wants to measure the success of their campaign using key metrics.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0014",
+    "source_time": "2023-05-20 13:24:02",
+    "record_time": "2026-07-07T19:51:00.042070",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 0.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User wants to measure the success of their campaign using key metrics. | user | campaign success | key metrics | to track campaign performance | user | campaign success | key metrics"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 19,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User wants to get a new toy for rabbit Benny and seeks recommendations for safe and durable rabbit toys.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to provide enrichment for Benny",
+      "keywords": [
+        "user",
+        "rabbit",
+        "Benny",
+        "toy",
+        "safe and durable"
+      ]
+    },
+    "entities": [
+      "user",
+      "rabbit",
+      "Benny",
+      "toy",
+      "safe and durable"
+    ],
+    "embedding_text": "User wants to get a new toy for rabbit Benny and seeks recommendations for safe and durable rabbit toys.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0015",
+    "source_time": null,
+    "record_time": "2026-07-07T19:51:00.042076",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 0.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User wants to get a new toy for rabbit Benny and seeks recommendations for safe and durable rabbit toys. | user | rabbit | Benny | toy | safe and durable | to provide enrichment for Benny | user | rabbit | Benny | toy | safe and durable"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 20,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 20,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user and their family previously spent 7 days in Los Angeles and enjoyed the trip.",
+    "dimension": {
+      "time": "",
+      "location": "Los Angeles",
+      "reason": "",
+      "purpose": "vacation",
+      "keywords": [
+        "family",
+        "Los Angeles",
+        "7 days",
+        "trip"
+      ]
+    },
+    "entities": [
+      "family",
+      "Los Angeles",
+      "7 days",
+      "trip"
+    ],
+    "embedding_text": "The user and their family previously spent 7 days in Los Angeles and enjoyed the trip.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0145",
+    "source_time": "2023-05-29 17:04:00",
+    "record_time": "2026-07-07T19:51:00.042966",
+    "score": 0.3799177288108997,
+    "score_components": {
+      "dense_cosine_score": 0.3799177288108997,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 3,
+    "retrieval_score": 0.3799177288108997,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.3799177288108997
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "fact",
+    "content": "User has a sister.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "sister"
+      ]
+    },
+    "entities": [
+      "sister"
+    ],
+    "embedding_text": "User has a sister.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0072",
+    "source_time": "2023-05-23 21:10:01.500000",
+    "record_time": "2026-07-07T19:51:00.042510",
+    "score": 0.3576915699016678,
+    "score_components": {
+      "dense_cosine_score": 0.3576915699016678,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 4,
+    "retrieval_score": 0.3576915699016678,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.3576915699016678
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "profile",
+    "content": "The user enjoys both large concerts and intimate local music events.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "concerts",
+        "local music events",
+        "intimate settings"
+      ]
+    },
+    "entities": [
+      "concerts",
+      "local music events",
+      "intimate settings"
+    ],
+    "embedding_text": "The user enjoys both large concerts and intimate local music events.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0149",
+    "source_time": "2023-05-29 17:49:00",
+    "record_time": "2026-07-07T19:51:00.042994",
+    "score": 0.31638160952088135,
+    "score_components": {
+      "dense_cosine_score": 0.31638160952088135,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 7,
+    "retrieval_score": 0.31638160952088135,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 7,
+        "score": 0.31638160952088135
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user met with an old friend at a bookstore to discuss sustainable living, community development, and local history.",
+    "dimension": {
+      "time": "",
+      "location": "bookstore",
+      "reason": "",
+      "purpose": "discuss sustainable living, community development, and local history",
+      "keywords": [
+        "bookstore",
+        "friend",
+        "sustainable living",
+        "community development",
+        "local history"
+      ]
+    },
+    "entities": [
+      "bookstore",
+      "friend",
+      "sustainable living",
+      "community development",
+      "local history"
+    ],
+    "embedding_text": "The user met with an old friend at a bookstore to discuss sustainable living, community development, and local history.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0142",
+    "source_time": "2023-05-28 22:32:02",
+    "record_time": "2026-07-07T19:51:00.042949",
+    "score": 0.2788059007679987,
+    "score_components": {
+      "dense_cosine_score": 0.2788059007679987,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.2788059007679987,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 10,
+        "score": 0.2788059007679987
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User plans to display photos from previous charity events at the auction/raffle of their upcoming charity event.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "display photos",
+        "previous charity events",
+        "auction",
+        "raffle"
+      ]
+    },
+    "entities": [
+      "display photos",
+      "previous charity events",
+      "auction",
+      "raffle"
+    ],
+    "embedding_text": "User plans to display photos from previous charity events at the auction/raffle of their upcoming charity event.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0023",
+    "source_time": "2023-05-21 13:40:02",
+    "record_time": "2026-07-07T19:51:00.042130",
+    "score": 0.26896948917608116,
+    "score_components": {
+      "dense_cosine_score": 0.26896948917608116,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.26896948917608116,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.26896948917608116
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User decided to give the ceramic mini-garden sculpture to their sister as a birthday gift.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "birthday gift",
+      "purpose": "share creativity with sister",
+      "keywords": [
+        "gift",
+        "sister",
+        "ceramic sculpture",
+        "birthday"
+      ]
+    },
+    "entities": [
+      "gift",
+      "sister",
+      "ceramic sculpture",
+      "birthday"
+    ],
+    "embedding_text": "User decided to give the ceramic mini-garden sculpture to their sister as a birthday gift.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0073",
+    "source_time": "2023-05-23 21:10:02",
+    "record_time": "2026-07-07T19:51:00.042517",
+    "score": 0.262463388799859,
+    "score_components": {
+      "dense_cosine_score": 0.262463388799859,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 13,
+    "retrieval_score": 0.262463388799859,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 13,
+        "score": 0.262463388799859
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user is planning a new trip to California.",
+    "dimension": {
+      "time": "",
+      "location": "California",
+      "reason": "",
+      "purpose": "vacation",
+      "keywords": [
+        "trip",
+        "California",
+        "planning"
+      ]
+    },
+    "entities": [
+      "trip",
+      "California",
+      "planning"
+    ],
+    "embedding_text": "The user is planning a new trip to California.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0146",
+    "source_time": "2023-05-29 17:04:00",
+    "record_time": "2026-07-07T19:51:00.042971",
+    "score": 0.25619985998215916,
+    "score_components": {
+      "dense_cosine_score": 0.25619985998215916,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.25619985998215916,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 14,
+        "score": 0.25619985998215916
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User plans to check out Nextdoor and local online forums to stay informed about neighborhood events.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to stay informed",
+      "purpose": "",
+      "keywords": [
+        "Nextdoor",
+        "local online forums",
+        "neighborhood news"
+      ]
+    },
+    "entities": [
+      "Nextdoor",
+      "local online forums",
+      "neighborhood news"
+    ],
+    "embedding_text": "User plans to check out Nextdoor and local online forums to stay informed about neighborhood events.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0141",
+    "source_time": "2023-05-28 22:32:01.500000",
+    "record_time": "2026-07-07T19:51:00.042943",
+    "score": 0.23982571521269064,
+    "score_components": {
+      "dense_cosine_score": 0.23982571521269064,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.23982571521269064,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 15,
+        "score": 0.23982571521269064
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "User decided to serve Fresh Fruit Salad and Brownies for dessert at the dinner party.",
+    "dimension": {
+      "time": "2023-05-27",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Fresh Fruit Salad",
+        "Brownies",
+        "dessert"
+      ]
+    },
+    "entities": [
+      "Fresh Fruit Salad",
+      "Brownies",
+      "dessert"
+    ],
+    "embedding_text": "User decided to serve Fresh Fruit Salad and Brownies for dessert at the dinner party.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0064",
+    "source_time": "2023-05-23 19:21:02",
+    "record_time": "2026-07-07T19:51:00.042391",
+    "score": 0.23726301934037827,
+    "score_components": {
+      "dense_cosine_score": 0.23726301934037827,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.23726301934037827,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 16,
+        "score": 0.23726301934037827
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user is interested in visiting Crystal Cave at Sequoia National Park.",
+    "dimension": {
+      "time": "",
+      "location": "Crystal Cave, Sequoia National Park",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Crystal Cave"
+      ]
+    },
+    "entities": [
+      "Crystal Cave"
+    ],
+    "embedding_text": "The user is interested in visiting Crystal Cave at Sequoia National Park.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0042",
+    "source_time": "2023-05-22 11:59:02.500000",
+    "record_time": "2026-07-07T19:51:00.042251",
+    "score": 0.23721064521235175,
+    "score_components": {
+      "dense_cosine_score": 0.23721064521235175,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.23721064521235175,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 17,
+        "score": 0.23721064521235175
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "episodic",
+    "content": "The user went on a 5-day camping trip to Yosemite National Park with friends Rachel and Mike about three weeks before May 22, 2023, and hiked to Vernal Falls and Mirror Lake.",
+    "dimension": {
+      "time": "2023-05-01",
+      "location": "Yosemite National Park",
+      "reason": "",
+      "purpose": "recreation",
+      "keywords": [
+        "Yosemite",
+        "camping",
+        "Rachel",
+        "Mike",
+        "Vernal Falls",
+        "Mirror Lake"
+      ]
+    },
+    "entities": [
+      "Yosemite",
+      "camping",
+      "Rachel",
+      "Mike",
+      "Vernal Falls",
+      "Mirror Lake"
+    ],
+    "embedding_text": "The user went on a 5-day camping trip to Yosemite National Park with friends Rachel and Mike about three weeks before May 22, 2023, and hiked to Vernal Falls and Mirror Lake.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0038",
+    "source_time": "2023-05-22 11:59:00",
+    "record_time": "2026-07-07T19:51:00.042227",
+    "score": 0.2323799508968175,
+    "score_components": {
+      "dense_cosine_score": 0.2323799508968175,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.2323799508968175,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 19,
+        "score": 0.2323799508968175
+      }
+    ]
+  },
+  {
+    "user_id": "0024_d52b4f67",
+    "memory_type": "fact",
+    "content": "User shops at ShopRite for groceries.",
+    "dimension": {
+      "time": "",
+      "location": "ShopRite",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "ShopRite",
+        "grocery shopping"
+      ]
+    },
+    "entities": [
+      "ShopRite",
+      "grocery shopping"
+    ],
+    "embedding_text": "User shops at ShopRite for groceries.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0060",
+    "source_time": "2023-05-23 19:21:00",
+    "record_time": "2026-07-07T19:51:00.042364",
+    "score": 0.2211999033212082,
+    "score_components": {
+      "dense_cosine_score": 0.2211999033212082,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 20,
+    "retrieval_score": 0.2211999033212082,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 20,
+        "score": 0.2211999033212082
+      }
+    ]
+  }
+]

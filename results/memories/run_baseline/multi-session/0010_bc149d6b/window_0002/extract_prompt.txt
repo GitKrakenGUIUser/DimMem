@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-21T11:43:02.500000, Sun] 1.User: I can't believe how inhumane it was to force people into labor and put their lives at risk like that. It's so frustrating that people in power are willing to do anything to achieve their own goals without considering the lives of others.
+[2023-05-21T13:35:00, Sun] 2.User: I'm looking for some new vegan recipes to try out, particularly ones that use oat milk. I just invested in a spiralizer and started making zucchini noodles with vegan pesto sauce, and I'm loving it, so maybe something that combines those two?
+[2023-05-21T13:35:00.500000, Sun] 3.User: That's amazing, thanks for the inspiration! I'm particularly interested in the Creamy Zucchini Noodle Pesto Pasta, I'll definitely give that a try. By the way, do you have any recommendations for other vegan pesto sauce recipes that I could try with my zoodles? Maybe something with a Korean-inspired flavor like gochujang?
+[2023-05-21T13:35:01, Sun] 4.User: I love the sound of that gochujang pesto! I've actually had a Korean-inspired sauce with tofu recently, and it was amazing. Do you have any recommendations for other Korean-inspired vegan dishes I could try, maybe something with gochujang and vegetables?
+[2023-05-21T13:35:01.500000, Sun] 5.User: That sounds amazing! I'm definitely going to try out some of those recipes. I've been experimenting with different types of tofu and tempeh, and I think they would pair really well with the gochujang sauce. By the way, do you have any recommendations for vegan Korean-inspired desserts? I've been looking for some new ideas to satisfy my sweet tooth.
+[2023-05-21T13:35:02, Sun] 6.User: I'm so excited to try out these dessert recipes, especially the gochujang chocolate chip cookies. I've been experimenting with different types of non-dairy milk and I think coconut milk would work perfectly in these recipes. By the way, do you have any recommendations for vegan Korean-inspired breakfast dishes? I've been looking for some new ideas to start my day.
+[2023-05-21T13:35:02.500000, Sun] 7.User: I'm excited to try out these breakfast recipes, especially the gochujang granola. I've been meaning to experiment with different types of granola, and this spicy kick will definitely add a unique twist. By the way, do you have any recommendations for vegan Korean-inspired smoothie bowls? I've been looking for some new ideas to start my day with a nutritious and filling breakfast.
+[2023-05-22T00:06:00, Mon] 8.User: I'm looking for some fashion advice. I recently got a new pair of black leather boots from Zara on January 15th, and I'm wondering if you can suggest some outfit ideas that would go well with them.
+[2023-05-22T00:06:00.500000, Mon] 9.User: I really like the casual chic ideas, especially the one with the cozy sweater and distressed denim jeans. Speaking of sweaters, I recently wore my new grey sweater with my boots to brunch with friends and got a lot of compliments. Do you have any suggestions on how to style it with my boots for a more formal occasion?
+[2023-05-22T00:06:01, Mon] 10.User: I like the idea of pairing my grey sweater with a skirt and tights. Do you think it would work well with a pencil skirt or a flowy skirt?
+[2023-05-22T00:06:01.500000, Mon] 11.User: I think I'll go with the flowy skirt option. I have a dark grey flowy skirt that I think would look great with my grey sweater and black leather boots. Do you think I could add a pop of color with a bright scarf or would that be too much?
+[2023-05-22T00:06:02, Mon] 12.User: I think a scarf would be a nice addition, especially since I'm going for a more formal occasion. I have a soft pink scarf that I think would look great with my grey sweater and dark grey skirt. It's a thin scarf with a subtle pattern, so I think it would add a nice touch of color without overpowering the outfit.
+[2023-05-22T00:06:02.500000, Mon] 13.User: Thanks for the advice! I think I'm all set with my outfit now. By the way, I recently purchased those black leather boots from Zara on January 15th, and I'm really happy with them. They're so comfortable and versatile.
+[2023-05-22T05:24:00, Mon] 14.User: Explain any instances of intertextuality between My Name Is and other works by the artist, and how these references contribute to the artist's larger artistic identity.
+[2023-05-22T05:24:00.500000, Mon] 15.User: Oh, sorry about that. I was actually talking about Eminem's "My Name Is" song and I was curious about any references to his other works in that song. Can you help me with that?

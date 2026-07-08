@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-07-06T17:30:47.830100",
+  "input_path": "data/longmemeval_s_cleaned_random30.json",
+  "output_root": "results/segments/raw/run_baseline",
+  "window_size": 15,
+  "overlap": 3,
+  "window_step": 12,
+  "overlap_ratio": 0.2,
+  "use_user_only": true,
+  "truncate_threshold": 8000,
+  "truncate_head": 500,
+  "truncate_middle": 200,
+  "truncate_tail": 300,
+  "input_files": [
+    "data/longmemeval_s_cleaned_random30.json"
+  ],
+  "record_count": 30
+}

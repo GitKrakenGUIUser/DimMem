@@ -1,0 +1,32 @@
+{
+  "id": "9b17c83b-10ac-4242-a8f7-24ca30cf1092",
+  "object": "chat.completion",
+  "created": 1783427972,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\": \"CORRECT\"}",
+        "reasoning_content": "We need to check if the generated answer matches the gold answer. Both are \"The Glass Menagerie\". So it's correct."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 406,
+    "completion_tokens": 35,
+    "total_tokens": 441,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 27
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 150
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

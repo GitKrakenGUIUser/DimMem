@@ -1,0 +1,139 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-03-23T07:14:01, Thu] 1.User: Yeah, I will definitely do that. Do you have any personal recommendation for a great accessible place to visit in North London?
+[2023-03-23T07:14:01.500000, Thu] 2.User: I've always wanted to visit the British Museum, so I'll definitely check their website for accessibility information.
+[2023-03-23T07:14:02, Thu] 3.User: That sounds great! I'll definitely check out the accessibility information on their website and plan ahead.
+[2023-03-23T07:14:02.500000, Thu] 4.User: I'm also interested in trying out some local cuisine in North London. Do you have any recommendations for accessible restaurants or cafes?
+[2023-03-24T10:26:00, Fri] 5.User: I've been doing a lot of online shopping lately and I want to get a better sense of my spending habits. Can you help me track my purchases and categorize them by type and month?
+[2023-03-24T10:26:00.500000, Fri] 6.User: I'll start by giving you the info about my purchases. Let me recall... I got a 20% off coupon from Everlane in mid-February, and that's when I started buying stuff online. Then I bought some skincare products, kitchen utensils, vinyl records, and more clothes and accessories from various websites. Here's what I've got so far:
+
+* Feb: 3 shirts, 1 pair of jeans from Everlane ($150), skincare products from Sunday Riley ($120)
+* Mar: kitchen utensils from Amazon ($80), vinyl records from eBay ($200), sneakers and tank tops from Everlane ($100)
+* Apr: dresses and sandals from ASOS ($150)
+
+Let me know if you need anything else!
+[2023-03-24T10:26:01, Fri] 7.User: What's the best way to set up a spreadsheet to log my purchases? I've never done that before.
+[2023-03-24T10:26:01.500000, Fri] 8.User: I think I understand how to set up a spreadsheet now. What's the best way to keep track of my purchases going forward? Should I just check my bank statements regularly or is there a better way?
+[2023-03-24T10:26:02, Fri] 9.User: I think I'll try a combination of setting up email filters and using a browser extension to track prices and apply coupon codes. I also want to connect my bank accounts to an automated expense tracking service to make it easier to log my purchases. Do you think I should set a specific day each week to review my transactions and update my spreadsheet?
+[2023-03-24T10:26:02.500000, Fri] 10.User: I think I'll set aside every Sunday morning to review my transactions and update my spreadsheet. That way, I can take my time and make sure everything is accurate before the new week begins. Do you have any recommendations for automated expense tracking services that can connect to my bank accounts?
+[2023-03-24T21:33:00, Fri] 11.User: I'm looking for some recommendations for musicals to watch online. I've been on a theater kick lately and want to explore more shows.
+[2023-03-24T21:33:00.500000, Fri] 12.User: That's a great list! I've actually already seen a few of those, including West Side Story and Les Misérables. Speaking of musicals, I was just thinking about Hamilton the other day - I watched it on Disney+ about a month ago and I'm still obsessed with the soundtrack. Anyway, can you recommend some shows that are similar to Schitt's Creek? I just finished binge-watching it and I'm looking for something with a similar tone and humor.
+[2023-03-24T21:33:01, Fri] 13.User: I've seen a few of those, but there are some new ones to check out. I was thinking about watching something a bit more light-hearted and fun, so maybe I'll try Brooklyn Nine-Nine or The Good Place. Do you have any recommendations for movies that are similar to the movie adaptation of Les Misérables? I've been in a musical mood lately and loved the music in that film.
+[2023-03-24T21:33:01.500000, Fri] 14.User: I think I'll check out Chicago, I've heard great things about it. Do you have any recommendations for podcasts about musical theater or theater in general? I've been listening to The Ensemblist and really enjoy it.
+[2023-03-24T21:33:02, Fri] 15.User: I'll definitely check out some of those podcasts. I've also been thinking about planning a costume party and I was inspired by some of the musicals I've been watching. Do you have any suggestions for costume ideas based on musicals?

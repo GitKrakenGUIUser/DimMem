@@ -1,0 +1,571 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "multi-session",
+  "sample_id": "0026_a3332713",
+  "query_text": "What is the total amount the user spent on gifts for the user's coworker and brother?",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 204,
+  "fused_candidate_count_before_final_cut": 42,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/multi-session/tri_fused_route20_final15/0026_a3332713",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 9.229893035332783,
+      "memory_type": "episodic",
+      "content": "User bought a set of baby clothes and toys from Buy Buy Baby for coworker's baby shower, costing around $100, in April 2023.",
+      "source_boundary_id": "13_0144",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 9.229893035332783,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 9.229893035332783
+        },
+        {
+          "method": "structured",
+          "rank": 3,
+          "score": 0.5555555555555556
+        },
+        {
+          "method": "minilm",
+          "rank": 5,
+          "score": 0.5272215939425227
+        }
+      ],
+      "score_components": {
+        "bm25_score": 9.229893035332783,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 8.958277270668685,
+      "memory_type": "episodic",
+      "content": "In May 2023, the user gave their brother a $100 gift card to an electronics store as a graduation gift.",
+      "source_boundary_id": "12_0136",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 8.958277270668685,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 8.958277270668685
+        },
+        {
+          "method": "structured",
+          "rank": 2,
+          "score": 0.5555555555555556
+        },
+        {
+          "method": "minilm",
+          "rank": 3,
+          "score": 0.5819475540575337
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.958277270668685,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 8.723592937552263,
+      "memory_type": "fact",
+      "content": "The user has a brother and a sister.",
+      "source_boundary_id": "12_0135",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 8.723592937552263,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 8.723592937552263
+        },
+        {
+          "method": "minilm",
+          "rank": 11,
+          "score": 0.4610593713537778
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.723592937552263,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 8.474526647884613,
+      "memory_type": "profile",
+      "content": "The user spends approximately $500 per month on gifts for friends and family.",
+      "source_boundary_id": "15_0158",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 8.474526647884613,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 8.474526647884613
+        },
+        {
+          "method": "minilm",
+          "rank": 1,
+          "score": 0.7894049503922899
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.474526647884613,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 7.913523279340435,
+      "memory_type": "episodic",
+      "content": "In April 2023, the user bought a birthday present for their sister, a housewarming gift for their friend, and attended a baby shower where they bought a gift for their coworker's baby.",
+      "source_boundary_id": "15_0159",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 7.913523279340435,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 7.913523279340435
+        },
+        {
+          "method": "structured",
+          "rank": 4,
+          "score": 0.5555555555555556
+        },
+        {
+          "method": "minilm",
+          "rank": 9,
+          "score": 0.48278761204411363
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.913523279340435,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 7.901855569065576,
+      "memory_type": "profile",
+      "content": "The user tends to spend a lot on gifts during special occasions and is considering whether to cut back.",
+      "source_boundary_id": "15_0161",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 7.901855569065576,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 7.901855569065576
+        },
+        {
+          "method": "minilm",
+          "rank": 4,
+          "score": 0.5643498393805034
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.901855569065576,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 7.475323954740757,
+      "memory_type": "episodic",
+      "content": "The user is working on a report and needs an updated workflow model diagram and notes from a coworker, requesting them by May 24, 2023.",
+      "source_boundary_id": "6_0079",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 7.475323954740757,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 7.475323954740757
+        },
+        {
+          "method": "structured",
+          "rank": 1,
+          "score": 0.5555555555555556
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.475323954740757,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 7.276577582489664,
+      "memory_type": "profile",
+      "content": "User prefers personalized gifts and memory books.",
+      "source_boundary_id": "13_0151",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 7.276577582489664,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 7.276577582489664
+        },
+        {
+          "method": "minilm",
+          "rank": 12,
+          "score": 0.4584462776147806
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.276577582489664,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 5.998422895706754,
+      "memory_type": "episodic",
+      "content": "The user plans to break down goals into smaller tasks and focus on one task at a time to manage workload.",
+      "source_boundary_id": "9_0112",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 5.998422895706754,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 5.998422895706754
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.998422895706754,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 5.97975282308686,
+      "memory_type": "episodic",
+      "content": "User's favorite secondhand find is a pair of designer boots bought on ThredUp for $50, originally $500.",
+      "source_boundary_id": "8_0101",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 5.97975282308686,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 5.97975282308686
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.97975282308686,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 5.551280293024542,
+      "memory_type": "episodic",
+      "content": "The user recently attended a baby shower and purchased baby clothes and toys from Buy Buy Baby for $100, including a gift receipt.",
+      "source_boundary_id": "15_0160",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 5.551280293024542,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 5.551280293024542
+        },
+        {
+          "method": "structured",
+          "rank": 5,
+          "score": 0.5555555555555556
+        },
+        {
+          "method": "minilm",
+          "rank": 2,
+          "score": 0.6037672471983598
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.551280293024542,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 5.311677968828478,
+      "memory_type": "fact",
+      "content": "The user has Hendrick's gin at home and is open to trying other gin brands.",
+      "source_boundary_id": "15_0165",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 5.311677968828478,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 5.311677968828478
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.311677968828478,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 5.2419128860048385,
+      "memory_type": "episodic",
+      "content": "The user is looking for a mid-range dog bed around $40 with a 3-inch thick cushion for their dog Max's joint health.",
+      "source_boundary_id": "2_0019",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 5.2419128860048385,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 5.2419128860048385
+        },
+        {
+          "method": "structured",
+          "rank": 17,
+          "score": 0.33333333333333337
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.2419128860048385,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 5.130933550716251,
+      "memory_type": "episodic",
+      "content": "The user plans to spend $150 to $200 on their mother's anniversary gift and is leaning towards a personalized photo album.",
+      "source_boundary_id": "15_0157",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 5.130933550716251,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 5.130933550716251
+        },
+        {
+          "method": "minilm",
+          "rank": 6,
+          "score": 0.5081776599127962
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.130933550716251,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 4.870233036773552,
+      "memory_type": "episodic",
+      "content": "The user recently had a nasty flu that kept her bedridden for almost two weeks, and is now focusing on recovering her health.",
+      "source_boundary_id": "18_0196",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 4.870233036773552,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 4.870233036773552
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.870233036773552,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 0.30707859992980957
+}

@@ -1,0 +1,112 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-05-21 03:40:02.500000
+content: The user is planning to use public transportation in Europe based on their positive experience with efficient public transportation in Japan.
+reason: positive experience with public transportation in Japan
+purpose: to navigate efficiently
+
+[2]
+source_time: 2023-05-29 05:09:00
+content: The user visited Japan from April 15th to 22nd and fell in love with Tokyo.
+
+[3]
+source_time: 2023-05-23 02:30:00.500000
+content: User plans to stay at The Wit Hotel in Chicago because of its rooftop bar.
+reason: likes rooftop bar
+purpose: accommodation
+
+[4]
+source_time: 2023-05-21 03:40:02
+content: The user is planning to stay in social hostels or budget-friendly accommodations in Europe to meet other travelers, based on their positive experience in Japan where hostels helped them socialize.
+reason: positive experience in Japan with hostels
+purpose: to meet other travelers
+
+[5]
+source_time: 2023-05-23 02:30:01.500000
+content: User plans to visit Millennium Park and the lakefront path in Chicago.
+purpose: exploration
+
+[6]
+source_time: 2023-05-23 02:30:00
+content: User plans to dine at Carmine's restaurant in Chicago.
+purpose: dining
+
+[7]
+source_time: 2023-05-22 01:18:00
+content: The user attended a car maintenance workshop on preparing cars for track days and received feedback from experienced drivers and mechanics.
+reason: to learn about car preparation
+purpose: to prepare for track days
+
+[8]
+source_time: 2023-05-21 03:40:00.500000
+content: The user traveled to Japan and was able to change plans on a whim.
+
+[9]
+source_time: 2023-05-21 23:32:00
+content: The user attended a car maintenance workshop on preparing cars for track days, where they received feedback from experienced drivers and mechanics.
+reason: to learn about preparing cars for track days
+purpose: to receive feedback from experienced drivers and mechanics
+
+[10]
+source_time: 2023-05-23 00:01:02
+content: User is looking for Italian restaurant recommendations for a trip to Chicago.
+purpose: to find Italian restaurants
+
+[11]
+source_time: 2023-05-23 02:30:01
+content: User had a great time exploring Chicago in March 2023, especially walking along the Lake Michigan shoreline.
+
+[12]
+source_time: 2023-05-23 00:01:01.500000
+content: User plans a trip to Chicago and seeks restaurant recommendations.
+purpose: to find restaurants
+
+[13]
+source_time: 2023-05-28 02:02:02.500000
+content: The user wants to explore day trip and weekend getaway destinations from Tokyo to experience Japan's natural beauty.
+purpose: to explore Japan's natural beauty
+
+[14]
+source_time: 2023-05-22 11:15:01
+content: The user is interested in the dual-flow valve technology of Ohlins coilovers and how it affects damping.
+purpose: understand effect on damping
+
+[15]
+source_time: 2023-05-23 00:01:02.500000
+content: User had great Italian food during a previous 4-day trip to Chicago.
+
+Now answer the question:
+User Question:What is the total number of days I spent in Japan and Chicago?
+Question Date:2023/05/30 (Tue) 19:13

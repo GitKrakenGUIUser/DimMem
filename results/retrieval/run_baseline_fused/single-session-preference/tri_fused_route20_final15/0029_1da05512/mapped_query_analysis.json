@@ -1,0 +1,66 @@
+{
+  "query_text": "The user is trying to decide whether to buy a NAS device now or wait, and is asking for advice.",
+  "query_anchor": "The user is trying to decide whether to buy a NAS device now or wait, and is asking for advice.",
+  "dimension": {
+    "target_memory_type": [],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "NAS device",
+      "buy",
+      "now",
+      "wait"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "The user is trying to decide whether to buy a NAS device now or wait, and is asking for advice.",
+      "keywords": [
+        "NAS device",
+        "buy",
+        "now",
+        "wait"
+      ],
+      "query_terms": [
+        "the",
+        "user",
+        "is",
+        "trying",
+        "to",
+        "decide",
+        "whether",
+        "buy",
+        "a",
+        "nas",
+        "device",
+        "now",
+        "or",
+        "wait",
+        "and",
+        "asking",
+        "for",
+        "advice"
+      ]
+    },
+    "structured": {
+      "query_text": "The user is trying to decide whether to buy a NAS device now or wait, and is asking for advice.",
+      "rewrite": "The user is trying to decide whether to buy a NAS device now or wait, and is asking for advice.",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "The user is trying to decide whether to buy a NAS device now or wait, and is asking for advice.",
+      "target_memory_types": [],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "NAS device",
+        "buy",
+        "now",
+        "wait"
+      ],
+      "canonical_text": "The user is trying to decide whether to buy a NAS device now or wait, and is asking for advice."
+    },
+    "minilm": {
+      "query_text": "The user is trying to decide whether to buy a NAS device now or wait, and is asking for advice."
+    }
+  }
+}

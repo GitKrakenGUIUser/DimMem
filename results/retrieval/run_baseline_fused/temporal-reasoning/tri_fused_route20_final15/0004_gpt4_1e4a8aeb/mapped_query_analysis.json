@@ -1,0 +1,67 @@
+{
+  "query_text": "Find the dates when the user attended the gardening workshop and when the user planted the tomato saplings, then calculate the number of days between those two events.",
+  "query_anchor": "Find the dates when the user attended the gardening workshop and when the user planted the tomato saplings, then calculate the number of days between those two events.",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "gardening workshop",
+      "tomato saplings"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "Find the dates when the user attended the gardening workshop and when the user planted the tomato saplings, then calculate the number of days between those two events.",
+      "keywords": [
+        "gardening workshop",
+        "tomato saplings"
+      ],
+      "query_terms": [
+        "find",
+        "the",
+        "dates",
+        "when",
+        "user",
+        "attended",
+        "gardening",
+        "workshop",
+        "and",
+        "planted",
+        "tomato",
+        "saplings",
+        "then",
+        "calculate",
+        "number",
+        "of",
+        "days",
+        "between",
+        "those",
+        "two",
+        "events"
+      ]
+    },
+    "structured": {
+      "query_text": "Find the dates when the user attended the gardening workshop and when the user planted the tomato saplings, then calculate the number of days between those two events.",
+      "rewrite": "Find the dates when the user attended the gardening workshop and when the user planted the tomato saplings, then calculate the number of days between those two events.",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "Find the dates when the user attended the gardening workshop and when the user planted the tomato saplings, then calculate the number of days between those two events.",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "gardening workshop",
+        "tomato saplings"
+      ],
+      "canonical_text": "Find the dates when the user attended the gardening workshop and when the user planted the tomato saplings, then calculate the number of days between those two events."
+    },
+    "minilm": {
+      "query_text": "Find the dates when the user attended the gardening workshop and when the user planted the tomato saplings, then calculate the number of days between those two events."
+    }
+  }
+}

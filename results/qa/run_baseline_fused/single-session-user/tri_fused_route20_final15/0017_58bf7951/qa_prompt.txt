@@ -1,0 +1,103 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-05-26 07:15:01.500000
+content: The user attended a production of The Glass Menagerie at a local community theater and was impressed by the lead actress's performance.
+
+[2]
+source_time: 2023-05-20 19:37:01.500000
+content: The user plans to play Horizon Zero Dawn on their new gaming PC and check its performance.
+
+[3]
+source_time: 2023-05-20 10:45:00.500000
+content: Additional stakeholders for the Hopper project include Daniel (Content production manager), Kat (top creator community manager), and Flor; Kat and Flor are SPMs managing Europe and LatAm+Canada respectively.
+
+[4]
+source_time: 2023-05-24 13:02:00
+content: The user described a fictional scenario where an Empress possesses absolute power but chooses to respect democratic processes and local autonomy, relying on the imperial senate and local governments, and exercises absolute power only when deemed strictly necessary.
+
+[5]
+source_time: 2023-05-26 07:31:00
+content: The user recently tried a new Italian restaurant downtown and found it good, and is looking for recommendations for other local Italian restaurants.
+purpose: find other local Italian restaurants
+
+[6]
+source_time: 2023-05-30 22:20:01
+content: The user framed a watercolor painting purchased from a local artist last summer, about three weeks ago as of 2023-05-30, and displays it above their couch.
+purpose: to display art
+
+[7]
+source_time: 2023-05-22 11:57:00
+content: The user asked a math problem about a half-full tank being drained at a constant rate taking 30 minutes to empty, and the rate at which water must be pumped in simultaneously to fill the tank in 10 minutes.
+
+[8]
+source_time: 2023-05-22 00:40:01.500000
+content: The user requested updating the itinerary to include Night Safari at the end of the day.
+
+[9]
+source_time: 2023-05-29 13:56:02
+content: The user wrote a conclusion for a blog post about journaling that summarizes the benefits of journaling and ends with a question asking readers what is holding them back from starting a journaling practice.
+purpose: to engage readers and provoke reflection
+
+[10]
+source_time: 2023-05-23 00:34:02
+content: Juan Perez is planning a summer road trip along the West Coast for 7-10 days, visiting national parks, beaches, and cities, with activities including hiking and trying local food and drinks, driving a few hours each day, and spending 2-3 days per location, and bringing a bike.
+purpose: vacation
+
+[11]
+source_time: 2023-05-27 04:33:02
+content: User replaced an old coffee table from their parents with a new one because it took up too much space in their living room and did not fit their new decor, and the new coffee table is better for hosting gatherings.
+reason: old table took too much space and didn't fit new decor
+purpose: better for hosting gatherings
+
+[12]
+source_time: 2023-05-27 04:33:00
+content: User is planning to host a game night at their new apartment, has chosen Ticket to Ride and Codenames, and plans to prepare finger foods.
+purpose: host a game night
+
+[13]
+source_time: 2023-05-26 00:11:03
+content: The user loves watching the show 'The 100' on The CW.
+
+[14]
+source_time: 2023-05-22 08:08:01
+content: The user reads The Washington Post occasionally.
+
+[15]
+source_time: 2023-05-26 00:11:02
+content: The user enjoys watching the show 'Nancy Drew' on The CW.
+
+Now answer the question:
+User Question:What play did I attend at the local community theater?
+Question Date:2023/05/30 (Tue) 22:53

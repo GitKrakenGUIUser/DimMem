@@ -1,0 +1,3646 @@
+{
+  "bm25": {
+    "mapped_query_analysis": {
+      "query_text": "What airline did the user fly with on Valentine's Day?",
+      "keywords": [
+        "airline",
+        "Valentine's Day"
+      ],
+      "query_terms": [
+        "what",
+        "airline",
+        "did",
+        "the",
+        "user",
+        "fly",
+        "with",
+        "on",
+        "valentine",
+        "s",
+        "day"
+      ]
+    },
+    "top_records": [
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "profile",
+        "content": "The user values seat selection and amenities when choosing an airline.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "seat selection",
+            "amenities",
+            "airline preference"
+          ]
+        },
+        "entities": [
+          "seat selection",
+          "amenities",
+          "airline preference"
+        ],
+        "embedding_text": "The user values seat selection and amenities when choosing an airline.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0125",
+        "source_time": "2023-02-14 20:47:00.500000",
+        "record_time": "2026-07-07T19:51:00.534571",
+        "score": 7.258820442150919,
+        "score_components": {
+          "bm25_score": 7.258820442150919,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user plans to host a sports-themed party with nachos, sliders, caprese skewers, beer, soda, Game Day Punch, multiple TV stations, and a squares game.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "hosting a party",
+          "purpose": "to enjoy sports games",
+          "keywords": [
+            "sports-themed party",
+            "nachos",
+            "sliders",
+            "caprese skewers",
+            "beer",
+            "soda",
+            "Game Day Punch",
+            "squares game",
+            "TV stations"
+          ]
+        },
+        "entities": [
+          "sports-themed party",
+          "nachos",
+          "sliders",
+          "caprese skewers",
+          "beer",
+          "soda",
+          "Game Day Punch",
+          "squares game",
+          "TV stations"
+        ],
+        "embedding_text": "The user plans to host a sports-themed party with nachos, sliders, caprese skewers, beer, soda, Game Day Punch, multiple TV stations, and a squares game.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0178",
+        "source_time": "2023-02-28 10:38:00",
+        "record_time": "2026-07-07T19:51:00.534875",
+        "score": 7.033639535689842,
+        "score_components": {
+          "bm25_score": 7.033639535689842,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "profile",
+        "content": "The user wants to be notified when an upgrade becomes available on their flights.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "be notified of upgrades",
+          "keywords": [
+            "upgrade notification",
+            "airline upgrades"
+          ]
+        },
+        "entities": [
+          "upgrade notification",
+          "airline upgrades"
+        ],
+        "embedding_text": "The user wants to be notified when an upgrade becomes available on their flights.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0129",
+        "source_time": "2023-02-14 20:47:02.500000",
+        "record_time": "2026-07-07T19:51:00.534593",
+        "score": 6.512753669313268,
+        "score_components": {
+          "bm25_score": 6.512753669313268,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user inquired about the weather in Paris in March 2023 to determine what to pack.",
+        "dimension": {
+          "time": "2023-02-28",
+          "location": "Paris",
+          "reason": "trip preparation",
+          "purpose": "pack appropriately",
+          "keywords": [
+            "weather",
+            "Paris",
+            "March",
+            "packing"
+          ]
+        },
+        "entities": [
+          "weather",
+          "Paris",
+          "March",
+          "packing"
+        ],
+        "embedding_text": "The user inquired about the weather in Paris in March 2023 to determine what to pack.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0186",
+        "source_time": "2023-02-28 14:58:01",
+        "record_time": "2026-07-07T19:51:00.534920",
+        "score": 5.683588622633218,
+        "score_components": {
+          "bm25_score": 5.683588622633218,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "fact",
+        "content": "The user's friend Rachel is a sales associate at Athleta and keeps the user informed about Athleta's promotions.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Rachel",
+            "sales associate",
+            "Athleta",
+            "promotions"
+          ]
+        },
+        "entities": [
+          "Rachel",
+          "sales associate",
+          "Athleta",
+          "promotions"
+        ],
+        "embedding_text": "The user's friend Rachel is a sales associate at Athleta and keeps the user informed about Athleta's promotions.",
+        "source_message_ids": [
+          "8"
+        ],
+        "source_boundary_id": "8_0070",
+        "source_time": "2023-01-05 14:54:00",
+        "record_time": "2026-07-07T19:51:00.534259",
+        "score": 4.369785763656896,
+        "score_components": {
+          "bm25_score": 4.369785763656896,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User had a terrible experience with the in-flight entertainment on an American Airlines flight from New York to Los Angeles on 2023-02-20.",
+        "dimension": {
+          "time": "2023-02-20",
+          "location": "American Airlines flight New York to Los Angeles",
+          "reason": "terrible experience with in-flight entertainment",
+          "purpose": "",
+          "keywords": [
+            "American Airlines",
+            "flight",
+            "New York",
+            "Los Angeles",
+            "in-flight entertainment",
+            "terrible experience"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "flight",
+          "New York",
+          "Los Angeles",
+          "in-flight entertainment",
+          "terrible experience"
+        ],
+        "embedding_text": "User had a terrible experience with the in-flight entertainment on an American Airlines flight from New York to Los Angeles on 2023-02-20.",
+        "source_message_ids": [
+          "14"
+        ],
+        "source_boundary_id": "14_0144",
+        "source_time": "2023-02-20 18:00:00",
+        "record_time": "2026-07-07T19:51:00.534683",
+        "score": 4.086063686306337,
+        "score_components": {
+          "bm25_score": 4.086063686306337,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User commented on a fashion influencer's post about summer dresses and discussed prices and availability.",
+        "dimension": {
+          "time": "",
+          "location": "Instagram",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "fashion influencer",
+            "summer dresses",
+            "prices",
+            "availability",
+            "comment",
+            "conversation"
+          ]
+        },
+        "entities": [
+          "fashion influencer",
+          "summer dresses",
+          "prices",
+          "availability",
+          "comment",
+          "conversation"
+        ],
+        "embedding_text": "User commented on a fashion influencer's post about summer dresses and discussed prices and availability.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0055",
+        "source_time": "2022-12-13 06:04:00",
+        "record_time": "2026-07-07T19:51:00.534168",
+        "score": 4.0390683777957666,
+        "score_components": {
+          "bm25_score": 4.0390683777957666,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "fact",
+        "content": "The user was accepted into a Master's program in International Relations at the University of Melbourne a few months prior to November 2022 and is planning to move to Melbourne.",
+        "dimension": {
+          "time": "",
+          "location": "Melbourne, Australia; University of Melbourne",
+          "reason": "pursuing Master's degree",
+          "purpose": "to study International Relations",
+          "keywords": [
+            "Master's",
+            "International Relations",
+            "University of Melbourne",
+            "move",
+            "Melbourne",
+            "acceptance"
+          ]
+        },
+        "entities": [
+          "Master's",
+          "International Relations",
+          "University of Melbourne",
+          "move",
+          "Melbourne",
+          "acceptance"
+        ],
+        "embedding_text": "The user was accepted into a Master's program in International Relations at the University of Melbourne a few months prior to November 2022 and is planning to move to Melbourne.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0024",
+        "source_time": "2022-11-14 11:15:01.500000",
+        "record_time": "2026-07-07T19:51:00.533910",
+        "score": 4.031615425362251,
+        "score_components": {
+          "bm25_score": 4.031615425362251,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user is experiencing difficulty with the bank's online application system for opening an Australian bank account and is unsure about proof of address requirements since they haven't moved to Melbourne yet.",
+        "dimension": {
+          "time": "2022-11-15",
+          "location": "",
+          "reason": "lack of lease or utility bill",
+          "purpose": "",
+          "keywords": [
+            "bank account",
+            "online application",
+            "proof of address",
+            "Melbourne",
+            "difficulty"
+          ]
+        },
+        "entities": [
+          "bank account",
+          "online application",
+          "proof of address",
+          "Melbourne",
+          "difficulty"
+        ],
+        "embedding_text": "The user is experiencing difficulty with the bank's online application system for opening an Australian bank account and is unsure about proof of address requirements since they haven't moved to Melbourne yet.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0026",
+        "source_time": "2022-11-14 11:15:02.500000",
+        "record_time": "2026-07-07T19:51:00.533922",
+        "score": 3.85883277286045,
+        "score_components": {
+          "bm25_score": 3.85883277286045,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "profile",
+        "content": "The user's favorite food at the Super Bowl party was nachos.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "nachos",
+            "favorite food",
+            "Super Bowl party"
+          ]
+        },
+        "entities": [
+          "nachos",
+          "favorite food",
+          "Super Bowl party"
+        ],
+        "embedding_text": "The user's favorite food at the Super Bowl party was nachos.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0179",
+        "source_time": "2023-02-28 10:38:02.500000",
+        "record_time": "2026-07-07T19:51:00.534881",
+        "score": 3.780704809038384,
+        "score_components": {
+          "bm25_score": 3.780704809038384,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user watched the Duke vs. North Carolina college basketball game on February 1, 2023 at home with roommate Rachel.",
+        "dimension": {
+          "time": "2023-02-01",
+          "location": "user's home",
+          "reason": "to watch the game",
+          "purpose": "",
+          "keywords": [
+            "Duke",
+            "North Carolina",
+            "college basketball",
+            "Rachel"
+          ]
+        },
+        "entities": [
+          "Duke",
+          "North Carolina",
+          "college basketball",
+          "Rachel"
+        ],
+        "embedding_text": "The user watched the Duke vs. North Carolina college basketball game on February 1, 2023 at home with roommate Rachel.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0177",
+        "source_time": "2023-02-28 10:38:01",
+        "record_time": "2026-07-07T19:51:00.534868",
+        "score": 3.7650975593564517,
+        "score_components": {
+          "bm25_score": 3.7650975593564517,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "profile",
+        "content": "The user is considering whether to focus on earning more miles with American Airlines or diversify miles across different airlines.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "American Airlines",
+            "miles",
+            "diversify",
+            "consideration"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "miles",
+          "diversify",
+          "consideration"
+        ],
+        "embedding_text": "The user is considering whether to focus on earning more miles with American Airlines or diversify miles across different airlines.",
+        "source_message_ids": [
+          "8"
+        ],
+        "source_boundary_id": "8_0079",
+        "source_time": "2023-01-15 01:09:01.500000",
+        "record_time": "2026-07-07T19:51:00.534310",
+        "score": 3.7434788419090945,
+        "score_components": {
+          "bm25_score": 3.7434788419090945,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "fact",
+        "content": "User's 2018 Toyota Corolla had 23,000 miles when it was due for a synthetic oil change on 2023-02-25.",
+        "dimension": {
+          "time": "2023-02-25",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "2018 Toyota Corolla",
+            "23000 miles",
+            "synthetic oil change"
+          ]
+        },
+        "entities": [
+          "2018 Toyota Corolla",
+          "23000 miles",
+          "synthetic oil change"
+        ],
+        "embedding_text": "User's 2018 Toyota Corolla had 23,000 miles when it was due for a synthetic oil change on 2023-02-25.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0163",
+        "source_time": "2023-02-26 01:13:00.500000",
+        "record_time": "2026-07-07T19:51:00.534787",
+        "score": 3.676458747869126,
+        "score_components": {
+          "bm25_score": 3.676458747869126,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "profile",
+        "content": "User engages more on Instagram with visual content and on Twitter in discussions and debates using hashtags.",
+        "dimension": {
+          "time": "",
+          "location": "Instagram, Twitter",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "social media engagement",
+            "Instagram",
+            "visual content",
+            "Twitter",
+            "discussions",
+            "debates",
+            "hashtags"
+          ]
+        },
+        "entities": [
+          "social media engagement",
+          "Instagram",
+          "visual content",
+          "Twitter",
+          "discussions",
+          "debates",
+          "hashtags"
+        ],
+        "embedding_text": "User engages more on Instagram with visual content and on Twitter in discussions and debates using hashtags.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0060",
+        "source_time": "2022-12-13 06:04:02.500000",
+        "record_time": "2026-07-07T19:51:00.534200",
+        "score": 3.6086059917754296,
+        "score_components": {
+          "bm25_score": 3.6086059917754296,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "fact",
+        "content": "User's salsa instructor is named Maria.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "salsa instructor",
+            "Maria"
+          ]
+        },
+        "entities": [
+          "salsa instructor",
+          "Maria"
+        ],
+        "embedding_text": "User's salsa instructor is named Maria.",
+        "source_message_ids": [
+          "10"
+        ],
+        "source_boundary_id": "10_0101",
+        "source_time": "2023-02-02 16:14:00.500000",
+        "record_time": "2026-07-07T19:51:00.534435",
+        "score": 3.5160077236003096,
+        "score_components": {
+          "bm25_score": 3.5160077236003096,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User plans to dine at Momo Sushi Shack with friend Chris before the Phoebe Bridgers concert on 2023-08-10.",
+        "dimension": {
+          "time": "2023-08-10",
+          "location": "Momo Sushi Shack",
+          "reason": "",
+          "purpose": "dinner before concert",
+          "keywords": [
+            "Momo Sushi Shack",
+            "Chris",
+            "dinner",
+            "concert",
+            "future plan"
+          ]
+        },
+        "entities": [
+          "Momo Sushi Shack",
+          "Chris",
+          "dinner",
+          "concert",
+          "future plan"
+        ],
+        "embedding_text": "User plans to dine at Momo Sushi Shack with friend Chris before the Phoebe Bridgers concert on 2023-08-10.",
+        "source_message_ids": [
+          "11"
+        ],
+        "source_boundary_id": "11_0113",
+        "source_time": "2023-02-07 03:20:02.500000",
+        "record_time": "2026-07-07T19:51:00.534504",
+        "score": 3.4123603202661754,
+        "score_components": {
+          "bm25_score": 3.4123603202661754,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user had a negative experience with American Airlines in-flight entertainment on a flight from New York to Los Angeles.",
+        "dimension": {
+          "time": "",
+          "location": "New York to Los Angeles",
+          "reason": "bad in-flight entertainment",
+          "purpose": "",
+          "keywords": [
+            "American Airlines",
+            "in-flight entertainment",
+            "negative experience"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "in-flight entertainment",
+          "negative experience"
+        ],
+        "embedding_text": "The user had a negative experience with American Airlines in-flight entertainment on a flight from New York to Los Angeles.",
+        "source_message_ids": [
+          "8"
+        ],
+        "source_boundary_id": "8_0077",
+        "source_time": "2023-01-15 01:09:00.500000",
+        "record_time": "2026-07-07T19:51:00.534299",
+        "score": 3.3627860783252834,
+        "score_components": {
+          "bm25_score": 3.3627860783252834,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "profile",
+        "content": "The user enjoys Stephanie Izard's cooking style, particularly wood-fired flavors and spices.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Stephanie Izard",
+            "cooking style",
+            "wood-fired flavors",
+            "spices"
+          ]
+        },
+        "entities": [
+          "Stephanie Izard",
+          "cooking style",
+          "wood-fired flavors",
+          "spices"
+        ],
+        "embedding_text": "The user enjoys Stephanie Izard's cooking style, particularly wood-fired flavors and spices.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0038",
+        "source_time": "2022-11-17 09:14:01.500000",
+        "record_time": "2026-07-07T19:51:00.533997",
+        "score": 3.3485185526033914,
+        "score_components": {
+          "bm25_score": 3.3485185526033914,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "fact",
+        "content": "User is a member of The Daily Grind's loyalty program and is close to redeeming a free drink.",
+        "dimension": {
+          "time": "",
+          "location": "The Daily Grind",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "The Daily Grind",
+            "loyalty program",
+            "free drink",
+            "member"
+          ]
+        },
+        "entities": [
+          "The Daily Grind",
+          "loyalty program",
+          "free drink",
+          "member"
+        ],
+        "embedding_text": "User is a member of The Daily Grind's loyalty program and is close to redeeming a free drink.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0062",
+        "source_time": "2022-12-17 13:38:00.500000",
+        "record_time": "2026-07-07T19:51:00.534211",
+        "score": 3.281361617884042,
+        "score_components": {
+          "bm25_score": 3.281361617884042,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User had a terrible experience with American Airlines in-flight entertainment on a flight from New York to Los Angeles on 2023-02-20, and the flight attendant offered a voucher for a free drink on the next flight.",
+        "dimension": {
+          "time": "2023-02-20",
+          "location": "flight from New York to Los Angeles",
+          "reason": "terrible in-flight entertainment experience",
+          "purpose": "offered voucher as apology",
+          "keywords": [
+            "American Airlines",
+            "in-flight entertainment",
+            "flight from New York to Los Angeles",
+            "voucher",
+            "free drink"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "in-flight entertainment",
+          "flight from New York to Los Angeles",
+          "voucher",
+          "free drink"
+        ],
+        "embedding_text": "User had a terrible experience with American Airlines in-flight entertainment on a flight from New York to Los Angeles on 2023-02-20, and the flight attendant offered a voucher for a free drink on the next flight.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0146",
+        "source_time": "2023-02-17 13:50:02.500000",
+        "record_time": "2026-07-07T19:51:00.534695",
+        "score": 3.2410499353924953,
+        "score_components": {
+          "bm25_score": 3.2410499353924953,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      }
+    ]
+  },
+  "structured": {
+    "mapped_query_analysis": {
+      "query_text": "What airline did the user fly with on Valentine's Day?",
+      "rewrite": "What airline did the user fly with on Valentine's Day?",
+      "intent": "lookup",
+      "answer_field": "keywords",
+      "content_query": "What airline did the user fly with on Valentine's Day?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {
+        "time": [
+          "on 2023/02/14"
+        ]
+      },
+      "keywords": [
+        "airline",
+        "Valentine's Day"
+      ],
+      "canonical_text": "What airline did the user fly with on Valentine's Day?"
+    },
+    "top_records": [
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User experienced a terrible in-flight entertainment system on an American Airlines flight from New York to Los Angeles on February 10th, and received a voucher for a free drink on the next flight.",
+        "dimension": {
+          "time": "2022-02-10",
+          "location": "flight from New York to Los Angeles",
+          "reason": "poor in-flight entertainment experience",
+          "purpose": "to compensate for poor experience",
+          "keywords": [
+            "American Airlines",
+            "in-flight entertainment",
+            "New York",
+            "Los Angeles",
+            "voucher",
+            "free drink"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "in-flight entertainment",
+          "New York",
+          "Los Angeles",
+          "voucher",
+          "free drink"
+        ],
+        "embedding_text": "User experienced a terrible in-flight entertainment system on an American Airlines flight from New York to Los Angeles on February 10th, and received a voucher for a free drink on the next flight.",
+        "source_message_ids": [
+          "6"
+        ],
+        "source_boundary_id": "6_0047",
+        "source_time": "2022-11-17 11:41:01.500000",
+        "record_time": "2026-07-07T19:51:00.534051",
+        "score": 0.3,
+        "structural_score": 0.3,
+        "score_components": {
+          "score": 0.3,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2022-02-10T00:00:00",
+                "end": "2022-02-10T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2022-02-10"
+              },
+              {
+                "start": "2022-11-17T11:41:01.500000",
+                "end": "2022-11-17T11:41:01.500000",
+                "granularity": "datetime",
+                "raw": "2022-11-17T11:41:01.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User experienced a terrible in-flight entertainment system on an American Airlines flight from New York to Los Angeles on February 10th, and received a voucher for a free drink on the next flight. | American Airlines | in-flight entertainment | New York | Los Angeles | voucher | free drink | 2022-02-10 | flight from New York to Los Angeles | poor in-flight entertainment experience | to compensate for poor experience | American Airlines | in-flight entertainment | New York | Los Angeles | voucher | free drink"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User plans a spring break trip to Fort Lauderdale in March, flying Spirit Airlines.",
+        "dimension": {
+          "time": "March",
+          "location": "Fort Lauderdale",
+          "reason": "spring break",
+          "purpose": "to go on spring break",
+          "keywords": [
+            "spring break",
+            "Fort Lauderdale",
+            "Spirit Airlines"
+          ]
+        },
+        "entities": [
+          "spring break",
+          "Fort Lauderdale",
+          "Spirit Airlines"
+        ],
+        "embedding_text": "User plans a spring break trip to Fort Lauderdale in March, flying Spirit Airlines.",
+        "source_message_ids": [
+          "6"
+        ],
+        "source_boundary_id": "6_0048",
+        "source_time": "2022-11-17 11:41:02",
+        "record_time": "2026-07-07T19:51:00.534057",
+        "score": 0.3,
+        "structural_score": 0.3,
+        "score_components": {
+          "score": 0.3,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2022-11-17T11:41:02",
+                "end": "2022-11-17T11:41:02",
+                "granularity": "datetime",
+                "raw": "2022-11-17T11:41:02"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans a spring break trip to Fort Lauderdale in March, flying Spirit Airlines. | spring break | Fort Lauderdale | Spirit Airlines | March | Fort Lauderdale | spring break | to go on spring break | spring break | Fort Lauderdale | Spirit Airlines"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user had a negative experience with American Airlines in-flight entertainment on a flight from New York to Los Angeles.",
+        "dimension": {
+          "time": "",
+          "location": "New York to Los Angeles",
+          "reason": "bad in-flight entertainment",
+          "purpose": "",
+          "keywords": [
+            "American Airlines",
+            "in-flight entertainment",
+            "negative experience"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "in-flight entertainment",
+          "negative experience"
+        ],
+        "embedding_text": "The user had a negative experience with American Airlines in-flight entertainment on a flight from New York to Los Angeles.",
+        "source_message_ids": [
+          "8"
+        ],
+        "source_boundary_id": "8_0077",
+        "source_time": "2023-01-15 01:09:00.500000",
+        "record_time": "2026-07-07T19:51:00.534299",
+        "score": 0.3,
+        "structural_score": 0.3,
+        "score_components": {
+          "score": 0.3,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-01-15T01:09:00.500000",
+                "end": "2023-01-15T01:09:00.500000",
+                "granularity": "datetime",
+                "raw": "2023-01-15T01:09:00.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user had a negative experience with American Airlines in-flight entertainment on a flight from New York to Los Angeles. | American Airlines | in-flight entertainment | negative experience | New York to Los Angeles | bad in-flight entertainment | American Airlines | in-flight entertainment | negative experience"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user experienced a 2-hour delay on an American Airlines flight from Los Angeles (LAX) to New York (JFK) due to bad weather conditions.",
+        "dimension": {
+          "time": "",
+          "location": "flight from LAX to JFK",
+          "reason": "bad weather conditions",
+          "purpose": "",
+          "keywords": [
+            "American Airlines",
+            "flight delay",
+            "LAX",
+            "JFK",
+            "bad weather"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "flight delay",
+          "LAX",
+          "JFK",
+          "bad weather"
+        ],
+        "embedding_text": "The user experienced a 2-hour delay on an American Airlines flight from Los Angeles (LAX) to New York (JFK) due to bad weather conditions.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0120",
+        "source_time": "2023-02-08 02:00:01",
+        "record_time": "2026-07-07T19:51:00.534543",
+        "score": 0.3,
+        "structural_score": 0.3,
+        "score_components": {
+          "score": 0.3,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-02-08T02:00:01",
+                "end": "2023-02-08T02:00:01",
+                "granularity": "datetime",
+                "raw": "2023-02-08T02:00:01"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user experienced a 2-hour delay on an American Airlines flight from Los Angeles (LAX) to New York (JFK) due to bad weather conditions. | American Airlines | flight delay | LAX | JFK | bad weather | flight from LAX to JFK | bad weather conditions | American Airlines | flight delay | LAX | JFK | bad weather"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user had a bad experience with American Airlines' in-flight entertainment system on a flight from New York to Los Angeles.",
+        "dimension": {
+          "time": "",
+          "location": "flight from New York to Los Angeles",
+          "reason": "bad in-flight entertainment system",
+          "purpose": "",
+          "keywords": [
+            "American Airlines",
+            "in-flight entertainment",
+            "bad experience",
+            "New York",
+            "Los Angeles"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "in-flight entertainment",
+          "bad experience",
+          "New York",
+          "Los Angeles"
+        ],
+        "embedding_text": "The user had a bad experience with American Airlines' in-flight entertainment system on a flight from New York to Los Angeles.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0124",
+        "source_time": "2023-02-14 20:47:00",
+        "record_time": "2026-07-07T19:51:00.534565",
+        "score": 0.3,
+        "structural_score": 0.3,
+        "score_components": {
+          "score": 0.3,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-02-14T20:47:00",
+                "end": "2023-02-14T20:47:00",
+                "granularity": "datetime",
+                "raw": "2023-02-14T20:47:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user had a bad experience with American Airlines' in-flight entertainment system on a flight from New York to Los Angeles. | American Airlines | in-flight entertainment | bad experience | New York | Los Angeles | flight from New York to Los Angeles | bad in-flight entertainment system | American Airlines | in-flight entertainment | bad experience | New York | Los Angeles"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User had a terrible experience with the in-flight entertainment on an American Airlines flight from New York to Los Angeles on 2023-02-20.",
+        "dimension": {
+          "time": "2023-02-20",
+          "location": "American Airlines flight New York to Los Angeles",
+          "reason": "terrible experience with in-flight entertainment",
+          "purpose": "",
+          "keywords": [
+            "American Airlines",
+            "flight",
+            "New York",
+            "Los Angeles",
+            "in-flight entertainment",
+            "terrible experience"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "flight",
+          "New York",
+          "Los Angeles",
+          "in-flight entertainment",
+          "terrible experience"
+        ],
+        "embedding_text": "User had a terrible experience with the in-flight entertainment on an American Airlines flight from New York to Los Angeles on 2023-02-20.",
+        "source_message_ids": [
+          "14"
+        ],
+        "source_boundary_id": "14_0144",
+        "source_time": "2023-02-20 18:00:00",
+        "record_time": "2026-07-07T19:51:00.534683",
+        "score": 0.3,
+        "structural_score": 0.3,
+        "score_components": {
+          "score": 0.3,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-02-20T00:00:00",
+                "end": "2023-02-20T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-02-20"
+              },
+              {
+                "start": "2023-02-20T18:00:00",
+                "end": "2023-02-20T18:00:00",
+                "granularity": "datetime",
+                "raw": "2023-02-20T18:00:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User had a terrible experience with the in-flight entertainment on an American Airlines flight from New York to Los Angeles on 2023-02-20. | American Airlines | flight | New York | Los Angeles | in-flight entertainment | terrible experience | 2023-02-20 | American Airlines flight New York to Los Angeles | terrible experience with in-flight entertainment | American Airlines | flight | New York | Los Angeles | in-flight entertainment | terrible experience"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User is planning a trip to Miami and is considering flying with American Airlines.",
+        "dimension": {
+          "time": "2023-02-20",
+          "location": "Miami",
+          "reason": "",
+          "purpose": "trip",
+          "keywords": [
+            "Miami",
+            "American Airlines",
+            "trip",
+            "plan"
+          ]
+        },
+        "entities": [
+          "Miami",
+          "American Airlines",
+          "trip",
+          "plan"
+        ],
+        "embedding_text": "User is planning a trip to Miami and is considering flying with American Airlines.",
+        "source_message_ids": [
+          "14"
+        ],
+        "source_boundary_id": "14_0145",
+        "source_time": "2023-02-20 18:00:00",
+        "record_time": "2026-07-07T19:51:00.534689",
+        "score": 0.3,
+        "structural_score": 0.3,
+        "score_components": {
+          "score": 0.3,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-02-20T00:00:00",
+                "end": "2023-02-20T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-02-20"
+              },
+              {
+                "start": "2023-02-20T18:00:00",
+                "end": "2023-02-20T18:00:00",
+                "granularity": "datetime",
+                "raw": "2023-02-20T18:00:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is planning a trip to Miami and is considering flying with American Airlines. | Miami | American Airlines | trip | plan | 2023-02-20 | Miami | trip | Miami | American Airlines | trip | plan"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User had a terrible experience with American Airlines in-flight entertainment on a flight from New York to Los Angeles on 2023-02-20, and the flight attendant offered a voucher for a free drink on the next flight.",
+        "dimension": {
+          "time": "2023-02-20",
+          "location": "flight from New York to Los Angeles",
+          "reason": "terrible in-flight entertainment experience",
+          "purpose": "offered voucher as apology",
+          "keywords": [
+            "American Airlines",
+            "in-flight entertainment",
+            "flight from New York to Los Angeles",
+            "voucher",
+            "free drink"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "in-flight entertainment",
+          "flight from New York to Los Angeles",
+          "voucher",
+          "free drink"
+        ],
+        "embedding_text": "User had a terrible experience with American Airlines in-flight entertainment on a flight from New York to Los Angeles on 2023-02-20, and the flight attendant offered a voucher for a free drink on the next flight.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0146",
+        "source_time": "2023-02-17 13:50:02.500000",
+        "record_time": "2026-07-07T19:51:00.534695",
+        "score": 0.3,
+        "structural_score": 0.3,
+        "score_components": {
+          "score": 0.3,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-02-20T00:00:00",
+                "end": "2023-02-20T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-02-20"
+              },
+              {
+                "start": "2023-02-17T13:50:02.500000",
+                "end": "2023-02-17T13:50:02.500000",
+                "granularity": "datetime",
+                "raw": "2023-02-17T13:50:02.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User had a terrible experience with American Airlines in-flight entertainment on a flight from New York to Los Angeles on 2023-02-20, and the flight attendant offered a voucher for a free drink on the next flight. | American Airlines | in-flight entertainment | flight from New York to Los Angeles | voucher | free drink | 2023-02-20 | flight from New York to Los Angeles | terrible in-flight entertainment experience | offered voucher as apology | American Airlines | in-flight entertainment | flight from New York to Los Angeles | voucher | free drink"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User is considering flying with American Airlines for the Miami trip.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "American Airlines",
+            "Miami"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "Miami"
+        ],
+        "embedding_text": "User is considering flying with American Airlines for the Miami trip.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0148",
+        "source_time": "2023-02-20 18:00:00.500000",
+        "record_time": "2026-07-07T19:51:00.534706",
+        "score": 0.3,
+        "structural_score": 0.3,
+        "score_components": {
+          "score": 0.3,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-02-20T18:00:00.500000",
+                "end": "2023-02-20T18:00:00.500000",
+                "granularity": "datetime",
+                "raw": "2023-02-20T18:00:00.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is considering flying with American Airlines for the Miami trip. | American Airlines | Miami | American Airlines | Miami"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User had a terrible experience with American Airlines' in-flight entertainment system on a flight from New York to Los Angeles.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "American Airlines",
+            "entertainment system",
+            "New York to Los Angeles"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "entertainment system",
+          "New York to Los Angeles"
+        ],
+        "embedding_text": "User had a terrible experience with American Airlines' in-flight entertainment system on a flight from New York to Los Angeles.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0169",
+        "source_time": "2023-02-28 16:55:02",
+        "record_time": "2026-07-07T19:51:00.534821",
+        "score": 0.3,
+        "structural_score": 0.3,
+        "score_components": {
+          "score": 0.3,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-02-28T16:55:02",
+                "end": "2023-02-28T16:55:02",
+                "granularity": "datetime",
+                "raw": "2023-02-28T16:55:02"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User had a terrible experience with American Airlines' in-flight entertainment system on a flight from New York to Los Angeles. | American Airlines | entertainment system | New York to Los Angeles | American Airlines | entertainment system | New York to Los Angeles"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User experienced a 1-hour delay on a United Airlines flight from Boston to Chicago due to air traffic control issues.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "United Airlines",
+            "delay",
+            "Boston to Chicago",
+            "air traffic control"
+          ]
+        },
+        "entities": [
+          "United Airlines",
+          "delay",
+          "Boston to Chicago",
+          "air traffic control"
+        ],
+        "embedding_text": "User experienced a 1-hour delay on a United Airlines flight from Boston to Chicago due to air traffic control issues.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0170",
+        "source_time": "2023-02-28 16:55:02.500000",
+        "record_time": "2026-07-07T19:51:00.534827",
+        "score": 0.3,
+        "structural_score": 0.3,
+        "score_components": {
+          "score": 0.3,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-02-28T16:55:02.500000",
+                "end": "2023-02-28T16:55:02.500000",
+                "granularity": "datetime",
+                "raw": "2023-02-28T16:55:02.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User experienced a 1-hour delay on a United Airlines flight from Boston to Chicago due to air traffic control issues. | United Airlines | delay | Boston to Chicago | air traffic control | United Airlines | delay | Boston to Chicago | air traffic control"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User planned a trip to Miami and was comparing American Airlines and Delta for flights.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Miami",
+            "American Airlines",
+            "Delta",
+            "trip"
+          ]
+        },
+        "entities": [
+          "Miami",
+          "American Airlines",
+          "Delta",
+          "trip"
+        ],
+        "embedding_text": "User planned a trip to Miami and was comparing American Airlines and Delta for flights.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0171",
+        "source_time": "2023-02-28 02:53:00",
+        "record_time": "2026-07-07T19:51:00.534832",
+        "score": 0.3,
+        "structural_score": 0.3,
+        "score_components": {
+          "score": 0.3,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-02-28T02:53:00",
+                "end": "2023-02-28T02:53:00",
+                "granularity": "datetime",
+                "raw": "2023-02-28T02:53:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User planned a trip to Miami and was comparing American Airlines and Delta for flights. | Miami | American Airlines | Delta | trip | Miami | American Airlines | Delta | trip"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user has confirmed enrollment and applied for a student visa for the Master's program, and is having trouble opening an Australian bank account.",
+        "dimension": {
+          "time": "2022-11-15",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "enrollment confirmed",
+            "student visa applied",
+            "Australian bank account",
+            "trouble"
+          ]
+        },
+        "entities": [
+          "enrollment confirmed",
+          "student visa applied",
+          "Australian bank account",
+          "trouble"
+        ],
+        "embedding_text": "The user has confirmed enrollment and applied for a student visa for the Master's program, and is having trouble opening an Australian bank account.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0025",
+        "source_time": "2022-11-14 11:15:02",
+        "record_time": "2026-07-07T19:51:00.533916",
+        "score": 0.24999999999999997,
+        "structural_score": 0.24999999999999997,
+        "score_components": {
+          "score": 0.24999999999999997,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2022-11-15T00:00:00",
+                "end": "2022-11-15T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2022-11-15"
+              },
+              {
+                "start": "2022-11-14T11:15:02",
+                "end": "2022-11-14T11:15:02",
+                "granularity": "datetime",
+                "raw": "2022-11-14T11:15:02"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.25,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.25
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user has confirmed enrollment and applied for a student visa for the Master's program, and is having trouble opening an Australian bank account. | enrollment confirmed | student visa applied | Australian bank account | trouble | 2022-11-15 | enrollment confirmed | student visa applied | Australian bank account | trouble"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user is experiencing difficulty with the bank's online application system for opening an Australian bank account and is unsure about proof of address requirements since they haven't moved to Melbourne yet.",
+        "dimension": {
+          "time": "2022-11-15",
+          "location": "",
+          "reason": "lack of lease or utility bill",
+          "purpose": "",
+          "keywords": [
+            "bank account",
+            "online application",
+            "proof of address",
+            "Melbourne",
+            "difficulty"
+          ]
+        },
+        "entities": [
+          "bank account",
+          "online application",
+          "proof of address",
+          "Melbourne",
+          "difficulty"
+        ],
+        "embedding_text": "The user is experiencing difficulty with the bank's online application system for opening an Australian bank account and is unsure about proof of address requirements since they haven't moved to Melbourne yet.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0026",
+        "source_time": "2022-11-14 11:15:02.500000",
+        "record_time": "2026-07-07T19:51:00.533922",
+        "score": 0.24999999999999997,
+        "structural_score": 0.24999999999999997,
+        "score_components": {
+          "score": 0.24999999999999997,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2022-11-15T00:00:00",
+                "end": "2022-11-15T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2022-11-15"
+              },
+              {
+                "start": "2022-11-14T11:15:02.500000",
+                "end": "2022-11-14T11:15:02.500000",
+                "granularity": "datetime",
+                "raw": "2022-11-14T11:15:02.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.25,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.25
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user is experiencing difficulty with the bank's online application system for opening an Australian bank account and is unsure about proof of address requirements since they haven't moved to Melbourne yet. | bank account | online application | proof of address | Melbourne | difficulty | 2022-11-15 | lack of lease or utility bill | bank account | online application | proof of address | Melbourne | difficulty"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User is considering trying a new lure similar to one used by @FishingFanatic to catch a massive bass.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "inspired by @FishingFanatic's success",
+          "purpose": "to catch bass",
+          "keywords": [
+            "fishing lure",
+            "@FishingFanatic",
+            "bass"
+          ]
+        },
+        "entities": [
+          "fishing lure",
+          "@FishingFanatic",
+          "bass"
+        ],
+        "embedding_text": "User is considering trying a new lure similar to one used by @FishingFanatic to catch a massive bass.",
+        "source_message_ids": [
+          "6"
+        ],
+        "source_boundary_id": "6_0050",
+        "source_time": "2022-12-12 11:31:00.500000",
+        "record_time": "2026-07-07T19:51:00.534136",
+        "score": 0.24999999999999997,
+        "structural_score": 0.24999999999999997,
+        "score_components": {
+          "score": 0.24999999999999997,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2022-12-12T11:31:00.500000",
+                "end": "2022-12-12T11:31:00.500000",
+                "granularity": "datetime",
+                "raw": "2022-12-12T11:31:00.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.25,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.25
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is considering trying a new lure similar to one used by @FishingFanatic to catch a massive bass. | fishing lure | @FishingFanatic | bass | inspired by @FishingFanatic's success | to catch bass | fishing lure | @FishingFanatic | bass"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User commented on a fashion influencer's post about summer dresses and discussed prices and availability.",
+        "dimension": {
+          "time": "",
+          "location": "Instagram",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "fashion influencer",
+            "summer dresses",
+            "prices",
+            "availability",
+            "comment",
+            "conversation"
+          ]
+        },
+        "entities": [
+          "fashion influencer",
+          "summer dresses",
+          "prices",
+          "availability",
+          "comment",
+          "conversation"
+        ],
+        "embedding_text": "User commented on a fashion influencer's post about summer dresses and discussed prices and availability.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0055",
+        "source_time": "2022-12-13 06:04:00",
+        "record_time": "2026-07-07T19:51:00.534168",
+        "score": 0.24999999999999997,
+        "structural_score": 0.24999999999999997,
+        "score_components": {
+          "score": 0.24999999999999997,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2022-12-13T06:04:00",
+                "end": "2022-12-13T06:04:00",
+                "granularity": "datetime",
+                "raw": "2022-12-13T06:04:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.25,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.25
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User commented on a fashion influencer's post about summer dresses and discussed prices and availability. | fashion influencer | summer dresses | prices | availability | comment | conversation | Instagram | fashion influencer | summer dresses | prices | availability | comment | conversation"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user attended a Super Bowl party at friend Alex's house where the Kansas City Chiefs won; the user was thrilled and screamed at Patrick Mahomes' comeback, and the party had nachos and Super Bowl-themed cocktails.",
+        "dimension": {
+          "time": "",
+          "location": "friend Alex's house",
+          "reason": "Super Bowl party",
+          "purpose": "to watch the Super Bowl",
+          "keywords": [
+            "Super Bowl",
+            "Kansas City Chiefs",
+            "Patrick Mahomes",
+            "Alex",
+            "party",
+            "nachos",
+            "cocktails"
+          ]
+        },
+        "entities": [
+          "Super Bowl",
+          "Kansas City Chiefs",
+          "Patrick Mahomes",
+          "Alex",
+          "party",
+          "nachos",
+          "cocktails"
+        ],
+        "embedding_text": "The user attended a Super Bowl party at friend Alex's house where the Kansas City Chiefs won; the user was thrilled and screamed at Patrick Mahomes' comeback, and the party had nachos and Super Bowl-themed cocktails.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0175",
+        "source_time": "2023-02-28 10:38:00",
+        "record_time": "2026-07-07T19:51:00.534857",
+        "score": 0.24999999999999997,
+        "structural_score": 0.24999999999999997,
+        "score_components": {
+          "score": 0.24999999999999997,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-02-28T10:38:00",
+                "end": "2023-02-28T10:38:00",
+                "granularity": "datetime",
+                "raw": "2023-02-28T10:38:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.25,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.25
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user attended a Super Bowl party at friend Alex's house where the Kansas City Chiefs won; the user was thrilled and screamed at Patrick Mahomes' comeback, and the party had nachos and Super Bowl-themed cocktails. | Super Bowl | Kansas City Chiefs | Patrick Mahomes | Alex | party | nachos | cocktails | friend Alex's house | Super Bowl party | to watch the Super Bowl | Super Bowl | Kansas City Chiefs | Patrick Mahomes | Alex | party | nachos | cocktails"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user watched the Duke vs. North Carolina college basketball game on February 1, 2023 at home with roommate Rachel.",
+        "dimension": {
+          "time": "2023-02-01",
+          "location": "user's home",
+          "reason": "to watch the game",
+          "purpose": "",
+          "keywords": [
+            "Duke",
+            "North Carolina",
+            "college basketball",
+            "Rachel"
+          ]
+        },
+        "entities": [
+          "Duke",
+          "North Carolina",
+          "college basketball",
+          "Rachel"
+        ],
+        "embedding_text": "The user watched the Duke vs. North Carolina college basketball game on February 1, 2023 at home with roommate Rachel.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0177",
+        "source_time": "2023-02-28 10:38:01",
+        "record_time": "2026-07-07T19:51:00.534868",
+        "score": 0.24999999999999997,
+        "structural_score": 0.24999999999999997,
+        "score_components": {
+          "score": 0.24999999999999997,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-02-01T00:00:00",
+                "end": "2023-02-01T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-02-01"
+              },
+              {
+                "start": "2023-02-28T10:38:01",
+                "end": "2023-02-28T10:38:01",
+                "granularity": "datetime",
+                "raw": "2023-02-28T10:38:01"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.25,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.25
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user watched the Duke vs. North Carolina college basketball game on February 1, 2023 at home with roommate Rachel. | Duke | North Carolina | college basketball | Rachel | 2023-02-01 | user's home | to watch the game | Duke | North Carolina | college basketball | Rachel"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user plans to host a sports-themed party with nachos, sliders, caprese skewers, beer, soda, Game Day Punch, multiple TV stations, and a squares game.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "hosting a party",
+          "purpose": "to enjoy sports games",
+          "keywords": [
+            "sports-themed party",
+            "nachos",
+            "sliders",
+            "caprese skewers",
+            "beer",
+            "soda",
+            "Game Day Punch",
+            "squares game",
+            "TV stations"
+          ]
+        },
+        "entities": [
+          "sports-themed party",
+          "nachos",
+          "sliders",
+          "caprese skewers",
+          "beer",
+          "soda",
+          "Game Day Punch",
+          "squares game",
+          "TV stations"
+        ],
+        "embedding_text": "The user plans to host a sports-themed party with nachos, sliders, caprese skewers, beer, soda, Game Day Punch, multiple TV stations, and a squares game.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0178",
+        "source_time": "2023-02-28 10:38:00",
+        "record_time": "2026-07-07T19:51:00.534875",
+        "score": 0.24999999999999997,
+        "structural_score": 0.24999999999999997,
+        "score_components": {
+          "score": 0.24999999999999997,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-02-28T10:38:00",
+                "end": "2023-02-28T10:38:00",
+                "granularity": "datetime",
+                "raw": "2023-02-28T10:38:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.25,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.25
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to host a sports-themed party with nachos, sliders, caprese skewers, beer, soda, Game Day Punch, multiple TV stations, and a squares game. | sports-themed party | nachos | sliders | caprese skewers | beer | soda | Game Day Punch | squares game | TV stations | hosting a party | to enjoy sports games | sports-themed party | nachos | sliders | caprese skewers | beer | soda | Game Day Punch | squares game | TV stations"
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User completed listening to a podcast series on astronomy around October 2022.",
+        "dimension": {
+          "time": "2022-10-17 to 2022-10-23",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "astronomy",
+            "podcast series",
+            "completed"
+          ]
+        },
+        "entities": [
+          "astronomy",
+          "podcast series",
+          "completed"
+        ],
+        "embedding_text": "User completed listening to a podcast series on astronomy around October 2022.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0004",
+        "source_time": "2022-10-27 22:27:02",
+        "record_time": "2026-07-07T19:51:00.533785",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2022-10-27T22:27:02",
+                "end": "2022-10-27T22:27:02",
+                "granularity": "datetime",
+                "raw": "2022-10-27T22:27:02"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User completed listening to a podcast series on astronomy around October 2022. | astronomy | podcast series | completed | 2022-10-17 to 2022-10-23 | astronomy | podcast series | completed"
+        }
+      }
+    ]
+  },
+  "minilm": {
+    "mapped_query_analysis": {
+      "query_text": "What airline did the user fly with on Valentine's Day?"
+    },
+    "top_records": [
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User planned a trip to Miami and was comparing American Airlines and Delta for flights.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Miami",
+            "American Airlines",
+            "Delta",
+            "trip"
+          ]
+        },
+        "entities": [
+          "Miami",
+          "American Airlines",
+          "Delta",
+          "trip"
+        ],
+        "embedding_text": "User planned a trip to Miami and was comparing American Airlines and Delta for flights.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0171",
+        "source_time": "2023-02-28 02:53:00",
+        "record_time": "2026-07-07T19:51:00.534832",
+        "score": 0.5668123429231368,
+        "score_components": {
+          "dense_cosine_score": 0.5668123429231368,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user decided to book a JetBlue flight from Boston (BOS) to Fort Lauderdale (FLL).",
+        "dimension": {
+          "time": "",
+          "location": "Boston, Fort Lauderdale",
+          "reason": "",
+          "purpose": "travel",
+          "keywords": [
+            "JetBlue",
+            "BOS to FLL",
+            "flight booking"
+          ]
+        },
+        "entities": [
+          "JetBlue",
+          "BOS to FLL",
+          "flight booking"
+        ],
+        "embedding_text": "The user decided to book a JetBlue flight from Boston (BOS) to Fort Lauderdale (FLL).",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0126",
+        "source_time": "2023-02-14 20:47:01",
+        "record_time": "2026-07-07T19:51:00.534576",
+        "score": 0.5632291278970255,
+        "score_components": {
+          "dense_cosine_score": 0.5632291278970255,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user had a negative experience with American Airlines in-flight entertainment on a flight from New York to Los Angeles.",
+        "dimension": {
+          "time": "",
+          "location": "New York to Los Angeles",
+          "reason": "bad in-flight entertainment",
+          "purpose": "",
+          "keywords": [
+            "American Airlines",
+            "in-flight entertainment",
+            "negative experience"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "in-flight entertainment",
+          "negative experience"
+        ],
+        "embedding_text": "The user had a negative experience with American Airlines in-flight entertainment on a flight from New York to Los Angeles.",
+        "source_message_ids": [
+          "8"
+        ],
+        "source_boundary_id": "8_0077",
+        "source_time": "2023-01-15 01:09:00.500000",
+        "record_time": "2026-07-07T19:51:00.534299",
+        "score": 0.5611510583577796,
+        "score_components": {
+          "dense_cosine_score": 0.5611510583577796,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User had a terrible experience with the in-flight entertainment on an American Airlines flight from New York to Los Angeles on 2023-02-20.",
+        "dimension": {
+          "time": "2023-02-20",
+          "location": "American Airlines flight New York to Los Angeles",
+          "reason": "terrible experience with in-flight entertainment",
+          "purpose": "",
+          "keywords": [
+            "American Airlines",
+            "flight",
+            "New York",
+            "Los Angeles",
+            "in-flight entertainment",
+            "terrible experience"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "flight",
+          "New York",
+          "Los Angeles",
+          "in-flight entertainment",
+          "terrible experience"
+        ],
+        "embedding_text": "User had a terrible experience with the in-flight entertainment on an American Airlines flight from New York to Los Angeles on 2023-02-20.",
+        "source_message_ids": [
+          "14"
+        ],
+        "source_boundary_id": "14_0144",
+        "source_time": "2023-02-20 18:00:00",
+        "record_time": "2026-07-07T19:51:00.534683",
+        "score": 0.5549871238283697,
+        "score_components": {
+          "dense_cosine_score": 0.5549871238283697,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User had a terrible experience with American Airlines in-flight entertainment on a flight from New York to Los Angeles on 2023-02-20, and the flight attendant offered a voucher for a free drink on the next flight.",
+        "dimension": {
+          "time": "2023-02-20",
+          "location": "flight from New York to Los Angeles",
+          "reason": "terrible in-flight entertainment experience",
+          "purpose": "offered voucher as apology",
+          "keywords": [
+            "American Airlines",
+            "in-flight entertainment",
+            "flight from New York to Los Angeles",
+            "voucher",
+            "free drink"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "in-flight entertainment",
+          "flight from New York to Los Angeles",
+          "voucher",
+          "free drink"
+        ],
+        "embedding_text": "User had a terrible experience with American Airlines in-flight entertainment on a flight from New York to Los Angeles on 2023-02-20, and the flight attendant offered a voucher for a free drink on the next flight.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0146",
+        "source_time": "2023-02-17 13:50:02.500000",
+        "record_time": "2026-07-07T19:51:00.534695",
+        "score": 0.5420560940786835,
+        "score_components": {
+          "dense_cosine_score": 0.5420560940786835,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user took a red-eye JetBlue flight from San Francisco to Boston and slept almost the entire flight.",
+        "dimension": {
+          "time": "",
+          "location": "San Francisco to Boston",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "JetBlue",
+            "red-eye flight",
+            "San Francisco",
+            "Boston",
+            "slept"
+          ]
+        },
+        "entities": [
+          "JetBlue",
+          "red-eye flight",
+          "San Francisco",
+          "Boston",
+          "slept"
+        ],
+        "embedding_text": "The user took a red-eye JetBlue flight from San Francisco to Boston and slept almost the entire flight.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0039",
+        "source_time": "2022-11-17 11:41:00",
+        "record_time": "2026-07-07T19:51:00.534003",
+        "score": 0.5350474318681634,
+        "score_components": {
+          "dense_cosine_score": 0.5350474318681634,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user had a bad experience with American Airlines' in-flight entertainment system on a flight from New York to Los Angeles.",
+        "dimension": {
+          "time": "",
+          "location": "flight from New York to Los Angeles",
+          "reason": "bad in-flight entertainment system",
+          "purpose": "",
+          "keywords": [
+            "American Airlines",
+            "in-flight entertainment",
+            "bad experience",
+            "New York",
+            "Los Angeles"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "in-flight entertainment",
+          "bad experience",
+          "New York",
+          "Los Angeles"
+        ],
+        "embedding_text": "The user had a bad experience with American Airlines' in-flight entertainment system on a flight from New York to Los Angeles.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0124",
+        "source_time": "2023-02-14 20:47:00",
+        "record_time": "2026-07-07T19:51:00.534565",
+        "score": 0.5305773609568217,
+        "score_components": {
+          "dense_cosine_score": 0.5305773609568217,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User is considering flying with American Airlines for the Miami trip.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "American Airlines",
+            "Miami"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "Miami"
+        ],
+        "embedding_text": "User is considering flying with American Airlines for the Miami trip.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0148",
+        "source_time": "2023-02-20 18:00:00.500000",
+        "record_time": "2026-07-07T19:51:00.534706",
+        "score": 0.5163809960563132,
+        "score_components": {
+          "dense_cosine_score": 0.5163809960563132,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User experienced a terrible in-flight entertainment system on an American Airlines flight from New York to Los Angeles on February 10th, and received a voucher for a free drink on the next flight.",
+        "dimension": {
+          "time": "2022-02-10",
+          "location": "flight from New York to Los Angeles",
+          "reason": "poor in-flight entertainment experience",
+          "purpose": "to compensate for poor experience",
+          "keywords": [
+            "American Airlines",
+            "in-flight entertainment",
+            "New York",
+            "Los Angeles",
+            "voucher",
+            "free drink"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "in-flight entertainment",
+          "New York",
+          "Los Angeles",
+          "voucher",
+          "free drink"
+        ],
+        "embedding_text": "User experienced a terrible in-flight entertainment system on an American Airlines flight from New York to Los Angeles on February 10th, and received a voucher for a free drink on the next flight.",
+        "source_message_ids": [
+          "6"
+        ],
+        "source_boundary_id": "6_0047",
+        "source_time": "2022-11-17 11:41:01.500000",
+        "record_time": "2026-07-07T19:51:00.534051",
+        "score": 0.51625744746248,
+        "score_components": {
+          "dense_cosine_score": 0.51625744746248,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User is planning a trip to Miami and is considering flying with American Airlines.",
+        "dimension": {
+          "time": "2023-02-20",
+          "location": "Miami",
+          "reason": "",
+          "purpose": "trip",
+          "keywords": [
+            "Miami",
+            "American Airlines",
+            "trip",
+            "plan"
+          ]
+        },
+        "entities": [
+          "Miami",
+          "American Airlines",
+          "trip",
+          "plan"
+        ],
+        "embedding_text": "User is planning a trip to Miami and is considering flying with American Airlines.",
+        "source_message_ids": [
+          "14"
+        ],
+        "source_boundary_id": "14_0145",
+        "source_time": "2023-02-20 18:00:00",
+        "record_time": "2026-07-07T19:51:00.534689",
+        "score": 0.5145934975259343,
+        "score_components": {
+          "dense_cosine_score": 0.5145934975259343,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User had a terrible experience with American Airlines' in-flight entertainment system on a flight from New York to Los Angeles.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "American Airlines",
+            "entertainment system",
+            "New York to Los Angeles"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "entertainment system",
+          "New York to Los Angeles"
+        ],
+        "embedding_text": "User had a terrible experience with American Airlines' in-flight entertainment system on a flight from New York to Los Angeles.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0169",
+        "source_time": "2023-02-28 16:55:02",
+        "record_time": "2026-07-07T19:51:00.534821",
+        "score": 0.505927978912965,
+        "score_components": {
+          "dense_cosine_score": 0.505927978912965,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user earned 10,000 Delta SkyMiles from a round-trip flight from Boston to Atlanta on 2023-01-15.",
+        "dimension": {
+          "time": "2023-01-15",
+          "location": "Boston to Atlanta",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "10,000 miles",
+            "Delta SkyMiles",
+            "round-trip flight",
+            "Boston",
+            "Atlanta"
+          ]
+        },
+        "entities": [
+          "10,000 miles",
+          "Delta SkyMiles",
+          "round-trip flight",
+          "Boston",
+          "Atlanta"
+        ],
+        "embedding_text": "The user earned 10,000 Delta SkyMiles from a round-trip flight from Boston to Atlanta on 2023-01-15.",
+        "source_message_ids": [
+          "8"
+        ],
+        "source_boundary_id": "8_0075",
+        "source_time": "2023-01-05 14:54:02.500000",
+        "record_time": "2026-07-07T19:51:00.534287",
+        "score": 0.47263755855430806,
+        "score_components": {
+          "dense_cosine_score": 0.47263755855430806,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User planned a round-trip flight from Boston to Fort Lauderdale for spring break in March 2023.",
+        "dimension": {
+          "time": "2023-03",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Boston to Fort Lauderdale",
+            "spring break",
+            "round-trip",
+            "March 2023"
+          ]
+        },
+        "entities": [
+          "Boston to Fort Lauderdale",
+          "spring break",
+          "round-trip",
+          "March 2023"
+        ],
+        "embedding_text": "User planned a round-trip flight from Boston to Fort Lauderdale for spring break in March 2023.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0172",
+        "source_time": "2023-02-28 02:53:00.500000",
+        "record_time": "2026-07-07T19:51:00.534838",
+        "score": 0.456603774665878,
+        "score_components": {
+          "dense_cosine_score": 0.456603774665878,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user experienced a 2-hour delay on an American Airlines flight from Los Angeles (LAX) to New York (JFK) due to bad weather conditions.",
+        "dimension": {
+          "time": "",
+          "location": "flight from LAX to JFK",
+          "reason": "bad weather conditions",
+          "purpose": "",
+          "keywords": [
+            "American Airlines",
+            "flight delay",
+            "LAX",
+            "JFK",
+            "bad weather"
+          ]
+        },
+        "entities": [
+          "American Airlines",
+          "flight delay",
+          "LAX",
+          "JFK",
+          "bad weather"
+        ],
+        "embedding_text": "The user experienced a 2-hour delay on an American Airlines flight from Los Angeles (LAX) to New York (JFK) due to bad weather conditions.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0120",
+        "source_time": "2023-02-08 02:00:01",
+        "record_time": "2026-07-07T19:51:00.534543",
+        "score": 0.45308949664686704,
+        "score_components": {
+          "dense_cosine_score": 0.45308949664686704,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user plans to redeem Delta SkyMiles for a trip to Miami.",
+        "dimension": {
+          "time": "",
+          "location": "Miami",
+          "reason": "",
+          "purpose": "redeem miles for free trip",
+          "keywords": [
+            "Delta SkyMiles",
+            "trip",
+            "Miami"
+          ]
+        },
+        "entities": [
+          "Delta SkyMiles",
+          "trip",
+          "Miami"
+        ],
+        "embedding_text": "The user plans to redeem Delta SkyMiles for a trip to Miami.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0040",
+        "source_time": "2022-11-17 11:41:00",
+        "record_time": "2026-07-07T19:51:00.534009",
+        "score": 0.4415623908755469,
+        "score_components": {
+          "dense_cosine_score": 0.4415623908755469,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user wants to redeem Delta SkyMiles for a free trip to Miami.",
+        "dimension": {
+          "time": "2023",
+          "location": "Miami",
+          "reason": "",
+          "purpose": "redeem miles for free trip",
+          "keywords": [
+            "redeem",
+            "Delta SkyMiles",
+            "free trip",
+            "Miami"
+          ]
+        },
+        "entities": [
+          "redeem",
+          "Delta SkyMiles",
+          "free trip",
+          "Miami"
+        ],
+        "embedding_text": "The user wants to redeem Delta SkyMiles for a free trip to Miami.",
+        "source_message_ids": [
+          "8"
+        ],
+        "source_boundary_id": "8_0076",
+        "source_time": "2023-01-15 01:09:00",
+        "record_time": "2026-07-07T19:51:00.534293",
+        "score": 0.44032761059178693,
+        "score_components": {
+          "dense_cosine_score": 0.44032761059178693,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User experienced a 1-hour delay on a United Airlines flight from Boston to Chicago due to air traffic control issues.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "United Airlines",
+            "delay",
+            "Boston to Chicago",
+            "air traffic control"
+          ]
+        },
+        "entities": [
+          "United Airlines",
+          "delay",
+          "Boston to Chicago",
+          "air traffic control"
+        ],
+        "embedding_text": "User experienced a 1-hour delay on a United Airlines flight from Boston to Chicago due to air traffic control issues.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0170",
+        "source_time": "2023-02-28 16:55:02.500000",
+        "record_time": "2026-07-07T19:51:00.534827",
+        "score": 0.42258072261024054,
+        "score_components": {
+          "dense_cosine_score": 0.42258072261024054,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User plans a spring break trip to Fort Lauderdale in March, flying Spirit Airlines.",
+        "dimension": {
+          "time": "March",
+          "location": "Fort Lauderdale",
+          "reason": "spring break",
+          "purpose": "to go on spring break",
+          "keywords": [
+            "spring break",
+            "Fort Lauderdale",
+            "Spirit Airlines"
+          ]
+        },
+        "entities": [
+          "spring break",
+          "Fort Lauderdale",
+          "Spirit Airlines"
+        ],
+        "embedding_text": "User plans a spring break trip to Fort Lauderdale in March, flying Spirit Airlines.",
+        "source_message_ids": [
+          "6"
+        ],
+        "source_boundary_id": "6_0048",
+        "source_time": "2022-11-17 11:41:02",
+        "record_time": "2026-07-07T19:51:00.534057",
+        "score": 0.41603508444338744,
+        "score_components": {
+          "dense_cosine_score": 0.41603508444338744,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "The user decided to book a Delta return flight from Fort Lauderdale (FLL) to Boston (BOS) and hopes to upgrade using SkyMiles.",
+        "dimension": {
+          "time": "",
+          "location": "flight from FLL to BOS",
+          "reason": "",
+          "purpose": "upgrade using SkyMiles",
+          "keywords": [
+            "Delta",
+            "return flight",
+            "FLL to BOS",
+            "SkyMiles upgrade"
+          ]
+        },
+        "entities": [
+          "Delta",
+          "return flight",
+          "FLL to BOS",
+          "SkyMiles upgrade"
+        ],
+        "embedding_text": "The user decided to book a Delta return flight from Fort Lauderdale (FLL) to Boston (BOS) and hopes to upgrade using SkyMiles.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0128",
+        "source_time": "2023-02-14 20:47:02",
+        "record_time": "2026-07-07T19:51:00.534588",
+        "score": 0.41152533849652223,
+        "score_components": {
+          "dense_cosine_score": 0.41152533849652223,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0007_gpt4_f420262d",
+        "memory_type": "episodic",
+        "content": "User plans to redeem Delta SkyMiles for a round-trip economy ticket from Boston to Miami in summer, preferring non-stop flights.",
+        "dimension": {
+          "time": "summer",
+          "location": "Miami",
+          "reason": "",
+          "purpose": "to redeem SkyMiles for a free trip",
+          "keywords": [
+            "Delta SkyMiles",
+            "Boston",
+            "Miami",
+            "round-trip economy",
+            "summer travel"
+          ]
+        },
+        "entities": [
+          "Delta SkyMiles",
+          "Boston",
+          "Miami",
+          "round-trip economy",
+          "summer travel"
+        ],
+        "embedding_text": "User plans to redeem Delta SkyMiles for a round-trip economy ticket from Boston to Miami in summer, preferring non-stop flights.",
+        "source_message_ids": [
+          "6"
+        ],
+        "source_boundary_id": "6_0044",
+        "source_time": "2022-11-17 11:41:00.500000",
+        "record_time": "2026-07-07T19:51:00.534033",
+        "score": 0.41112266468264136,
+        "score_components": {
+          "dense_cosine_score": 0.41112266468264136,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      }
+    ]
+  }
+}

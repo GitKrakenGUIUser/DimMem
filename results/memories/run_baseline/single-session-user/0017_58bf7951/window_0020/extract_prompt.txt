@@ -1,0 +1,141 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-29T13:56:00.500000, Mon] 1.User: That's a lot of great ideas! I think I'll start with writing about my journaling routine and how it's helped me process my thoughts and emotions. Do you have any suggestions on how to structure a blog post, like how long it should be, how many paragraphs, and what kind of tone to use?
+[2023-05-29T13:56:01, Mon] 2.User: I think I'll start with a more personal approach, sharing how I got back into journaling after a six-month gap, and how it's helped me process my thoughts and emotions. I'll also try to keep my first post relatively short and concise, around 300-400 words. Can you suggest any ways to make my writing more engaging and conversational, without being too casual or informal?
+[2023-05-29T13:56:01.500000, Mon] 3.User: That's really helpful, thanks! I think I'll try to incorporate some of those tips into my writing. One thing I'm still unsure about is how to conclude my post. Do you have any suggestions on how to wrap up my story and leave my readers with something to think about?
+[2023-05-29T13:56:02, Mon] 4.User: I'm going to try to wrap up my post by summarizing my main points and leaving my readers with a thought-provoking question. Here's my revised conclusion:
+
+"In conclusion, getting back into journaling has been a game-changer for me. It's helped me process my thoughts and emotions, gain clarity, and develop a more positive mindset. As I continue on this journey, I'm excited to see how it will shape me and help me grow. How about you? What's holding you back from starting your own journaling practice, and what do you hope to achieve from it?"
+
+Let me know if this looks good or if I need to make any adjustments!
+[2023-05-29T13:56:02.500000, Mon] 5.User: I think you're ready to publish your post! Your conclusion looks great, and you've done a wonderful job of summarizing your main points and leaving your readers with a thought-provoking question. Remember to proofread your post one more time for any grammar or spelling errors, and then hit that publish button!
+
+If you need any further assistance or have any other questions, feel free to ask. Otherwise, I wish you all the best with your blog post, and I hope it resonates with your readers!
+
+(And don't forget to promote your post on social media and engage with your readers in the comments!)
+[2023-05-29T18:12:00, Mon] 6.User: I'm looking for some advice on getting my jewelry appraised and insured. I finally got around to organizing my jewelry box last week and realized I have some valuable pieces that need to be protected.
+[2023-05-29T18:12:00.500000, Mon] 7.User: That's really helpful, thanks for the information. I'm still a bit unclear on the difference between scheduled and unscheduled coverage. Can you explain that to me in more detail?
+[2023-05-29T18:12:01, Mon] 8.User: So if I understand correctly, scheduled coverage is like making a detailed list of each item and its value, while unscheduled coverage is more like having a blanket policy that covers everything up to a certain amount. Is that right?
+[2023-05-29T18:12:01.500000, Mon] 9.User: That makes sense. I think I'll need to go with scheduled coverage for my more valuable pieces, like my engagement ring and the antique brooch. But for my less valuable pieces, like my silver ring with a turquoise stone, unscheduled coverage might be sufficient.
+[2023-05-29T18:12:02, Mon] 10.User: That's a great point about keeping detailed records. I've been meaning to organize all my jewelry-related documents, including the appraisal report for my antique brooch and the receipt for my new rose gold earrings. Speaking of which, I should probably get my engagement ring appraised too, since I'm not sure of its exact value. Do you have any recommendations for finding a reputable appraiser in my area?
+[2023-05-29T18:12:02.500000, Mon] 11.User: I'll make sure to ask about their experience with insurance claims and their process for creating an appraisal report that meets insurance company requirements. Thanks for the tip!
+[2023-05-29T22:10:00, Mon] 12.User: how does the website connect to D365 or Navision? which part of the web site design is involved?
+[2023-05-30T01:14:00, Tue] 13.User: list all of the miracles that Jesus performed as recorded in the Bible book of Matthew, ordered by chapter sequence
+[2023-05-30T01:14:00.500000, Tue] 14.User: list all of the miracles that Jesus performed as recorded in the Bible book of Mark, ordered by chapter sequence
+[2023-05-30T01:14:01, Tue] 15.User: list all of the miracles that Jesus performed as recorded in the Bible book of Luke, ordered by chapter sequence

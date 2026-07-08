@@ -1,0 +1,32 @@
+{
+  "id": "8a602221-e55c-400a-8fe9-788a43a8139a",
+  "object": "chat.completion",
+  "created": 1783427953,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: The retrieved memories show the user is considering a NAS device for storage and backup (memories 1, 4, 6), but there is no information about whether to buy it now or wait. No memory provides any factors like pricing, upcoming releases, or personal timeline preferences. Thus, the evidence is insufficient to answer.\n\nAnswer: I don't know.",
+        "reasoning_content": "We need to answer based on retrieved memories. The user asks about buying a NAS device now or wait. Memories show: [1] user is considering purchasing NAS for home network storage due to storage capacity issues. [4] user backs up to external hard drive and wants NAS for central backup. [6] user concerned about data security and seeks encryption/access control. No memory gives advice on timing or comparison of now vs later. No memory indicates urgency or recommendation. So insufficient evidence."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1141,
+    "completion_tokens": 175,
+    "total_tokens": 1316,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 98
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 885
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

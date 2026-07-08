@@ -1,0 +1,32 @@
+{
+  "id": "938b6625-293f-48d6-8a03-532c4d97d41d",
+  "object": "chat.completion",
+  "created": 1783356394,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"Find the location where the user attended their cousin's wedding.\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"cousin's wedding\"],\n    \"time\": \"\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"location\"\n}",
+        "reasoning_content": "We need to parse the question: \"Where did I attend my cousin's wedding?\" The question asks about a location (where) of an event (cousin's wedding). So answer_dim should be \"location\". The memory type is episodic (specific event). Keywords: \"cousin's wedding\". No explicit time constraint, so time is empty. Location is asked, so dimension.location is left empty. Need assistant context? No. Query anchor: rewrite: \"The user attended their cousin's wedding at a specific location, find the location.\" But better: \"Where did the user attend their cousin's wedding?\""
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 684,
+    "completion_tokens": 202,
+    "total_tokens": 886,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 123
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 44
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

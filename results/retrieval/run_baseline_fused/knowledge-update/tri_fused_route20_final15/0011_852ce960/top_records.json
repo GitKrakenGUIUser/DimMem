@@ -1,0 +1,885 @@
+[
+  {
+    "user_id": "0011_852ce960",
+    "memory_type": "fact",
+    "content": "User was pre-approved for a $400,000 mortgage from Wells Fargo.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "mortgage",
+        "$400,000",
+        "pre-approved",
+        "Wells Fargo"
+      ]
+    },
+    "entities": [
+      "mortgage",
+      "$400,000",
+      "pre-approved",
+      "Wells Fargo"
+    ],
+    "embedding_text": "User was pre-approved for a $400,000 mortgage from Wells Fargo.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0117",
+    "source_time": "2023-11-29 12:14:01.500000",
+    "record_time": "2026-07-07T19:50:11.859369",
+    "score": 37.012506733747834,
+    "score_components": {
+      "bm25_score": 37.012506733747834,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 37.012506733747834,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 37.012506733747834
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 1.0
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.8976941945462695
+      }
+    ]
+  },
+  {
+    "user_id": "0011_852ce960",
+    "memory_type": "fact",
+    "content": "The user is buying a house for $325,000 and has pre-approval from Wells Fargo for $350,000.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "house",
+        "$325,000",
+        "pre-approval",
+        "Wells Fargo"
+      ]
+    },
+    "entities": [
+      "house",
+      "$325,000",
+      "pre-approval",
+      "Wells Fargo"
+    ],
+    "embedding_text": "The user is buying a house for $325,000 and has pre-approval from Wells Fargo for $350,000.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0010",
+    "source_time": "2023-08-11 00:01:01.500000",
+    "record_time": "2026-07-07T19:50:11.858334",
+    "score": 19.311048855737617,
+    "score_components": {
+      "bm25_score": 19.311048855737617,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 19.311048855737617,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 19.311048855737617
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.6444444444444445
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.7961804339993865
+      }
+    ]
+  },
+  {
+    "user_id": "0011_852ce960",
+    "memory_type": "episodic",
+    "content": "The user is buying a $325,000 house, has a pre-approval for $350,000 from Wells Fargo, and is finalizing the budget including closing costs.",
+    "dimension": {
+      "time": "2023-08-11",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "home purchase",
+        "$325,000",
+        "pre-approval",
+        "Wells Fargo",
+        "budget",
+        "closing costs"
+      ]
+    },
+    "entities": [
+      "home purchase",
+      "$325,000",
+      "pre-approval",
+      "Wells Fargo",
+      "budget",
+      "closing costs"
+    ],
+    "embedding_text": "The user is buying a $325,000 house, has a pre-approval for $350,000 from Wells Fargo, and is finalizing the budget including closing costs.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0009",
+    "source_time": "2023-08-02 05:58:01.500000",
+    "record_time": "2026-07-07T19:50:11.858327",
+    "score": 16.92023272696183,
+    "score_components": {
+      "bm25_score": 16.92023272696183,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 16.92023272696183,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 16.92023272696183
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.6444444444444445
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.7602795973443881
+      }
+    ]
+  },
+  {
+    "user_id": "0011_852ce960",
+    "memory_type": "episodic",
+    "content": "The user is considering buying a coffee table from West Elm for their living room and is looking for sales and promotions.",
+    "dimension": {
+      "time": "",
+      "location": "living room",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "coffee table",
+        "West Elm",
+        "living room",
+        "deals"
+      ]
+    },
+    "entities": [
+      "coffee table",
+      "West Elm",
+      "living room",
+      "deals"
+    ],
+    "embedding_text": "The user is considering buying a coffee table from West Elm for their living room and is looking for sales and promotions.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0050",
+    "source_time": "2023-09-18 18:36:01.500000",
+    "record_time": "2026-07-07T19:50:11.858578",
+    "score": 5.9468423271632265,
+    "score_components": {
+      "bm25_score": 5.9468423271632265,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 5.9468423271632265,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 5.9468423271632265
+      },
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.1998185561138312
+      }
+    ]
+  },
+  {
+    "user_id": "0011_852ce960",
+    "memory_type": "episodic",
+    "content": "User is considering applying to the data analysis company they met at the career fair and is unsure whether to mention their research paper presentation.",
+    "dimension": {
+      "time": "2023-10-27",
+      "location": "",
+      "reason": "unsure about highlighting achievement",
+      "purpose": "to apply",
+      "keywords": [
+        "data analysis company",
+        "research paper",
+        "career fair"
+      ]
+    },
+    "entities": [
+      "data analysis company",
+      "research paper",
+      "career fair"
+    ],
+    "embedding_text": "User is considering applying to the data analysis company they met at the career fair and is unsure whether to mention their research paper presentation.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0069",
+    "source_time": "2023-10-27 18:02:02.500000",
+    "record_time": "2026-07-07T19:50:11.858689",
+    "score": 5.112948559208469,
+    "score_components": {
+      "bm25_score": 5.112948559208469,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 5.112948559208469,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 5.112948559208469
+      }
+    ]
+  },
+  {
+    "user_id": "0011_852ce960",
+    "memory_type": "episodic",
+    "content": "User plans to apply for internships this summer and attended a career fair last month where they met potential companies.",
+    "dimension": {
+      "time": "2023-10-27",
+      "location": "",
+      "reason": "",
+      "purpose": "to get internship",
+      "keywords": [
+        "internship",
+        "career fair",
+        "companies"
+      ]
+    },
+    "entities": [
+      "internship",
+      "career fair",
+      "companies"
+    ],
+    "embedding_text": "User plans to apply for internships this summer and attended a career fair last month where they met potential companies.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0066",
+    "source_time": "2023-10-27 18:02:01",
+    "record_time": "2026-07-07T19:50:11.858672",
+    "score": 4.685533794159473,
+    "score_components": {
+      "bm25_score": 4.685533794159473,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 4.685533794159473,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 4.685533794159473
+      }
+    ]
+  },
+  {
+    "user_id": "0011_852ce960",
+    "memory_type": "episodic",
+    "content": "The user participated in the 'Ride for a Reason' charity cycling event on 2023-03-25 with about 200 participants, which was a great experience.",
+    "dimension": {
+      "time": "2023-03-25",
+      "location": "",
+      "reason": "charity",
+      "purpose": "fundraising",
+      "keywords": [
+        "Ride for a Reason",
+        "charity cycling event",
+        "200 participants"
+      ]
+    },
+    "entities": [
+      "Ride for a Reason",
+      "charity cycling event",
+      "200 participants"
+    ],
+    "embedding_text": "The user participated in the 'Ride for a Reason' charity cycling event on 2023-03-25 with about 200 participants, which was a great experience.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0016",
+    "source_time": "2023-08-17 02:26:00",
+    "record_time": "2026-07-07T19:50:11.858373",
+    "score": 4.620519899392279,
+    "score_components": {
+      "bm25_score": 4.620519899392279,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 4.620519899392279,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 4.620519899392279
+      },
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0011_852ce960",
+    "memory_type": "episodic",
+    "content": "The user decided to delete the Facebook and Instagram apps from their phone on 2023-11-15.",
+    "dimension": {
+      "time": "2023-11-15",
+      "location": "phone",
+      "reason": "to avoid temptation",
+      "purpose": "reduce social media usage",
+      "keywords": [
+        "Facebook",
+        "Instagram",
+        "delete app",
+        "distraction"
+      ]
+    },
+    "entities": [
+      "Facebook",
+      "Instagram",
+      "delete app",
+      "distraction"
+    ],
+    "embedding_text": "The user decided to delete the Facebook and Instagram apps from their phone on 2023-11-15.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0083",
+    "source_time": "2023-11-15 12:14:02",
+    "record_time": "2026-07-07T19:50:11.858774",
+    "score": 4.617947505681263,
+    "score_components": {
+      "bm25_score": 4.617947505681263,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 4.617947505681263,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 4.617947505681263
+      }
+    ]
+  },
+  {
+    "user_id": "0011_852ce960",
+    "memory_type": "episodic",
+    "content": "The user asked for lesser-known advice from popular therapists on 2023-11-26.",
+    "dimension": {
+      "time": "2023-11-26",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "therapists",
+        "advice",
+        "psychology"
+      ]
+    },
+    "entities": [
+      "therapists",
+      "advice",
+      "psychology"
+    ],
+    "embedding_text": "The user asked for lesser-known advice from popular therapists on 2023-11-26.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0104",
+    "source_time": "2023-11-23 19:03:02.500000",
+    "record_time": "2026-07-07T19:50:11.859293",
+    "score": 4.574899541670741,
+    "score_components": {
+      "bm25_score": 4.574899541670741,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 4.574899541670741,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 4.574899541670741
+      }
+    ]
+  },
+  {
+    "user_id": "0011_852ce960",
+    "memory_type": "fact",
+    "content": "User is interested in a data analysis company they met at the career fair.",
+    "dimension": {
+      "time": "2023-10-27",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "data analysis company",
+        "career fair"
+      ]
+    },
+    "entities": [
+      "data analysis company",
+      "career fair"
+    ],
+    "embedding_text": "User is interested in a data analysis company they met at the career fair.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0068",
+    "source_time": "2023-10-27 18:02:01.500000",
+    "record_time": "2026-07-07T19:50:11.858683",
+    "score": 4.524802080421842,
+    "score_components": {
+      "bm25_score": 4.524802080421842,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 4.524802080421842,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 4.524802080421842
+      }
+    ]
+  },
+  {
+    "user_id": "0011_852ce960",
+    "memory_type": "fact",
+    "content": "The user has received a job offer from a rival company for a technical lead position.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "rival company",
+        "technical lead",
+        "job offer"
+      ]
+    },
+    "entities": [
+      "rival company",
+      "technical lead",
+      "job offer"
+    ],
+    "embedding_text": "The user has received a job offer from a rival company for a technical lead position.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0020",
+    "source_time": "2023-08-26 11:43:00",
+    "record_time": "2026-07-07T19:50:11.858397",
+    "score": 4.199343143795256,
+    "score_components": {
+      "bm25_score": 4.199343143795256,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 4.199343143795256,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 4.199343143795256
+      },
+      {
+        "method": "structured",
+        "rank": 17,
+        "score": 0.33333333333333337
+      },
+      {
+        "method": "minilm",
+        "rank": 17,
+        "score": 0.20504023318430667
+      }
+    ]
+  },
+  {
+    "user_id": "0011_852ce960",
+    "memory_type": "fact",
+    "content": "The user's laptop battery drains quickly even when not in use and has been worsening over time.",
+    "dimension": {
+      "time": "2023-11-11",
+      "location": "",
+      "reason": "battery degradation or other issues",
+      "purpose": "",
+      "keywords": [
+        "laptop battery",
+        "drain",
+        "battery life",
+        "Dell XPS"
+      ]
+    },
+    "entities": [
+      "laptop battery",
+      "drain",
+      "battery life",
+      "Dell XPS"
+    ],
+    "embedding_text": "The user's laptop battery drains quickly even when not in use and has been worsening over time.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0075",
+    "source_time": "2023-11-11 18:58:00",
+    "record_time": "2026-07-07T19:50:11.858727",
+    "score": 4.124010288720399,
+    "score_components": {
+      "bm25_score": 4.124010288720399,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 4.124010288720399,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 4.124010288720399
+      }
+    ]
+  },
+  {
+    "user_id": "0011_852ce960",
+    "memory_type": "episodic",
+    "content": "User planned to schedule a home insurance policy with Liberty Mutual for the new home.",
+    "dimension": {
+      "time": "",
+      "location": "new home",
+      "reason": "User was moving into a new home and needed insurance.",
+      "purpose": "To obtain home insurance coverage.",
+      "keywords": [
+        "Liberty Mutual",
+        "home insurance",
+        "scheduling"
+      ]
+    },
+    "entities": [
+      "Liberty Mutual",
+      "home insurance",
+      "scheduling"
+    ],
+    "embedding_text": "User planned to schedule a home insurance policy with Liberty Mutual for the new home.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0122",
+    "source_time": "2023-11-30 00:36:01.500000",
+    "record_time": "2026-07-07T19:50:11.859397",
+    "score": 4.11931967117065,
+    "score_components": {
+      "bm25_score": 4.11931967117065,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 4.11931967117065,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 4.11931967117065
+      },
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.22989565130334103
+      }
+    ]
+  },
+  {
+    "user_id": "0011_852ce960",
+    "memory_type": "episodic",
+    "content": "The user planned to remove social media apps from their phone's home screen and schedule social media checks on 2023-11-15.",
+    "dimension": {
+      "time": "2023-11-15",
+      "location": "phone",
+      "reason": "to reduce social media distraction",
+      "purpose": "improve focus on thesis",
+      "keywords": [
+        "social media apps",
+        "home screen",
+        "scheduling",
+        "distraction reduction"
+      ]
+    },
+    "entities": [
+      "social media apps",
+      "home screen",
+      "scheduling",
+      "distraction reduction"
+    ],
+    "embedding_text": "The user planned to remove social media apps from their phone's home screen and schedule social media checks on 2023-11-15.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0082",
+    "source_time": "2023-11-15 12:14:01.500000",
+    "record_time": "2026-07-07T19:50:11.858768",
+    "score": 3.8497967846594237,
+    "score_components": {
+      "bm25_score": 3.8497967846594237,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 3.8497967846594237,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 3.8497967846594237
+      }
+    ]
+  },
+  {
+    "user_id": "0011_852ce960",
+    "memory_type": "episodic",
+    "content": "The user asked for recommendations for cable organizers and labels to declutter their desk on 2023-11-11.",
+    "dimension": {
+      "time": "2023-11-11",
+      "location": "desk",
+      "reason": "desk decluttering",
+      "purpose": "to organize cords",
+      "keywords": [
+        "cable organizers",
+        "labels",
+        "desk declutter",
+        "recommendations"
+      ]
+    },
+    "entities": [
+      "cable organizers",
+      "labels",
+      "desk declutter",
+      "recommendations"
+    ],
+    "embedding_text": "The user asked for recommendations for cable organizers and labels to declutter their desk on 2023-11-11.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0077",
+    "source_time": "2023-11-11 18:58:01",
+    "record_time": "2026-07-07T19:50:11.858739",
+    "score": 3.6179856767546177,
+    "score_components": {
+      "bm25_score": 3.6179856767546177,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 3.6179856767546177,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 3.6179856767546177
+      }
+    ]
+  }
+]

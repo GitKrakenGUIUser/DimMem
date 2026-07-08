@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-24T12:26:00.500000, Wed] 1.User: That makes sense. Can you give me an example of how an author's beliefs influenced one of their works?
+[2023-05-24T12:26:01, Wed] 2.User: I see, it's really interesting how an author's personal beliefs can shape their work in such a profound way. Can you recommend any other books that were heavily influenced by the author's beliefs and values?
+[2023-05-24T12:26:01.500000, Wed] 3.User: These recommendations are great! I haven't read "The Feminine Mystique" yet, but I've heard a lot about it. I'll definitely have to add it to my reading list.
+[2023-05-24T12:26:02, Wed] 4.User: I'll definitely be adding these books to my reading list. Do you have any more suggestions for books that were heavily influenced by the author's personal beliefs?
+[2023-05-24T12:26:02.500000, Wed] 5.User: These suggestions are fantastic! I've read some of these books, but there are a few that are new to me. I can't wait to dive in and explore these works.
+[2023-05-24T12:26:03, Wed] 6.User: Wow, I didn't realize how much an author's personal beliefs could shape their work. Do you have any favorite books that were influenced by personal beliefs and values?
+[2023-05-24T13:02:00, Wed] 7.User: the imperial sovereign must have a certain tempermanet, maturity, and wisdom with the option of excercising absolute power as a right, but wants to respect the democratic processes and local autonomy as much as she can
+[2023-05-24T13:02:00.500000, Wed] 8.User: the Empress's counselors may have to comfort her after she has to make the heavy decision overrule somethign and excercise her absolute power in an emergency
+[2023-05-24T13:02:01, Wed] 9.User: are those reasons above why the Empress relies on the democratic processes of the imperial senate and local and regional governments, and exercises absolute power only when it is deemed strictly necesary?
+[2023-05-24T13:02:01.500000, Wed] 10.User: the Empress wants to visit the forest moon! She also wants to meet a protosapient face to face!
+[2023-05-24T13:02:02, Wed] 11.User: donations and grants came pouring in after the empress visited
+[2023-05-24T13:09:00, Wed] 12.User: I'm planning a trip to the Bay Area soon and I was wondering if you could recommend some good restaurants in Half Moon Bay. By the way, I'm actually checking into the Ritz-Carlton in Half Moon Bay, California, for a friend's wedding today, so any recommendations near the hotel would be great!
+[2023-05-24T13:09:00.500000, Wed] 13.User: I'm actually thinking of grabbing a quick bite before the wedding ceremony. Do you think any of these restaurants are open for lunch, or are there any other options near the hotel that might be more convenient?
+[2023-05-24T13:09:01, Wed] 14.User: I'm wondering if there are any good coffee shops near the hotel that I could grab a coffee from before the ceremony?
+[2023-05-24T13:09:01.500000, Wed] 15.User: I think I'll head to Half Moon Bay Coffee Company, I've heard great things about it. By the way, do you know if they have any outdoor seating where I can enjoy my coffee before the ceremony?

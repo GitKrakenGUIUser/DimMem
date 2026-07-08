@@ -1,0 +1,151 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-30T10:40:01, Tue] 1.User: I want to write a proof of concept IDW. Can you provide a minimal example?
+[2023-05-30T12:51:00, Tue] 2.User: I'm looking for some advice on buying a new amp. I've been reading reviews and watching YouTube videos, but I'd love to get some more info on the Fender Mustang and Marshall MG30. By the way, if you're a guitarist, there's a great repair shop on 5th street called GuitarWorks, they did an amazing job on my guitar recently.
+[2023-05-30T12:51:00.500000, Tue] 3.User: I'm really interested in the Mustang's versatility, but I'm not sure if 20 watts is enough power for me. I've been playing in a small band and we usually play at small to medium-sized venues, would the Mustang II be a better fit?
+[2023-05-30T12:51:01, Tue] 4.User: I think I'll go try out the Mustang II this weekend, see how it sounds and feels. Do you know if the music store downtown carries them?
+[2023-05-30T12:51:01.500000, Tue] 5.User: I'll definitely call the store beforehand to confirm they have the Mustang II in stock. By the way, do you know if they also carry drum accessories? I need to get some new drumheads for my set.
+[2023-05-30T12:51:02, Tue] 6.User: I'll call the store and ask about the Mustang II and drumheads. Oh, and since I'm going to be in the area, I might swing by GuitarWorks on 5th street to say hi and thank them again for the great job they did on my guitar.
+[2023-05-30T12:51:02.500000, Tue] 7.User: I think there's been a misunderstanding! I did mention GuitarWorks on 5th street earlier, and it's actually the repair shop where I took my guitar for repairs. They did an amazing job, and I was really happy with their service. So, yeah, I'll definitely swing by to say hi and thank them again. Thanks for the chat, and I'll catch you later!
+[2023-05-30T14:35:00, Tue] 8.User: I'm looking for some crafting inspiration. I've been working on a granny square blanket and I'm thinking of making some coasters to match. Do you have any ideas for decoupage designs that would complement my blanket's color scheme of pink, blue, and yellow? By the way, I've had some experience with decoupage before, I made a set of 12 coasters, divided into 4 sets of 3 coasters each, on February 20th.
+[2023-05-30T14:35:00.500000, Tue] 9.User: That's a lot of ideas, thanks! I think I might go with the floral delight theme. Do you know of any good resources for finding vintage floral patterns or illustrations that I could use for decoupage?
+[2023-05-30T14:35:01, Tue] 10.User: That's a great list of resources, thanks! I think I'll start with Pixabay and see what I can find. By the way, do you have any tips on how to prepare the ceramic tiles for decoupage?
+[2023-05-30T14:35:01.500000, Tue] 11.User: I'm thinking of using a clear coat of varnish to seal and protect the decoupage design. Do you know if it's a good idea to apply multiple thin coats of varnish instead of one thick coat?
+[2023-05-30T14:35:02, Tue] 12.User: That's great advice. I'm planning to use a foam brush to apply the varnish. Do you think it's a good idea to use a foam brush instead of a regular brush?
+[2023-05-30T14:35:02.500000, Tue] 13.User: I've got a question for you. Since you've worked with decoupage before, I'm curious - have you ever experimented with different shapes or sizes of coasters? I'm thinking of making some coasters with unique shapes to match the floral theme.
+[2023-05-30T15:16:00, Tue] 14.User: Web search results:
+
+[1] "Here are eight tasks all sales teams need to consider to complete their account planning strategy: 1. Identify your existing accounts. First, list all your current customers. Add any details you have about them regarding their purchasing habits and company profile. 2. Caculate potential revenue and success rate."
+URL: https://www.salesforce.com/products/anywhere/resources/account-planning-strategy/
+
+[2] "Implementing an effective digital strategy across front-, middle- and back-office IT environments is crucial to staying relevant. Yet, the urgent need to create and act on a digital strategy gives rise to a host of complex problems that enterprises must sort out quickly—or risk falling behind."
+URL: https://www.cognizant.com/us/en/services/digital-strategy
+
+[3] "At Cognizant, we help our clients do what others cant—operate with human insight, but at superhuman speed. So they get ahead. And stay ahead. Learn more About Back 2021 in Focus About Cognizant Board of Directors Client Briefing Program Cognizant Events Contact Us Corporate Governance Corporate Integrity Culture Values Diversity Inclusion ESG"
+URL: https://www.cognizant.com/us/en/services/consulting
+
+[4] "Strategic account management is an important job that requires rigor and discipline. Think of it as running a business within your business. Account planning is important to help identify the resources that you need to achieve your growth objectives. And, it is a collaborative process that requires involvement from the client to be valid."
+URL: https://www.richardson.com/sales-resources/strategic-sales-key-account-management-strategy/
+
+[5] "As an accomplished Technology Services Executive, I excel in blending strategic vision with tactical execution in order to achieve business agendas. I am skilled in transitioning companies through ..."
+URL: https://www.linkedin.com/in/robvatter
+Current date: 1/29/2023
+
+Instructions: Using the provided web search results, write a comprehensive reply to the given query. Make sure to cite results using [[number](URL)] notation after the reference. If the provided search results refer to multiple subjects with the same name, write separate answers for each subject.
+Query: Act a VP of Sales for Cognizant to create a new account strategy to sell IT support and consulting services to Seagen Inc located in Bothnell, Seattle

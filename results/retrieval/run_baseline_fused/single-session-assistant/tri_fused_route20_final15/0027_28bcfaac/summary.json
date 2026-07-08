@@ -1,0 +1,546 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "single-session-assistant",
+  "sample_id": "0027_28bcfaac",
+  "query_text": "the user is going back to a previous conversation about music theory, where the assistant mentioned some online resources for learning music theory, and wants to be reminded of the website that was recommended for free lessons and exercises",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 172,
+  "fused_candidate_count_before_final_cut": 46,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/single-session-assistant/tri_fused_route20_final15/0027_28bcfaac",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 19.920047671866005,
+      "memory_type": "profile",
+      "content": "The user is interested in learning music theory, has been intimidated by it, and wants to improve their playing.",
+      "source_boundary_id": "all_memories_0008",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 19.920047671866005,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 19.920047671866005
+        },
+        {
+          "method": "minilm",
+          "rank": 1,
+          "score": 0.7291194547755725
+        }
+      ],
+      "score_components": {
+        "bm25_score": 19.920047671866005,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 15.252801322876588,
+      "memory_type": "episodic",
+      "content": "The user plans to learn music theory using MusicTheory.net and YouTube channels to improve their playing.",
+      "source_boundary_id": "1_0010",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 15.252801322876588,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 15.252801322876588
+        },
+        {
+          "method": "structured",
+          "rank": 1,
+          "score": 0.4833333333333334
+        },
+        {
+          "method": "minilm",
+          "rank": 2,
+          "score": 0.6694629414178447
+        }
+      ],
+      "score_components": {
+        "bm25_score": 15.252801322876588,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 12.458109946614556,
+      "memory_type": "profile",
+      "content": "The user is considering enrolling in an online Master of Science program and is concerned about the level of faculty interaction, support, and workload.",
+      "source_boundary_id": "19_0170",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 12.458109946614556,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 12.458109946614556
+        }
+      ],
+      "score_components": {
+        "bm25_score": 12.458109946614556,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 11.16658539311152,
+      "memory_type": "episodic",
+      "content": "User agreed to try a screen-free dinner and wind-down routine, but expressed concern about limiting Netflix time as it is used for unwinding.",
+      "source_boundary_id": "6_0047",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 11.16658539311152,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 11.16658539311152
+        },
+        {
+          "method": "structured",
+          "rank": 2,
+          "score": 0.37500000000000006
+        }
+      ],
+      "score_components": {
+        "bm25_score": 11.16658539311152,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 11.031803594719836,
+      "memory_type": "profile",
+      "content": "The user is frustrated about the spread of fake news on social media and thinks there should be stricter regulations on what can be posted.",
+      "source_boundary_id": "10_0084",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 11.031803594719836,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 11.031803594719836
+        }
+      ],
+      "score_components": {
+        "bm25_score": 11.031803594719836,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 10.129928150010821,
+      "memory_type": "episodic",
+      "content": "User was nervous before their first dance class because they had never taken a dance class before.",
+      "source_boundary_id": "15_0139",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 10.129928150010821,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 10.129928150010821
+        }
+      ],
+      "score_components": {
+        "bm25_score": 10.129928150010821,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 9.421428845660634,
+      "memory_type": "profile",
+      "content": "The user is interested in learning about shorebird migration patterns and habitats.",
+      "source_boundary_id": "14_0121",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 9.421428845660634,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 9.421428845660634
+        }
+      ],
+      "score_components": {
+        "bm25_score": 9.421428845660634,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 9.148006093551324,
+      "memory_type": "episodic",
+      "content": "The user sold their old leather jacket online for a good price.",
+      "source_boundary_id": "17_0156",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 9.148006093551324,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 9.148006093551324
+        },
+        {
+          "method": "structured",
+          "rank": 6,
+          "score": 0.37500000000000006
+        }
+      ],
+      "score_components": {
+        "bm25_score": 9.148006093551324,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 9.044120125718464,
+      "memory_type": "episodic",
+      "content": "The user asked about how the music scene in Nashville, Tennessee has changed over the past decade.",
+      "source_boundary_id": "12_0101",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 9.044120125718464,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 9.044120125718464
+        },
+        {
+          "method": "structured",
+          "rank": 3,
+          "score": 0.37500000000000006
+        },
+        {
+          "method": "minilm",
+          "rank": 3,
+          "score": 0.43530795102499964
+        }
+      ],
+      "score_components": {
+        "bm25_score": 9.044120125718464,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 8.75694316449659,
+      "memory_type": "episodic",
+      "content": "User is attempting to get back on track with their bedtime routine after a week of staying up until 1 am due to work projects.",
+      "source_boundary_id": "6_0048",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 8.75694316449659,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 8.75694316449659
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.75694316449659,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 8.571174213963058,
+      "memory_type": "episodic",
+      "content": "The user is interested in learning more about the City Theater Academy and the Performing Arts Conservatory.",
+      "source_boundary_id": "7_0054",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 8.571174213963058,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 8.571174213963058
+        },
+        {
+          "method": "minilm",
+          "rank": 18,
+          "score": 0.3158127940153714
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.571174213963058,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 8.405252599982953,
+      "memory_type": "episodic",
+      "content": "The user is interested in the City Theater Academy's Certificate Program and wants to know about the application process and audition requirements.",
+      "source_boundary_id": "7_0055",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 8.405252599982953,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 8.405252599982953
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.405252599982953,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 8.1963137963981,
+      "memory_type": "episodic",
+      "content": "The user plans to read a variety of newspapers to be critical of news.",
+      "source_boundary_id": "10_0083",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 8.1963137963981,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 8.1963137963981
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.1963137963981,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 8.067378280062991,
+      "memory_type": "profile",
+      "content": "User reads literary fiction and wants to discover more authors in that genre.",
+      "source_boundary_id": "18_0166",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 8.067378280062991,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 8.067378280062991
+        },
+        {
+          "method": "minilm",
+          "rank": 20,
+          "score": 0.2997167216293689
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.067378280062991,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 7.862928829679998,
+      "memory_type": "episodic",
+      "content": "The user plans to continue watching Servant to find out what is going on with Leanne.",
+      "source_boundary_id": "3_0025",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 7.862928829679998,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 7.862928829679998
+        },
+        {
+          "method": "structured",
+          "rank": 14,
+          "score": 0.33333333333333337
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.862928829679998,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 0.254530668258667
+}

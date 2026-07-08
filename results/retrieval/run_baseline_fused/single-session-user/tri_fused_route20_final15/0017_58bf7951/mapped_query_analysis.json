@@ -1,0 +1,60 @@
+{
+  "query_text": "What play did the user attend at the local community theater?",
+  "query_anchor": "What play did the user attend at the local community theater?",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "",
+    "location": "local community theater",
+    "keywords": [
+      "play",
+      "local community theater"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "What play did the user attend at the local community theater?",
+      "keywords": [
+        "play",
+        "local community theater"
+      ],
+      "query_terms": [
+        "what",
+        "play",
+        "did",
+        "the",
+        "user",
+        "attend",
+        "at",
+        "local",
+        "community",
+        "theater"
+      ]
+    },
+    "structured": {
+      "query_text": "What play did the user attend at the local community theater?",
+      "rewrite": "What play did the user attend at the local community theater?",
+      "intent": "lookup",
+      "answer_field": "keywords",
+      "content_query": "What play did the user attend at the local community theater?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {
+        "location": [
+          "local community theater"
+        ]
+      },
+      "keywords": [
+        "play",
+        "local community theater"
+      ],
+      "canonical_text": "What play did the user attend at the local community theater?"
+    },
+    "minilm": {
+      "query_text": "What play did the user attend at the local community theater?"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "query_text": "Where does the user currently keep their old sneakers?",
+  "query_anchor": "Where does the user currently keep their old sneakers?",
+  "dimension": {
+    "target_memory_type": [
+      "fact"
+    ],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "old sneakers"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "Where does the user currently keep their old sneakers?",
+      "keywords": [
+        "old sneakers"
+      ],
+      "query_terms": [
+        "where",
+        "does",
+        "the",
+        "user",
+        "currently",
+        "keep",
+        "their",
+        "old",
+        "sneakers"
+      ]
+    },
+    "structured": {
+      "query_text": "Where does the user currently keep their old sneakers?",
+      "rewrite": "Where does the user currently keep their old sneakers?",
+      "intent": "lookup",
+      "answer_field": "location",
+      "content_query": "Where does the user currently keep their old sneakers?",
+      "target_memory_types": [
+        "fact"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "old sneakers"
+      ],
+      "canonical_text": "Where does the user currently keep their old sneakers?"
+    },
+    "minilm": {
+      "query_text": "Where does the user currently keep their old sneakers?"
+    }
+  }
+}

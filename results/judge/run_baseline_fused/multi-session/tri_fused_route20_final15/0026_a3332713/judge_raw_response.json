@@ -1,0 +1,32 @@
+{
+  "id": "0617ec67-678d-427f-ae17-1ec46bf6548d",
+  "object": "chat.completion",
+  "created": 1783427867,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\": \"CORRECT\"}",
+        "reasoning_content": "We need to compare generated answer to gold answer. Both are exactly \"$200\". So it's correct. Explanation: The generated answer matches the gold answer exactly. Output JSON with label CORRECT."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 405,
+    "completion_tokens": 47,
+    "total_tokens": 452,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 39
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 149
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

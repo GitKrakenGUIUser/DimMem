@@ -1,0 +1,135 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-28T20:27:01, Sun] 1.User: I love these ideas! I was thinking of having the party at my place, but now I'm considering renting a bigger space to fit all these awesome decorations and activities. By the way, speaking of Stranger Things, do you think it's weird that I finished the third season within a week?
+[2023-05-28T20:27:01.500000, Sun] 2.User: I'm really excited about the decorations and the obstacle course for the superhero training area. I think it'll be so much fun for my friends to feel like they're part of a superhero team. Also, I was thinking of having a "TV show-themed" costume contest, where people can dress up as their favorite characters from any TV show, not just the ones we're featuring. What do you think?
+[2023-05-28T20:27:02, Sun] 3.User: I'm really excited about the costume contest and the photo booth idea! I think it'll be a great way to capture the fun and creativity of the party. I was also thinking of having a "TV show trivia" contest, where we test our knowledge of different TV shows. Do you think that's a good idea?
+[2023-05-28T20:27:02.500000, Sun] 4.User: That sounds like a fantastic idea! I think the TV show trivia contest will be a huge hit with my friends. I'm really excited to see who's the ultimate TV show buff. And I love the idea of incorporating the costume contest into the trivia contest - it'll add an extra layer of fun and creativity.
+
+You know, I was also thinking of having a "TV show-themed" playlist in the background during the party. Do you think that's a good idea?
+[2023-05-29T06:39:00, Mon] 5.User: What are the most common types of virtual reality headsets available on the market today?
+[2023-05-29T06:39:00.500000, Mon] 6.User: Wow, there are so many options to choose from! Which one do you think provides the most realistic VR experience?
+[2023-05-29T06:39:01, Mon] 7.User: I think I will do some more research on the VR content available for each headset before making a final decision. Do you have any suggestions on where I can find out more about VR games and simulations?
+[2023-05-29T06:39:01.500000, Mon] 8.User: Do you happen to know if any of these VR headsets are compatible with Mac computers?
+[2023-05-29T06:39:02, Mon] 9.User: Interesting, I never knew that VR headsets had limited compatibility with Mac computers. I guess I'll have to rethink my options since I am a Mac user. But, do you think the limitations are worth it for the unique experience of VR?
+[2023-05-29T06:39:02.500000, Mon] 10.User: I see, I might have to consider switching to a Windows-based PC if I want to have the best VR experience. But before I make any decisions, do you have any insights on the future of VR technology? Will there be more advancements and improvements that might make VR more accessible for Mac users?
+[2023-05-29T06:39:03, Mon] 11.User: It's great to hear that the future of VR technology looks promising! I'm excited to see how it will advance and become more accessible over time. However, in the meantime, do you have any recommendations for a VR headset that's still worth checking out for Mac users?
+[2023-05-29T12:18:00, Mon] 12.User: I'm trying to reduce my daily commute expenses. Can you help me find some good coffee makers that are under $50?
+[2023-05-29T12:18:00.500000, Mon] 13.User: What about the monthly train pass? Can you help me find any deals or discounts?
+[2023-05-29T12:18:01, Mon] 14.User: Can you remind me what time I usually take the train from Oakdale station?
+[2023-05-29T12:18:01.500000, Mon] 15.User: I usually take the 7:15 am train from Oakdale station, by the way. Anyway, back to the coffee maker options... I think I'll go with the AmazonBasics Single-Serve Coffee Maker. Do you think it's a good idea to get a coffee grinder to go with it?

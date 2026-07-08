@@ -1,0 +1,135 @@
+{
+  "window_index": 2,
+  "message_count": 15,
+  "overlap_count": 3,
+  "extract_start_message_index": 4,
+  "start_global_user_index": 25,
+  "end_global_user_index": 39,
+  "start_timestamp": "2023-05-22T11:05:01.500000",
+  "end_timestamp": "2023-05-23T00:51:02",
+  "start_session_id": "a1cbe83a",
+  "end_session_id": "ultrachat_233333",
+  "text": "[2023-05-22T11:05:01.500000, Mon] 1.User: I'll definitely check out these recommendations. I've been trying to explore more fantasy and sci-fi books lately, and it's great to get suggestions from someone who understands my reading preferences. By the way, do you have any recommendations for non-fiction audiobooks? I've been listening to a lot of fiction, but I want to branch out and learn more about self-improvement and productivity.\n[2023-05-22T11:05:02, Mon] 2.User: I've been meaning to explore more non-fiction books, especially on self-improvement and productivity. These recommendations sound really interesting, especially \"The 7 Habits of Highly Effective People\" and \"Atomic Habits\". I've heard a lot about these books, but I've never gotten around to reading them. Do you think it's better to listen to non-fiction audiobooks at a faster speed, since they're more informative and less focused on storytelling?\n[2023-05-22T11:05:02.500000, Mon] 3.User: I think I'll start with \"The 7 Habits of Highly Effective People\" and see how it goes. I'll probably start with a comfortable speed and adjust as needed. Thanks for the recommendations and tips!\n[2023-05-22T13:52:00, Mon] 4.User: Please adopt persona of a computational social science expert, with research on twitter and topic modeling\n[2023-05-22T13:52:00.500000, Mon] 5.User: How can I remove warnings in the output from a Jupyter notebook\n[2023-05-22T13:52:01, Mon] 6.User: How do i remove output from a cell in jupyter notebook?\n[2023-05-22T13:52:01.500000, Mon] 7.User: There is no cell menu\n[2023-05-22T13:52:02, Mon] 8.User: I have a twitter dataset with 4800 tweets, each of which have the keyword \"academic writing anxiety\" in them. Here is how I'm doing topic modeling on them:\n[2023-05-22T13:52:02.500000, Mon] 9.User: #Now that we have our data with tweets about academic writing anxiety and their metadata, lets try and apply some topic modelling to extract relevant topics from these tweets. \n#Lets try and LDA based topic model on this \n\n# Create a id2word dictionary\nid2word = Dictionary(clean\\_tweets\\_df['tokens'])\n\nprint(len(id2word))\n\n# Filtering Extremes\nid2word.filter\\_extremes(no\\_below=100, no\\_above=0.7)\nprint(len(id2word))\n\n# Creating a corpus object \ncorpus = [id2word.doc2bow(d) for d in clean\\_tweets\\_df['tokens']]\n\n# Instantiating a Base LDA model \nbase\\_model = LdaMulticore(corpus=corpus, num\\_topics=3, id2word=id2word, workers=2, passes=5, random\\_state=42)\n#Filtering the words\nwords = [re.findall(r'\\\"([^\\\"]\\*)\\\"',t[1]) for t in base\\_model.print\\_topics()]\n\n# Create Topics\ntopics = [' '.join(t[0:10]) for t in words]\n\n# Getting the topics\nfor id, t in enumerate(topics): \n print(f\"------ Topic {id} ------\")\n print(t, end=\"\\n\\n\")\n\n# Obtain topic probabilities for each tweet\ntopic\\_probabilities = base\\_model.get\\_document\\_topics(corpus)\n[2023-05-23T00:02:00, Tue] 10.User: include options where 1. the documents can be submitted online. 2. if the documents to be verified are not yet stored in the blockchain, the request is sent and has to be approved by an authorized government agency such as the BIR for the income tax return or the office of permits and licenses for the business permit document. 3. once approved and verified by the concerned agency, integrate automatic storing of the said verified documents in the blockchain. 4. integrate novel and non-obvious AI method in this algorithm. include a pseudo code algorithm on this\n[2023-05-23T00:51:00, Tue] 11.User: How does the Federal Reserve use interest rates to influence the economy, and what are the potential consequences of these policy decisions?\n[2023-05-23T00:51:00.500000, Tue] 12.User: So how often does the Federal Reserve adjust interest rates? And how does it decide when to make a change?\n[2023-05-23T00:51:01, Tue] 13.User: Wow, I had no idea the Federal Reserve had so much influence over the economy. It's interesting to know they have to balance between promoting economic growth and maintaining financial stability.\n[2023-05-23T00:51:01.500000, Tue] 14.User: It's fascinating to learn about the different tools the Federal Reserve can use to support the economy during a crisis. Do you know of any examples of when they had to do so in the past?\n[2023-05-23T00:51:02, Tue] 15.User: It's impressive how much the Federal Reserve can do. I'm also curious about how their decisions impact everyday people like me. Does a change in interest rates affect my personal finances?",
+  "messages": [
+    {
+      "global_user_index": 25,
+      "session_id": "a1cbe83a",
+      "session_local_user_index": 4,
+      "timestamp": "2023-05-22T11:05:01.500000",
+      "weekday": "Mon",
+      "content": "I'll definitely check out these recommendations. I've been trying to explore more fantasy and sci-fi books lately, and it's great to get suggestions from someone who understands my reading preferences. By the way, do you have any recommendations for non-fiction audiobooks? I've been listening to a lot of fiction, but I want to branch out and learn more about self-improvement and productivity."
+    },
+    {
+      "global_user_index": 26,
+      "session_id": "a1cbe83a",
+      "session_local_user_index": 5,
+      "timestamp": "2023-05-22T11:05:02",
+      "weekday": "Mon",
+      "content": "I've been meaning to explore more non-fiction books, especially on self-improvement and productivity. These recommendations sound really interesting, especially \"The 7 Habits of Highly Effective People\" and \"Atomic Habits\". I've heard a lot about these books, but I've never gotten around to reading them. Do you think it's better to listen to non-fiction audiobooks at a faster speed, since they're more informative and less focused on storytelling?"
+    },
+    {
+      "global_user_index": 27,
+      "session_id": "a1cbe83a",
+      "session_local_user_index": 6,
+      "timestamp": "2023-05-22T11:05:02.500000",
+      "weekday": "Mon",
+      "content": "I think I'll start with \"The 7 Habits of Highly Effective People\" and see how it goes. I'll probably start with a comfortable speed and adjust as needed. Thanks for the recommendations and tips!"
+    },
+    {
+      "global_user_index": 28,
+      "session_id": "sharegpt_mWFmQxk_0",
+      "session_local_user_index": 1,
+      "timestamp": "2023-05-22T13:52:00",
+      "weekday": "Mon",
+      "content": "Please adopt persona of a computational social science expert, with research on twitter and topic modeling"
+    },
+    {
+      "global_user_index": 29,
+      "session_id": "sharegpt_mWFmQxk_0",
+      "session_local_user_index": 2,
+      "timestamp": "2023-05-22T13:52:00.500000",
+      "weekday": "Mon",
+      "content": "How can I remove warnings in the output from a Jupyter notebook"
+    },
+    {
+      "global_user_index": 30,
+      "session_id": "sharegpt_mWFmQxk_0",
+      "session_local_user_index": 3,
+      "timestamp": "2023-05-22T13:52:01",
+      "weekday": "Mon",
+      "content": "How do i remove output from a cell in jupyter notebook?"
+    },
+    {
+      "global_user_index": 31,
+      "session_id": "sharegpt_mWFmQxk_0",
+      "session_local_user_index": 4,
+      "timestamp": "2023-05-22T13:52:01.500000",
+      "weekday": "Mon",
+      "content": "There is no cell menu"
+    },
+    {
+      "global_user_index": 32,
+      "session_id": "sharegpt_mWFmQxk_0",
+      "session_local_user_index": 5,
+      "timestamp": "2023-05-22T13:52:02",
+      "weekday": "Mon",
+      "content": "I have a twitter dataset with 4800 tweets, each of which have the keyword \"academic writing anxiety\" in them. Here is how I'm doing topic modeling on them:"
+    },
+    {
+      "global_user_index": 33,
+      "session_id": "sharegpt_mWFmQxk_0",
+      "session_local_user_index": 6,
+      "timestamp": "2023-05-22T13:52:02.500000",
+      "weekday": "Mon",
+      "content": "#Now that we have our data with tweets about academic writing anxiety and their metadata, lets try and apply some topic modelling to extract relevant topics from these tweets. \n#Lets try and LDA based topic model on this \n\n# Create a id2word dictionary\nid2word = Dictionary(clean\\_tweets\\_df['tokens'])\n\nprint(len(id2word))\n\n# Filtering Extremes\nid2word.filter\\_extremes(no\\_below=100, no\\_above=0.7)\nprint(len(id2word))\n\n# Creating a corpus object \ncorpus = [id2word.doc2bow(d) for d in clean\\_tweets\\_df['tokens']]\n\n# Instantiating a Base LDA model \nbase\\_model = LdaMulticore(corpus=corpus, num\\_topics=3, id2word=id2word, workers=2, passes=5, random\\_state=42)\n#Filtering the words\nwords = [re.findall(r'\\\"([^\\\"]\\*)\\\"',t[1]) for t in base\\_model.print\\_topics()]\n\n# Create Topics\ntopics = [' '.join(t[0:10]) for t in words]\n\n# Getting the topics\nfor id, t in enumerate(topics): \n print(f\"------ Topic {id} ------\")\n print(t, end=\"\\n\\n\")\n\n# Obtain topic probabilities for each tweet\ntopic\\_probabilities = base\\_model.get\\_document\\_topics(corpus)"
+    },
+    {
+      "global_user_index": 34,
+      "session_id": "sharegpt_hBx7yrm_45",
+      "session_local_user_index": 1,
+      "timestamp": "2023-05-23T00:02:00",
+      "weekday": "Tue",
+      "content": "include options where 1. the documents can be submitted online. 2. if the documents to be verified are not yet stored in the blockchain, the request is sent and has to be approved by an authorized government agency such as the BIR for the income tax return or the office of permits and licenses for the business permit document. 3. once approved and verified by the concerned agency, integrate automatic storing of the said verified documents in the blockchain. 4. integrate novel and non-obvious AI method in this algorithm. include a pseudo code algorithm on this"
+    },
+    {
+      "global_user_index": 35,
+      "session_id": "ultrachat_233333",
+      "session_local_user_index": 1,
+      "timestamp": "2023-05-23T00:51:00",
+      "weekday": "Tue",
+      "content": "How does the Federal Reserve use interest rates to influence the economy, and what are the potential consequences of these policy decisions?"
+    },
+    {
+      "global_user_index": 36,
+      "session_id": "ultrachat_233333",
+      "session_local_user_index": 2,
+      "timestamp": "2023-05-23T00:51:00.500000",
+      "weekday": "Tue",
+      "content": "So how often does the Federal Reserve adjust interest rates? And how does it decide when to make a change?"
+    },
+    {
+      "global_user_index": 37,
+      "session_id": "ultrachat_233333",
+      "session_local_user_index": 3,
+      "timestamp": "2023-05-23T00:51:01",
+      "weekday": "Tue",
+      "content": "Wow, I had no idea the Federal Reserve had so much influence over the economy. It's interesting to know they have to balance between promoting economic growth and maintaining financial stability."
+    },
+    {
+      "global_user_index": 38,
+      "session_id": "ultrachat_233333",
+      "session_local_user_index": 4,
+      "timestamp": "2023-05-23T00:51:01.500000",
+      "weekday": "Tue",
+      "content": "It's fascinating to learn about the different tools the Federal Reserve can use to support the economy during a crisis. Do you know of any examples of when they had to do so in the past?"
+    },
+    {
+      "global_user_index": 39,
+      "session_id": "ultrachat_233333",
+      "session_local_user_index": 5,
+      "timestamp": "2023-05-23T00:51:02",
+      "weekday": "Tue",
+      "content": "It's impressive how much the Federal Reserve can do. I'm also curious about how their decisions impact everyday people like me. Does a change in interest rates affect my personal finances?"
+    }
+  ]
+}

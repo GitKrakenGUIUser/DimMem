@@ -1,0 +1,160 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-23T06:30:02.500000, Tue] 1.User: I'm thinking of getting a cookbook that focuses on desserts, since I've been wanting to try out some new recipes. Do you have any recommendations for a good dessert cookbook?
+[2023-05-23T17:39:00, Tue] 2.User: continue with "Being a maker I found it cheap and interesting for what it is
+Cheaper than buying things separately.
+Portability
+Ingenuity, compact, quality
+I like the products I previously purchased
+I am a avid crafter and this product really interest me in term of functionality and mobility
+because I just gave most of my large tools to my daughter and this will still let me have fun
+Stable use of rotary tool
+Its something I can use if it is good quality
+because it looks awesome and I need tools
+...
+ons projects
+Hobby
+Might be useful for my remodel business
+I just thought it looked awesome, I like to make stuff for tabletop gaming
+craft projects
+Sounds like a great tool for some of my small proje
+...
+l looked useful and fun
+Something i definitely could use
+I have been looking for an all in one tool that was not too expensive for my hobby work. I am particularly interested because this has the lathe function.
+Im a maker and I found it so complete e usefull"
+
+Please write in English (US) language.
+[2023-05-23T18:50:00, Tue] 3.User: I'm looking for some advice on finding affordable alternatives to high-end skincare products. I recently splurged on a $150 moisturizer, but I'm wondering if there are similar products out there for a lower price. By the way, I've been noticing a trend in my spending habits - like yesterday, I saw a similar-looking bag at Forever 21 for $30, and I couldn't help but wonder if I had made a mistake by spending so much money on a designer handbag last month.
+[2023-05-23T18:50:00.500000, Tue] 4.User: I'll definitely take your suggestions into consideration. Another thing I've been thinking about is perfume. I recently bought a limited edition Tom Ford perfume for $200, but then I saw a similar one at Target for $20. It made me wonder if I should've just gone for the cheaper option. Do you think it's worth splurging on luxury perfumes or are there affordable alternatives out there that are just as good?
+[2023-05-23T18:50:01, Tue] 5.User: I'm glad you mentioned that about luxury perfumes. I've been wondering if I should've just gone for the cheaper option. Speaking of cheaper options, I've been trying to shop more secondhand, and I recently scored an amazing deal on a gently used designer coat at ThredUp for $100, compared to the original price of $800. Do you think secondhand shopping is a good way to find affordable luxury items, or are there some things that are better off buying new?
+[2023-05-23T18:50:01.500000, Tue] 6.User: I've had great experiences with ThredUp, and I've also tried Poshmark and eBay. I think the key to finding hidden gems is to be patient and persistent in your search. You have to be willing to sift through a lot of items to find that one amazing deal. Also, it helps to have a clear idea of what you're looking for and to know your measurements and sizes. That way, you can quickly filter out items that won't fit or aren't what you're looking for.
+[2023-05-23T18:50:02, Tue] 7.User: That's a great question! I think my favorite item that I've found through secondhand shopping is a pair of designer boots that I got for $50 on ThredUp. They were originally $500, and they're still in great condition. I was so surprised to find them at such a great price, and they've become one of my go-to pairs of shoes. It's moments like those that make secondhand shopping so rewarding!
+[2023-05-23T18:50:02.500000, Tue] 8.User: I didn't save as much on the boots, actually. I think the most I've ever saved was on a designer handbag I found on eBay. It was originally $1,500, and I got it for $200! It was a amazing deal, and it's one of my favorite bags. I've used it so many times, and it still looks brand new.
+
+I have to say, I've gotten pretty good at finding deals like that. I've developed a bit of a system for searching and negotiating, and it's served me well over the years. But even with all my experience, I still get excited when I find a great deal. It's like a little thrill, you know?
+
+As for reselling, I do occasionally resell items that I've purchased secondhand. Usually, it's because I've either outgrown them or they no longer fit my style. I've had some good luck selling on platforms like Poshmark and eBay, and it's
+[2023-05-24T15:17:00, Wed] 9.User: I need help finding a good plumber to fix my toilet, it's been acting up for a while now. Do you have any recommendations or a list of highly rated plumbers in my area?
+[2023-05-24T15:17:00.500000, Wed] 10.User: I'll try asking around for referrals and check online reviews. By the way, do you have any recommendations for a good body lotion? My skin has been really dry lately, especially after showering.
+[2023-05-24T15:17:01, Wed] 11.User: I'm actually thinking of trying out a new face mask tonight, do you have any recommendations for a good exfoliating face mask?
+[2023-05-24T15:17:01.500000, Wed] 12.User: I tried out a face mask on Valentine's Day, it was a bit messy but it did help with my skin. Speaking of my skin, I need to pick up some more body lotion, I've been using it a lot lately. Do you know if there's a sale going on at any stores?
+[2023-05-24T15:17:02, Wed] 13.User: I've been meaning to clean the bathroom mirror for weeks now, it's been streaked with water spots and toothpaste splatters since I got back from my trip to Seattle on February 10th. Do you have any tips for getting rid of those pesky water spots?
+[2023-05-24T15:17:02.500000, Wed] 14.User: I'm going to go pick up some new toothpaste and a body lotion while I'm out. Do you have any recommendations for scented candles? The one I have in the bathroom is almost burnt out, and I'm not sure if it's affecting the bathroom fan, which has been making a weird noise lately.
+[2023-05-24T20:10:00, Wed] 15.User: write etsy listings for a small woodworking company based in NC called Made In Bus

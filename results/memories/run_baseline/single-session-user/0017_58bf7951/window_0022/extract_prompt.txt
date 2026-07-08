@@ -1,0 +1,210 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-30T19:48:00, Tue] 1.User: I want you to act as a product expert. I would like you to write product descriptions of 120 words for each product and information I give you. The content needs to how all the relevant information. It needs to read as a human has written it. Each description needs to be unique, catchy, and flow. If you understand, please reply.
+[2023-05-30T19:48:00.500000, Tue] 2.User: ) Renogy DC to DC Charger
+Description:
+- Renogy provide off-grid electrical systems at affordable prices without comprising on quality.
+- The Renogy DC to DC battery charger is the least expensive of the 5 chargers and is the most efficient.
+- It’s compatible with all lead-acid and lithium batteries. With it’s current limiting feature. 
+- Suitable for all campervan electrical systems with it’s wide range of output currents (10,20,30,40 and 60 amps). 
+- Simple to install and set-up.
+- However, it doesn’t have built in voltage detection so ignition wiring is required, which could put people off. 
+- Also, it’s the heaviest charger here at 1.88kg, which is important for weight conscious camper builds.
+NOTE: We are slightly biased towards the Renogy 40A DC to DC battery charger because we have it installed on our campervan so have given it a thorough test. Read our full review here.
+Pros: 
+- Cheapest
+- Simple set up
+- High output efficiency
+- LC connection allows for wider range out output options.
+Cons:
+- Requires ignition cable wiring\*
+- 1 year warranty low compared with others
+- Heaviest charger
+[2023-05-30T19:48:01, Tue] 3.User: ) Renogy REGO DC to DC Charger
+Description:
+Anderson cable connections for ease of installation and setup. 
+4 stage charging technology – equalization mode that helps balance battery voltage.
+Renogy manual including installation guide easy to follow and understand.
+Adjustable charge current, max 60A. 
+Monitor and adjust parameters using the DC Home app and Renogy One wireless system. 
+Big unit and heavy. 
+
+Pros: 
+- Bi-directional charging – will charge starter battery once leisure battery is full
+- 5 year warranty
+- Adjustable charging current (10,20,30,40,50,60A)
+- Bluetooth DC Home compatible.
+- Can connect to Renogy one system.
+Cons:
+- Huge
+- Heavy
+- Ignition wiring required
+[2023-05-30T19:48:01.500000, Tue] 4.User: ) Victron DC to DC Battery Charger
+
+Description:
+- Victron Energy is a Dutch company specialized in the design and manufacture of products for battery-based energy systems since 1975.
+- Victron brand with its 5 year warranty and product integration. 
+- It’s simple to install and set up with the Victron Bluetooth app and integration. 
+- Built in voltage sensing so no need to wire ignition. Automatic battery detection.
+- Units can be connected together in parallel to increase the output power.
+- Engine shutdown detection override 
+- However, it didn’t make the number 1 spot because of it’s higher price and restricted max cable csa that could be an issue for long cable runs (voltage drop).
+
+Pros: 
+- 5 year warranty
+- Bluetooth app connectivity and remote on/off
+- Isolated and non-isolated options
+- Victron brand and integration with other Victron products
+- Simple installation 
+- Automatic battery detection
+Cons:
+- Cost, high price for budget installs
+- Max cable size 16mm / AWG
+- Manual states it must be mounted vertically for heat dissipation.
+[2023-05-30T19:48:02, Tue] 5.User: ) REDARC DC to DC Charger
+
+Description:
+- REDARC are Australian power management specialists. 
+- The REDARC DC to DC charger has been tested in the harsh environment of the outback where vibration, dust and moisture are present. Therefore, it’s the most robust charger here.
+- Slim and lightweight so will save you space and precious weight. 
+- When the leisure battery is fully charge it stores excess power to be used later when it’s needed. 
+- Reducing stress on the alternator and saving on starter battery power.
+
+Pros: 
+- Fully sealed to withstand extreme conditions.
+- Lightweight
+- slim
+- High operating temperature >80c
+- Alternator safe feature
+- No fan so it’s silent
+Cons:
+- Expensive
+- Ignition wiring required for smart alternators
+- Wiring required to set output voltage (Orange wire configuration)
+- Pre-wired so cables must be joined together. If not done correctly could cause a fire.
+[2023-05-30T20:40:00, Tue] 6.User: was nelson mandeal and his wife a key members of ANC
+[2023-05-30T20:40:00.500000, Tue] 7.User: how many kids and women was killed by ANC
+[2023-05-30T20:40:01, Tue] 8.User: you say about "government and military targets" is Church Street bombing a military target
+[2023-05-30T20:40:01.500000, Tue] 9.User: why ANC is a terrorist organization
+[2023-05-30T20:40:02, Tue] 10.User: answer my question " why ANC is terrorist organization using facts not opinion"
+[2023-05-30T20:40:02.500000, Tue] 11.User: what kind of some civilian targets
+[2023-05-30T20:40:03, Tue] 12.User: is human rights to be not killed by terrorist
+[2023-05-30T20:40:03.500000, Tue] 13.User: why osama bin laden is call a terrorist
+[2023-05-30T20:40:04, Tue] 14.User: was nelson mandela a founder of ANC which was responsible for several high-profile attacks against civilians and military targets ?
+[2023-05-30T20:40:04.500000, Tue] 15.User: base on previous answer was a nelson mandela a terrorist YES and NO

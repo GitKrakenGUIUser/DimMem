@@ -1,0 +1,127 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+
+
+Here is the real input you need to process:
+
+[2023-05-20T00:01:00, Sat] 1.User: I'm planning a trip to Nikko soon and was wondering if you could recommend some good hiking trails and onsen (hot spring) spots in the area.
+[2023-05-20T00:01:00.500000, Sat] 2.User: I'm actually thinking of moving to a new apartment with a more convenient commute to work. Do you know of any neighborhoods that are close to the city center and have a good balance of affordability and amenities?
+[2023-05-20T00:01:01, Sat] 3.User: I'm actually living in Tokyo right now, not Nikko. I was just planning a trip there. Do you know of any neighborhoods in Tokyo that would fit my criteria?
+[2023-05-20T00:01:01.500000, Sat] 4.User: I've been living in Tokyo for about 6 months now, and I'm getting a bit familiar with the city. I'm currently living in Roppongi, which is convenient for work, but I'm looking for a place with a more convenient commute. What do you think about the commute times from these neighborhoods to Roppongi?
+[2023-05-20T00:01:02, Sat] 5.User: I'm thinking of exploring more of Tokyo's neighborhoods. What do you think about Shimokitazawa? I've heard it's a trendy area with a lot of character.
+[2023-05-20T00:01:02.500000, Sat] 6.User: I'd love to explore Shimokitazawa more, but I was also thinking of checking out some of Tokyo's more local, non-touristy areas. Do you know of any neighborhoods that are off the beaten path, but still have a lot to offer?
+[2023-05-20T08:53:00, Sat] 7.User: I'm having trouble waking up early, especially on Mondays. Can you suggest some tips to help me establish a consistent wake-up time and morning routine? By the way, I had a bit of a setback last week when I overslept by 30 minutes on Tuesday, which made me rush to get ready for work.
+[2023-05-20T08:53:00.500000, Sat] 8.User: I like the idea of gradually adjusting my wake-up time. Can you give me some suggestions on how to create a wake-up routine that signals my body it's time to wake up?
+[2023-05-20T08:53:01, Sat] 9.User: I like the idea of hydration station. I usually drink a glass of water before bed, but I can try drinking one as soon as I wake up too. Do you think that could help me wake up more refreshed?
+[2023-05-20T08:53:01.500000, Sat] 10.User: That's a great tip. I think I'll try that out. Also, I've been having some trouble with staying up late to watch TV shows or browse my phone before bed, and I think that's affecting my sleep schedule. Do you have any suggestions on how I can limit my screen time before bed?
+[2023-05-20T08:53:02, Sat] 11.User: That's really helpful. I think I'll try to set a "no screen" rule for an hour before bed and replace that time with reading or listening to calming music. Also, I've been having trouble waking up on Mondays, and I remember that last week I overslept by 30 minutes on Tuesday, which made me rush to get ready for work. Do you think setting my alarm clock 15 minutes earlier each day could help me adjust to waking up earlier on Mondays?
+[2023-05-20T08:53:02.500000, Sat] 12.User: I like the idea of gradually adjusting my wake-up time. I'll try setting my alarm clock 15 minutes earlier each day to help me wake up earlier on Mondays. Thanks for the suggestion!
+[2023-05-20T16:25:00, Sat] 13.User: I'm looking for some recipe ideas for a dinner party I'm hosting next weekend. Do you have any suggestions for a dessert that would pair well with a rich and savory main course? By the way, I just baked a chocolate cake for my sister's birthday party last weekend and it turned out amazing - the espresso powder really enhanced the flavor!
+[2023-05-20T16:25:00.500000, Sat] 14.User: I like the idea of a fruit tart, but I'm not sure what type of fruit to use. What fruits are in season right now?
+[2023-05-20T16:25:01, Sat] 15.User: I think I'll go with strawberries, they're my favorite. I've been eating a lot of sweet treats lately, including leftover birthday cake, and I think the tartness of strawberries will be a nice change of pace.

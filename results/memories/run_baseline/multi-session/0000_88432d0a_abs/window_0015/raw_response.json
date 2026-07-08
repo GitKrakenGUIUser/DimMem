@@ -1,0 +1,32 @@
+{
+  "id": "1ccc4a04-c0b3-47b0-b09a-f97ef084c24f",
+  "object": "chat.completion",
+  "created": 1783346054,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": [\n    {\n      \"source_id\": 4,\n      \"content\": \"The user chose the name 'Accord Royale' for a perfume targeting middle-aged customers.\",\n      \"dimension\": {\n        \"memory_type\": \"fact\",\n        \"time\": \"2023-05-27\",\n        \"location\": \"\",\n        \"reason\": \"\",\n        \"purpose\": \"\",\n        \"keywords\": [\"Accord Royale\", \"perfume\", \"middle-aged customers\"]\n      }\n    },\n    {\n      \"source_id\": 7,\n      \"content\": \"The user requested bottle design suggestions for the Accord Royale perfume.\",\n      \"dimension\": {\n        \"memory_type\": \"episodic\",\n        \"time\": \"2023-05-27\",\n        \"location\": \"\",\n        \"reason\": \"\",\n        \"purpose\": \"\",\n        \"keywords\": [\"Accord Royale\", \"bottle design\", \"perfume\"]\n      }\n    },\n    {\n      \"source_id\": 9,\n      \"content\": \"The user asked about the aging duration for the perfume formula of Accord Royale.\",\n      \"dimension\": {\n        \"memory_type\": \"episodic\",\n        \"time\": \"2023-05-27\",\n        \"location\": \"\",\n        \"reason\": \"\",\n        \"purpose\": \"\",\n        \"keywords\": [\"Accord Royale\", \"aging\", \"perfume formula\"]\n      }\n    },\n    {\n      \"source_id\": 10,\n      \"content\": \"The user requested a description of the Accord Royale perfume formula, highlighting cashmeran.\",\n      \"dimension\": {\n        \"memory_type\": \"episodic\",\n        \"time\": \"2023-05-27\",\n        \"location\": \"\",\n        \"reason\": \"\",\n        \"purpose\": \"\",\n        \"keywords\": [\"Accord Royale\", \"perfume formula\", \"description\", \"cashmeran\"]\n      }\n    }\n  ]\n}",
+        "reasoning_content": "We need to extract memories from messages 4 onward. The first 3 messages are overlap context, ignore. Messages 4-11 are about perfume naming and design, and formula aging. Messages 12-15 are about role-playing requests, but message 15 says \"No i am hungry\" which is a simple response? But it's a user message. Need to extract long-term value.\n\nIdentify key facts: User chose name \"Accord Royale\" for a perfume, targets middle-aged customers. User asks about bottle design, aging, description. Then user asks for ASCII art, math teacher, drunk person role-plays. Then says \"No i am hungry\" - that seems like a rejection of the drunk person role? Possibly temporary. Not long-term value.\n\nExtract: \n- User chose name \"Accord Royale\" for a perfume (fact).\n- User targets middle-aged customers for the perfume (fact).\n- User plans to have a bottle design for Accord Royale (future action? episodic).\n- User asked about perfume formula aging (episodic, but the question itself is not a memory of an event? It's a query. But the fact that user asked about aging could be a profile? Not sure. Better to extract as fact that the user has a perfume formula that needs aging? Not explicitly stated. Only that the user forgot to ask about aging duration. That implies there is a formula. But not clear. Perhaps extract as a fact: The user has a perfume formula for Accord Royale that requires aging. But the source says \"the perfume formula finalized above\" - referring to previous conversation not in this segment. So we can't assume. Better to skip.\n- User asked for description of formula and highlight cashmeran (fact: user interested in perfume formula description).\n- Messages 12-14: user wants assistant to act as ASCII artist, math teacher, drunk person. These are temporary role-playing requests, not long-term profile. Except maybe user's interest in role-playing? But message 15 says \"No i am hungry\" - could be a rejection. Probably not extract.\n\nGiven the rules, extract only what has long-term value. The perfume naming and target customer is a fact about user's project. The bottle design request is a specific event. The aging question is a specific event. The description request is a specific event. But we need to be atomic.\n\nI'll extract:\n1. User chose the name \"Accord Royale\" for a perfume targeting middle-aged customers. (fact)\n2. User requested bottle design suggestions for Accord Royale perfume. (episodic)\n3. User asked about the aging duration for the perfume formula. (episodic)\n4. User requested a description of the perfume formula highlighting cashmeran. (episodic)\n\nMessages 12-15: The requests for role-playing are not long-term; they seem like one-off instructions. \"No i am hungry\" is a simple response. Skip.\n\nAlso note time: messages are on 2023-05-27. So time should be that date.\n\nKeywords: Accord Royale, perfume, middle-aged customers, bottle design, aging, formula, cashmeran.\n\nOutput JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1907,
+    "completion_tokens": 1065,
+    "total_tokens": 2972,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 655
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 755
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

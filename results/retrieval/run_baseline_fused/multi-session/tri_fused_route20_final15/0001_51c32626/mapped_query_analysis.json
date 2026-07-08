@@ -1,0 +1,57 @@
+{
+  "query_text": "When did the user submit their research paper on sentiment analysis?",
+  "query_anchor": "When did the user submit their research paper on sentiment analysis?",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "research paper",
+      "sentiment analysis"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "When did the user submit their research paper on sentiment analysis?",
+      "keywords": [
+        "research paper",
+        "sentiment analysis"
+      ],
+      "query_terms": [
+        "when",
+        "did",
+        "the",
+        "user",
+        "submit",
+        "their",
+        "research",
+        "paper",
+        "on",
+        "sentiment",
+        "analysis"
+      ]
+    },
+    "structured": {
+      "query_text": "When did the user submit their research paper on sentiment analysis?",
+      "rewrite": "When did the user submit their research paper on sentiment analysis?",
+      "intent": "lookup",
+      "answer_field": "time",
+      "content_query": "When did the user submit their research paper on sentiment analysis?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "research paper",
+        "sentiment analysis"
+      ],
+      "canonical_text": "When did the user submit their research paper on sentiment analysis?"
+    },
+    "minilm": {
+      "query_text": "When did the user submit their research paper on sentiment analysis?"
+    }
+  }
+}

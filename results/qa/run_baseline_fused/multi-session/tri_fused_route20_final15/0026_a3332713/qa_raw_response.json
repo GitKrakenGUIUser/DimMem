@@ -1,0 +1,32 @@
+{
+  "id": "11b00073-4e46-4350-88c9-7b4dd189c853",
+  "object": "chat.completion",
+  "created": 1783427862,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: The retrieved memories provide specific amounts for gifts to the coworker and brother. Memory [1] states the user spent around $100 on baby clothes and toys for a coworker's baby shower. Memory [2] states the user gave their brother a $100 gift card. Both amounts are explicit and consistent with other related memories (e.g., memory [11] also mentions $100 for the baby shower). No conflicting information exists. The total is therefore $100 + $100 = $200.\n\nAnswer: $200",
+        "reasoning_content": "We need to answer: total amount spent on gifts for coworker and brother. From memories:\n- For coworker: memory [1] says bought baby clothes and toys for coworker's baby shower, costing around $100, in April 2023. Also memory [11] confirms $100 for baby shower. So $100.\n- For brother: memory [2] says gave brother a $100 gift card as graduation gift in May 2023. So $100.\nTotal $200. Ensure no other conflicting info. Memory [5] mentions buying birthday present for sister, housewarming for friend, baby shower for coworker, but doesn't specify amounts. So reliable. Reason: use latest source_time for each? Both have source_time around same. Answer: $200."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1148,
+    "completion_tokens": 267,
+    "total_tokens": 1415,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 159
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 892
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,906 @@
+[
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "The user is a beginner considering purchasing a NAS device for home network storage due to storage capacity issues.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "home network",
+      "reason": "storage capacity issues",
+      "purpose": "",
+      "keywords": [
+        "NAS",
+        "beginner",
+        "home network",
+        "storage"
+      ]
+    },
+    "entities": [
+      "NAS",
+      "beginner",
+      "home network",
+      "storage"
+    ],
+    "embedding_text": "The user is a beginner considering purchasing a NAS device for home network storage due to storage capacity issues.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0134",
+    "source_time": "2023-05-29 05:27:00",
+    "record_time": "2026-07-07T19:50:59.042624",
+    "score": 14.206372929854071,
+    "score_components": {
+      "bm25_score": 14.206372929854071,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 14.206372929854071,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 14.206372929854071
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.325
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.619337608986774
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "The user plans to try out the Fender Mustang II guitar amp at a downtown music store during the weekend of June 3, 2023.",
+    "dimension": {
+      "time": "2023-06-03",
+      "location": "downtown music store",
+      "reason": "to test the amp's sound and feel",
+      "purpose": "to decide whether to buy it",
+      "keywords": [
+        "Fender Mustang II",
+        "guitar amp",
+        "try out",
+        "weekend"
+      ]
+    },
+    "entities": [
+      "Fender Mustang II",
+      "guitar amp",
+      "try out",
+      "weekend"
+    ],
+    "embedding_text": "The user plans to try out the Fender Mustang II guitar amp at a downtown music store during the weekend of June 3, 2023.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0161",
+    "source_time": "2023-05-30 12:51:01",
+    "record_time": "2026-07-07T19:50:59.042780",
+    "score": 12.088066577408846,
+    "score_components": {
+      "bm25_score": 12.088066577408846,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 12.088066577408846,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 12.088066577408846
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.225
+      },
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.2444912129785065
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "The user needs to buy new drumheads for their drum set and plans to call a store to check availability.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "need new drumheads",
+      "purpose": "to replace or get new drumheads",
+      "keywords": [
+        "drumheads",
+        "drum set",
+        "buy"
+      ]
+    },
+    "entities": [
+      "drumheads",
+      "drum set",
+      "buy"
+    ],
+    "embedding_text": "The user needs to buy new drumheads for their drum set and plans to call a store to check availability.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0162",
+    "source_time": "2023-05-30 12:51:01.500000",
+    "record_time": "2026-07-07T19:50:59.042786",
+    "score": 11.472476760131237,
+    "score_components": {
+      "bm25_score": 11.472476760131237,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 11.472476760131237,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 11.472476760131237
+      },
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.225
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "As of 2023-05-29, the user backs up files to an external hard drive and wants a NAS for central backup for all devices including laptop and phone.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "",
+      "reason": "",
+      "purpose": "central backup for all devices",
+      "keywords": [
+        "external hard drive",
+        "backup",
+        "NAS",
+        "central backup",
+        "laptop",
+        "phone"
+      ]
+    },
+    "entities": [
+      "external hard drive",
+      "backup",
+      "NAS",
+      "central backup",
+      "laptop",
+      "phone"
+    ],
+    "embedding_text": "As of 2023-05-29, the user backs up files to an external hard drive and wants a NAS for central backup for all devices including laptop and phone.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0135",
+    "source_time": "2023-05-29 05:27:01",
+    "record_time": "2026-07-07T19:50:59.042631",
+    "score": 8.171094332445454,
+    "score_components": {
+      "bm25_score": 8.171094332445454,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 8.171094332445454,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 8.171094332445454
+      },
+      {
+        "method": "structured",
+        "rank": 10,
+        "score": 0.1
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.45355722571478857
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "profile",
+    "content": "User uses a tea infuser for herbal teas and is open to trying cold brew for teas.",
+    "dimension": {
+      "time": "2023-05-24T21:03:01",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "tea infuser",
+        "cold brew",
+        "tea",
+        "brewing method"
+      ]
+    },
+    "entities": [
+      "tea infuser",
+      "cold brew",
+      "tea",
+      "brewing method"
+    ],
+    "embedding_text": "User uses a tea infuser for herbal teas and is open to trying cold brew for teas.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0076",
+    "source_time": "2023-05-24 21:03:01",
+    "record_time": "2026-07-07T19:50:59.042289",
+    "score": 8.11379159659005,
+    "score_components": {
+      "bm25_score": 8.11379159659005,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 8.11379159659005,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 8.11379159659005
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "The user is concerned about data security on a NAS and seeks devices with encryption and access control features.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "",
+      "reason": "concern about data security",
+      "purpose": "",
+      "keywords": [
+        "NAS",
+        "security",
+        "encryption",
+        "access control"
+      ]
+    },
+    "entities": [
+      "NAS",
+      "security",
+      "encryption",
+      "access control"
+    ],
+    "embedding_text": "The user is concerned about data security on a NAS and seeks devices with encryption and access control features.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0136",
+    "source_time": "2023-05-29 05:27:02",
+    "record_time": "2026-07-07T19:50:59.042636",
+    "score": 8.096624803820049,
+    "score_components": {
+      "bm25_score": 8.096624803820049,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 8.096624803820049,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 8.096624803820049
+      },
+      {
+        "method": "structured",
+        "rank": 11,
+        "score": 0.1
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.5816691543469487
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "User is concerned whether 20 watts is enough power for a small band and considers the Mustang II instead.",
+    "dimension": {
+      "time": "2023-05-30",
+      "location": "",
+      "reason": "plays in small band at small to medium venues",
+      "purpose": "ensure sufficient power",
+      "keywords": [
+        "20 watts",
+        "Mustang II",
+        "band venues"
+      ]
+    },
+    "entities": [
+      "20 watts",
+      "Mustang II",
+      "band venues"
+    ],
+    "embedding_text": "User is concerned whether 20 watts is enough power for a small band and considers the Mustang II instead.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0157",
+    "source_time": "2023-05-30 10:40:00",
+    "record_time": "2026-07-07T19:50:59.042757",
+    "score": 8.003154274162393,
+    "score_components": {
+      "bm25_score": 8.003154274162393,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 8.003154274162393,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 8.003154274162393
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "The user plans a day trip to Hague, Virginia to rent kayaks or canoes.",
+    "dimension": {
+      "time": "",
+      "location": "Hague, Virginia",
+      "reason": "",
+      "purpose": "day trip for kayaking or canoeing",
+      "keywords": [
+        "day trip",
+        "Hague",
+        "Virginia",
+        "kayak rental",
+        "canoe rental"
+      ]
+    },
+    "entities": [
+      "day trip",
+      "Hague",
+      "Virginia",
+      "kayak rental",
+      "canoe rental"
+    ],
+    "embedding_text": "The user plans a day trip to Hague, Virginia to rent kayaks or canoes.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0010",
+    "source_time": "2023-05-20 11:36:01",
+    "record_time": "2026-07-07T19:50:59.041822",
+    "score": 7.586291309244784,
+    "score_components": {
+      "bm25_score": 7.586291309244784,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 7.586291309244784,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 7.586291309244784
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "User traded in an iPhone 11 Pro at Best Buy to offset the cost of a Samsung Galaxy S22 Ultra.",
+    "dimension": {
+      "time": "",
+      "location": "Best Buy",
+      "reason": "offset cost",
+      "purpose": "purchase new phone",
+      "keywords": [
+        "iPhone 11 Pro",
+        "trade-in",
+        "Best Buy",
+        "Samsung Galaxy S22 Ultra"
+      ]
+    },
+    "entities": [
+      "iPhone 11 Pro",
+      "trade-in",
+      "Best Buy",
+      "Samsung Galaxy S22 Ultra"
+    ],
+    "embedding_text": "User traded in an iPhone 11 Pro at Best Buy to offset the cost of a Samsung Galaxy S22 Ultra.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0145",
+    "source_time": "2023-05-29 16:27:00.500000",
+    "record_time": "2026-07-07T19:50:59.042689",
+    "score": 6.326264292058534,
+    "score_components": {
+      "bm25_score": 6.326264292058534,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 6.326264292058534,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 6.326264292058534
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.225
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.3565952270675913
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "User has been working on a clay vase and is trying to improve their clay modeling skills, specifically coiling and scoring.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "to improve skills",
+      "purpose": "",
+      "keywords": [
+        "clay vase",
+        "coiling",
+        "scoring",
+        "clay modeling"
+      ]
+    },
+    "entities": [
+      "clay vase",
+      "coiling",
+      "scoring",
+      "clay modeling"
+    ],
+    "embedding_text": "User has been working on a clay vase and is trying to improve their clay modeling skills, specifically coiling and scoring.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0002",
+    "source_time": "2023-05-20 06:39:01",
+    "record_time": "2026-07-07T19:50:59.041767",
+    "score": 6.2598875158835225,
+    "score_components": {
+      "bm25_score": 6.2598875158835225,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 6.2598875158835225,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 6.2598875158835225
+      },
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "User is developing a game where a player reaches a target or encounters a bot.",
+    "dimension": {
+      "time": "2023-05-26",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "game",
+        "player",
+        "target",
+        "bot"
+      ]
+    },
+    "entities": [
+      "game",
+      "player",
+      "target",
+      "bot"
+    ],
+    "embedding_text": "User is developing a game where a player reaches a target or encounters a bot.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0107",
+    "source_time": "2023-05-26 07:11:00",
+    "record_time": "2026-07-07T19:50:59.042469",
+    "score": 6.250653364453687,
+    "score_components": {
+      "bm25_score": 6.250653364453687,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 6.250653364453687,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 6.250653364453687
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "User is looking for a laptop with an Intel Core i5 or i7 processor for gaming, considering models from Acer, Lenovo, and HP.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "",
+      "reason": "want smooth gaming performance",
+      "purpose": "purchase laptop",
+      "keywords": [
+        "Intel Core i5",
+        "Intel Core i7",
+        "gaming laptop",
+        "Acer",
+        "Lenovo",
+        "HP"
+      ]
+    },
+    "entities": [
+      "Intel Core i5",
+      "Intel Core i7",
+      "gaming laptop",
+      "Acer",
+      "Lenovo",
+      "HP"
+    ],
+    "embedding_text": "User is looking for a laptop with an Intel Core i5 or i7 processor for gaming, considering models from Acer, Lenovo, and HP.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0146",
+    "source_time": "2023-05-29 16:27:02",
+    "record_time": "2026-07-07T19:50:59.042695",
+    "score": 6.034754543665656,
+    "score_components": {
+      "bm25_score": 6.034754543665656,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 6.034754543665656,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 6.034754543665656
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "The user added Ethiopia to their travel bucket list and is interested in trying local Ethiopian dishes.",
+    "dimension": {
+      "time": "2023-05-21",
+      "location": "Ethiopia",
+      "reason": "",
+      "purpose": "planning future travel and experiencing local cuisine",
+      "keywords": [
+        "Ethiopia",
+        "travel bucket list",
+        "local dishes",
+        "cuisine"
+      ]
+    },
+    "entities": [
+      "Ethiopia",
+      "travel bucket list",
+      "local dishes",
+      "cuisine"
+    ],
+    "embedding_text": "The user added Ethiopia to their travel bucket list and is interested in trying local Ethiopian dishes.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0041",
+    "source_time": "2023-05-21 14:04:01.500000",
+    "record_time": "2026-07-07T19:50:59.042009",
+    "score": 5.614952194858871,
+    "score_components": {
+      "bm25_score": 5.614952194858871,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 5.614952194858871,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 5.614952194858871
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "profile",
+    "content": "User enjoys cooking and trying new recipes.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "cooking",
+        "new recipes"
+      ]
+    },
+    "entities": [
+      "cooking",
+      "new recipes"
+    ],
+    "embedding_text": "User enjoys cooking and trying new recipes.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0111",
+    "source_time": "2023-05-26 08:30:00",
+    "record_time": "2026-07-07T19:50:59.042493",
+    "score": 4.79729168543562,
+    "score_components": {
+      "bm25_score": 4.79729168543562,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 4.79729168543562,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 4.79729168543562
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "The user recently visited a Korean BBQ joint with coworkers and enjoyed trying different meats and kimchi.",
+    "dimension": {
+      "time": "",
+      "location": "Korean BBQ joint",
+      "reason": "outing with coworkers",
+      "purpose": "enjoyment",
+      "keywords": [
+        "Korean BBQ",
+        "coworkers",
+        "meats",
+        "kimchi",
+        "dining out"
+      ]
+    },
+    "entities": [
+      "Korean BBQ",
+      "coworkers",
+      "meats",
+      "kimchi",
+      "dining out"
+    ],
+    "embedding_text": "The user recently visited a Korean BBQ joint with coworkers and enjoyed trying different meats and kimchi.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0094",
+    "source_time": "2023-05-25 13:14:02",
+    "record_time": "2026-07-07T19:50:59.042393",
+    "score": 4.787263337615534,
+    "score_components": {
+      "bm25_score": 4.787263337615534,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 4.787263337615534,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 4.787263337615534
+      }
+    ]
+  }
+]

@@ -1,0 +1,153 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-03-29T09:12:02, Wed] 1.User: I think I'll start by breaking down the project into smaller tasks and creating a schedule. That should help me feel more in control of the project. I'll also try to focus on what I'm grateful for each day, like the opportunity to work on this project or the skills I've developed so far. Thanks for the tips!
+[2023-03-29T09:12:02.500000, Wed] 2.User: I think I'll reach out to a colleague who's worked on a similar project before and ask for their guidance and advice. Sometimes, talking to someone who's been in your shoes can be really helpful in getting a fresh perspective and learning from their experience.
+[2023-03-29T21:58:00, Wed] 3.User: I'm looking for some new TV show recommendations. Can you suggest some comedies similar to "Ted Lasso" and "Only Murders in the Building"?
+[2023-03-29T21:58:00.500000, Wed] 4.User: I've already seen Schitt's Creek and Brooklyn Nine-Nine, but I'll definitely check out the others. Have you got any documentary recommendations?
+[2023-03-29T21:58:01, Wed] 5.User: I've already seen "The World According to Jeff Goldblum" on Disney+, but I'll definitely check out the others. Have you got any recommendations for TV shows that are currently airing new episodes?
+[2023-03-29T21:58:01.500000, Wed] 6.User: I'm interested in watching "Avenue 5" on HBO, but I've never seen Hugh Laurie in a comedy role before. Can you tell me a bit more about his character in the show?
+[2023-03-29T21:58:02, Wed] 7.User: Can you recommend some TV shows similar to "Avenue 5" that I might enjoy?
+[2023-03-29T21:58:02.500000, Wed] 8.User: I think I'd like to explore more sci-fi comedies. What do you think about "Red Dwarf"? Is it similar to "Avenue 5" in terms of tone and humor?
+[2023-03-29T00:14:00, Wed] 9.User: Here is my current product description. Can you highlight the differences between what you wrote and this? 
+
+Refreshing and invigorating, lemon essential oil is like liquid sunshine. Its bright citrus scent can elevate a gloomy mood and provide an all-natural boost of energy!
+
+Lemon oil is also a powerful degreaser, making it an excellent choice for tackling greasy messes in the kitchen.
+
+Use lemon oil in a diffuser to freshen stale air, improve your outlook, and promote a feeling of cleanliness and well-being throughout your home.
+[2023-03-29T00:14:00.500000, Wed] 10.User: What prompts would I need to give you so you write in this tone?
+[2023-03-29T00:14:01, Wed] 11.User: Give me a simple prompt I can use to help you write product descriptions like this:
+
+Refreshing and invigorating, lemon essential oil is like liquid sunshine. Its bright citrus scent can elevate a gloomy mood and provide an all-natural boost of energy!
+
+Lemon oil is also a powerful degreaser, making it an excellent choice for tackling greasy messes in the kitchen.
+
+Use lemon oil in a diffuser to freshen stale air, improve your outlook, and promote a feeling of cleanliness and well-being throughout your home.
+[2023-03-29T00:14:01.500000, Wed] 12.User: Please write a product description for our new Restore muscle soothing salve that captures its unique benefits and advantages in a fun and playful way. Use bright, colorful language and metaphors to paint a vivid picture of how the product works and what makes it special. I can provide a link if that's helpful.
+[2023-03-29T00:14:02, Wed] 13.User: Make it 100 words or less.
+[2023-03-29T00:14:02.500000, Wed] 14.User: Add some of these details (you don't need to include all of them) to the description:
+
+Restore is a blend of wintergreen, camphor, peppermint, ylang ylang, helichrysum, blue tansy, blue chamomile, and osmanthus essential oils. 
+
+This convenient roll-on bottle contains Restore blend that has been pre-diluted with fractionated coconut oil, so it’s ready to swipe on at a moment’s notice! 
+
+Carry it in your purse, backpack, or luggage so it’s always there when you need it.
+
+Our customer is a female over 45.
+[2023-03-31T19:02:00, Fri] 15.User: I'm having trouble sleeping in on Fridays, probably because I know I have the weekend off. Do you have any tips on how to wind down on Fridays and get to bed at a decent hour?

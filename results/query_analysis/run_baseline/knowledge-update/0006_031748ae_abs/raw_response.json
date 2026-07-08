@@ -1,0 +1,32 @@
+{
+  "id": "163b522a-80b8-4b7c-92c4-3b67281156fa",
+  "object": "chat.completion",
+  "created": 1783356397,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"When the user just started their new role as Software Engineer Manager, how many engineers did they lead?\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\", \"fact\"],\n    \"keywords\": [\"engineers\", \"lead\", \"Software Engineer Manager\"],\n    \"time\": \"\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"content\"\n}",
+        "reasoning_content": "We need to parse the question: \"How many engineers do I lead when I just started my new role as Software Engineer Manager?\" Question date: 2023/06/06. The user is asking about the number of engineers they led at the start of a new role. This is about a specific event (starting a new role) and a fact about team size. So memory type: episodic (event of starting role) and possibly fact (number of engineers). The query anchor should be rewritten: \"When I just started my new role as Software Engineer Manager, how many engineers did I lead?\" Use \"the user\" instead of \"I\". The question asks for a number, so answer_dim may be \"content\" (the number) or \"\" if it requires reasoning? Actually it's a direct factual memory: the number of engineers lead at that time. That is a piece of content, not a calculation. So answer_dim = \"content\". need_assistant_context? No, it's about user's own memory. Time: \"when I just started my new role\" is a specific time relative to the event. But we don't have explicit date, only \"just started\" which is a point in time. We could use \"around\" or \"on start of role\". Since we don't have exact date, we might leave time as \"\" or use \"around the start of the role\"? But the question asks about the time itself? No, it asks about number of engineers at that time. So we can put time constraint: \"around the start of the role\" but that's not a concrete date. Better to leave empty because time is implicit? The instruction says \"Fill only when there is an explicit time constraint.\" Here it's not explicit date/time, just \"when I just started my new role\". That is a relative event time. Since we don't have a specific date, we can leave empty. Location: none. Keywords: \"engineers\", \"lead\", \"new role\", \"Software Engineer Manager\". Also \"I\" -> user. So keywords: [\"engineers\", \"lead\", \"Software Engineer Manager\"]. Also maybe \"team size\"? But short phrases. Let's construct JSON.\n\nquery_anchor: \"When the user just started their new role as Software Engineer Manager, how many engineers did they lead?\"\n\nneed_assistant_context: false\n\ndimension.target_memory_type: [\"episodic\", \"fact\"] (since it's an event and a fact about number)\n\ndimension.keywords: [\"engineers\", \"lead\", \"Software Engineer Manager\"] (I think \"just started\" is not a keyword, but the role is key)\n\ndimension.time: \"\" (no explicit time, just event relative)\n\ndimension.location: \"\" (none)\n\nanswer_dim: \"content\" (the number of engineers is the content of that memory)\n\nCheck if any calculation? It's a direct recall, not calculation. So answer_dim = \"content\".\n\nLet's output."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 693,
+    "completion_tokens": 705,
+    "total_tokens": 1398,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 608
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 53
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

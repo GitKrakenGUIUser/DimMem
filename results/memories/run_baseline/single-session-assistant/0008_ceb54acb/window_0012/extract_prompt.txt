@@ -1,0 +1,142 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-27T15:45:01.500000, Sat] 1.User: I think I'll definitely give Heim Barbecue a try, it sounds like a great place. Do you have any recommendations for what to order besides the brisket?
+[2023-05-27T15:45:02, Sat] 2.User: All those options sound amazing! I'm definitely going to have to try the Bacon Burnt Ends and Loaded Potato Salad.
+[2023-05-27T15:45:02.500000, Sat] 3.User: I'm getting hungry just thinking about all the delicious food at Heim Barbecue! Do you know if they offer any vegetarian or vegan options?
+[2023-05-27T20:16:00, Sat] 4.User: I'm planning to participate in another charity event soon and I'm looking for some ideas on how to raise more funds. I've had some experience with charity events, like the Walk for Hunger event on April 17th, where we had an amazing turnout of over 500 participants and raised a significant amount for a local food bank. Can you suggest some creative ways to promote my upcoming event and attract more sponsors?
+[2023-05-27T20:16:00.500000, Sat] 5.User: I'm thinking of reaching out to some local businesses to participate in the corporate team challenge. Can you give me some tips on how to approach them and craft a compelling proposal?
+[2023-05-27T20:16:01, Sat] 6.User: I like those ideas. I was thinking of reaching out to some of my colleagues from work who participated in the Walk for Hunger event with me. We raised a significant amount for the local food bank and had a great time doing it. Do you think I could get them to form a team and participate in the corporate team challenge?
+[2023-05-27T20:16:01.500000, Sat] 7.User: I'll reach out to my colleagues and see if they're interested in forming a team for the corporate team challenge. I'll make sure to emphasize the benefits, make it easy for them to participate, and lead by example. Do you have any suggestions on how to engage with potential sponsors and customize the sponsorship packages to meet their needs?
+[2023-05-27T20:16:02, Sat] 8.User: I'll make sure to research potential sponsors, engage with them personally, and customize sponsorship packages to meet their needs. I'll also emphasize the benefits of sponsoring the corporate team challenge, such as increased visibility, brand awareness, and community engagement. I'll follow up with potential sponsors to answer questions and address any concerns they may have. Can you give me some ideas on how to create a social media campaign to promote the event and encourage participants to share their experiences?
+[2023-05-27T20:16:02.500000, Sat] 9.User: I'll create a social media campaign to promote the event and encourage participants to share their experiences. I'll use a unique hashtag, create engaging content, and highlight sponsors and participants on social media. I'll also share fundraising tips, event updates, and live updates during the event. After the event, I'll share a recap, thank-you messages, and fundraising totals. I'll also consider partnering with influencers and ambassadors to promote the event and share their own experiences.
+[2023-05-28T03:06:00, Sun] 10.User: I'm interested in exploring more about deep learning techniques in NLP. Can you recommend some research papers or articles on the topic of sentiment analysis using deep learning?
+[2023-05-28T03:06:00.500000, Sun] 11.User: Can you suggest some popular deep learning frameworks for NLP tasks like sentiment analysis, and how do they compare to each other in terms of ease of use and performance?
+[2023-05-28T03:06:01, Sun] 12.User: I've used TensorFlow and Keras in my previous projects, but I'm interested in exploring PyTorch for my next project. Can you compare the performance of PyTorch and TensorFlow for sentiment analysis tasks, and provide some tips for transitioning from TensorFlow to PyTorch?
+[2023-05-28T03:06:01.500000, Sun] 13.User: I'm interested in exploring PyTorch's dynamic computation graph and how it can be used for sentiment analysis tasks. Can you explain how PyTorch's dynamic computation graph works and provide an example of building a simple sentiment analysis model using PyTorch?
+[2023-05-28T03:06:02, Sun] 14.User: I apologize for the cut-off. It seems like the response was too long. Here is the rest of the response:
+
+When we call `model(inputs)`, PyTorch creates a new tensor `outputs` and records the operations that produced it, including the embedding layer, convolutional layer, pooling layer, and linear layer. The computation graph is built dynamically, allowing us to modify the model architecture or add new layers during runtime.
+
+During backpropagation, PyTorch's autograd system uses the computation graph to compute gradients recursively, starting from the output tensor and propagating errors backwards. This allows us to compute the gradients of the loss function with respect to the model parameters, which are then used to update the model weights using the optimizer.
+
+**Benefits of Dynamic Computation Graph:**
+
+1. **Flexibility:** PyTorch's dynamic computation graph allows us to modify the model architecture or add new layers during runtime, making it easier to experiment and prototype models.
+2. **Rapid
+[2023-05-28T03:06:02.500000, Sun] 15.User: I think we've reached the end of our conversation about PyTorch's dynamic computation graph and its application to sentiment analysis. It was a pleasure chatting with you and exploring the world of deep learning together. If you have any more questions or topics you'd like to discuss, feel free to ask me anytime. Good luck with your projects, and happy learning!

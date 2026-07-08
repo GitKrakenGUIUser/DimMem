@@ -1,0 +1,536 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "multi-session",
+  "sample_id": "0021_6d550036",
+  "query_text": "the number of projects the user has led or is currently leading",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 145,
+  "fused_candidate_count_before_final_cut": 48,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/multi-session/tri_fused_route20_final15/0021_6d550036",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 10.150666691276669,
+      "memory_type": "fact",
+      "content": "The user has a good understanding of their team members' strengths and weaknesses from leading the team.",
+      "source_boundary_id": "15_0103",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 10.150666691276669,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 10.150666691276669
+        },
+        {
+          "method": "structured",
+          "rank": 3,
+          "score": 0.5555555555555556
+        },
+        {
+          "method": "minilm",
+          "rank": 6,
+          "score": 0.36639078279353077
+        }
+      ],
+      "score_components": {
+        "bm25_score": 10.150666691276669,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 7.645694668271663,
+      "memory_type": "episodic",
+      "content": "The user is currently doing a buddy read of 'The Seven Husbands of Evelyn Hugo' by Taylor Jenkins Reid with a friend and enjoys discussing it.",
+      "source_boundary_id": "17_0118",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 7.645694668271663,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 7.645694668271663
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.645694668271663,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 6.175778704631522,
+      "memory_type": "profile",
+      "content": "The user is interested in combining wood and stone in sculpting projects, appreciating the contrast between them.",
+      "source_boundary_id": "6_0047",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 6.175778704631522,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 6.175778704631522
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.175778704631522,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 5.326509415979553,
+      "memory_type": "profile",
+      "content": "User enjoys the convenience of a USB port on their lamp for charging devices while watching TV or reading in the living room.",
+      "source_boundary_id": "all_memories_0002",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 5.326509415979553,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 5.326509415979553
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.326509415979553,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 5.31204521524653,
+      "memory_type": "fact",
+      "content": "User is planning to start a web design company and is researching how to set it up and price projects for large companies.",
+      "source_boundary_id": "3_0013",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 5.31204521524653,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 5.31204521524653
+        },
+        {
+          "method": "structured",
+          "rank": 2,
+          "score": 0.5555555555555556
+        },
+        {
+          "method": "minilm",
+          "rank": 5,
+          "score": 0.3828214535094761
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.31204521524653,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 5.0664485428830135,
+      "memory_type": "fact",
+      "content": "User has experience leading a data analysis team in a Marketing Research class project, where they performed a comprehensive market analysis for a new product launch.",
+      "source_boundary_id": "2_0011",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 5.0664485428830135,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 5.0664485428830135
+        },
+        {
+          "method": "structured",
+          "rank": 1,
+          "score": 0.5555555555555556
+        },
+        {
+          "method": "minilm",
+          "rank": 10,
+          "score": 0.275602739122516
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.0664485428830135,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 4.4892450822032,
+      "memory_type": "episodic",
+      "content": "On 2023-05-24, the user checked their email to see if a UFO expert or Robert Bigelow had replied.",
+      "source_boundary_id": "9_0058",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 4.4892450822032,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 4.4892450822032
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.4892450822032,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 4.32577174914735,
+      "memory_type": "fact",
+      "content": "The user has smart light bulbs in the living room and intends to adjust their timing.",
+      "source_boundary_id": "7_0057",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 4.32577174914735,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 4.32577174914735
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.32577174914735,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 4.306739616106693,
+      "memory_type": "fact",
+      "content": "The user has contacted a UFO expert and Robert Bigelow, and was awaiting their replies as of 2023-05-24.",
+      "source_boundary_id": "9_0059",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 4.306739616106693,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 4.306739616106693
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.306739616106693,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 4.146243387100952,
+      "memory_type": "fact",
+      "content": "Alex is a junior engineer on the user's team who has been performing well under the user's guidance.",
+      "source_boundary_id": "15_0105",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 4.146243387100952,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 4.146243387100952
+        },
+        {
+          "method": "minilm",
+          "rank": 12,
+          "score": 0.24711050731954926
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.146243387100952,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 3.8368547634230943,
+      "memory_type": "profile",
+      "content": "The user is interested in visiting Universal Studios Japan, especially the Wizarding World of Harry Potter.",
+      "source_boundary_id": "12_0075",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 3.8368547634230943,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 3.8368547634230943
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.8368547634230943,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 3.7194963608400715,
+      "memory_type": "profile",
+      "content": "User has a long-term interest in watercolor painting and is actively seeking art supplies and techniques.",
+      "source_boundary_id": "20_0139",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 3.7194963608400715,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 3.7194963608400715
+        },
+        {
+          "method": "minilm",
+          "rank": 18,
+          "score": 0.20356783086364164
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.7194963608400715,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 3.6224456311631656,
+      "memory_type": "profile",
+      "content": "User enjoys writing creative scenes featuring characters Wukong, Macaque, and MK from a mythological or fictional narrative.",
+      "source_boundary_id": "3_0014",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 3.6224456311631656,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 3.6224456311631656
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.6224456311631656,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 3.34691089260091,
+      "memory_type": "fact",
+      "content": "The user's new lampshade is a drum shape made of translucent white fabric.",
+      "source_boundary_id": "7_0053",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 3.34691089260091,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 3.34691089260091
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.34691089260091,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 3.333666460099944,
+      "memory_type": "fact",
+      "content": "The user is writing a book about a mirror with a past history in England before being shipped to America, and has a chapter one outline with multiple sections.",
+      "source_boundary_id": "19_0137",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 3.333666460099944,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 3.333666460099944
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.333666460099944,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 0.23294878005981445
+}

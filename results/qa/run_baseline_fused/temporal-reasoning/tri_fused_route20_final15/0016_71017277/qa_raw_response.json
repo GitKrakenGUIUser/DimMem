@@ -1,0 +1,32 @@
+{
+  "id": "a1132912-eb2f-4860-a69d-b4a52311d627",
+  "object": "chat.completion",
+  "created": 1783428012,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: The question asks about receiving a piece of jewelry \"last Saturday\" relative to the question date (2023-03-09, Thursday). Last Saturday is 2023-03-04. Among the retrieved memories, none mention receiving a piece of jewelry. The only item received on that date is a crystal chandelier (memory [1]), which is not jewelry. No other memory describes receiving jewelry. Therefore, evidence is insufficient.\n\nAnswer: I don't know.",
+        "reasoning_content": "We need to answer: \"I received a piece of jewelry last Saturday from whom?\" Question date is 2023/03/09, which is a Thursday. \"Last Saturday\" would be March 4, 2023 (since March 9 is Thursday, previous Saturday is March 4). So we need to find a memory about receiving jewelry on or around March 4. Looking at retrieved memories: memory [1] says user inherited a crystal chandelier from great-grandmother on 2023-03-04. That's a chandelier, not jewelry. Memory [2] is about sanding rocking chair. Memory [3] about food truck. No jewelry. Memory [4] about book. Memory [5] about podcasts. Memory [6] about steps. Memory [7] about food truck. Memory [8] foam roller arrived on 2023-03-02. Not jewelry. Memory [9] about Huachinango. Memory [10] about action figures. Memory [11] about podcast. Memory [12] about car oil. Memory [13] about chicken fajitas. Memory [14] about wire-wrapped jewelry-making tools for coasters, but that's about making decorative accents, not receiving jewelry. Memory [15] about car battery. None mention receiving a piece of jewelry. The closest is memory [1] which is a chandelier, not jewelry. So insufficient evidence. I don't know."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1188,
+    "completion_tokens": 399,
+    "total_tokens": 1587,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 300
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 932
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

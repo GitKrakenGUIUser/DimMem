@@ -1,0 +1,103 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-05-06 03:02:00
+content: The user attended Michael's engagement party at a trendy rooftop bar on 2023-05-06.
+reason: engagement party for Michael
+
+[2]
+source_time: 2023-06-15 03:20:00
+content: User was a bridesmaid at their cousin's wedding on 2023-06-15.
+
+[3]
+source_time: 2023-06-15 03:20:00.500000
+content: User attended her cousin's wedding as a bridesmaid on 2023-06-15 and was inspired by a special song played during the ceremony.
+reason: User was a bridesmaid at her cousin's wedding
+
+[4]
+source_time: 2023-06-15 03:20:01
+content: User plans to incorporate a meaningful song into her own wedding ceremony, inspired by her cousin's wedding.
+reason: Inspired by her cousin's wedding
+purpose: To make her ceremony feel intimate
+
+[5]
+source_time: 2023-04-28 10:19:01
+content: User lived near a stadium built for a major event that disrupted the neighborhood.
+reason: stadium construction for a major event
+
+[6]
+source_time: 2023-06-15 02:07:02.500000
+content: The user is developing a fundraising strategy and is considering legal/ethical considerations, transparency, inclusivity, and donor engagement.
+
+[7]
+source_time: 2023-06-15 08:00:00
+content: The user owns a rare first edition of F. Scott Fitzgerald's 'The Great Gatsby', one of only 300 copies with a misprinted title page, purchased for $2,500.
+
+[8]
+source_time: 2023-05-06 14:48:00
+content: The user attended the 'Taste of Hope' charity dinner on 2023-04-17 at a fancy restaurant in the West Loop area, which raised funds for a local children's hospital.
+reason: charity dinner for local children's hospital
+purpose: raise funds
+
+[9]
+source_time: 2023-06-15 14:14:00.500000
+content: The user wants to know which hotel loyalty program offers the best rewards and benefits.
+
+[10]
+source_time: 2023-05-06 03:02:00
+content: The user is planning their own wedding next year.
+
+[11]
+source_time: 2023-05-06 03:02:01
+content: The user is considering hiring a wedding planner.
+
+[12]
+source_time: 2023-04-06 00:11:00
+content: The user is planning a trip to Japan, flying into Narita International Airport, staying at a hotel in the Shinjuku district, arriving on a Friday afternoon, and considering taking the train from the airport to the hotel, which the user's friend said costs around $10.
+
+[13]
+source_time: 2023-06-15 03:20:00
+content: User wants her wedding ceremony to feel intimate and special.
+
+[14]
+source_time: 2023-05-06 03:02:00.500000
+content: The user is considering a countryside bed and breakfast and a city art museum as wedding venue options.
+
+[15]
+source_time: 2023-06-15 03:20:00
+content: User is planning their own wedding.
+
+Now answer the question:
+User Question:Which event happened first, my cousin's wedding or Michael's engagement party?
+Question Date:2023/10/01 (Sun) 07:41

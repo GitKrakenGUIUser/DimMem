@@ -1,0 +1,32 @@
+{
+  "id": "dec05c59-2a78-4446-8ffd-748d2d5928c4",
+  "object": "chat.completion",
+  "created": 1783346587,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": [\n    {\n      \"source_id\": 9,\n      \"content\": \"The user expressed interest in attending The Spirit of Speyside Whisky Festival in Moray.\",\n      \"dimension\": {\n        \"memory_type\": \"profile\",\n        \"time\": \"\",\n        \"location\": \"Moray\",\n        \"reason\": \"\",\n        \"purpose\": \"\",\n        \"keywords\": [\"Spirit of Speyside Whisky Festival\", \"Moray\"]\n      }\n    },\n    {\n      \"source_id\": 10,\n      \"content\": \"The user is interested in addressing water scarcity in rural communities and exploring solutions such as rainwater harvesting, community education, NGO involvement, and government incentives.\",\n      \"dimension\": {\n        \"memory_type\": \"profile\",\n        \"time\": \"\",\n        \"location\": \"rural communities\",\n        \"reason\": \"\",\n        \"purpose\": \"\",\n        \"keywords\": [\"water scarcity\", \"rural communities\", \"rainwater harvesting\", \"community education\", \"NGOs\", \"government incentives\"]\n      }\n    }\n  ]\n}",
+        "reasoning_content": "We need to extract memories from the conversation. The first 3 messages are overlapping context and not to be used as new memory sources. So only messages 4-15 are considered.\n\nWe need to extract facts, episodic events, and profile information.\n\nLet's go through each message from 4 onward:\n\nMessage 4: \"Great! How might a team be engaged in creative ways and critical thinking experiments to clone their leader?\" This is a question about cloning leader capabilities, but it's a general inquiry. No specific fact, event, or profile about the user. Not extracting.\n\nMessage 5: \"Are there any restrictions or regulations when attending Moray's festivals and events?\" User is asking about Moray festivals. This indicates an interest in Moray's festivals. Possibly a profile: user is interested in attending Moray's festivals/events. But it's a single query. Could be episodic? It's a question, not a statement of fact. However, the user later follows up. Let's see.\n\nMessage 6: User complains about not getting helpful info about regulations for Moray's festivals. This reinforces interest.\n\nMessage 7: User expresses frustration, says might find someone else. Not extracting.\n\nMessage 8: User asks for festivals happening in Moray soon. This is a request for upcoming events.\n\nMessage 9: User thanks and asks about The Spirit of Speyside Whisky Festival. So user is interested in that specific festival.\n\nFrom messages 5-9, we can extract that the user is interested in attending festivals and events in Moray, specifically The Spirit of Speyside Whisky Festival. That could be a profile (interest in Moray festivals) or an episodic event? But it's about seeking information, not a plan yet. However, it indicates a long-term interest. We can extract as profile: user is interested in attending Moray's festivals and events, especially The Spirit of Speyside Whisky Festival. But careful: not overgeneralize. The user asked about restrictions, then about upcoming festivals, then specifically about that whisky festival. So it's a specific interest.\n\nMemory: User expressed interest in attending The Spirit of Speyside Whisky Festival in Moray.\n\nNow messages 10-15: about water scarcity, rainwater harvesting, education, NGOs, government incentives. User is asking about impacts and solutions. This indicates a profile: user is interested in water scarcity issues and sustainable water solutions, particularly rainwater harvesting, and the role of education, NGOs, and government. But it's a series of questions. Could be factual? No. Episodic? Not really an event. Profile: user has a concern for water scarcity in rural communities and is exploring solutions like rainwater harvesting. However, the user is asking the assistant for information, so it's not directly stating their own actions. Still, it reflects their interest and values. So we can extract profile: user is interested in addressing water scarcity in rural communities through rainwater harvesting and community education.\n\nAlso, the user asks for tips for individuals to promote sustainable water practices (message 15). That reinforces.\n\nWe need to extract memories with long-term value. Also, note the user's frustration in messages 6-8, but that's temporary.\n\nLet's formulate memories:\n\n1. Profile: User is interested in attending Moray's festivals and events, specifically The Spirit of Speyside Whisky Festival.\n2. Profile: User is interested in addressing water scarcity in rural communities and exploring solutions such as rainwater harvesting, community education, NGO involvement, and government incentives.\n\nBut we need to ensure content is self-contained and atomic. Also, check memory_type: profile for interests.\n\nTime: No specific time given. Use \"\".\n\nLocation: Moray for the festival; rural communities for water.\n\nKeywords: Moray, festivals, Spirit of Speyside Whisky Festival, water scarcity, rural communities, rainwater harvesting, community education, NGOs, government incentives.\n\nAlso, maybe we can extract a fact: The user asked about restrictions and regulations for Moray's festivals. But that's a question, not a fact.\n\nLet's output JSON with two memories.\n\nNote: The first 3 messages are overlapping, so we ignore them. Message 4 is also not extractable.\n\nThus final output."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2009,
+    "completion_tokens": 1092,
+    "total_tokens": 3101,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 868
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 857
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

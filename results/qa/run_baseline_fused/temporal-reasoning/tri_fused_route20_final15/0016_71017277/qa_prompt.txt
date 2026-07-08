@@ -1,0 +1,110 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-03-03 20:06:00
+content: User inherited a crystal chandelier from their great-grandmother on 2023-03-04.
+reason: inherited from great-grandmother
+
+[2]
+source_time: 2023-03-04 18:26:00
+content: On 2023-03-04, the user sanded and primed a wooden rocking chair as part of a refurbishing project.
+purpose: to refurbish the rocking chair
+
+[3]
+source_time: 2023-03-04 20:16:00
+content: On 2023-03-04, the user changed the target to Kirkwood Ski Resort for the food truck operation request.
+reason: changed from Northstar
+purpose: to request permission for food truck operation at Kirkwood
+
+[4]
+source_time: 2023-02-14 02:40:02
+content: User has read and loved 'The Seven Husbands of Evelyn Hugo', which was narrated by Julia Whelan.
+
+[5]
+source_time: 2023-02-10 01:31:01.500000
+content: The user asked for recommendations of true-crime podcasts similar to 'Last Seen' on 2023-02-10.
+purpose: discover new true-crime podcasts
+
+[6]
+source_time: 2023-02-11 02:09:00.500000
+content: On 2023-02-04, the user achieved a personal best of 12,345 steps while running errands.
+
+[7]
+source_time: 2023-03-04 10:34:01
+content: On 2023-03-04, the user planned to contact Northstar Ski Resort to request permission to operate their food truck there.
+reason: wanted to operate food truck
+purpose: to obtain permission for food truck operation
+
+[8]
+source_time: 2023-02-11 02:09:01.500000
+content: The user's foam roller arrived on 2023-03-02.
+
+[9]
+source_time: 2023-02-28 10:47:02.500000
+content: As of 2023-03-01, User had never tried Huachinango a la Veracruzana.
+
+[10]
+source_time: 2023-02-15 00:24:02
+content: User completed a set of Marvel Comic's 'The Avengers' action figures in the week of February 8-14, 2023, after 6 months of searching for the last Black Widow figure.
+
+[11]
+source_time: 2023-02-10 01:31:01
+content: The user listens to the true-crime podcast 'Last Seen' and is currently on episode 7.
+
+[12]
+source_time: 2023-02-28 10:47:00
+content: On 2023-02-28, User had last changed their car's oil about 5,000 miles prior and planned to check the car manual for the recommended oil change interval.
+reason: last oil change 5000 miles ago
+purpose: to determine recommended interval
+
+[13]
+source_time: 2023-03-02 07:50:00
+content: The user made chicken fajitas using a recipe from the NYT Cooking app on 2023-02-28.
+reason: experimenting with seasonings
+purpose: cooking
+
+[14]
+source_time: 2023-03-04 18:26:02.500000
+content: User is considering using wire-wrapped jewelry-making tools to create decorative accents for the wooden coasters.
+purpose: decorative accents for coasters
+
+[15]
+source_time: 2023-02-28 17:55:01.500000
+content: On 2023-02-28, User noticed their car's battery was draining faster than usual and planned to have it checked at a local mechanic.
+reason: faster battery drain
+purpose: to check for a bigger issue
+
+Now answer the question:
+User Question:I received a piece of jewelry last Saturday from whom?
+Question Date:2023/03/09 (Thu) 15:47

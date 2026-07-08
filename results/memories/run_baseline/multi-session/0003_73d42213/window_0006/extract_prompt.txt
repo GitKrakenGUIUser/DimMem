@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-22T17:44:00.500000, Mon] 1.User: It's interesting how Shakespeare's works are still relevant even today. Do you think future generations will continue to find value in his plays?
+[2023-05-22T17:44:01, Mon] 2.User: I couldn't agree more! I think Shakespeare's works will never lose their relevance because they deal with themes that are still relevant today, and his characters are so complex and memorable. Do you have a favorite play or character?
+[2023-05-22T17:44:01.500000, Mon] 3.User: Agreed, each play has its own appeal. Out of all the themes Shakespeare explored, I find his portrayal of human nature the most fascinating. He really understood the complexities of the human psyche.
+[2023-05-22T17:44:02, Mon] 4.User: I also find it interesting how Shakespeare's plays have influenced so many other works of literature and art. Do you have any favorite adaptations or re-imaginings of his plays?
+[2023-05-22T17:44:02.500000, Mon] 5.User: It's amazing how many adaptations of Shakespeare's works there are. Have you seen any modern stage productions that you've enjoyed?
+[2023-05-22T17:44:03, Mon] 6.User: I once saw a production of A Midsummer Night's Dream on a warm summer night in an outdoor theater. It was magical! Have you ever attended a live performance of Shakespeare's plays?
+[2023-05-22T19:56:00, Mon] 7.User: I'm looking for jewelry storage tips to keep my accessories organized and untangled. Can you give me some recommendations?
+[2023-05-22T19:56:00.500000, Mon] 8.User: I'm particularly interested in jewelry organizers with individual slots. Can you recommend some affordable options under $50?
+[2023-05-22T19:56:01, Mon] 9.User: I'm thinking of getting a jewelry organizer with slots for my earrings. Do you think I should get one with separate slots for studs and danglers, or is that overkill?
+[2023-05-22T19:56:01.500000, Mon] 10.User: I think I'll look for an organizer with universal slots, since I don't have a huge earring collection. Can you recommend some online retailers that sell a wide variety of jewelry organizers?
+[2023-05-22T19:56:02, Mon] 11.User: I'm also looking for a way to store my silver cuff that I got recently. Do you have any tips on how to prevent tarnishing?
+[2023-05-22T19:56:02.500000, Mon] 12.User: I'm actually thinking of selling my grandmother's antique pearl necklace to help pay for my upcoming trip to Europe. Do you think I should get it appraised again before selling it, or is the appraisal from the local jewelry shop I got in February sufficient?
+[2023-05-23T03:21:00, Tue] 13.User: Then the parents will ask john about the staff members in an innocent way with dialogue
+[2023-05-23T03:21:00.500000, Tue] 14.User: The parents will ask john innocently if Samantha and jack will have to sleep separately with dialogue. They will explain to him they have a especial bond
+[2023-05-23T03:21:01, Tue] 15.User: John will ask with dialogue for Samantha and jack to remove their clothing in an innocent way

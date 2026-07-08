@@ -1,0 +1,87 @@
+{
+  "query_text": "the user is going back to a previous conversation about music theory, where the assistant mentioned some online resources for learning music theory, and wants to be reminded of the website that was recommended for free lessons and exercises",
+  "query_anchor": "the user is going back to a previous conversation about music theory, where the assistant mentioned some online resources for learning music theory, and wants to be reminded of the website that was recommended for free lessons and exercises",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "music theory",
+      "online resources",
+      "website",
+      "free lessons",
+      "exercises"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "the user is going back to a previous conversation about music theory, where the assistant mentioned some online resources for learning music theory, and wants to be reminded of the website that was recommended for free lessons and exercises",
+      "keywords": [
+        "music theory",
+        "online resources",
+        "website",
+        "free lessons",
+        "exercises"
+      ],
+      "query_terms": [
+        "the",
+        "user",
+        "is",
+        "going",
+        "back",
+        "to",
+        "a",
+        "previous",
+        "conversation",
+        "about",
+        "music",
+        "theory",
+        "where",
+        "assistant",
+        "mentioned",
+        "some",
+        "online",
+        "resources",
+        "for",
+        "learning",
+        "and",
+        "wants",
+        "be",
+        "reminded",
+        "of",
+        "website",
+        "that",
+        "was",
+        "recommended",
+        "free",
+        "lessons",
+        "exercises"
+      ]
+    },
+    "structured": {
+      "query_text": "the user is going back to a previous conversation about music theory, where the assistant mentioned some online resources for learning music theory, and wants to be reminded of the website that was recommended for free lessons and exercises",
+      "rewrite": "the user is going back to a previous conversation about music theory, where the assistant mentioned some online resources for learning music theory, and wants to be reminded of the website that was recommended for free lessons and exercises",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "the user is going back to a previous conversation about music theory, where the assistant mentioned some online resources for learning music theory, and wants to be reminded of the website that was recommended for free lessons and exercises",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "music theory",
+        "online resources",
+        "website",
+        "free lessons",
+        "exercises"
+      ],
+      "canonical_text": "the user is going back to a previous conversation about music theory, where the assistant mentioned some online resources for learning music theory, and wants to be reminded of the website that was recommended for free lessons and exercises"
+    },
+    "minilm": {
+      "query_text": "the user is going back to a previous conversation about music theory, where the assistant mentioned some online resources for learning music theory, and wants to be reminded of the website that was recommended for free lessons and exercises"
+    }
+  }
+}

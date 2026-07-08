@@ -1,0 +1,32 @@
+{
+  "id": "b49890fe-7454-4a3a-a446-3a6d6e7353e1",
+  "object": "chat.completion",
+  "created": 1783356303,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"What is the total weight of the new feed the user purchased between 2023/03/30 and 2023/05/30?\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"new feed\", \"purchased\"],\n    \"time\": \"between 2023/03/30 and 2023/05/30\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"\"\n}",
+        "reasoning_content": "We need to parse the question: \"What is the total weight of the new feed I purchased in the past two months?\" Question date is 2023/05/30. \"past two months\" means from 2023/03/30 to 2023/05/30, but approximate. The query asks for total weight, which is a calculation/sum. So answer_dim is \"\" because it requires calculation. need_assistant_context: false, no mention of assistant. dimension.target_memory_type: it's about purchases, so episodic memory. keywords: \"new feed\", \"purchased\". time: \"between 2023/03/30 and 2023/05/30\" (since past two months from May 30). location: none. query_anchor: rewrite to retrieval-friendly: \"What is the total weight of the new feed the user purchased in the past two months?\" But better to preserve time: \"What is the total weight of the new feed the user purchased between 2023/03/30 and 2023/05/30?\" However, we need to be careful: \"past two months\" is relative, we can specify date range. The instruction says: \"If question_date is available, normalize relative time expressions...\" So we should convert to specific dates. Also, \"purchased\" is key. Output JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 692,
+    "completion_tokens": 396,
+    "total_tokens": 1088,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 281
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 52
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

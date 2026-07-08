@@ -1,0 +1,3248 @@
+{
+  "bm25": {
+    "mapped_query_analysis": {
+      "query_text": "When the user just started their new role as Software Engineer Manager, how many engineers did they lead?",
+      "keywords": [
+        "engineers",
+        "lead",
+        "Software Engineer Manager"
+      ],
+      "query_terms": [
+        "when",
+        "the",
+        "user",
+        "just",
+        "started",
+        "their",
+        "new",
+        "role",
+        "as",
+        "software",
+        "engineer",
+        "manager",
+        "how",
+        "many",
+        "engineers",
+        "did",
+        "they",
+        "lead"
+      ]
+    },
+    "top_records": [
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user is a Senior Software Engineer leading a team of 4 engineers.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Senior Software Engineer",
+            "team lead",
+            "4 engineers"
+          ]
+        },
+        "entities": [
+          "Senior Software Engineer",
+          "team lead",
+          "4 engineers"
+        ],
+        "embedding_text": "The user is a Senior Software Engineer leading a team of 4 engineers.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0117",
+        "source_time": "2023-05-24 09:15:00",
+        "record_time": "2026-07-07T19:50:03.289405",
+        "score": 21.881484104785546,
+        "score_components": {
+          "bm25_score": 21.881484104785546,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "User is a Senior Software Engineer.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Senior Software Engineer"
+          ]
+        },
+        "entities": [
+          "Senior Software Engineer"
+        ],
+        "embedding_text": "User is a Senior Software Engineer.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0137",
+        "source_time": "2023-05-27 10:13:00.500000",
+        "record_time": "2026-07-07T19:50:03.289632",
+        "score": 13.459104954177306,
+        "score_components": {
+          "bm25_score": 13.459104954177306,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "User leads a team of five engineers.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "team lead",
+            "five engineers"
+          ]
+        },
+        "entities": [
+          "team lead",
+          "five engineers"
+        ],
+        "embedding_text": "User leads a team of five engineers.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0138",
+        "source_time": "2023-05-27 10:13:00.500000",
+        "record_time": "2026-07-07T19:50:03.289642",
+        "score": 11.653892842749334,
+        "score_components": {
+          "bm25_score": 11.653892842749334,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "The user plans to organize a team outing for 5 people, including 4 engineers and manager Rachel.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "team building",
+          "purpose": "team building",
+          "keywords": [
+            "team outing",
+            "4 engineers",
+            "Rachel"
+          ]
+        },
+        "entities": [
+          "team outing",
+          "4 engineers",
+          "Rachel"
+        ],
+        "embedding_text": "The user plans to organize a team outing for 5 people, including 4 engineers and manager Rachel.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0119",
+        "source_time": "2023-05-25 12:30:00",
+        "record_time": "2026-07-07T19:50:03.289426",
+        "score": 9.449361924068034,
+        "score_components": {
+          "bm25_score": 9.449361924068034,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user has many instruments.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "many instruments"
+          ]
+        },
+        "entities": [
+          "many instruments"
+        ],
+        "embedding_text": "The user has many instruments.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0130",
+        "source_time": "2023-05-25 19:20:02.500000",
+        "record_time": "2026-07-07T19:50:03.289560",
+        "score": 8.474421429111736,
+        "score_components": {
+          "bm25_score": 8.474421429111736,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user's manager is Rachel.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Rachel",
+            "manager"
+          ]
+        },
+        "entities": [
+          "Rachel",
+          "manager"
+        ],
+        "embedding_text": "The user's manager is Rachel.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0118",
+        "source_time": "2023-05-24 09:15:00.500000",
+        "record_time": "2026-07-07T19:50:03.289415",
+        "score": 7.4838085501571685,
+        "score_components": {
+          "bm25_score": 7.4838085501571685,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "User started listening to audiobooks on their commute on 2023-05-13.",
+        "dimension": {
+          "time": "2023-05-13",
+          "location": "commute",
+          "reason": "to pass time",
+          "purpose": "make commute more enjoyable",
+          "keywords": [
+            "audiobooks",
+            "commute"
+          ]
+        },
+        "entities": [
+          "audiobooks",
+          "commute"
+        ],
+        "embedding_text": "User started listening to audiobooks on their commute on 2023-05-13.",
+        "source_message_ids": [
+          "8"
+        ],
+        "source_boundary_id": "8_0064",
+        "source_time": "2023-05-13 13:52:01.500000",
+        "record_time": "2026-07-07T19:50:03.288835",
+        "score": 6.561429182298693,
+        "score_components": {
+          "bm25_score": 6.561429182298693,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "profile",
+        "content": "The user is interested in learning how to write jokes.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "joke writing",
+            "interest"
+          ]
+        },
+        "entities": [
+          "joke writing",
+          "interest"
+        ],
+        "embedding_text": "The user is interested in learning how to write jokes.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0037",
+        "source_time": "2023-05-05 13:54:00",
+        "record_time": "2026-07-07T19:50:03.288524",
+        "score": 6.112213875663104,
+        "score_components": {
+          "bm25_score": 6.112213875663104,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "The user has applied to volunteer as an usher at their local theater.",
+        "dimension": {
+          "time": "2023-05-17",
+          "location": "local theater",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "volunteer",
+            "usher",
+            "application"
+          ]
+        },
+        "entities": [
+          "volunteer",
+          "usher",
+          "application"
+        ],
+        "embedding_text": "The user has applied to volunteer as an usher at their local theater.",
+        "source_message_ids": [
+          "10"
+        ],
+        "source_boundary_id": "10_0089",
+        "source_time": "2023-05-17 14:24:02",
+        "record_time": "2026-07-07T19:50:03.289097",
+        "score": 5.75911255031014,
+        "score_components": {
+          "bm25_score": 5.75911255031014,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user is interested in a fictional character named Alaric whose mentor is a wise old engineer named Gaius.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Alaric",
+            "mentor",
+            "Gaius",
+            "engineer"
+          ]
+        },
+        "entities": [
+          "Alaric",
+          "mentor",
+          "Gaius",
+          "engineer"
+        ],
+        "embedding_text": "The user is interested in a fictional character named Alaric whose mentor is a wise old engineer named Gaius.",
+        "source_message_ids": [
+          "6"
+        ],
+        "source_boundary_id": "6_0053",
+        "source_time": "2023-05-08 20:00:00",
+        "record_time": "2026-07-07T19:50:03.288711",
+        "score": 5.6308548063384025,
+        "score_components": {
+          "bm25_score": 5.6308548063384025,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "User started listening to The Book of Mormon soundtrack on May 28, 2023 and enjoys it.",
+        "dimension": {
+          "time": "2023-05-28",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "The Book of Mormon",
+            "soundtrack"
+          ]
+        },
+        "entities": [
+          "The Book of Mormon",
+          "soundtrack"
+        ],
+        "embedding_text": "User started listening to The Book of Mormon soundtrack on May 28, 2023 and enjoys it.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0150",
+        "source_time": "2023-05-27 01:49:00.500000",
+        "record_time": "2026-07-07T19:50:03.289767",
+        "score": 4.781477569591364,
+        "score_components": {
+          "bm25_score": 4.781477569591364,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "profile",
+        "content": "The user has a daily commute where they listen to music.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "daily commute",
+            "listening to music"
+          ]
+        },
+        "entities": [
+          "daily commute",
+          "listening to music"
+        ],
+        "embedding_text": "The user has a daily commute where they listen to music.",
+        "source_message_ids": [
+          "9"
+        ],
+        "source_boundary_id": "9_0076",
+        "source_time": "2023-05-13 16:43:02.500000",
+        "record_time": "2026-07-07T19:50:03.288967",
+        "score": 4.770780814593892,
+        "score_components": {
+          "bm25_score": 4.770780814593892,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "profile",
+        "content": "User believes that social media plays a big role in promoting diversity and representation by amplifying marginalized voices and stories.",
+        "dimension": {
+          "time": "2023-05-22T07:47:02",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "social media",
+            "diversity",
+            "representation",
+            "marginalized voices"
+          ]
+        },
+        "entities": [
+          "social media",
+          "diversity",
+          "representation",
+          "marginalized voices"
+        ],
+        "embedding_text": "User believes that social media plays a big role in promoting diversity and representation by amplifying marginalized voices and stories.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0100",
+        "source_time": "2023-05-22 07:47:00.500000",
+        "record_time": "2026-07-07T19:50:03.289214",
+        "score": 4.5404816067589575,
+        "score_components": {
+          "bm25_score": 4.5404816067589575,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "The user became hooked on the Hamilton soundtrack after several listens and has been listening to it daily on their commute for two weeks as of May 13, 2023.",
+        "dimension": {
+          "time": "2023-04-29 to 2023-05-13",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Hamilton",
+            "soundtrack",
+            "daily commute"
+          ]
+        },
+        "entities": [
+          "Hamilton",
+          "soundtrack",
+          "daily commute"
+        ],
+        "embedding_text": "The user became hooked on the Hamilton soundtrack after several listens and has been listening to it daily on their commute for two weeks as of May 13, 2023.",
+        "source_message_ids": [
+          "9"
+        ],
+        "source_boundary_id": "9_0075",
+        "source_time": "2023-05-13 16:43:02.500000",
+        "record_time": "2026-07-07T19:50:03.288958",
+        "score": 4.389518637170003,
+        "score_components": {
+          "bm25_score": 4.389518637170003,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "The user recently tried a new fajita seasoning in a chicken fajita recipe.",
+        "dimension": {
+          "time": "2023-05-17",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "fajita seasoning",
+            "chicken fajita",
+            "new recipe"
+          ]
+        },
+        "entities": [
+          "fajita seasoning",
+          "chicken fajita",
+          "new recipe"
+        ],
+        "embedding_text": "The user recently tried a new fajita seasoning in a chicken fajita recipe.",
+        "source_message_ids": [
+          "9"
+        ],
+        "source_boundary_id": "9_0081",
+        "source_time": "2023-05-17 08:47:00",
+        "record_time": "2026-07-07T19:50:03.289018",
+        "score": 4.328742269733137,
+        "score_components": {
+          "bm25_score": 4.328742269733137,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "The user plans to try a new lentil soup recipe on 2023-05-23.",
+        "dimension": {
+          "time": "2023-05-23",
+          "location": "",
+          "reason": "",
+          "purpose": "to test a new lentil soup recipe",
+          "keywords": [
+            "lentil soup",
+            "recipe",
+            "experiment",
+            "spices"
+          ]
+        },
+        "entities": [
+          "lentil soup",
+          "recipe",
+          "experiment",
+          "spices"
+        ],
+        "embedding_text": "The user plans to try a new lentil soup recipe on 2023-05-23.",
+        "source_message_ids": [
+          "13"
+        ],
+        "source_boundary_id": "13_0112",
+        "source_time": "2023-05-23 18:09:00.500000",
+        "record_time": "2026-07-07T19:50:03.289348",
+        "score": 3.96462282261492,
+        "score_components": {
+          "bm25_score": 3.96462282261492,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "The user was considering volunteering as an usher at their local theater to watch shows for free and see behind the scenes.",
+        "dimension": {
+          "time": "2023-05-17",
+          "location": "local theater",
+          "reason": "to watch shows for free and see behind the scenes",
+          "purpose": "to watch shows for free and see behind the scenes",
+          "keywords": [
+            "volunteer",
+            "usher",
+            "local theater"
+          ]
+        },
+        "entities": [
+          "volunteer",
+          "usher",
+          "local theater"
+        ],
+        "embedding_text": "The user was considering volunteering as an usher at their local theater to watch shows for free and see behind the scenes.",
+        "source_message_ids": [
+          "10"
+        ],
+        "source_boundary_id": "10_0088",
+        "source_time": "2023-05-17 14:24:01.500000",
+        "record_time": "2026-07-07T19:50:03.289087",
+        "score": 3.780859462645269,
+        "score_components": {
+          "bm25_score": 3.780859462645269,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "profile",
+        "content": "The user is open to new recipe ideas and cooking tips.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "recipe ideas",
+            "cooking tips"
+          ]
+        },
+        "entities": [
+          "recipe ideas",
+          "cooking tips"
+        ],
+        "embedding_text": "The user is open to new recipe ideas and cooking tips.",
+        "source_message_ids": [
+          "9"
+        ],
+        "source_boundary_id": "9_0085",
+        "source_time": "2023-05-17 08:47:02.500000",
+        "record_time": "2026-07-07T19:50:03.289056",
+        "score": 3.580634159732029,
+        "score_components": {
+          "bm25_score": 3.580634159732029,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "The user reported on 2023-05-02 that they get 7-8 hours of sleep per night but still wake up feeling exhausted.",
+        "dimension": {
+          "time": "2023-05-02",
+          "location": "",
+          "reason": "",
+          "purpose": "seeking help for sleep issue",
+          "keywords": [
+            "sleep",
+            "exhaustion",
+            "7-8 hours",
+            "fatigue"
+          ]
+        },
+        "entities": [
+          "sleep",
+          "exhaustion",
+          "7-8 hours",
+          "fatigue"
+        ],
+        "embedding_text": "The user reported on 2023-05-02 that they get 7-8 hours of sleep per night but still wake up feeling exhausted.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0018",
+        "source_time": "2023-04-29 17:40:02",
+        "record_time": "2026-07-07T19:50:03.288117",
+        "score": 3.504461868880496,
+        "score_components": {
+          "bm25_score": 3.504461868880496,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "User plans to try a new coffee shop downtown.",
+        "dimension": {
+          "time": "",
+          "location": "downtown",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "coffee shop",
+            "downtown"
+          ]
+        },
+        "entities": [
+          "coffee shop",
+          "downtown"
+        ],
+        "embedding_text": "User plans to try a new coffee shop downtown.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0102",
+        "source_time": "2023-05-22 07:47:01.500000",
+        "record_time": "2026-07-07T19:50:03.289236",
+        "score": 3.4974544440901245,
+        "score_components": {
+          "bm25_score": 3.4974544440901245,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      }
+    ]
+  },
+  "structured": {
+    "mapped_query_analysis": {
+      "query_text": "When the user just started their new role as Software Engineer Manager, how many engineers did they lead?",
+      "rewrite": "When the user just started their new role as Software Engineer Manager, how many engineers did they lead?",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "When the user just started their new role as Software Engineer Manager, how many engineers did they lead?",
+      "target_memory_types": [
+        "episodic",
+        "fact"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "engineers",
+        "lead",
+        "Software Engineer Manager"
+      ],
+      "canonical_text": "When the user just started their new role as Software Engineer Manager, how many engineers did they lead?"
+    },
+    "top_records": [
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user is a Senior Software Engineer leading a team of 4 engineers.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Senior Software Engineer",
+            "team lead",
+            "4 engineers"
+          ]
+        },
+        "entities": [
+          "Senior Software Engineer",
+          "team lead",
+          "4 engineers"
+        ],
+        "embedding_text": "The user is a Senior Software Engineer leading a team of 4 engineers.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0117",
+        "source_time": "2023-05-24 09:15:00",
+        "record_time": "2026-07-07T19:50:03.289405",
+        "score": 0.8222222222222223,
+        "structural_score": 0.8222222222222223,
+        "score_components": {
+          "score": 0.8222222222222223,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.6666666666666666,
+          "keyword_token_overlap_score": 0.8,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.6666666666666666,
+            "keyword_token_overlap": 0.8
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user is a Senior Software Engineer leading a team of 4 engineers. | Senior Software Engineer | team lead | 4 engineers | Senior Software Engineer | team lead | 4 engineers"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "User leads a team of five engineers.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "team lead",
+            "five engineers"
+          ]
+        },
+        "entities": [
+          "team lead",
+          "five engineers"
+        ],
+        "embedding_text": "User leads a team of five engineers.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0138",
+        "source_time": "2023-05-27 10:13:00.500000",
+        "record_time": "2026-07-07T19:50:03.289642",
+        "score": 0.6888888888888889,
+        "structural_score": 0.6888888888888889,
+        "score_components": {
+          "score": 0.6888888888888889,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.6666666666666666,
+          "keyword_token_overlap_score": 0.4,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.6666666666666666,
+            "keyword_token_overlap": 0.4
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User leads a team of five engineers. | team lead | five engineers | team lead | five engineers"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "The user plans to organize a team outing for 5 people, including 4 engineers and manager Rachel.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "team building",
+          "purpose": "team building",
+          "keywords": [
+            "team outing",
+            "4 engineers",
+            "Rachel"
+          ]
+        },
+        "entities": [
+          "team outing",
+          "4 engineers",
+          "Rachel"
+        ],
+        "embedding_text": "The user plans to organize a team outing for 5 people, including 4 engineers and manager Rachel.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0119",
+        "source_time": "2023-05-25 12:30:00",
+        "record_time": "2026-07-07T19:50:03.289426",
+        "score": 0.5777777777777778,
+        "structural_score": 0.5777777777777778,
+        "score_components": {
+          "score": 0.5777777777777778,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.3333333333333333,
+          "keyword_token_overlap_score": 0.4,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.3333333333333333,
+            "keyword_token_overlap": 0.4
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to organize a team outing for 5 people, including 4 engineers and manager Rachel. | team outing | 4 engineers | Rachel | team building | team building | team outing | 4 engineers | Rachel"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "User is a Senior Software Engineer.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Senior Software Engineer"
+          ]
+        },
+        "entities": [
+          "Senior Software Engineer"
+        ],
+        "embedding_text": "User is a Senior Software Engineer.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0137",
+        "source_time": "2023-05-27 10:13:00.500000",
+        "record_time": "2026-07-07T19:50:03.289632",
+        "score": 0.46666666666666673,
+        "structural_score": 0.46666666666666673,
+        "score_components": {
+          "score": 0.46666666666666673,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.4,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.4
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is a Senior Software Engineer. | Senior Software Engineer | Senior Software Engineer"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "User leads a team.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "team",
+            "leadership"
+          ]
+        },
+        "entities": [
+          "team",
+          "leadership"
+        ],
+        "embedding_text": "User leads a team.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0143",
+        "source_time": "2023-05-27 10:13:00",
+        "record_time": "2026-07-07T19:50:03.289695",
+        "score": 0.4444444444444445,
+        "structural_score": 0.4444444444444445,
+        "score_components": {
+          "score": 0.4444444444444445,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.3333333333333333,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.3333333333333333,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User leads a team. | team | leadership | team | leadership"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user is interested in a fictional character named Alaric whose mentor is a wise old engineer named Gaius.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Alaric",
+            "mentor",
+            "Gaius",
+            "engineer"
+          ]
+        },
+        "entities": [
+          "Alaric",
+          "mentor",
+          "Gaius",
+          "engineer"
+        ],
+        "embedding_text": "The user is interested in a fictional character named Alaric whose mentor is a wise old engineer named Gaius.",
+        "source_message_ids": [
+          "6"
+        ],
+        "source_boundary_id": "6_0053",
+        "source_time": "2023-05-08 20:00:00",
+        "record_time": "2026-07-07T19:50:03.288711",
+        "score": 0.4,
+        "structural_score": 0.4,
+        "score_components": {
+          "score": 0.4,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.2,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.2
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user is interested in a fictional character named Alaric whose mentor is a wise old engineer named Gaius. | Alaric | mentor | Gaius | engineer | Alaric | mentor | Gaius | engineer"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user's manager is Rachel.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Rachel",
+            "manager"
+          ]
+        },
+        "entities": [
+          "Rachel",
+          "manager"
+        ],
+        "embedding_text": "The user's manager is Rachel.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0118",
+        "source_time": "2023-05-24 09:15:00.500000",
+        "record_time": "2026-07-07T19:50:03.289415",
+        "score": 0.4,
+        "structural_score": 0.4,
+        "score_components": {
+          "score": 0.4,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.2,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.2
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user's manager is Rachel. | Rachel | manager | Rachel | manager"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "The user plans to attend an industry conference in the next quarter (Q3 2023) to learn about top trends in CRM implementation.",
+        "dimension": {
+          "time": "2023-07 to 2023-09",
+          "location": "",
+          "reason": "",
+          "purpose": "to learn about top trends in CRM implementation",
+          "keywords": [
+            "industry conference",
+            "CRM trends",
+            "Q3 2023"
+          ]
+        },
+        "entities": [
+          "industry conference",
+          "CRM trends",
+          "Q3 2023"
+        ],
+        "embedding_text": "The user plans to attend an industry conference in the next quarter (Q3 2023) to learn about top trends in CRM implementation.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0001",
+        "source_time": "2023-04-26 12:20:00",
+        "record_time": "2026-07-07T19:50:03.287892",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to attend an industry conference in the next quarter (Q3 2023) to learn about top trends in CRM implementation. | industry conference | CRM trends | Q3 2023 | 2023-07 to 2023-09 | to learn about top trends in CRM implementation | industry conference | CRM trends | Q3 2023"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user is a Senior Business Analyst at XYZ Corporation.",
+        "dimension": {
+          "time": "",
+          "location": "XYZ Corporation",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Senior Business Analyst",
+            "XYZ Corporation"
+          ]
+        },
+        "entities": [
+          "Senior Business Analyst",
+          "XYZ Corporation"
+        ],
+        "embedding_text": "The user is a Senior Business Analyst at XYZ Corporation.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0002",
+        "source_time": "2023-04-26 12:20:02",
+        "record_time": "2026-07-07T19:50:03.287909",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user is a Senior Business Analyst at XYZ Corporation. | Senior Business Analyst | XYZ Corporation | XYZ Corporation | Senior Business Analyst | XYZ Corporation"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user has experience implementing and customizing CRM solutions.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "CRM implementation",
+            "CRM customization",
+            "experience"
+          ]
+        },
+        "entities": [
+          "CRM implementation",
+          "CRM customization",
+          "experience"
+        ],
+        "embedding_text": "The user has experience implementing and customizing CRM solutions.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0003",
+        "source_time": "2023-04-26 12:20:02",
+        "record_time": "2026-07-07T19:50:03.287923",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user has experience implementing and customizing CRM solutions. | CRM implementation | CRM customization | experience | CRM implementation | CRM customization | experience"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "XYZ Corporation uses Microsoft Dynamics 365 as its CRM system.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "XYZ Corporation",
+            "Microsoft Dynamics 365",
+            "CRM system"
+          ]
+        },
+        "entities": [
+          "XYZ Corporation",
+          "Microsoft Dynamics 365",
+          "CRM system"
+        ],
+        "embedding_text": "XYZ Corporation uses Microsoft Dynamics 365 as its CRM system.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0004",
+        "source_time": "2023-04-26 12:20:02",
+        "record_time": "2026-07-07T19:50:03.287936",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "XYZ Corporation uses Microsoft Dynamics 365 as its CRM system. | XYZ Corporation | Microsoft Dynamics 365 | CRM system | XYZ Corporation | Microsoft Dynamics 365 | CRM system"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "XYZ Corporation has a large client base.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "XYZ Corporation",
+            "large client base"
+          ]
+        },
+        "entities": [
+          "XYZ Corporation",
+          "large client base"
+        ],
+        "embedding_text": "XYZ Corporation has a large client base.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0005",
+        "source_time": "2023-04-26 12:20:00.500000",
+        "record_time": "2026-07-07T19:50:03.287948",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "XYZ Corporation has a large client base. | XYZ Corporation | large client base | XYZ Corporation | large client base"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "XYZ Corporation is looking to automate its customer support processes.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "XYZ Corporation",
+            "customer support automation"
+          ]
+        },
+        "entities": [
+          "XYZ Corporation",
+          "customer support automation"
+        ],
+        "embedding_text": "XYZ Corporation is looking to automate its customer support processes.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0006",
+        "source_time": "2023-04-26 12:20:00.500000",
+        "record_time": "2026-07-07T19:50:03.287960",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "XYZ Corporation is looking to automate its customer support processes. | XYZ Corporation | customer support automation | XYZ Corporation | customer support automation"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "XYZ Corporation deals with sensitive customer data.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "XYZ Corporation",
+            "sensitive customer data"
+          ]
+        },
+        "entities": [
+          "XYZ Corporation",
+          "sensitive customer data"
+        ],
+        "embedding_text": "XYZ Corporation deals with sensitive customer data.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0007",
+        "source_time": "2023-04-26 12:20:02.500000",
+        "record_time": "2026-07-07T19:50:03.287982",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "XYZ Corporation deals with sensitive customer data. | XYZ Corporation | sensitive customer data | XYZ Corporation | sensitive customer data"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "User bought a necklace for her sister's birthday from a new jewelry store downtown for $50 and a $20 gift card from her favorite clothing store.",
+        "dimension": {
+          "time": "",
+          "location": "downtown jewelry store, favorite clothing store",
+          "reason": "sister's birthday",
+          "purpose": "gift for sister",
+          "keywords": [
+            "necklace",
+            "sister",
+            "birthday",
+            "jewelry store",
+            "downtown",
+            "gift card",
+            "clothing store"
+          ]
+        },
+        "entities": [
+          "necklace",
+          "sister",
+          "birthday",
+          "jewelry store",
+          "downtown",
+          "gift card",
+          "clothing store"
+        ],
+        "embedding_text": "User bought a necklace for her sister's birthday from a new jewelry store downtown for $50 and a $20 gift card from her favorite clothing store.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0013",
+        "source_time": "2023-04-27 20:30:01",
+        "record_time": "2026-07-07T19:50:03.288058",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User bought a necklace for her sister's birthday from a new jewelry store downtown for $50 and a $20 gift card from her favorite clothing store. | necklace | sister | birthday | jewelry store | downtown | gift card | clothing store | downtown jewelry store, favorite clothing store | sister's birthday | gift for sister | necklace | sister | birthday | jewelry store | downtown | gift card | clothing store"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "User helped her mom with grocery shopping for her visiting grandparents, buying snacks and toiletries that added $20 to the bill.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "grandparents visiting",
+          "purpose": "assist mom, buy snacks and toiletries for grandparents",
+          "keywords": [
+            "grocery shopping",
+            "mom",
+            "grandparents",
+            "visiting",
+            "snacks",
+            "toiletries",
+            "$20"
+          ]
+        },
+        "entities": [
+          "grocery shopping",
+          "mom",
+          "grandparents",
+          "visiting",
+          "snacks",
+          "toiletries",
+          "$20"
+        ],
+        "embedding_text": "User helped her mom with grocery shopping for her visiting grandparents, buying snacks and toiletries that added $20 to the bill.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0014",
+        "source_time": "2023-04-27 20:30:01.500000",
+        "record_time": "2026-07-07T19:50:03.288070",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User helped her mom with grocery shopping for her visiting grandparents, buying snacks and toiletries that added $20 to the bill. | grocery shopping | mom | grandparents | visiting | snacks | toiletries | $20 | grandparents visiting | assist mom, buy snacks and toiletries for grandparents | grocery shopping | mom | grandparents | visiting | snacks | toiletries | $20"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "User bought a onesie for $10 and a set of baby toys for $25 from Buy Buy Baby for her best friend's baby shower.",
+        "dimension": {
+          "time": "",
+          "location": "Buy Buy Baby",
+          "reason": "best friend's baby shower",
+          "purpose": "gift for baby shower",
+          "keywords": [
+            "onesie",
+            "baby toys",
+            "Buy Buy Baby",
+            "baby shower",
+            "best friend"
+          ]
+        },
+        "entities": [
+          "onesie",
+          "baby toys",
+          "Buy Buy Baby",
+          "baby shower",
+          "best friend"
+        ],
+        "embedding_text": "User bought a onesie for $10 and a set of baby toys for $25 from Buy Buy Baby for her best friend's baby shower.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0015",
+        "source_time": "2023-04-27 20:30:02",
+        "record_time": "2026-07-07T19:50:03.288082",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User bought a onesie for $10 and a set of baby toys for $25 from Buy Buy Baby for her best friend's baby shower. | onesie | baby toys | Buy Buy Baby | baby shower | best friend | Buy Buy Baby | best friend's baby shower | gift for baby shower | onesie | baby toys | Buy Buy Baby | baby shower | best friend"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "The user stopped by Target on 2023-04-29 to buy a baby blanket and a book for their best friend's baby shower, costing around $15.",
+        "dimension": {
+          "time": "2023-04-29",
+          "location": "Target",
+          "reason": "",
+          "purpose": "for best friend's baby shower",
+          "keywords": [
+            "Target",
+            "baby blanket",
+            "book",
+            "baby shower",
+            "$15"
+          ]
+        },
+        "entities": [
+          "Target",
+          "baby blanket",
+          "book",
+          "baby shower",
+          "$15"
+        ],
+        "embedding_text": "The user stopped by Target on 2023-04-29 to buy a baby blanket and a book for their best friend's baby shower, costing around $15.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0016",
+        "source_time": "2023-04-29 17:40:01",
+        "record_time": "2026-07-07T19:50:03.288093",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user stopped by Target on 2023-04-29 to buy a baby blanket and a book for their best friend's baby shower, costing around $15. | Target | baby blanket | book | baby shower | $15 | 2023-04-29 | Target | for best friend's baby shower | Target | baby blanket | book | baby shower | $15"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "The user reported on 2023-05-02 that they get 7-8 hours of sleep per night but still wake up feeling exhausted.",
+        "dimension": {
+          "time": "2023-05-02",
+          "location": "",
+          "reason": "",
+          "purpose": "seeking help for sleep issue",
+          "keywords": [
+            "sleep",
+            "exhaustion",
+            "7-8 hours",
+            "fatigue"
+          ]
+        },
+        "entities": [
+          "sleep",
+          "exhaustion",
+          "7-8 hours",
+          "fatigue"
+        ],
+        "embedding_text": "The user reported on 2023-05-02 that they get 7-8 hours of sleep per night but still wake up feeling exhausted.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0018",
+        "source_time": "2023-04-29 17:40:02",
+        "record_time": "2026-07-07T19:50:03.288117",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user reported on 2023-05-02 that they get 7-8 hours of sleep per night but still wake up feeling exhausted. | sleep | exhaustion | 7-8 hours | fatigue | 2023-05-02 | seeking help for sleep issue | sleep | exhaustion | 7-8 hours | fatigue"
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user has no underlying medical conditions and does not take any medications.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "medical conditions",
+            "medications",
+            "user health"
+          ]
+        },
+        "entities": [
+          "medical conditions",
+          "medications",
+          "user health"
+        ],
+        "embedding_text": "The user has no underlying medical conditions and does not take any medications.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0019",
+        "source_time": "2023-05-02 04:15:00.500000",
+        "record_time": "2026-07-07T19:50:03.288128",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user has no underlying medical conditions and does not take any medications. | medical conditions | medications | user health | medical conditions | medications | user health"
+        }
+      }
+    ]
+  },
+  "minilm": {
+    "mapped_query_analysis": {
+      "query_text": "When the user just started their new role as Software Engineer Manager, how many engineers did they lead?"
+    },
+    "top_records": [
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user is a Senior Software Engineer leading a team of 4 engineers.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Senior Software Engineer",
+            "team lead",
+            "4 engineers"
+          ]
+        },
+        "entities": [
+          "Senior Software Engineer",
+          "team lead",
+          "4 engineers"
+        ],
+        "embedding_text": "The user is a Senior Software Engineer leading a team of 4 engineers.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0117",
+        "source_time": "2023-05-24 09:15:00",
+        "record_time": "2026-07-07T19:50:03.289405",
+        "score": 0.6841876935267841,
+        "score_components": {
+          "dense_cosine_score": 0.6841876935267841,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "User leads a team of five engineers.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "team lead",
+            "five engineers"
+          ]
+        },
+        "entities": [
+          "team lead",
+          "five engineers"
+        ],
+        "embedding_text": "User leads a team of five engineers.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0138",
+        "source_time": "2023-05-27 10:13:00.500000",
+        "record_time": "2026-07-07T19:50:03.289642",
+        "score": 0.6538248492059127,
+        "score_components": {
+          "dense_cosine_score": 0.6538248492059127,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "User is a Senior Software Engineer.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Senior Software Engineer"
+          ]
+        },
+        "entities": [
+          "Senior Software Engineer"
+        ],
+        "embedding_text": "User is a Senior Software Engineer.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0137",
+        "source_time": "2023-05-27 10:13:00.500000",
+        "record_time": "2026-07-07T19:50:03.289632",
+        "score": 0.587508231791788,
+        "score_components": {
+          "dense_cosine_score": 0.587508231791788,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "User leads a team.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "team",
+            "leadership"
+          ]
+        },
+        "entities": [
+          "team",
+          "leadership"
+        ],
+        "embedding_text": "User leads a team.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0143",
+        "source_time": "2023-05-27 10:13:00",
+        "record_time": "2026-07-07T19:50:03.289695",
+        "score": 0.5035280797692099,
+        "score_components": {
+          "dense_cosine_score": 0.5035280797692099,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "The user plans to organize a team outing for 5 people, including 4 engineers and manager Rachel.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "team building",
+          "purpose": "team building",
+          "keywords": [
+            "team outing",
+            "4 engineers",
+            "Rachel"
+          ]
+        },
+        "entities": [
+          "team outing",
+          "4 engineers",
+          "Rachel"
+        ],
+        "embedding_text": "The user plans to organize a team outing for 5 people, including 4 engineers and manager Rachel.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0119",
+        "source_time": "2023-05-25 12:30:00",
+        "record_time": "2026-07-07T19:50:03.289426",
+        "score": 0.41252988679118696,
+        "score_components": {
+          "dense_cosine_score": 0.41252988679118696,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user is a Senior Business Analyst at XYZ Corporation.",
+        "dimension": {
+          "time": "",
+          "location": "XYZ Corporation",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Senior Business Analyst",
+            "XYZ Corporation"
+          ]
+        },
+        "entities": [
+          "Senior Business Analyst",
+          "XYZ Corporation"
+        ],
+        "embedding_text": "The user is a Senior Business Analyst at XYZ Corporation.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0002",
+        "source_time": "2023-04-26 12:20:02",
+        "record_time": "2026-07-07T19:50:03.287909",
+        "score": 0.39808357695005836,
+        "score_components": {
+          "dense_cosine_score": 0.39808357695005836,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "profile",
+        "content": "User enjoys leading a team and is excited about the growth of the team members.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "enjoys leading",
+            "team growth"
+          ]
+        },
+        "entities": [
+          "enjoys leading",
+          "team growth"
+        ],
+        "embedding_text": "User enjoys leading a team and is excited about the growth of the team members.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0139",
+        "source_time": "2023-05-27 10:13:00.500000",
+        "record_time": "2026-07-07T19:50:03.289651",
+        "score": 0.38045313581464174,
+        "score_components": {
+          "dense_cosine_score": 0.38045313581464174,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user's manager is Rachel.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Rachel",
+            "manager"
+          ]
+        },
+        "entities": [
+          "Rachel",
+          "manager"
+        ],
+        "embedding_text": "The user's manager is Rachel.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0118",
+        "source_time": "2023-05-24 09:15:00.500000",
+        "record_time": "2026-07-07T19:50:03.289415",
+        "score": 0.358812056714524,
+        "score_components": {
+          "dense_cosine_score": 0.358812056714524,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user is interested in a fictional character named Alaric whose mentor is a wise old engineer named Gaius.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Alaric",
+            "mentor",
+            "Gaius",
+            "engineer"
+          ]
+        },
+        "entities": [
+          "Alaric",
+          "mentor",
+          "Gaius",
+          "engineer"
+        ],
+        "embedding_text": "The user is interested in a fictional character named Alaric whose mentor is a wise old engineer named Gaius.",
+        "source_message_ids": [
+          "6"
+        ],
+        "source_boundary_id": "6_0053",
+        "source_time": "2023-05-08 20:00:00",
+        "record_time": "2026-07-07T19:50:03.288711",
+        "score": 0.2992710583368347,
+        "score_components": {
+          "dense_cosine_score": 0.2992710583368347,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "User is based in the San Francisco Bay Area.",
+        "dimension": {
+          "time": "",
+          "location": "San Francisco Bay Area",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "San Francisco Bay Area"
+          ]
+        },
+        "entities": [
+          "San Francisco Bay Area"
+        ],
+        "embedding_text": "User is based in the San Francisco Bay Area.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0141",
+        "source_time": "2023-05-27 10:13:01",
+        "record_time": "2026-07-07T19:50:03.289672",
+        "score": 0.2945342132573373,
+        "score_components": {
+          "dense_cosine_score": 0.2945342132573373,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user has experience implementing and customizing CRM solutions.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "CRM implementation",
+            "CRM customization",
+            "experience"
+          ]
+        },
+        "entities": [
+          "CRM implementation",
+          "CRM customization",
+          "experience"
+        ],
+        "embedding_text": "The user has experience implementing and customizing CRM solutions.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0003",
+        "source_time": "2023-04-26 12:20:02",
+        "record_time": "2026-07-07T19:50:03.287923",
+        "score": 0.28685959539458944,
+        "score_components": {
+          "dense_cosine_score": 0.28685959539458944,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user is a solicitor and construction lawyer with more than 10 years of experience specializing in construction law, representing homeowners and builders in NSW, Australia, and advising on clause 27 of the HIA NSW Lump Sum Contract.",
+        "dimension": {
+          "time": "2023-05-31",
+          "location": "NSW, Australia",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "solicitor",
+            "construction lawyer",
+            "10 years experience",
+            "construction law",
+            "NSW Australia",
+            "HIA NSW Lump Sum Contract",
+            "clause 27"
+          ]
+        },
+        "entities": [
+          "solicitor",
+          "construction lawyer",
+          "10 years experience",
+          "construction law",
+          "NSW Australia",
+          "HIA NSW Lump Sum Contract",
+          "clause 27"
+        ],
+        "embedding_text": "The user is a solicitor and construction lawyer with more than 10 years of experience specializing in construction law, representing homeowners and builders in NSW, Australia, and advising on clause 27 of the HIA NSW Lump Sum Contract.",
+        "source_message_ids": [
+          "20"
+        ],
+        "source_boundary_id": "20_0161",
+        "source_time": "2023-05-31 12:16:01.500000",
+        "record_time": "2026-07-07T19:50:03.289887",
+        "score": 0.276154377926006,
+        "score_components": {
+          "dense_cosine_score": 0.276154377926006,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "The user plans to contact Samantha about a Corporate Team Building Package for 6 people.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "to inquire about corporate team building package",
+          "purpose": "to get discount or package",
+          "keywords": [
+            "Samantha",
+            "Corporate Team Building Package",
+            "6 people"
+          ]
+        },
+        "entities": [
+          "Samantha",
+          "Corporate Team Building Package",
+          "6 people"
+        ],
+        "embedding_text": "The user plans to contact Samantha about a Corporate Team Building Package for 6 people.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0122",
+        "source_time": "2023-05-25 12:30:01.500000",
+        "record_time": "2026-07-07T19:50:03.289466",
+        "score": 0.2736758262895766,
+        "score_components": {
+          "dense_cosine_score": 0.2736758262895766,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "The user plans to attend an industry conference in the next quarter (Q3 2023) to learn about top trends in CRM implementation.",
+        "dimension": {
+          "time": "2023-07 to 2023-09",
+          "location": "",
+          "reason": "",
+          "purpose": "to learn about top trends in CRM implementation",
+          "keywords": [
+            "industry conference",
+            "CRM trends",
+            "Q3 2023"
+          ]
+        },
+        "entities": [
+          "industry conference",
+          "CRM trends",
+          "Q3 2023"
+        ],
+        "embedding_text": "The user plans to attend an industry conference in the next quarter (Q3 2023) to learn about top trends in CRM implementation.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0001",
+        "source_time": "2023-04-26 12:20:00",
+        "record_time": "2026-07-07T19:50:03.287892",
+        "score": 0.26306402737050444,
+        "score_components": {
+          "dense_cosine_score": 0.26306402737050444,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "User is planning a team outing with a group hike for six people.",
+        "dimension": {
+          "time": "2023-05-27",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "team outing",
+            "group hike",
+            "six people"
+          ]
+        },
+        "entities": [
+          "team outing",
+          "group hike",
+          "six people"
+        ],
+        "embedding_text": "User is planning a team outing with a group hike for six people.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0140",
+        "source_time": "2023-05-27 10:13:00.500000",
+        "record_time": "2026-07-07T19:50:03.289662",
+        "score": 0.258161250980117,
+        "score_components": {
+          "dense_cosine_score": 0.258161250980117,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "episodic",
+        "content": "User learned to make homemade pasta from scratch on May 21, 2023.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "homemade pasta",
+            "cooking"
+          ]
+        },
+        "entities": [
+          "homemade pasta",
+          "cooking"
+        ],
+        "embedding_text": "User learned to make homemade pasta from scratch on May 21, 2023.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0146",
+        "source_time": "2023-05-27 10:13:01.500000",
+        "record_time": "2026-07-07T19:50:03.289726",
+        "score": 0.2580437439302579,
+        "score_components": {
+          "dense_cosine_score": 0.2580437439302579,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "profile",
+        "content": "User is impressed by grand production values of shows like The Great and Bridgerton.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "grand production values",
+            "The Great",
+            "Bridgerton"
+          ]
+        },
+        "entities": [
+          "grand production values",
+          "The Great",
+          "Bridgerton"
+        ],
+        "embedding_text": "User is impressed by grand production values of shows like The Great and Bridgerton.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0153",
+        "source_time": "2023-05-27 01:49:02",
+        "record_time": "2026-07-07T19:50:03.289800",
+        "score": 0.24828071059988127,
+        "score_components": {
+          "dense_cosine_score": 0.24828071059988127,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "The user is a university instructor teaching a Public Policy Analysis course to second-year Bachelor's degree students.",
+        "dimension": {
+          "time": "2023-05-19",
+          "location": "university",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Public Policy Analysis",
+            "course",
+            "instructor",
+            "second-year",
+            "Bachelor's degree"
+          ]
+        },
+        "entities": [
+          "Public Policy Analysis",
+          "course",
+          "instructor",
+          "second-year",
+          "Bachelor's degree"
+        ],
+        "embedding_text": "The user is a university instructor teaching a Public Policy Analysis course to second-year Bachelor's degree students.",
+        "source_message_ids": [
+          "10"
+        ],
+        "source_boundary_id": "10_0091",
+        "source_time": "2023-05-19 12:40:00",
+        "record_time": "2026-07-07T19:50:03.289120",
+        "score": 0.24518003699910002,
+        "score_components": {
+          "dense_cosine_score": 0.24518003699910002,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "fact",
+        "content": "User owns a road bike.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "road bike"
+          ]
+        },
+        "entities": [
+          "road bike"
+        ],
+        "embedding_text": "User owns a road bike.",
+        "source_message_ids": [
+          "11"
+        ],
+        "source_boundary_id": "11_0092",
+        "source_time": "2023-05-17 14:24:02",
+        "record_time": "2026-07-07T19:50:03.289131",
+        "score": 0.2428421769180938,
+        "score_components": {
+          "dense_cosine_score": 0.2428421769180938,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0006_031748ae_abs",
+        "memory_type": "profile",
+        "content": "The user is a beginner at recording audio and video for instruments.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "beginner",
+            "recording audio",
+            "recording video"
+          ]
+        },
+        "entities": [
+          "beginner",
+          "recording audio",
+          "recording video"
+        ],
+        "embedding_text": "The user is a beginner at recording audio and video for instruments.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0131",
+        "source_time": "2023-05-25 17:40:00",
+        "record_time": "2026-07-07T19:50:03.289570",
+        "score": 0.23387908679655459,
+        "score_components": {
+          "dense_cosine_score": 0.23387908679655459,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "aa154947-568c-4aa5-8450-58b12399c98e",
+  "object": "chat.completion",
+  "created": 1783356352,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"The user received a piece of jewelry last Saturday, which was on 2023-03-04, from someone.\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"jewelry\"],\n    \"time\": \"on 2023-03-04\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"keywords\"\n}",
+        "reasoning_content": "We need to parse the question: \"I received a piece of jewelry last Saturday from whom?\" Given question date is 2023/03/09 (Thu) 15:47. Last Saturday: March 4, 2023? Actually, 2023/03/09 is Thursday. Last Saturday would be March 4, 2023 (since March 5 is Sunday, March 4 is Saturday). So time constraint: on 2023-03-04. The question asks \"from whom\" – so answer_dim is \"keywords\" (the person who gave it). query_anchor: rewrite with \"the user\". need_assistant_context: false, no mention of previous conversation. dimension: target_memory_type: \"episodic\" because it's a specific event of receiving jewelry. keywords: \"jewelry\"; maybe also \"received\" but keep short. time: \"on 2023-03-04\". location: not explicit. answer_dim: \"keywords\" because asking for the person."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 686,
+    "completion_tokens": 310,
+    "total_tokens": 996,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 211
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 46
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

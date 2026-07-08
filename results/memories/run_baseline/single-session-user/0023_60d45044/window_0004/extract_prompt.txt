@@ -1,0 +1,137 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-22T11:24:02, Mon] 1.User: Okay, the diamond planet sounds cool, but can we actually go there and get some diamonds? Or is it just a hypothetical idea?
+[2023-05-22T11:24:02.500000, Mon] 2.User: Well, that's disappointing. I was already planning my trip to Lucy to get some of those diamond riches. Do you have any other exciting space facts for me, or are they all hypothetical theories?
+[2023-05-22T14:15:00, Mon] 3.User: I'm planning another road trip and need some help with route planning. I've been using a mapping app, but I'd like to get some recommendations on the best scenic routes and stops along the way. By the way, I've had some great experiences on my recent road trips - like the time I drove to Yellowstone and stayed overnight at a motel in Bozeman, Montana, and then camped at Grant Village Campground inside the park.
+[2023-05-22T14:15:00.500000, Mon] 4.User: I'm planning to drive along the Pacific Coast Highway in California, and I'm thinking of starting from San Francisco and ending in San Diego. I've got about 5 days for the trip. I'm interested in scenic coastal routes, beaches, and maybe some wine country stops. I've had some great experiences with hotels and condos in the past, like the time I stopped overnight at a hotel in Flagstaff, Arizona, and then spent three nights at a beachfront condo in La Jolla.
+[2023-05-22T14:15:01, Mon] 5.User: That sounds like a great itinerary! I'm especially excited about the wine country stops. Speaking of wine country, I've been thinking of visiting Napa Valley or Sonoma County during this trip. Do you think I could fit in a day trip to Napa Valley from Solvang, or would that be too much driving?
+[2023-05-22T14:15:01.500000, Mon] 6.User: I think I'll stick with the Santa Barbara County wine country. It sounds like a more relaxing and convenient option. Can you recommend a few wineries that are close to Solvang and offer a good wine and food pairing experience?
+[2023-05-22T14:15:02, Mon] 7.User: I think I'll visit Fess Parker Winery. I've heard great things about their Pinot Noir. By the way, speaking of great experiences, I had an amazing time on my last road trip to San Diego with my family. We stopped overnight at a hotel in Flagstaff, Arizona, and then spent three nights at a beachfront condo in La Jolla. The condo had an amazing view of the ocean, and we even spotted some dolphins from the balcony!
+[2023-05-22T14:15:02.500000, Mon] 8.User: I think I'll definitely book a private tour and tasting at Fess Parker Winery. That sounds like a fantastic experience. My favorite part of the San Diego trip was probably the surfing lessons we took in Pacific Beach. My kids loved it, and it was great to see them having so much fun in the ocean.
+[2023-05-23T07:46:00, Tue] 9.User: I'm planning a dinner party next month and I want to make some delicious BBQ ribs. Can you give me some tips on how to achieve that perfect smoke ring? By the way, I just grilled some chicken breasts in my backyard today for a family BBQ, and they turned out amazing!
+[2023-05-23T07:46:00.500000, Tue] 10.User: I've been watching some YouTube videos on BBQ and I saw this technique of drizzling honey on top of the pork during the last 30 minutes of cooking to make it tender. Do you think that would work for ribs as well?
+[2023-05-23T07:46:01, Tue] 11.User: I was thinking of experimenting with different types of wood for smoking, like hickory or applewood. Do you think one type of wood is better suited for ribs than others?
+[2023-05-23T07:46:01.500000, Tue] 12.User: I've been trying out different BBQ recipes and techniques, and I recently invited my family over for a backyard BBQ where I grilled some amazing chicken breasts. I marinated them in olive oil, garlic, and paprika, and they turned out so good! My mom loved them, and my dad even asked for the recipe.
+[2023-05-23T07:46:02, Tue] 13.User: Yeah, I also made some coleslaw on the side, which my sister brought, and it paired really well with the smoky flavor of the chicken. As for the grilling technique, I used a combination of direct and indirect heat to get those nice grill marks. I grilled the chicken breasts over direct heat for about 5-7 minutes per side to get the sear, and then finished them off over indirect heat to cook them through. It worked out perfectly!
+[2023-05-23T07:46:02.500000, Tue] 14.User: I'm using a Weber gas grill for my backyard BBQs, and it's been serving me well so far. The temperature control is pretty precise, and it's easy to clean and maintain.
+
+As for future BBQ plans, I've actually been wanting to try my hand at smoking meats. I've heard great things about the flavor and tenderness you can achieve with low-and-slow cooking. I've been watching some YouTube videos and reading up on different techniques, and I think I'm ready to give it a shot. I've even been eyeing a new smoker for my backyard, maybe a pellet grill or an offset smoker.
+
+I've also been interested in trying out different types of wood for added flavor. I've heard that hickory and applewood are popular choices for smoking, but I'm not sure which one to start with. Do you have any recommendations or tips for a beginner like me?
+[2023-05-23T15:01:00, Tue] 15.User: Can you explain the process behind how the sound engineer mixed the different vocal tracks to create a cohesive sound for the chorus?

@@ -1,0 +1,32 @@
+{
+  "id": "8ccf1a19-cc59-4cb6-9743-9194fd581eca",
+  "object": "chat.completion",
+  "created": 1783427885,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\": \"WRONG\"}",
+        "reasoning_content": "We need to evaluate if the generated answer matches the gold answer. Gold answer lists four terms: 'sexual fixations', 'problematic sexual behaviors', 'sexual impulsivity', and 'compulsive sexuality'. Generated answer says \"I don't know.\" That is clearly not the correct answer. So label WRONG."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 447,
+    "completion_tokens": 71,
+    "total_tokens": 518,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 63
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 191
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "be10a531-7b4f-41ea-9b9c-03de27b73d1c",
+  "object": "chat.completion",
+  "created": 1783356380,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"What play did the user attend at the local community theater?\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"play\", \"local community theater\"],\n    \"time\": \"\",\n    \"location\": \"local community theater\"\n  },\n  \"answer_dim\": \"keywords\"\n}",
+        "reasoning_content": "We need to parse the question: \"What play did I attend at the local community theater?\" Question date is 2023/05/30. No mention of previous conversation or assistant context. So need_assistant_context false. The question asks about a specific play (event) attended at a location. So target_memory_type should be \"episodic\" (specific event). Keywords: \"play\", \"local community theater\". Time: no explicit time constraint, but it's about an event that happened in the past, but no specific date mentioned. So time: \"\". Location: explicit \"local community theater\" - that's a location constraint, so fill location: \"local community theater\". Answer_dim: the question asks \"what play\", so it's asking for the content of the memory (the name of the play). So answer_dim should be \"keywords\" or \"content\"? The field description says answer_dim can be \"content\" for fact/event/profile content. \"keywords\" is for key objects like names. Here the answer is the play name, which is a key object. But \"content\" is broader. I think \"keywords\" fits because it's asking for a specific object name. However, the description says: \"content\": fact/event/profile content; \"keywords\": key objects such as people/objects/names/tools. Since the play name is a name/object, \"keywords\" is appropriate. But also note that the question asks \"what play\", so it's essentially asking for the name. I'll set answer_dim to \"keywords\". Also need to rewrite query_anchor: \"What play did the user attend at the local community theater?\" Keep original intent. So final JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 686,
+    "completion_tokens": 435,
+    "total_tokens": 1121,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 349
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 46
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,227 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-21T10:01:01.500000, Sun] 1.User: I've been playing a lot of games lately, especially Overwatch, which I've put in around 10-20 hours of playtime over the past month, usually playing with a group of friends online on weekends. Do you have any tips on how to improve my Reaper gameplay in Overwatch?
+[2023-05-21T10:01:02, Sun] 2.User: I've been playing a lot of Overwatch lately, and I'm trying to improve my aim. Do you have any tips on how to improve my aim in general, not just for Reaper?
+[2023-05-21T10:01:02.500000, Sun] 3.User: I'm thinking of playing some Apex Legends tonight with my friends. Do you have any tips on how to improve my Octane gameplay?
+[2023-05-21T21:05:00, Sun] 4.User: Create a quiz test base on the content below:
+
+# Define research goals
+
+Defining the objective of the interview is an important step in the process, it is a crucial first step towards ensuring that the interviews are focused and effective.
+
+Note that interviewing users should be a regular activity, preferably weekly. Because this activity is characterized by a small sample size, it is not representative, but in return allows you to discover information that cannot be obtained by large-scale studies, especially thoughts and ideas. way of thinking behind the action of the subject. So, interview regularly, thereby allowing you to regularly reach out and understand more and more about users.
+
+However, although this is often recommended, you still need to have a good goal for each of your interviews.
+
+### \*\*The direction of the interview should be tied to the context of the product development process\*\*
+
+The objective of the interview should be tied to the context of the product development process. Depending on the stage of the product development process, (before, during or after development) the interview will explore different aspects of the user. Here are some examples of interview objectives based on the context of the product development process:
+
+\*\*Before product/feature development\*\*
+
+- Determine if the user is having a problem the product wants to solve and the severity of the problem. (or need)
+- Understand how users are currently troubleshooting (or satisfying a need), if any.
+- Identify the user's approach to current solutions or alternatives.
+- Determine users' willingness to pay for a solution.
+- Identify the factors that influence the user's decision-making process.
+- ...
+
+\*\*During product/feature development\*\*
+
+- Check how customers perceive product ideas, features, react to messages
+- Evaluate customer acceptability with product or feature, check price
+- Check customer priority with specific feature requests, look for unmet requirements
+- Check how customers use or react to the feature, evaluate its ease of use, ease of use
+- Test hypotheses about the product or feature in general (viability, usability)
+
+Once the product/feature is released, user interviews can be conducted to gather feedback on the user experience and identify areas for improvement.
+
+- Understand how users are using the product/feature in their daily life
+- Measure user satisfaction and identify areas for improvement
+- Explain why the user left or why the user stayed
+- Collect feedback on potential improvements or new features for future iterations
+- Measure product/feature success based on user adoption and usage
+- Collect testimonials or success stories for marketing purposes.
+
+### \*\*Interview result must be actionable\*\*
+
+In many cases, interview results are forgotten. The team may have conducted many interviews, but the results of these interviews did not add significant value to the work of the product development team.
+
+Interview questions should help identify problems, user needs, or test hypotheses about the product under development. Interview questions should be designed in such a way as to identify information relevant to decision-making for the product. The results of the interviews should be used to re-evaluate the strategy and direction of product development. And it takes coordination between departments in the company to interview users effectively.
+
+There's a saying I use to remind myself: "Before you ask a question, you need to know what you're going to do with the answer."
+[2023-05-21T21:05:00.500000, Sun] 5.User: GIve me the answer for the quiz test Quiz:
+
+Why is defining research goals important in the interview process?
+A) It ensures that the interviews are focused and effective
+B) It allows you to discover information that cannot be obtained by large-scale studies
+C) Both A and B
+D) None of the above
+
+Why is it recommended to interview users regularly?
+A) Because it allows you to discover information that cannot be obtained by large-scale studies
+B) Because it allows you to understand more and more about users
+C) Both A and B
+D) None of the above
+
+What should the objective of the interview be tied to?
+A) The context of the product development process
+B) The personal interests of the interviewer
+C) The user's job title
+D) None of the above
+
+What are some examples of interview objectives before product/feature development?
+A) Determine if the user is having a problem the product wants to solve and the severity of the problem. (or need)
+B) Understand how users are currently troubleshooting (or satisfying a need), if any.
+C) Identify the user's approach to current solutions or alternatives.
+D) All of the above
+
+What are some examples of interview objectives during product/feature development?
+A) Check how customers perceive product ideas, features, react to messages
+B) Evaluate customer acceptability with product or feature, check price
+C) Check customer priority with specific feature requests, look for unmet requirements
+D) All of the above
+
+What should interview questions be designed to do?
+A) Identify problems and user needs
+B) Test hypotheses about the product under development
+C) Both A and B
+D) None of the above
+
+How should the results of the interviews be used?
+A) To re-evaluate the strategy and direction of product development
+B) To create more questions for future interviews
+C) Both A and B
+D) None of the above
+
+What does the saying "Before you ask a question, you need to know what you're going to do with the answer" mean?
+A) It means that you should always have a plan for how to use the information you gather from the interview.
+B) It means that you should always ask questions even if you don't know how to use the answers.
+C) It means that you should never ask questions that you don't already know the answer to.
+D) None of the above.
+[2023-05-22T01:56:00, Mon] 6.User: I'm thinking of building a vacation home on a plot of land I recently inherited. Can you recommend any resources or websites to help me find reliable contractors in the area?
+[2023-05-22T01:56:00.500000, Mon] 7.User: I've been thinking about holding onto the land instead of selling it to a developer. Do you have any information on the local zoning laws and regulations regarding single-family homes in that area?
+[2023-05-22T01:56:01, Mon] 8.User: I've already done some research on the local zoning laws and it seems like I can build a single-family home on the land without needing any special permits. I'm still considering selling the land to a developer, but I'm also thinking about holding onto it and building a vacation home for my family. By the way, do you know of any good resources for finding architects who specialize in designing rural homes?
+[2023-05-22T01:56:01.500000, Mon] 9.User: I've already spoken to a friend who's an architect, and he's given me some rough estimates for the construction costs. I'm still weighing my options, but I'm leaning towards building a vacation home for my family. By the way, do you know if there are any specific considerations I should take into account when designing a home near a pond?
+[2023-05-22T01:56:02, Mon] 10.User: I've been thinking about the layout of the home, and I'm considering a design that incorporates a lot of natural light and takes advantage of the pond views. Do you have any recommendations for window types and placement to maximize natural light and minimize glare?
+[2023-05-22T01:56:02.500000, Mon] 11.User: I've been thinking about the layout of the home, and I'm considering a design that incorporates a lot of natural light and takes advantage of the pond views. Since I inherited this plot of land from my great aunt, I want to make sure I do it justice. Do you have any recommendations for outdoor spaces that would complement the natural beauty of the pond?
+[2023-05-22T02:30:00, Mon] 12.User: I'm looking for some recommendations on high-performance tires for my 2018 Mustang GT. I'm planning to upgrade my wheels and tires before the next auto racking event on August 14th. By the way, I washed and waxed my car to make it look its best, and it really made a difference at the last event I attended.
+[2023-05-22T02:30:00.500000, Mon] 13.User: I'm considering the Michelin Pilot Sport 4S, but I want to know more about their durability and treadwear. How long can I expect them to last, and are they suitable for daily driving?
+[2023-05-22T02:30:01, Mon] 14.User: I'm also looking into upgrading my brakes, as I want to ensure I can handle the increased speed and performance of the new tires. Do you have any recommendations for high-performance brake pads and rotors that would work well with my 2018 Mustang GT?
+[2023-05-22T02:30:01.500000, Mon] 15.User: I've heard good things about Brembo brakes, but I'm not sure if they're worth the extra cost. Do they really make that big of a difference in terms of stopping power and performance?

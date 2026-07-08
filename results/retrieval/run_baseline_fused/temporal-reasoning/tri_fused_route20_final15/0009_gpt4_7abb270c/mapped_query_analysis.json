@@ -1,0 +1,57 @@
+{
+  "query_text": "What is the chronological order of the six museums the user visited, from earliest to latest?",
+  "query_anchor": "What is the chronological order of the six museums the user visited, from earliest to latest?",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "museums"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "What is the chronological order of the six museums the user visited, from earliest to latest?",
+      "keywords": [
+        "museums"
+      ],
+      "query_terms": [
+        "what",
+        "is",
+        "the",
+        "chronological",
+        "order",
+        "of",
+        "six",
+        "museums",
+        "user",
+        "visited",
+        "from",
+        "earliest",
+        "to",
+        "latest"
+      ]
+    },
+    "structured": {
+      "query_text": "What is the chronological order of the six museums the user visited, from earliest to latest?",
+      "rewrite": "What is the chronological order of the six museums the user visited, from earliest to latest?",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "What is the chronological order of the six museums the user visited, from earliest to latest?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "museums"
+      ],
+      "canonical_text": "What is the chronological order of the six museums the user visited, from earliest to latest?"
+    },
+    "minilm": {
+      "query_text": "What is the chronological order of the six museums the user visited, from earliest to latest?"
+    }
+  }
+}

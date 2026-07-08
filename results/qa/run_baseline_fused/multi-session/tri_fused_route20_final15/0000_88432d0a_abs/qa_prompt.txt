@@ -1,0 +1,104 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-05-27 02:28:00.500000
+content: The user has been standing for the entire commute ride for the two weeks prior to 2023-05-27.
+
+[2]
+source_time: 2023-05-20 16:25:01.500000
+content: As of 2023-05-20, the user has been watching 'The Crown' season 3 for two weeks and is currently on episode 7.
+
+[3]
+source_time: 2023-05-24 18:53:02.500000
+content: The user goes to the gym three times a week, which has improved their energy levels, mood, and focus.
+
+[4]
+source_time: 2023-05-28 20:13:00.500000
+content: User used oven convection setting for the first time on May 25, 2023 to bake cookies.
+reason: experimenting with convection
+purpose: bake cookies
+
+[5]
+source_time: 2023-05-28 20:13:00
+content: User plans to bake chicken wings for dinner on May 28, 2023.
+reason: for dinner
+purpose: to achieve crispy skin
+
+[6]
+source_time: 2023-05-28 20:13:02.500000
+content: User attempted a sourdough bread recipe on 2023-05-23, but the dough did not rise and the bread turned out dense and heavy.
+
+[7]
+source_time: 2023-05-22 10:09:00.500000
+content: The user runs on Sundays and does bodyweight exercises at home 2-3 times per week to improve strength and endurance.
+reason: improve strength and endurance
+
+[8]
+source_time: 2023-05-28 20:13:02
+content: User used convection setting on oven to bake cookies on 2023-05-25, achieving crispy outside and chewy inside.
+
+[9]
+source_time: 2023-05-24 06:03:02.500000
+content: The user has been spending time alone focusing on hobbies and recharging for a few weeks as of 2023-05-24.
+
+[10]
+source_time: 2023-05-20 16:25:00
+content: The user owns a new stand mixer and has been using it extensively since acquiring it a few weeks before 2023-05-20.
+
+[11]
+source_time: 2023-05-21 21:29:02.500000
+content: User has been taking guitar lessons for two months as of 2023-05-22, practices 30 minutes daily, and has progressed from beginner to intermediate level.
+
+[12]
+source_time: 2023-05-20 17:26:00
+content: As of 2023-05-20, the user has been watching the 'Daily Dose of Laughter' playlist on Peacock every morning for about three weeks.
+purpose: to start the day on a positive note
+
+[13]
+source_time: 2023-05-20 16:25:00
+content: The user baked a chocolate cake for her sister's birthday party last weekend (around May 13-14, 2023) and found that espresso powder enhanced the flavor.
+reason: sister's birthday party
+purpose: bake a cake for sister's birthday
+
+[14]
+source_time: 2023-05-27 08:05:00.500000
+content: The user is interested in music festivals in the United States.
+
+[15]
+source_time: 2023-05-27 08:05:00
+content: The user is interested in restaurant recommendations near Wells Fargo Center in Philadelphia.
+
+Now answer the question:
+User Question:How many times did I bake egg tarts in the past two weeks?
+Question Date:2023/05/30 (Tue) 23:40

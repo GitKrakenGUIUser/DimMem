@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-20T12:53:03.500000, Sat] 1.User: Back to the question about setting up set up a snack factory in the UK. Do you tell me about the timescale?
+[2023-05-20T15:48:00, Sat] 2.User: I'm trying to find a good floor lamp for my dining room. I've been experimenting with different lamps, but I'm not sure what type of lighting would work best. Do you have any recommendations? By the way, I've been really enjoying the new minimalist vibe in my bedroom - it's amazing how much of a difference it's made in just three weeks!
+[2023-05-20T15:48:00.500000, Sat] 3.User: I like the sound of task lighting. Do you think a floor lamp with a metal shade would work well in a dining room with a modern, minimalist vibe?
+[2023-05-20T15:48:01, Sat] 4.User: I'm also considering adding some plants to my dining room. Do you have any recommendations for low-maintenance plants that could thrive in a room with a lot of natural light during the day, but is a bit darker in the evenings?
+[2023-05-20T15:48:01.500000, Sat] 5.User: I've been thinking about adding a plant to my bedroom too. Do you think a peace lily would work well in a minimalist bedroom with a simple white duvet cover?
+[2023-05-20T15:48:02, Sat] 6.User: That's great advice, thanks! I think a peace lily would be a lovely addition to my bedroom. I've been enjoying the minimalist vibe in there since I switched to a simple white duvet cover three weeks ago.
+[2023-05-20T15:48:02.500000, Sat] 7.User: I've also been thinking about the layout of my living room and wondering if a sectional sofa would work well in the space. Do you have any advice on choosing the right sectional sofa for a room with a geometric-patterned rug?
+[2023-05-20T22:13:00, Sat] 8.User: I need help finding a good dog bed for my dog Max. I saw one at a pet store down the street for $40, but I want to explore other options. Do you have any recommendations or deals on dog beds? By the way, I just bought a flea and tick prevention medication for my cat Lola last week, it was $25 for a 3-month supply.
+[2023-05-20T22:13:00.500000, Sat] 9.User: I'm looking for something mid-range, around $40 like the one I saw at the pet store. Do you know if any of those mid-range options have a 3-inch thick cushion? That would be perfect for Max's joints.
+[2023-05-20T22:13:01, Sat] 10.User: I'll check out those options, thanks. By the way, speaking of joints, I've been adding some steamed vegetables to Max's dog food, do you think that's a good idea? I've heard it can help with digestion and joint health.
+[2023-05-20T22:13:01.500000, Sat] 11.User: He seems to like them, but I'm not sure if it's making a difference in his digestion yet. I'll have to monitor it for a few more weeks.
+[2023-05-20T22:13:02, Sat] 12.User: I've been thinking about Lola's flea and tick prevention medication, and I was wondering if there are any natural alternatives available. Do you know of any natural products that could help prevent fleas and ticks on cats?
+[2023-05-20T22:13:02.500000, Sat] 13.User: That's good to know. I've been using the flea and tick prevention medication on Lola for a while now, and it's been working well. I got it for $25 for a 3-month supply, which I think is a good deal.
+[2023-05-21T01:10:00, Sun] 14.User: I'm thinking of baking again this weekend and I want to try out a new recipe. Can you give me some tips on how to ensure my cookies turn out right? By the way, I attempted to bake a batch of cookies two weeks ago, so I'm hoping to build on that experience.
+[2023-05-21T01:10:00.500000, Sun] 15.User: I'm actually thinking of trying out a new recipe for oatmeal raisin cookies. I've heard they can be a bit tricky to get right, so I want to make sure I'm doing everything correctly. Do you have any specific tips for oatmeal raisin cookies?

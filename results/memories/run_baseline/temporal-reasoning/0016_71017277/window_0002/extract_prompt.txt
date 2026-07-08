@@ -1,0 +1,135 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-02-05T03:33:00, Sun] 1.User: Pretty good analysis but can you get more in depth. Please analyze it like Keith Hernandez would...
+[2023-02-05T03:33:00.500000, Sun] 2.User: How would ron darling respond to Keith's take?
+[2023-02-05T03:33:01, Sun] 3.User: How do Ron and Keith's views on baseball differ? Where do they agree? Any longstanding disagreements?
+[2023-02-05T03:33:01.500000, Sun] 4.User: My friend's name is "Carnage". He loves the Mets. He plays second base. Gary Keith and Ron are in the booth calling the world series, game 7. The Mets are the home team. CanCan you do a transcript of the play by play where Carnage is playing second base and turns a world series clinching double play? The pitcher on the mound is Jacob degrom. Please describe the speed and type of pitch degrom throws and then make up a play by Carnage at second base that is so great that he becomes a Mets legend forever. His nickname is the West villain. Get creative: the world series is on the line!
+[2023-02-05T03:33:02, Sun] 5.User: You messed up. The play starts at the beginning of the inning...there's no way a double play here can happen. There are no runners or outs yet!
+
+Can you do it over? Same scenario except Let's make the bases loaded with one out. And change the opponent to the Seattle Mariners. And before the play, can Keith make a comment about the incredible gumption of carnage at second? Ok try again. Thanks!
+[2023-02-06T00:20:00, Mon] 6.User: You say some Christians believe the Holy Spirit proceeds from the Father and Son. What is the alternative viewpoint to this?
+[2023-02-06T00:20:00.500000, Mon] 7.User: Can you explain John 4:24 where it says God is a Spririt. Yet, Trinity says there are three persons.
+[2023-02-06T00:20:01, Mon] 8.User: Where does the Bible say God is three persons, but one in essense?
+[2023-02-06T00:20:01.500000, Mon] 9.User: If the Bible says God is one, why does man say three persons?
+[2023-02-06T00:20:02, Mon] 10.User: Does one equal three?
+[2023-02-06T00:20:02.500000, Mon] 11.User: Does three equal one?
+[2023-02-06T00:20:03, Mon] 12.User: Are Father, Son, and Holy Spirit roles that one God manifests Himself in?
+[2023-02-07T05:02:00, Tue] 13.User: I've been trying to write a fantasy novel, but I'm having trouble with world-building. Can you give me some tips on how to create a believable and immersive world?
+[2023-02-07T05:02:00.500000, Tue] 14.User: I've been struggling to find time to write every day, do you have any tips on how to stay consistent and make writing a habit?
+[2023-02-07T05:02:01, Tue] 15.User: I've actually been pretty consistent with my writing lately, thanks to a daily habit I've developed over the past two months. I usually write for at least 30 minutes every morning before work. It's been helping me make progress on my fantasy novel, and I've even been experimenting with different writing styles and techniques. Do you have any tips on how to create a compelling plot twist?

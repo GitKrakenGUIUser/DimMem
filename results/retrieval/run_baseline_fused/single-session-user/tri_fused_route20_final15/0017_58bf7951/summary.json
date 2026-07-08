@@ -1,0 +1,556 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "single-session-user",
+  "sample_id": "0017_58bf7951",
+  "query_text": "What play did the user attend at the local community theater?",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 157,
+  "fused_candidate_count_before_final_cut": 44,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/single-session-user/tri_fused_route20_final15/0017_58bf7951",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 22.49122579399115,
+      "memory_type": "episodic",
+      "content": "The user attended a production of The Glass Menagerie at a local community theater and was impressed by the lead actress's performance.",
+      "source_boundary_id": "13_0095",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 22.49122579399115,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 22.49122579399115
+        },
+        {
+          "method": "structured",
+          "rank": 1,
+          "score": 0.9999999999999999
+        },
+        {
+          "method": "minilm",
+          "rank": 1,
+          "score": 0.6023007357108077
+        }
+      ],
+      "score_components": {
+        "bm25_score": 22.49122579399115,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 6.22160038151884,
+      "memory_type": "episodic",
+      "content": "The user plans to play Horizon Zero Dawn on their new gaming PC and check its performance.",
+      "source_boundary_id": "all_memories_0009",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 6.22160038151884,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 6.22160038151884
+        },
+        {
+          "method": "structured",
+          "rank": 2,
+          "score": 0.40384615384615385
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.22160038151884,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 5.1696911168654,
+      "memory_type": "fact",
+      "content": "Additional stakeholders for the Hopper project include Daniel (Content production manager), Kat (top creator community manager), and Flor; Kat and Flor are SPMs managing Europe and LatAm+Canada respectively.",
+      "source_boundary_id": "all_memories_0005",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 5.1696911168654,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 5.1696911168654
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.1696911168654,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 4.8104444383702285,
+      "memory_type": "episodic",
+      "content": "The user described a fictional scenario where an Empress possesses absolute power but chooses to respect democratic processes and local autonomy, relying on the imperial senate and local governments, and exercises absolute power only when deemed strictly necessary.",
+      "source_boundary_id": "9_0066",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 4.8104444383702285,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 4.8104444383702285
+        },
+        {
+          "method": "structured",
+          "rank": 6,
+          "score": 0.28846153846153844
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.8104444383702285,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 4.62800189908099,
+      "memory_type": "episodic",
+      "content": "The user recently tried a new Italian restaurant downtown and found it good, and is looking for recommendations for other local Italian restaurants.",
+      "source_boundary_id": "12_0093",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 4.62800189908099,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 4.62800189908099
+        },
+        {
+          "method": "structured",
+          "rank": 7,
+          "score": 0.28846153846153844
+        },
+        {
+          "method": "minilm",
+          "rank": 20,
+          "score": 0.22580482626619652
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.62800189908099,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 4.407566474065116,
+      "memory_type": "episodic",
+      "content": "The user framed a watercolor painting purchased from a local artist last summer, about three weeks ago as of 2023-05-30, and displays it above their couch.",
+      "source_boundary_id": "24_0152",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 4.407566474065116,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 4.407566474065116
+        },
+        {
+          "method": "structured",
+          "rank": 3,
+          "score": 0.40384615384615385
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.407566474065116,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 4.232183319507576,
+      "memory_type": "episodic",
+      "content": "The user asked a math problem about a half-full tank being drained at a constant rate taking 30 minutes to empty, and the rate at which water must be pumped in simultaneously to fill the tank in 10 minutes.",
+      "source_boundary_id": "4_0036",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 4.232183319507576,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 4.232183319507576
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.232183319507576,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 4.22271678544814,
+      "memory_type": "episodic",
+      "content": "The user requested updating the itinerary to include Night Safari at the end of the day.",
+      "source_boundary_id": "1_0013",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 4.22271678544814,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 4.22271678544814
+        },
+        {
+          "method": "structured",
+          "rank": 12,
+          "score": 0.23076923076923075
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.22271678544814,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 3.8375315184782357,
+      "memory_type": "episodic",
+      "content": "The user wrote a conclusion for a blog post about journaling that summarizes the benefits of journaling and ends with a question asking readers what is holding them back from starting a journaling practice.",
+      "source_boundary_id": "20_0136",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 3.8375315184782357,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 3.8375315184782357
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.8375315184782357,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 3.4754464324918577,
+      "memory_type": "episodic",
+      "content": "Juan Perez is planning a summer road trip along the West Coast for 7-10 days, visiting national parks, beaches, and cities, with activities including hiking and trying local food and drinks, driving a few hours each day, and spending 2-3 days per location, and bringing a bike.",
+      "source_boundary_id": "6_0048",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 3.4754464324918577,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 3.4754464324918577
+        },
+        {
+          "method": "structured",
+          "rank": 5,
+          "score": 0.28846153846153844
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.4754464324918577,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 3.19294680688284,
+      "memory_type": "fact",
+      "content": "User replaced an old coffee table from their parents with a new one because it took up too much space in their living room and did not fit their new decor, and the new coffee table is better for hosting gatherings.",
+      "source_boundary_id": "15_0108",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 3.19294680688284,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 3.19294680688284
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.19294680688284,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 3.1079600331584523,
+      "memory_type": "episodic",
+      "content": "User is planning to host a game night at their new apartment, has chosen Ticket to Ride and Codenames, and plans to prepare finger foods.",
+      "source_boundary_id": "14_0106",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 3.1079600331584523,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 3.1079600331584523
+        },
+        {
+          "method": "minilm",
+          "rank": 3,
+          "score": 0.3730202742609868
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.1079600331584523,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 0.3938048479346251,
+      "memory_type": "profile",
+      "content": "The user loves watching the show 'The 100' on The CW.",
+      "source_boundary_id": "12_0092",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 0.3938048479346251,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 0.3938048479346251
+        },
+        {
+          "method": "minilm",
+          "rank": 8,
+          "score": 0.3060392969629629
+        }
+      ],
+      "score_components": {
+        "bm25_score": 0.3938048479346251,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 0.3866777897914251,
+      "memory_type": "fact",
+      "content": "The user reads The Washington Post occasionally.",
+      "source_boundary_id": "3_0023",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 0.3866777897914251,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 0.3866777897914251
+        }
+      ],
+      "score_components": {
+        "bm25_score": 0.3866777897914251,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 0.3781277050596853,
+      "memory_type": "profile",
+      "content": "The user enjoys watching the show 'Nancy Drew' on The CW.",
+      "source_boundary_id": "12_0090",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 0.3781277050596853,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 0.3781277050596853
+        },
+        {
+          "method": "minilm",
+          "rank": 10,
+          "score": 0.29384294647881093
+        }
+      ],
+      "score_components": {
+        "bm25_score": 0.3781277050596853,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 0.23128318786621094
+}

@@ -1,0 +1,566 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "knowledge-update",
+  "sample_id": "0019_618f13b2",
+  "query_text": "How many times has the user worn their new black Converse Chuck Taylor All Star sneakers?",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 146,
+  "fused_candidate_count_before_final_cut": 42,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/knowledge-update/tri_fused_route20_final15/0019_618f13b2",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 38.14086931984246,
+      "memory_type": "profile",
+      "content": "User loves her new black Converse Chuck Taylor All Star sneakers and finds them comfortable and versatile.",
+      "source_boundary_id": "7_0059",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 38.14086931984246,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 38.14086931984246
+        },
+        {
+          "method": "structured",
+          "rank": 2,
+          "score": 0.6666666666666667
+        },
+        {
+          "method": "minilm",
+          "rank": 2,
+          "score": 0.7246435497290805
+        }
+      ],
+      "score_components": {
+        "bm25_score": 38.14086931984246,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 33.538576105768136,
+      "memory_type": "episodic",
+      "content": "User wore her new black Converse Chuck Taylor All Star sneakers to a friend's birthday party on 2023-05-27.",
+      "source_boundary_id": "7_0060",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 33.538576105768136,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 33.538576105768136
+        },
+        {
+          "method": "structured",
+          "rank": 1,
+          "score": 1.0
+        },
+        {
+          "method": "minilm",
+          "rank": 3,
+          "score": 0.7224995520536237
+        }
+      ],
+      "score_components": {
+        "bm25_score": 33.538576105768136,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 26.60060123023168,
+      "memory_type": "episodic",
+      "content": "User owns new black Converse shoes and has worn them six times as of 2023-05-29, including for running errands on that day.",
+      "source_boundary_id": "14_0106",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 26.60060123023168,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 26.60060123023168
+        },
+        {
+          "method": "structured",
+          "rank": 3,
+          "score": 0.4285714285714286
+        },
+        {
+          "method": "minilm",
+          "rank": 1,
+          "score": 0.7538949707832096
+        }
+      ],
+      "score_components": {
+        "bm25_score": 26.60060123023168,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 7.091348445843142,
+      "memory_type": "episodic",
+      "content": "User is looking for a cobbler and a shoe cleaning kit, and considering waterproofing spray for new Converse.",
+      "source_boundary_id": "14_0107",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 7.091348445843142,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 7.091348445843142
+        },
+        {
+          "method": "structured",
+          "rank": 6,
+          "score": 0.380952380952381
+        },
+        {
+          "method": "minilm",
+          "rank": 7,
+          "score": 0.3719112056553752
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.091348445843142,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 6.3752915958159875,
+      "memory_type": "episodic",
+      "content": "The user plans to sell some of their vintage Star Wars action figures online.",
+      "source_boundary_id": "17_0130",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 6.3752915958159875,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 6.3752915958159875
+        },
+        {
+          "method": "structured",
+          "rank": 8,
+          "score": 0.380952380952381
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.3752915958159875,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 5.647043301672374,
+      "memory_type": "fact",
+      "content": "The user's sister has a classic and elegant style, loves neutral colors like beige and black, needs a daily driver handbag not too big but with enough space, and the user's budget for the gift is $200-$300.",
+      "source_boundary_id": "all_memories_0001",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 5.647043301672374,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 5.647043301672374
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.647043301672374,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 5.094410315688365,
+      "memory_type": "fact",
+      "content": "The user owns a Millennium Falcon toy and vintage Star Wars action figures.",
+      "source_boundary_id": "17_0126",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 5.094410315688365,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 5.094410315688365
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.094410315688365,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 4.960827898626779,
+      "memory_type": "episodic",
+      "content": "The user's vintage Star Wars action figures have been damaged during shipping in the past.",
+      "source_boundary_id": "17_0129",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 4.960827898626779,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 4.960827898626779
+        },
+        {
+          "method": "structured",
+          "rank": 7,
+          "score": 0.380952380952381
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.960827898626779,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 4.690193976308273,
+      "memory_type": "episodic",
+      "content": "User cleaned her white Adidas Superstars with a toothbrush and soap for 20 minutes after wearing them to the gym.",
+      "source_boundary_id": "7_0065",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 4.690193976308273,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 4.690193976308273
+        },
+        {
+          "method": "structured",
+          "rank": 4,
+          "score": 0.380952380952381
+        },
+        {
+          "method": "minilm",
+          "rank": 4,
+          "score": 0.47229666299129863
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.690193976308273,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 4.625593799775285,
+      "memory_type": "episodic",
+      "content": "The user is using a spreadsheet to track all the places where they need to update their name after changing it to Patel.",
+      "source_boundary_id": "11_0092",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 4.625593799775285,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 4.625593799775285
+        },
+        {
+          "method": "structured",
+          "rank": 5,
+          "score": 0.380952380952381
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.625593799775285,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 4.438821876972736,
+      "memory_type": "fact",
+      "content": "User owns a pair of white Adidas Superstars.",
+      "source_boundary_id": "7_0063",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 4.438821876972736,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 4.438821876972736
+        },
+        {
+          "method": "minilm",
+          "rank": 6,
+          "score": 0.42743440081298123
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.438821876972736,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 4.041588321695036,
+      "memory_type": "episodic",
+      "content": "User has been working on improving their emotional intelligence since taking an online quiz that challenged their views on masculinity.",
+      "source_boundary_id": "3_0038",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 4.041588321695036,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 4.041588321695036
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.041588321695036,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 3.880222828208083,
+      "memory_type": "episodic",
+      "content": "User attended a street photography workshop on May 1 and 2, 2023, where they learned how to approach strangers for permission to take photos.",
+      "source_boundary_id": "3_0030",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 3.880222828208083,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 3.880222828208083
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.880222828208083,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 3.378126782480091,
+      "memory_type": "fact",
+      "content": "The user's husband has the last name Patel.",
+      "source_boundary_id": "12_0093",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 3.378126782480091,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 3.378126782480091
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.378126782480091,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 3.2594502860686103,
+      "memory_type": "profile",
+      "content": "User has been obsessed with Korean food lately, particularly Bibimbap and Japchae, and has been making them at home using different recipes.",
+      "source_boundary_id": "14_0103",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 3.2594502860686103,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 3.2594502860686103
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.2594502860686103,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 3.2799458503723145
+}

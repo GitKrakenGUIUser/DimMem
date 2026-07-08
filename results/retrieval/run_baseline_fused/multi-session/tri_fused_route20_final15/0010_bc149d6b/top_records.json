@@ -1,0 +1,903 @@
+[
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user observed an improvement in egg quality after switching to a new layer feed.",
+    "dimension": {
+      "time": "2023-05-22",
+      "location": "",
+      "reason": "switching to new layer feed",
+      "purpose": "to improve egg quality",
+      "keywords": [
+        "egg quality",
+        "improvement",
+        "layer feed",
+        "new feed"
+      ]
+    },
+    "entities": [
+      "egg quality",
+      "improvement",
+      "layer feed",
+      "new feed"
+    ],
+    "embedding_text": "The user observed an improvement in egg quality after switching to a new layer feed.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0039",
+    "source_time": "2023-05-22 05:24:01.500000",
+    "record_time": "2026-07-07T19:50:46.939714",
+    "score": 10.923705715247946,
+    "score_components": {
+      "bm25_score": 10.923705715247946,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 10.923705715247946,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 10.923705715247946
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.4333333333333333
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.3038866592572113
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user purchased a 50-pound batch of layer feed for approximately $120 after a 10% discount from a local farm supply store.",
+    "dimension": {
+      "time": "",
+      "location": "local farm supply store",
+      "reason": "to feed chickens",
+      "purpose": "to feed chickens",
+      "keywords": [
+        "layer feed",
+        "50-pound",
+        "purchase",
+        "$120",
+        "10% discount",
+        "farm supply store"
+      ]
+    },
+    "entities": [
+      "layer feed",
+      "50-pound",
+      "purchase",
+      "$120",
+      "10% discount",
+      "farm supply store"
+    ],
+    "embedding_text": "The user purchased a 50-pound batch of layer feed for approximately $120 after a 10% discount from a local farm supply store.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0038",
+    "source_time": "2023-05-22 05:24:01",
+    "record_time": "2026-07-07T19:50:46.939708",
+    "score": 10.735298615505554,
+    "score_components": {
+      "bm25_score": 10.735298615505554,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 10.735298615505554,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 10.735298615505554
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.4333333333333333
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.5143531245850093
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "fact",
+    "content": "The user helps with the props department for an upcoming community theater production of 'Chicago' (1920s-themed) as of 2023-05-29.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "community theater",
+      "reason": "",
+      "purpose": "upcoming production of Chicago",
+      "keywords": [
+        "props department",
+        "Chicago",
+        "community theater",
+        "1920s-themed"
+      ]
+    },
+    "entities": [
+      "props department",
+      "Chicago",
+      "community theater",
+      "1920s-themed"
+    ],
+    "embedding_text": "The user helps with the props department for an upcoming community theater production of 'Chicago' (1920s-themed) as of 2023-05-29.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0139",
+    "source_time": "2023-05-29 09:22:00",
+    "record_time": "2026-07-07T19:50:46.940419",
+    "score": 8.063227872368179,
+    "score_components": {
+      "bm25_score": 8.063227872368179,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 8.063227872368179,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 8.063227872368179
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User attended a Chinese New Year parade in April 2023 and a Diwali festival in early May 2023.",
+    "dimension": {
+      "time": "2023-04 to 2023-05-10",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Chinese New Year parade",
+        "Diwali festival",
+        "cultural events",
+        "community"
+      ]
+    },
+    "entities": [
+      "Chinese New Year parade",
+      "Diwali festival",
+      "cultural events",
+      "community"
+    ],
+    "embedding_text": "User attended a Chinese New Year parade in April 2023 and a Diwali festival in early May 2023.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0089",
+    "source_time": "2023-05-26 18:11:00",
+    "record_time": "2026-07-07T19:50:46.940123",
+    "score": 7.738900758191947,
+    "score_components": {
+      "bm25_score": 7.738900758191947,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 7.738900758191947,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 7.738900758191947
+      },
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.2666666666666666
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user watched the movie musical 'Evita' around 2023-05-08 and loved it.",
+    "dimension": {
+      "time": "2023-05-08",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Evita",
+        "movie musical",
+        "user watched",
+        "loved"
+      ]
+    },
+    "entities": [
+      "Evita",
+      "movie musical",
+      "user watched",
+      "loved"
+    ],
+    "embedding_text": "The user watched the movie musical 'Evita' around 2023-05-08 and loved it.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0129",
+    "source_time": "2023-05-29 04:41:00",
+    "record_time": "2026-07-07T19:50:46.940360",
+    "score": 7.496815652680699,
+    "score_components": {
+      "bm25_score": 7.496815652680699,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 7.496815652680699,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 7.496815652680699
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user's sister had a birthday three weeks before 2023-05-26.",
+    "dimension": {
+      "time": "2023-05-05",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "sister",
+        "birthday"
+      ]
+    },
+    "entities": [
+      "sister",
+      "birthday"
+    ],
+    "embedding_text": "The user's sister had a birthday three weeks before 2023-05-26.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0083",
+    "source_time": "2023-05-25 23:41:02.500000",
+    "record_time": "2026-07-07T19:50:46.940086",
+    "score": 7.207220744704735,
+    "score_components": {
+      "bm25_score": 7.207220744704735,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 7.207220744704735,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 7.207220744704735
+      },
+      {
+        "method": "minilm",
+        "rank": 19,
+        "score": 0.20096950760057594
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user went on a 5-day hiking trip to Yellowstone National Park with friends in April 2023, hiking over 30 miles and seeing grizzly bears, wolves, and elk.",
+    "dimension": {
+      "time": "2023-04",
+      "location": "Yellowstone National Park",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Yellowstone National Park",
+        "hiking",
+        "grizzly bears",
+        "wolves",
+        "elk",
+        "camping"
+      ]
+    },
+    "entities": [
+      "Yellowstone National Park",
+      "hiking",
+      "grizzly bears",
+      "wolves",
+      "elk",
+      "camping"
+    ],
+    "embedding_text": "The user went on a 5-day hiking trip to Yellowstone National Park with friends in April 2023, hiking over 30 miles and seeing grizzly bears, wolves, and elk.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0163",
+    "source_time": "2023-05-29 16:35:02.500000",
+    "record_time": "2026-07-07T19:50:46.940561",
+    "score": 7.010471733197726,
+    "score_components": {
+      "bm25_score": 7.010471733197726,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 7.010471733197726,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 7.010471733197726
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user ate a burger with bacon and cheese at his friend Mike's house a few weeks before 2023-05-25.",
+    "dimension": {
+      "time": "",
+      "location": "Mike's house",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "burger",
+        "bacon",
+        "cheese",
+        "Mike"
+      ]
+    },
+    "entities": [
+      "burger",
+      "bacon",
+      "cheese",
+      "Mike"
+    ],
+    "embedding_text": "The user ate a burger with bacon and cheese at his friend Mike's house a few weeks before 2023-05-25.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0071",
+    "source_time": "2023-05-25 10:09:02.500000",
+    "record_time": "2026-07-07T19:50:46.940014",
+    "score": 6.623642164780247,
+    "score_components": {
+      "bm25_score": 6.623642164780247,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 6.623642164780247,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 6.623642164780247
+      },
+      {
+        "method": "minilm",
+        "rank": 7,
+        "score": 0.253929526463029
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user listened to the 'Hamilton' soundtrack on their daily commute from around 2023-05-15 and became hooked, appreciating the clever and dense lyrics.",
+    "dimension": {
+      "time": "2023-05-15",
+      "location": "daily commute",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Hamilton",
+        "soundtrack",
+        "daily commute",
+        "clever lyrics",
+        "user hooked"
+      ]
+    },
+    "entities": [
+      "Hamilton",
+      "soundtrack",
+      "daily commute",
+      "clever lyrics",
+      "user hooked"
+    ],
+    "embedding_text": "The user listened to the 'Hamilton' soundtrack on their daily commute from around 2023-05-15 and became hooked, appreciating the clever and dense lyrics.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0136",
+    "source_time": "2023-05-29 04:41:02",
+    "record_time": "2026-07-07T19:50:46.940401",
+    "score": 6.465411692798675,
+    "score_components": {
+      "bm25_score": 6.465411692798675,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 6.465411692798675,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 6.465411692798675
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "fact",
+    "content": "The user owns a flock of chickens and recently added two new hens to the flock.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "chickens",
+        "flock",
+        "hens",
+        "addition"
+      ]
+    },
+    "entities": [
+      "chickens",
+      "flock",
+      "hens",
+      "addition"
+    ],
+    "embedding_text": "The user owns a flock of chickens and recently added two new hens to the flock.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0035",
+    "source_time": "2023-05-22 00:06:02.500000",
+    "record_time": "2026-07-07T19:50:46.939690",
+    "score": 6.421621495189503,
+    "score_components": {
+      "bm25_score": 6.421621495189503,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 6.421621495189503,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 6.421621495189503
+      },
+      {
+        "method": "minilm",
+        "rank": 8,
+        "score": 0.2531270132504874
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "fact",
+    "content": "User is an Account Executive at OwnBackup, a SaaS data protection platform, with achievements including President's Club 2022, highest ACV in segment 2022, Top Performer at Global 2023 Sales Kick-Off, and closing over 50 new logos.",
+    "dimension": {
+      "time": "2021-02 to present",
+      "location": "OwnBackup",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "OwnBackup",
+        "Account Executive",
+        "President's Club",
+        "ACV",
+        "Top Performer",
+        "new logos"
+      ]
+    },
+    "entities": [
+      "OwnBackup",
+      "Account Executive",
+      "President's Club",
+      "ACV",
+      "Top Performer",
+      "new logos"
+    ],
+    "embedding_text": "User is an Account Executive at OwnBackup, a SaaS data protection platform, with achievements including President's Club 2022, highest ACV in segment 2022, Top Performer at Global 2023 Sales Kick-Off, and closing over 50 new logos.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0093",
+    "source_time": "2023-05-26 19:18:00",
+    "record_time": "2026-07-07T19:50:46.940147",
+    "score": 6.186354320253081,
+    "score_components": {
+      "bm25_score": 6.186354320253081,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 6.186354320253081,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 6.186354320253081
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user volunteered backstage at the city theater production of 'The Importance of Being Earnest' in April 2023 and found props and costumes at an estate sale.",
+    "dimension": {
+      "time": "2023-04",
+      "location": "city theater",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "The Importance of Being Earnest",
+        "backstage volunteer",
+        "estate sale",
+        "props and costumes"
+      ]
+    },
+    "entities": [
+      "The Importance of Being Earnest",
+      "backstage volunteer",
+      "estate sale",
+      "props and costumes"
+    ],
+    "embedding_text": "The user volunteered backstage at the city theater production of 'The Importance of Being Earnest' in April 2023 and found props and costumes at an estate sale.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0141",
+    "source_time": "2023-05-29 09:22:01",
+    "record_time": "2026-07-07T19:50:46.940431",
+    "score": 6.047389831262769,
+    "score_components": {
+      "bm25_score": 6.047389831262769,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 6.047389831262769,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 6.047389831262769
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "fact",
+    "content": "User purchased black leather boots from Zara on January 15th.",
+    "dimension": {
+      "time": "2023-01-15",
+      "location": "Zara",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "black leather boots",
+        "Zara",
+        "purchased"
+      ]
+    },
+    "entities": [
+      "black leather boots",
+      "Zara",
+      "purchased"
+    ],
+    "embedding_text": "User purchased black leather boots from Zara on January 15th.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0029",
+    "source_time": "2023-05-22 00:06:01.500000",
+    "record_time": "2026-07-07T19:50:46.939653",
+    "score": 5.994677215787964,
+    "score_components": {
+      "bm25_score": 5.994677215787964,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 5.994677215787964,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 5.994677215787964
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User recently bought 20 pounds of organic scratch grains for chickens.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "for chickens",
+      "purpose": "to feed chickens",
+      "keywords": [
+        "organic scratch grains",
+        "20 pounds",
+        "chickens",
+        "purchase"
+      ]
+    },
+    "entities": [
+      "organic scratch grains",
+      "20 pounds",
+      "chickens",
+      "purchase"
+    ],
+    "embedding_text": "User recently bought 20 pounds of organic scratch grains for chickens.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0043",
+    "source_time": "2023-05-22 16:34:00",
+    "record_time": "2026-07-07T19:50:46.939738",
+    "score": 5.810409616853912,
+    "score_components": {
+      "bm25_score": 5.810409616853912,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 5.810409616853912,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 5.810409616853912
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.2666666666666666
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.34655444291653154
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user had an oil change approximately two months before 2023-05-24, using synthetic blend oil, performed at a dealership.",
+    "dimension": {
+      "time": "2023-03-24",
+      "location": "a dealership",
+      "reason": "routine maintenance",
+      "purpose": "",
+      "keywords": [
+        "oil change",
+        "synthetic blend oil",
+        "dealership"
+      ]
+    },
+    "entities": [
+      "oil change",
+      "synthetic blend oil",
+      "dealership"
+    ],
+    "embedding_text": "The user had an oil change approximately two months before 2023-05-24, using synthetic blend oil, performed at a dealership.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0054",
+    "source_time": "2023-05-22 17:26:03.500000",
+    "record_time": "2026-07-07T19:50:46.939824",
+    "score": 5.64195049265844,
+    "score_components": {
+      "bm25_score": 5.64195049265844,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 5.64195049265844,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 5.64195049265844
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.26541433979145695
+      }
+    ]
+  }
+]

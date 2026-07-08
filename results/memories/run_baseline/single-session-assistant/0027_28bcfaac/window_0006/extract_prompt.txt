@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-22T18:58:00.500000, Mon] 1.User: I've been meaning to upgrade my mic, been using the same old Shure SM58 for years. Do you think the Blue Yeti would be a good upgrade for vocals and instrument recording? And by the way, I've been playing guitar for ages, just got a new electric last month, and I've been experimenting with different effects pedals.
+[2023-05-22T18:58:01, Mon] 2.User: I've been playing around with different overdrive and distortion pedals, trying to find the perfect sound for my new Ibanez RG Series, which I got last month. I've also been thinking about recording some piano tracks, would the Blue Yeti be a good choice for that as well?
+[2023-05-22T18:58:01.500000, Mon] 3.User: I've been playing guitar for about 5 years now, and I've been enjoying the new sound of my Ibanez RG Series. But I've also been thinking about recording some piano tracks, do you think the Blue Yeti would be a good choice for that as well?
+[2023-05-22T18:58:02, Mon] 4.User: I'm thinking of recording a piano cover of a song that has a lot of dynamic range, from soft and intimate to loud and powerful. Do you think the Blue Yeti would be able to handle the dynamic range of the piano, or would I need a different microphone?
+[2023-05-22T18:58:02.500000, Mon] 5.User: I'm thinking of recording a piano cover of a song that has a lot of dynamic range, from soft and intimate to loud and powerful. Would it be better to record the piano in stereo or mono?
+[2023-05-22T20:36:00, Mon] 6.User: Your answer isn't correct. Resolution 36-NQ/TW is about to get The overseas Vietnamese community has a certain economic potential, has relationships with many foreign and international businesses and economic organizations, has the ability to find partners and acts as a bridge with businesses. , domestic organization. Many intellectuals have a high level of education and expertise; a number of people hold important positions in agencies, research and training institutions, companies and international organizations, able to build relationships with economic and scientific institutions in the host country.
+[2023-05-22T20:36:00.500000, Mon] 7.User: How did Vietnamese overseas respond to this Resolution?
+[2023-05-22T20:36:01, Mon] 8.User: What Vietnam government should do to be able to successfully achieve the Resolution 36-NQ/TW goal?
+[2023-05-23T01:16:00, Tue] 9.User: I was wondering if you could help me track my screen time and provide some insights on how I can reduce it. I've been trying to cut down on phone usage in the evenings, but sometimes work gets in the way - like last week when I had to stay up till 1 am for a few nights in a row to finish some projects.
+[2023-05-23T01:16:00.500000, Tue] 10.User: I use my smartphone and laptop most frequently. My typical wake-up time is around 7 am, and bedtime varies, but I'm aiming for 10:30 pm on weekends and 10 pm on weekdays. On an average day, I think I spend around 4-5 hours on screens, including work and leisure time. My top 3 most used apps are social media, email, and Netflix. I'm most tempted to mindlessly scroll in the evenings, usually after dinner around 7-8 pm when I'm watching TV or before bed when I'm winding down.
+[2023-05-23T01:16:01, Tue] 11.User: I think these suggestions are a good starting point. I'm willing to try out the screen-free dinner and wind-down routine. However, I'm a bit concerned about setting time limits for Netflix, since I've been using it to unwind after a long day. Is there a way to balance my need to relax with the goal of reducing screen time?
+[2023-05-23T01:16:01.500000, Tue] 12.User: Yeah, that sounds like a good compromise. I can definitely try to mix it up and not just rely on Netflix all the time. One thing I wanted to ask, though - how can I make sure I'm not just replacing one screen with another, like switching from Netflix to my phone or laptop?
+[2023-05-23T01:16:02, Tue] 13.User: I think these suggestions are helpful. One thing I wanted to mention is that last week was a bit of an exception for me - I had a lot of work projects to finish, so I ended up staying up till 1 am for a few nights in a row. I'm trying to get back on track with my bedtime routine this week.
+[2023-05-23T01:16:02.500000, Tue] 14.User: I'm feeling good about getting back on track this week. I think setting a realistic bedtime goal and establishing a calming pre-sleep routine will really help me. I'm also going to try to prioritize my tasks better at work so I don't have to stay up late to finish projects. Do you have any tips on how to prioritize tasks effectively?
+[2023-05-23T09:42:00, Tue] 15.User: Practical advice: To visualize your desires, create a clear vision for what you want to achieve and focus on visualizing yourself achieving your

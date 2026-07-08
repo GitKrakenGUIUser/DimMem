@@ -1,0 +1,102 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-05-27 02:21:01
+content: The user previously stayed in Haight-Ashbury for a best friend's wedding and booked the Airbnb three months in advance.
+reason: for a best friend's wedding
+purpose: to attend the wedding
+
+[2]
+source_time: 2023-05-27 09:36:00
+content: User is considering accommodation options: a hostel in Shinjuku for $30/night or an Airbnb in Harajuku for $50/night.
+purpose: To decide accommodation for Japan trip.
+
+[3]
+source_time: 2023-05-27 06:53:01.500000
+content: User participated in an online book club discussion of 'The Seven Husbands of Evelyn Hugo' by Taylor Jenkins Reid.
+
+[4]
+source_time: 2023-05-27 18:44:01
+content: User seeks book recommendations similar to 'The Nightingale' by Kristin Hannah.
+
+[5]
+source_time: 2023-05-27 19:08:02.500000
+content: User attended Billie Eilish concert at Los Angeles Forum with best friend Emily, sang along to songs including 'Bad Guy' and 'When the Party's Over'.
+
+[6]
+source_time: 2023-05-27 06:53:02
+content: User is interested in the book 'The Royal We' by Heather Cocks and Jessica Morgan, particularly its themes of identity, class, privilege, fame, and social media scrutiny.
+reason: Heard positive reviews about the book's satire.
+
+[7]
+source_time: 2023-05-27 18:44:00
+content: User read 'The 7 1/2 Deaths of Evelyn Hardcastle' by Stuart Turton, finishing on March 20, 2023, as a library e-book borrow.
+
+[8]
+source_time: 2023-05-27 02:26:00
+content: User's birthday is February 15, 2023, when they turned 32 years old.
+
+[9]
+source_time: 2023-05-27 23:04:01.500000
+content: The user plans to purchase a smart timer for their new IKEA lamp to automatically turn it off when leaving the room.
+reason: forgets to turn off the lamp
+purpose: save energy and automate lighting
+
+[10]
+source_time: 2023-05-27 09:36:02.500000
+content: User prefers psychological thriller books.
+
+[11]
+source_time: 2023-05-27 10:30:00
+content: User enjoys historical fiction novels with strong female characters and thrilling plots, similar to 'The Nightingale' and 'The Alice Network'.
+
+[12]
+source_time: 2023-05-27 18:44:02.500000
+content: User enjoys thriller books featuring strong female characters.
+
+[13]
+source_time: 2023-05-27 01:39:01
+content: The user is interested in watching the musical 'The Prom' on Netflix.
+
+[14]
+source_time: 2023-05-27 01:39:02
+content: The user is fascinated by the process of creating music and lyrics in musicals and is interested in the work of songwriters.
+
+[15]
+source_time: 2023-05-27 15:49:01
+content: The user's professor mentioned a research project about the impact of AI on the job market, which sparked the user's interest in the role of education in preparing students for the future of work.
+
+Now answer the question:
+User Question:When did I book the Airbnb in Sacramento?
+Question Date:2023/05/27 (Sat) 17:10

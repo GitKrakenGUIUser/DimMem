@@ -1,0 +1,2513 @@
+[
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User rearranged living room furniture around 2023-05-05.",
+    "dimension": {
+      "time": "2023-05-05",
+      "location": "living room",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "rearranging furniture",
+        "living room"
+      ]
+    },
+    "entities": [
+      "rearranging furniture",
+      "living room"
+    ],
+    "embedding_text": "User rearranged living room furniture around 2023-05-05.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0136",
+    "source_time": "2023-05-26 21:54:02.500000",
+    "record_time": "2026-07-07T19:51:02.178274",
+    "score": 30.38343372973135,
+    "score_components": {
+      "bm25_score": 30.38343372973135,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 30.38343372973135,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 30.38343372973135
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.8241758241758241
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.6281732071465189
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User plans to get new decorative items for the living room reading nook.",
+    "dimension": {
+      "time": "",
+      "location": "living room reading nook",
+      "reason": "to complement the new layout",
+      "purpose": "",
+      "keywords": [
+        "decorative items",
+        "reading nook",
+        "living room"
+      ]
+    },
+    "entities": [
+      "decorative items",
+      "reading nook",
+      "living room"
+    ],
+    "embedding_text": "User plans to get new decorative items for the living room reading nook.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0137",
+    "source_time": "2023-05-26 13:33:00",
+    "record_time": "2026-07-07T19:51:02.178279",
+    "score": 14.312742518818622,
+    "score_components": {
+      "bm25_score": 14.312742518818622,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 14.312742518818622,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 14.312742518818622
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.6373626373626373
+      },
+      {
+        "method": "minilm",
+        "rank": 13,
+        "score": 0.23752544178221305
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User decided to buy deep coral-colored throw pillows to complement a Moroccan-inspired area rug in their bedroom.",
+    "dimension": {
+      "time": "2023-05-26",
+      "location": "bedroom",
+      "reason": "to complement the area rug",
+      "purpose": "to add a pop of color",
+      "keywords": [
+        "deep coral",
+        "throw pillows",
+        "Moroccan-inspired",
+        "area rug",
+        "bedroom"
+      ]
+    },
+    "entities": [
+      "deep coral",
+      "throw pillows",
+      "Moroccan-inspired",
+      "area rug",
+      "bedroom"
+    ],
+    "embedding_text": "User decided to buy deep coral-colored throw pillows to complement a Moroccan-inspired area rug in their bedroom.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0100",
+    "source_time": "2023-05-26 03:36:02",
+    "record_time": "2026-07-07T19:51:02.178066",
+    "score": 12.068586083360845,
+    "score_components": {
+      "bm25_score": 12.068586083360845,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 12.068586083360845,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 12.068586083360845
+      },
+      {
+        "method": "structured",
+        "rank": 9,
+        "score": 0.29670329670329665
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.45008366415606854
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user plans to get throw pillows in complementary colors for a Moroccan-inspired neutral area rug to complete the look.",
+    "dimension": {
+      "time": "",
+      "location": "living room",
+      "reason": "",
+      "purpose": "to complete the look of the rug",
+      "keywords": [
+        "throw pillows",
+        "complementary colors",
+        "Moroccan-inspired",
+        "neutral palette",
+        "area rug"
+      ]
+    },
+    "entities": [
+      "throw pillows",
+      "complementary colors",
+      "Moroccan-inspired",
+      "neutral palette",
+      "area rug"
+    ],
+    "embedding_text": "The user plans to get throw pillows in complementary colors for a Moroccan-inspired neutral area rug to complete the look.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0099",
+    "source_time": "2023-05-26 03:36:01.500000",
+    "record_time": "2026-07-07T19:51:02.178059",
+    "score": 11.702166556221012,
+    "score_components": {
+      "bm25_score": 11.702166556221012,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 11.702166556221012,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 11.702166556221012
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.6703296703296703
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.4261174979887539
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User plans to get a humidifier for their living room because dry air affects their plants.",
+    "dimension": {
+      "time": "",
+      "location": "living room",
+      "reason": "dry air affecting plants",
+      "purpose": "improve plant health",
+      "keywords": [
+        "humidifier",
+        "living room",
+        "dry air",
+        "plants"
+      ]
+    },
+    "entities": [
+      "humidifier",
+      "living room",
+      "dry air",
+      "plants"
+    ],
+    "embedding_text": "User plans to get a humidifier for their living room because dry air affects their plants.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0123",
+    "source_time": "2023-05-26 12:29:02",
+    "record_time": "2026-07-07T19:51:02.178199",
+    "score": 9.04252046758007,
+    "score_components": {
+      "bm25_score": 9.04252046758007,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 9.04252046758007,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 9.04252046758007
+      },
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.6043956043956044
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "fact",
+    "content": "User's living room has a relaxed, cozy mix of modern and traditional style with neutral colors including beige, cream, and wood tones.",
+    "dimension": {
+      "time": "",
+      "location": "living room",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "living room",
+        "decor style",
+        "modern",
+        "traditional",
+        "neutral colors",
+        "beige",
+        "cream",
+        "wood tones"
+      ]
+    },
+    "entities": [
+      "living room",
+      "decor style",
+      "modern",
+      "traditional",
+      "neutral colors",
+      "beige",
+      "cream",
+      "wood tones"
+    ],
+    "embedding_text": "User's living room has a relaxed, cozy mix of modern and traditional style with neutral colors including beige, cream, and wood tones.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0138",
+    "source_time": "2023-05-26 13:33:00.500000",
+    "record_time": "2026-07-07T19:51:02.178286",
+    "score": 8.522490162007585,
+    "score_components": {
+      "bm25_score": 8.522490162007585,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 8.522490162007585,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 8.522490162007585
+      },
+      {
+        "method": "structured",
+        "rank": 7,
+        "score": 0.37362637362637363
+      },
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.24282004070562063
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user and their partner plan to paint the walls, replace the flooring in the living room, add fixtures and appliances in the kitchen, and make cosmetic changes to personalize the house.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to make the house feel like their home",
+      "keywords": [
+        "painting",
+        "flooring",
+        "kitchen fixtures",
+        "home improvement",
+        "cosmetic changes"
+      ]
+    },
+    "entities": [
+      "painting",
+      "flooring",
+      "kitchen fixtures",
+      "home improvement",
+      "cosmetic changes"
+    ],
+    "embedding_text": "The user and their partner plan to paint the walls, replace the flooring in the living room, add fixtures and appliances in the kitchen, and make cosmetic changes to personalize the house.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0113",
+    "source_time": "2023-05-26 03:59:02",
+    "record_time": "2026-07-07T19:51:02.178142",
+    "score": 5.977587074584546,
+    "score_components": {
+      "bm25_score": 5.977587074584546,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 5.977587074584546,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 5.977587074584546
+      },
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.6043956043956044
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.36973426905264745
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "profile",
+    "content": "User downloads books the night before their commute to ensure they have something to read on the train.",
+    "dimension": {
+      "time": "night before commute",
+      "location": "",
+      "reason": "to have reading material",
+      "purpose": "to read during commute",
+      "keywords": [
+        "download books",
+        "night before",
+        "commute reading"
+      ]
+    },
+    "entities": [
+      "download books",
+      "night before",
+      "commute reading"
+    ],
+    "embedding_text": "User downloads books the night before their commute to ensure they have something to read on the train.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0030",
+    "source_time": "2023-05-26 19:52:01.500000",
+    "record_time": "2026-07-07T19:51:02.177574",
+    "score": 5.4366218458825255,
+    "score_components": {
+      "bm25_score": 5.4366218458825255,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 5.4366218458825255,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 5.4366218458825255
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "profile",
+    "content": "The user is interested in learning about how natural disasters have shaped Japan's history and culture.",
+    "dimension": {
+      "time": "",
+      "location": "Japan",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Japan",
+        "natural disasters",
+        "history",
+        "culture"
+      ]
+    },
+    "entities": [
+      "Japan",
+      "natural disasters",
+      "history",
+      "culture"
+    ],
+    "embedding_text": "The user is interested in learning about how natural disasters have shaped Japan's history and culture.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0117",
+    "source_time": "2023-05-26 12:29:00",
+    "record_time": "2026-07-07T19:51:02.178165",
+    "score": 5.156602507896794,
+    "score_components": {
+      "bm25_score": 5.156602507896794,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 5.156602507896794,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 5.156602507896794
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "profile",
+    "content": "The user is interested in DNA analysis and how it is used to uncover the origins of ancient populations.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "DNA analysis",
+        "ancient populations",
+        "origins",
+        "genetics"
+      ]
+    },
+    "entities": [
+      "DNA analysis",
+      "ancient populations",
+      "origins",
+      "genetics"
+    ],
+    "embedding_text": "The user is interested in DNA analysis and how it is used to uncover the origins of ancient populations.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0089",
+    "source_time": "2023-05-26 03:19:02",
+    "record_time": "2026-07-07T19:51:02.177999",
+    "score": 5.101707403791691,
+    "score_components": {
+      "bm25_score": 5.101707403791691,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 5.101707403791691,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 5.101707403791691
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user plans to build a deck and create a patio area in their backyard as a DIY project.",
+    "dimension": {
+      "time": "",
+      "location": "user's backyard",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "deck",
+        "patio",
+        "DIY",
+        "backyard"
+      ]
+    },
+    "entities": [
+      "deck",
+      "patio",
+      "DIY",
+      "backyard"
+    ],
+    "embedding_text": "The user plans to build a deck and create a patio area in their backyard as a DIY project.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0070",
+    "source_time": "2023-05-26 09:20:00",
+    "record_time": "2026-07-07T19:51:02.177889",
+    "score": 4.7145898027105515,
+    "score_components": {
+      "bm25_score": 4.7145898027105515,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 4.7145898027105515,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 4.7145898027105515
+      },
+      {
+        "method": "structured",
+        "rank": 13,
+        "score": 0.2637362637362637
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user had brunch with friends on Sunday, May 7, 2023 (three weeks before May 26, 2023).",
+    "dimension": {
+      "time": "2023-05-07",
+      "location": "",
+      "reason": "",
+      "purpose": "socialize",
+      "keywords": [
+        "brunch",
+        "friends"
+      ]
+    },
+    "entities": [
+      "brunch",
+      "friends"
+    ],
+    "embedding_text": "The user had brunch with friends on Sunday, May 7, 2023 (three weeks before May 26, 2023).",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0047",
+    "source_time": "2023-05-26 19:20:00",
+    "record_time": "2026-07-07T19:51:02.177675",
+    "score": 4.67109982409138,
+    "score_components": {
+      "bm25_score": 4.67109982409138,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 4.67109982409138,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 4.67109982409138
+      },
+      {
+        "method": "minilm",
+        "rank": 14,
+        "score": 0.2229644293057074
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user is feeling lonely and wants to reconnect with old friends or meet new people.",
+    "dimension": {
+      "time": "2023-05-26",
+      "location": "",
+      "reason": "feeling lonely",
+      "purpose": "meet people",
+      "keywords": [
+        "lonely",
+        "reconnect",
+        "old friends",
+        "new people"
+      ]
+    },
+    "entities": [
+      "lonely",
+      "reconnect",
+      "old friends",
+      "new people"
+    ],
+    "embedding_text": "The user is feeling lonely and wants to reconnect with old friends or meet new people.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0049",
+    "source_time": "2023-05-26 19:20:00",
+    "record_time": "2026-07-07T19:51:02.177687",
+    "score": 4.552626787327091,
+    "score_components": {
+      "bm25_score": 4.552626787327091,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 4.552626787327091,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 4.552626787327091
+      },
+      {
+        "method": "structured",
+        "rank": 12,
+        "score": 0.2637362637362637
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User decided to use contrasting planters with a rustic or vintage style and earthy tones like terracotta or ceramic.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to add visual interest",
+      "purpose": "",
+      "keywords": [
+        "planters",
+        "rustic",
+        "vintage",
+        "terracotta",
+        "ceramic",
+        "earthy tones"
+      ]
+    },
+    "entities": [
+      "planters",
+      "rustic",
+      "vintage",
+      "terracotta",
+      "ceramic",
+      "earthy tones"
+    ],
+    "embedding_text": "User decided to use contrasting planters with a rustic or vintage style and earthy tones like terracotta or ceramic.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0141",
+    "source_time": "2023-05-26 18:55:01",
+    "record_time": "2026-07-07T19:51:02.178305",
+    "score": 4.083525018062051,
+    "score_components": {
+      "bm25_score": 4.083525018062051,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 4.083525018062051,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 4.083525018062051
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user held a plank for 45 seconds on Tuesday, 2023-05-23, achieving a new personal best.",
+    "dimension": {
+      "time": "2023-05-23",
+      "location": "Zumba class",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "plank",
+        "personal best",
+        "45 seconds"
+      ]
+    },
+    "entities": [
+      "plank",
+      "personal best",
+      "45 seconds"
+    ],
+    "embedding_text": "The user held a plank for 45 seconds on Tuesday, 2023-05-23, achieving a new personal best.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0020",
+    "source_time": "2023-05-26 00:20:01",
+    "record_time": "2026-07-07T19:51:02.177515",
+    "score": 3.6484013651594953,
+    "score_components": {
+      "bm25_score": 3.6484013651594953,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 3.6484013651594953,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 3.6484013651594953
+      },
+      {
+        "method": "structured",
+        "rank": 11,
+        "score": 0.2637362637362637
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.33443255437392444
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user tried a new vegan lasagna recipe last weekend and received positive feedback from the Foodie Frenzy group.",
+    "dimension": {
+      "time": "2023-05-20 to 2023-05-21",
+      "location": "Foodie Frenzy group",
+      "reason": "",
+      "purpose": "cooking experiment",
+      "keywords": [
+        "vegan lasagna",
+        "recipe",
+        "Foodie Frenzy",
+        "feedback"
+      ]
+    },
+    "entities": [
+      "vegan lasagna",
+      "recipe",
+      "Foodie Frenzy",
+      "feedback"
+    ],
+    "embedding_text": "The user tried a new vegan lasagna recipe last weekend and received positive feedback from the Foodie Frenzy group.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0079",
+    "source_time": "2023-05-26 11:49:01",
+    "record_time": "2026-07-07T19:51:02.177941",
+    "score": 3.6149919712402294,
+    "score_components": {
+      "bm25_score": 3.6149919712402294,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 16,
+    "retrieval_score": 3.6149919712402294,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 16,
+        "score": 3.6149919712402294
+      },
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.2637362637362637
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User expressed worry that they might not have as much in common with friends as before due to busy schedules.",
+    "dimension": {
+      "time": "2023-05-26T19:20:02",
+      "location": "",
+      "reason": "busy schedules causing distance",
+      "purpose": "",
+      "keywords": [
+        "worry",
+        "friends",
+        "common interests",
+        "busy schedule"
+      ]
+    },
+    "entities": [
+      "worry",
+      "friends",
+      "common interests",
+      "busy schedule"
+    ],
+    "embedding_text": "User expressed worry that they might not have as much in common with friends as before due to busy schedules.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0051",
+    "source_time": "2023-05-26 19:20:00.500000",
+    "record_time": "2026-07-07T19:51:02.177699",
+    "score": 3.5192856884376127,
+    "score_components": {
+      "bm25_score": 3.5192856884376127,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 17,
+    "retrieval_score": 3.5192856884376127,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 17,
+        "score": 3.5192856884376127
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User decided to use a mix-and-match approach for planters, with a common thread of earthy tones, varying scale, and limiting to 3-4 planters.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to create visual interest and a dynamic look",
+      "purpose": "",
+      "keywords": [
+        "planters",
+        "mix and match",
+        "earthy tones",
+        "scale",
+        "3-4 planters"
+      ]
+    },
+    "entities": [
+      "planters",
+      "mix and match",
+      "earthy tones",
+      "scale",
+      "3-4 planters"
+    ],
+    "embedding_text": "User decided to use a mix-and-match approach for planters, with a common thread of earthy tones, varying scale, and limiting to 3-4 planters.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0142",
+    "source_time": "2023-05-26 18:55:01.500000",
+    "record_time": "2026-07-07T19:51:02.178311",
+    "score": 3.397399127155235,
+    "score_components": {
+      "bm25_score": 3.397399127155235,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 18,
+    "retrieval_score": 3.397399127155235,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 18,
+        "score": 3.397399127155235
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user is designing a new product for a fictional company to solve a specific problem for a target audience.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "product design",
+        "fictional company",
+        "target audience",
+        "problem solving"
+      ]
+    },
+    "entities": [
+      "product design",
+      "fictional company",
+      "target audience",
+      "problem solving"
+    ],
+    "embedding_text": "The user is designing a new product for a fictional company to solve a specific problem for a target audience.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0091",
+    "source_time": "2023-05-26 12:36:00.500000",
+    "record_time": "2026-07-07T19:51:02.178011",
+    "score": 3.377434680287618,
+    "score_components": {
+      "bm25_score": 3.377434680287618,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 19,
+    "retrieval_score": 3.377434680287618,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 19,
+        "score": 3.377434680287618
+      },
+      {
+        "method": "structured",
+        "rank": 15,
+        "score": 0.2637362637362637
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "profile",
+    "content": "User makes it a point to have breakfast with family on Mondays, Wednesdays, and Fridays before heading out.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "user has a busy schedule",
+      "purpose": "to have breakfast with family",
+      "keywords": [
+        "breakfast",
+        "family",
+        "Monday",
+        "Wednesday",
+        "Friday",
+        "busy schedule"
+      ]
+    },
+    "entities": [
+      "breakfast",
+      "family",
+      "Monday",
+      "Wednesday",
+      "Friday",
+      "busy schedule"
+    ],
+    "embedding_text": "User makes it a point to have breakfast with family on Mondays, Wednesdays, and Fridays before heading out.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0129",
+    "source_time": "2023-05-26 23:22:01",
+    "record_time": "2026-07-07T19:51:02.178234",
+    "score": 3.302240153380823,
+    "score_components": {
+      "bm25_score": 3.302240153380823,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 20,
+    "retrieval_score": 3.302240153380823,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 20,
+        "score": 3.302240153380823
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user recently started collecting indoor plants and waters a fern, snake plant, and spider plant every Sunday morning.",
+    "dimension": {
+      "time": "",
+      "location": "living room",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "indoor plants",
+        "fern",
+        "snake plant",
+        "spider plant",
+        "watering schedule"
+      ]
+    },
+    "entities": [
+      "indoor plants",
+      "fern",
+      "snake plant",
+      "spider plant",
+      "watering schedule"
+    ],
+    "embedding_text": "The user recently started collecting indoor plants and waters a fern, snake plant, and spider plant every Sunday morning.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0096",
+    "source_time": "2023-05-26 03:36:00",
+    "record_time": "2026-07-07T19:51:02.178042",
+    "score": 0.6043956043956044,
+    "structural_score": 0.6043956043956044,
+    "score_components": {
+      "score": 0.6043956043956044,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 1.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.2857142857142857,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.2857142857142857
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user recently started collecting indoor plants and waters a fern, snake plant, and spider plant every Sunday morning. | indoor plants | fern | snake plant | spider plant | watering schedule | living room | indoor plants | fern | snake plant | spider plant | watering schedule"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 4,
+    "retrieval_score": 0.6043956043956044,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.6043956043956044
+      },
+      {
+        "method": "minilm",
+        "rank": 20,
+        "score": 0.2010798141124276
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "fact",
+    "content": "User owns a fern, a snake plant, and a spider plant.",
+    "dimension": {
+      "time": "",
+      "location": "living room",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "fern",
+        "snake plant",
+        "spider plant",
+        "houseplants"
+      ]
+    },
+    "entities": [
+      "fern",
+      "snake plant",
+      "spider plant",
+      "houseplants"
+    ],
+    "embedding_text": "User owns a fern, a snake plant, and a spider plant.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0139",
+    "source_time": "2023-05-26 18:55:00",
+    "record_time": "2026-07-07T19:51:02.178292",
+    "score": 0.37362637362637363,
+    "structural_score": 0.37362637362637363,
+    "score_components": {
+      "score": 0.37362637362637363,
+      "answer_field_score": 1.0,
+      "memory_type_score": 0.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 1.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.2857142857142857,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 0.0,
+        "location_constraint": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.2857142857142857
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User owns a fern, a snake plant, and a spider plant. | fern | snake plant | spider plant | houseplants | living room | fern | snake plant | spider plant | houseplants"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 8,
+    "retrieval_score": 0.37362637362637363,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 8,
+        "score": 0.37362637362637363
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User bought a new heavier and more balanced violin bow online and has been enjoying it.",
+    "dimension": {
+      "time": "",
+      "location": "online",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "buy",
+        "bow",
+        "violin",
+        "heavier",
+        "balanced",
+        "online"
+      ]
+    },
+    "entities": [
+      "buy",
+      "bow",
+      "violin",
+      "heavier",
+      "balanced",
+      "online"
+    ],
+    "embedding_text": "User bought a new heavier and more balanced violin bow online and has been enjoying it.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0006",
+    "source_time": "2023-05-26 10:02:01",
+    "record_time": "2026-07-07T19:51:02.177430",
+    "score": 0.2637362637362637,
+    "structural_score": 0.2637362637362637,
+    "score_components": {
+      "score": 0.2637362637362637,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.14285714285714285,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.14285714285714285
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User bought a new heavier and more balanced violin bow online and has been enjoying it. | buy | bow | violin | heavier | balanced | online | online | buy | bow | violin | heavier | balanced | online"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.2637362637362637,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 10,
+        "score": 0.2637362637362637
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user and their partner plan to add garden beds for herbs and vegetables and install a fire pit in the backyard, which has a big patio and existing landscaping.",
+    "dimension": {
+      "time": "",
+      "location": "backyard",
+      "reason": "",
+      "purpose": "to enhance outdoor living and enjoyment",
+      "keywords": [
+        "backyard",
+        "garden bed",
+        "fire pit",
+        "patio",
+        "landscaping"
+      ]
+    },
+    "entities": [
+      "backyard",
+      "garden bed",
+      "fire pit",
+      "patio",
+      "landscaping"
+    ],
+    "embedding_text": "The user and their partner plan to add garden beds for herbs and vegetables and install a fire pit in the backyard, which has a big patio and existing landscaping.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0114",
+    "source_time": "2023-05-26 03:59:02.500000",
+    "record_time": "2026-07-07T19:51:02.178148",
+    "score": 0.2637362637362637,
+    "structural_score": 0.2637362637362637,
+    "score_components": {
+      "score": 0.2637362637362637,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.14285714285714285,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.14285714285714285
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user and their partner plan to add garden beds for herbs and vegetables and install a fire pit in the backyard, which has a big patio and existing landscaping. | backyard | garden bed | fire pit | patio | landscaping | backyard | to enhance outdoor living and enjoyment | backyard | garden bed | fire pit | patio | landscaping"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.2637362637362637,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 16,
+        "score": 0.2637362637362637
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User repotted a snake plant about three weeks prior to 2023-05-26 using new potting mix, and it is thriving.",
+    "dimension": {
+      "time": "around 2023-05-05",
+      "location": "",
+      "reason": "",
+      "purpose": "improve plant health",
+      "keywords": [
+        "snake plant",
+        "repotting",
+        "potting mix"
+      ]
+    },
+    "entities": [
+      "snake plant",
+      "repotting",
+      "potting mix"
+    ],
+    "embedding_text": "User repotted a snake plant about three weeks prior to 2023-05-26 using new potting mix, and it is thriving.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0120",
+    "source_time": "2023-05-26 12:29:00.500000",
+    "record_time": "2026-07-07T19:51:02.178182",
+    "score": 0.2637362637362637,
+    "structural_score": 0.2637362637362637,
+    "score_components": {
+      "score": 0.2637362637362637,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.14285714285714285,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.14285714285714285
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User repotted a snake plant about three weeks prior to 2023-05-26 using new potting mix, and it is thriving. | snake plant | repotting | potting mix | around 2023-05-05 | improve plant health | snake plant | repotting | potting mix"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.2637362637362637,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 17,
+        "score": 0.2637362637362637
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User tidied their herb garden and replanted herbs in a new pot with better drainage.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "herb garden had gotten out of control",
+      "purpose": "improve drainage",
+      "keywords": [
+        "herb garden",
+        "replanting",
+        "pot",
+        "drainage"
+      ]
+    },
+    "entities": [
+      "herb garden",
+      "replanting",
+      "pot",
+      "drainage"
+    ],
+    "embedding_text": "User tidied their herb garden and replanted herbs in a new pot with better drainage.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0122",
+    "source_time": "2023-05-26 12:29:01.500000",
+    "record_time": "2026-07-07T19:51:02.178193",
+    "score": 0.2637362637362637,
+    "structural_score": 0.2637362637362637,
+    "score_components": {
+      "score": 0.2637362637362637,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.14285714285714285,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.14285714285714285
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User tidied their herb garden and replanted herbs in a new pot with better drainage. | herb garden | replanting | pot | drainage | herb garden had gotten out of control | improve drainage | herb garden | replanting | pot | drainage"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.2637362637362637,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 18,
+        "score": 0.2637362637362637
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User selected a medium bamboo cutting board engraved with 'The Smith Kitchen' as a wedding gift for a couple with the last name Smith.",
+    "dimension": {
+      "time": "2023-05-26",
+      "location": "",
+      "reason": "couple's modern minimalist style and love for travel and new foods",
+      "purpose": "to give a sentimental and practical wedding gift",
+      "keywords": [
+        "bamboo cutting board",
+        "wedding gift",
+        "Smith",
+        "engraved",
+        "modern minimalist"
+      ]
+    },
+    "entities": [
+      "bamboo cutting board",
+      "wedding gift",
+      "Smith",
+      "engraved",
+      "modern minimalist"
+    ],
+    "embedding_text": "User selected a medium bamboo cutting board engraved with 'The Smith Kitchen' as a wedding gift for a couple with the last name Smith.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0154",
+    "source_time": "2023-05-26 02:45:02.500000",
+    "record_time": "2026-07-07T19:51:02.178381",
+    "score": 0.2637362637362637,
+    "structural_score": 0.2637362637362637,
+    "score_components": {
+      "score": 0.2637362637362637,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.14285714285714285,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.14285714285714285
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User selected a medium bamboo cutting board engraved with 'The Smith Kitchen' as a wedding gift for a couple with the last name Smith. | bamboo cutting board | wedding gift | Smith | engraved | modern minimalist | 2023-05-26 | couple's modern minimalist style and love for travel and new foods | to give a sentimental and practical wedding gift | bamboo cutting board | wedding gift | Smith | engraved | modern minimalist"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.2637362637362637,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 19,
+        "score": 0.2637362637362637
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User visited the 'Dinosaurs of the Ancient World' exhibition at the Natural History Museum on 2023-05-26 and was amazed by the fossil displays.",
+    "dimension": {
+      "time": "2023-05-26",
+      "location": "Natural History Museum",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "exhibition",
+        "Dinosaurs of the Ancient World",
+        "Natural History Museum",
+        "fossil displays"
+      ]
+    },
+    "entities": [
+      "exhibition",
+      "Dinosaurs of the Ancient World",
+      "Natural History Museum",
+      "fossil displays"
+    ],
+    "embedding_text": "User visited the 'Dinosaurs of the Ancient World' exhibition at the Natural History Museum on 2023-05-26 and was amazed by the fossil displays.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0000",
+    "source_time": "2023-05-26 14:01:00",
+    "record_time": "2026-07-07T19:51:02.177377",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User visited the 'Dinosaurs of the Ancient World' exhibition at the Natural History Museum on 2023-05-26 and was amazed by the fossil displays. | exhibition | Dinosaurs of the Ancient World | Natural History Museum | fossil displays | 2023-05-26 | Natural History Museum | exhibition | Dinosaurs of the Ancient World | Natural History Museum | fossil displays"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 20,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 20,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "fact",
+    "content": "The user attended a one-day photography workshop about a month ago (around April 26, 2023) and learned about manual settings and lighting.",
+    "dimension": {
+      "time": "2023-04-26",
+      "location": "",
+      "reason": "",
+      "purpose": "learn photography",
+      "keywords": [
+        "photography workshop",
+        "manual settings",
+        "lighting"
+      ]
+    },
+    "entities": [
+      "photography workshop",
+      "manual settings",
+      "lighting"
+    ],
+    "embedding_text": "The user attended a one-day photography workshop about a month ago (around April 26, 2023) and learned about manual settings and lighting.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0043",
+    "source_time": "2023-05-26 06:23:00",
+    "record_time": "2026-07-07T19:51:02.177653",
+    "score": 0.3124077822302964,
+    "score_components": {
+      "dense_cosine_score": 0.3124077822302964,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 6,
+    "retrieval_score": 0.3124077822302964,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 6,
+        "score": 0.3124077822302964
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User pruned and propagated a spider plant a few weeks prior to 2023-05-26.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "propagation",
+      "keywords": [
+        "spider plant",
+        "pruning",
+        "propagation"
+      ]
+    },
+    "entities": [
+      "spider plant",
+      "pruning",
+      "propagation"
+    ],
+    "embedding_text": "User pruned and propagated a spider plant a few weeks prior to 2023-05-26.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0121",
+    "source_time": "2023-05-26 12:29:01",
+    "record_time": "2026-07-07T19:51:02.178187",
+    "score": 0.2840660355660894,
+    "score_components": {
+      "dense_cosine_score": 0.2840660355660894,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 7,
+    "retrieval_score": 0.2840660355660894,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 7,
+        "score": 0.2840660355660894
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "fact",
+    "content": "User attended the musical 'Rent' at the city theater on 2023-03-25.",
+    "dimension": {
+      "time": "2023-03-25",
+      "location": "city theater",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Rent",
+        "city theater",
+        "musical",
+        "theater production"
+      ]
+    },
+    "entities": [
+      "Rent",
+      "city theater",
+      "musical",
+      "theater production"
+    ],
+    "embedding_text": "User attended the musical 'Rent' at the city theater on 2023-03-25.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0143",
+    "source_time": "2023-05-26 18:55:02",
+    "record_time": "2026-07-07T19:51:02.178317",
+    "score": 0.2741930541918867,
+    "score_components": {
+      "dense_cosine_score": 0.2741930541918867,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 8,
+    "retrieval_score": 0.2741930541918867,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 8,
+        "score": 0.2741930541918867
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "profile",
+    "content": "The user and their partner prefer to make cosmetic changes rather than major renovations when customizing a home.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "cosmetic changes",
+        "home customization",
+        "preference"
+      ]
+    },
+    "entities": [
+      "cosmetic changes",
+      "home customization",
+      "preference"
+    ],
+    "embedding_text": "The user and their partner prefer to make cosmetic changes rather than major renovations when customizing a home.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0115",
+    "source_time": "2023-05-26 03:59:02",
+    "record_time": "2026-07-07T19:51:02.178154",
+    "score": 0.27202461365351505,
+    "score_components": {
+      "dense_cosine_score": 0.27202461365351505,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 9,
+    "retrieval_score": 0.27202461365351505,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.27202461365351505
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User worked as a stagehand for a production of Shakespeare's 'A Midsummer Night's Dream', attending the dress rehearsal on 2023-04-10 and the opening night on 2023-04-17.",
+    "dimension": {
+      "time": "2023-04-10 to 2023-04-17",
+      "location": "",
+      "reason": "worked as a stagehand",
+      "purpose": "",
+      "keywords": [
+        "A Midsummer Night's Dream",
+        "stagehand",
+        "dress rehearsal",
+        "opening night",
+        "Shakespeare"
+      ]
+    },
+    "entities": [
+      "A Midsummer Night's Dream",
+      "stagehand",
+      "dress rehearsal",
+      "opening night",
+      "Shakespeare"
+    ],
+    "embedding_text": "User worked as a stagehand for a production of Shakespeare's 'A Midsummer Night's Dream', attending the dress rehearsal on 2023-04-10 and the opening night on 2023-04-17.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0146",
+    "source_time": "2023-05-26 17:24:00.500000",
+    "record_time": "2026-07-07T19:51:02.178335",
+    "score": 0.26407355039616753,
+    "score_components": {
+      "dense_cosine_score": 0.26407355039616753,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.26407355039616753,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 10,
+        "score": 0.26407355039616753
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user is sorting through 50 photos taken during the practical session of the photography workshop.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "organize and edit photos",
+      "keywords": [
+        "photos",
+        "workshop",
+        "editing"
+      ]
+    },
+    "entities": [
+      "photos",
+      "workshop",
+      "editing"
+    ],
+    "embedding_text": "The user is sorting through 50 photos taken during the practical session of the photography workshop.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0044",
+    "source_time": "2023-05-26 06:23:00.500000",
+    "record_time": "2026-07-07T19:51:02.177658",
+    "score": 0.25323454735233236,
+    "score_components": {
+      "dense_cosine_score": 0.25323454735233236,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 11,
+    "retrieval_score": 0.25323454735233236,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.25323454735233236
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "profile",
+    "content": "User is an indoor plant enthusiast who owns and cares for multiple houseplants including fiddle leaf fig, snake plant, spider plant, and herbs, and actively maintains and expands their plant collection.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "indoor plant enthusiast",
+        "houseplants",
+        "herb garden",
+        "plant care"
+      ]
+    },
+    "entities": [
+      "indoor plant enthusiast",
+      "houseplants",
+      "herb garden",
+      "plant care"
+    ],
+    "embedding_text": "User is an indoor plant enthusiast who owns and cares for multiple houseplants including fiddle leaf fig, snake plant, spider plant, and herbs, and actively maintains and expands their plant collection.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0126",
+    "source_time": "2023-05-26 21:48:01",
+    "record_time": "2026-07-07T19:51:02.178216",
+    "score": 0.22182387149250846,
+    "score_components": {
+      "dense_cosine_score": 0.22182387149250846,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.22182387149250846,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 15,
+        "score": 0.22182387149250846
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User plans to start an indoor garden in their bedroom with a ZZ plant and an air plant.",
+    "dimension": {
+      "time": "",
+      "location": "bedroom",
+      "reason": "",
+      "purpose": "start an indoor garden",
+      "keywords": [
+        "indoor garden",
+        "bedroom",
+        "ZZ plant",
+        "air plant"
+      ]
+    },
+    "entities": [
+      "indoor garden",
+      "bedroom",
+      "ZZ plant",
+      "air plant"
+    ],
+    "embedding_text": "User plans to start an indoor garden in their bedroom with a ZZ plant and an air plant.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0124",
+    "source_time": "2023-05-26 21:48:00",
+    "record_time": "2026-07-07T19:51:02.178204",
+    "score": 0.21984740408851122,
+    "score_components": {
+      "dense_cosine_score": 0.21984740408851122,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.21984740408851122,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 16,
+        "score": 0.21984740408851122
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user took their first HIIT class on Saturday morning, 2023-05-13.",
+    "dimension": {
+      "time": "2023-05-13",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "first HIIT class"
+      ]
+    },
+    "entities": [
+      "first HIIT class"
+    ],
+    "embedding_text": "The user took their first HIIT class on Saturday morning, 2023-05-13.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0019",
+    "source_time": "2023-05-26 00:20:02",
+    "record_time": "2026-07-07T19:51:02.177510",
+    "score": 0.21424480487197492,
+    "score_components": {
+      "dense_cosine_score": 0.21424480487197492,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.21424480487197492,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 17,
+        "score": 0.21424480487197492
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User was pre-approved for a mortgage with Bank of America by the end of March 2023.",
+    "dimension": {
+      "time": "2023-03-31",
+      "location": "Bank of America",
+      "reason": "",
+      "purpose": "buying a house",
+      "keywords": [
+        "mortgage",
+        "pre-approval",
+        "Bank of America"
+      ]
+    },
+    "entities": [
+      "mortgage",
+      "pre-approval",
+      "Bank of America"
+    ],
+    "embedding_text": "User was pre-approved for a mortgage with Bank of America by the end of March 2023.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0108",
+    "source_time": "2023-05-26 03:59:00",
+    "record_time": "2026-07-07T19:51:02.178111",
+    "score": 0.21330420081692605,
+    "score_components": {
+      "dense_cosine_score": 0.21330420081692605,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.21330420081692605,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.21330420081692605
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "fact",
+    "content": "User owns a fiddle leaf fig tree that has been getting too much direct sunlight.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "fiddle leaf fig tree",
+        "direct sunlight"
+      ]
+    },
+    "entities": [
+      "fiddle leaf fig tree",
+      "direct sunlight"
+    ],
+    "embedding_text": "User owns a fiddle leaf fig tree that has been getting too much direct sunlight.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0119",
+    "source_time": "2023-05-26 12:29:00",
+    "record_time": "2026-07-07T19:51:02.178176",
+    "score": 0.20758628335957,
+    "score_components": {
+      "dense_cosine_score": 0.20758628335957,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.20758628335957,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 19,
+        "score": 0.20758628335957
+      }
+    ]
+  }
+]

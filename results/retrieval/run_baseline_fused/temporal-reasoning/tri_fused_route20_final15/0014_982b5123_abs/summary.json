@@ -1,0 +1,516 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "temporal-reasoning",
+  "sample_id": "0014_982b5123_abs",
+  "query_text": "When did the user book the Airbnb in Sacramento?",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 184,
+  "fused_candidate_count_before_final_cut": 49,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/temporal-reasoning/tri_fused_route20_final15/0014_982b5123_abs",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 7.4797503035360995,
+      "memory_type": "episodic",
+      "content": "The user previously stayed in Haight-Ashbury for a best friend's wedding and booked the Airbnb three months in advance.",
+      "source_boundary_id": "18_0171",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 7.4797503035360995,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 7.4797503035360995
+        },
+        {
+          "method": "structured",
+          "rank": 2,
+          "score": 0.4615384615384615
+        },
+        {
+          "method": "minilm",
+          "rank": 1,
+          "score": 0.5835717843502222
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.4797503035360995,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 6.891094697184487,
+      "memory_type": "episodic",
+      "content": "User is considering accommodation options: a hostel in Shinjuku for $30/night or an Airbnb in Harajuku for $50/night.",
+      "source_boundary_id": "15_0143",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 6.891094697184487,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 6.891094697184487
+        },
+        {
+          "method": "structured",
+          "rank": 1,
+          "score": 0.4615384615384615
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.891094697184487,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 6.066166657105206,
+      "memory_type": "episodic",
+      "content": "User participated in an online book club discussion of 'The Seven Husbands of Evelyn Hugo' by Taylor Jenkins Reid.",
+      "source_boundary_id": "14_0128",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 6.066166657105206,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 6.066166657105206
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.066166657105206,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 6.025103284880288,
+      "memory_type": "profile",
+      "content": "User seeks book recommendations similar to 'The Nightingale' by Kristin Hannah.",
+      "source_boundary_id": "16_0153",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 6.025103284880288,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 6.025103284880288
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.025103284880288,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 5.6903247369724586,
+      "memory_type": "episodic",
+      "content": "User attended Billie Eilish concert at Los Angeles Forum with best friend Emily, sang along to songs including 'Bad Guy' and 'When the Party's Over'.",
+      "source_boundary_id": "3_0034",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 5.6903247369724586,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 5.6903247369724586
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.6903247369724586,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 5.408798140376578,
+      "memory_type": "fact",
+      "content": "User is interested in the book 'The Royal We' by Heather Cocks and Jessica Morgan, particularly its themes of identity, class, privilege, fame, and social media scrutiny.",
+      "source_boundary_id": "14_0129",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 5.408798140376578,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 5.408798140376578
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.408798140376578,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 4.806877948669044,
+      "memory_type": "fact",
+      "content": "User read 'The 7 1/2 Deaths of Evelyn Hardcastle' by Stuart Turton, finishing on March 20, 2023, as a library e-book borrow.",
+      "source_boundary_id": "16_0151",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 4.806877948669044,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 4.806877948669044
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.806877948669044,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 4.788324053099137,
+      "memory_type": "fact",
+      "content": "User's birthday is February 15, 2023, when they turned 32 years old.",
+      "source_boundary_id": "15_0131",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 4.788324053099137,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 4.788324053099137
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.788324053099137,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 4.398977010498897,
+      "memory_type": "episodic",
+      "content": "The user plans to purchase a smart timer for their new IKEA lamp to automatically turn it off when leaving the room.",
+      "source_boundary_id": "8_0099",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 4.398977010498897,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 4.398977010498897
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.398977010498897,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 4.3396045400378656,
+      "memory_type": "profile",
+      "content": "User prefers psychological thriller books.",
+      "source_boundary_id": "16_0150",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 4.3396045400378656,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 4.3396045400378656
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.3396045400378656,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 4.087617665804637,
+      "memory_type": "profile",
+      "content": "User enjoys historical fiction novels with strong female characters and thrilling plots, similar to 'The Nightingale' and 'The Alice Network'.",
+      "source_boundary_id": "16_0157",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 4.087617665804637,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 4.087617665804637
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.087617665804637,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 4.015115162666539,
+      "memory_type": "profile",
+      "content": "User enjoys thriller books featuring strong female characters.",
+      "source_boundary_id": "16_0156",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 4.015115162666539,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 4.015115162666539
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.015115162666539,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 2.4899604167552707,
+      "memory_type": "profile",
+      "content": "The user is interested in watching the musical 'The Prom' on Netflix.",
+      "source_boundary_id": "6_0075",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 2.4899604167552707,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 2.4899604167552707
+        }
+      ],
+      "score_components": {
+        "bm25_score": 2.4899604167552707,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 2.48839302595019,
+      "memory_type": "profile",
+      "content": "The user is fascinated by the process of creating music and lyrics in musicals and is interested in the work of songwriters.",
+      "source_boundary_id": "6_0077",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 2.48839302595019,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 2.48839302595019
+        }
+      ],
+      "score_components": {
+        "bm25_score": 2.48839302595019,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 2.3447815310155935,
+      "memory_type": "episodic",
+      "content": "The user's professor mentioned a research project about the impact of AI on the job market, which sparked the user's interest in the role of education in preparing students for the future of work.",
+      "source_boundary_id": "2_0016",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 2.3447815310155935,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 2.3447815310155935
+        },
+        {
+          "method": "structured",
+          "rank": 9,
+          "score": 0.23076923076923075
+        }
+      ],
+      "score_components": {
+        "bm25_score": 2.3447815310155935,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 0.2935793399810791
+}

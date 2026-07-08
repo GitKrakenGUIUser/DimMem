@@ -1,0 +1,22 @@
+{
+  "conv_name": "temporal-reasoning",
+  "index": 7,
+  "question": "What was the airline that I flied with on Valentine's day?",
+  "ok": true,
+  "error": null,
+  "elapsed_seconds": 6.20945405960083,
+  "usage": {
+    "prompt_tokens": 689,
+    "completion_tokens": 596,
+    "total_tokens": 1285,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 502
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 49
+  },
+  "output_dir": "results/query_analysis/run_baseline/temporal-reasoning/0007_gpt4_f420262d"
+}

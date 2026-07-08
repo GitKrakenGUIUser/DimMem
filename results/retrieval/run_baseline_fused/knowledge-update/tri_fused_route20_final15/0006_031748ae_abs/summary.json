@@ -1,0 +1,556 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "knowledge-update",
+  "sample_id": "0006_031748ae_abs",
+  "query_text": "When the user just started their new role as Software Engineer Manager, how many engineers did they lead?",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 166,
+  "fused_candidate_count_before_final_cut": 43,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/knowledge-update/tri_fused_route20_final15/0006_031748ae_abs",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 21.881484104785546,
+      "memory_type": "fact",
+      "content": "The user is a Senior Software Engineer leading a team of 4 engineers.",
+      "source_boundary_id": "15_0117",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 21.881484104785546,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 21.881484104785546
+        },
+        {
+          "method": "structured",
+          "rank": 1,
+          "score": 0.8222222222222223
+        },
+        {
+          "method": "minilm",
+          "rank": 1,
+          "score": 0.6841876935267841
+        }
+      ],
+      "score_components": {
+        "bm25_score": 21.881484104785546,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 13.459104954177306,
+      "memory_type": "fact",
+      "content": "User is a Senior Software Engineer.",
+      "source_boundary_id": "17_0137",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 13.459104954177306,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 13.459104954177306
+        },
+        {
+          "method": "structured",
+          "rank": 4,
+          "score": 0.46666666666666673
+        },
+        {
+          "method": "minilm",
+          "rank": 3,
+          "score": 0.587508231791788
+        }
+      ],
+      "score_components": {
+        "bm25_score": 13.459104954177306,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 11.653892842749334,
+      "memory_type": "fact",
+      "content": "User leads a team of five engineers.",
+      "source_boundary_id": "17_0138",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 11.653892842749334,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 11.653892842749334
+        },
+        {
+          "method": "structured",
+          "rank": 2,
+          "score": 0.6888888888888889
+        },
+        {
+          "method": "minilm",
+          "rank": 2,
+          "score": 0.6538248492059127
+        }
+      ],
+      "score_components": {
+        "bm25_score": 11.653892842749334,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 9.449361924068034,
+      "memory_type": "episodic",
+      "content": "The user plans to organize a team outing for 5 people, including 4 engineers and manager Rachel.",
+      "source_boundary_id": "15_0119",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 9.449361924068034,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 9.449361924068034
+        },
+        {
+          "method": "structured",
+          "rank": 3,
+          "score": 0.5777777777777778
+        },
+        {
+          "method": "minilm",
+          "rank": 5,
+          "score": 0.41252988679118696
+        }
+      ],
+      "score_components": {
+        "bm25_score": 9.449361924068034,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 8.474421429111736,
+      "memory_type": "fact",
+      "content": "The user has many instruments.",
+      "source_boundary_id": "15_0130",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 8.474421429111736,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 8.474421429111736
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.474421429111736,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 7.4838085501571685,
+      "memory_type": "fact",
+      "content": "The user's manager is Rachel.",
+      "source_boundary_id": "15_0118",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 7.4838085501571685,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 7.4838085501571685
+        },
+        {
+          "method": "structured",
+          "rank": 7,
+          "score": 0.4
+        },
+        {
+          "method": "minilm",
+          "rank": 8,
+          "score": 0.358812056714524
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.4838085501571685,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 6.561429182298693,
+      "memory_type": "episodic",
+      "content": "User started listening to audiobooks on their commute on 2023-05-13.",
+      "source_boundary_id": "8_0064",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 6.561429182298693,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 6.561429182298693
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.561429182298693,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 6.112213875663104,
+      "memory_type": "profile",
+      "content": "The user is interested in learning how to write jokes.",
+      "source_boundary_id": "3_0037",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 6.112213875663104,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 6.112213875663104
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.112213875663104,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 5.75911255031014,
+      "memory_type": "episodic",
+      "content": "The user has applied to volunteer as an usher at their local theater.",
+      "source_boundary_id": "10_0089",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 5.75911255031014,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 5.75911255031014
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.75911255031014,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 5.6308548063384025,
+      "memory_type": "fact",
+      "content": "The user is interested in a fictional character named Alaric whose mentor is a wise old engineer named Gaius.",
+      "source_boundary_id": "6_0053",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 5.6308548063384025,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 5.6308548063384025
+        },
+        {
+          "method": "structured",
+          "rank": 6,
+          "score": 0.4
+        },
+        {
+          "method": "minilm",
+          "rank": 9,
+          "score": 0.2992710583368347
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.6308548063384025,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 4.781477569591364,
+      "memory_type": "episodic",
+      "content": "User started listening to The Book of Mormon soundtrack on May 28, 2023 and enjoys it.",
+      "source_boundary_id": "18_0150",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 4.781477569591364,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 4.781477569591364
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.781477569591364,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 4.770780814593892,
+      "memory_type": "profile",
+      "content": "The user has a daily commute where they listen to music.",
+      "source_boundary_id": "9_0076",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 4.770780814593892,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 4.770780814593892
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.770780814593892,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 4.5404816067589575,
+      "memory_type": "profile",
+      "content": "User believes that social media plays a big role in promoting diversity and representation by amplifying marginalized voices and stories.",
+      "source_boundary_id": "12_0100",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 4.5404816067589575,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 4.5404816067589575
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.5404816067589575,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 4.389518637170003,
+      "memory_type": "episodic",
+      "content": "The user became hooked on the Hamilton soundtrack after several listens and has been listening to it daily on their commute for two weeks as of May 13, 2023.",
+      "source_boundary_id": "9_0075",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 4.389518637170003,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 4.389518637170003
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.389518637170003,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 4.328742269733137,
+      "memory_type": "episodic",
+      "content": "The user recently tried a new fajita seasoning in a chicken fajita recipe.",
+      "source_boundary_id": "9_0081",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 4.328742269733137,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 4.328742269733137
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.328742269733137,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 8.569873571395874
+}

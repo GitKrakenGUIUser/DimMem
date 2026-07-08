@@ -1,0 +1,107 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-05-26 21:54:00.500000
+content: The user's favorite rice is Japanese short-grain rice.
+
+[2]
+source_time: 2023-05-26 21:54:01
+content: The user planned to make Japanese-style dishes using their favorite Japanese short-grain rice, possibly with grilled chicken or vegetables.
+purpose: to cook
+
+[3]
+source_time: 2023-05-28 02:27:02.500000
+content: User has combination skin type.
+
+[4]
+source_time: 2023-05-28 23:12:01.500000
+content: The user is considering buying 'The Barefoot Contessa Cookbook' for a friend who loves Ina Garten's show.
+reason: the friend loves Ina Garten's show
+purpose: gift for friend
+
+[5]
+source_time: 2023-05-24 00:03:00.500000
+content: User's most popular TikTok video, a time-lapse of drawing a portrait, received 1,200 views.
+
+[6]
+source_time: 2023-05-26 20:25:00
+content: On 2023-05-26, the user studied the novel 'The Giver' by asking for chapter summaries, quotes illustrating Jonas's character development, and analysis of the role of love in family creation in the community.
+purpose: to understand the novel 'The Giver'
+
+[7]
+source_time: 2023-05-28 23:12:00
+content: The user purchased winter sweaters at Macy's at 50% off on November 27th.
+purpose: purchase winter sweaters
+
+[8]
+source_time: 2023-05-24 22:11:00.500000
+content: User inquired about the historical power shift between the British monarchy and Parliament, and asked about the monarchy's current power and public opinion in modern-day Britain.
+purpose: to understand the evolution and current state of the British monarchy
+
+[9]
+source_time: 2023-05-20 23:47:02
+content: The user is preparing for the final walk-through inspection of the home before closing the purchase.
+purpose: ensure property condition before closing
+
+[10]
+source_time: 2023-05-24 13:39:00
+content: The user is interested in how religious texts address environmental sustainability and climate change, and believes more awareness of eco-friendly practices is needed.
+
+[11]
+source_time: 2023-05-25 06:56:01
+content: User requested translation of the English idiom 'a piece of cake' to Spanish.
+purpose: to obtain Spanish translation of an English idiom
+
+[12]
+source_time: 2023-05-30 08:18:00
+content: The user requested a Docker-based system with a certbot container to manage Let's Encrypt certificates for multiple domains hosted on Google Domains, using a GoLang application to iterate certbot commands and a daily cron job for renewal.
+purpose: to manage Let's Encrypt certificates for multiple domains
+
+[13]
+source_time: 2023-05-28 02:02:00
+content: User likes novels similar to 'The Seven Husbands of Evelyn Hugo'.
+
+[14]
+source_time: 2023-05-29 11:49:02
+content: User is considering starting a book journal to keep track of read books and personal thoughts.
+purpose: to track reading
+
+[15]
+source_time: 2023-05-21 22:19:02.500000
+content: User left a comment on a blog post about sustainable fashion on January 22nd, 2023, asking the author for favorite eco-friendly clothing brands, and the author replied with recommendations.
+purpose: to get eco-friendly clothing brand recommendations
+
+Now answer the question:
+User Question:What type of rice is my favorite?
+Question Date:2023/05/30 (Tue) 20:46

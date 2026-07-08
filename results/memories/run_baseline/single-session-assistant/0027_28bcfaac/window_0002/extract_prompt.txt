@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-21T09:02:01, Sun] 1.User: I'm still deciding, but I think I'll go with a neutral color. You know, I got my mother-in-law a potted plant and a scented candle for Mother's Day, and she really appreciated the thought. I spent around $30 on that, and it was a nice gesture. Do you think I should include a card with the personalized baby blanket or onesie?
+[2023-05-21T09:02:01.500000, Sun] 2.User: I think that's a great idea. A card will really make the gift feel more special and personal. I was thinking of getting a card that says something like "Congratulations on your new little one!" or "Wishing you all the best as you start this new chapter." Something simple but heartfelt. What do you think?
+[2023-05-21T09:02:02, Sun] 3.User: Wait, I need to clarify something. I'm not sure if I should get a onesie or a blanket. Can you help me decide?
+[2023-05-21T09:02:02.500000, Sun] 4.User: I think I'll go with the blanket. I like the idea of it being a cozy gift that can provide comfort and warmth for the baby. Plus, it can become a treasured family heirloom. Do you think I should get a lightweight blanket for spring and summer, or a thicker one for fall and winter?
+[2023-05-21T09:08:00, Sun] 5.User: I'm thinking of planning a bigger trip later this year, maybe to Europe or Asia. Can you give me some recommendations for destinations that are rich in history and culture but won't break the bank?
+[2023-05-21T09:08:00.500000, Sun] 6.User: I'm really interested in Budapest, Hungary. I've heard great things about the thermal baths. Speaking of baths, I've been meaning to organize my photos from my recent trips and I think I have some great shots of the High Roller observation wheel in Vegas and some scenic overlooks from my Tahoe trip. Can you help me with some caption ideas for those photos?
+[2023-05-21T09:08:01, Sun] 7.User: I'm thinking of visiting the Széchenyi Thermal Bath, and I've also heard about the stunning Parliament Building. I'd love some recommendations for must-see attractions and food. By the way, I've been on three trips in the past three months, so I have a lot of photos to organize.
+[2023-05-21T09:08:01.500000, Sun] 8.User: I'm really interested in trying some traditional Hungarian cuisine, especially goulash and paprikás csirke. And I'd love to visit the Buda Castle and the St. Stephen's Basilica. By the way, I've been thinking about my next trip, and I've already booked a flight to Miami for a bachelor party in June.
+[2023-05-21T09:08:02, Sun] 9.User: The bachelor party in Miami is going to be a blast! We're planning a boat tour, a night out in South Beach, and a few other activities, but we're also leaving some room for spontaneity. It's going to be a fun weekend with the guys. By the way, I've been thinking about my travel photos from the past year, and I realized I have three albums on Google Photos - one from my Vegas trip, one from my SF trip, and one from my Tahoe trip. I need to get around to captioning them all still.
+[2023-05-21T09:08:02.500000, Sun] 10.User: I think I'll start with my Vegas trip album. I have some great shots of the High Roller observation wheel and the strip, and I'd love to relive those memories.
+[2023-05-21T19:08:00, Sun] 11.User: I'm looking for some new shows to watch. I just finished bingeing "The Expanse" on Amazon Prime and I'm looking for something similar. I've been trying out Apple TV+ for the past month and really enjoyed their original series "Little America", so maybe something along those lines?
+[2023-05-21T19:08:00.500000, Sun] 12.User: I'm intrigued by For All Mankind, but I've already got Apple TV+ so I might as well explore more of their content. What other original series on Apple TV+ would you recommend, besides Little America?
+[2023-05-21T19:08:01, Sun] 13.User: I'm interested in Servant, I've heard mixed reviews but I'm a fan of M. Night Shyamalan's work. What's the general consensus on the show's pacing, is it a slow burn or does it pick up quickly?
+[2023-05-21T19:08:01.500000, Sun] 14.User: I'm curious about the finale, did it end on a cliffhanger or did it provide some closure for the season?
+[2023-05-21T19:08:02, Sun] 15.User: I've been thinking about the nanny's character, and I'm still not entirely sure what her motivations are. Do you think she's genuinely trying to help the family, or is there something more sinister going on?

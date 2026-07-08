@@ -1,0 +1,145 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-28T11:38:01, Sun] 1.User: Has the fund put in place internal policies or guidelines regarding ESG/SDG integration? If yes, provide details.
+Is any international ESG/SDG-related standard, taxonomy or benchmark employed in the investment decision making process? If so, which ones?
+Does the fund provide clarity on efforts it has made to meet relevant national/regional/international ESG-related regulations? Which ones?
+[2023-05-28T11:38:01.500000, Sun] 2.User: Exclusion: does the fund use ESG-based negative screening/exclusions in its investment decisions? if yes, provide details.
+General integration: does the fund incorporate ESG considerations systematically in its investment decision making process? if yes, provide details.
+Positive Screening: does the fund use any positive or best-in-class screening related to ESG in its investment process? if yes, provide details.
+Impact investment: does the fund target ESG-oriented sectors (e.g. renewable energy, green housing) or capital market instruments (e.g. green bonds, ESG funds) or markets (emerging and developing economies) in ESG investment? if yes, which sectors?
+SDG investment: does the fund consider SDGs in its investment decision process or asset allocation? If so which ones?
+Social: Does the fund integrate the social dimension of sustainability into its sustainable investment strategy? (e.g. child labour, diversity, etc) if yes, provide details.
+Governance: Does the fund consider governance issues in its investment decisions? (e.g. executive pay, board diversity, tax, etc) If yes, provide details.
+[2023-05-28T14:09:00, Sun] 3.User: I'm thinking of trying out some new games, what are some popular RPGs that I shouldn't miss? By the way, I just finished the main storyline of The Last of Us Part II and it took me around 25 hours to complete, so I'm in the mood for something with a similar immersive storyline.
+[2023-05-28T14:09:00.500000, Sun] 4.User: I've heard a lot about The Witcher 3, I actually started playing it last year but never finished it. Do you think it's worth going back to, or should I focus on some of the newer games on your list?
+[2023-05-28T14:09:01, Sun] 5.User: I think I'll give The Witcher 3 another shot. I remember getting stuck on a particular side quest, do you have any tips on how to overcome it?
+[2023-05-28T14:09:01.500000, Sun] 6.User: I'm stuck on a side quest called "The Whispering Hillock". I think it's in Velen, and the objective is to help a woman named Keira Metz. I'm having trouble with the part where I have to defeat the three witches in the swamp. They're really tough and I keep dying.
+[2023-05-28T14:09:02, Sun] 7.User: I think I'll try a different approach, maybe sneak past the witches or use my signs to create a diversion. Thanks for the tips! By the way, speaking of challenging games, have you heard about The Last of Us Part II? I just finished it and it took me around 25 hours to complete the main storyline.
+[2023-05-28T14:09:02.500000, Sun] 8.User: I did find the game's storyline to be very impactful, especially the way it explores the characters' emotions and relationships. The game's themes of loss, grief, and revenge really resonated with me. There were several moments that stood out to me, but I don't want to spoil it for anyone who hasn't played it.
+
+As for the difficulty, I found the game to be challenging, but not frustratingly so. The combat and stealth sections were tough, but they were also very rewarding when I finally managed to overcome them. I did get stuck on a particular level for a few days, but it was more due to my own mistakes than the game's difficulty. Overall, I think the game struck a great balance between challenge and reward.
+
+By the way, have you heard about the new Cyberpunk 2077 game? I've been waiting for it for months, and I'm really hyped about its cyberpunk setting and RPG elements.
+[2023-05-28T15:07:00, Sun] 9.User: I'm looking to get my antique Chinese vase from the Qing dynasty appraised and insured. I recently purchased it at an estate auction for $2,000, and I've learned it's one of only 12 known pieces of its kind. Can you recommend any reputable appraisers or insurance companies that specialize in rare Asian antiques?
+[2023-05-28T15:07:00.500000, Sun] 10.User: I'm also wondering if you can help me learn more about the Qing dynasty and its significance in Chinese history. As a collector, I'd love to have a deeper understanding of the cultural context behind my vase.
+[2023-05-28T15:07:01, Sun] 11.User: That's really helpful, thanks! I've been doing some research on the Qing dynasty, but this gives me a better understanding of the cultural context behind my vase. I'm also curious to know if you can recommend any books or online resources that would help me learn more about rare Asian antiques, specifically Qing dynasty ceramics.
+[2023-05-28T15:07:01.500000, Sun] 12.User: I'm actually considering selling some of my other collectibles, including a rare Hermès Birkin bag that I inherited from my grandmother. It's in pristine condition and estimated to be worth around $10,000. Do you think it's a good idea to sell it through an auction house or online marketplace?
+[2023-05-28T15:07:02, Sun] 13.User: I'm actually thinking of selling some of my other collectibles, including a rare first edition of Spider-Man #1 from 1963. It's in near-mint condition, and I had it appraised by a professional who estimated its value at around $5,000. Do you think it would be better to sell it through a comic book dealer, online marketplace, or auction house?
+[2023-05-28T15:07:02.500000, Sun] 14.User: I'm also considering selling a rare, out-of-print book written by my favorite author. After months of searching, I finally found a copy on eBay for $800. It's a first edition, signed by the author, and in excellent condition. I've been reading it slowly, savoring every page, and feeling grateful to have finally added it to my collection.
+[2023-05-28T18:28:00, Sun] 15.User: What are some negative effects of long-term isolation on a person's emotional well-being?

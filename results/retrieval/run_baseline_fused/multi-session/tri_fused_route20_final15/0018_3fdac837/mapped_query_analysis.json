@@ -1,0 +1,59 @@
+{
+  "query_text": "What is the total number of days the user spent in Japan and Chicago?",
+  "query_anchor": "What is the total number of days the user spent in Japan and Chicago?",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "Japan",
+      "Chicago"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "What is the total number of days the user spent in Japan and Chicago?",
+      "keywords": [
+        "Japan",
+        "Chicago"
+      ],
+      "query_terms": [
+        "what",
+        "is",
+        "the",
+        "total",
+        "number",
+        "of",
+        "days",
+        "user",
+        "spent",
+        "in",
+        "japan",
+        "and",
+        "chicago"
+      ]
+    },
+    "structured": {
+      "query_text": "What is the total number of days the user spent in Japan and Chicago?",
+      "rewrite": "What is the total number of days the user spent in Japan and Chicago?",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "What is the total number of days the user spent in Japan and Chicago?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "Japan",
+        "Chicago"
+      ],
+      "canonical_text": "What is the total number of days the user spent in Japan and Chicago?"
+    },
+    "minilm": {
+      "query_text": "What is the total number of days the user spent in Japan and Chicago?"
+    }
+  }
+}

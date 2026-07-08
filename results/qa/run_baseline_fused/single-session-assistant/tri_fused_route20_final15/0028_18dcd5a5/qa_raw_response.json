@@ -1,0 +1,32 @@
+{
+  "id": "7afdc551-a7b8-473a-99f3-1d26e8ce24e1",
+  "object": "chat.completion",
+  "created": 1783427928,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: The retrieved memories contain no mention of a \"Lost Temple of the Djinn\" one-shot or any information about mummies. Memory [2] discusses a D&D one-shot request but does not specify the name or monster details. Therefore, the evidence is insufficient to answer the question.\n\nAnswer: I don't know.",
+        "reasoning_content": "We need to answer based on retrieved memories. The user asks about \"Lost Temple of the Djinn one-shot\" and number of mummies. Look through memories. None mention \"Lost Temple of the Djinn\" or mummies. Memory [2] mentions a D&D one-shot adventure for level 8 characters but not that specific name or mummies. No other memory has relevant info. So insufficient evidence."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1125,
+    "completion_tokens": 151,
+    "total_tokens": 1276,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 83
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 869
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,130 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+
+
+Here is the real input you need to process:
+
+[2023-05-20T06:39:00, Sat] 1.User: I'm looking for some information on modern sculptors. I visited the art museum in the city and saw an exhibit on modern sculpture today, which got me really inspired. Can you recommend some famous sculptors I should check out?
+[2023-05-20T06:39:00.500000, Sat] 2.User: I'm really interested in Anish Kapoor's work, especially his use of reflective surfaces. Can you tell me more about his most famous piece, "Cloud Gate"?
+[2023-05-20T06:39:01, Sat] 3.User: I'm also interested in exploring more about clay modeling techniques. I've been working on a clay vase recently and I'm trying to improve my skills. Can you recommend some online resources or tutorials that can help me learn more about coiling and scoring?
+[2023-05-20T06:39:01.500000, Sat] 4.User: I'd like to learn more about the different types of clay bodies and their properties. I've been working with earthenware clay, but I've been wanting to try out air-dry clay and stoneware clay. Can you tell me more about the strengths and weaknesses of each type?
+[2023-05-20T06:39:02, Sat] 5.User: I'd like to explore more about glazing and firing techniques. I've been experimenting with different glazes on my earthenware pieces, but I'm not sure how to achieve a consistent, food-safe finish. Can you walk me through the basics of glazing and firing, and recommend some resources for learning more?
+[2023-05-20T06:39:02.500000, Sat] 6.User: I'm excited to help you with your glazing and firing questions! Since you've been experimenting with different glazes on your earthenware pieces, I'm assuming you have a basic understanding of the process. Let's dive into some specific questions or areas you'd like to explore further.
+
+What would you like to know more about? Glaze formulation, application techniques, firing schedules, or something else?
+[2023-05-20T09:27:00, Sat] 7.User: I'm looking for some gift ideas for friends. I just got back from the mall today, actually - I went to buy a birthday gift for my sister who turned 25 on the 15th, and I ended up getting her a silver necklace from Zara. Do you have any suggestions for gifts for friends that are around $30-$40?
+[2023-05-20T09:27:00.500000, Sat] 8.User: I like the idea of a gourmet food basket. What kind of items would you suggest including in the basket?
+[2023-05-20T09:27:01, Sat] 9.User: What if I want to make it a more personalized gift? Can I add a customized item to the basket, like a monogrammed cutting board or a personalized cheese knife?
+[2023-05-20T09:27:01.500000, Sat] 10.User: I like the idea of a customized cheese knife. Do you think it would be better to get a wooden handle or a metal one?
+[2023-05-20T09:27:02, Sat] 11.User: I think I'll go with a wooden handle. My friend appreciates unique, handmade items, and the wooden handle will add a touch of warmth and character to the cheese knife. Plus, the natural grain pattern will make the knife truly one-of-a-kind.
+[2023-05-20T09:27:02.500000, Sat] 12.User: I think I'll add my friend's name to the knife. It will make it a more personalized gift and add a special touch. What font styles and sizes are available for the engraving?
+Please respond.
+[2023-05-20T11:36:00, Sat] 13.User: How do couples in long-distance relationships manage to keep the romance alive, and what are some effective ways to maintain intimacy and emotional connection from afar?
+[2023-05-20T11:36:00.500000, Sat] 14.User: Can you suggest some specific romantic activities that long-distance couples can do together, besides just talking and texting? I want to surprise my partner with something special.
+[2023-05-20T11:36:01, Sat] 15.User: Can AI language models understand and experience human emotions? Do you think you can truly understand the complexities of a human relationship?

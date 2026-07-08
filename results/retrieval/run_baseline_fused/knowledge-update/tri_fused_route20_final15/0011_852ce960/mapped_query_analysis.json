@@ -1,0 +1,66 @@
+{
+  "query_text": "The amount the user was pre-approved for when they got their mortgage from Wells Fargo",
+  "query_anchor": "The amount the user was pre-approved for when they got their mortgage from Wells Fargo",
+  "dimension": {
+    "target_memory_type": [
+      "fact",
+      "episodic"
+    ],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "pre-approved",
+      "mortgage",
+      "Wells Fargo"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "The amount the user was pre-approved for when they got their mortgage from Wells Fargo",
+      "keywords": [
+        "pre-approved",
+        "mortgage",
+        "Wells Fargo"
+      ],
+      "query_terms": [
+        "the",
+        "amount",
+        "user",
+        "was",
+        "pre",
+        "approved",
+        "for",
+        "when",
+        "they",
+        "got",
+        "their",
+        "mortgage",
+        "from",
+        "wells",
+        "fargo"
+      ]
+    },
+    "structured": {
+      "query_text": "The amount the user was pre-approved for when they got their mortgage from Wells Fargo",
+      "rewrite": "The amount the user was pre-approved for when they got their mortgage from Wells Fargo",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "The amount the user was pre-approved for when they got their mortgage from Wells Fargo",
+      "target_memory_types": [
+        "fact",
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "pre-approved",
+        "mortgage",
+        "Wells Fargo"
+      ],
+      "canonical_text": "The amount the user was pre-approved for when they got their mortgage from Wells Fargo"
+    },
+    "minilm": {
+      "query_text": "The amount the user was pre-approved for when they got their mortgage from Wells Fargo"
+    }
+  }
+}

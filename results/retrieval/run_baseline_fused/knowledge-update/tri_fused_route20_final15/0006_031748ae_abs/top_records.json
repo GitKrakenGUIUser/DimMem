@@ -1,0 +1,856 @@
+[
+  {
+    "user_id": "0006_031748ae_abs",
+    "memory_type": "fact",
+    "content": "The user is a Senior Software Engineer leading a team of 4 engineers.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Senior Software Engineer",
+        "team lead",
+        "4 engineers"
+      ]
+    },
+    "entities": [
+      "Senior Software Engineer",
+      "team lead",
+      "4 engineers"
+    ],
+    "embedding_text": "The user is a Senior Software Engineer leading a team of 4 engineers.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0117",
+    "source_time": "2023-05-24 09:15:00",
+    "record_time": "2026-07-07T19:50:03.289405",
+    "score": 21.881484104785546,
+    "score_components": {
+      "bm25_score": 21.881484104785546,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 21.881484104785546,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 21.881484104785546
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.8222222222222223
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.6841876935267841
+      }
+    ]
+  },
+  {
+    "user_id": "0006_031748ae_abs",
+    "memory_type": "fact",
+    "content": "User is a Senior Software Engineer.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Senior Software Engineer"
+      ]
+    },
+    "entities": [
+      "Senior Software Engineer"
+    ],
+    "embedding_text": "User is a Senior Software Engineer.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0137",
+    "source_time": "2023-05-27 10:13:00.500000",
+    "record_time": "2026-07-07T19:50:03.289632",
+    "score": 13.459104954177306,
+    "score_components": {
+      "bm25_score": 13.459104954177306,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 13.459104954177306,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 13.459104954177306
+      },
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.46666666666666673
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.587508231791788
+      }
+    ]
+  },
+  {
+    "user_id": "0006_031748ae_abs",
+    "memory_type": "fact",
+    "content": "User leads a team of five engineers.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "team lead",
+        "five engineers"
+      ]
+    },
+    "entities": [
+      "team lead",
+      "five engineers"
+    ],
+    "embedding_text": "User leads a team of five engineers.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0138",
+    "source_time": "2023-05-27 10:13:00.500000",
+    "record_time": "2026-07-07T19:50:03.289642",
+    "score": 11.653892842749334,
+    "score_components": {
+      "bm25_score": 11.653892842749334,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 11.653892842749334,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 11.653892842749334
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.6888888888888889
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.6538248492059127
+      }
+    ]
+  },
+  {
+    "user_id": "0006_031748ae_abs",
+    "memory_type": "episodic",
+    "content": "The user plans to organize a team outing for 5 people, including 4 engineers and manager Rachel.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "team building",
+      "purpose": "team building",
+      "keywords": [
+        "team outing",
+        "4 engineers",
+        "Rachel"
+      ]
+    },
+    "entities": [
+      "team outing",
+      "4 engineers",
+      "Rachel"
+    ],
+    "embedding_text": "The user plans to organize a team outing for 5 people, including 4 engineers and manager Rachel.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0119",
+    "source_time": "2023-05-25 12:30:00",
+    "record_time": "2026-07-07T19:50:03.289426",
+    "score": 9.449361924068034,
+    "score_components": {
+      "bm25_score": 9.449361924068034,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 9.449361924068034,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 9.449361924068034
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.5777777777777778
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.41252988679118696
+      }
+    ]
+  },
+  {
+    "user_id": "0006_031748ae_abs",
+    "memory_type": "fact",
+    "content": "The user has many instruments.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "many instruments"
+      ]
+    },
+    "entities": [
+      "many instruments"
+    ],
+    "embedding_text": "The user has many instruments.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0130",
+    "source_time": "2023-05-25 19:20:02.500000",
+    "record_time": "2026-07-07T19:50:03.289560",
+    "score": 8.474421429111736,
+    "score_components": {
+      "bm25_score": 8.474421429111736,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 8.474421429111736,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 8.474421429111736
+      }
+    ]
+  },
+  {
+    "user_id": "0006_031748ae_abs",
+    "memory_type": "fact",
+    "content": "The user's manager is Rachel.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Rachel",
+        "manager"
+      ]
+    },
+    "entities": [
+      "Rachel",
+      "manager"
+    ],
+    "embedding_text": "The user's manager is Rachel.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0118",
+    "source_time": "2023-05-24 09:15:00.500000",
+    "record_time": "2026-07-07T19:50:03.289415",
+    "score": 7.4838085501571685,
+    "score_components": {
+      "bm25_score": 7.4838085501571685,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 7.4838085501571685,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 7.4838085501571685
+      },
+      {
+        "method": "structured",
+        "rank": 7,
+        "score": 0.4
+      },
+      {
+        "method": "minilm",
+        "rank": 8,
+        "score": 0.358812056714524
+      }
+    ]
+  },
+  {
+    "user_id": "0006_031748ae_abs",
+    "memory_type": "episodic",
+    "content": "User started listening to audiobooks on their commute on 2023-05-13.",
+    "dimension": {
+      "time": "2023-05-13",
+      "location": "commute",
+      "reason": "to pass time",
+      "purpose": "make commute more enjoyable",
+      "keywords": [
+        "audiobooks",
+        "commute"
+      ]
+    },
+    "entities": [
+      "audiobooks",
+      "commute"
+    ],
+    "embedding_text": "User started listening to audiobooks on their commute on 2023-05-13.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0064",
+    "source_time": "2023-05-13 13:52:01.500000",
+    "record_time": "2026-07-07T19:50:03.288835",
+    "score": 6.561429182298693,
+    "score_components": {
+      "bm25_score": 6.561429182298693,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 6.561429182298693,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 6.561429182298693
+      }
+    ]
+  },
+  {
+    "user_id": "0006_031748ae_abs",
+    "memory_type": "profile",
+    "content": "The user is interested in learning how to write jokes.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "joke writing",
+        "interest"
+      ]
+    },
+    "entities": [
+      "joke writing",
+      "interest"
+    ],
+    "embedding_text": "The user is interested in learning how to write jokes.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0037",
+    "source_time": "2023-05-05 13:54:00",
+    "record_time": "2026-07-07T19:50:03.288524",
+    "score": 6.112213875663104,
+    "score_components": {
+      "bm25_score": 6.112213875663104,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 6.112213875663104,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 6.112213875663104
+      }
+    ]
+  },
+  {
+    "user_id": "0006_031748ae_abs",
+    "memory_type": "episodic",
+    "content": "The user has applied to volunteer as an usher at their local theater.",
+    "dimension": {
+      "time": "2023-05-17",
+      "location": "local theater",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "volunteer",
+        "usher",
+        "application"
+      ]
+    },
+    "entities": [
+      "volunteer",
+      "usher",
+      "application"
+    ],
+    "embedding_text": "The user has applied to volunteer as an usher at their local theater.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0089",
+    "source_time": "2023-05-17 14:24:02",
+    "record_time": "2026-07-07T19:50:03.289097",
+    "score": 5.75911255031014,
+    "score_components": {
+      "bm25_score": 5.75911255031014,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 5.75911255031014,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 5.75911255031014
+      }
+    ]
+  },
+  {
+    "user_id": "0006_031748ae_abs",
+    "memory_type": "fact",
+    "content": "The user is interested in a fictional character named Alaric whose mentor is a wise old engineer named Gaius.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Alaric",
+        "mentor",
+        "Gaius",
+        "engineer"
+      ]
+    },
+    "entities": [
+      "Alaric",
+      "mentor",
+      "Gaius",
+      "engineer"
+    ],
+    "embedding_text": "The user is interested in a fictional character named Alaric whose mentor is a wise old engineer named Gaius.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0053",
+    "source_time": "2023-05-08 20:00:00",
+    "record_time": "2026-07-07T19:50:03.288711",
+    "score": 5.6308548063384025,
+    "score_components": {
+      "bm25_score": 5.6308548063384025,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 5.6308548063384025,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 5.6308548063384025
+      },
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.4
+      },
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.2992710583368347
+      }
+    ]
+  },
+  {
+    "user_id": "0006_031748ae_abs",
+    "memory_type": "episodic",
+    "content": "User started listening to The Book of Mormon soundtrack on May 28, 2023 and enjoys it.",
+    "dimension": {
+      "time": "2023-05-28",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "The Book of Mormon",
+        "soundtrack"
+      ]
+    },
+    "entities": [
+      "The Book of Mormon",
+      "soundtrack"
+    ],
+    "embedding_text": "User started listening to The Book of Mormon soundtrack on May 28, 2023 and enjoys it.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0150",
+    "source_time": "2023-05-27 01:49:00.500000",
+    "record_time": "2026-07-07T19:50:03.289767",
+    "score": 4.781477569591364,
+    "score_components": {
+      "bm25_score": 4.781477569591364,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 4.781477569591364,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 4.781477569591364
+      }
+    ]
+  },
+  {
+    "user_id": "0006_031748ae_abs",
+    "memory_type": "profile",
+    "content": "The user has a daily commute where they listen to music.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "daily commute",
+        "listening to music"
+      ]
+    },
+    "entities": [
+      "daily commute",
+      "listening to music"
+    ],
+    "embedding_text": "The user has a daily commute where they listen to music.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0076",
+    "source_time": "2023-05-13 16:43:02.500000",
+    "record_time": "2026-07-07T19:50:03.288967",
+    "score": 4.770780814593892,
+    "score_components": {
+      "bm25_score": 4.770780814593892,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 4.770780814593892,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 4.770780814593892
+      }
+    ]
+  },
+  {
+    "user_id": "0006_031748ae_abs",
+    "memory_type": "profile",
+    "content": "User believes that social media plays a big role in promoting diversity and representation by amplifying marginalized voices and stories.",
+    "dimension": {
+      "time": "2023-05-22T07:47:02",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "social media",
+        "diversity",
+        "representation",
+        "marginalized voices"
+      ]
+    },
+    "entities": [
+      "social media",
+      "diversity",
+      "representation",
+      "marginalized voices"
+    ],
+    "embedding_text": "User believes that social media plays a big role in promoting diversity and representation by amplifying marginalized voices and stories.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0100",
+    "source_time": "2023-05-22 07:47:00.500000",
+    "record_time": "2026-07-07T19:50:03.289214",
+    "score": 4.5404816067589575,
+    "score_components": {
+      "bm25_score": 4.5404816067589575,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 4.5404816067589575,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 4.5404816067589575
+      }
+    ]
+  },
+  {
+    "user_id": "0006_031748ae_abs",
+    "memory_type": "episodic",
+    "content": "The user became hooked on the Hamilton soundtrack after several listens and has been listening to it daily on their commute for two weeks as of May 13, 2023.",
+    "dimension": {
+      "time": "2023-04-29 to 2023-05-13",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Hamilton",
+        "soundtrack",
+        "daily commute"
+      ]
+    },
+    "entities": [
+      "Hamilton",
+      "soundtrack",
+      "daily commute"
+    ],
+    "embedding_text": "The user became hooked on the Hamilton soundtrack after several listens and has been listening to it daily on their commute for two weeks as of May 13, 2023.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0075",
+    "source_time": "2023-05-13 16:43:02.500000",
+    "record_time": "2026-07-07T19:50:03.288958",
+    "score": 4.389518637170003,
+    "score_components": {
+      "bm25_score": 4.389518637170003,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 4.389518637170003,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 4.389518637170003
+      }
+    ]
+  },
+  {
+    "user_id": "0006_031748ae_abs",
+    "memory_type": "episodic",
+    "content": "The user recently tried a new fajita seasoning in a chicken fajita recipe.",
+    "dimension": {
+      "time": "2023-05-17",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "fajita seasoning",
+        "chicken fajita",
+        "new recipe"
+      ]
+    },
+    "entities": [
+      "fajita seasoning",
+      "chicken fajita",
+      "new recipe"
+    ],
+    "embedding_text": "The user recently tried a new fajita seasoning in a chicken fajita recipe.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0081",
+    "source_time": "2023-05-17 08:47:00",
+    "record_time": "2026-07-07T19:50:03.289018",
+    "score": 4.328742269733137,
+    "score_components": {
+      "bm25_score": 4.328742269733137,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 4.328742269733137,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 4.328742269733137
+      }
+    ]
+  }
+]

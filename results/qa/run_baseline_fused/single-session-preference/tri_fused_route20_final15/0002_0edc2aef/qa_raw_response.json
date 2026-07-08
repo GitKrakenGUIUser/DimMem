@@ -1,0 +1,32 @@
+{
+  "id": "525dd244-23b5-4f73-8cb1-62dffae2fb61",
+  "object": "chat.completion",
+  "created": 1783427936,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: The user asks for a hotel suggestion for a trip to Miami. However, all retrieved memories reference trips to other destinations (Seattle, Las Vegas, Arizona, New York) or unrelated topics (street photography, hiking boots, cybersecurity conference, car floor mats). No memory mentions Miami or any intent to travel there. Without any evidence of a Miami trip, I cannot provide a recommendation.\n\nAnswer: I don't know.",
+        "reasoning_content": "We need to answer the user's question: \"Can you suggest a hotel for my upcoming trip to Miami?\" based on retrieved memories. The question date is 2023-05-30 20:23. The retrieved memories include various trips: Seattle, Las Vegas, Arizona, etc. There is no mention of a trip to Miami. No memory about Miami or any hotel in Miami. Therefore, insufficient evidence."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1166,
+    "completion_tokens": 172,
+    "total_tokens": 1338,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 910
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

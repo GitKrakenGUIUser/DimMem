@@ -1,0 +1,109 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-05-26 04:03:02
+content: User loves her new black Converse Chuck Taylor All Star sneakers and finds them comfortable and versatile.
+
+[2]
+source_time: 2023-05-26 04:03:02.500000
+content: User wore her new black Converse Chuck Taylor All Star sneakers to a friend's birthday party on 2023-05-27.
+
+[3]
+source_time: 2023-05-30 12:43:02
+content: User owns new black Converse shoes and has worn them six times as of 2023-05-29, including for running errands on that day.
+
+[4]
+source_time: 2023-05-30 12:43:02.500000
+content: User is looking for a cobbler and a shoe cleaning kit, and considering waterproofing spray for new Converse.
+reason: to fix brown leather boots and clean shoes
+purpose: to protect Converse from mud and rain
+
+[5]
+source_time: 2023-06-07 11:24:00.500000
+content: The user plans to sell some of their vintage Star Wars action figures online.
+purpose: sell online
+
+[6]
+source_time: 2023-04-30 11:48:00.500000
+content: The user's sister has a classic and elegant style, loves neutral colors like beige and black, needs a daily driver handbag not too big but with enough space, and the user's budget for the gift is $200-$300.
+purpose: gift planning
+
+[7]
+source_time: 2023-06-05 06:43:00
+content: The user owns a Millennium Falcon toy and vintage Star Wars action figures.
+
+[8]
+source_time: 2023-06-07 11:24:00
+content: The user's vintage Star Wars action figures have been damaged during shipping in the past.
+reason: shipping damage
+
+[9]
+source_time: 2023-05-30 22:16:02
+content: User cleaned her white Adidas Superstars with a toothbrush and soap for 20 minutes after wearing them to the gym.
+reason: sneakers got dirty and scuffed
+purpose: clean sneakers
+
+[10]
+source_time: 2023-05-30 18:33:01.500000
+content: The user is using a spreadsheet to track all the places where they need to update their name after changing it to Patel.
+reason: recent name change to Patel
+purpose: to organize the name update process
+
+[11]
+source_time: 2023-05-30 22:16:01
+content: User owns a pair of white Adidas Superstars.
+
+[12]
+source_time: 2023-05-12 20:13:01
+content: User has been working on improving their emotional intelligence since taking an online quiz that challenged their views on masculinity.
+reason: to live authentically
+purpose: personal development
+
+[13]
+source_time: 2023-05-10 09:14:00
+content: User attended a street photography workshop on May 1 and 2, 2023, where they learned how to approach strangers for permission to take photos.
+reason: to improve street photography skills
+purpose: learning to approach strangers
+
+[14]
+source_time: 2023-05-30 03:20:02.500000
+content: The user's husband has the last name Patel.
+
+[15]
+source_time: 2023-05-30 12:43:00.500000
+content: User has been obsessed with Korean food lately, particularly Bibimbap and Japchae, and has been making them at home using different recipes.
+
+Now answer the question:
+User Question:How many times have I worn my new black Converse Chuck Taylor All Star sneakers?
+Question Date:2023/06/18 (Sun) 22:29

@@ -1,0 +1,32 @@
+{
+  "id": "d48dc442-d37b-48ac-800d-0d2fa21718ac",
+  "object": "chat.completion",
+  "created": 1783356990,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": [\n    {\n      \"source_id\": 4,\n      \"content\": \"The user values informed decision-making and combating misinformation, and believes productive dialogue requires empathy and understanding.\",\n      \"dimension\": {\n        \"memory_type\": \"profile\",\n        \"time\": \"\",\n        \"location\": \"\",\n        \"reason\": \"\",\n        \"purpose\": \"\",\n        \"keywords\": [\"informed decision-making\", \"misinformation\", \"empathy\", \"productive dialogue\", \"reproductive rights\"]\n      }\n    }\n  ]\n}",
+        "reasoning_content": "We need to extract memories from the conversation. The input has 8 messages, but the first 3 are overlapping context from previous segment and must not be used as new memory sources. So only messages 4-8 are eligible. However, we need to extract information with long-term value. The conversation is about reproductive rights, misinformation, informed decision-making, empathy, etc. But these are general opinions, not specific user facts, events, or profile. The user is just expressing agreement and frustration. There's no specific factual information, no specific event, no long-term profile beyond perhaps a general interest in reproductive rights and combating misinformation. But we need to be careful: the instructions say do not extract simple confirmations, temporary formatting requirements, or one-off tasks. This conversation seems like a general discussion. There's no mention of the user's own identity, background, tools, etc. Possibly we can extract a profile: the user values informed decision-making, empathy, and combating misinformation. That could be a long-term preference. But let's see if there's enough evidence. The user says \"It's important to have conversations... make sure everyone's voices are heard... frustrating that there's so much misinformation...\". Then user asks \"How do we encourage more people to see the importance of informed decision-making?\" and later \"How can we combat misinformation?\" This indicates the user is interested in promoting informed decision-making and combating misinformation. That could be a stable interest. Also the user shows empathy: \"showing empathy and understanding can go a long way\". So we could extract a profile memory about the user's values. But we need to ensure it's not overgeneralized. Since the user is actively discussing these topics, it's a pattern. However, the conversation is in the context of reproductive rights documentary. The user might just be discussing current event. We should avoid extracting overly generic statements. But the instruction says long-term profile: preferences, habits, interests, values, goals. The user expresses frustration about misinformation and values informed decision-making. That seems like a value. So I'll extract one memory: profile about user's values. Also note the time: messages are on 2023-04-21. But no specific time needed for profile. Also keywords: informed decision-making, misinformation, reproductive rights, empathy, productive dialogue. Use those.\n\nAlso check if there are any factual memories: no. Episodic: the user participated in a discussion about reproductive rights and misinformation, but that's not a specific event with long-term value. It's just a conversation. So probably only one profile memory.\n\nBut careful: the user's messages are mostly agreeing and asking questions. The user's own statements are not very distinctive. Possibly we can extract that the user believes in evidence-based decision-making. I'll go with a profile memory.\n\nNow output JSON. Ensure self-contained content. Use \"The user\" as subject."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1721,
+    "completion_tokens": 701,
+    "total_tokens": 2422,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 590
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 569
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

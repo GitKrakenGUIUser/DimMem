@@ -1,0 +1,277 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-20T08:57:00.500000, Sat] 1.User: I think I'll try the Mexican Rice and Roasted Vegetables. By the way, do you have any tips on how to organize my spice rack? It's been getting cluttered lately.
+[2023-05-20T08:57:01, Sat] 2.User: I was thinking of reorganizing my kitchen cabinets too. Do you have any advice on how to keep them tidy?
+[2023-05-20T08:57:01.500000, Sat] 3.User: I actually organized my kitchen cabinets about three weeks ago, and it's made a huge difference in my cooking routine. I was able to get rid of some old gadgets I never used and rearranged everything to make the most of my space. Now, I'm thinking of reorganizing my kitchen utensils drawer. Do you have any tips on how to keep it tidy?
+[2023-05-20T08:57:02, Sat] 4.User: I'm thinking of planning a dinner party soon and I need some help with the menu. Can you suggest some main course options that are easy to make and can serve a crowd?
+[2023-05-20T08:57:02.500000, Sat] 5.User: I think I'll go with the Lasagna option. I've made it before and it's always a crowd-pleaser. Do you have any tips on how to make it more efficient when serving a large group?
+[2023-05-20T13:35:00, Sat] 6.User: Can you tell me more about Verdi's collaborators on his operas, and how integral they were to the creative process?
+[2023-05-20T13:35:00.500000, Sat] 7.User: It's amazing how much the different collaborators contributed to Verdi's operas. Do you have a favorite opera of his?
+[2023-05-20T13:35:01, Sat] 8.User: I agree, it's hard to choose just one favorite Verdi opera. They are all so captivating! What do you think makes Verdi's music so timeless and appreciated even today?
+[2023-05-20T13:35:01.500000, Sat] 9.User: I also appreciate how Verdi's music can be both grand and intimate at the same time. Sometimes I feel like I'm experiencing a larger-than-life epic, while other times it's like I'm having a heart-to-heart with a close friend. Do you agree?
+[2023-05-20T13:35:02, Sat] 10.User: I always find myself getting lost in the stories of Verdi's operas. Do you have a personal favorite storyline among his works?
+[2023-05-20T23:06:00, Sat] 11.User: albornozmcea@gmail.com
+Hello there, I need some help, I'll send you a an overview of my resume and a job description. And then I want you to write a cover letter perfect for that possition, you think you can do it?
+[2023-05-20T23:06:00.500000, Sat] 12.User: Hello Assistant, sure, here is my resume in json format:
+```json
+{
+ "basics": {
+ "name": "Carlos Albornoz",
+ "email": "albornozmcea@gmail.com",
+ "headline": "Backend Software Developer",
+ "location": {
+ "region": "Buenos Aires",
+ "country": "Argentina"
+ }
+ },
+ "work\_expirence": [
+ {
+ "date": {
+ "end": "",
+ "start": "2021-11-21T05:00:00.000Z"
+ },
+ "position": "Sr Software Developer",
+ "summary": "- Led the backend efforts of the benefits squad to improve the response times and availability of multiple services.\n- Designed and implemented architectural improvements in one of the workflows with the most impact on the team, which reduced its turnaround time by 80%.\n- Supervised the simplification and improvement of our most consumed APIs to improve the developer experience of the rest of the squads in the organization. ",
+ "company": "NarnajaX"
+ },
+ {
+ "date": {
+ "end": "2021-11-01T05:00:00.000Z",
+ "start": "2021-08-01T05:00:00.000Z"
+ },
+ "position": "Lead Developer",
+ "summary": "- Supervised the standardization of the development process.\n- Incentivized the implementation of internal projects related to the devops process that improved efficacy and reduced deployment times in half.\n- Guided junior developers in the process of implementing and deploying several projects such as [this e-commerce website](https://www.zirkulo.com).",
+ "company": "Novolabs"
+ },
+ {
+ "date": {
+ "end": "2021-08-01T05:00:00.000Z",
+ "start": "2020-07-01T05:00:00.000Z"
+ },
+ "position": "Lead Developer",
+ "summary": "- Oversaw the efforts of the Emerging Technologies team in the organization.\n- Mentored several developers during their promotion process.\n- Led a team of 5 devs with diverse technical backgrounds to deliver multiple projects with high impact on the company.",
+ "company": "PwC Buenos Aires"
+ },
+ {
+ "date": {
+ "end": "2020-07-01T05:00:00.000Z",
+ "start": "2020-01-01T05:00:00.000Z"
+ },
+ "position": "Ssr Software Developer",
+ "summary": "- Successfully led one of the most important projects for our team, a SAAS platform for Time Management and Task Assignment for the accounting vertical which cut time operation overhead by 30%.",
+ "company": "PwC Buenos Aires"
+ },
+ {
+ "date": {
+ "end": "2020-01-01T05:00:00.000Z",
+ "start": "2019-07-01T05:00:00.000Z"
+ },
+ "position": "Software Developer",
+ "summary": "- Participated in projects focused on business automation and legacy systems migration which had an effect on multiple teams across the company.",
+ "company": "PwC Buenos Aires"
+ },
+ {
+ "date": {
+ "end": "2019-07-01T05:00:00.000Z",
+ "start": "2018-05-01T05:00:00.000Z"
+ },
+ "position": "IAM Analyst",
+ "summary": "- Promoted and implemented the automation and scripting of multiple processes which reduced the issue resolution time greatly.",
+ "company": "PwC Buenos Aires"
+ },
+ {
+ "date": {
+ "end": "2017-11-01T05:00:00.000Z",
+ "start": "2017-02-01T05:00:00.000Z"
+ },
+ "position": "Software Development Intern",
+ "summary": "",
+ "company": "Foriety"
+ }
+ ],
+ "skills": [
+ "Microsevices",
+ "Event Driven Architectures",
+ "DevOps",
+ "Python",
+ "Team Management",
+ "CI/CD",
+ "Cloud Computing",
+ "NestJS",
+ "FastAPI",
+ "Pandas",
+ "Machine Learning"
+ ],
+ "certifications": [
+ {
+ "date": "2021-02-08T22:26:20.000Z",
+ "name": "AI & Deep Learning",
+ "issuer": "Digital House"
+ },
+ {
+ "date": "2022-05-10T22:30:31.000Z",
+ "name": "Design of Modern Large Scale Systems",
+ "issuer": "Udemy"
+ }
+ ]
+}
+```
+[2023-05-20T23:06:01, Sat] 13.User: Here you have it assistant:
+
+The Role
+We're looking for a senior backend engineer with strong software and cloud engineering skills. You'll help us build highly scalable developer-centric APIs and backend systems powered by state-of-the-art ML models. Some of your responsibilities will include:
+
+Build new API features and endpoints
+Build automated test suites and CI/CD pipelines
+Build highly scalable event-driven and realtime systems
+Instrument systems with metrics, tracing, and logging 
+Refactor applications to eliminate tech debt
+Troubleshoot production issues
+You'll love this job if you....
+Enjoy solving complex technical problems, even when there is no perfect solution.
+Enjoy being in a fast-paced, customer-facing role.
+Thrive in small, cross-functional teams. We like to wear many hats here!
+You're excited to tackle big technical challenges like building highly scalable architectures and achieving zero-downtime deploys.
+Requirements
+5+ years of professional experience building backend applications using any popular language such as Python, Java, C#, JavaScript, Go, C/C++
+4+ years of experience working with Python
+4+ working with Python backend frameworks like Django, Flask, or Tornado
+3+ years of working with SQL and NoSQL databases
+3+ years of production support experience
+3+ years working with common AWS services
+2+ years developing REST APIs
+Experience migrating systems to meet increasing traffic/scale
+Startup or FAANG-type experience - Has worked at a startup or high growth company
+Deep AWS knowledge - Has many years of experience solutioning within AWS
+Strong Python coding abilities - Can pass difficult programming challenges in a relatively short period of time. Can speak clearly about their thinking throughout these challenges. Can speak to O-notation of algorithms. Has excellent knowledge of common python idioms and libraries.
+High scalability experience - Has been a tech leader on scaling systems to hundreds of millions of requests/events per day. Has experience with hyper-observability, scaling algorithms, and using production data to drive system changes
+Skills
+Amazing system design chops - When given a hard problem to solve with a new system, they can quickly shape an effective design and communicate its strengths, weaknesses, and tradeoffs.
+High-octane thinking - Engages deeply on subjects of expertise. Thinks ahead many steps and can see where decisions are likely to lead. Their brains compute at a very high level.
+Extremely creative - Can find both novel and effective solutions within highly constrained time and resources
+Fast learner - Has shown they can ramp up on difficult topics very fast
+Exceptional gut instincts - Can practically feel when something is right or wrong. Can use these instincts to quickly point themselves in the right direction.
+Opinionated - They have convictions in what they believe and can communicate their position clearly without drama.
+Nice to Have
+Machine learning experience - Has worked with machine learning models at scale
+Experience integrating and deploying ML models into production
+
+Best Regards
+[2023-05-21T22:48:00, Sun] 14.User: Can you explain the different types of seafood and their nutritional benefits?
+[2023-05-21T22:48:00.500000, Sun] 15.User: That's good to know! Do you have any recommendations for which types of seafood are best for someone who wants to lose weight?

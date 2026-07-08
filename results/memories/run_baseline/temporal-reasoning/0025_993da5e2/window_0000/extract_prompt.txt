@@ -1,0 +1,127 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+
+
+Here is the real input you need to process:
+
+[2023-05-26T14:01:00, Fri] 1.User: I'm trying to learn more about dinosaurs. Can you tell me about the different types of dinosaurs that existed during the Mesozoic Era? By the way, I just visited the "Dinosaurs of the Ancient World" exhibition at the Natural History Museum today and was amazed by the fossil displays.
+[2023-05-26T14:01:00.500000, Fri] 2.User: I'm really interested in the armored dinosaurs. Can you tell me more about Stegosaurus and Camptosaurus? What kind of plants did they eat, and how did they defend themselves from predators like Allosaurus?
+[2023-05-26T14:01:01, Fri] 3.User: I'm curious about the plants that Stegosaurus and Camptosaurus ate. You mentioned ferns, cycads, and conifers. Were these plants common during the Jurassic period, and did they grow in the same areas where these dinosaurs lived?
+[2023-05-26T14:01:01.500000, Fri] 4.User: That's really interesting! I'm curious about the fossil evidence that helps us understand what plants were present during the Jurassic period. Are there any specific fossil sites or discoveries that have provided important insights into the Jurassic plant communities?
+[2023-05-26T14:01:02, Fri] 5.User: That's fascinating! I'd love to learn more about the evolution of plant species during the Jurassic period. How did plants adapt to the changing environment and climate conditions during that time?
+[2023-05-26T14:01:02.500000, Fri] 6.User: Let's dive into the fascinating world of plant-animal interactions during the Jurassic period!
+[2023-05-26T10:02:00, Fri] 7.User: I'm looking for some advice on choosing the right rosin for my violin. I've been experimenting with different brands and types, and I'm not sure what to look for. By the way, I recently attended a music workshop in the city two weeks ago, and I got to try out some cellos and violas - it was really interesting to see the differences in setup and technique.
+[2023-05-26T10:02:00.500000, Fri] 8.User: I've been trying out a few different brands, and I think I prefer the darker, stickier kind. But I'm not sure if that's because I've been playing with a heavier bow lately. Do you think the weight of the bow could affect how the rosin performs?
+[2023-05-26T10:02:01, Fri] 9.User: I'll definitely try experimenting with different bows and rosins to see how they interact. Speaking of bows, I recently bought a new one online that's slightly heavier and more balanced than my old one, and I've been really enjoying it. Do you have any tips on how to properly care for and maintain a violin bow?
+[2023-05-26T10:02:01.500000, Fri] 10.User: That's really helpful, thanks. I've been wondering about how to properly care for my bow. I've also been thinking about my practice routine and I'm considering joining a local orchestra or chamber group to get more performance experience. Do you have any advice on how to prepare for auditions?
+[2023-05-26T10:02:02, Fri] 11.User: I'm thinking of preparing a few pieces for the audition, including some Bach and Mozart. Do you have any advice on how to approach interpreting these pieces, especially in terms of phrasing, dynamics, and articulation?
+[2023-05-26T10:02:02.500000, Fri] 12.User: I'm thinking of also preparing a few pieces that I've been working on in my practice sessions, including some scales and arpeggios. Do you have any advice on how to incorporate these technical exercises into my audition repertoire?
+[2023-05-26T04:34:00, Fri] 13.User: I'm looking for some information on salsa festivals in the city. I heard about one coming up next month, but I couldn't find much about it online. Do you know anything about it? By the way, I took a hip hop workshop recently and the instructor, Jamal, was great, though.
+[2023-05-26T04:34:00.500000, Fri] 14.User: I'll try searching online for local event calendars and social media groups to see if I can find more info about the salsa festival. Do you think I should also ask my instructor Maria if she knows anything about it?
+[2023-05-26T04:34:01, Fri] 15.User: Yeah, that's a good point. I'll ask Maria about the festival. I was also thinking about getting more dance lessons, maybe in a different style like bachata or kizomba. Do you know if there are any studios in the city that offer those classes?

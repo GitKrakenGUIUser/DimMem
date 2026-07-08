@@ -1,0 +1,22 @@
+{
+  "conv_name": "temporal-reasoning",
+  "index": 9,
+  "question": "What is the order of the six museums I visited from earliest to latest?",
+  "ok": true,
+  "error": null,
+  "elapsed_seconds": 3.3736977577209473,
+  "usage": {
+    "prompt_tokens": 690,
+    "completion_tokens": 281,
+    "total_tokens": 971,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 198
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 50
+  },
+  "output_dir": "results/query_analysis/run_baseline/temporal-reasoning/0009_gpt4_7abb270c"
+}

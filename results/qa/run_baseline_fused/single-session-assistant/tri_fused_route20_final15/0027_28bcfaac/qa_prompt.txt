@@ -1,0 +1,112 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-05-20 08:21:00.500000
+content: The user is interested in learning music theory, has been intimidated by it, and wants to improve their playing.
+reason: to take their playing to the next level
+purpose: to learn music theory
+
+[2]
+source_time: 2023-05-20 08:21:02.500000
+content: The user plans to learn music theory using MusicTheory.net and YouTube channels to improve their playing.
+purpose: improve playing
+
+[3]
+source_time: 2023-05-29 00:04:00
+content: The user is considering enrolling in an online Master of Science program and is concerned about the level of faculty interaction, support, and workload.
+
+[4]
+source_time: 2023-05-23 01:16:01
+content: User agreed to try a screen-free dinner and wind-down routine, but expressed concern about limiting Netflix time as it is used for unwinding.
+reason: to reduce screen time
+purpose: to balance relaxation and screen reduction
+
+[5]
+source_time: 2023-05-25 03:50:03
+content: The user is frustrated about the spread of fake news on social media and thinks there should be stricter regulations on what can be posted.
+
+[6]
+source_time: 2023-05-26 10:56:02.500000
+content: User was nervous before their first dance class because they had never taken a dance class before.
+reason: no previous dance experience
+
+[7]
+source_time: 2023-05-26 08:13:01.500000
+content: The user is interested in learning about shorebird migration patterns and habitats.
+
+[8]
+source_time: 2023-05-27 13:22:01.500000
+content: The user sold their old leather jacket online for a good price.
+
+[9]
+source_time: 2023-05-26 04:32:00
+content: The user asked about how the music scene in Nashville, Tennessee has changed over the past decade.
+purpose: to learn about Nashville music scene evolution
+
+[10]
+source_time: 2023-05-23 01:16:02
+content: User is attempting to get back on track with their bedtime routine after a week of staying up until 1 am due to work projects.
+reason: to recover from exception week
+purpose: to resume normal routine
+
+[11]
+source_time: 2023-05-23 13:37:01.500000
+content: The user is interested in learning more about the City Theater Academy and the Performing Arts Conservatory.
+purpose: gather information about theater programs
+
+[12]
+source_time: 2023-05-23 13:37:02
+content: The user is interested in the City Theater Academy's Certificate Program and wants to know about the application process and audition requirements.
+purpose: learn about application and audition
+
+[13]
+source_time: 2023-05-25 03:50:02.500000
+content: The user plans to read a variety of newspapers to be critical of news.
+reason: to know impartiality
+purpose: critical reading
+
+[14]
+source_time: 2023-05-28 10:37:00
+content: User reads literary fiction and wants to discover more authors in that genre.
+purpose: to discover more authors
+
+[15]
+source_time: 2023-05-21 19:08:01
+content: The user plans to continue watching Servant to find out what is going on with Leanne.
+reason: to figure out what is going on with Leanne
+purpose: to understand Leanne's character
+
+Now answer the question:
+User Question:I'm going back to our previous conversation about music theory. You mentioned some online resources for learning music theory. Can you remind me of the website you recommended for free lessons and exercises?
+Question Date:2023/05/30 (Tue) 11:46

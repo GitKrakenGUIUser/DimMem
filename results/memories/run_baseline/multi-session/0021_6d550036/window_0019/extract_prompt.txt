@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-30T13:08:02, Tue] 1.User: I think I'll buy a Myki card online since it's more convenient for me. Can I use my credit card to top up my Myki card online, or are there other payment options available?
+[2023-05-30T13:08:02.500000, Tue] 2.User: I'm thinking of getting a concession Myki card since I'm a student. Do I need to provide any documents to prove my eligibility for a concession fare?
+[2023-05-30T14:37:00, Tue] 3.User: I'm looking for some advice on how to maintain my bathroom sink drain to prevent clogs. I had a clog last Monday and had to use a drain snake to clear it out. By the way, I did a great job cleaning the bathroom mirrors and countertops with a new glass cleaner I bought last Tuesday, it left them streak-free!
+[2023-05-30T14:37:00.500000, Tue] 4.User: I'd like to know more about natural drain cleaners. You mentioned baking soda and vinegar, but are there other options available? Also, can you tell me how often I should use these cleaners to maintain my drain effectively?
+[2023-05-30T14:37:01, Tue] 5.User: I'm also looking for some advice on skincare routines. I've been trying to establish a more consistent routine, washing my face twice a day in the bathroom. I've been using a new moisturizer that's been working well, but I think I might need to switch to a lighter one for the warmer months. Do you have any recommendations for lighter moisturizers or any other skincare tips? By the way, I cleaned the bathroom mirrors and countertops with a new glass cleaner I bought last Tuesday, and it left them streak-free.
+[2023-05-30T14:37:01.500000, Tue] 6.User: I'm also thinking of buying more bathroom trash can liners this weekend, as I replaced the liner last Sunday and want to make sure I don't run out. Do you have any recommendations for good trash can liners?
+[2023-05-30T14:37:02, Tue] 7.User: I'm also considering buying a new bath mat this weekend, as the one I have now is getting a bit worn out and doesn't provide as much traction as I'd like. Do you have any recommendations for good bath mats that provide good grip and are easy to clean?
+[2023-05-30T14:37:02.500000, Tue] 8.User: I'm thinking of getting a new shampoo, as I've been liking the sulfate-free one I've been using lately. Do you have any recommendations for sulfate-free shampoos that are good for hair care?
+[2023-05-30T18:15:00, Tue] 9.User: Okay, but for this additional dialog, the employees don't know (or at least don't share) the specific claims of the prior owner, just fragmented and incomplete details about what they know about its history - where it came from, who used to own it, how the museum got it. Again, making humor about how it's not art. Indirectly, and through dialog, bring in bit of information
+[2023-05-30T18:15:00.500000, Tue] 10.User: How many words was that last section you wrote
+[2023-05-30T18:15:01, Tue] 11.User: How long are most chapters in books
+[2023-05-30T18:15:01.500000, Tue] 12.User: Okay, can you reprint the final chapter outline and summary you made for me
+[2023-05-30T18:15:02, Tue] 13.User: Sorry, I mean can you reprint the last book summary and chapter name and outline you created for me
+[2023-05-30T18:15:02.500000, Tue] 14.User: Okay, can you take the description and dialog we revised that related to the outline "We are introduced to the mirror in its past history in England many years before it was shipped off to America." This was the section where the movers were talking to each other. Make this around 400 words, and again, focus heavily on giving us a sense on where we are, what time we are in history through describing the scene but only giving any backstory on the mirror through the movers talking while they are getting the mirror ready for shipment. But refrain from narrating any history or making comments about it's powers except vaguely through dialog
+[2023-05-30T18:15:03, Tue] 15.User: Okay, use this same writing strategy - about 400 words for the second and 400 words for the third bullets in the outline for chapter one. Do NOT close out these sections with any narrative sentences about the mirrors power. (Dont write a closing paragraph)

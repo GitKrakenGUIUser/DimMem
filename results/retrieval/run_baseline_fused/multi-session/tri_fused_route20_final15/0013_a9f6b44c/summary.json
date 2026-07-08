@@ -1,0 +1,581 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "multi-session",
+  "sample_id": "0013_a9f6b44c",
+  "query_text": "the number of bikes the user serviced or planned to service in March 2023",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 204,
+  "fused_candidate_count_before_final_cut": 38,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/multi-session/tri_fused_route20_final15/0013_a9f6b44c",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 11.6631872143585,
+      "memory_type": "episodic",
+      "content": "The user had their road bike serviced at Pedal Power on March 10, 2023, where the brake pads and cables were replaced.",
+      "source_boundary_id": "15_0154",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 11.6631872143585,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 11.6631872143585
+        },
+        {
+          "method": "structured",
+          "rank": 10,
+          "score": 0.33333333333333326
+        },
+        {
+          "method": "minilm",
+          "rank": 1,
+          "score": 0.614945692419676
+        }
+      ],
+      "score_components": {
+        "bm25_score": 11.6631872143585,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 11.248142152839243,
+      "memory_type": "episodic",
+      "content": "User planned to mow their lawn on the weekend after March 20, 2023.",
+      "source_boundary_id": "1_0017",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 11.248142152839243,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 11.248142152839243
+        },
+        {
+          "method": "structured",
+          "rank": 13,
+          "score": 0.2666666666666666
+        },
+        {
+          "method": "minilm",
+          "rank": 13,
+          "score": 0.40233603852293703
+        }
+      ],
+      "score_components": {
+        "bm25_score": 11.248142152839243,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 11.055044957865714,
+      "memory_type": "episodic",
+      "content": "The user plans to declutter their desk and workspace on the weekend of March 25-26, 2023.",
+      "source_boundary_id": "17_0181",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 11.055044957865714,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 11.055044957865714
+        },
+        {
+          "method": "structured",
+          "rank": 11,
+          "score": 0.33333333333333326
+        }
+      ],
+      "score_components": {
+        "bm25_score": 11.055044957865714,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 10.124516507523161,
+      "memory_type": "fact",
+      "content": "The user planned a trip to Europe in April 2023.",
+      "source_boundary_id": "13_0141",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 10.124516507523161,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 10.124516507523161
+        },
+        {
+          "method": "minilm",
+          "rank": 16,
+          "score": 0.38277879589971786
+        }
+      ],
+      "score_components": {
+        "bm25_score": 10.124516507523161,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 9.469027413976079,
+      "memory_type": "episodic",
+      "content": "The user planned a 40-60 mile bike ride on the weekend of March 25-26, 2023, in the San Francisco Bay Area, including crossing the Golden Gate Bridge on Route 1 (Marin Headlands and Highway 1), preferring paved roads with hills and scenic coastal/rural views.",
+      "source_boundary_id": "7_0086",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 9.469027413976079,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 9.469027413976079
+        },
+        {
+          "method": "structured",
+          "rank": 6,
+          "score": 0.33333333333333326
+        },
+        {
+          "method": "minilm",
+          "rank": 3,
+          "score": 0.5214469659700098
+        }
+      ],
+      "score_components": {
+        "bm25_score": 9.469027413976079,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 9.29381267028199,
+      "memory_type": "episodic",
+      "content": "User plans to check out restaurants in the downtown area this weekend (around March 25-26, 2023).",
+      "source_boundary_id": "3_0042",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 9.29381267028199,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 9.29381267028199
+        },
+        {
+          "method": "structured",
+          "rank": 19,
+          "score": 0.2666666666666666
+        }
+      ],
+      "score_components": {
+        "bm25_score": 9.29381267028199,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 8.942916859510563,
+      "memory_type": "episodic",
+      "content": "User watched a lot of documentaries on Netflix in the three months prior to March 20, 2023.",
+      "source_boundary_id": "11_0133",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 8.942916859510563,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 8.942916859510563
+        },
+        {
+          "method": "minilm",
+          "rank": 8,
+          "score": 0.4199279001839509
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.942916859510563,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 8.745099829138402,
+      "memory_type": "episodic",
+      "content": "The user had their Toyota Camry serviced at the Toyota dealership on January 10, 2023, for $250, including air filter replacement, oil change, and tire rotation.",
+      "source_boundary_id": "2_0018",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 8.745099829138402,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 8.745099829138402
+        },
+        {
+          "method": "structured",
+          "rank": 3,
+          "score": 0.33333333333333326
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.745099829138402,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 8.492786018777041,
+      "memory_type": "fact",
+      "content": "User is interested in a Thule Hitch Bike Rack for two bikes.",
+      "source_boundary_id": "all_memories_0005",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 8.492786018777041,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 8.492786018777041
+        },
+        {
+          "method": "minilm",
+          "rank": 20,
+          "score": 0.36447392517071936
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.492786018777041,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 7.9683784707985,
+      "memory_type": "episodic",
+      "content": "On March 2, 2023, the user cleaned and lubricated the chain of their road bike, which improved shifting performance.",
+      "source_boundary_id": "7_0085",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 7.9683784707985,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 7.9683784707985
+        },
+        {
+          "method": "minilm",
+          "rank": 7,
+          "score": 0.4273761442126678
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.9683784707985,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 7.317077337807868,
+      "memory_type": "episodic",
+      "content": "The user is planning to build a small cabin on the inherited plot of land, which is located in a rural area.",
+      "source_boundary_id": "12_0137",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 7.317077337807868,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 7.317077337807868
+        },
+        {
+          "method": "structured",
+          "rank": 8,
+          "score": 0.33333333333333326
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.317077337807868,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 7.311333360602196,
+      "memory_type": "episodic",
+      "content": "User is considering canceling their HBO subscription and comparing it with Hulu to see which streaming service offers more shows they would be interested in.",
+      "source_boundary_id": "11_0124",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 7.311333360602196,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 7.311333360602196
+        },
+        {
+          "method": "structured",
+          "rank": 7,
+          "score": 0.33333333333333326
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.311333360602196,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 7.225220233316435,
+      "memory_type": "fact",
+      "content": "User moved into a new house as of March 20, 2023.",
+      "source_boundary_id": "1_0008",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 7.225220233316435,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 7.225220233316435
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.225220233316435,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 7.210987617154766,
+      "memory_type": "episodic",
+      "content": "The user plans to try Dinnerly meal kit service.",
+      "source_boundary_id": "9_0104",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 7.210987617154766,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 7.210987617154766
+        },
+        {
+          "method": "structured",
+          "rank": 1,
+          "score": 0.3999999999999999
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.210987617154766,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 6.3165637930888465,
+      "memory_type": "episodic",
+      "content": "User plans to check out thrift stores in the downtown area near the Zara location this weekend (around March 25-26, 2023).",
+      "source_boundary_id": "3_0043",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 6.3165637930888465,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 6.3165637930888465
+        },
+        {
+          "method": "structured",
+          "rank": 20,
+          "score": 0.2666666666666666
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.3165637930888465,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 0.3672974109649658
+}

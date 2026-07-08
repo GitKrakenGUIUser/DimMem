@@ -1,0 +1,32 @@
+{
+  "id": "e1c01bb7-4347-450e-ae73-e280f48e28fc",
+  "object": "chat.completion",
+  "created": 1783356363,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"the user's cousin's wedding and Michael's engagement party, which event occurred first\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"cousin's wedding\", \"Michael's engagement party\"],\n    \"time\": \"\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"time\"\n}",
+        "reasoning_content": "We need to parse the question: \"Which event happened first, my cousin's wedding or Michael's engagement party?\" The user is asking to compare two events by time. The answer_dim should be \"time\" because the question asks for the time order. The query_anchor should rephrase: \"the user's cousin's wedding happened before or after Michael's engagement party\" or similar. need_assistant_context: false because no reference to previous conversation. dimension.target_memory_type: Both events are specific events, so \"episodic\". keywords: \"cousin's wedding\", \"Michael's engagement party\". time: The question asks about time order but doesn't have an explicit time constraint, so leave empty. location: none. answer_dim: \"time\". Also note: The question asks which happened first, so we need to retrieve the times of both events. So answer_dim = \"time\". JSON output."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 690,
+    "completion_tokens": 275,
+    "total_tokens": 965,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 185
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 50
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

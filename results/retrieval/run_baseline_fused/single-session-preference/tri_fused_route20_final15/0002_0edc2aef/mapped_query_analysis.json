@@ -1,0 +1,62 @@
+{
+  "query_text": "The user is looking for a hotel suggestion for an upcoming trip to Miami.",
+  "query_anchor": "The user is looking for a hotel suggestion for an upcoming trip to Miami.",
+  "dimension": {
+    "target_memory_type": [
+      "profile",
+      "episodic"
+    ],
+    "time": "",
+    "location": "Miami",
+    "keywords": [
+      "Miami"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "The user is looking for a hotel suggestion for an upcoming trip to Miami.",
+      "keywords": [
+        "Miami"
+      ],
+      "query_terms": [
+        "the",
+        "user",
+        "is",
+        "looking",
+        "for",
+        "a",
+        "hotel",
+        "suggestion",
+        "an",
+        "upcoming",
+        "trip",
+        "to",
+        "miami"
+      ]
+    },
+    "structured": {
+      "query_text": "The user is looking for a hotel suggestion for an upcoming trip to Miami.",
+      "rewrite": "The user is looking for a hotel suggestion for an upcoming trip to Miami.",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "The user is looking for a hotel suggestion for an upcoming trip to Miami.",
+      "target_memory_types": [
+        "profile",
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {
+        "location": [
+          "Miami"
+        ]
+      },
+      "keywords": [
+        "Miami"
+      ],
+      "canonical_text": "The user is looking for a hotel suggestion for an upcoming trip to Miami."
+    },
+    "minilm": {
+      "query_text": "The user is looking for a hotel suggestion for an upcoming trip to Miami."
+    }
+  }
+}

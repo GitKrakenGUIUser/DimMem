@@ -1,0 +1,32 @@
+{
+  "id": "fd17ee1a-23f2-49a4-9721-13b1eb733b6c",
+  "object": "chat.completion",
+  "created": 1783350551,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": [\n    {\n      \"source_id\": 4,\n      \"content\": \"The user experiences knee discomfort and stiffness, especially after sitting for long periods.\",\n      \"dimension\": {\n        \"memory_type\": \"fact\",\n        \"time\": \"\",\n        \"location\": \"\",\n        \"reason\": \"\",\n        \"purpose\": \"\",\n        \"keywords\": [\"knee discomfort\", \"stiffness\", \"prolonged sitting\"]\n      }\n    },\n    {\n      \"source_id\": 5,\n      \"content\": \"The user had a nasty flu that kept them bedridden for almost two weeks.\",\n      \"dimension\": {\n        \"memory_type\": \"episodic\",\n        \"time\": \"\",\n        \"location\": \"\",\n        \"reason\": \"\",\n        \"purpose\": \"\",\n        \"keywords\": [\"flu\", \"bedridden\", \"two weeks\"]\n      }\n    },\n    {\n      \"source_id\": 5,\n      \"content\": \"The user is focusing on getting their health back on track after the flu.\",\n      \"dimension\": {\n        \"memory_type\": \"profile\",\n        \"time\": \"\",\n        \"location\": \"\",\n        \"reason\": \"\",\n        \"purpose\": \"recover health after flu\",\n        \"keywords\": [\"health recovery\", \"focus\"]\n      }\n    }\n  ]\n}",
+        "reasoning_content": "We need to extract memories from the conversation. The first 3 messages are overlap context, so only messages 4 and 5 are new. Message 4: User appreciates snack suggestions, mentions knee discomfort/stiffness after sitting long periods, asks for comfortable seating/ergonomic adjustments to reduce knee strain. Message 5: User mentions dealing with a nasty flu that kept them bedridden for almost two weeks, focusing on getting health back on track.\n\nExtract memories: \n- From message 4: User experiences knee discomfort and stiffness especially after prolonged sitting. This is a factual health status. Could be fact or episodic? It's a current condition, so fact. Also user is seeking ergonomic adjustments. But that's a request, not a memory. The memory about knee discomfort is valuable. Also note it's related to knee surgery mentioned in message 2 (overlap) but we only have message 4 as new. We can include reason? Not explicitly stated. Also location? \"\".\n\n- From message 5: User had a nasty flu that kept them bedridden for almost two weeks. This is a past event (episodic) with time? The flu occurred before the conversation, but no specific date. The conversation timestamp is 2023-05-30. \"almost two weeks\" relative? Could be a time range. But we don't know exactly when. We can note time as around 2023-05-16 to 2023-05-30? Not precise. Better to leave time as \"\" and mention the flu event. Also user is focusing on health recovery, that's a profile/goal? Could be profile: user is trying to get health back on track after flu and upcoming knee surgery (from overlap). But from message 5 alone, we have the flu event and the goal. \n\nAlso note that message 4 mentions knee discomfort which is likely related to upcoming knee surgery from message 2. But we can't assume that from message 4 alone? However message 5 mentions \"including a nasty flu... I'm trying to focus on getting my health back on track.\" That implies a broader health recovery. Possibly combine into one memory about health status? Keep atomic.\n\nLet's create memories:\n\n1. User experiences knee discomfort and stiffness especially after sitting for long periods. (fact) Keywords: knee discomfort, stiffness, prolonged sitting. time \"\" location \"\" reason \"\" purpose \"\".\n\n2. User had a nasty flu that kept them bedridden for almost two weeks. (episodic) time relative: based on message timestamp 2023-05-30, almost two weeks prior could be around mid-May. But not precise. Use \"\"? Or we can infer time range? The instruction says normalize relative time based on message timestamp. \"almost two weeks\" could be 12-14 days. So time could be \"2023-05-16 to 2023-05-30\"? But it says \"kept them bedridden for almost two weeks\" meaning duration, not specific start/end. We don't know start date. So better to leave time as \"\".\n\n3. User is focusing on getting their health back on track after the flu. (profile) This is a long-term goal. But it's a bit generic. Could be fact? Actually it's a current status/goal. profile might be appropriate.\n\nBut careful: message 5 also mentions \"including a nasty flu that kept me bedridden for almost two weeks\" and \"I'm trying to focus on getting my health back on track.\" So the flu is an event, the focus is a current intention. We can extract two memories.\n\nAlso note: The user's upcoming knee surgery is mentioned in overlap (message 2) but we cannot extract from overlap. So we ignore that.\n\nThus output JSON with memories from messages 4 and 5.\n\nLet's format content as self-contained sentences.\n\nMemory 1: The user experiences knee discomfort and stiffness, especially after sitting for long periods.\nMemory 2: The user had a nasty flu that kept them bedridden for almost two weeks.\nMemory 3: The user is focusing on getting their health back on track after the flu.\n\nBut memory 3 might be too vague. Could be combined with memory 2? No, atomic.\n\nCheck keywords: for memory1: knee discomfort, stiffness, prolonged sitting. For memory2: flu, bedridden, two weeks. For memory3: health recovery, focus.\n\nAlso note message 4 mentions \"especially after sitting for large periods\" - that's a condition.\n\nNow ensure no extra text. Output only JSON.\n\nAlso ensure memory_type: fact for knee discomfort (current condition), episodic for flu event, profile for health focus.\n\nDimension fields: for each, use \"\" or [] as needed.\n\nLet's write JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1644,
+    "completion_tokens": 1256,
+    "total_tokens": 2900,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 983
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 492
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

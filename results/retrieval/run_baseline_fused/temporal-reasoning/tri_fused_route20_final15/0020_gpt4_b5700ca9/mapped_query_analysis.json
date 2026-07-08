@@ -1,0 +1,60 @@
+{
+  "query_text": "How many days ago did the user attend the Maundy Thursday service at the Episcopal Church?",
+  "query_anchor": "How many days ago did the user attend the Maundy Thursday service at the Episcopal Church?",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "Maundy Thursday service",
+      "Episcopal Church"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "How many days ago did the user attend the Maundy Thursday service at the Episcopal Church?",
+      "keywords": [
+        "Maundy Thursday service",
+        "Episcopal Church"
+      ],
+      "query_terms": [
+        "how",
+        "many",
+        "days",
+        "ago",
+        "did",
+        "the",
+        "user",
+        "attend",
+        "maundy",
+        "thursday",
+        "service",
+        "at",
+        "episcopal",
+        "church"
+      ]
+    },
+    "structured": {
+      "query_text": "How many days ago did the user attend the Maundy Thursday service at the Episcopal Church?",
+      "rewrite": "How many days ago did the user attend the Maundy Thursday service at the Episcopal Church?",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "How many days ago did the user attend the Maundy Thursday service at the Episcopal Church?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "Maundy Thursday service",
+        "Episcopal Church"
+      ],
+      "canonical_text": "How many days ago did the user attend the Maundy Thursday service at the Episcopal Church?"
+    },
+    "minilm": {
+      "query_text": "How many days ago did the user attend the Maundy Thursday service at the Episcopal Church?"
+    }
+  }
+}

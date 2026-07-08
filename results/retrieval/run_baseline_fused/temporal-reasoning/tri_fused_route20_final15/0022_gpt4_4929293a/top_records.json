@@ -1,0 +1,923 @@
+[
+  {
+    "user_id": "0022_gpt4_4929293a",
+    "memory_type": "episodic",
+    "content": "The user attended Michael's engagement party at a trendy rooftop bar on 2023-05-06.",
+    "dimension": {
+      "time": "2023-05-06",
+      "location": "trendy rooftop bar",
+      "reason": "engagement party for Michael",
+      "purpose": "",
+      "keywords": [
+        "Michael",
+        "engagement party",
+        "rooftop bar"
+      ]
+    },
+    "entities": [
+      "Michael",
+      "engagement party",
+      "rooftop bar"
+    ],
+    "embedding_text": "The user attended Michael's engagement party at a trendy rooftop bar on 2023-05-06.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0048",
+    "source_time": "2023-05-06 03:02:00",
+    "record_time": "2026-07-07T19:51:01.921592",
+    "score": 24.387825287405263,
+    "score_components": {
+      "bm25_score": 24.387825287405263,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 24.387825287405263,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 24.387825287405263
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.7222222222222222
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.6108849357518157
+      }
+    ]
+  },
+  {
+    "user_id": "0022_gpt4_4929293a",
+    "memory_type": "episodic",
+    "content": "User was a bridesmaid at their cousin's wedding on 2023-06-15.",
+    "dimension": {
+      "time": "2023-06-15",
+      "location": "cousin's wedding",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "bridesmaid",
+        "cousin's wedding"
+      ]
+    },
+    "entities": [
+      "bridesmaid",
+      "cousin's wedding"
+    ],
+    "embedding_text": "User was a bridesmaid at their cousin's wedding on 2023-06-15.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0098",
+    "source_time": "2023-06-15 03:20:00",
+    "record_time": "2026-07-07T19:51:01.921965",
+    "score": 13.162380160111237,
+    "score_components": {
+      "bm25_score": 13.162380160111237,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 13.162380160111237,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 13.162380160111237
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.5526794486964755
+      }
+    ]
+  },
+  {
+    "user_id": "0022_gpt4_4929293a",
+    "memory_type": "episodic",
+    "content": "User attended her cousin's wedding as a bridesmaid on 2023-06-15 and was inspired by a special song played during the ceremony.",
+    "dimension": {
+      "time": "2023-06-15",
+      "location": "",
+      "reason": "User was a bridesmaid at her cousin's wedding",
+      "purpose": "",
+      "keywords": [
+        "cousin",
+        "wedding",
+        "bridesmaid",
+        "special song"
+      ]
+    },
+    "entities": [
+      "cousin",
+      "wedding",
+      "bridesmaid",
+      "special song"
+    ],
+    "embedding_text": "User attended her cousin's wedding as a bridesmaid on 2023-06-15 and was inspired by a special song played during the ceremony.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0104",
+    "source_time": "2023-06-15 03:20:00.500000",
+    "record_time": "2026-07-07T19:51:01.921999",
+    "score": 12.743811193437118,
+    "score_components": {
+      "bm25_score": 12.743811193437118,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 12.743811193437118,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 12.743811193437118
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.5283866904791158
+      }
+    ]
+  },
+  {
+    "user_id": "0022_gpt4_4929293a",
+    "memory_type": "episodic",
+    "content": "User plans to incorporate a meaningful song into her own wedding ceremony, inspired by her cousin's wedding.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "Inspired by her cousin's wedding",
+      "purpose": "To make her ceremony feel intimate",
+      "keywords": [
+        "meaningful song",
+        "wedding ceremony",
+        "plan"
+      ]
+    },
+    "entities": [
+      "meaningful song",
+      "wedding ceremony",
+      "plan"
+    ],
+    "embedding_text": "User plans to incorporate a meaningful song into her own wedding ceremony, inspired by her cousin's wedding.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0105",
+    "source_time": "2023-06-15 03:20:01",
+    "record_time": "2026-07-07T19:51:01.922004",
+    "score": 11.679923186461897,
+    "score_components": {
+      "bm25_score": 11.679923186461897,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 11.679923186461897,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 11.679923186461897
+      },
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 7,
+        "score": 0.4678032047758245
+      }
+    ]
+  },
+  {
+    "user_id": "0022_gpt4_4929293a",
+    "memory_type": "episodic",
+    "content": "User lived near a stadium built for a major event that disrupted the neighborhood.",
+    "dimension": {
+      "time": "",
+      "location": "near a stadium",
+      "reason": "stadium construction for a major event",
+      "purpose": "",
+      "keywords": [
+        "stadium",
+        "major event",
+        "neighborhood disruption",
+        "user"
+      ]
+    },
+    "entities": [
+      "stadium",
+      "major event",
+      "neighborhood disruption",
+      "user"
+    ],
+    "embedding_text": "User lived near a stadium built for a major event that disrupted the neighborhood.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0034",
+    "source_time": "2023-04-28 10:19:01",
+    "record_time": "2026-07-07T19:51:01.921509",
+    "score": 7.958832202003513,
+    "score_components": {
+      "bm25_score": 7.958832202003513,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 7.958832202003513,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 7.958832202003513
+      },
+      {
+        "method": "minilm",
+        "rank": 14,
+        "score": 0.2950408413564892
+      }
+    ]
+  },
+  {
+    "user_id": "0022_gpt4_4929293a",
+    "memory_type": "episodic",
+    "content": "The user is developing a fundraising strategy and is considering legal/ethical considerations, transparency, inclusivity, and donor engagement.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "fundraising strategy",
+        "legal considerations",
+        "ethical considerations",
+        "transparency",
+        "inclusivity",
+        "donor engagement"
+      ]
+    },
+    "entities": [
+      "fundraising strategy",
+      "legal considerations",
+      "ethical considerations",
+      "transparency",
+      "inclusivity",
+      "donor engagement"
+    ],
+    "embedding_text": "The user is developing a fundraising strategy and is considering legal/ethical considerations, transparency, inclusivity, and donor engagement.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0174",
+    "source_time": "2023-06-15 02:07:02.500000",
+    "record_time": "2026-07-07T19:51:01.922409",
+    "score": 6.981207445714539,
+    "score_components": {
+      "bm25_score": 6.981207445714539,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 6.981207445714539,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 6.981207445714539
+      },
+      {
+        "method": "structured",
+        "rank": 17,
+        "score": 0.38888888888888895
+      }
+    ]
+  },
+  {
+    "user_id": "0022_gpt4_4929293a",
+    "memory_type": "fact",
+    "content": "The user owns a rare first edition of F. Scott Fitzgerald's 'The Great Gatsby', one of only 300 copies with a misprinted title page, purchased for $2,500.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "user",
+        "rare first edition",
+        "The Great Gatsby",
+        "F. Scott Fitzgerald",
+        "misprinted title page",
+        "purchased $2500"
+      ]
+    },
+    "entities": [
+      "user",
+      "rare first edition",
+      "The Great Gatsby",
+      "F. Scott Fitzgerald",
+      "misprinted title page",
+      "purchased $2500"
+    ],
+    "embedding_text": "The user owns a rare first edition of F. Scott Fitzgerald's 'The Great Gatsby', one of only 300 copies with a misprinted title page, purchased for $2,500.",
+    "source_message_ids": [
+      "19"
+    ],
+    "source_boundary_id": "19_0182",
+    "source_time": "2023-06-15 08:00:00",
+    "record_time": "2026-07-07T19:51:01.922456",
+    "score": 6.650027621251999,
+    "score_components": {
+      "bm25_score": 6.650027621251999,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 6.650027621251999,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 6.650027621251999
+      }
+    ]
+  },
+  {
+    "user_id": "0022_gpt4_4929293a",
+    "memory_type": "episodic",
+    "content": "The user attended the 'Taste of Hope' charity dinner on 2023-04-17 at a fancy restaurant in the West Loop area, which raised funds for a local children's hospital.",
+    "dimension": {
+      "time": "2023-04-17",
+      "location": "West Loop area, fancy restaurant",
+      "reason": "charity dinner for local children's hospital",
+      "purpose": "raise funds",
+      "keywords": [
+        "Taste of Hope",
+        "charity dinner",
+        "West Loop",
+        "children's hospital"
+      ]
+    },
+    "entities": [
+      "Taste of Hope",
+      "charity dinner",
+      "West Loop",
+      "children's hospital"
+    ],
+    "embedding_text": "The user attended the 'Taste of Hope' charity dinner on 2023-04-17 at a fancy restaurant in the West Loop area, which raised funds for a local children's hospital.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0052",
+    "source_time": "2023-05-06 14:48:00",
+    "record_time": "2026-07-07T19:51:01.921687",
+    "score": 6.022058471819319,
+    "score_components": {
+      "bm25_score": 6.022058471819319,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 6.022058471819319,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 6.022058471819319
+      },
+      {
+        "method": "structured",
+        "rank": 7,
+        "score": 0.38888888888888895
+      },
+      {
+        "method": "minilm",
+        "rank": 19,
+        "score": 0.21081914362237036
+      }
+    ]
+  },
+  {
+    "user_id": "0022_gpt4_4929293a",
+    "memory_type": "fact",
+    "content": "The user wants to know which hotel loyalty program offers the best rewards and benefits.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "best hotel loyalty program",
+        "rewards",
+        "benefits"
+      ]
+    },
+    "entities": [
+      "best hotel loyalty program",
+      "rewards",
+      "benefits"
+    ],
+    "embedding_text": "The user wants to know which hotel loyalty program offers the best rewards and benefits.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0140",
+    "source_time": "2023-06-15 14:14:00.500000",
+    "record_time": "2026-07-07T19:51:01.922210",
+    "score": 5.566700814372256,
+    "score_components": {
+      "bm25_score": 5.566700814372256,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 5.566700814372256,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 5.566700814372256
+      }
+    ]
+  },
+  {
+    "user_id": "0022_gpt4_4929293a",
+    "memory_type": "fact",
+    "content": "The user is planning their own wedding next year.",
+    "dimension": {
+      "time": "2024",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "wedding planning",
+        "wedding"
+      ]
+    },
+    "entities": [
+      "wedding planning",
+      "wedding"
+    ],
+    "embedding_text": "The user is planning their own wedding next year.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0049",
+    "source_time": "2023-05-06 03:02:00",
+    "record_time": "2026-07-07T19:51:01.921598",
+    "score": 5.384627259750673,
+    "score_components": {
+      "bm25_score": 5.384627259750673,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 5.384627259750673,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 5.384627259750673
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.5483378760280291
+      }
+    ]
+  },
+  {
+    "user_id": "0022_gpt4_4929293a",
+    "memory_type": "fact",
+    "content": "The user is considering hiring a wedding planner.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "wedding planner"
+      ]
+    },
+    "entities": [
+      "wedding planner"
+    ],
+    "embedding_text": "The user is considering hiring a wedding planner.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0051",
+    "source_time": "2023-05-06 03:02:01",
+    "record_time": "2026-07-07T19:51:01.921680",
+    "score": 5.099097331625302,
+    "score_components": {
+      "bm25_score": 5.099097331625302,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 5.099097331625302,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 5.099097331625302
+      },
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.3680485535002666
+      }
+    ]
+  },
+  {
+    "user_id": "0022_gpt4_4929293a",
+    "memory_type": "episodic",
+    "content": "The user is planning a trip to Japan, flying into Narita International Airport, staying at a hotel in the Shinjuku district, arriving on a Friday afternoon, and considering taking the train from the airport to the hotel, which the user's friend said costs around $10.",
+    "dimension": {
+      "time": "",
+      "location": "Narita International Airport, Shinjuku district, Tokyo, Japan",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "trip to Japan",
+        "Narita International Airport",
+        "Shinjuku",
+        "train",
+        "hotel",
+        "$10"
+      ]
+    },
+    "entities": [
+      "trip to Japan",
+      "Narita International Airport",
+      "Shinjuku",
+      "train",
+      "hotel",
+      "$10"
+    ],
+    "embedding_text": "The user is planning a trip to Japan, flying into Narita International Airport, staying at a hotel in the Shinjuku district, arriving on a Friday afternoon, and considering taking the train from the airport to the hotel, which the user's friend said costs around $10.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0000",
+    "source_time": "2023-04-06 00:11:00",
+    "record_time": "2026-07-07T19:51:01.921287",
+    "score": 5.097880804364429,
+    "score_components": {
+      "bm25_score": 5.097880804364429,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 5.097880804364429,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 5.097880804364429
+      },
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.38888888888888895
+      }
+    ]
+  },
+  {
+    "user_id": "0022_gpt4_4929293a",
+    "memory_type": "profile",
+    "content": "User wants her wedding ceremony to feel intimate and special.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "wedding",
+        "intimate",
+        "special"
+      ]
+    },
+    "entities": [
+      "wedding",
+      "intimate",
+      "special"
+    ],
+    "embedding_text": "User wants her wedding ceremony to feel intimate and special.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0103",
+    "source_time": "2023-06-15 03:20:00",
+    "record_time": "2026-07-07T19:51:01.921993",
+    "score": 5.074416925530684,
+    "score_components": {
+      "bm25_score": 5.074416925530684,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 5.074416925530684,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 5.074416925530684
+      },
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.4395377922995555
+      }
+    ]
+  },
+  {
+    "user_id": "0022_gpt4_4929293a",
+    "memory_type": "fact",
+    "content": "The user is considering a countryside bed and breakfast and a city art museum as wedding venue options.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "wedding venue",
+        "bed and breakfast",
+        "countryside",
+        "art museum",
+        "city"
+      ]
+    },
+    "entities": [
+      "wedding venue",
+      "bed and breakfast",
+      "countryside",
+      "art museum",
+      "city"
+    ],
+    "embedding_text": "The user is considering a countryside bed and breakfast and a city art museum as wedding venue options.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0050",
+    "source_time": "2023-05-06 03:02:00.500000",
+    "record_time": "2026-07-07T19:51:01.921673",
+    "score": 5.03573069237214,
+    "score_components": {
+      "bm25_score": 5.03573069237214,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 5.03573069237214,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 5.03573069237214
+      },
+      {
+        "method": "minilm",
+        "rank": 13,
+        "score": 0.31962691427567225
+      }
+    ]
+  },
+  {
+    "user_id": "0022_gpt4_4929293a",
+    "memory_type": "episodic",
+    "content": "User is planning their own wedding.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "planning wedding"
+      ]
+    },
+    "entities": [
+      "planning wedding"
+    ],
+    "embedding_text": "User is planning their own wedding.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0099",
+    "source_time": "2023-06-15 03:20:00",
+    "record_time": "2026-07-07T19:51:01.921970",
+    "score": 4.610389870912111,
+    "score_components": {
+      "bm25_score": 4.610389870912111,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 4.610389870912111,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 4.610389870912111
+      },
+      {
+        "method": "structured",
+        "rank": 11,
+        "score": 0.38888888888888895
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.5432739574348342
+      }
+    ]
+  }
+]

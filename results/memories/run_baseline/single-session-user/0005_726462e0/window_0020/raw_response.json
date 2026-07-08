@@ -1,0 +1,32 @@
+{
+  "id": "e079206d-a442-4319-ba21-a6ba0cfe6cbd",
+  "object": "chat.completion",
+  "created": 1783354354,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": []\n}",
+        "reasoning_content": "We need to extract memories from messages 4 to 9. Messages 1-3 are overlapping context, so ignore them. Messages 4-9 contain user questions about regulations, their negative consequences, future regulations, cultural traditions influencing fashion, specific examples, overlooked cultures, and promoting cultural understanding. These are general knowledge queries, not personal facts, episodic events, or long-term profile. They are temporary information-seeking, not long-term value. No stable facts about the user, no specific events or plans, no stable preferences/habits. Therefore, no memories to extract. Output an empty memories array."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1678,
+    "completion_tokens": 130,
+    "total_tokens": 1808,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 121
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 526
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-07-07T00:44:53.980032",
+  "input_root": "data/longmemeval_s_cleaned_random30.json",
+  "output_root": "results/query_analysis/run_baseline",
+  "model_name": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com/v1",
+  "max_tokens": 2048,
+  "timeout": 120,
+  "max_retries": 3,
+  "resume": true,
+  "max_convs": 0,
+  "max_questions_per_conv": 0,
+  "conv_count": 6,
+  "prompt_file": "/home/bowenzheng/projects/DimMemTest-test/DimMem/longmemeval/prompts/prompts.py"
+}

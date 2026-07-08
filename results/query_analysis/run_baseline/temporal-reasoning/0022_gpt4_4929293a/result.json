@@ -1,0 +1,22 @@
+{
+  "conv_name": "temporal-reasoning",
+  "index": 22,
+  "question": "Which event happened first, my cousin's wedding or Michael's engagement party?",
+  "ok": true,
+  "error": null,
+  "elapsed_seconds": 3.3360745906829834,
+  "usage": {
+    "prompt_tokens": 690,
+    "completion_tokens": 275,
+    "total_tokens": 965,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 185
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 50
+  },
+  "output_dir": "results/query_analysis/run_baseline/temporal-reasoning/0022_gpt4_4929293a"
+}

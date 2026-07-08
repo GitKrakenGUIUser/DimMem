@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-02-10T01:31:00, Fri] 1.User: I've been having some issues with my YouTube Premium subscription, could you help me troubleshoot the buffering and video quality problems I've been experiencing? By the way, I've been really into true-crime podcasts lately, and I started listening to them during my morning jogs, which I've been doing consistently since July.
+[2023-02-10T01:31:00.500000, Fri] 2.User: I experience buffering and poor video quality pretty frequently, maybe 3-4 times a week, and it's happening on my phone, which is connected to Wi-Fi. I haven't noticed any specific patterns or triggers, it just seems to happen randomly. Also, I'm drawn to true-crime podcasts because I find the investigative process and psychology behind the crimes really fascinating.
+[2023-02-10T01:31:01, Fri] 3.User: I'll try those troubleshooting steps and see if they help. Thanks for the suggestions! By the way, I've been listening to "Last Seen" and I'm currently on episode 7. The hosts have great chemistry and the cases are really well-researched.
+[2023-02-10T01:31:01.500000, Fri] 4.User: I think I'll discuss the case with my friends who also listen to true-crime podcasts. We often exchange theories and opinions about the cases. But anyway, I wanted to ask, can you recommend some other good true-crime podcasts similar to "Last Seen"? I'm always looking to discover new ones!
+[2023-02-10T01:31:02, Fri] 5.User: I'm interested in a wide range of cases, but I think I'd like to explore more podcasts that focus on lesser-known cases or cases that didn't get much media attention. I find those types of cases really fascinating.
+[2023-02-10T01:31:02.500000, Fri] 6.User: I think I prefer podcasts with a more serious and somber tone, but I don't mind if they have a bit of humor here and there. I find that a serious tone helps me stay engaged and invested in the case, but a bit of humor can make the listening experience more enjoyable.
+[2023-02-11T02:09:00, Sat] 7.User: I'm trying to get more into fitness tracking and was wondering if you could recommend some workout routines that can help me reach my daily step goal. By the way, speaking of daily routines, I've been keeping track of my schedule and noticed that February 15th was a Tuesday, which is when I started wearing my new fitness tracker.
+[2023-02-11T02:09:00.500000, Sat] 8.User: I'm currently aiming for 10,000 steps a day, and I'd like to focus on endurance and overall fitness. I've been doing pretty well so far, and last Saturday, I even hit a new personal best of 12,345 steps while running errands around town.
+[2023-02-11T02:09:01, Sat] 9.User: I think these tips are really helpful and I'll definitely try to mix it up. I've been meaning to explore some new routes around my neighborhood, so I'll make sure to incorporate hills and stairs into my walks. I've also been wanting to try interval training, so I'll give that a shot. One thing I've been doing to stay motivated is using my foam roller for post-workout stretching, which has really helped with muscle soreness.
+[2023-02-11T02:09:01.500000, Sat] 10.User: I think I'll try using a timer on my phone to guide my intervals. I've heard of people using apps, but I'm not too tech-savvy, so I'll stick with what I know for now. I'll probably start with short intervals of 2-3 minutes of fast walking, followed by 2-3 minutes of regular walking. I'll see how that goes and adjust as needed. By the way, I got my foam roller from Amazon, and it arrived on March 2nd.
+[2023-02-11T02:09:02, Sat] 11.User: I'm not sure about finding a walking buddy just yet. I kind of enjoy the alone time while walking, and it gives me a chance to clear my head. But I do appreciate the suggestion! Speaking of alone time, I've been using my new wireless blood pressure monitor from Omron to track my blood pressure regularly. It's been interesting to see the fluctuations, and my doctor recommended I keep an eye on it since my last check-up showed slightly higher than normal readings.
+[2023-02-11T02:09:02.500000, Sat] 12.User: I plan on tracking my blood pressure at least three times a week, maybe more if I remember. I've only been using the monitor for a short time, so I haven't noticed any significant patterns yet. But I'm hoping that by tracking it regularly, I'll be able to identify some trends and make adjustments to my lifestyle accordingly.
+[2023-02-11T11:27:00, Sat] 13.User: I'm looking for some new recipe ideas for my next celebration. By the way, I just had a successful celebration recently - it was to mark my sister's birthday, and the cake I made was a huge hit!
+[2023-02-11T11:27:00.500000, Sat] 14.User: I'm thinking of hosting a casual gathering with friends, maybe a brunch or afternoon tea. I don't have any dietary restrictions in mind, but I'm open to trying out new flavors and ingredients. By the way, speaking of flavors, I've been experimenting with different types of vanilla beans lately and I think I prefer the Madagascar beans I used in my sister's birthday cake.
+[2023-02-11T11:27:01, Sat] 15.User: I like the idea of the Vanilla Bean Crème Brûlée French Toast, but I'm not sure about the caramelized sugar crust. Can I substitute it with something else?

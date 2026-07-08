@@ -1,0 +1,2397 @@
+[
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "The user is planning to use public transportation in Europe based on their positive experience with efficient public transportation in Japan.",
+    "dimension": {
+      "time": "",
+      "location": "Europe",
+      "reason": "positive experience with public transportation in Japan",
+      "purpose": "to navigate efficiently",
+      "keywords": [
+        "public transportation",
+        "Europe",
+        "Japan",
+        "trains",
+        "buses"
+      ]
+    },
+    "entities": [
+      "public transportation",
+      "Europe",
+      "Japan",
+      "trains",
+      "buses"
+    ],
+    "embedding_text": "The user is planning to use public transportation in Europe based on their positive experience with efficient public transportation in Japan.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0045",
+    "source_time": "2023-05-21 03:40:02.500000",
+    "record_time": "2026-07-07T19:50:55.843795",
+    "score": 8.285477000889315,
+    "score_components": {
+      "bm25_score": 8.285477000889315,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 8.285477000889315,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 8.285477000889315
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 14,
+        "score": 0.32513999811748456
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "The user visited Japan from April 15th to 22nd and fell in love with Tokyo.",
+    "dimension": {
+      "time": "April 15th to 22nd",
+      "location": "Japan, Tokyo",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Japan trip",
+        "Tokyo"
+      ]
+    },
+    "entities": [
+      "Japan trip",
+      "Tokyo"
+    ],
+    "embedding_text": "The user visited Japan from April 15th to 22nd and fell in love with Tokyo.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0182",
+    "source_time": "2023-05-29 05:09:00",
+    "record_time": "2026-07-07T19:50:55.844592",
+    "score": 7.835918999682117,
+    "score_components": {
+      "bm25_score": 7.835918999682117,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 7.835918999682117,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 7.835918999682117
+      },
+      {
+        "method": "structured",
+        "rank": 11,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.5021497504606368
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "User plans to stay at The Wit Hotel in Chicago because of its rooftop bar.",
+    "dimension": {
+      "time": "2023-05-23T02:30:01.500000",
+      "location": "Chicago (The Wit Hotel)",
+      "reason": "likes rooftop bar",
+      "purpose": "accommodation",
+      "keywords": [
+        "The Wit Hotel",
+        "Chicago",
+        "rooftop bar"
+      ]
+    },
+    "entities": [
+      "The Wit Hotel",
+      "Chicago",
+      "rooftop bar"
+    ],
+    "embedding_text": "User plans to stay at The Wit Hotel in Chicago because of its rooftop bar.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0084",
+    "source_time": "2023-05-23 02:30:00.500000",
+    "record_time": "2026-07-07T19:50:55.844021",
+    "score": 7.734843358561038,
+    "score_components": {
+      "bm25_score": 7.734843358561038,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 7.734843358561038,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 7.734843358561038
+      },
+      {
+        "method": "structured",
+        "rank": 8,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 20,
+        "score": 0.28077892504932545
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "The user is planning to stay in social hostels or budget-friendly accommodations in Europe to meet other travelers, based on their positive experience in Japan where hostels helped them socialize.",
+    "dimension": {
+      "time": "",
+      "location": "Europe",
+      "reason": "positive experience in Japan with hostels",
+      "purpose": "to meet other travelers",
+      "keywords": [
+        "social hostels",
+        "Europe",
+        "budget-friendly accommodations",
+        "meeting travelers",
+        "Japan"
+      ]
+    },
+    "entities": [
+      "social hostels",
+      "Europe",
+      "budget-friendly accommodations",
+      "meeting travelers",
+      "Japan"
+    ],
+    "embedding_text": "The user is planning to stay in social hostels or budget-friendly accommodations in Europe to meet other travelers, based on their positive experience in Japan where hostels helped them socialize.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0044",
+    "source_time": "2023-05-21 03:40:02",
+    "record_time": "2026-07-07T19:50:55.843788",
+    "score": 7.646733979550215,
+    "score_components": {
+      "bm25_score": 7.646733979550215,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 7.646733979550215,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 7.646733979550215
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 16,
+        "score": 0.30395189075744344
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "User plans to visit Millennium Park and the lakefront path in Chicago.",
+    "dimension": {
+      "time": "2023-05-23T02:30:02",
+      "location": "Chicago (Millennium Park, lakefront path)",
+      "reason": "",
+      "purpose": "exploration",
+      "keywords": [
+        "Millennium Park",
+        "lakefront path",
+        "Chicago"
+      ]
+    },
+    "entities": [
+      "Millennium Park",
+      "lakefront path",
+      "Chicago"
+    ],
+    "embedding_text": "User plans to visit Millennium Park and the lakefront path in Chicago.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0086",
+    "source_time": "2023-05-23 02:30:01.500000",
+    "record_time": "2026-07-07T19:50:55.844033",
+    "score": 7.373224322349495,
+    "score_components": {
+      "bm25_score": 7.373224322349495,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 7.373224322349495,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 7.373224322349495
+      },
+      {
+        "method": "structured",
+        "rank": 10,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.3440152886947378
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "User plans to dine at Carmine's restaurant in Chicago.",
+    "dimension": {
+      "time": "2023-05-23T02:30:01",
+      "location": "Chicago (Carmine's)",
+      "reason": "",
+      "purpose": "dining",
+      "keywords": [
+        "Carmine's",
+        "Chicago",
+        "restaurant"
+      ]
+    },
+    "entities": [
+      "Carmine's",
+      "Chicago",
+      "restaurant"
+    ],
+    "embedding_text": "User plans to dine at Carmine's restaurant in Chicago.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0083",
+    "source_time": "2023-05-23 02:30:00",
+    "record_time": "2026-07-07T19:50:55.844015",
+    "score": 6.690734417269265,
+    "score_components": {
+      "bm25_score": 6.690734417269265,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 6.690734417269265,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 6.690734417269265
+      },
+      {
+        "method": "structured",
+        "rank": 7,
+        "score": 0.6666666666666667
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "The user attended a car maintenance workshop on preparing cars for track days and received feedback from experienced drivers and mechanics.",
+    "dimension": {
+      "time": "",
+      "location": "workshop",
+      "reason": "to learn about car preparation",
+      "purpose": "to prepare for track days",
+      "keywords": [
+        "car maintenance workshop",
+        "track days",
+        "experienced drivers",
+        "mechanics"
+      ]
+    },
+    "entities": [
+      "car maintenance workshop",
+      "track days",
+      "experienced drivers",
+      "mechanics"
+    ],
+    "embedding_text": "The user attended a car maintenance workshop on preparing cars for track days and received feedback from experienced drivers and mechanics.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0050",
+    "source_time": "2023-05-22 01:18:00",
+    "record_time": "2026-07-07T19:50:55.843825",
+    "score": 6.621347652199851,
+    "score_components": {
+      "bm25_score": 6.621347652199851,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 6.621347652199851,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 6.621347652199851
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "The user traveled to Japan and was able to change plans on a whim.",
+    "dimension": {
+      "time": "",
+      "location": "Japan",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Japan",
+        "travel",
+        "flexibility"
+      ]
+    },
+    "entities": [
+      "Japan",
+      "travel",
+      "flexibility"
+    ],
+    "embedding_text": "The user traveled to Japan and was able to change plans on a whim.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0040",
+    "source_time": "2023-05-21 03:40:00.500000",
+    "record_time": "2026-07-07T19:50:55.843682",
+    "score": 6.421247422465939,
+    "score_components": {
+      "bm25_score": 6.421247422465939,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 6.421247422465939,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 6.421247422465939
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.46712954076840046
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "The user attended a car maintenance workshop on preparing cars for track days, where they received feedback from experienced drivers and mechanics.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to learn about preparing cars for track days",
+      "purpose": "to receive feedback from experienced drivers and mechanics",
+      "keywords": [
+        "car maintenance workshop",
+        "track days",
+        "feedback",
+        "drivers",
+        "mechanics"
+      ]
+    },
+    "entities": [
+      "car maintenance workshop",
+      "track days",
+      "feedback",
+      "drivers",
+      "mechanics"
+    ],
+    "embedding_text": "The user attended a car maintenance workshop on preparing cars for track days, where they received feedback from experienced drivers and mechanics.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0053",
+    "source_time": "2023-05-21 23:32:00",
+    "record_time": "2026-07-07T19:50:55.843843",
+    "score": 6.268620006900236,
+    "score_components": {
+      "bm25_score": 6.268620006900236,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 6.268620006900236,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 6.268620006900236
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "User is looking for Italian restaurant recommendations for a trip to Chicago.",
+    "dimension": {
+      "time": "2023-05-23T02:30:00.500000",
+      "location": "Chicago",
+      "reason": "",
+      "purpose": "to find Italian restaurants",
+      "keywords": [
+        "Italian restaurants",
+        "Chicago",
+        "trip"
+      ]
+    },
+    "entities": [
+      "Italian restaurants",
+      "Chicago",
+      "trip"
+    ],
+    "embedding_text": "User is looking for Italian restaurant recommendations for a trip to Chicago.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0081",
+    "source_time": "2023-05-23 00:01:02",
+    "record_time": "2026-07-07T19:50:55.844004",
+    "score": 6.224159127274068,
+    "score_components": {
+      "bm25_score": 6.224159127274068,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 6.224159127274068,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 6.224159127274068
+      },
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.6666666666666667
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "User had a great time exploring Chicago in March 2023, especially walking along the Lake Michigan shoreline.",
+    "dimension": {
+      "time": "March 2023",
+      "location": "Chicago, Lake Michigan shoreline",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Chicago",
+        "March",
+        "Lake Michigan",
+        "walking",
+        "trip"
+      ]
+    },
+    "entities": [
+      "Chicago",
+      "March",
+      "Lake Michigan",
+      "walking",
+      "trip"
+    ],
+    "embedding_text": "User had a great time exploring Chicago in March 2023, especially walking along the Lake Michigan shoreline.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0085",
+    "source_time": "2023-05-23 02:30:01",
+    "record_time": "2026-07-07T19:50:55.844027",
+    "score": 6.21071202613401,
+    "score_components": {
+      "bm25_score": 6.21071202613401,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 6.21071202613401,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 6.21071202613401
+      },
+      {
+        "method": "structured",
+        "rank": 9,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.4413765569430605
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "User plans a trip to Chicago and seeks restaurant recommendations.",
+    "dimension": {
+      "time": "2023-05-23T02:30:00",
+      "location": "Chicago",
+      "reason": "",
+      "purpose": "to find restaurants",
+      "keywords": [
+        "Chicago",
+        "trip",
+        "restaurant recommendations"
+      ]
+    },
+    "entities": [
+      "Chicago",
+      "trip",
+      "restaurant recommendations"
+    ],
+    "embedding_text": "User plans a trip to Chicago and seeks restaurant recommendations.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0080",
+    "source_time": "2023-05-23 00:01:01.500000",
+    "record_time": "2026-07-07T19:50:55.843998",
+    "score": 5.723667568825375,
+    "score_components": {
+      "bm25_score": 5.723667568825375,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 5.723667568825375,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 5.723667568825375
+      },
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 19,
+        "score": 0.2927993771846129
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "profile",
+    "content": "The user wants to explore day trip and weekend getaway destinations from Tokyo to experience Japan's natural beauty.",
+    "dimension": {
+      "time": "",
+      "location": "destinations from Tokyo",
+      "reason": "",
+      "purpose": "to explore Japan's natural beauty",
+      "keywords": [
+        "day trips",
+        "weekend getaways",
+        "natural beauty",
+        "Tokyo"
+      ]
+    },
+    "entities": [
+      "day trips",
+      "weekend getaways",
+      "natural beauty",
+      "Tokyo"
+    ],
+    "embedding_text": "The user wants to explore day trip and weekend getaway destinations from Tokyo to experience Japan's natural beauty.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0154",
+    "source_time": "2023-05-28 02:02:02.500000",
+    "record_time": "2026-07-07T19:50:55.844430",
+    "score": 5.352821076010546,
+    "score_components": {
+      "bm25_score": 5.352821076010546,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 5.352821076010546,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 5.352821076010546
+      },
+      {
+        "method": "minilm",
+        "rank": 6,
+        "score": 0.42296939838501946
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "fact",
+    "content": "The user is interested in the dual-flow valve technology of Ohlins coilovers and how it affects damping.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "understand effect on damping",
+      "keywords": [
+        "dual-flow valve",
+        "Ohlins",
+        "damping"
+      ]
+    },
+    "entities": [
+      "dual-flow valve",
+      "Ohlins",
+      "damping"
+    ],
+    "embedding_text": "The user is interested in the dual-flow valve technology of Ohlins coilovers and how it affects damping.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0065",
+    "source_time": "2023-05-22 11:15:01",
+    "record_time": "2026-07-07T19:50:55.843911",
+    "score": 5.005827625972574,
+    "score_components": {
+      "bm25_score": 5.005827625972574,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 5.005827625972574,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 5.005827625972574
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "User had great Italian food during a previous 4-day trip to Chicago.",
+    "dimension": {
+      "time": "",
+      "location": "Chicago",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Italian food",
+        "Chicago",
+        "trip",
+        "4-day"
+      ]
+    },
+    "entities": [
+      "Italian food",
+      "Chicago",
+      "trip",
+      "4-day"
+    ],
+    "embedding_text": "User had great Italian food during a previous 4-day trip to Chicago.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0082",
+    "source_time": "2023-05-23 00:01:02.500000",
+    "record_time": "2026-07-07T19:50:55.844010",
+    "score": 4.856472960427722,
+    "score_components": {
+      "bm25_score": 4.856472960427722,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 4.856472960427722,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 4.856472960427722
+      },
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 7,
+        "score": 0.41422900206617774
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "fact",
+    "content": "User is involved in marketing for American Eye Center, an eye clinic in Vietnam, including creating Google ads and managing review replies, with the purpose of increasing website traffic and reach.",
+    "dimension": {
+      "time": "",
+      "location": "Vietnam",
+      "reason": "",
+      "purpose": "to increase website traffic and reach",
+      "keywords": [
+        "American Eye Center",
+        "eye clinic",
+        "Vietnam",
+        "Google ads",
+        "review reply"
+      ]
+    },
+    "entities": [
+      "American Eye Center",
+      "eye clinic",
+      "Vietnam",
+      "Google ads",
+      "review reply"
+    ],
+    "embedding_text": "User is involved in marketing for American Eye Center, an eye clinic in Vietnam, including creating Google ads and managing review replies, with the purpose of increasing website traffic and reach.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0140",
+    "source_time": "2023-05-27 09:23:00.500000",
+    "record_time": "2026-07-07T19:50:55.844351",
+    "score": 4.61156311397374,
+    "score_components": {
+      "bm25_score": 4.61156311397374,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 16,
+    "retrieval_score": 4.61156311397374,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 16,
+        "score": 4.61156311397374
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "The user made a batch of chocolate chip cookies last week and ate half of them in one sitting.",
+    "dimension": {
+      "time": "2023-05-14 to 2023-05-20",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "chocolate chip cookies",
+        "baking",
+        "eating"
+      ]
+    },
+    "entities": [
+      "chocolate chip cookies",
+      "baking",
+      "eating"
+    ],
+    "embedding_text": "The user made a batch of chocolate chip cookies last week and ate half of them in one sitting.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0028",
+    "source_time": "2023-05-21 02:53:00",
+    "record_time": "2026-07-07T19:50:55.843611",
+    "score": 4.447623384280543,
+    "score_components": {
+      "bm25_score": 4.447623384280543,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 17,
+    "retrieval_score": 4.447623384280543,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 17,
+        "score": 4.447623384280543
+      },
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.3557509682965893
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "profile",
+    "content": "The user is interested in hiking trails and outdoor activities in the Tokyo area.",
+    "dimension": {
+      "time": "",
+      "location": "Tokyo area",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "hiking trails",
+        "outdoor activities",
+        "Tokyo"
+      ]
+    },
+    "entities": [
+      "hiking trails",
+      "outdoor activities",
+      "Tokyo"
+    ],
+    "embedding_text": "The user is interested in hiking trails and outdoor activities in the Tokyo area.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0153",
+    "source_time": "2023-05-28 02:02:02",
+    "record_time": "2026-07-07T19:50:55.844425",
+    "score": 4.425851188664356,
+    "score_components": {
+      "bm25_score": 4.425851188664356,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 18,
+    "retrieval_score": 4.425851188664356,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 18,
+        "score": 4.425851188664356
+      },
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.32956357964866223
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "The user is interested in getting a phone case with a built-in battery and is considering its worth.",
+    "dimension": {
+      "time": "2023-05-23",
+      "location": "",
+      "reason": "",
+      "purpose": "Phone battery extension",
+      "keywords": [
+        "battery case",
+        "phone case"
+      ]
+    },
+    "entities": [
+      "battery case",
+      "phone case"
+    ],
+    "embedding_text": "The user is interested in getting a phone case with a built-in battery and is considering its worth.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0076",
+    "source_time": "2023-05-23 00:01:01",
+    "record_time": "2026-07-07T19:50:55.843975",
+    "score": 4.422366544944598,
+    "score_components": {
+      "bm25_score": 4.422366544944598,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 19,
+    "retrieval_score": 4.422366544944598,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 19,
+        "score": 4.422366544944598
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "User spent about 1.5 hours at a local nursery during a spring sale, picking out healthy plants and chatting with staff about plant care.",
+    "dimension": {
+      "time": "",
+      "location": "local nursery",
+      "reason": "spring sale",
+      "purpose": "to purchase healthy plants and learn about their care",
+      "keywords": [
+        "spring sale",
+        "local nursery",
+        "plant care",
+        "chatting with staff"
+      ]
+    },
+    "entities": [
+      "spring sale",
+      "local nursery",
+      "plant care",
+      "chatting with staff"
+    ],
+    "embedding_text": "User spent about 1.5 hours at a local nursery during a spring sale, picking out healthy plants and chatting with staff about plant care.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0133",
+    "source_time": "2023-05-26 15:16:01.500000",
+    "record_time": "2026-07-07T19:50:55.844307",
+    "score": 4.419700671946621,
+    "score_components": {
+      "bm25_score": 4.419700671946621,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 20,
+    "retrieval_score": 4.419700671946621,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 20,
+        "score": 4.419700671946621
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "User took a beginner's Italian cooking class during winter on a weekday morning at a local culinary school, taught by Chef Maria, where they made Spaghetti Bolognese.",
+    "dimension": {
+      "time": "winter (no exact date)",
+      "location": "local culinary school",
+      "reason": "learn Italian cuisine",
+      "purpose": "make Spaghetti Bolognese",
+      "keywords": [
+        "cooking class",
+        "Italian cuisine",
+        "Chef Maria",
+        "Spaghetti Bolognese",
+        "beginner"
+      ]
+    },
+    "entities": [
+      "cooking class",
+      "Italian cuisine",
+      "Chef Maria",
+      "Spaghetti Bolognese",
+      "beginner"
+    ],
+    "embedding_text": "User took a beginner's Italian cooking class during winter on a weekday morning at a local culinary school, taught by Chef Maria, where they made Spaghetti Bolognese.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0004",
+    "source_time": "2023-05-20 04:11:02",
+    "record_time": "2026-07-07T19:50:55.843463",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User took a beginner's Italian cooking class during winter on a weekday morning at a local culinary school, taught by Chef Maria, where they made Spaghetti Bolognese. | cooking class | Italian cuisine | Chef Maria | Spaghetti Bolognese | beginner | winter (no exact date) | local culinary school | learn Italian cuisine | make Spaghetti Bolognese | cooking class | Italian cuisine | Chef Maria | Spaghetti Bolognese | beginner"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 12,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "User planned to host a dinner party on the weekend of 2023-05-20.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "",
+      "purpose": "host a dinner party",
+      "keywords": [
+        "dinner party",
+        "weekend",
+        "2023-05-20"
+      ]
+    },
+    "entities": [
+      "dinner party",
+      "weekend",
+      "2023-05-20"
+    ],
+    "embedding_text": "User planned to host a dinner party on the weekend of 2023-05-20.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0005",
+    "source_time": "2023-05-20 04:11:00",
+    "record_time": "2026-07-07T19:50:55.843471",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User planned to host a dinner party on the weekend of 2023-05-20. | dinner party | weekend | 2023-05-20 | 2023-05-20 | host a dinner party | dinner party | weekend | 2023-05-20"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 13,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 13,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "User recently ate carne asada tacos at a new Mexican restaurant near their home.",
+    "dimension": {
+      "time": "",
+      "location": "near home",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "carne asada tacos",
+        "Mexican restaurant",
+        "new"
+      ]
+    },
+    "entities": [
+      "carne asada tacos",
+      "Mexican restaurant",
+      "new"
+    ],
+    "embedding_text": "User recently ate carne asada tacos at a new Mexican restaurant near their home.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0006",
+    "source_time": "2023-05-20 13:40:00",
+    "record_time": "2026-07-07T19:50:55.843478",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User recently ate carne asada tacos at a new Mexican restaurant near their home. | carne asada tacos | Mexican restaurant | new | near home | carne asada tacos | Mexican restaurant | new"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "User is considering buying a humidifier to improve air quality and humidity for the indoor plants.",
+    "dimension": {
+      "time": "",
+      "location": "home",
+      "reason": "improve air quality and humidity",
+      "purpose": "better plant environment",
+      "keywords": [
+        "humidifier",
+        "air quality",
+        "humidity",
+        "plant care"
+      ]
+    },
+    "entities": [
+      "humidifier",
+      "air quality",
+      "humidity",
+      "plant care"
+    ],
+    "embedding_text": "User is considering buying a humidifier to improve air quality and humidity for the indoor plants.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0010",
+    "source_time": "2023-05-20 07:17:01.500000",
+    "record_time": "2026-07-07T19:50:55.843504",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User is considering buying a humidifier to improve air quality and humidity for the indoor plants. | humidifier | air quality | humidity | plant care | home | improve air quality and humidity | better plant environment | humidifier | air quality | humidity | plant care"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 15,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "User fertilized the peace lily last week (around 2023-05-13) and it started blooming again; user plans to fertilize it more regularly.",
+    "dimension": {
+      "time": "2023-05-13 (last week relative to 2023-05-20)",
+      "location": "home",
+      "reason": "peace lily bloomed after fertilizing",
+      "purpose": "regular fertilizing",
+      "keywords": [
+        "fertilize",
+        "peace lily",
+        "bloom",
+        "plant care"
+      ]
+    },
+    "entities": [
+      "fertilize",
+      "peace lily",
+      "bloom",
+      "plant care"
+    ],
+    "embedding_text": "User fertilized the peace lily last week (around 2023-05-13) and it started blooming again; user plans to fertilize it more regularly.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0011",
+    "source_time": "2023-05-20 07:17:02.500000",
+    "record_time": "2026-07-07T19:50:55.843510",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User fertilized the peace lily last week (around 2023-05-13) and it started blooming again; user plans to fertilize it more regularly. | fertilize | peace lily | bloom | plant care | 2023-05-13 (last week relative to 2023-05-20) | home | peace lily bloomed after fertilizing | regular fertilizing | fertilize | peace lily | bloom | plant care"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 16,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "The user plans to make jjamppong, a Korean-style seafood soup.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "jjamppong",
+        "Korean soup",
+        "seafood"
+      ]
+    },
+    "entities": [
+      "jjamppong",
+      "Korean soup",
+      "seafood"
+    ],
+    "embedding_text": "The user plans to make jjamppong, a Korean-style seafood soup.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0014",
+    "source_time": "2023-05-20 13:40:01.500000",
+    "record_time": "2026-07-07T19:50:55.843529",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to make jjamppong, a Korean-style seafood soup. | jjamppong | Korean soup | seafood | jjamppong | Korean soup | seafood"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 17,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "The user is craving sweet food and is considering making a traditional Italian dessert.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "craving sweet food",
+      "purpose": "to try a traditional Italian dessert",
+      "keywords": [
+        "Italian dessert",
+        "sweet craving"
+      ]
+    },
+    "entities": [
+      "Italian dessert",
+      "sweet craving"
+    ],
+    "embedding_text": "The user is craving sweet food and is considering making a traditional Italian dessert.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0016",
+    "source_time": "2023-05-20 13:40:02",
+    "record_time": "2026-07-07T19:50:55.843541",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user is craving sweet food and is considering making a traditional Italian dessert. | Italian dessert | sweet craving | craving sweet food | to try a traditional Italian dessert | Italian dessert | sweet craving"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 18,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "The user plans to try making Tiramisù.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Tiramisù",
+        "recipe"
+      ]
+    },
+    "entities": [
+      "Tiramisù",
+      "recipe"
+    ],
+    "embedding_text": "The user plans to try making Tiramisù.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0017",
+    "source_time": "2023-05-20 13:40:02.500000",
+    "record_time": "2026-07-07T19:50:55.843547",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to try making Tiramisù. | Tiramisù | recipe | Tiramisù | recipe"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 19,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "The user recently ate carne asada tacos at a new Mexican restaurant near their house, found them amazing, had a huge portion, and took leftovers home.",
+    "dimension": {
+      "time": "",
+      "location": "a new Mexican place near their house",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "carne asada tacos",
+        "Mexican restaurant",
+        "near home"
+      ]
+    },
+    "entities": [
+      "carne asada tacos",
+      "Mexican restaurant",
+      "near home"
+    ],
+    "embedding_text": "The user recently ate carne asada tacos at a new Mexican restaurant near their house, found them amazing, had a huge portion, and took leftovers home.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0018",
+    "source_time": "2023-05-20 13:40:02.500000",
+    "record_time": "2026-07-07T19:50:55.843553",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user recently ate carne asada tacos at a new Mexican restaurant near their house, found them amazing, had a huge portion, and took leftovers home. | carne asada tacos | Mexican restaurant | near home | a new Mexican place near their house | carne asada tacos | Mexican restaurant | near home"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 20,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 20,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "fact",
+    "content": "The user has been living in Tokyo for about 5 months as of May 2023.",
+    "dimension": {
+      "time": "",
+      "location": "Tokyo",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Tokyo",
+        "residence duration"
+      ]
+    },
+    "entities": [
+      "Tokyo",
+      "residence duration"
+    ],
+    "embedding_text": "The user has been living in Tokyo for about 5 months as of May 2023.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0146",
+    "source_time": "2023-05-27 17:13:01.500000",
+    "record_time": "2026-07-07T19:50:55.844385",
+    "score": 0.5523179692586647,
+    "score_components": {
+      "dense_cosine_score": 0.5523179692586647,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 1,
+    "retrieval_score": 0.5523179692586647,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.5523179692586647
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "User is planning a trip to Asia and wants recommendations for destinations within a 5-hour flight radius from Tokyo.",
+    "dimension": {
+      "time": "",
+      "location": "Asia, Tokyo",
+      "reason": "",
+      "purpose": "travel",
+      "keywords": [
+        "Asia",
+        "Tokyo",
+        "travel plan",
+        "5-hour flight radius"
+      ]
+    },
+    "entities": [
+      "Asia",
+      "Tokyo",
+      "travel plan",
+      "5-hour flight radius"
+    ],
+    "embedding_text": "User is planning a trip to Asia and wants recommendations for destinations within a 5-hour flight radius from Tokyo.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0185",
+    "source_time": "2023-05-29 05:09:00",
+    "record_time": "2026-07-07T19:50:55.844639",
+    "score": 0.4281776525870118,
+    "score_components": {
+      "dense_cosine_score": 0.4281776525870118,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 5,
+    "retrieval_score": 0.4281776525870118,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.4281776525870118
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "The user is planning a trip to Asia and wants recommendations for must-visit places in Tokyo.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "Tokyo",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "trip to Asia",
+        "Tokyo travel"
+      ]
+    },
+    "entities": [
+      "trip to Asia",
+      "Tokyo travel"
+    ],
+    "embedding_text": "The user is planning a trip to Asia and wants recommendations for must-visit places in Tokyo.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0181",
+    "source_time": "2023-05-29 02:20:02.500000",
+    "record_time": "2026-07-07T19:50:55.844586",
+    "score": 0.3750168647965851,
+    "score_components": {
+      "dense_cosine_score": 0.3750168647965851,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 8,
+    "retrieval_score": 0.3750168647965851,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 8,
+        "score": 0.3750168647965851
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "profile",
+    "content": "The user prioritizes physical and mental health through yoga since moving to Tokyo.",
+    "dimension": {
+      "time": "",
+      "location": "Tokyo",
+      "reason": "",
+      "purpose": "to relax and unwind",
+      "keywords": [
+        "physical health",
+        "mental health",
+        "yoga"
+      ]
+    },
+    "entities": [
+      "physical health",
+      "mental health",
+      "yoga"
+    ],
+    "embedding_text": "The user prioritizes physical and mental health through yoga since moving to Tokyo.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0152",
+    "source_time": "2023-05-28 02:02:01.500000",
+    "record_time": "2026-07-07T19:50:55.844419",
+    "score": 0.35527071894122564,
+    "score_components": {
+      "dense_cosine_score": 0.35527071894122564,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.35527071894122564,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 10,
+        "score": 0.35527071894122564
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "fact",
+    "content": "The user's best friend moved to a new city for work a few weeks ago.",
+    "dimension": {
+      "time": "2023-05",
+      "location": "",
+      "reason": "for work",
+      "purpose": "",
+      "keywords": [
+        "best friend",
+        "moved",
+        "work"
+      ]
+    },
+    "entities": [
+      "best friend",
+      "moved",
+      "work"
+    ],
+    "embedding_text": "The user's best friend moved to a new city for work a few weeks ago.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0101",
+    "source_time": "2023-05-24 08:29:00",
+    "record_time": "2026-07-07T19:50:55.844118",
+    "score": 0.32951726122658315,
+    "score_components": {
+      "dense_cosine_score": 0.32951726122658315,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 13,
+    "retrieval_score": 0.32951726122658315,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 13,
+        "score": 0.32951726122658315
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "The user purchased Greek yogurt from Costco around April 2023.",
+    "dimension": {
+      "time": "2023-04",
+      "location": "Costco",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Greek yogurt",
+        "Costco",
+        "purchase"
+      ]
+    },
+    "entities": [
+      "Greek yogurt",
+      "Costco",
+      "purchase"
+    ],
+    "embedding_text": "The user purchased Greek yogurt from Costco around April 2023.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0062",
+    "source_time": "2023-05-22 08:28:01",
+    "record_time": "2026-07-07T19:50:55.843895",
+    "score": 0.31999005282781984,
+    "score_components": {
+      "dense_cosine_score": 0.31999005282781984,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.31999005282781984,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 15,
+        "score": 0.31999005282781984
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "episodic",
+    "content": "The user started collecting vinyl records approximately three months before 2023-05-26.",
+    "dimension": {
+      "time": "2023-02-26",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "vinyl records",
+        "collecting",
+        "started"
+      ]
+    },
+    "entities": [
+      "vinyl records",
+      "collecting",
+      "started"
+    ],
+    "embedding_text": "The user started collecting vinyl records approximately three months before 2023-05-26.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0116",
+    "source_time": "2023-05-25 18:26:00.500000",
+    "record_time": "2026-07-07T19:50:55.844206",
+    "score": 0.29577397121351995,
+    "score_components": {
+      "dense_cosine_score": 0.29577397121351995,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.29577397121351995,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 17,
+        "score": 0.29577397121351995
+      }
+    ]
+  },
+  {
+    "user_id": "0018_3fdac837",
+    "memory_type": "profile",
+    "content": "The user values flexibility in travel plans.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "travel flexibility",
+        "preference"
+      ]
+    },
+    "entities": [
+      "travel flexibility",
+      "preference"
+    ],
+    "embedding_text": "The user values flexibility in travel plans.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0041",
+    "source_time": "2023-05-21 03:40:00.500000",
+    "record_time": "2026-07-07T19:50:55.843687",
+    "score": 0.29409511906715996,
+    "score_components": {
+      "dense_cosine_score": 0.29409511906715996,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.29409511906715996,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.29409511906715996
+      }
+    ]
+  }
+]

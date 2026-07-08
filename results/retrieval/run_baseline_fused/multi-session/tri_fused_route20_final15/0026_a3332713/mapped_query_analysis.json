@@ -1,0 +1,63 @@
+{
+  "query_text": "What is the total amount the user spent on gifts for the user's coworker and brother?",
+  "query_anchor": "What is the total amount the user spent on gifts for the user's coworker and brother?",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "gifts",
+      "coworker",
+      "brother"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "What is the total amount the user spent on gifts for the user's coworker and brother?",
+      "keywords": [
+        "gifts",
+        "coworker",
+        "brother"
+      ],
+      "query_terms": [
+        "what",
+        "is",
+        "the",
+        "total",
+        "amount",
+        "user",
+        "spent",
+        "on",
+        "gifts",
+        "for",
+        "s",
+        "coworker",
+        "and",
+        "brother"
+      ]
+    },
+    "structured": {
+      "query_text": "What is the total amount the user spent on gifts for the user's coworker and brother?",
+      "rewrite": "What is the total amount the user spent on gifts for the user's coworker and brother?",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "What is the total amount the user spent on gifts for the user's coworker and brother?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "gifts",
+        "coworker",
+        "brother"
+      ],
+      "canonical_text": "What is the total amount the user spent on gifts for the user's coworker and brother?"
+    },
+    "minilm": {
+      "query_text": "What is the total amount the user spent on gifts for the user's coworker and brother?"
+    }
+  }
+}

@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-26T11:41:00, Fri] 1.User: I'm looking for some advice on fantasy baseball. I've also been trying to get back into playing fantasy sports, specifically fantasy baseball, but my team has been struggling lately.
+[2023-05-26T11:41:00.500000, Fri] 2.User: I think my main issue is that I've made a few bad trades and my pitching staff is really struggling. I've been watching a lot of fantasy baseball YouTube videos to get some advice and tips, but I'm still not sure how to turn things around.
+[2023-05-26T11:41:01, Fri] 3.User: My league is a standard 10-team roto league, and I'm currently in 7th place. My pitching staff is a mess, with guys like Chris Sale and Jose Berrios struggling to get outs. I made a trade a few weeks ago, sending away a top prospect for a struggling closer, and it's been a disaster.
+[2023-05-26T11:41:01.500000, Fri] 4.User: I'm also considering making some changes to my lineup, maybe trying to get more consistent production from my hitters. I've been watching a lot of sports lately, and it's got me thinking about how important consistency is in any sport. Do you have any advice on how to identify consistent hitters and get the most out of my lineup?
+[2023-05-26T11:41:02, Fri] 5.User: I think I need to re-evaluate my entire lineup and focus on finding more consistent hitters. I've been relying too much on power hitters, but I need to focus on guys who can get on base consistently.
+[2023-05-26T11:41:02.500000, Fri] 6.User: I think I've got a good idea of what I need to do to turn my team around. I'll start by re-evaluating my lineup and focusing on acquiring more consistent hitters. I'll also make sure to prioritize on-base percentage and plate discipline when making trades or picking up players off the waiver wire. Additionally, I'll try to balance my lineup with a mix of power, speed, and on-base ability to create a well-rounded offense. Thanks for the advice!
+[2023-05-26T06:23:00, Fri] 7.User: I'm looking for some photography tips. I recently took a one-day workshop about a month ago and learned a lot about manual settings and lighting, but I'm still trying to get the hang of it. Can you give me some advice on how to improve my skills?
+[2023-05-26T06:23:00.500000, Fri] 8.User: I'm still trying to sort through the 50 photos I took during the practical session at the workshop. Do you have any tips on how to organize and edit them efficiently?
+[2023-05-26T06:23:01, Fri] 9.User: I'm still trying to review my notes from the workshop, especially the parts about manual settings and lighting techniques. Do you have any tips on how to retain the information better and apply it to my photography practice?
+[2023-05-26T06:23:01.500000, Fri] 10.User: I'm still trying to connect with the other participants from the workshop. We were all hobbyists, and I think it would be great to learn from each other and get feedback on our work. Do you have any tips on how to keep in touch with them and maybe even plan a photo walk or meetup?
+[2023-05-26T06:23:02, Fri] 11.User: I think it would be great to plan a photo walk soon. I'll propose a date and location and create a shared document to discuss the details. Do you have any suggestions for a theme or challenge for the photo walk?
+[2023-05-26T06:23:02.500000, Fri] 12.User: I think the Prime Lens Challenge would be a great idea! It'll force us to think creatively and work within limitations. Let's propose that as the theme for our photo walk. I'll create a shared document to discuss the details and invite everyone to join.
+[2023-05-26T19:20:00, Fri] 13.User: I'm feeling a bit lonely and isolated lately, and I was thinking of finding ways to meet new people or reconnect with old friends. Do you have any suggestions on how to do that? By the way, I remember the last time I saw my friends was three weeks ago, when we went out for brunch on a Sunday.
+[2023-05-26T19:20:00.500000, Fri] 14.User: I like the suggestions, especially the idea of scheduling a follow-up hangout with my friends. Do you think it's better to plan a casual meetup or something more organized like a group activity?
+[2023-05-26T19:20:01, Fri] 15.User: I think a casual meetup sounds like a good idea. Since we had brunch last time, maybe we could plan a dinner or coffee meetup instead? Something low-key and relaxed, so we can just catch up and chat. What do you think?

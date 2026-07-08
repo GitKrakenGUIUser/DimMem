@@ -1,0 +1,32 @@
+{
+  "id": "ff42590b-1f5f-477f-bcea-da2f588fd68c",
+  "object": "chat.completion",
+  "created": 1783356301,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"What time did the user reach the clinic on Monday, 2023/05/29?\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"clinic\"],\n    \"time\": \"on 2023/05/29\",\n    \"location\": \"clinic\"\n  },\n  \"answer_dim\": \"time\"\n}",
+        "reasoning_content": "We need to parse the question: \"What time did I reach the clinic on Monday?\" Given question date is 2023/05/30 (Tue) 22:10. Monday would be the previous day (2023/05/29). The question asks for a time of an event. So answer_dim should be \"time\". The query_anchor should rewrite with \"the user\" and preserve the intent: \"What time did the user reach the clinic on Monday?\" Since Monday is relative, we can specify the date as 2023/05/29. The time constraint is explicit: \"on Monday\" so we can fill time as \"on 2023/05/29\". Location: clinic. Memory type: episodic (event). Keywords: clinic. need_assistant_context false. So output JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 685,
+    "completion_tokens": 264,
+    "total_tokens": 949,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 167
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 45
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

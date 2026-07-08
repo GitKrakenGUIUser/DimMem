@@ -1,0 +1,89 @@
+{
+  "model_name": "deepseek-v4-flash",
+  "query": "What time did I reach the clinic on Monday?",
+  "gold_answer": "9:00 AM",
+  "question_date": "2023/05/30 (Tue) 22:10",
+  "retrieved_records": [
+    {
+      "source_time": "2023-05-29 11:41:01",
+      "content": "On 2023-05-29, the user asked the assistant to identify the specific Buddhist sutta that prohibits monks from giving food to naked ascetics."
+    },
+    {
+      "source_time": "2023-05-20 14:18:02",
+      "content": "The user wore their favourite yoga pants to the gym on 2023-05-18."
+    },
+    {
+      "source_time": "2023-05-20 15:48:02",
+      "content": "The user started participating in the choir at St. Mary's Church, with their first time on October 15th."
+    },
+    {
+      "source_time": "2023-05-21 10:01:01",
+      "content": "The user plans to play Apex Legends on 2023-05-21 with friends and asked for tips on playing Wraith and Octane."
+    },
+    {
+      "source_time": "2023-05-30 00:00:00.500000",
+      "content": "User wants a clinic within one hour drive from home.",
+      "dimension": {
+        "reason": "previous clinic took two hours"
+      }
+    },
+    {
+      "source_time": "2023-05-27 09:38:02",
+      "content": "On 2023-05-27, the user sought inspiring quotes about forgiveness after recently hearing a sermon on the topic.",
+      "dimension": {
+        "reason": "heard a sermon about forgiveness",
+        "purpose": "find inspiring quotes"
+      }
+    },
+    {
+      "source_time": "2023-05-30 00:00:00",
+      "content": "User needs to reschedule a follow-up doctor appointment and wants to find a nearby clinic.",
+      "dimension": {
+        "reason": "previous clinic was two hours away",
+        "purpose": "find a closer clinic"
+      }
+    },
+    {
+      "source_time": "2023-05-27 09:38:01.500000",
+      "content": "On 2023-05-27, the user engaged in a discussion about women's empowerment in Islamic societies, focusing on entrepreneurship and economic empowerment."
+    },
+    {
+      "source_time": "2023-05-27 14:30:00",
+      "content": "On 2023-05-27, the user expressed being moved by the passage in Romans 8 about not being separated from God's love."
+    },
+    {
+      "source_time": "2023-05-27 09:38:00.500000",
+      "content": "On 2023-05-27, the user asked for details to make Herby Parmesan Popcorn, including the amount of popcorn kernels and the process of combining ingredients."
+    },
+    {
+      "source_time": "2023-05-27 09:38:01",
+      "content": "On 2023-05-27, the user asked about adding garlic powder to the herb mixture of Herby Parmesan Popcorn for extra flavor.",
+      "dimension": {
+        "purpose": "add extra flavor"
+      }
+    },
+    {
+      "source_time": "2023-05-22 13:12:00.500000",
+      "content": "User struggles to resist checking their phone in the evenings while trying to limit screen time."
+    },
+    {
+      "source_time": "2023-05-26 12:14:00",
+      "content": "User moved into a new apartment approximately three months before 2023-05-26, i.e., around February 2023."
+    },
+    {
+      "source_time": "2023-05-27 09:38:02.500000",
+      "content": "On 2023-05-27, the user recalled attending a Bible study group at their friend Emily's house where they discussed forgiveness and brought homemade cookies.",
+      "dimension": {
+        "purpose": "discuss forgiveness"
+      }
+    },
+    {
+      "source_time": "2023-05-20 23:43:00.500000",
+      "content": "User had a doctor's appointment on 2023-05-15; left home at 7 AM, took a half-day off work, and returned to the office around 1:00 PM.",
+      "dimension": {
+        "reason": "doctor's appointment"
+      }
+    }
+  ],
+  "retrieval_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/multi-session/tri_fused_route20_final15/0003_73d42213"
+}

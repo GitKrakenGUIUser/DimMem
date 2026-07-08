@@ -1,0 +1,32 @@
+{
+  "id": "73990b45-40b0-439a-b624-b847fa25cc08",
+  "object": "chat.completion",
+  "created": 1783427802,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: The question asks for the total weight of new feed purchased in the past two months (relative to 2023-05-30). Two retrieved memories mention feed purchases with weights: memory [2] (source_time 2023-05-22) reports a 50-pound batch of layer feed, and memory [14] (source_time 2023-05-22) reports 20 pounds of organic scratch grains. Both purchases occurred within the past two months. No other feed purchases with weights are recorded. Adding them gives 50 + 20 = 70 pounds.\n\nAnswer: 70 pounds",
+        "reasoning_content": "We need to find total weight of new feed purchased in the past two months from question date 2023-05-30. Past two months means from around 2023-03-30 to 2023-05-30. Retrieved memories mention feed purchases: [2] 50-pound batch of layer feed, [14] 20 pounds of organic scratch grains. Both have source_times around 2023-05-22 and 2023-05-22 respectively, which are within past two months. Also [10] mentions new hens but not feed weight. [1] mentions improvement but no purchase weight. So total weight is 50 + 20 = 70 pounds. No other feed purchases mentioned. Answer clearly."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1134,
+    "completion_tokens": 277,
+    "total_tokens": 1411,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 151
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 878
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "bc43f6b9-aba1-43ad-884b-cbcf5f640a03",
+  "object": "chat.completion",
+  "created": 1783428057,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\": \"CORRECT\"}",
+        "reasoning_content": "We need to judge if the generated answer matches the gold answer. Gold says \"Michael's engagement party\". Generated says \"Michael's engagement party happened first.\" It's essentially the same, just a full sentence. So it's CORRECT.\n\nExplanation: The generated answer correctly identifies that Michael's engagement party happened first, which matches the gold answer.\n\nThus output: {\"label\": \"CORRECT\"}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 410,
+    "completion_tokens": 87,
+    "total_tokens": 497,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 154
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

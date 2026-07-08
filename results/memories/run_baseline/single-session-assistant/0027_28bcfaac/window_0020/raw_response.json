@@ -1,0 +1,32 @@
+{
+  "id": "2f8c7b11-66b6-4c3f-9320-8383b82c7212",
+  "object": "chat.completion",
+  "created": 1783351849,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"memories\": []}",
+        "reasoning_content": "We need to extract memories from messages 4-8 only. Messages 1-3 are overlapping context and not to be used.\n\nMessage 4: \"ok fine. he's not drunk. just very pirate'y\" - This is a confirmation that someone (likely a person previously discussed) is not drunk but acts pirate-like. This could be a factual observation about a person's behavior. But we need to see if it has long-term value. It might be a specific event or status. However, it's vague. Could be episodic: a statement about someone's state at that time. But without context, \"he\" is ambiguous. However, we can extract as fact: The user stated that a certain person is not drunk but behaves in a pirate-like manner. But we don't know who \"he\" is. Possibly from previous conversation? Since we only have messages 1-3 about Maori culture, \"he\" might be someone else? Actually message 1-3 are about Maori culture, then message 4 starts abruptly \"ok fine. he's not drunk. just very pirate'y\" - seems like continuation of a different topic? Possibly the user is referring to someone from earlier conversation not shown? But we only have this segment. We should extract only if there is a clear fact. Since \"he\" is ambiguous, we cannot create a self-contained memory. Possibly skip.\n\nMessage 5: \"ok thanks. can you write my cover letter in haiku\" - This is a user request. It shows user wants a cover letter written in haiku form. This is a specific action/request. Could be episodic: user asks assistant to write a cover letter in haiku. But it's a one-time instruction. However, it reveals user's interest in creative format? Possibly profile: user likes poetry/creative writing? But careful not to overgeneralize. It might be a temporary task. The instruction says do not extract temporary formatting requirements or one-off operation instructions. So probably skip.\n\nMessage 6: \"great thanks. can you use a different word than \"own\"\" - This is a follow-up request to modify the previously written cover letter. Also one-off.\n\nMessage 7: \"great. can you write another one, stressing how this job was meant to be\" - Another one-off request.\n\nMessage 8: \"thank you for being a good sport\" - simple thanks, no long-term value.\n\nThus, none of these messages contain substantial factual, episodic, or profile information with long-term value. They are all transient task requests and confirmations. So output should have empty memories array? But the instruction says to strictly output valid JSON. If no memories, output {\"memories\": []}. However, check if anything can be extracted. Message 4 might be a fact about a person's behavior, but too vague. I think it's safe to output empty.\n\nBut let's see: \"he's not drunk. just very pirate'y\" - could be a description of someone's demeanor. Possibly a fact about a person known to the user? Without identity, not useful. So skip.\n\nThus final output: {\"memories\": []}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1582,
+    "completion_tokens": 651,
+    "total_tokens": 2233,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 644
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 430
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

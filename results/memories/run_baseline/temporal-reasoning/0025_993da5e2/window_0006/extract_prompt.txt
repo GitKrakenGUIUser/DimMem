@@ -1,0 +1,140 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-26T19:59:01, Fri] 1.User: I don't know if I have the natural talent for singing. Does that mean I'll never be good at it?
+[2023-05-26T19:59:01.500000, Fri] 2.User: I just sometimes feel discouraged when I compare myself to other singers who seem to have a natural talent. But I'll keep practicing and focus on improving my technique. Do you have any resources or exercises you can suggest that can help me with that?
+[2023-05-26T19:59:02, Fri] 3.User: Can you recommend some online resources where I can find exercises and tips to improve my singing technique? I'd like to practice at home as well.
+[2023-05-26T19:59:02.500000, Fri] 4.User: Wow, these resources are really helpful! I can't wait to start practicing and improving my singing skills. But do you think I can make it as a professional singer one day?
+[2023-05-26T18:10:00, Fri] 5.User: the moon has no inclination or axial tilt, and its days and twilight long and nights short due to the reflected light, with irregular light dark cycles due to the complexity of the sun-gas giant-moon relationship. subsurface water becomes geothermal hot springs and freshwater springs, that meet to form brackish rivers, that pool into salt lakes in the low lying areas. as there are no true oceans, the lake effect from the brackish rivers and salt lakes takes its place
+[2023-05-26T18:10:00.500000, Fri] 6.User: the terrain is very rugged, owing to high tectonic activity from tidal heating, with the abundant springs and rivers etching deep, narrow ravines between the volcanic hills
+[2023-05-26T18:10:01, Fri] 7.User: Despite the fact that Kodia II, an inner terrestrial planet with an earth like size and atmosphere, is much more similar to Earth at first glance, the life on it is strange and alien, while the life on Kodia III's forested major moon is very earthlike
+[2023-05-26T18:10:01.500000, Fri] 8.User: Except at the highest altitudes of the volcanic mountains, it generally never is colder than 13°C or hotter than 25°C anywhere on the moon
+[2023-05-26T18:10:02, Fri] 9.User: Kodia I is too small and close to the star
+[2023-05-26T03:04:00, Fri] 10.User: Are there any exemptions or loopholes in campaign finance laws that allow for unlimited donations, and how are they being addressed by lawmakers and advocacy groups?
+[2023-05-26T03:04:00.500000, Fri] 11.User: It seems like no matter what laws are put in place, there will always be ways for wealthy individuals and corporations to influence politics. What can be done to truly level the playing field?
+[2023-05-26T03:04:01, Fri] 12.User: It's frustrating to see how much money can sway politics. It feels like my vote doesn't really matter when wealthy individuals and corporations can essentially buy influence. What's the point of having a democracy if only the rich and powerful can truly have a say?
+[2023-05-26T03:04:01.500000, Fri] 13.User: It's frustrating to see that even with all the proposed solutions, the influence of big money in politics seems to only be getting worse. Do you think there's any hope for a truly equitable democracy in the near future?
+[2023-05-26T03:04:02, Fri] 14.User: It's frustrating to see how politicians seem more interested in pleasing their donors than representing the people they were elected to serve. How can we make sure that our elected officials are truly accountable to their constituents rather than just to their big donors?
+[2023-05-26T00:23:00, Fri] 15.User: What follows is the last part. thank you for helping me to make it more readable. 
+
+2.3.3 Previous Studies on the Relationship between L2 Motivational Self-System, Self-Efficacy and English Achievements
+In previous studies, there are abundant studies on the correlation between L2MSS and English achievement or self-efficacy and English achievement, but studies that simultaneously explore the relationship between these three variables of L2MSS, self-efficacy and English learning achievement have not yet been found in studies abroad, and only a few have been found in domestic studies, with almost all of them being master's theses (Zhao Wei, 2021; Zhou Huijuan, 2021; Chen Weilin, 2022).
+Huo and Rui (2020) investigated the interactions between self-efficacy, L2MSS and English academic proficiency through a questionnaire survey of 239 junior and senior non-English majors in a university in North China. It was found that ideal L2 self and L2 learning experience had a mediating effect between self-efficacy and English proficiency, but self-efficacy could not have a significant effect on English proficiency through ought-to L2 self. The research participants of this study have a wide distribution of majors, involving science, engineering, and liberal arts, and thus are representative. In addition, in a small number of master's theses, all of which were conducted with high school students in urban areas, and questionnaires were used to explore learners' levels of L2MSS and self-efficacy, and some of the studies explored the pathways of influence among the three variables.
+It is worth mentioning that the findings of these studies are not all the same. In terms of the levels of the L2MSS, Zhao (2021) and Chen (2022) agreed that the learners have a high level of the L2MSS, with the three dimensions in the order of ideal L2 self > L2 learning experience > ought-to L2 self. But Zhou (2021) found that the levels of the L2MSS are at an average level, and the L2 learning experience is the highest. The findings are not entirely consistent in terms of the correlation between the dimensions of L2MSS and English achievement. Besides, the dimensions of self-efficacy examined differed from studies.
+In summary, the previous studies had the following shortcomings. Firstly, research variables are single. There are more studies on the relationship between L2MSS and English achievement or self-efficacy and English achievement, but there are very few studies on the relationship and impacts among L2MSS, self-efficacy and English achievement at the same time. Secondly, in the studies on the relationship between L2MSS, self-efficacy and English learning achievement, the research methods used are almost all quantitative analysis using questionnaires as instrument, which is unitary. Lastly, the research participants of previous studies are unitary, mainly focusing on non-English major college students and high school students in urban areas, with no attention paid to students in rural areas, thus their generalizability needs to be improved. This study selects students from rural areas as the research participants, which can increase the diversity of the sample and make this type of research more comprehensive.
+Therefore, based on previous studies, this study selects high school students in a rural school in Yibin, Sichuan Province as the research participants and combines questionnaires and interview as the research instruments to investigate the correlation between self-efficacy, L2MSS and English academic achievement and their influence on learners' English academic achievement.

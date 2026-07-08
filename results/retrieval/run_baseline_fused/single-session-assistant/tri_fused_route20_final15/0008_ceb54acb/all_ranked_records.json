@@ -1,0 +1,3380 @@
+[
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User asked for examples of other movies that use symbolism in similar ways to The Godfather.",
+    "dimension": {
+      "time": "2023-05-23T02:33:01.500000",
+      "location": "",
+      "reason": "",
+      "purpose": "to discover other films with similar symbolism",
+      "keywords": [
+        "movies",
+        "symbolism",
+        "The Godfather",
+        "examples"
+      ]
+    },
+    "entities": [
+      "movies",
+      "symbolism",
+      "The Godfather",
+      "examples"
+    ],
+    "embedding_text": "User asked for examples of other movies that use symbolism in similar ways to The Godfather.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0018",
+    "source_time": "2023-05-23 02:33:01.500000",
+    "record_time": "2026-07-07T19:50:56.728339",
+    "score": 12.872477690185995,
+    "score_components": {
+      "bm25_score": 12.872477690185995,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 12.872477690185995,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 12.872477690185995
+      },
+      {
+        "method": "structured",
+        "rank": 8,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User plans to sign up for a sprint triathlon soon to improve their previous time.",
+    "dimension": {
+      "time": "future",
+      "location": "",
+      "reason": "",
+      "purpose": "to improve previous triathlon time",
+      "keywords": [
+        "sprint triathlon",
+        "future plan",
+        "improve time"
+      ]
+    },
+    "entities": [
+      "sprint triathlon",
+      "future plan",
+      "improve time"
+    ],
+    "embedding_text": "User plans to sign up for a sprint triathlon soon to improve their previous time.",
+    "source_message_ids": [
+      "19"
+    ],
+    "source_boundary_id": "19_0182",
+    "source_time": "2023-05-30 20:11:01",
+    "record_time": "2026-07-07T19:50:56.729384",
+    "score": 8.386340253313035,
+    "score_components": {
+      "bm25_score": 8.386340253313035,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 8.386340253313035,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 8.386340253313035
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "fact",
+    "content": "User is considering retirement account options and wants to understand the differences between Roth IRA and traditional IRA to determine suitability.",
+    "dimension": {
+      "time": "2023-05-24",
+      "location": "",
+      "reason": "",
+      "purpose": "to determine which IRA is more suitable",
+      "keywords": [
+        "Roth IRA",
+        "traditional IRA",
+        "retirement planning",
+        "account differences"
+      ]
+    },
+    "entities": [
+      "Roth IRA",
+      "traditional IRA",
+      "retirement planning",
+      "account differences"
+    ],
+    "embedding_text": "User is considering retirement account options and wants to understand the differences between Roth IRA and traditional IRA to determine suitability.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0049",
+    "source_time": "2023-05-24 13:51:00",
+    "record_time": "2026-07-07T19:50:56.728525",
+    "score": 8.029881773306997,
+    "score_components": {
+      "bm25_score": 8.029881773306997,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 8.029881773306997,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 8.029881773306997
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "fact",
+    "content": "User has used TensorFlow and Keras in previous NLP projects.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "TensorFlow",
+        "Keras",
+        "NLP projects"
+      ]
+    },
+    "entities": [
+      "TensorFlow",
+      "Keras",
+      "NLP projects"
+    ],
+    "embedding_text": "User has used TensorFlow and Keras in previous NLP projects.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0104",
+    "source_time": "2023-05-27 20:16:01.500000",
+    "record_time": "2026-07-07T19:50:56.728923",
+    "score": 6.403898136002121,
+    "score_components": {
+      "bm25_score": 6.403898136002121,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 6.403898136002121,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 6.403898136002121
+      },
+      {
+        "method": "minilm",
+        "rank": 20,
+        "score": 0.21508411989263015
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "The user plans to host a dinner party soon and wants to create a unique cocktail using fresh herbs.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "create a unique cocktail for the dinner party",
+      "keywords": [
+        "dinner party",
+        "cocktail",
+        "fresh herbs"
+      ]
+    },
+    "entities": [
+      "dinner party",
+      "cocktail",
+      "fresh herbs"
+    ],
+    "embedding_text": "The user plans to host a dinner party soon and wants to create a unique cocktail using fresh herbs.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0125",
+    "source_time": "2023-05-29 07:58:01.500000",
+    "record_time": "2026-07-07T19:50:56.729043",
+    "score": 6.244108567185847,
+    "score_components": {
+      "bm25_score": 6.244108567185847,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 6.244108567185847,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 6.244108567185847
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "The user is planning a trip to Fuji-Q Highland and wants recommendations for must-try food and drinks.",
+    "dimension": {
+      "time": "",
+      "location": "Fuji-Q Highland",
+      "reason": "planning a trip",
+      "purpose": "enjoy food and drinks",
+      "keywords": [
+        "trip",
+        "Fuji-Q Highland",
+        "food",
+        "drinks",
+        "recommendations"
+      ]
+    },
+    "entities": [
+      "trip",
+      "Fuji-Q Highland",
+      "food",
+      "drinks",
+      "recommendations"
+    ],
+    "embedding_text": "The user is planning a trip to Fuji-Q Highland and wants recommendations for must-try food and drinks.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0174",
+    "source_time": "2023-05-30 17:39:00",
+    "record_time": "2026-07-07T19:50:56.729339",
+    "score": 5.681689379159055,
+    "score_components": {
+      "bm25_score": 5.681689379159055,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 5.681689379159055,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 5.681689379159055
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User discussed that symbolism can be overused or become distracting in films.",
+    "dimension": {
+      "time": "2023-05-23T02:33:02.500000",
+      "location": "",
+      "reason": "user felt that filmmakers sometimes try too hard to be symbolic",
+      "purpose": "",
+      "keywords": [
+        "symbolism",
+        "overuse",
+        "distraction",
+        "film"
+      ]
+    },
+    "entities": [
+      "symbolism",
+      "overuse",
+      "distraction",
+      "film"
+    ],
+    "embedding_text": "User discussed that symbolism can be overused or become distracting in films.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0020",
+    "source_time": "2023-05-23 02:33:02.500000",
+    "record_time": "2026-07-07T19:50:56.728351",
+    "score": 5.523349496414053,
+    "score_components": {
+      "bm25_score": 5.523349496414053,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 5.523349496414053,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 5.523349496414053
+      },
+      {
+        "method": "structured",
+        "rank": 10,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "fact",
+    "content": "The user uses Goodreads to track books and is exploring The Story Graph and Leafmarks as alternative tracking tools as of 2023-05-25.",
+    "dimension": {
+      "time": "2023-05-25",
+      "location": "",
+      "reason": "",
+      "purpose": "track reading",
+      "keywords": [
+        "Goodreads",
+        "The Story Graph",
+        "Leafmarks",
+        "book tracking"
+      ]
+    },
+    "entities": [
+      "Goodreads",
+      "The Story Graph",
+      "Leafmarks",
+      "book tracking"
+    ],
+    "embedding_text": "The user uses Goodreads to track books and is exploring The Story Graph and Leafmarks as alternative tracking tools as of 2023-05-25.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0057",
+    "source_time": "2023-05-25 02:46:01",
+    "record_time": "2026-07-07T19:50:56.728650",
+    "score": 5.50149552333747,
+    "score_components": {
+      "bm25_score": 5.50149552333747,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 5.50149552333747,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 5.50149552333747
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "fact",
+    "content": "User owns coastal-themed decorative items including seashells and a starfish acquired from a previous beach trip.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "seashells",
+        "starfish",
+        "coastal decor",
+        "beach trip"
+      ]
+    },
+    "entities": [
+      "seashells",
+      "starfish",
+      "coastal decor",
+      "beach trip"
+    ],
+    "embedding_text": "User owns coastal-themed decorative items including seashells and a starfish acquired from a previous beach trip.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0073",
+    "source_time": "2023-05-26 20:54:00",
+    "record_time": "2026-07-07T19:50:56.728745",
+    "score": 5.4041414986110965,
+    "score_components": {
+      "bm25_score": 5.4041414986110965,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 5.4041414986110965,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 5.4041414986110965
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "fact",
+    "content": "User is a beginner in strength training, prefers home exercises due to nervousness about the gym, and wants time-efficient routines because of a busy schedule.",
+    "dimension": {
+      "time": "2023-05-24",
+      "location": "home",
+      "reason": "nervous about going to the gym",
+      "purpose": "to start strength training",
+      "keywords": [
+        "strength training",
+        "beginner",
+        "home exercises",
+        "gym nervousness",
+        "busy schedule"
+      ]
+    },
+    "entities": [
+      "strength training",
+      "beginner",
+      "home exercises",
+      "gym nervousness",
+      "busy schedule"
+    ],
+    "embedding_text": "User is a beginner in strength training, prefers home exercises due to nervousness about the gym, and wants time-efficient routines because of a busy schedule.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0047",
+    "source_time": "2023-05-24 08:17:00",
+    "record_time": "2026-07-07T19:50:56.728513",
+    "score": 5.313515919543014,
+    "score_components": {
+      "bm25_score": 5.313515919543014,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 5.313515919543014,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 5.313515919543014
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "fact",
+    "content": "User is a senior in college working on a final project for a client company that provides exclusive technical and managerial training; the project involves analyzing training sections and creating an Excel model to distribute instructors based on variables.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "client faces budget constraints and employee attrition",
+      "purpose": "to analyze variables and create a model for instructor distribution",
+      "keywords": [
+        "senior college project",
+        "technical training company",
+        "Excel model",
+        "instructor distribution",
+        "budget constraints",
+        "stakeholder communication"
+      ]
+    },
+    "entities": [
+      "senior college project",
+      "technical training company",
+      "Excel model",
+      "instructor distribution",
+      "budget constraints",
+      "stakeholder communication"
+    ],
+    "embedding_text": "User is a senior in college working on a final project for a client company that provides exclusive technical and managerial training; the project involves analyzing training sections and creating an Excel model to distribute instructors based on variables.",
+    "source_message_ids": [
+      "19"
+    ],
+    "source_boundary_id": "19_0178",
+    "source_time": "2023-05-30 18:58:00",
+    "record_time": "2026-07-07T19:50:56.729362",
+    "score": 5.2943271657296735,
+    "score_components": {
+      "bm25_score": 5.2943271657296735,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 5.2943271657296735,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 5.2943271657296735
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User plans to set phone reminders to use loyalty apps or cards when near a specific store or at a certain time of day, and to incorporate it into daily routine.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "to avoid missing opportunities to earn points and stamps",
+      "purpose": "to ensure consistent use of loyalty programs",
+      "keywords": [
+        "phone reminders",
+        "loyalty apps",
+        "habit",
+        "routine"
+      ]
+    },
+    "entities": [
+      "phone reminders",
+      "loyalty apps",
+      "habit",
+      "routine"
+    ],
+    "embedding_text": "User plans to set phone reminders to use loyalty apps or cards when near a specific store or at a certain time of day, and to incorporate it into daily routine.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0002",
+    "source_time": "2023-05-20 06:17:02",
+    "record_time": "2026-07-07T19:50:56.728235",
+    "score": 5.208523048510676,
+    "score_components": {
+      "bm25_score": 5.208523048510676,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 5.208523048510676,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 5.208523048510676
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "On 2023-05-25, the user attended a digital marketing conference at the Marriott Hotel and met keynote speaker Rachel Lee. The user had business cards printed with a new title for that conference.",
+    "dimension": {
+      "time": "2023-05-25",
+      "location": "Marriott Hotel",
+      "reason": "to attend conference and network",
+      "purpose": "to make a good impression",
+      "keywords": [
+        "digital marketing conference",
+        "Marriott Hotel",
+        "Rachel Lee",
+        "business cards",
+        "new title"
+      ]
+    },
+    "entities": [
+      "digital marketing conference",
+      "Marriott Hotel",
+      "Rachel Lee",
+      "business cards",
+      "new title"
+    ],
+    "embedding_text": "On 2023-05-25, the user attended a digital marketing conference at the Marriott Hotel and met keynote speaker Rachel Lee. The user had business cards printed with a new title for that conference.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0152",
+    "source_time": "2023-05-30 05:17:00",
+    "record_time": "2026-07-07T19:50:56.729207",
+    "score": 4.861327191967815,
+    "score_components": {
+      "bm25_score": 4.861327191967815,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 4.861327191967815,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 4.861327191967815
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "profile",
+    "content": "User wants to establish a consistent sleep schedule and go to bed around 10:30 pm.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "sleep schedule",
+        "10:30 pm",
+        "consistent"
+      ]
+    },
+    "entities": [
+      "sleep schedule",
+      "10:30 pm",
+      "consistent"
+    ],
+    "embedding_text": "User wants to establish a consistent sleep schedule and go to bed around 10:30 pm.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0164",
+    "source_time": "2023-05-30 09:28:01.500000",
+    "record_time": "2026-07-07T19:50:56.729280",
+    "score": 4.856396404740139,
+    "score_components": {
+      "bm25_score": 4.856396404740139,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 4.856396404740139,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 4.856396404740139
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "The user plans to book tickets for The Ferryman on Broadway and wants to eat at Carmine's restaurant near the Bernard B. Jacobs Theatre.",
+    "dimension": {
+      "time": "",
+      "location": "Bernard B. Jacobs Theatre, Broadway, Carmine's",
+      "reason": "",
+      "purpose": "dining before or after the show",
+      "keywords": [
+        "The Ferryman",
+        "Carmine's",
+        "Bernard B. Jacobs Theatre",
+        "tickets",
+        "Broadway"
+      ]
+    },
+    "entities": [
+      "The Ferryman",
+      "Carmine's",
+      "Bernard B. Jacobs Theatre",
+      "tickets",
+      "Broadway"
+    ],
+    "embedding_text": "The user plans to book tickets for The Ferryman on Broadway and wants to eat at Carmine's restaurant near the Bernard B. Jacobs Theatre.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0068",
+    "source_time": "2023-05-25 22:33:01.500000",
+    "record_time": "2026-07-07T19:50:56.728715",
+    "score": 4.696821331495358,
+    "score_components": {
+      "bm25_score": 4.696821331495358,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 4.696821331495358,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 4.696821331495358
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "fact",
+    "content": "User owns a white linen shirt from Zara that they considered donating.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "white linen shirt",
+        "Zara"
+      ]
+    },
+    "entities": [
+      "white linen shirt",
+      "Zara"
+    ],
+    "embedding_text": "User owns a white linen shirt from Zara that they considered donating.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0083",
+    "source_time": "2023-05-27 03:53:02",
+    "record_time": "2026-07-07T19:50:56.728804",
+    "score": 4.319432642122266,
+    "score_components": {
+      "bm25_score": 4.319432642122266,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 16,
+    "retrieval_score": 4.319432642122266,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 16,
+        "score": 4.319432642122266
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "profile",
+    "content": "The user is drawn to Minimalist Chic and Coastal Cool interior design styles and wants to incorporate them into a small living room with natural light.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Minimalist Chic",
+        "Coastal Cool",
+        "interior design",
+        "living room",
+        "natural light",
+        "small space"
+      ]
+    },
+    "entities": [
+      "Minimalist Chic",
+      "Coastal Cool",
+      "interior design",
+      "living room",
+      "natural light",
+      "small space"
+    ],
+    "embedding_text": "The user is drawn to Minimalist Chic and Coastal Cool interior design styles and wants to incorporate them into a small living room with natural light.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0071",
+    "source_time": "2023-05-26 20:54:00.500000",
+    "record_time": "2026-07-07T19:50:56.728733",
+    "score": 4.21723489815502,
+    "score_components": {
+      "bm25_score": 4.21723489815502,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 17,
+    "retrieval_score": 4.21723489815502,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 17,
+        "score": 4.21723489815502
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User asked whether the use of symbolism is necessary for a film to be considered great.",
+    "dimension": {
+      "time": "2023-05-23T02:33:02",
+      "location": "",
+      "reason": "",
+      "purpose": "to understand the role of symbolism in film greatness",
+      "keywords": [
+        "symbolism",
+        "film",
+        "greatness",
+        "necessity"
+      ]
+    },
+    "entities": [
+      "symbolism",
+      "film",
+      "greatness",
+      "necessity"
+    ],
+    "embedding_text": "User asked whether the use of symbolism is necessary for a film to be considered great.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0019",
+    "source_time": "2023-05-23 02:33:02",
+    "record_time": "2026-07-07T19:50:56.728345",
+    "score": 4.2137291602597635,
+    "score_components": {
+      "bm25_score": 4.2137291602597635,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 18,
+    "retrieval_score": 4.2137291602597635,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 18,
+        "score": 4.2137291602597635
+      },
+      {
+        "method": "structured",
+        "rank": 9,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "On 2023-05-29, the user requested a diet plan for a North Indian vegetarian that mimics the Mediterranean diet using Indian foods, spices, and recipes, and requested modifications to include South Indian foods (sambar, dosa, uthappam) and paneer, exclude meat and fish but include dairy, and be suitable for people aged 60+ to lower cholesterol.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "",
+      "reason": "user wanted a tailored diet plan",
+      "purpose": "to have a diet plan meeting specified dietary and health criteria",
+      "keywords": [
+        "diet plan",
+        "North Indian vegetarian",
+        "Mediterranean diet",
+        "Indian foods",
+        "South Indian foods",
+        "sambar",
+        "dosa",
+        "uthappam",
+        "paneer",
+        "dairy",
+        "cholesterol",
+        "60+"
+      ]
+    },
+    "entities": [
+      "diet plan",
+      "North Indian vegetarian",
+      "Mediterranean diet",
+      "Indian foods",
+      "South Indian foods",
+      "sambar",
+      "dosa",
+      "uthappam",
+      "paneer",
+      "dairy",
+      "cholesterol",
+      "60+"
+    ],
+    "embedding_text": "On 2023-05-29, the user requested a diet plan for a North Indian vegetarian that mimics the Mediterranean diet using Indian foods, spices, and recipes, and requested modifications to include South Indian foods (sambar, dosa, uthappam) and paneer, exclude meat and fish but include dairy, and be suitable for people aged 60+ to lower cholesterol.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0145",
+    "source_time": "2023-05-29 19:31:00",
+    "record_time": "2026-07-07T19:50:56.729164",
+    "score": 4.189524102239443,
+    "score_components": {
+      "bm25_score": 4.189524102239443,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 19,
+    "retrieval_score": 4.189524102239443,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 19,
+        "score": 4.189524102239443
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User asked for recommendations on where to find the best BBQ brisket in Fort Worth.",
+    "dimension": {
+      "time": "2023-05-27",
+      "location": "Fort Worth",
+      "reason": "",
+      "purpose": "find a BBQ brisket restaurant",
+      "keywords": [
+        "BBQ brisket",
+        "Fort Worth"
+      ]
+    },
+    "entities": [
+      "BBQ brisket",
+      "Fort Worth"
+    ],
+    "embedding_text": "User asked for recommendations on where to find the best BBQ brisket in Fort Worth.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0095",
+    "source_time": "2023-05-27 15:45:00",
+    "record_time": "2026-07-07T19:50:56.728872",
+    "score": 4.188918870738677,
+    "score_components": {
+      "bm25_score": 4.188918870738677,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 20,
+    "retrieval_score": 4.188918870738677,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 20,
+        "score": 4.188918870738677
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User plans to set a reminder to grab coffee at The Daily Grind soon to earn the last two stamps needed for a free drink.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "The Daily Grind",
+      "reason": "user needs two more stamps to get a free drink",
+      "purpose": "to get a free drink",
+      "keywords": [
+        "The Daily Grind",
+        "stamps",
+        "reminder",
+        "coffee",
+        "free drink"
+      ]
+    },
+    "entities": [
+      "The Daily Grind",
+      "stamps",
+      "reminder",
+      "coffee",
+      "free drink"
+    ],
+    "embedding_text": "User plans to set a reminder to grab coffee at The Daily Grind soon to earn the last two stamps needed for a free drink.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0003",
+    "source_time": "2023-05-20 06:17:02",
+    "record_time": "2026-07-07T19:50:56.728243",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User plans to set a reminder to grab coffee at The Daily Grind soon to earn the last two stamps needed for a free drink. | The Daily Grind | stamps | reminder | coffee | free drink | 2023-05-20 | The Daily Grind | user needs two more stamps to get a free drink | to get a free drink | The Daily Grind | stamps | reminder | coffee | free drink"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 2,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User plans to listen to 'The 7 Habits of Highly Effective People' audiobook.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to start exploring non-fiction",
+      "keywords": [
+        "The 7 Habits of Highly Effective People",
+        "audiobook",
+        "plan to listen"
+      ]
+    },
+    "entities": [
+      "The 7 Habits of Highly Effective People",
+      "audiobook",
+      "plan to listen"
+    ],
+    "embedding_text": "User plans to listen to 'The 7 Habits of Highly Effective People' audiobook.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0008",
+    "source_time": "2023-05-22 11:05:02.500000",
+    "record_time": "2026-07-07T19:50:56.728277",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User plans to listen to 'The 7 Habits of Highly Effective People' audiobook. | The 7 Habits of Highly Effective People | audiobook | plan to listen | to start exploring non-fiction | The 7 Habits of Highly Effective People | audiobook | plan to listen"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 3,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User asked for advice on how to stay informed about changes in interest rates and their impact on personal finances.",
+    "dimension": {
+      "time": "2023-05-23T00:51:02.500000",
+      "location": "",
+      "reason": "",
+      "purpose": "to stay informed about interest rate changes and their impact on personal finances",
+      "keywords": [
+        "interest rates",
+        "personal finance",
+        "advice"
+      ]
+    },
+    "entities": [
+      "interest rates",
+      "personal finance",
+      "advice"
+    ],
+    "embedding_text": "User asked for advice on how to stay informed about changes in interest rates and their impact on personal finances.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0014",
+    "source_time": "2023-05-23 00:51:02.500000",
+    "record_time": "2026-07-07T19:50:56.728315",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User asked for advice on how to stay informed about changes in interest rates and their impact on personal finances. | interest rates | personal finance | advice | 2023-05-23T00:51:02.500000 | to stay informed about interest rate changes and their impact on personal finances | interest rates | personal finance | advice"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 4,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User asked what aspects of The Godfather made it a cinematic masterpiece.",
+    "dimension": {
+      "time": "2023-05-23T02:33:00",
+      "location": "",
+      "reason": "",
+      "purpose": "to understand the cinematic qualities of The Godfather",
+      "keywords": [
+        "The Godfather",
+        "cinematic masterpiece",
+        "aspects"
+      ]
+    },
+    "entities": [
+      "The Godfather",
+      "cinematic masterpiece",
+      "aspects"
+    ],
+    "embedding_text": "User asked what aspects of The Godfather made it a cinematic masterpiece.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0015",
+    "source_time": "2023-05-23 02:33:00",
+    "record_time": "2026-07-07T19:50:56.728320",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User asked what aspects of The Godfather made it a cinematic masterpiece. | The Godfather | cinematic masterpiece | aspects | 2023-05-23T02:33:00 | to understand the cinematic qualities of The Godfather | The Godfather | cinematic masterpiece | aspects"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 5,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User asked if the horse head scene in The Godfather is one of the most iconic moments in cinematic history.",
+    "dimension": {
+      "time": "2023-05-23T02:33:00.500000",
+      "location": "",
+      "reason": "",
+      "purpose": "to confirm the iconic status of the horse head scene",
+      "keywords": [
+        "The Godfather",
+        "horse head scene",
+        "iconic moment"
+      ]
+    },
+    "entities": [
+      "The Godfather",
+      "horse head scene",
+      "iconic moment"
+    ],
+    "embedding_text": "User asked if the horse head scene in The Godfather is one of the most iconic moments in cinematic history.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0016",
+    "source_time": "2023-05-23 02:33:00.500000",
+    "record_time": "2026-07-07T19:50:56.728326",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User asked if the horse head scene in The Godfather is one of the most iconic moments in cinematic history. | The Godfather | horse head scene | iconic moment | 2023-05-23T02:33:00.500000 | to confirm the iconic status of the horse head scene | The Godfather | horse head scene | iconic moment"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 6,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User asked if the use of oranges in The Godfather symbolizes something.",
+    "dimension": {
+      "time": "2023-05-23T02:33:01",
+      "location": "",
+      "reason": "",
+      "purpose": "to learn about the symbolic meaning of oranges in The Godfather",
+      "keywords": [
+        "The Godfather",
+        "oranges",
+        "symbolism"
+      ]
+    },
+    "entities": [
+      "The Godfather",
+      "oranges",
+      "symbolism"
+    ],
+    "embedding_text": "User asked if the use of oranges in The Godfather symbolizes something.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0017",
+    "source_time": "2023-05-23 02:33:01",
+    "record_time": "2026-07-07T19:50:56.728333",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User asked if the use of oranges in The Godfather symbolizes something. | The Godfather | oranges | symbolism | 2023-05-23T02:33:01 | to learn about the symbolic meaning of oranges in The Godfather | The Godfather | oranges | symbolism"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 7,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 7,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User sought help finding a reputable appraiser for a vintage pearl necklace.",
+    "dimension": {
+      "time": "2023-05-23T06:20:00",
+      "location": "",
+      "reason": "",
+      "purpose": "to find a reputable appraiser for the necklace",
+      "keywords": [
+        "vintage pearl necklace",
+        "appraiser",
+        "reputable"
+      ]
+    },
+    "entities": [
+      "vintage pearl necklace",
+      "appraiser",
+      "reputable"
+    ],
+    "embedding_text": "User sought help finding a reputable appraiser for a vintage pearl necklace.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0022",
+    "source_time": "2023-05-23 06:20:00",
+    "record_time": "2026-07-07T19:50:56.728363",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User sought help finding a reputable appraiser for a vintage pearl necklace. | vintage pearl necklace | appraiser | reputable | 2023-05-23T06:20:00 | to find a reputable appraiser for the necklace | vintage pearl necklace | appraiser | reputable"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 11,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 11,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User asked for recommendations on online marketplaces or stores to sell vintage vinyl records.",
+    "dimension": {
+      "time": "2023-05-23T06:20:00.500000",
+      "location": "",
+      "reason": "",
+      "purpose": "to sell vintage vinyl records",
+      "keywords": [
+        "vintage vinyl records",
+        "sell",
+        "online marketplace",
+        "store"
+      ]
+    },
+    "entities": [
+      "vintage vinyl records",
+      "sell",
+      "online marketplace",
+      "store"
+    ],
+    "embedding_text": "User asked for recommendations on online marketplaces or stores to sell vintage vinyl records.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0024",
+    "source_time": "2023-05-23 06:20:00.500000",
+    "record_time": "2026-07-07T19:50:56.728374",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User asked for recommendations on online marketplaces or stores to sell vintage vinyl records. | vintage vinyl records | sell | online marketplace | store | 2023-05-23T06:20:00.500000 | to sell vintage vinyl records | vintage vinyl records | sell | online marketplace | store"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 12,
+        "score": 0.33333333333333337
+      },
+      {
+        "method": "minilm",
+        "rank": 6,
+        "score": 0.24942346222889608
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User asked for recommendations on online marketplaces or stores specializing in rare books to sell a rare first edition book.",
+    "dimension": {
+      "time": "2023-05-23T06:20:01",
+      "location": "",
+      "reason": "",
+      "purpose": "to sell a rare first edition book",
+      "keywords": [
+        "rare first edition book",
+        "rare books",
+        "sell",
+        "online marketplace",
+        "store"
+      ]
+    },
+    "entities": [
+      "rare first edition book",
+      "rare books",
+      "sell",
+      "online marketplace",
+      "store"
+    ],
+    "embedding_text": "User asked for recommendations on online marketplaces or stores specializing in rare books to sell a rare first edition book.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0026",
+    "source_time": "2023-05-23 06:20:01",
+    "record_time": "2026-07-07T19:50:56.728386",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User asked for recommendations on online marketplaces or stores specializing in rare books to sell a rare first edition book. | rare first edition book | rare books | sell | online marketplace | store | 2023-05-23T06:20:01 | to sell a rare first edition book | rare first edition book | rare books | sell | online marketplace | store"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 13,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 13,
+        "score": 0.33333333333333337
+      },
+      {
+        "method": "minilm",
+        "rank": 15,
+        "score": 0.23029706692432372
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User asked for recommendations on online marketplaces or stores specializing in vintage typewriters to sell a vintage typewriter.",
+    "dimension": {
+      "time": "2023-05-23T06:20:01.500000",
+      "location": "",
+      "reason": "",
+      "purpose": "to sell a vintage typewriter",
+      "keywords": [
+        "vintage typewriter",
+        "sell",
+        "online marketplace",
+        "store"
+      ]
+    },
+    "entities": [
+      "vintage typewriter",
+      "sell",
+      "online marketplace",
+      "store"
+    ],
+    "embedding_text": "User asked for recommendations on online marketplaces or stores specializing in vintage typewriters to sell a vintage typewriter.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0028",
+    "source_time": "2023-05-23 06:20:01.500000",
+    "record_time": "2026-07-07T19:50:56.728398",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User asked for recommendations on online marketplaces or stores specializing in vintage typewriters to sell a vintage typewriter. | vintage typewriter | sell | online marketplace | store | 2023-05-23T06:20:01.500000 | to sell a vintage typewriter | vintage typewriter | sell | online marketplace | store"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.33333333333333337
+      },
+      {
+        "method": "minilm",
+        "rank": 16,
+        "score": 0.2278892745730341
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "The user read a New Yorker article about social media's impact on mental health on 2023-05-23 and decided to reduce screen time.",
+    "dimension": {
+      "time": "2023-05-23",
+      "location": "",
+      "reason": "the article made the user think about making changes",
+      "purpose": "to reduce screen time",
+      "keywords": [
+        "New Yorker",
+        "social media",
+        "mental health",
+        "screen time reduction"
+      ]
+    },
+    "entities": [
+      "New Yorker",
+      "social media",
+      "mental health",
+      "screen time reduction"
+    ],
+    "embedding_text": "The user read a New Yorker article about social media's impact on mental health on 2023-05-23 and decided to reduce screen time.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0032",
+    "source_time": "2023-05-23 16:21:00",
+    "record_time": "2026-07-07T19:50:56.728421",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user read a New Yorker article about social media's impact on mental health on 2023-05-23 and decided to reduce screen time. | New Yorker | social media | mental health | screen time reduction | 2023-05-23 | the article made the user think about making changes | to reduce screen time | New Yorker | social media | mental health | screen time reduction"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 15,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "The user plans to use Freedom's Scheduled blocks to reduce screen time and develop healthier digital habits.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to reduce screen time and develop healthier habits",
+      "keywords": [
+        "screen time reduction",
+        "healthy habits",
+        "Freedom Scheduled blocks"
+      ]
+    },
+    "entities": [
+      "screen time reduction",
+      "healthy habits",
+      "Freedom Scheduled blocks"
+    ],
+    "embedding_text": "The user plans to use Freedom's Scheduled blocks to reduce screen time and develop healthier digital habits.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0036",
+    "source_time": "2023-05-23 16:21:02",
+    "record_time": "2026-07-07T19:50:56.728445",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to use Freedom's Scheduled blocks to reduce screen time and develop healthier digital habits. | screen time reduction | healthy habits | Freedom Scheduled blocks | to reduce screen time and develop healthier habits | screen time reduction | healthy habits | Freedom Scheduled blocks"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 16,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "The user plans to rewatch Marvel movies in chronological order starting with Captain America: The First Avenger, as they did before.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "in preparation for the next MCU release",
+      "purpose": "",
+      "keywords": [
+        "Marvel movies",
+        "chronological order",
+        "Captain America: The First Avenger",
+        "MCU release"
+      ]
+    },
+    "entities": [
+      "Marvel movies",
+      "chronological order",
+      "Captain America: The First Avenger",
+      "MCU release"
+    ],
+    "embedding_text": "The user plans to rewatch Marvel movies in chronological order starting with Captain America: The First Avenger, as they did before.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0039",
+    "source_time": "2023-05-23 21:52:01",
+    "record_time": "2026-07-07T19:50:56.728463",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to rewatch Marvel movies in chronological order starting with Captain America: The First Avenger, as they did before. | Marvel movies | chronological order | Captain America: The First Avenger | MCU release | in preparation for the next MCU release | Marvel movies | chronological order | Captain America: The First Avenger | MCU release"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 17,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User is planning a Marvel Cinematic Universe marathon in chronological order up to Avengers: Endgame and is considering whether to include TV shows for a more complete picture.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to have a more complete picture of the universe",
+      "keywords": [
+        "Marvel Cinematic Universe",
+        "marathon",
+        "chronological order",
+        "Avengers: Endgame",
+        "TV shows"
+      ]
+    },
+    "entities": [
+      "Marvel Cinematic Universe",
+      "marathon",
+      "chronological order",
+      "Avengers: Endgame",
+      "TV shows"
+    ],
+    "embedding_text": "User is planning a Marvel Cinematic Universe marathon in chronological order up to Avengers: Endgame and is considering whether to include TV shows for a more complete picture.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0040",
+    "source_time": "2023-05-23 21:52:01.500000",
+    "record_time": "2026-07-07T19:50:56.728470",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User is planning a Marvel Cinematic Universe marathon in chronological order up to Avengers: Endgame and is considering whether to include TV shows for a more complete picture. | Marvel Cinematic Universe | marathon | chronological order | Avengers: Endgame | TV shows | to have a more complete picture of the universe | Marvel Cinematic Universe | marathon | chronological order | Avengers: Endgame | TV shows"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 18,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User decided to only watch the MCU movies for their marathon, excluding the TV shows.",
+    "dimension": {
+      "time": "2023-05-23",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "MCU movies",
+        "marathon",
+        "exclude TV shows"
+      ]
+    },
+    "entities": [
+      "MCU movies",
+      "marathon",
+      "exclude TV shows"
+    ],
+    "embedding_text": "User decided to only watch the MCU movies for their marathon, excluding the TV shows.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0041",
+    "source_time": "2023-05-23 21:52:02",
+    "record_time": "2026-07-07T19:50:56.728476",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User decided to only watch the MCU movies for their marathon, excluding the TV shows. | MCU movies | marathon | exclude TV shows | 2023-05-23 | MCU movies | marathon | exclude TV shows"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 19,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User chose Avengers-themed snacks for their MCU marathon.",
+    "dimension": {
+      "time": "2023-05-23",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Avengers-themed snacks",
+        "MCU marathon"
+      ]
+    },
+    "entities": [
+      "Avengers-themed snacks",
+      "MCU marathon"
+    ],
+    "embedding_text": "User chose Avengers-themed snacks for their MCU marathon.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0042",
+    "source_time": "2023-05-23 21:52:02.500000",
+    "record_time": "2026-07-07T19:50:56.728482",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User chose Avengers-themed snacks for their MCU marathon. | Avengers-themed snacks | MCU marathon | 2023-05-23 | Avengers-themed snacks | MCU marathon"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 20,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 20,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "fact",
+    "content": "User is analyzing children's dialogues with a conversational agent using NLP techniques such as topic modeling and TF-IDF.",
+    "dimension": {
+      "time": "2023-05-24",
+      "location": "",
+      "reason": "",
+      "purpose": "to find patterns in children's dialogues",
+      "keywords": [
+        "children's dialogues",
+        "conversational agent",
+        "NLP",
+        "topic modeling",
+        "TF-IDF"
+      ]
+    },
+    "entities": [
+      "children's dialogues",
+      "conversational agent",
+      "NLP",
+      "topic modeling",
+      "TF-IDF"
+    ],
+    "embedding_text": "User is analyzing children's dialogues with a conversational agent using NLP techniques such as topic modeling and TF-IDF.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0048",
+    "source_time": "2023-05-24 11:38:00",
+    "record_time": "2026-07-07T19:50:56.728519",
+    "score": 0.3721085605372341,
+    "score_components": {
+      "dense_cosine_score": 0.3721085605372341,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 1,
+    "retrieval_score": 0.3721085605372341,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.3721085605372341
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "The user, acting as Bailey from Televero Health, replied to Prince Oreoluwa Abidakun after he expressed interest in a call.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "Prince Oreoluwa Abidakun responded positively",
+      "purpose": "schedule a call about positions",
+      "keywords": [
+        "Televero Health",
+        "Bailey Baker",
+        "Prince Oreoluwa Abidakun",
+        "recruiting"
+      ]
+    },
+    "entities": [
+      "Televero Health",
+      "Bailey Baker",
+      "Prince Oreoluwa Abidakun",
+      "recruiting"
+    ],
+    "embedding_text": "The user, acting as Bailey from Televero Health, replied to Prince Oreoluwa Abidakun after he expressed interest in a call.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0138",
+    "source_time": "2023-05-29 08:17:02",
+    "record_time": "2026-07-07T19:50:56.729118",
+    "score": 0.31810967979161736,
+    "score_components": {
+      "dense_cosine_score": 0.31810967979161736,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 2,
+    "retrieval_score": 0.31810967979161736,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.31810967979161736
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "The user, acting as Bailey from Televero Health, sent a message to Jennifer Correa after she clarified she is not a doctor but working on a master's in social work.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "Jennifer Correa indicated she is not a doctor",
+      "purpose": "discuss counseling and psychiatric work at Televero Health",
+      "keywords": [
+        "Televero Health",
+        "Bailey Baker",
+        "Jennifer Correa",
+        "recruiting",
+        "social work"
+      ]
+    },
+    "entities": [
+      "Televero Health",
+      "Bailey Baker",
+      "Jennifer Correa",
+      "recruiting",
+      "social work"
+    ],
+    "embedding_text": "The user, acting as Bailey from Televero Health, sent a message to Jennifer Correa after she clarified she is not a doctor but working on a master's in social work.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0137",
+    "source_time": "2023-05-29 08:17:01.500000",
+    "record_time": "2026-07-07T19:50:56.729112",
+    "score": 0.28097734273993175,
+    "score_components": {
+      "dense_cosine_score": 0.28097734273993175,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 3,
+    "retrieval_score": 0.28097734273993175,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.28097734273993175
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "profile",
+    "content": "User prefers LinkedIn as a professional platform for professional follow-up communication.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "LinkedIn",
+        "professional platform",
+        "follow-up",
+        "communication"
+      ]
+    },
+    "entities": [
+      "LinkedIn",
+      "professional platform",
+      "follow-up",
+      "communication"
+    ],
+    "embedding_text": "User prefers LinkedIn as a professional platform for professional follow-up communication.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0158",
+    "source_time": "2023-05-30 05:17:01.500000",
+    "record_time": "2026-07-07T19:50:56.729243",
+    "score": 0.2625456382568718,
+    "score_components": {
+      "dense_cosine_score": 0.2625456382568718,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 4,
+    "retrieval_score": 0.2625456382568718,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.2625456382568718
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User plans to send a LinkedIn message to Rachel Lee summarizing their conversation at the conference.",
+    "dimension": {
+      "time": "2023-05-30",
+      "location": "",
+      "reason": "",
+      "purpose": "to follow up on the conversation",
+      "keywords": [
+        "LinkedIn message",
+        "Rachel Lee",
+        "follow up",
+        "conference conversation"
+      ]
+    },
+    "entities": [
+      "LinkedIn message",
+      "Rachel Lee",
+      "follow up",
+      "conference conversation"
+    ],
+    "embedding_text": "User plans to send a LinkedIn message to Rachel Lee summarizing their conversation at the conference.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0157",
+    "source_time": "2023-05-30 05:17:01",
+    "record_time": "2026-07-07T19:50:56.729237",
+    "score": 0.26226312107943944,
+    "score_components": {
+      "dense_cosine_score": 0.26226312107943944,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 5,
+    "retrieval_score": 0.26226312107943944,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.26226312107943944
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "fact",
+    "content": "The user is interested in trying Freedom's Locked mode feature for screen time control.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Freedom Locked mode",
+        "screen time control"
+      ]
+    },
+    "entities": [
+      "Freedom Locked mode",
+      "screen time control"
+    ],
+    "embedding_text": "The user is interested in trying Freedom's Locked mode feature for screen time control.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0034",
+    "source_time": "2023-05-23 16:21:01",
+    "record_time": "2026-07-07T19:50:56.728433",
+    "score": 0.24922769338975945,
+    "score_components": {
+      "dense_cosine_score": 0.24922769338975945,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 7,
+    "retrieval_score": 0.24922769338975945,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 7,
+        "score": 0.24922769338975945
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "The user inquired about the kids' program at the Omni Amelia Island Plantation Resort for a family trip.",
+    "dimension": {
+      "time": "",
+      "location": "Omni Amelia Island Plantation Resort",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Omni Amelia Island Plantation Resort",
+        "kids' program"
+      ]
+    },
+    "entities": [
+      "Omni Amelia Island Plantation Resort",
+      "kids' program"
+    ],
+    "embedding_text": "The user inquired about the kids' program at the Omni Amelia Island Plantation Resort for a family trip.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0135",
+    "source_time": "2023-05-29 08:17:00.500000",
+    "record_time": "2026-07-07T19:50:56.729100",
+    "score": 0.24688279884494593,
+    "score_components": {
+      "dense_cosine_score": 0.24688279884494593,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 8,
+    "retrieval_score": 0.24688279884494593,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 8,
+        "score": 0.24688279884494593
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "fact",
+    "content": "User liked 'The Three-Body Problem' audiobook.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "The Three-Body Problem",
+        "audiobook",
+        "liked"
+      ]
+    },
+    "entities": [
+      "The Three-Body Problem",
+      "audiobook",
+      "liked"
+    ],
+    "embedding_text": "User liked 'The Three-Body Problem' audiobook.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0009",
+    "source_time": "2023-05-22 11:05:00.500000",
+    "record_time": "2026-07-07T19:50:56.728284",
+    "score": 0.24269089422827506,
+    "score_components": {
+      "dense_cosine_score": 0.24269089422827506,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 9,
+    "retrieval_score": 0.24269089422827506,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.24269089422827506
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "profile",
+    "content": "The user enjoys sci-fi shows and movies similar to Star Wars and Stranger Things and is looking for recommendations.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "sci-fi",
+        "Star Wars",
+        "Stranger Things",
+        "recommendations"
+      ]
+    },
+    "entities": [
+      "sci-fi",
+      "Star Wars",
+      "Stranger Things",
+      "recommendations"
+    ],
+    "embedding_text": "The user enjoys sci-fi shows and movies similar to Star Wars and Stranger Things and is looking for recommendations.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0037",
+    "source_time": "2023-05-23 21:52:00",
+    "record_time": "2026-07-07T19:50:56.728451",
+    "score": 0.24053143248558137,
+    "score_components": {
+      "dense_cosine_score": 0.24053143248558137,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.24053143248558137,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 10,
+        "score": 0.24053143248558137
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "User exchanged ideas with Alex on improving the user experience of language learning apps at the speed networking event.",
+    "dimension": {
+      "time": "2023-04",
+      "location": "Santa Monica",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Alex",
+        "user experience",
+        "language learning apps",
+        "ideas"
+      ]
+    },
+    "entities": [
+      "Alex",
+      "user experience",
+      "language learning apps",
+      "ideas"
+    ],
+    "embedding_text": "User exchanged ideas with Alex on improving the user experience of language learning apps at the speed networking event.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0160",
+    "source_time": "2023-05-30 05:17:02.500000",
+    "record_time": "2026-07-07T19:50:56.729255",
+    "score": 0.2405120671410319,
+    "score_components": {
+      "dense_cosine_score": 0.2405120671410319,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 11,
+    "retrieval_score": 0.2405120671410319,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.2405120671410319
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "fact",
+    "content": "The user is interested in using Freedom and Moment apps to track and limit social media use.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Freedom",
+        "Moment",
+        "screen time tracking"
+      ]
+    },
+    "entities": [
+      "Freedom",
+      "Moment",
+      "screen time tracking"
+    ],
+    "embedding_text": "The user is interested in using Freedom and Moment apps to track and limit social media use.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0033",
+    "source_time": "2023-05-23 16:21:00.500000",
+    "record_time": "2026-07-07T19:50:56.728427",
+    "score": 0.2384509328808208,
+    "score_components": {
+      "dense_cosine_score": 0.2384509328808208,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.2384509328808208,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.2384509328808208
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "fact",
+    "content": "The user uses calming music and journaling as relaxation methods before bed.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "relaxation",
+      "keywords": [
+        "calming music",
+        "journaling",
+        "relaxation",
+        "bedtime"
+      ]
+    },
+    "entities": [
+      "calming music",
+      "journaling",
+      "relaxation",
+      "bedtime"
+    ],
+    "embedding_text": "The user uses calming music and journaling as relaxation methods before bed.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0167",
+    "source_time": "2023-05-30 12:40:00.500000",
+    "record_time": "2026-07-07T19:50:56.729297",
+    "score": 0.236601569361431,
+    "score_components": {
+      "dense_cosine_score": 0.236601569361431,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 13,
+    "retrieval_score": 0.236601569361431,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 13,
+        "score": 0.236601569361431
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "profile",
+    "content": "The user loves seafood.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "seafood",
+        "preference"
+      ]
+    },
+    "entities": [
+      "seafood",
+      "preference"
+    ],
+    "embedding_text": "The user loves seafood.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0115",
+    "source_time": "2023-05-28 15:15:02.500000",
+    "record_time": "2026-07-07T19:50:56.728985",
+    "score": 0.23199849639971237,
+    "score_components": {
+      "dense_cosine_score": 0.23199849639971237,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.23199849639971237,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 14,
+        "score": 0.23199849639971237
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "profile",
+    "content": "User is looking for new TV shows related to sports.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "sports TV shows",
+        "recommendations"
+      ]
+    },
+    "entities": [
+      "sports TV shows",
+      "recommendations"
+    ],
+    "embedding_text": "User is looking for new TV shows related to sports.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0086",
+    "source_time": "2023-05-27 10:13:00.500000",
+    "record_time": "2026-07-07T19:50:56.728822",
+    "score": 0.227722274189609,
+    "score_components": {
+      "dense_cosine_score": 0.227722274189609,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.227722274189609,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 17,
+        "score": 0.227722274189609
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "episodic",
+    "content": "On 2023-05-25, the user sought manga recommendations.",
+    "dimension": {
+      "time": "2023-05-25",
+      "location": "",
+      "reason": "interest in manga",
+      "purpose": "find new manga series",
+      "keywords": [
+        "manga",
+        "recommendation"
+      ]
+    },
+    "entities": [
+      "manga",
+      "recommendation"
+    ],
+    "embedding_text": "On 2023-05-25, the user sought manga recommendations.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0054",
+    "source_time": "2023-05-25 02:46:00.500000",
+    "record_time": "2026-07-07T19:50:56.728632",
+    "score": 0.22099725463116687,
+    "score_components": {
+      "dense_cosine_score": 0.22099725463116687,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.22099725463116687,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.22099725463116687
+      }
+    ]
+  },
+  {
+    "user_id": "0008_ceb54acb",
+    "memory_type": "fact",
+    "content": "The user is interested in trying Freedom's Scheduled blocks feature to cut back on social media use.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to cut back on social media use",
+      "keywords": [
+        "Freedom Scheduled blocks",
+        "social media reduction"
+      ]
+    },
+    "entities": [
+      "Freedom Scheduled blocks",
+      "social media reduction"
+    ],
+    "embedding_text": "The user is interested in trying Freedom's Scheduled blocks feature to cut back on social media use.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0035",
+    "source_time": "2023-05-23 16:21:01.500000",
+    "record_time": "2026-07-07T19:50:56.728439",
+    "score": 0.21821946445817947,
+    "score_components": {
+      "dense_cosine_score": 0.21821946445817947,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.21821946445817947,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 19,
+        "score": 0.21821946445817947
+      }
+    ]
+  }
+]

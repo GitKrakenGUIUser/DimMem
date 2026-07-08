@@ -1,0 +1,936 @@
+[
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User rearranged living room furniture around 2023-05-05.",
+    "dimension": {
+      "time": "2023-05-05",
+      "location": "living room",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "rearranging furniture",
+        "living room"
+      ]
+    },
+    "entities": [
+      "rearranging furniture",
+      "living room"
+    ],
+    "embedding_text": "User rearranged living room furniture around 2023-05-05.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0136",
+    "source_time": "2023-05-26 21:54:02.500000",
+    "record_time": "2026-07-07T19:51:02.178274",
+    "score": 30.38343372973135,
+    "score_components": {
+      "bm25_score": 30.38343372973135,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 30.38343372973135,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 30.38343372973135
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.8241758241758241
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.6281732071465189
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User plans to get new decorative items for the living room reading nook.",
+    "dimension": {
+      "time": "",
+      "location": "living room reading nook",
+      "reason": "to complement the new layout",
+      "purpose": "",
+      "keywords": [
+        "decorative items",
+        "reading nook",
+        "living room"
+      ]
+    },
+    "entities": [
+      "decorative items",
+      "reading nook",
+      "living room"
+    ],
+    "embedding_text": "User plans to get new decorative items for the living room reading nook.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0137",
+    "source_time": "2023-05-26 13:33:00",
+    "record_time": "2026-07-07T19:51:02.178279",
+    "score": 14.312742518818622,
+    "score_components": {
+      "bm25_score": 14.312742518818622,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 14.312742518818622,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 14.312742518818622
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.6373626373626373
+      },
+      {
+        "method": "minilm",
+        "rank": 13,
+        "score": 0.23752544178221305
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User decided to buy deep coral-colored throw pillows to complement a Moroccan-inspired area rug in their bedroom.",
+    "dimension": {
+      "time": "2023-05-26",
+      "location": "bedroom",
+      "reason": "to complement the area rug",
+      "purpose": "to add a pop of color",
+      "keywords": [
+        "deep coral",
+        "throw pillows",
+        "Moroccan-inspired",
+        "area rug",
+        "bedroom"
+      ]
+    },
+    "entities": [
+      "deep coral",
+      "throw pillows",
+      "Moroccan-inspired",
+      "area rug",
+      "bedroom"
+    ],
+    "embedding_text": "User decided to buy deep coral-colored throw pillows to complement a Moroccan-inspired area rug in their bedroom.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0100",
+    "source_time": "2023-05-26 03:36:02",
+    "record_time": "2026-07-07T19:51:02.178066",
+    "score": 12.068586083360845,
+    "score_components": {
+      "bm25_score": 12.068586083360845,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 12.068586083360845,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 12.068586083360845
+      },
+      {
+        "method": "structured",
+        "rank": 9,
+        "score": 0.29670329670329665
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.45008366415606854
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user plans to get throw pillows in complementary colors for a Moroccan-inspired neutral area rug to complete the look.",
+    "dimension": {
+      "time": "",
+      "location": "living room",
+      "reason": "",
+      "purpose": "to complete the look of the rug",
+      "keywords": [
+        "throw pillows",
+        "complementary colors",
+        "Moroccan-inspired",
+        "neutral palette",
+        "area rug"
+      ]
+    },
+    "entities": [
+      "throw pillows",
+      "complementary colors",
+      "Moroccan-inspired",
+      "neutral palette",
+      "area rug"
+    ],
+    "embedding_text": "The user plans to get throw pillows in complementary colors for a Moroccan-inspired neutral area rug to complete the look.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0099",
+    "source_time": "2023-05-26 03:36:01.500000",
+    "record_time": "2026-07-07T19:51:02.178059",
+    "score": 11.702166556221012,
+    "score_components": {
+      "bm25_score": 11.702166556221012,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 11.702166556221012,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 11.702166556221012
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.6703296703296703
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.4261174979887539
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User plans to get a humidifier for their living room because dry air affects their plants.",
+    "dimension": {
+      "time": "",
+      "location": "living room",
+      "reason": "dry air affecting plants",
+      "purpose": "improve plant health",
+      "keywords": [
+        "humidifier",
+        "living room",
+        "dry air",
+        "plants"
+      ]
+    },
+    "entities": [
+      "humidifier",
+      "living room",
+      "dry air",
+      "plants"
+    ],
+    "embedding_text": "User plans to get a humidifier for their living room because dry air affects their plants.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0123",
+    "source_time": "2023-05-26 12:29:02",
+    "record_time": "2026-07-07T19:51:02.178199",
+    "score": 9.04252046758007,
+    "score_components": {
+      "bm25_score": 9.04252046758007,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 9.04252046758007,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 9.04252046758007
+      },
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.6043956043956044
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "fact",
+    "content": "User's living room has a relaxed, cozy mix of modern and traditional style with neutral colors including beige, cream, and wood tones.",
+    "dimension": {
+      "time": "",
+      "location": "living room",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "living room",
+        "decor style",
+        "modern",
+        "traditional",
+        "neutral colors",
+        "beige",
+        "cream",
+        "wood tones"
+      ]
+    },
+    "entities": [
+      "living room",
+      "decor style",
+      "modern",
+      "traditional",
+      "neutral colors",
+      "beige",
+      "cream",
+      "wood tones"
+    ],
+    "embedding_text": "User's living room has a relaxed, cozy mix of modern and traditional style with neutral colors including beige, cream, and wood tones.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0138",
+    "source_time": "2023-05-26 13:33:00.500000",
+    "record_time": "2026-07-07T19:51:02.178286",
+    "score": 8.522490162007585,
+    "score_components": {
+      "bm25_score": 8.522490162007585,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 8.522490162007585,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 8.522490162007585
+      },
+      {
+        "method": "structured",
+        "rank": 7,
+        "score": 0.37362637362637363
+      },
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.24282004070562063
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user and their partner plan to paint the walls, replace the flooring in the living room, add fixtures and appliances in the kitchen, and make cosmetic changes to personalize the house.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to make the house feel like their home",
+      "keywords": [
+        "painting",
+        "flooring",
+        "kitchen fixtures",
+        "home improvement",
+        "cosmetic changes"
+      ]
+    },
+    "entities": [
+      "painting",
+      "flooring",
+      "kitchen fixtures",
+      "home improvement",
+      "cosmetic changes"
+    ],
+    "embedding_text": "The user and their partner plan to paint the walls, replace the flooring in the living room, add fixtures and appliances in the kitchen, and make cosmetic changes to personalize the house.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0113",
+    "source_time": "2023-05-26 03:59:02",
+    "record_time": "2026-07-07T19:51:02.178142",
+    "score": 5.977587074584546,
+    "score_components": {
+      "bm25_score": 5.977587074584546,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 5.977587074584546,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 5.977587074584546
+      },
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.6043956043956044
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.36973426905264745
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "profile",
+    "content": "User downloads books the night before their commute to ensure they have something to read on the train.",
+    "dimension": {
+      "time": "night before commute",
+      "location": "",
+      "reason": "to have reading material",
+      "purpose": "to read during commute",
+      "keywords": [
+        "download books",
+        "night before",
+        "commute reading"
+      ]
+    },
+    "entities": [
+      "download books",
+      "night before",
+      "commute reading"
+    ],
+    "embedding_text": "User downloads books the night before their commute to ensure they have something to read on the train.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0030",
+    "source_time": "2023-05-26 19:52:01.500000",
+    "record_time": "2026-07-07T19:51:02.177574",
+    "score": 5.4366218458825255,
+    "score_components": {
+      "bm25_score": 5.4366218458825255,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 5.4366218458825255,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 5.4366218458825255
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "profile",
+    "content": "The user is interested in learning about how natural disasters have shaped Japan's history and culture.",
+    "dimension": {
+      "time": "",
+      "location": "Japan",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Japan",
+        "natural disasters",
+        "history",
+        "culture"
+      ]
+    },
+    "entities": [
+      "Japan",
+      "natural disasters",
+      "history",
+      "culture"
+    ],
+    "embedding_text": "The user is interested in learning about how natural disasters have shaped Japan's history and culture.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0117",
+    "source_time": "2023-05-26 12:29:00",
+    "record_time": "2026-07-07T19:51:02.178165",
+    "score": 5.156602507896794,
+    "score_components": {
+      "bm25_score": 5.156602507896794,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 5.156602507896794,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 5.156602507896794
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "profile",
+    "content": "The user is interested in DNA analysis and how it is used to uncover the origins of ancient populations.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "DNA analysis",
+        "ancient populations",
+        "origins",
+        "genetics"
+      ]
+    },
+    "entities": [
+      "DNA analysis",
+      "ancient populations",
+      "origins",
+      "genetics"
+    ],
+    "embedding_text": "The user is interested in DNA analysis and how it is used to uncover the origins of ancient populations.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0089",
+    "source_time": "2023-05-26 03:19:02",
+    "record_time": "2026-07-07T19:51:02.177999",
+    "score": 5.101707403791691,
+    "score_components": {
+      "bm25_score": 5.101707403791691,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 5.101707403791691,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 5.101707403791691
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user plans to build a deck and create a patio area in their backyard as a DIY project.",
+    "dimension": {
+      "time": "",
+      "location": "user's backyard",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "deck",
+        "patio",
+        "DIY",
+        "backyard"
+      ]
+    },
+    "entities": [
+      "deck",
+      "patio",
+      "DIY",
+      "backyard"
+    ],
+    "embedding_text": "The user plans to build a deck and create a patio area in their backyard as a DIY project.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0070",
+    "source_time": "2023-05-26 09:20:00",
+    "record_time": "2026-07-07T19:51:02.177889",
+    "score": 4.7145898027105515,
+    "score_components": {
+      "bm25_score": 4.7145898027105515,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 4.7145898027105515,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 4.7145898027105515
+      },
+      {
+        "method": "structured",
+        "rank": 13,
+        "score": 0.2637362637362637
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user had brunch with friends on Sunday, May 7, 2023 (three weeks before May 26, 2023).",
+    "dimension": {
+      "time": "2023-05-07",
+      "location": "",
+      "reason": "",
+      "purpose": "socialize",
+      "keywords": [
+        "brunch",
+        "friends"
+      ]
+    },
+    "entities": [
+      "brunch",
+      "friends"
+    ],
+    "embedding_text": "The user had brunch with friends on Sunday, May 7, 2023 (three weeks before May 26, 2023).",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0047",
+    "source_time": "2023-05-26 19:20:00",
+    "record_time": "2026-07-07T19:51:02.177675",
+    "score": 4.67109982409138,
+    "score_components": {
+      "bm25_score": 4.67109982409138,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 4.67109982409138,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 4.67109982409138
+      },
+      {
+        "method": "minilm",
+        "rank": 14,
+        "score": 0.2229644293057074
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user is feeling lonely and wants to reconnect with old friends or meet new people.",
+    "dimension": {
+      "time": "2023-05-26",
+      "location": "",
+      "reason": "feeling lonely",
+      "purpose": "meet people",
+      "keywords": [
+        "lonely",
+        "reconnect",
+        "old friends",
+        "new people"
+      ]
+    },
+    "entities": [
+      "lonely",
+      "reconnect",
+      "old friends",
+      "new people"
+    ],
+    "embedding_text": "The user is feeling lonely and wants to reconnect with old friends or meet new people.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0049",
+    "source_time": "2023-05-26 19:20:00",
+    "record_time": "2026-07-07T19:51:02.177687",
+    "score": 4.552626787327091,
+    "score_components": {
+      "bm25_score": 4.552626787327091,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 4.552626787327091,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 4.552626787327091
+      },
+      {
+        "method": "structured",
+        "rank": 12,
+        "score": 0.2637362637362637
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "User decided to use contrasting planters with a rustic or vintage style and earthy tones like terracotta or ceramic.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to add visual interest",
+      "purpose": "",
+      "keywords": [
+        "planters",
+        "rustic",
+        "vintage",
+        "terracotta",
+        "ceramic",
+        "earthy tones"
+      ]
+    },
+    "entities": [
+      "planters",
+      "rustic",
+      "vintage",
+      "terracotta",
+      "ceramic",
+      "earthy tones"
+    ],
+    "embedding_text": "User decided to use contrasting planters with a rustic or vintage style and earthy tones like terracotta or ceramic.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0141",
+    "source_time": "2023-05-26 18:55:01",
+    "record_time": "2026-07-07T19:51:02.178305",
+    "score": 4.083525018062051,
+    "score_components": {
+      "bm25_score": 4.083525018062051,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 4.083525018062051,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 4.083525018062051
+      }
+    ]
+  },
+  {
+    "user_id": "0025_993da5e2",
+    "memory_type": "episodic",
+    "content": "The user held a plank for 45 seconds on Tuesday, 2023-05-23, achieving a new personal best.",
+    "dimension": {
+      "time": "2023-05-23",
+      "location": "Zumba class",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "plank",
+        "personal best",
+        "45 seconds"
+      ]
+    },
+    "entities": [
+      "plank",
+      "personal best",
+      "45 seconds"
+    ],
+    "embedding_text": "The user held a plank for 45 seconds on Tuesday, 2023-05-23, achieving a new personal best.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0020",
+    "source_time": "2023-05-26 00:20:01",
+    "record_time": "2026-07-07T19:51:02.177515",
+    "score": 3.6484013651594953,
+    "score_components": {
+      "bm25_score": 3.6484013651594953,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 3.6484013651594953,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 3.6484013651594953
+      },
+      {
+        "method": "structured",
+        "rank": 11,
+        "score": 0.2637362637362637
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.33443255437392444
+      }
+    ]
+  }
+]

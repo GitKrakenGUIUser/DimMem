@@ -1,0 +1,32 @@
+{
+  "id": "29974e94-00d4-4bf3-93f5-6a76aa2deb03",
+  "object": "chat.completion",
+  "created": 1783427771,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: Memory [3] explicitly states that as of 2023-05-29, the user had worn the new black Converse shoes six times. There are no later memories indicating additional wears after that date. The question date is 2023-06-18, and without evidence of further use, the best answer is six times.\n\nAnswer: 6 times",
+        "reasoning_content": "We need to answer: \"How many times have I worn my new black Converse Chuck Taylor All Star sneakers?\" Question date is 2023-06-18. Retrieved memories: [1] says user loves new black Converse Chuck Taylor All Star sneakers, comfortable. [2] says user wore them to a friend's birthday party on 2023-05-27. [3] says user owns new black Converse shoes and has worn them six times as of 2023-05-29, including for running errands on that day. That memory explicitly states \"has worn them six times as of 2023-05-29\". That is a specific count. There's no later memory updating the count. So as of the question date, the most recent explicit count is six times as of May 29. The question asks \"how many times have I worn\" as of the question date. No evidence of further wear after May 29. So answer: six times. Reasoning: The memory [3] directly states the user had worn them six times as of 2023-05-29. No later memories mention additional wear. So answer is six."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1134,
+    "completion_tokens": 319,
+    "total_tokens": 1453,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 242
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 878
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

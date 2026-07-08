@@ -1,0 +1,2706 @@
+[
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "profile",
+    "content": "User loves her new black Converse Chuck Taylor All Star sneakers and finds them comfortable and versatile.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Converse Chuck Taylor All Star",
+        "black sneakers",
+        "comfortable",
+        "versatile"
+      ]
+    },
+    "entities": [
+      "Converse Chuck Taylor All Star",
+      "black sneakers",
+      "comfortable",
+      "versatile"
+    ],
+    "embedding_text": "User loves her new black Converse Chuck Taylor All Star sneakers and finds them comfortable and versatile.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0059",
+    "source_time": "2023-05-26 04:03:02",
+    "record_time": "2026-07-07T19:50:12.610320",
+    "score": 38.14086931984246,
+    "score_components": {
+      "bm25_score": 38.14086931984246,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 38.14086931984246,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 38.14086931984246
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.7246435497290805
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "User wore her new black Converse Chuck Taylor All Star sneakers to a friend's birthday party on 2023-05-27.",
+    "dimension": {
+      "time": "2023-05-27",
+      "location": "friend's birthday party",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Converse Chuck Taylor All Star",
+        "birthday party",
+        "2023-05-27"
+      ]
+    },
+    "entities": [
+      "Converse Chuck Taylor All Star",
+      "birthday party",
+      "2023-05-27"
+    ],
+    "embedding_text": "User wore her new black Converse Chuck Taylor All Star sneakers to a friend's birthday party on 2023-05-27.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0060",
+    "source_time": "2023-05-26 04:03:02.500000",
+    "record_time": "2026-07-07T19:50:12.610325",
+    "score": 33.538576105768136,
+    "score_components": {
+      "bm25_score": 33.538576105768136,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 33.538576105768136,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 33.538576105768136
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 1.0
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.7224995520536237
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "User owns new black Converse shoes and has worn them six times as of 2023-05-29, including for running errands on that day.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "black Converse",
+        "new shoes",
+        "worn six times",
+        "errands"
+      ]
+    },
+    "entities": [
+      "black Converse",
+      "new shoes",
+      "worn six times",
+      "errands"
+    ],
+    "embedding_text": "User owns new black Converse shoes and has worn them six times as of 2023-05-29, including for running errands on that day.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0106",
+    "source_time": "2023-05-30 12:43:02",
+    "record_time": "2026-07-07T19:50:12.610665",
+    "score": 26.60060123023168,
+    "score_components": {
+      "bm25_score": 26.60060123023168,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 26.60060123023168,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 26.60060123023168
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.4285714285714286
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.7538949707832096
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "User is looking for a cobbler and a shoe cleaning kit, and considering waterproofing spray for new Converse.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to fix brown leather boots and clean shoes",
+      "purpose": "to protect Converse from mud and rain",
+      "keywords": [
+        "cobbler",
+        "shoe cleaning kit",
+        "waterproofing spray",
+        "Converse"
+      ]
+    },
+    "entities": [
+      "cobbler",
+      "shoe cleaning kit",
+      "waterproofing spray",
+      "Converse"
+    ],
+    "embedding_text": "User is looking for a cobbler and a shoe cleaning kit, and considering waterproofing spray for new Converse.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0107",
+    "source_time": "2023-05-30 12:43:02.500000",
+    "record_time": "2026-07-07T19:50:12.610671",
+    "score": 7.091348445843142,
+    "score_components": {
+      "bm25_score": 7.091348445843142,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 7.091348445843142,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 7.091348445843142
+      },
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.380952380952381
+      },
+      {
+        "method": "minilm",
+        "rank": 7,
+        "score": 0.3719112056553752
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "The user plans to sell some of their vintage Star Wars action figures online.",
+    "dimension": {
+      "time": "2023-06-10",
+      "location": "",
+      "reason": "",
+      "purpose": "sell online",
+      "keywords": [
+        "sell vintage Star Wars action figures",
+        "online"
+      ]
+    },
+    "entities": [
+      "sell vintage Star Wars action figures",
+      "online"
+    ],
+    "embedding_text": "The user plans to sell some of their vintage Star Wars action figures online.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0130",
+    "source_time": "2023-06-07 11:24:00.500000",
+    "record_time": "2026-07-07T19:50:12.610802",
+    "score": 6.3752915958159875,
+    "score_components": {
+      "bm25_score": 6.3752915958159875,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 6.3752915958159875,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 6.3752915958159875
+      },
+      {
+        "method": "structured",
+        "rank": 8,
+        "score": 0.380952380952381
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "fact",
+    "content": "The user's sister has a classic and elegant style, loves neutral colors like beige and black, needs a daily driver handbag not too big but with enough space, and the user's budget for the gift is $200-$300.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "gift planning",
+      "keywords": [
+        "sister",
+        "classic elegant style",
+        "neutral colors",
+        "beige",
+        "black",
+        "daily driver handbag",
+        "budget $200-$300"
+      ]
+    },
+    "entities": [
+      "sister",
+      "classic elegant style",
+      "neutral colors",
+      "beige",
+      "black",
+      "daily driver handbag",
+      "budget $200-$300"
+    ],
+    "embedding_text": "The user's sister has a classic and elegant style, loves neutral colors like beige and black, needs a daily driver handbag not too big but with enough space, and the user's budget for the gift is $200-$300.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0001",
+    "source_time": "2023-04-30 11:48:00.500000",
+    "record_time": "2026-07-07T19:50:12.609971",
+    "score": 5.647043301672374,
+    "score_components": {
+      "bm25_score": 5.647043301672374,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 5.647043301672374,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 5.647043301672374
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "fact",
+    "content": "The user owns a Millennium Falcon toy and vintage Star Wars action figures.",
+    "dimension": {
+      "time": "2023-06-10",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Millennium Falcon",
+        "vintage Star Wars action figures",
+        "collectibles"
+      ]
+    },
+    "entities": [
+      "Millennium Falcon",
+      "vintage Star Wars action figures",
+      "collectibles"
+    ],
+    "embedding_text": "The user owns a Millennium Falcon toy and vintage Star Wars action figures.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0126",
+    "source_time": "2023-06-05 06:43:00",
+    "record_time": "2026-07-07T19:50:12.610780",
+    "score": 5.094410315688365,
+    "score_components": {
+      "bm25_score": 5.094410315688365,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 5.094410315688365,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 5.094410315688365
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "The user's vintage Star Wars action figures have been damaged during shipping in the past.",
+    "dimension": {
+      "time": "2023-06-10",
+      "location": "",
+      "reason": "shipping damage",
+      "purpose": "",
+      "keywords": [
+        "vintage Star Wars action figures",
+        "damage",
+        "shipping"
+      ]
+    },
+    "entities": [
+      "vintage Star Wars action figures",
+      "damage",
+      "shipping"
+    ],
+    "embedding_text": "The user's vintage Star Wars action figures have been damaged during shipping in the past.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0129",
+    "source_time": "2023-06-07 11:24:00",
+    "record_time": "2026-07-07T19:50:12.610797",
+    "score": 4.960827898626779,
+    "score_components": {
+      "bm25_score": 4.960827898626779,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 4.960827898626779,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 4.960827898626779
+      },
+      {
+        "method": "structured",
+        "rank": 7,
+        "score": 0.380952380952381
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "User cleaned her white Adidas Superstars with a toothbrush and soap for 20 minutes after wearing them to the gym.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "sneakers got dirty and scuffed",
+      "purpose": "clean sneakers",
+      "keywords": [
+        "Adidas Superstars",
+        "cleaning",
+        "toothbrush",
+        "soap",
+        "20 minutes"
+      ]
+    },
+    "entities": [
+      "Adidas Superstars",
+      "cleaning",
+      "toothbrush",
+      "soap",
+      "20 minutes"
+    ],
+    "embedding_text": "User cleaned her white Adidas Superstars with a toothbrush and soap for 20 minutes after wearing them to the gym.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0065",
+    "source_time": "2023-05-30 22:16:02",
+    "record_time": "2026-07-07T19:50:12.610355",
+    "score": 4.690193976308273,
+    "score_components": {
+      "bm25_score": 4.690193976308273,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 4.690193976308273,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 4.690193976308273
+      },
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.380952380952381
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.47229666299129863
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "The user is using a spreadsheet to track all the places where they need to update their name after changing it to Patel.",
+    "dimension": {
+      "time": "2023-05-30",
+      "location": "",
+      "reason": "recent name change to Patel",
+      "purpose": "to organize the name update process",
+      "keywords": [
+        "user",
+        "spreadsheet",
+        "name update",
+        "Patel"
+      ]
+    },
+    "entities": [
+      "user",
+      "spreadsheet",
+      "name update",
+      "Patel"
+    ],
+    "embedding_text": "The user is using a spreadsheet to track all the places where they need to update their name after changing it to Patel.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0092",
+    "source_time": "2023-05-30 18:33:01.500000",
+    "record_time": "2026-07-07T19:50:12.610582",
+    "score": 4.625593799775285,
+    "score_components": {
+      "bm25_score": 4.625593799775285,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 4.625593799775285,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 4.625593799775285
+      },
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.380952380952381
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "fact",
+    "content": "User owns a pair of white Adidas Superstars.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Adidas Superstars",
+        "white sneakers",
+        "ownership"
+      ]
+    },
+    "entities": [
+      "Adidas Superstars",
+      "white sneakers",
+      "ownership"
+    ],
+    "embedding_text": "User owns a pair of white Adidas Superstars.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0063",
+    "source_time": "2023-05-30 22:16:01",
+    "record_time": "2026-07-07T19:50:12.610343",
+    "score": 4.438821876972736,
+    "score_components": {
+      "bm25_score": 4.438821876972736,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 4.438821876972736,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 4.438821876972736
+      },
+      {
+        "method": "minilm",
+        "rank": 6,
+        "score": 0.42743440081298123
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "User has been working on improving their emotional intelligence since taking an online quiz that challenged their views on masculinity.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to live authentically",
+      "purpose": "personal development",
+      "keywords": [
+        "emotional intelligence",
+        "online quiz",
+        "masculinity"
+      ]
+    },
+    "entities": [
+      "emotional intelligence",
+      "online quiz",
+      "masculinity"
+    ],
+    "embedding_text": "User has been working on improving their emotional intelligence since taking an online quiz that challenged their views on masculinity.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0038",
+    "source_time": "2023-05-12 20:13:01",
+    "record_time": "2026-07-07T19:50:12.610197",
+    "score": 4.041588321695036,
+    "score_components": {
+      "bm25_score": 4.041588321695036,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 4.041588321695036,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 4.041588321695036
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "User attended a street photography workshop on May 1 and 2, 2023, where they learned how to approach strangers for permission to take photos.",
+    "dimension": {
+      "time": "2023-05-01 to 2023-05-02",
+      "location": "",
+      "reason": "to improve street photography skills",
+      "purpose": "learning to approach strangers",
+      "keywords": [
+        "street photography",
+        "workshop",
+        "approaching strangers",
+        "permission"
+      ]
+    },
+    "entities": [
+      "street photography",
+      "workshop",
+      "approaching strangers",
+      "permission"
+    ],
+    "embedding_text": "User attended a street photography workshop on May 1 and 2, 2023, where they learned how to approach strangers for permission to take photos.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0030",
+    "source_time": "2023-05-10 09:14:00",
+    "record_time": "2026-07-07T19:50:12.610150",
+    "score": 3.880222828208083,
+    "score_components": {
+      "bm25_score": 3.880222828208083,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 3.880222828208083,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 3.880222828208083
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "fact",
+    "content": "The user's husband has the last name Patel.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "user",
+        "husband",
+        "Patel",
+        "last name"
+      ]
+    },
+    "entities": [
+      "user",
+      "husband",
+      "Patel",
+      "last name"
+    ],
+    "embedding_text": "The user's husband has the last name Patel.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0093",
+    "source_time": "2023-05-30 03:20:02.500000",
+    "record_time": "2026-07-07T19:50:12.610588",
+    "score": 3.378126782480091,
+    "score_components": {
+      "bm25_score": 3.378126782480091,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 3.378126782480091,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 3.378126782480091
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "profile",
+    "content": "User has been obsessed with Korean food lately, particularly Bibimbap and Japchae, and has been making them at home using different recipes.",
+    "dimension": {
+      "time": "",
+      "location": "home",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Korean food",
+        "Bibimbap",
+        "Japchae",
+        "cooking",
+        "recipes"
+      ]
+    },
+    "entities": [
+      "Korean food",
+      "Bibimbap",
+      "Japchae",
+      "cooking",
+      "recipes"
+    ],
+    "embedding_text": "User has been obsessed with Korean food lately, particularly Bibimbap and Japchae, and has been making them at home using different recipes.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0103",
+    "source_time": "2023-05-30 12:43:00.500000",
+    "record_time": "2026-07-07T19:50:12.610648",
+    "score": 3.2594502860686103,
+    "score_components": {
+      "bm25_score": 3.2594502860686103,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 3.2594502860686103,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 3.2594502860686103
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "fact",
+    "content": "The user feels disconnected from people and is seeking ways to meet new people.",
+    "dimension": {
+      "time": "2023-05-06",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "feeling disconnected",
+        "social isolation"
+      ]
+    },
+    "entities": [
+      "feeling disconnected",
+      "social isolation"
+    ],
+    "embedding_text": "The user feels disconnected from people and is seeking ways to meet new people.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0012",
+    "source_time": "2023-05-06 01:16:00",
+    "record_time": "2026-07-07T19:50:12.610044",
+    "score": 3.2421921592166045,
+    "score_components": {
+      "bm25_score": 3.2421921592166045,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 16,
+    "retrieval_score": 3.2421921592166045,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 16,
+        "score": 3.2421921592166045
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "fact",
+    "content": "The user has been birdwatching for about 3 months as of May 2023.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "birdwatching",
+        "3 months"
+      ]
+    },
+    "entities": [
+      "birdwatching",
+      "3 months"
+    ],
+    "embedding_text": "The user has been birdwatching for about 3 months as of May 2023.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0043",
+    "source_time": "2023-05-14 00:20:01.500000",
+    "record_time": "2026-07-07T19:50:12.610227",
+    "score": 3.168675291107548,
+    "score_components": {
+      "bm25_score": 3.168675291107548,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 17,
+    "retrieval_score": 3.168675291107548,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 17,
+        "score": 3.168675291107548
+      },
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.2865401181373063
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "fact",
+    "content": "The user has a nephew who recently graduated from high school.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "nephew",
+        "high school graduate",
+        "family"
+      ]
+    },
+    "entities": [
+      "nephew",
+      "high school graduate",
+      "family"
+    ],
+    "embedding_text": "The user has a nephew who recently graduated from high school.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0071",
+    "source_time": "2023-05-30 14:00:00.500000",
+    "record_time": "2026-07-07T19:50:12.610389",
+    "score": 3.168675291107548,
+    "score_components": {
+      "bm25_score": 3.168675291107548,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 18,
+    "retrieval_score": 3.168675291107548,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 18,
+        "score": 3.168675291107548
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "The user tried joining a book club but it did not work out.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "meet new people",
+      "keywords": [
+        "book club",
+        "social attempt"
+      ]
+    },
+    "entities": [
+      "book club",
+      "social attempt"
+    ],
+    "embedding_text": "The user tried joining a book club but it did not work out.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0011",
+    "source_time": "2023-05-06 01:16:00",
+    "record_time": "2026-07-07T19:50:12.610038",
+    "score": 3.131768880991355,
+    "score_components": {
+      "bm25_score": 3.131768880991355,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 19,
+    "retrieval_score": 3.131768880991355,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 19,
+        "score": 3.131768880991355
+      },
+      {
+        "method": "structured",
+        "rank": 17,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "User intends to check out a new Korean market that opened downtown.",
+    "dimension": {
+      "time": "",
+      "location": "downtown",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Korean market",
+        "downtown"
+      ]
+    },
+    "entities": [
+      "Korean market",
+      "downtown"
+    ],
+    "embedding_text": "User intends to check out a new Korean market that opened downtown.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0109",
+    "source_time": "2023-05-30 20:49:00.500000",
+    "record_time": "2026-07-07T19:50:12.610684",
+    "score": 3.1290736628324125,
+    "score_components": {
+      "bm25_score": 3.1290736628324125,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 20,
+    "retrieval_score": 3.1290736628324125,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 20,
+        "score": 3.1290736628324125
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "The user purchased a Coach handbag for themselves at TJ Maxx near their house with a 60% discount on 2023-04-30.",
+    "dimension": {
+      "time": "2023-04-30",
+      "location": "TJ Maxx near user's house",
+      "reason": "",
+      "purpose": "personal purchase",
+      "keywords": [
+        "Coach",
+        "handbag",
+        "TJ Maxx",
+        "60% off",
+        "user"
+      ]
+    },
+    "entities": [
+      "Coach",
+      "handbag",
+      "TJ Maxx",
+      "60% off",
+      "user"
+    ],
+    "embedding_text": "The user purchased a Coach handbag for themselves at TJ Maxx near their house with a 60% discount on 2023-04-30.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0000",
+    "source_time": "2023-04-30 11:48:00",
+    "record_time": "2026-07-07T19:50:12.609955",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user purchased a Coach handbag for themselves at TJ Maxx near their house with a 60% discount on 2023-04-30. | Coach | handbag | TJ Maxx | 60% off | user | 2023-04-30 | TJ Maxx near user's house | personal purchase | Coach | handbag | TJ Maxx | 60% off | user"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 9,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 9,
+        "score": 0.33333333333333337
+      },
+      {
+        "method": "minilm",
+        "rank": 8,
+        "score": 0.33335118195370766
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "The user decided to buy a Coach Parker handbag for their sister's birthday gift and get it monogrammed with her initials.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "sister's birthday gift",
+      "keywords": [
+        "Coach Parker",
+        "handbag",
+        "monogramming",
+        "sister",
+        "birthday"
+      ]
+    },
+    "entities": [
+      "Coach Parker",
+      "handbag",
+      "monogramming",
+      "sister",
+      "birthday"
+    ],
+    "embedding_text": "The user decided to buy a Coach Parker handbag for their sister's birthday gift and get it monogrammed with her initials.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0002",
+    "source_time": "2023-04-30 11:48:01",
+    "record_time": "2026-07-07T19:50:12.609979",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user decided to buy a Coach Parker handbag for their sister's birthday gift and get it monogrammed with her initials. | Coach Parker | handbag | monogramming | sister | birthday | sister's birthday gift | Coach Parker | handbag | monogramming | sister | birthday"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 10,
+        "score": 0.33333333333333337
+      },
+      {
+        "method": "minilm",
+        "rank": 19,
+        "score": 0.25485297405721363
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "The user lent their Cannondale Synapse road bike to neighbor Rachel from February 20 to March 1, 2023.",
+    "dimension": {
+      "time": "2023-02-20 to 2023-03-01",
+      "location": "",
+      "reason": "",
+      "purpose": "lending to neighbor",
+      "keywords": [
+        "Cannondale Synapse",
+        "road bike",
+        "neighbor",
+        "Rachel",
+        "lent"
+      ]
+    },
+    "entities": [
+      "Cannondale Synapse",
+      "road bike",
+      "neighbor",
+      "Rachel",
+      "lent"
+    ],
+    "embedding_text": "The user lent their Cannondale Synapse road bike to neighbor Rachel from February 20 to March 1, 2023.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0003",
+    "source_time": "2023-04-30 11:48:01.500000",
+    "record_time": "2026-07-07T19:50:12.609986",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user lent their Cannondale Synapse road bike to neighbor Rachel from February 20 to March 1, 2023. | Cannondale Synapse | road bike | neighbor | Rachel | lent | 2023-02-20 to 2023-03-01 | lending to neighbor | Cannondale Synapse | road bike | neighbor | Rachel | lent"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 11,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 11,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "Rachel returned the user's Cannondale Synapse road bike on March 1, 2023 with a flat tire, and the user still needs to fix it.",
+    "dimension": {
+      "time": "2023-03-01",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Cannondale Synapse",
+        "road bike",
+        "Rachel",
+        "returned",
+        "flat tire",
+        "need to fix"
+      ]
+    },
+    "entities": [
+      "Cannondale Synapse",
+      "road bike",
+      "Rachel",
+      "returned",
+      "flat tire",
+      "need to fix"
+    ],
+    "embedding_text": "Rachel returned the user's Cannondale Synapse road bike on March 1, 2023 with a flat tire, and the user still needs to fix it.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0004",
+    "source_time": "2023-04-30 11:48:02",
+    "record_time": "2026-07-07T19:50:12.609993",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "Rachel returned the user's Cannondale Synapse road bike on March 1, 2023 with a flat tire, and the user still needs to fix it. | Cannondale Synapse | road bike | Rachel | returned | flat tire | need to fix | 2023-03-01 | Cannondale Synapse | road bike | Rachel | returned | flat tire | need to fix"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 12,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "The user plans to apply waterproofing to the chain and gears of their bike on the weekend of 2023-05-06.",
+    "dimension": {
+      "time": "2023-05-06",
+      "location": "",
+      "reason": "",
+      "purpose": "waterproof the chain and gears",
+      "keywords": [
+        "waterproofing",
+        "chain",
+        "gears",
+        "bike maintenance"
+      ]
+    },
+    "entities": [
+      "waterproofing",
+      "chain",
+      "gears",
+      "bike maintenance"
+    ],
+    "embedding_text": "The user plans to apply waterproofing to the chain and gears of their bike on the weekend of 2023-05-06.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0006",
+    "source_time": "2023-05-05 21:02:01.500000",
+    "record_time": "2026-07-07T19:50:12.610007",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to apply waterproofing to the chain and gears of their bike on the weekend of 2023-05-06. | waterproofing | chain | gears | bike maintenance | 2023-05-06 | waterproof the chain and gears | waterproofing | chain | gears | bike maintenance"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 13,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 13,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "The user plans to organize their garage where they store their bikes.",
+    "dimension": {
+      "time": "",
+      "location": "garage",
+      "reason": "",
+      "purpose": "keep bikes organized and protected",
+      "keywords": [
+        "garage organization",
+        "bike storage"
+      ]
+    },
+    "entities": [
+      "garage organization",
+      "bike storage"
+    ],
+    "embedding_text": "The user plans to organize their garage where they store their bikes.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0007",
+    "source_time": "2023-05-05 21:02:02",
+    "record_time": "2026-07-07T19:50:12.610013",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to organize their garage where they store their bikes. | garage organization | bike storage | garage | keep bikes organized and protected | garage organization | bike storage"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "The user plans to purchase a Saris Bones 2-Bike Trunk Rack for their Honda Civic to transport bikes to trails and parks.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to transport bikes more easily to different trails and parks",
+      "purpose": "transport bikes",
+      "keywords": [
+        "Saris Bones 2-Bike Trunk Rack",
+        "bike rack",
+        "Honda Civic",
+        "bike transport"
+      ]
+    },
+    "entities": [
+      "Saris Bones 2-Bike Trunk Rack",
+      "bike rack",
+      "Honda Civic",
+      "bike transport"
+    ],
+    "embedding_text": "The user plans to purchase a Saris Bones 2-Bike Trunk Rack for their Honda Civic to transport bikes to trails and parks.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0009",
+    "source_time": "2023-05-05 21:02:02.500000",
+    "record_time": "2026-07-07T19:50:12.610026",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to purchase a Saris Bones 2-Bike Trunk Rack for their Honda Civic to transport bikes to trails and parks. | Saris Bones 2-Bike Trunk Rack | bike rack | Honda Civic | bike transport | to transport bikes more easily to different trails and parks | transport bikes | Saris Bones 2-Bike Trunk Rack | bike rack | Honda Civic | bike transport"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 15,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "The user attended a friend's birthday party and left early, feeling relieved to be alone.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "felt disconnected",
+      "purpose": "",
+      "keywords": [
+        "birthday party",
+        "social event",
+        "leaving early"
+      ]
+    },
+    "entities": [
+      "birthday party",
+      "social event",
+      "leaving early"
+    ],
+    "embedding_text": "The user attended a friend's birthday party and left early, feeling relieved to be alone.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0010",
+    "source_time": "2023-05-06 01:16:00",
+    "record_time": "2026-07-07T19:50:12.610032",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user attended a friend's birthday party and left early, feeling relieved to be alone. | birthday party | social event | leaving early | felt disconnected | birthday party | social event | leaving early"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 16,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "The user plans to host a game night or potluck dinner with friends.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to make in-person meetups more meaningful",
+      "purpose": "connect with friends",
+      "keywords": [
+        "game night",
+        "potluck dinner",
+        "social gathering"
+      ]
+    },
+    "entities": [
+      "game night",
+      "potluck dinner",
+      "social gathering"
+    ],
+    "embedding_text": "The user plans to host a game night or potluck dinner with friends.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0014",
+    "source_time": "2023-05-06 01:16:02.500000",
+    "record_time": "2026-07-07T19:50:12.610056",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to host a game night or potluck dinner with friends. | game night | potluck dinner | social gathering | to make in-person meetups more meaningful | connect with friends | game night | potluck dinner | social gathering"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 18,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "The user went on a beach vacation recently.",
+    "dimension": {
+      "time": "",
+      "location": "beach",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "beach vacation",
+        "trip"
+      ]
+    },
+    "entities": [
+      "beach vacation",
+      "trip"
+    ],
+    "embedding_text": "The user went on a beach vacation recently.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0016",
+    "source_time": "2023-05-08 02:50:00",
+    "record_time": "2026-07-07T19:50:12.610067",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user went on a beach vacation recently. | beach vacation | trip | beach | beach vacation | trip"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 19,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "The user took over 200 photos of scenery and wildlife during a recent outing, experimenting with different modes and settings on their Canon EOS 80D.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "experimenting with camera settings",
+      "keywords": [
+        "photography",
+        "scenery",
+        "wildlife",
+        "Canon EOS 80D",
+        "200 photos"
+      ]
+    },
+    "entities": [
+      "photography",
+      "scenery",
+      "wildlife",
+      "Canon EOS 80D",
+      "200 photos"
+    ],
+    "embedding_text": "The user took over 200 photos of scenery and wildlife during a recent outing, experimenting with different modes and settings on their Canon EOS 80D.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0017",
+    "source_time": "2023-05-08 02:50:00",
+    "record_time": "2026-07-07T19:50:12.610073",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user took over 200 photos of scenery and wildlife during a recent outing, experimenting with different modes and settings on their Canon EOS 80D. | photography | scenery | wildlife | Canon EOS 80D | 200 photos | experimenting with camera settings | photography | scenery | wildlife | Canon EOS 80D | 200 photos"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 20,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 20,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "User wore her white Adidas Superstars to the gym last week.",
+    "dimension": {
+      "time": "",
+      "location": "gym",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Adidas Superstars",
+        "gym",
+        "last week"
+      ]
+    },
+    "entities": [
+      "Adidas Superstars",
+      "gym",
+      "last week"
+    ],
+    "embedding_text": "User wore her white Adidas Superstars to the gym last week.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0064",
+    "source_time": "2023-05-30 22:16:01.500000",
+    "record_time": "2026-07-07T19:50:12.610348",
+    "score": 0.43833900218402266,
+    "score_components": {
+      "dense_cosine_score": 0.43833900218402266,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 5,
+    "retrieval_score": 0.43833900218402266,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.43833900218402266
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "fact",
+    "content": "User has brown leather boots that need repair.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "brown leather boots",
+        "repair",
+        "cobbler"
+      ]
+    },
+    "entities": [
+      "brown leather boots",
+      "repair",
+      "cobbler"
+    ],
+    "embedding_text": "User has brown leather boots that need repair.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0105",
+    "source_time": "2023-05-30 12:43:01.500000",
+    "record_time": "2026-07-07T19:50:12.610660",
+    "score": 0.3312024882097462,
+    "score_components": {
+      "dense_cosine_score": 0.3312024882097462,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 9,
+    "retrieval_score": 0.3312024882097462,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.3312024882097462
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "fact",
+    "content": "User's brown leather boots have a loose heel that needs repair.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "heel coming loose",
+      "purpose": "repair",
+      "keywords": [
+        "brown leather boots",
+        "loose heel",
+        "repair"
+      ]
+    },
+    "entities": [
+      "brown leather boots",
+      "loose heel",
+      "repair"
+    ],
+    "embedding_text": "User's brown leather boots have a loose heel that needs repair.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0061",
+    "source_time": "2023-05-30 22:16:00",
+    "record_time": "2026-07-07T19:50:12.610331",
+    "score": 0.30654811968703494,
+    "score_components": {
+      "dense_cosine_score": 0.30654811968703494,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.30654811968703494,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 10,
+        "score": 0.30654811968703494
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "User used a $5 off coupon on a pack of diapers last week.",
+    "dimension": {
+      "time": "2023-05-23 to 2023-05-27",
+      "location": "",
+      "reason": "",
+      "purpose": "saving money on diapers",
+      "keywords": [
+        "coupon",
+        "diapers",
+        "$5 off"
+      ]
+    },
+    "entities": [
+      "coupon",
+      "diapers",
+      "$5 off"
+    ],
+    "embedding_text": "User used a $5 off coupon on a pack of diapers last week.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0078",
+    "source_time": "2023-05-30 06:54:00",
+    "record_time": "2026-07-07T19:50:12.610498",
+    "score": 0.29764838586916165,
+    "score_components": {
+      "dense_cosine_score": 0.29764838586916165,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 11,
+    "retrieval_score": 0.29764838586916165,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.29764838586916165
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "User wants to organize her shoe closet because it is hard to find shoes.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "hard to find shoes",
+      "purpose": "organize shoe closet",
+      "keywords": [
+        "shoe closet",
+        "organization"
+      ]
+    },
+    "entities": [
+      "shoe closet",
+      "organization"
+    ],
+    "embedding_text": "User wants to organize her shoe closet because it is hard to find shoes.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0057",
+    "source_time": "2023-05-26 04:03:01",
+    "record_time": "2026-07-07T19:50:12.610308",
+    "score": 0.2827287316143985,
+    "score_components": {
+      "dense_cosine_score": 0.2827287316143985,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 13,
+    "retrieval_score": 0.2827287316143985,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 13,
+        "score": 0.2827287316143985
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "User decided to sort her shoes by type and color to make them easier to find.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to make them easier to find",
+      "purpose": "sort shoes by type and color",
+      "keywords": [
+        "shoes",
+        "sorting",
+        "type",
+        "color"
+      ]
+    },
+    "entities": [
+      "shoes",
+      "sorting",
+      "type",
+      "color"
+    ],
+    "embedding_text": "User decided to sort her shoes by type and color to make them easier to find.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0058",
+    "source_time": "2023-05-26 04:03:01.500000",
+    "record_time": "2026-07-07T19:50:12.610314",
+    "score": 0.27306190760470567,
+    "score_components": {
+      "dense_cosine_score": 0.27306190760470567,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.27306190760470567,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 14,
+        "score": 0.27306190760470567
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "User plans to organize shoes by type then color, store out-of-season shoes in storage bins, and consider a shoe tree for brown leather boots.",
+    "dimension": {
+      "time": "",
+      "location": "home",
+      "reason": "to make it easy to find the pair needed and free up space",
+      "purpose": "to better organize shoe rack",
+      "keywords": [
+        "shoe organization",
+        "by type",
+        "by color",
+        "storage bins",
+        "shoe tree"
+      ]
+    },
+    "entities": [
+      "shoe organization",
+      "by type",
+      "by color",
+      "storage bins",
+      "shoe tree"
+    ],
+    "embedding_text": "User plans to organize shoes by type then color, store out-of-season shoes in storage bins, and consider a shoe tree for brown leather boots.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0108",
+    "source_time": "2023-05-30 20:49:00",
+    "record_time": "2026-07-07T19:50:12.610678",
+    "score": 0.27156186138039023,
+    "score_components": {
+      "dense_cosine_score": 0.27156186138039023,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.27156186138039023,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 15,
+        "score": 0.27156186138039023
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "The user plans to get a leather shoe cleaning kit to keep their brown leather boots looking their best.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to keep their brown leather boots looking their best",
+      "keywords": [
+        "leather shoe cleaning kit",
+        "brown leather boots"
+      ]
+    },
+    "entities": [
+      "leather shoe cleaning kit",
+      "brown leather boots"
+    ],
+    "embedding_text": "The user plans to get a leather shoe cleaning kit to keep their brown leather boots looking their best.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0111",
+    "source_time": "2023-05-30 17:45:01",
+    "record_time": "2026-07-07T19:50:12.610695",
+    "score": 0.26676173184773944,
+    "score_components": {
+      "dense_cosine_score": 0.26676173184773944,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.26676173184773944,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 16,
+        "score": 0.26676173184773944
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "episodic",
+    "content": "The user plans to get a cedar shoe tree for their brown leather boots to maintain their shape.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to maintain their shape",
+      "purpose": "",
+      "keywords": [
+        "cedar shoe tree",
+        "brown leather boots"
+      ]
+    },
+    "entities": [
+      "cedar shoe tree",
+      "brown leather boots"
+    ],
+    "embedding_text": "The user plans to get a cedar shoe tree for their brown leather boots to maintain their shape.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0110",
+    "source_time": "2023-05-30 17:45:00.500000",
+    "record_time": "2026-07-07T19:50:12.610689",
+    "score": 0.2653890978628623,
+    "score_components": {
+      "dense_cosine_score": 0.2653890978628623,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.2653890978628623,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 17,
+        "score": 0.2653890978628623
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "fact",
+    "content": "User bought a new 50mm f/1.8 prime lens on April 10, 2023.",
+    "dimension": {
+      "time": "2023-04-10",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "50mm f/1.8 prime lens",
+        "photography"
+      ]
+    },
+    "entities": [
+      "50mm f/1.8 prime lens",
+      "photography"
+    ],
+    "embedding_text": "User bought a new 50mm f/1.8 prime lens on April 10, 2023.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0026",
+    "source_time": "2023-05-10 09:14:00.500000",
+    "record_time": "2026-07-07T19:50:12.610126",
+    "score": 0.25497535360782064,
+    "score_components": {
+      "dense_cosine_score": 0.25497535360782064,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.25497535360782064,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.25497535360782064
+      }
+    ]
+  },
+  {
+    "user_id": "0019_618f13b2",
+    "memory_type": "fact",
+    "content": "The user recently changed their last name to Patel.",
+    "dimension": {
+      "time": "2023-05-30",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "user",
+        "name change",
+        "Patel"
+      ]
+    },
+    "entities": [
+      "user",
+      "name change",
+      "Patel"
+    ],
+    "embedding_text": "The user recently changed their last name to Patel.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0091",
+    "source_time": "2023-05-30 18:33:01",
+    "record_time": "2026-07-07T19:50:12.610576",
+    "score": 0.25137229489852636,
+    "score_components": {
+      "dense_cosine_score": 0.25137229489852636,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 20,
+    "retrieval_score": 0.25137229489852636,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 20,
+        "score": 0.25137229489852636
+      }
+    ]
+  }
+]

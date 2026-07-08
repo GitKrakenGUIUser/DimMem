@@ -1,0 +1,109 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-05-26 21:54:02.500000
+content: User rearranged living room furniture around 2023-05-05.
+
+[2]
+source_time: 2023-05-26 13:33:00
+content: User plans to get new decorative items for the living room reading nook.
+reason: to complement the new layout
+
+[3]
+source_time: 2023-05-26 03:36:02
+content: User decided to buy deep coral-colored throw pillows to complement a Moroccan-inspired area rug in their bedroom.
+reason: to complement the area rug
+purpose: to add a pop of color
+
+[4]
+source_time: 2023-05-26 03:36:01.500000
+content: The user plans to get throw pillows in complementary colors for a Moroccan-inspired neutral area rug to complete the look.
+purpose: to complete the look of the rug
+
+[5]
+source_time: 2023-05-26 12:29:02
+content: User plans to get a humidifier for their living room because dry air affects their plants.
+reason: dry air affecting plants
+purpose: improve plant health
+
+[6]
+source_time: 2023-05-26 13:33:00.500000
+content: User's living room has a relaxed, cozy mix of modern and traditional style with neutral colors including beige, cream, and wood tones.
+
+[7]
+source_time: 2023-05-26 03:59:02
+content: The user and their partner plan to paint the walls, replace the flooring in the living room, add fixtures and appliances in the kitchen, and make cosmetic changes to personalize the house.
+purpose: to make the house feel like their home
+
+[8]
+source_time: 2023-05-26 19:52:01.500000
+content: User downloads books the night before their commute to ensure they have something to read on the train.
+reason: to have reading material
+purpose: to read during commute
+
+[9]
+source_time: 2023-05-26 12:29:00
+content: The user is interested in learning about how natural disasters have shaped Japan's history and culture.
+
+[10]
+source_time: 2023-05-26 03:19:02
+content: The user is interested in DNA analysis and how it is used to uncover the origins of ancient populations.
+
+[11]
+source_time: 2023-05-26 09:20:00
+content: The user plans to build a deck and create a patio area in their backyard as a DIY project.
+
+[12]
+source_time: 2023-05-26 19:20:00
+content: The user had brunch with friends on Sunday, May 7, 2023 (three weeks before May 26, 2023).
+purpose: socialize
+
+[13]
+source_time: 2023-05-26 19:20:00
+content: The user is feeling lonely and wants to reconnect with old friends or meet new people.
+reason: feeling lonely
+purpose: meet people
+
+[14]
+source_time: 2023-05-26 18:55:01
+content: User decided to use contrasting planters with a rustic or vintage style and earthy tones like terracotta or ceramic.
+reason: to add visual interest
+
+[15]
+source_time: 2023-05-26 00:20:01
+content: The user held a plank for 45 seconds on Tuesday, 2023-05-23, achieving a new personal best.
+
+Now answer the question:
+User Question:How long had I been using the new area rug when I rearranged my living room furniture?
+Question Date:2023/05/26 (Fri) 17:49

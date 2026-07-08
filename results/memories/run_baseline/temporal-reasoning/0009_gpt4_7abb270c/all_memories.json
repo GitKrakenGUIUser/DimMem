@@ -1,0 +1,3925 @@
+{
+  "source_record_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/segments/raw/run_baseline/temporal-reasoning/0009_gpt4_7abb270c",
+  "memory_count": 183,
+  "memories": [
+    {
+      "source_id": 1,
+      "source_time": "2022-12-19T19:53:00",
+      "session_id": "c2c249ea",
+      "session_local_user_index": 1,
+      "content": "User owns a Samsung Galaxy S22 Ultra purchased on 2022-03-15 from the Best Buy store at the mall for $900.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "2022-03-15",
+        "location": "Best Buy store at the mall",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Samsung Galaxy S22 Ultra",
+          "purchase",
+          "Best Buy",
+          "$900"
+        ]
+      },
+      "window_index": 0,
+      "memory_index": 0
+    },
+    {
+      "source_id": 2,
+      "source_time": "2022-12-19T19:53:00.500000",
+      "session_id": "c2c249ea",
+      "session_local_user_index": 2,
+      "content": "User owns Samsung Galaxy Buds Pro earbuds purchased on sale for $150 as an accessory for the phone.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Samsung Galaxy Buds Pro",
+          "earbuds",
+          "$150",
+          "sale"
+        ]
+      },
+      "window_index": 0,
+      "memory_index": 1
+    },
+    {
+      "source_id": 3,
+      "source_time": "2022-12-19T19:53:01",
+      "session_id": "c2c249ea",
+      "session_local_user_index": 3,
+      "content": "User owns an Anker wireless charging pad purchased on 2022-03-10.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "2022-03-10",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Anker",
+          "wireless charging pad",
+          "purchase"
+        ]
+      },
+      "window_index": 0,
+      "memory_index": 2
+    },
+    {
+      "source_id": 4,
+      "source_time": "2022-12-19T19:53:01.500000",
+      "session_id": "c2c249ea",
+      "session_local_user_index": 4,
+      "content": "User owns a Moroccan-inspired berber rug in natural beige color for the living room.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "living room",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Moroccan rug",
+          "berber rug",
+          "natural beige",
+          "living room"
+        ]
+      },
+      "window_index": 0,
+      "memory_index": 3
+    },
+    {
+      "source_id": 5,
+      "source_time": "2022-12-19T19:53:02",
+      "session_id": "c2c249ea",
+      "session_local_user_index": 5,
+      "content": "User plans to purchase a Dell XPS laptop from the Dell website and is looking for student discounts.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Dell website",
+        "reason": "",
+        "purpose": "purchase a new laptop",
+        "keywords": [
+          "Dell XPS",
+          "laptop",
+          "student discount",
+          "purchase plan"
+        ]
+      },
+      "window_index": 0,
+      "memory_index": 4
+    },
+    {
+      "source_id": 6,
+      "source_time": "2022-12-19T19:53:02.500000",
+      "session_id": "c2c249ea",
+      "session_local_user_index": 6,
+      "content": "User is considering upgrading to a 4K OLED TV from LG or Sony.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "upgrade TV",
+        "keywords": [
+          "4K OLED TV",
+          "LG",
+          "Sony",
+          "TV upgrade"
+        ]
+      },
+      "window_index": 0,
+      "memory_index": 5
+    },
+    {
+      "source_id": 7,
+      "source_time": "2022-12-21T18:31:00",
+      "session_id": "sharegpt_6kuCDjT_0",
+      "session_local_user_index": 1,
+      "content": "User is considering getting new throw pillows and a faux fur throw blanket in pale silver to complement the living room decor.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "living room",
+        "reason": "to match the Moroccan-inspired berber rug",
+        "purpose": "decorate living room",
+        "keywords": [
+          "throw pillows",
+          "faux fur blanket",
+          "pale silver",
+          "living room decor"
+        ]
+      },
+      "window_index": 0,
+      "memory_index": 6
+    },
+    {
+      "source_id": 8,
+      "source_time": "2022-12-22T15:57:00",
+      "session_id": "331197d5_5",
+      "session_local_user_index": 1,
+      "content": "User wakes up early at 5:30-6:00 AM.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "wake up",
+          "early morning",
+          "5:30-6:00 AM"
+        ]
+      },
+      "window_index": 0,
+      "memory_index": 7
+    },
+    {
+      "source_id": 9,
+      "source_time": "2022-12-22T15:57:00.500000",
+      "session_id": "331197d5_5",
+      "session_local_user_index": 2,
+      "content": "User uses morning hours for personal tasks to set a productive tone for the day.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "set a productive tone",
+        "keywords": [
+          "morning routine",
+          "personal tasks",
+          "productivity"
+        ]
+      },
+      "window_index": 0,
+      "memory_index": 8
+    },
+    {
+      "source_id": 10,
+      "source_time": "2022-12-22T15:57:01",
+      "session_id": "331197d5_5",
+      "session_local_user_index": 3,
+      "content": "User prefers meditation and deep breathing exercises for relaxation.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "meditation",
+          "deep breathing",
+          "relaxation"
+        ]
+      },
+      "window_index": 0,
+      "memory_index": 9
+    },
+    {
+      "source_id": 11,
+      "source_time": "2022-12-22T15:57:01.500000",
+      "session_id": "331197d5_5",
+      "session_local_user_index": 4,
+      "content": "User likes reading poetry, especially Mary Oliver, as part of a wind-down routine before bed.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "wind down before bed",
+        "keywords": [
+          "reading poetry",
+          "Mary Oliver",
+          "wind-down routine"
+        ]
+      },
+      "window_index": 0,
+      "memory_index": 10
+    },
+    {
+      "source_id": 12,
+      "source_time": "2022-12-22T15:57:02",
+      "session_id": "331197d5_5",
+      "session_local_user_index": 5,
+      "content": "User values protecting devices with cases, such as the OtterBox Defender for the phone and considering a case for the new laptop.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "device protection",
+        "keywords": [
+          "phone case",
+          "OtterBox Defender",
+          "laptop case",
+          "protection"
+        ]
+      },
+      "window_index": 0,
+      "memory_index": 11
+    },
+    {
+      "source_id": 13,
+      "source_time": "2022-12-22T15:57:02.500000",
+      "session_id": "331197d5_5",
+      "session_local_user_index": 6,
+      "content": "User is interested in home decor with earthy tones and nature-inspired elements.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "living room",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "earthy tones",
+          "home decor",
+          "nature-inspired"
+        ]
+      },
+      "window_index": 0,
+      "memory_index": 12
+    },
+    {
+      "source_id": 14,
+      "source_time": "2023-01-06T20:31:00",
+      "session_id": "cb787bfa_1",
+      "session_local_user_index": 1,
+      "content": "User aims for a consistent daily routine, including a consistent sleep schedule and time management.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "improve time management and productivity",
+        "keywords": [
+          "consistent routine",
+          "sleep schedule",
+          "time management"
+        ]
+      },
+      "window_index": 0,
+      "memory_index": 13
+    },
+    {
+      "source_id": 1,
+      "source_time": "2022-12-22T15:57:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user has a snake plant in their living room.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "living room",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "snake plant",
+          "living room"
+        ]
+      },
+      "window_index": 1,
+      "memory_index": 0
+    },
+    {
+      "source_id": 2,
+      "source_time": "2023-01-06T20:31:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user decided to purchase a fiddle leaf fig plant for their living room.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "living room",
+        "reason": "The user liked its unique shape and was willing to put in extra care.",
+        "purpose": "to add variety to their plant collection and complement the snake plant",
+        "keywords": [
+          "fiddle leaf fig",
+          "purchase",
+          "living room",
+          "plant"
+        ]
+      },
+      "window_index": 1,
+      "memory_index": 1
+    },
+    {
+      "source_id": 3,
+      "source_time": "2023-01-06T20:31:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user ordered prints from Society6 for wall art.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "to use as wall art in their living room",
+        "keywords": [
+          "Society6",
+          "prints",
+          "wall art"
+        ]
+      },
+      "window_index": 1,
+      "memory_index": 2
+    },
+    {
+      "source_id": 4,
+      "source_time": "2023-01-06T20:31:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user plans to travel to Europe in summer 2023.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023 summer",
+        "location": "Europe",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "travel",
+          "Europe",
+          "summer 2023"
+        ]
+      },
+      "window_index": 1,
+      "memory_index": 3
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-01-06T20:31:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user will fly to visit their family on April 10, 2023.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-04-10",
+        "location": "",
+        "reason": "to visit family",
+        "purpose": "family visit",
+        "keywords": [
+          "fly",
+          "family visit",
+          "April 10, 2023"
+        ]
+      },
+      "window_index": 1,
+      "memory_index": 4
+    },
+    {
+      "source_id": 1,
+      "source_time": "2023-01-12T22:45:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to visit their family for Easter.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "to celebrate Easter with family",
+        "keywords": [
+          "Easter",
+          "family visit"
+        ]
+      },
+      "window_index": 2,
+      "memory_index": 0
+    },
+    {
+      "source_id": 2,
+      "source_time": "2023-01-12T22:45:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to use travel time during flights or layovers to catch up on work projects.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "to make productive use of travel time",
+        "purpose": "to catch up on work",
+        "keywords": [
+          "travel",
+          "work",
+          "productivity"
+        ]
+      },
+      "window_index": 2,
+      "memory_index": 1
+    },
+    {
+      "source_id": 3,
+      "source_time": "2023-01-12T22:45:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User's family enjoys trying new foods and taking care of their skin, so user chose gourmet snacks and travel-sized toiletries as gifts for them.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "family's preferences",
+        "purpose": "to give suitable gifts",
+        "keywords": [
+          "family",
+          "gourmet snacks",
+          "toiletries",
+          "gift"
+        ]
+      },
+      "window_index": 2,
+      "memory_index": 2
+    },
+    {
+      "source_id": 4,
+      "source_time": "2023-01-12T22:45:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User visited the Science Museum's 'Space Exploration' exhibition with colleague David on 2023-01-15.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-01-15",
+        "location": "Science Museum",
+        "reason": "interest in space exploration",
+        "purpose": "",
+        "keywords": [
+          "Science Museum",
+          "Space Exploration",
+          "David",
+          "exhibition"
+        ]
+      },
+      "window_index": 2,
+      "memory_index": 3
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-01-12T22:45:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is interested in learning more about the history of space exploration.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "space exploration",
+          "history"
+        ]
+      },
+      "window_index": 2,
+      "memory_index": 4
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-01-12T22:45:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is interested in learning more about the history of feminist art in the 1970s.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "feminist art",
+          "1970s",
+          "art history"
+        ]
+      },
+      "window_index": 2,
+      "memory_index": 5
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-01-15T16:31:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User attended a lecture series at the Museum of Contemporary Art where Dr. Maria Rodriguez spoke about feminist art in the 1970s, and user enjoyed networking with other art enthusiasts during the reception.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Museum of Contemporary Art",
+        "reason": "interest in feminist art",
+        "purpose": "to learn and network",
+        "keywords": [
+          "Museum of Contemporary Art",
+          "Dr. Maria Rodriguez",
+          "feminist art",
+          "lecture",
+          "networking"
+        ]
+      },
+      "window_index": 2,
+      "memory_index": 6
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-01-15T16:31:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User attended a weekend-long yoga retreat in November 2022.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2022-11",
+        "location": "",
+        "reason": "",
+        "purpose": "to practice yoga, meditation, pranayama, and asana",
+        "keywords": [
+          "yoga retreat",
+          "November 2022"
+        ]
+      },
+      "window_index": 2,
+      "memory_index": 7
+    },
+    {
+      "source_id": 9,
+      "source_time": "2023-01-15T16:31:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is interested in restorative yoga and wants to find a studio that specializes in it.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "enjoyed restorative yoga workshop during retreat",
+        "purpose": "to continue practice",
+        "keywords": [
+          "restorative yoga",
+          "yoga studio"
+        ]
+      },
+      "window_index": 2,
+      "memory_index": 8
+    },
+    {
+      "source_id": 10,
+      "source_time": "2023-01-15T16:31:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User attended a photography workshop in December 2022 and wants to continue improving photography skills.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2022-12",
+        "location": "",
+        "reason": "",
+        "purpose": "to improve photography skills",
+        "keywords": [
+          "photography workshop",
+          "December 2022"
+        ]
+      },
+      "window_index": 2,
+      "memory_index": 9
+    },
+    {
+      "source_id": 11,
+      "source_time": "2023-01-19T06:30:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User participated in a series of online workshops on digital marketing in 2022 covering SEO, social media, and email marketing, and is interested in improving SEO skills.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2022",
+        "location": "online",
+        "reason": "",
+        "purpose": "to improve digital marketing skills",
+        "keywords": [
+          "digital marketing",
+          "SEO",
+          "social media",
+          "email marketing",
+          "workshops"
+        ]
+      },
+      "window_index": 2,
+      "memory_index": 10
+    },
+    {
+      "source_id": 12,
+      "source_time": "2023-01-19T06:30:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User participated in a two-day coding bootcamp in December 2022 and is interested in improving JavaScript and HTML skills.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2022-12",
+        "location": "",
+        "reason": "",
+        "purpose": "to improve coding skills",
+        "keywords": [
+          "coding bootcamp",
+          "JavaScript",
+          "HTML",
+          "December 2022"
+        ]
+      },
+      "window_index": 2,
+      "memory_index": 11
+    },
+    {
+      "source_id": 1,
+      "source_time": "2023-01-19T06:30:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user's name is Hani Kazmi.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Hani Kazmi"
+        ]
+      },
+      "window_index": 3,
+      "memory_index": 0
+    },
+    {
+      "source_id": 2,
+      "source_time": "2023-01-19T06:30:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user is interested in learning coding, specifically JavaScript and HTML.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "coding",
+          "JavaScript",
+          "HTML"
+        ]
+      },
+      "window_index": 3,
+      "memory_index": 1
+    },
+    {
+      "source_id": 3,
+      "source_time": "2023-01-19T06:30:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user is interested in art and plans to attend art-related events to stay updated on trends and exhibitions.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "stay updated on trends and exhibitions",
+        "keywords": [
+          "art",
+          "art events",
+          "art blogs",
+          "exhibitions"
+        ]
+      },
+      "window_index": 3,
+      "memory_index": 2
+    },
+    {
+      "source_id": 4,
+      "source_time": "2023-01-19T06:30:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user is interested in learning more about feminist art.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "feminist art"
+        ]
+      },
+      "window_index": 3,
+      "memory_index": 3
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-01-20T12:18:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user has a specific interest in artist Judy Chicago and her work in the feminist art movement.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Judy Chicago",
+          "feminist art"
+        ]
+      },
+      "window_index": 3,
+      "memory_index": 4
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-01-20T12:18:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user attended a lecture series at the Museum of Contemporary Art where Dr. Maria Rodriguez spoke about the role of feminist art in the 1970s, and networked with other art enthusiasts during the reception.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Museum of Contemporary Art",
+        "reason": "",
+        "purpose": "learn about feminist art and network with art enthusiasts",
+        "keywords": [
+          "lecture series",
+          "Dr. Maria Rodriguez",
+          "feminist art",
+          "1970s",
+          "Museum of Contemporary Art",
+          "networking"
+        ]
+      },
+      "window_index": 3,
+      "memory_index": 5
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-01-20T12:18:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user met artists working on feminist art projects and a curator at the reception, exchanged contact information for potential future collaboration, and the curator offered advice on how to get the user's artwork seen by a wider audience.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Museum of Contemporary Art reception",
+        "reason": "",
+        "purpose": "potential collaboration and getting advice",
+        "keywords": [
+          "artists",
+          "curator",
+          "contact exchange",
+          "collaboration",
+          "advice",
+          "artwork visibility"
+        ]
+      },
+      "window_index": 3,
+      "memory_index": 6
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-01-20T12:18:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user has an artistic practice and is actively working on their own art.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "artistic practice"
+        ]
+      },
+      "window_index": 3,
+      "memory_index": 7
+    },
+    {
+      "source_id": 9,
+      "source_time": "2023-01-22T20:21:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user is interested in exploring interactive and immersive art installations.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "interactive installations",
+          "immersive art"
+        ]
+      },
+      "window_index": 3,
+      "memory_index": 8
+    },
+    {
+      "source_id": 10,
+      "source_time": "2023-01-22T20:21:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user is interested in exploring themes of identity, memory, and the human experience in their art installations.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "identity",
+          "memory",
+          "human experience"
+        ]
+      },
+      "window_index": 3,
+      "memory_index": 9
+    },
+    {
+      "source_id": 11,
+      "source_time": "2023-01-22T20:21:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user plans to create an art installation incorporating sound, light, and texture to simulate the experience of walking through a forest, and another installation exploring collective memory using found objects from different cultures and time periods.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "simulate forest experience and explore collective memory",
+        "keywords": [
+          "art installation",
+          "sound",
+          "light",
+          "texture",
+          "forest simulation",
+          "collective memory",
+          "found objects"
+        ]
+      },
+      "window_index": 3,
+      "memory_index": 10
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-01-27T11:21:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user enjoys listening to true crime podcasts during their daily commute and wants recommendations similar to 'My Favorite Murder'.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "daily commute",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "true crime",
+          "podcasts",
+          "My Favorite Murder",
+          "daily commute"
+        ]
+      },
+      "window_index": 4,
+      "memory_index": 0
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-01-27T11:21:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user has been listening to the true crime podcast 'My Favorite Murder' for over a year.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "My Favorite Murder",
+          "podcast",
+          "listening duration",
+          "true crime"
+        ]
+      },
+      "window_index": 4,
+      "memory_index": 1
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-01-27T11:21:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user plans to check out the true crime podcasts 'Crime Junkie' and 'Last Podcast on the Left'.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "interest in similar tone to My Favorite Murder",
+        "purpose": "to find new true crime podcasts",
+        "keywords": [
+          "Crime Junkie",
+          "Last Podcast on the Left",
+          "true crime",
+          "podcasts"
+        ]
+      },
+      "window_index": 4,
+      "memory_index": 2
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-01-27T11:21:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user is a fan of 'The Sandman' comic book series.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "The Sandman",
+          "comic book series",
+          "fan"
+        ]
+      },
+      "window_index": 4,
+      "memory_index": 3
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-01-27T11:21:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user's favorite comedy TV show is 'Brooklyn Nine-Nine'.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Brooklyn Nine-Nine",
+          "favorite comedy",
+          "TV show"
+        ]
+      },
+      "window_index": 4,
+      "memory_index": 4
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-01-27T11:21:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user got a new Netflix subscription around March 15, 2023.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-03-15",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Netflix",
+          "subscription",
+          "new"
+        ]
+      },
+      "window_index": 4,
+      "memory_index": 5
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-01-27T11:21:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user enjoys binge-watching TV shows, especially since getting a new Netflix subscription.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "new Netflix subscription",
+        "purpose": "",
+        "keywords": [
+          "binge-watching",
+          "TV shows",
+          "Netflix"
+        ]
+      },
+      "window_index": 4,
+      "memory_index": 6
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-01-27T11:21:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user likes documentaries similar to 'Tiger King' with wild and unpredictable true stories.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "documentaries",
+          "Tiger King",
+          "true stories",
+          "wild",
+          "unpredictable"
+        ]
+      },
+      "window_index": 4,
+      "memory_index": 7
+    },
+    {
+      "source_id": 9,
+      "source_time": "2023-01-27T11:21:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user finds documentaries captivating when they feature larger-than-life characters, absurd situations, and true stories.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "documentaries",
+          "larger-than-life characters",
+          "absurdity",
+          "true stories"
+        ]
+      },
+      "window_index": 4,
+      "memory_index": 8
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-01-27T11:21:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user has finished watching the TV show 'Stranger Things'.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Stranger Things",
+          "finished watching"
+        ]
+      },
+      "window_index": 4,
+      "memory_index": 9
+    },
+    {
+      "source_id": 4,
+      "source_time": "2023-01-28T04:55:03",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user believes that people should trust their feelings over evidence when forming beliefs.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "2023-01-28T04:55:03",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "belief",
+          "evidence",
+          "feelings"
+        ]
+      },
+      "window_index": 5,
+      "memory_index": 0
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-02-09T04:57:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "On 2023-02-09, the user asked for recommendations of online stores selling affordable and trendy minimalist art prints to decorate their living room.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-09T04:57:00",
+        "location": "",
+        "reason": "",
+        "purpose": "to decorate living room",
+        "keywords": [
+          "minimalist art prints",
+          "online stores",
+          "living room decoration"
+        ]
+      },
+      "window_index": 5,
+      "memory_index": 1
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-02-09T04:57:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "On 2023-02-09, the user asked for tips on minimalist bookshelf styling to make room for new decor pieces.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-09T04:57:00.500000",
+        "location": "",
+        "reason": "",
+        "purpose": "to style bookshelves in a minimalist way",
+        "keywords": [
+          "minimalist bookshelf",
+          "styling tips"
+        ]
+      },
+      "window_index": 5,
+      "memory_index": 2
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-02-09T04:57:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "On 2023-02-09, the user needed to order essential oils, specifically lavender oil, for their diffuser and asked for online store recommendations.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-09T04:57:01",
+        "location": "",
+        "reason": "",
+        "purpose": "to restock essential oils for diffuser",
+        "keywords": [
+          "essential oils",
+          "lavender oil",
+          "online stores"
+        ]
+      },
+      "window_index": 5,
+      "memory_index": 3
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-02-09T04:57:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "In early February 2023, the user rearranged their living room furniture by swapping the sofa and armchair to improve flow and conversation, and added fairy lights around bookshelves to create a warm ambiance, making the space more inviting for hosting friends and family.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-02",
+        "location": "user's living room",
+        "reason": "",
+        "purpose": "to improve room flow and create a warm ambiance for hosting",
+        "keywords": [
+          "living room rearrangement",
+          "sofa",
+          "armchair",
+          "fairy lights",
+          "hosting"
+        ]
+      },
+      "window_index": 5,
+      "memory_index": 4
+    },
+    {
+      "source_id": 10,
+      "source_time": "2023-02-09T04:57:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "On 2023-02-09, the user stated that lighting is key to transforming a room, mentioned wanting to replace old bedside lamps with modern design ones, and asked for online store recommendations.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-09T04:57:02.500000",
+        "location": "",
+        "reason": "",
+        "purpose": "to find modern bedside lamps",
+        "keywords": [
+          "lighting",
+          "modern lamps",
+          "bedside lamps",
+          "online stores"
+        ]
+      },
+      "window_index": 5,
+      "memory_index": 5
+    },
+    {
+      "source_id": 11,
+      "source_time": "2023-02-10T22:26:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "On 2023-02-10, the user planned to write an essay about ancient civilizations and visited the 'Ancient Egyptian Artifacts' exhibition, where they took photos of artifacts.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-10T22:26:00",
+        "location": "Metropolitan Museum of Art (possibly mistaken, but exhibition attended)",
+        "reason": "",
+        "purpose": "to research for an essay about ancient civilizations",
+        "keywords": [
+          "essay",
+          "ancient civilizations",
+          "Ancient Egyptian Artifacts exhibition",
+          "photos"
+        ]
+      },
+      "window_index": 5,
+      "memory_index": 6
+    },
+    {
+      "source_id": 13,
+      "source_time": "2023-02-10T22:26:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "On 2023-02-10, the user researched ancient Egyptian culture, specifically asking about the mummification process and the significance of the scarab beetle.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-10T22:26:01.500000",
+        "location": "",
+        "reason": "",
+        "purpose": "to learn more about ancient Egyptian artifacts seen at exhibition",
+        "keywords": [
+          "ancient Egyptian culture",
+          "mummification",
+          "scarab beetle"
+        ]
+      },
+      "window_index": 5,
+      "memory_index": 7
+    },
+    {
+      "source_id": 15,
+      "source_time": "2023-02-11T13:08:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "On 2023-02-11, the user asked about successful case studies of countries managing border operations during the pandemic and the strategies used.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-11T13:08:00",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "border operations",
+          "pandemic",
+          "case studies"
+        ]
+      },
+      "window_index": 5,
+      "memory_index": 8
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-02-09T04:57:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user prefers minimalist and modern home decor styles.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "minimalist decor",
+          "modern design",
+          "home decoration"
+        ]
+      },
+      "window_index": 5,
+      "memory_index": 9
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-02-09T04:57:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user uses essential oils in their diffuser and particularly likes lavender oil.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "essential oils",
+          "lavender oil",
+          "diffuser"
+        ]
+      },
+      "window_index": 5,
+      "memory_index": 10
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-02-13T08:28:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user has an ex-partner who emotionally abused them.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "ex-partner",
+          "emotional abuse",
+          "user"
+        ]
+      },
+      "window_index": 6,
+      "memory_index": 0
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-02-13T08:28:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "On 2023-02-13, the user had a breakthrough in therapy, realizing they had been carrying anger towards their emotionally abusive ex-partner, and felt overwhelmed and anxious.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-13",
+        "location": "therapy",
+        "reason": "realization of anger from emotional abuse",
+        "purpose": "to process emotions",
+        "keywords": [
+          "therapy breakthrough",
+          "anger",
+          "emotional abuse",
+          "ex-partner",
+          "anxiety"
+        ]
+      },
+      "window_index": 6,
+      "memory_index": 1
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-02-13T08:28:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user is motivated to process anger and anxiety through therapy and seeks resources on emotional regulation and anger management.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "emotional regulation",
+          "anger management",
+          "therapy",
+          "anxiety"
+        ]
+      },
+      "window_index": 6,
+      "memory_index": 2
+    },
+    {
+      "source_id": 10,
+      "source_time": "2023-02-13T08:28:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "On 2023-02-13, the user decided to focus on establishing a safe space and self-care routine to manage feeling overwhelmed.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-13",
+        "location": "home",
+        "reason": "feeling overwhelmed",
+        "purpose": "to feel grounded",
+        "keywords": [
+          "safe space",
+          "self-care",
+          "overwhelmed"
+        ]
+      },
+      "window_index": 6,
+      "memory_index": 3
+    },
+    {
+      "source_id": 11,
+      "source_time": "2023-02-13T08:28:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user prefers calming colors blues and greens, and likes plush throw blankets and soft rugs for creating a calming environment.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "home",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "blues",
+          "greens",
+          "plush throw blankets",
+          "soft rugs",
+          "calming environment"
+        ]
+      },
+      "window_index": 6,
+      "memory_index": 4
+    },
+    {
+      "source_id": 13,
+      "source_time": "2023-02-13T08:28:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user is interested in using calming essential oils and scented candles for relaxation.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "essential oils",
+          "scented candles",
+          "calming",
+          "relaxation"
+        ]
+      },
+      "window_index": 6,
+      "memory_index": 5
+    },
+    {
+      "source_id": 14,
+      "source_time": "2023-02-13T12:34:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "On 2023-02-13, the user was considering starting a blog about fashion and sustainability and sought recommendations for popular blogs and resources.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-13",
+        "location": "",
+        "reason": "interest in fashion and sustainability",
+        "purpose": "to start a blog",
+        "keywords": [
+          "fashion blog",
+          "sustainability blog",
+          "blog recommendations"
+        ]
+      },
+      "window_index": 6,
+      "memory_index": 6
+    },
+    {
+      "source_id": 15,
+      "source_time": "2023-02-13T12:34:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "On 2023-02-13, the user, inspired by fashion magazine photography and design, asked about the importance of a strong visual aesthetic for a fashion and sustainability blog.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-13",
+        "location": "",
+        "reason": "inspired by fashion magazines",
+        "purpose": "to understand importance of visual aesthetic for blog",
+        "keywords": [
+          "fashion magazines",
+          "photography",
+          "design",
+          "visual aesthetic",
+          "fashion blog",
+          "sustainability blog"
+        ]
+      },
+      "window_index": 6,
+      "memory_index": 7
+    },
+    {
+      "source_id": 1,
+      "source_time": "2023-02-13T08:28:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user is planning to start a blog about fashion and sustainability.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "starting a blog about fashion and sustainability",
+        "keywords": [
+          "fashion",
+          "sustainability",
+          "blog"
+        ]
+      },
+      "window_index": 7,
+      "memory_index": 0
+    },
+    {
+      "source_id": 2,
+      "source_time": "2023-02-13T12:34:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user prefers a minimalist blog design with a clean white background, simple sans-serif font, and lots of whitespace.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "minimalist design",
+          "white background",
+          "sans-serif font",
+          "whitespace"
+        ]
+      },
+      "window_index": 7,
+      "memory_index": 1
+    },
+    {
+      "source_id": 3,
+      "source_time": "2023-02-13T12:34:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user plans to incorporate nature-inspired icons like a leaf or flower into the blog design.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "tie in sustainability theme",
+        "keywords": [
+          "nature-inspired icons",
+          "leaf icon",
+          "flower icon"
+        ]
+      },
+      "window_index": 7,
+      "memory_index": 2
+    },
+    {
+      "source_id": 4,
+      "source_time": "2023-02-13T12:34:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user intends to use a muted green accent color for the blog.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "complement nature-inspired theme",
+        "keywords": [
+          "muted green",
+          "accent color"
+        ]
+      },
+      "window_index": 7,
+      "memory_index": 3
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-02-13T12:34:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user plans to use Adobe Illustrator to design a simple leaf or flower icon for the blog.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "want to create a custom icon",
+        "purpose": "design leaf or flower icon",
+        "keywords": [
+          "Adobe Illustrator",
+          "icon design"
+        ]
+      },
+      "window_index": 7,
+      "memory_index": 4
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-02-13T12:34:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user had no prior experience designing icons before undertaking this project.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "no prior experience",
+          "icon design"
+        ]
+      },
+      "window_index": 7,
+      "memory_index": 5
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-02-13T12:34:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user aims to balance the fashion and sustainability aspects in the blog content.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "both topics are important",
+        "purpose": "balance fashion and sustainability",
+        "keywords": [
+          "balance",
+          "fashion",
+          "sustainability"
+        ]
+      },
+      "window_index": 7,
+      "memory_index": 6
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-02-14T06:03:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "On February 15, 2023, the user participated in a behind-the-scenes tour of the Museum of History's conservation lab and tried basic conservation techniques.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-15",
+        "location": "Museum of History",
+        "reason": "interest in conservation",
+        "purpose": "learn about preservation",
+        "keywords": [
+          "behind-the-scenes tour",
+          "conservation lab",
+          "historical artifacts",
+          "basic conservation techniques"
+        ]
+      },
+      "window_index": 7,
+      "memory_index": 7
+    },
+    {
+      "source_id": 9,
+      "source_time": "2023-02-14T06:03:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user is interested in art conservation as a hobby and wants to learn about materials, adhesives, paper types, and mounting/framing techniques.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "inspired by the tour",
+        "purpose": "learn art conservation as hobby",
+        "keywords": [
+          "art conservation hobby",
+          "adhesives",
+          "consolidants",
+          "paper types",
+          "mounting",
+          "framing"
+        ]
+      },
+      "window_index": 7,
+      "memory_index": 8
+    },
+    {
+      "source_id": 4,
+      "source_time": "2023-02-16T22:08:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user has an elderly neighbor named Mrs. Johnson.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Mrs. Johnson",
+          "elderly neighbor"
+        ]
+      },
+      "window_index": 8,
+      "memory_index": 0
+    },
+    {
+      "source_id": 4,
+      "source_time": "2023-02-16T22:08:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user bought groceries for her elderly neighbor Mrs. Johnson around 2023-01-26, spending approximately $30 on milk, eggs, and other essentials.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-01-26",
+        "location": "",
+        "reason": "neighbor is elderly and needed help",
+        "purpose": "to provide essentials for Mrs. Johnson",
+        "keywords": [
+          "Mrs. Johnson",
+          "grocery shopping",
+          "milk",
+          "eggs",
+          "$30"
+        ]
+      },
+      "window_index": 8,
+      "memory_index": 1
+    },
+    {
+      "source_id": 4,
+      "source_time": "2023-02-16T22:08:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user planned a birthday party for her 5-year-old niece to be held around the week of 2023-02-20.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-20",
+        "location": "",
+        "reason": "niece's birthday",
+        "purpose": "to celebrate the niece's birthday",
+        "keywords": [
+          "birthday party",
+          "niece",
+          "5-year-old"
+        ]
+      },
+      "window_index": 8,
+      "memory_index": 2
+    },
+    {
+      "source_id": 4,
+      "source_time": "2023-02-16T22:08:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user gave her niece a Barbie doll and art supplies as a birthday gift.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "as a birthday gift",
+        "keywords": [
+          "Barbie doll",
+          "art supplies",
+          "niece",
+          "birthday gift"
+        ]
+      },
+      "window_index": 8,
+      "memory_index": 3
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-02-16T22:08:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user chose a Princess Party theme for her niece's birthday party.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-16",
+        "location": "",
+        "reason": "",
+        "purpose": "for the niece's birthday party",
+        "keywords": [
+          "Princess Party theme",
+          "niece",
+          "birthday party"
+        ]
+      },
+      "window_index": 8,
+      "memory_index": 4
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-02-16T22:08:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user decided to make Crown Cupcakes for the niece's birthday party.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-16",
+        "location": "",
+        "reason": "",
+        "purpose": "for the party",
+        "keywords": [
+          "Crown Cupcakes",
+          "birthday party"
+        ]
+      },
+      "window_index": 8,
+      "memory_index": 5
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-02-16T22:08:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user decided to serve Fairy Wings and Princess Pizza, and set up a Royal Treat Table with tiara cookies and magic fruit wands for the niece's birthday party.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-16",
+        "location": "",
+        "reason": "",
+        "purpose": "for the party",
+        "keywords": [
+          "Fairy Wings",
+          "Princess Pizza",
+          "Royal Treat Table",
+          "tiara cookies",
+          "magic fruit wands",
+          "birthday party"
+        ]
+      },
+      "window_index": 8,
+      "memory_index": 6
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-02-16T22:08:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user decided to give out tiara or crown and princess stickers or tattoos as party favors for the niece's birthday party.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-16",
+        "location": "",
+        "reason": "",
+        "purpose": "as party favors",
+        "keywords": [
+          "tiara",
+          "crown",
+          "princess stickers",
+          "tattoos",
+          "party favors",
+          "birthday party"
+        ]
+      },
+      "window_index": 8,
+      "memory_index": 7
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-02-16T22:08:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user planned to set up an art station at the niece's birthday party and needed extra art supplies for it.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-16",
+        "location": "",
+        "reason": "",
+        "purpose": "to have an art activity at the party",
+        "keywords": [
+          "art station",
+          "art supplies",
+          "birthday party",
+          "niece"
+        ]
+      },
+      "window_index": 8,
+      "memory_index": 8
+    },
+    {
+      "source_id": 13,
+      "source_time": "2023-02-17T08:31:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user expressed a desire to visit Seattle and try its local coffee shops.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "Seattle",
+        "reason": "",
+        "purpose": "to try local coffee",
+        "keywords": [
+          "Seattle",
+          "coffee shops",
+          "visit"
+        ]
+      },
+      "window_index": 8,
+      "memory_index": 9
+    },
+    {
+      "source_id": 15,
+      "source_time": "2023-02-17T08:31:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user likes coffee flavors such as cinnamon-spiced coffee and pumpkin spice latte.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "cinnamon-spiced coffee",
+          "pumpkin spice latte",
+          "coffee flavor preferences"
+        ]
+      },
+      "window_index": 8,
+      "memory_index": 10
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-02-17T06:19:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User sometimes nods off during long shifts.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "user",
+          "nodding off",
+          "long shifts"
+        ]
+      },
+      "window_index": 9,
+      "memory_index": 0
+    },
+    {
+      "source_id": 9,
+      "source_time": "2023-02-18T03:41:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User visited Castello di Amorosa in Napa Valley with family on 2023-02-11 and learned about the wine-making process.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-11",
+        "location": "Castello di Amorosa, Napa Valley",
+        "reason": "",
+        "purpose": "learn about wine-making process",
+        "keywords": [
+          "Castello di Amorosa",
+          "Napa Valley",
+          "family",
+          "wine-making"
+        ]
+      },
+      "window_index": 9,
+      "memory_index": 1
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-02-18T03:41:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is planning a trip to Napa Valley to visit wineries.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Napa Valley",
+        "reason": "",
+        "purpose": "visit wineries",
+        "keywords": [
+          "Napa Valley",
+          "trip",
+          "wineries"
+        ]
+      },
+      "window_index": 9,
+      "memory_index": 2
+    },
+    {
+      "source_id": 9,
+      "source_time": "2023-02-18T03:41:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is considering going camping near Napa Valley.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "near Napa Valley",
+        "reason": "",
+        "purpose": "camping",
+        "keywords": [
+          "camping",
+          "Napa Valley"
+        ]
+      },
+      "window_index": 9,
+      "memory_index": 3
+    },
+    {
+      "source_id": 11,
+      "source_time": "2023-02-18T03:41:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User had a camping trip to Yosemite National Park around December 2022 and found it an amazing experience.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2022-12",
+        "location": "Yosemite National Park",
+        "reason": "",
+        "purpose": "camping",
+        "keywords": [
+          "Yosemite National Park",
+          "camping trip",
+          "amazing experience"
+        ]
+      },
+      "window_index": 9,
+      "memory_index": 4
+    },
+    {
+      "source_id": 10,
+      "source_time": "2023-02-18T03:41:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is planning another camping trip to Yosemite National Park in late August 2023.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-08",
+        "location": "Yosemite National Park",
+        "reason": "",
+        "purpose": "camping",
+        "keywords": [
+          "Yosemite National Park",
+          "camping trip",
+          "late August"
+        ]
+      },
+      "window_index": 9,
+      "memory_index": 5
+    },
+    {
+      "source_id": 1,
+      "source_time": "2023-02-18T03:41:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user has always been fascinated by trains, especially high-speed trains.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "trains",
+          "high-speed trains"
+        ]
+      },
+      "window_index": 10,
+      "memory_index": 0
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-02-20T06:37:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User participated in a guided tour at the Modern Art Gallery on February 17, 2023, focused on Abstract Expressionism.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-17",
+        "location": "Modern Art Gallery",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "guided tour",
+          "Modern Art Gallery",
+          "Abstract Expressionism",
+          "February 17, 2023"
+        ]
+      },
+      "window_index": 11,
+      "memory_index": 0
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-02-20T06:37:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to visit the Modern Art Gallery again soon.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Modern Art Gallery",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "visit",
+          "Modern Art Gallery",
+          "future plan"
+        ]
+      },
+      "window_index": 11,
+      "memory_index": 1
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-02-20T06:37:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is fascinated by the works of Jackson Pollock and Mark Rothko.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "during a guided tour on Abstract Expressionism",
+        "purpose": "",
+        "keywords": [
+          "Jackson Pollock",
+          "Mark Rothko",
+          "Abstract Expressionism",
+          "fascination"
+        ]
+      },
+      "window_index": 11,
+      "memory_index": 2
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-02-20T06:37:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User has a strong interest in Abstract Expressionism, including its artists, techniques, and impact on modern art.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Abstract Expressionism",
+          "art movement",
+          "interest"
+        ]
+      },
+      "window_index": 11,
+      "memory_index": 3
+    },
+    {
+      "source_id": 11,
+      "source_time": "2023-02-20T05:59:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User works from home during the COVID-19 pandemic and struggles with motivation and procrastination.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "home",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "work from home",
+          "COVID-19",
+          "motivation",
+          "procrastination"
+        ]
+      },
+      "window_index": 11,
+      "memory_index": 4
+    },
+    {
+      "source_id": 13,
+      "source_time": "2023-02-20T05:59:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to try taking breaks and celebrating small wins to improve motivation while working from home, starting on February 21, 2023.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-21",
+        "location": "home",
+        "reason": "to stay motivated",
+        "purpose": "improve motivation",
+        "keywords": [
+          "breaks",
+          "celebrating small wins",
+          "motivation",
+          "work from home"
+        ]
+      },
+      "window_index": 11,
+      "memory_index": 5
+    },
+    {
+      "source_id": 1,
+      "source_time": "2023-02-20T05:59:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to use the Pomodoro technique to manage time better.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "to manage time better",
+        "keywords": [
+          "Pomodoro technique",
+          "time management"
+        ]
+      },
+      "window_index": 12,
+      "memory_index": 0
+    },
+    {
+      "source_id": 2,
+      "source_time": "2023-02-20T05:59:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to try out a Pomodoro app to stay on track with tasks.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "to stay on track with tasks",
+        "keywords": [
+          "Pomodoro app",
+          "tasks"
+        ]
+      },
+      "window_index": 12,
+      "memory_index": 1
+    },
+    {
+      "source_id": 3,
+      "source_time": "2023-02-20T05:59:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User attended a guided tour titled 'The Evolution of Abstract Expressionism' at the Modern Art Museum on 2023-02-20 led by Dr. Patel and found her insights into Pollock and Rothko's works enlightening.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-20",
+        "location": "Modern Art Museum",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "guided tour",
+          "Evolution of Abstract Expressionism",
+          "Dr. Patel",
+          "Pollock",
+          "Rothko",
+          "Modern Art Museum"
+        ]
+      },
+      "window_index": 12,
+      "memory_index": 2
+    },
+    {
+      "source_id": 4,
+      "source_time": "2023-02-20T05:59:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to visit the Modern Art Museum again soon.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Modern Art Museum",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Modern Art Museum",
+          "future visit"
+        ]
+      },
+      "window_index": 12,
+      "memory_index": 3
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-02-20T05:59:03",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to check the Modern Art Museum's website and sign up for their newsletter.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-20",
+        "location": "",
+        "reason": "",
+        "purpose": "to stay informed about exhibitions",
+        "keywords": [
+          "Modern Art Museum",
+          "website",
+          "newsletter"
+        ]
+      },
+      "window_index": 12,
+      "memory_index": 4
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-02-20T22:50:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is particularly interested in abstract expressionism, especially artists Pollock and Rothko.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "abstract expressionism",
+          "Pollock",
+          "Rothko"
+        ]
+      },
+      "window_index": 12,
+      "memory_index": 5
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-02-20T22:50:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User enjoys guided tours for museum visits.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "guided tours",
+          "museum visits"
+        ]
+      },
+      "window_index": 12,
+      "memory_index": 6
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-02-20T22:50:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User visited the Metropolitan Museum of Art and saw the golden mask of Pharaoh Tutankhamun, which impressed them, and took photos to remember the details.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Metropolitan Museum of Art",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Metropolitan Museum of Art",
+          "golden mask",
+          "Tutankhamun",
+          "ancient Egyptian artifacts"
+        ]
+      },
+      "window_index": 12,
+      "memory_index": 7
+    },
+    {
+      "source_id": 9,
+      "source_time": "2023-02-20T22:50:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is curious about various art movements, including ancient Egyptian art and abstract expressionism.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "art movements",
+          "ancient Egyptian art",
+          "abstract expressionism"
+        ]
+      },
+      "window_index": 12,
+      "memory_index": 8
+    },
+    {
+      "source_id": 10,
+      "source_time": "2023-02-20T22:50:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User attended a lecture series on feminist art in the 1970s at the Museum of Contemporary Art, where Dr. Maria Rodriguez gave a talk, and networked during a reception.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Museum of Contemporary Art",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "lecture series",
+          "feminist art",
+          "1970s",
+          "Dr. Maria Rodriguez",
+          "Museum of Contemporary Art",
+          "reception"
+        ]
+      },
+      "window_index": 12,
+      "memory_index": 9
+    },
+    {
+      "source_id": 11,
+      "source_time": "2023-02-20T22:50:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to read more about feminist art in the 1970s.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "feminist art",
+          "1970s"
+        ]
+      },
+      "window_index": 12,
+      "memory_index": 10
+    },
+    {
+      "source_id": 12,
+      "source_time": "2023-02-20T03:12:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User saw a large-scale installation by Anselm Kiefer at the Modern Art Museum's guided tour on 2023-02-20 and was moved by it.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-20",
+        "location": "Modern Art Museum",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Anselm Kiefer",
+          "large-scale installation",
+          "Modern Art Museum"
+        ]
+      },
+      "window_index": 12,
+      "memory_index": 11
+    },
+    {
+      "source_id": 13,
+      "source_time": "2023-02-22T00:44:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User won a cookbook by Gordon Ramsay in a giveaway in the 'Foodie Frenzy' group on 2023-02-22.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-22",
+        "location": "online group 'Foodie Frenzy'",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Gordon Ramsay cookbook",
+          "giveaway",
+          "Foodie Frenzy group"
+        ]
+      },
+      "window_index": 12,
+      "memory_index": 12
+    },
+    {
+      "source_id": 14,
+      "source_time": "2023-02-22T00:44:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to try new recipes this weekend (starting 2023-02-25).",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-25",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "new recipes",
+          "weekend"
+        ]
+      },
+      "window_index": 12,
+      "memory_index": 13
+    },
+    {
+      "source_id": 15,
+      "source_time": "2023-02-22T00:44:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to start cooking with a simpler recipe, specifically roasted chicken from Gordon Ramsay's cookbook.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "roasted chicken",
+          "Gordon Ramsay cookbook"
+        ]
+      },
+      "window_index": 12,
+      "memory_index": 14
+    },
+    {
+      "source_id": 16,
+      "source_time": "",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is a beginner in cooking.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "cooking beginner"
+        ]
+      },
+      "window_index": 12,
+      "memory_index": 15
+    },
+    {
+      "source_id": 4,
+      "source_time": "2023-02-22T00:44:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User won a Gordon Ramsay cookbook in a giveaway in the 'Foodie Frenzy' group.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "Foodie Frenzy group",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Gordon Ramsay cookbook",
+          "giveaway",
+          "Foodie Frenzy group"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 0
+    },
+    {
+      "source_id": 4,
+      "source_time": "2023-02-22T00:44:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to share their cooking journey in the 'Foodie Frenzy' group.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Foodie Frenzy group",
+        "reason": "",
+        "purpose": "to share cooking journey",
+        "keywords": [
+          "cooking journey",
+          "Foodie Frenzy group"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 1
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-02-22T00:44:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to post a photo of the won Gordon Ramsay cookbook and share excitement about trying his recipes.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Foodie Frenzy group",
+        "reason": "",
+        "purpose": "to share excitement about trying Gordon Ramsay's recipes",
+        "keywords": [
+          "photo",
+          "Gordon Ramsay cookbook",
+          "excitement",
+          "Foodie Frenzy group"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 2
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-02-22T00:44:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to follow up with updates on cooking progress, including photos of dishes and challenges, in the 'Foodie Frenzy' group.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Foodie Frenzy group",
+        "reason": "",
+        "purpose": "to share cooking progress and challenges",
+        "keywords": [
+          "updates",
+          "cooking progress",
+          "photos",
+          "dishes",
+          "challenges",
+          "Foodie Frenzy group"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 3
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-02-22T00:44:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to ask for feedback or advice from members of the 'Foodie Frenzy' group.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Foodie Frenzy group",
+        "reason": "",
+        "purpose": "to get feedback and advice",
+        "keywords": [
+          "feedback",
+          "advice",
+          "Foodie Frenzy group"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 4
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-02-22T00:44:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to share a caption for the cookbook photo in the 'Foodie Frenzy' group: 'Just won this amazing Gordon Ramsay cookbook in the 'Foodie Frenzy' giveaway and I'm so excited to start cooking! Anyone else a fan of Gordon Ramsay's recipes?'",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Foodie Frenzy group",
+        "reason": "",
+        "purpose": "to engage group members",
+        "keywords": [
+          "caption",
+          "Gordon Ramsay cookbook",
+          "Foodie Frenzy giveaway",
+          "fan"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 5
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-02-23T02:29:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to attend another music festival soon.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "music festival",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "music festival",
+          "attend"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 6
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-02-23T02:29:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User owns a brown Fjallraven cross-body bag used for carrying phone, wallet, and water bottle.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "brown Fjallraven cross-body bag",
+          "phone",
+          "wallet",
+          "water bottle"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 7
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-02-23T02:29:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User recently lost their bag tag and used a temporary one with a business card attached.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "lost bag tag",
+        "purpose": "",
+        "keywords": [
+          "lost bag tag",
+          "temporary tag",
+          "business card"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 8
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-02-23T02:29:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to label their bag with a luggage tag.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "to label bag",
+        "keywords": [
+          "luggage tag",
+          "label bag"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 9
+    },
+    {
+      "source_id": 9,
+      "source_time": "2023-02-23T02:29:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to make their own luggage tag using fabric or washi tape as a DIY project.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "DIY project",
+        "keywords": [
+          "DIY luggage tag",
+          "fabric",
+          "washi tape"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 10
+    },
+    {
+      "source_id": 9,
+      "source_time": "2023-02-23T02:29:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User has been trying to declutter their cross-body bag and carry only essentials.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "to carry only essentials",
+        "keywords": [
+          "declutter",
+          "cross-body bag",
+          "essentials"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 11
+    },
+    {
+      "source_id": 10,
+      "source_time": "2023-02-23T02:29:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to use small pouches or bags to store small items and assign a home for each item in their bag.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "to organize bag",
+        "keywords": [
+          "small pouches",
+          "organize",
+          "bag compartments"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 12
+    },
+    {
+      "source_id": 10,
+      "source_time": "2023-02-23T02:29:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to clean their bag more regularly.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "maintenance",
+        "keywords": [
+          "clean bag",
+          "regularly"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 13
+    },
+    {
+      "source_id": 10,
+      "source_time": "2023-02-23T02:29:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is interested in getting a smaller bag for daily errands and grocery shopping.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "for daily errands and grocery shopping",
+        "keywords": [
+          "smaller bag",
+          "daily errands",
+          "grocery shopping"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 14
+    },
+    {
+      "source_id": 11,
+      "source_time": "2023-02-23T02:29:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User has been eyeing a canvas tote bag from a local brand that is made from sustainable materials and has a simple classic design, for daily errands and grocery shopping.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "local brand",
+        "reason": "",
+        "purpose": "for daily errands and grocery shopping",
+        "keywords": [
+          "canvas tote bag",
+          "local brand",
+          "sustainable materials",
+          "simple design"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 15
+    },
+    {
+      "source_id": 12,
+      "source_time": "2023-02-23T02:29:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to pack sunscreen, a hat, and a portable charger in their brown Fjallraven cross-body bag for an upcoming music festival.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "music festival",
+        "reason": "",
+        "purpose": "to have essentials",
+        "keywords": [
+          "sunscreen",
+          "hat",
+          "portable charger",
+          "brown Fjallraven cross-body bag",
+          "music festival"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 16
+    },
+    {
+      "source_id": 15,
+      "source_time": "2023-02-24T04:11:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User plans to add Bayreuth to their travel bucket list.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Bayreuth",
+        "reason": "",
+        "purpose": "travel",
+        "keywords": [
+          "Bayreuth",
+          "travel bucket list"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 17
+    },
+    {
+      "source_id": 15,
+      "source_time": "2023-02-24T04:11:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is interested in visiting Bayreuth.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "Bayreuth",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Bayreuth",
+          "travel interest"
+        ]
+      },
+      "window_index": 13,
+      "memory_index": 18
+    },
+    {
+      "source_id": 1,
+      "source_time": "2023-02-24T04:11:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User dislikes granola as a breakfast topping.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "breakfast",
+          "granola",
+          "preference"
+        ]
+      },
+      "window_index": 14,
+      "memory_index": 0
+    },
+    {
+      "source_id": 2,
+      "source_time": "2023-02-24T04:11:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User usually wakes up early on Saturdays.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "wake-up time",
+          "Saturdays",
+          "morning routine"
+        ]
+      },
+      "window_index": 14,
+      "memory_index": 1
+    },
+    {
+      "source_id": 3,
+      "source_time": "2023-02-24T04:11:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User has been trying to read more on weekends.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "reading",
+          "weekends",
+          "goal"
+        ]
+      },
+      "window_index": 14,
+      "memory_index": 2
+    },
+    {
+      "source_id": 4,
+      "source_time": "2023-02-24T21:19:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is trying to establish a consistent exercise routine on Saturday mornings.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "exercise",
+          "Saturday mornings",
+          "routine",
+          "goal"
+        ]
+      },
+      "window_index": 14,
+      "memory_index": 3
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-02-24T21:19:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User wakes up at 7:30 am on Saturdays.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "wake-up time",
+          "7:30 am",
+          "Saturdays"
+        ]
+      },
+      "window_index": 14,
+      "memory_index": 4
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-02-24T21:19:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User exercises on Saturday mornings as part of a consistent weekend routine.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "exercise",
+          "Saturday mornings",
+          "weekend routine"
+        ]
+      },
+      "window_index": 14,
+      "memory_index": 5
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-02-24T21:19:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is preparing for the 'Racing for a Cure' charity track event at Road Atlanta on May 14-15, 2023.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-05-14 to 2023-05-15",
+        "location": "Road Atlanta",
+        "reason": "",
+        "purpose": "charity track event",
+        "keywords": [
+          "Racing for a Cure",
+          "charity event",
+          "Road Atlanta",
+          "May 14-15 2023"
+        ]
+      },
+      "window_index": 14,
+      "memory_index": 6
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-02-24T21:19:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User owns a 2018 Honda Civic Si.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "2018 Honda Civic Si",
+          "car"
+        ]
+      },
+      "window_index": 14,
+      "memory_index": 7
+    },
+    {
+      "source_id": 9,
+      "source_time": "2023-02-24T21:19:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User has been practicing driving skills at DriveSmart racing school in Savannah.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Savannah",
+        "reason": "",
+        "purpose": "preparing for track event",
+        "keywords": [
+          "DriveSmart racing school",
+          "driving practice",
+          "Savannah"
+        ]
+      },
+      "window_index": 14,
+      "memory_index": 8
+    },
+    {
+      "source_id": 10,
+      "source_time": "2023-02-25T10:33:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User participated in the Turbocharged Weekend event at Atlanta Motor Speedway on March 12-13, 2023, driving a modified 2018 Honda Civic Si and placing 3rd in the amateur category.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-03-12 to 2023-03-13",
+        "location": "Atlanta Motor Speedway",
+        "reason": "",
+        "purpose": "competition",
+        "keywords": [
+          "Turbocharged Weekend",
+          "Atlanta Motor Speedway",
+          "modified 2018 Honda Civic Si",
+          "3rd place",
+          "amateur category"
+        ]
+      },
+      "window_index": 14,
+      "memory_index": 9
+    },
+    {
+      "source_id": 11,
+      "source_time": "2023-02-25T10:33:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User has been fine-tuning the suspension and engine management system of their modified 2018 Honda Civic Si.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "improve performance",
+        "keywords": [
+          "suspension tuning",
+          "engine management",
+          "modified 2018 Honda Civic Si"
+        ]
+      },
+      "window_index": 14,
+      "memory_index": 10
+    },
+    {
+      "source_id": 1,
+      "source_time": "2023-02-25T10:33:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User attended a digital marketing workshop at a co-working space downtown covering social media advertising and SEO optimization techniques.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "co-working space downtown",
+        "reason": "to learn social media advertising and SEO optimization techniques",
+        "purpose": "to create an effective ad campaign on Facebook and Instagram",
+        "keywords": [
+          "digital marketing workshop",
+          "co-working space",
+          "social media advertising",
+          "SEO optimization",
+          "Facebook",
+          "Instagram",
+          "ad campaign"
+        ]
+      },
+      "window_index": 15,
+      "memory_index": 0
+    },
+    {
+      "source_id": 2,
+      "source_time": "2023-02-25T10:33:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is planning to create a social media ad campaign on Facebook and Instagram to promote their website, and wants to track its performance using Google Analytics.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "to promote website",
+        "purpose": "to track ad performance via Google Analytics",
+        "keywords": [
+          "social media ad campaign",
+          "Facebook",
+          "Instagram",
+          "website promotion",
+          "Google Analytics",
+          "ad performance tracking"
+        ]
+      },
+      "window_index": 15,
+      "memory_index": 1
+    },
+    {
+      "source_id": 3,
+      "source_time": "2023-02-25T10:33:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User owns a website.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "website"
+        ]
+      },
+      "window_index": 15,
+      "memory_index": 2
+    },
+    {
+      "source_id": 4,
+      "source_time": "2023-02-26T02:28:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is planning a trip to Japan.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Japan",
+        "reason": "",
+        "purpose": "to visit Tokyo and other places",
+        "keywords": [
+          "trip to Japan",
+          "Tokyo",
+          "travel planning"
+        ]
+      },
+      "window_index": 15,
+      "memory_index": 3
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-02-26T02:28:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User visited Tsukiji Fish Market in Tokyo during a previous trip and posted about it on Instagram Story, receiving 42 views.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Tsukiji Fish Market, Tokyo",
+        "reason": "",
+        "purpose": "to share the experience on Instagram",
+        "keywords": [
+          "Tsukiji Fish Market",
+          "Instagram Story",
+          "Tokyo",
+          "food market"
+        ]
+      },
+      "window_index": 15,
+      "memory_index": 4
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-02-26T02:28:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User visited Tokyo Tower during a previous trip and posted a photo on Instagram that received significant engagement.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Tokyo Tower",
+        "reason": "",
+        "purpose": "to share the photo on Instagram",
+        "keywords": [
+          "Tokyo Tower",
+          "Instagram",
+          "engagement",
+          "photo"
+        ]
+      },
+      "window_index": 15,
+      "memory_index": 5
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-02-26T17:08:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User tried sushi for the first time and shared the experience on Instagram, gaining 57 likes and 12 comments.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "first time trying sushi",
+        "purpose": "to share the experience on Instagram",
+        "keywords": [
+          "sushi",
+          "first time",
+          "Instagram",
+          "likes",
+          "comments"
+        ]
+      },
+      "window_index": 15,
+      "memory_index": 6
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-02-26T17:08:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User loves sushi.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "sushi",
+          "food preference",
+          "love sushi"
+        ]
+      },
+      "window_index": 15,
+      "memory_index": 7
+    },
+    {
+      "source_id": 9,
+      "source_time": "2023-02-26T17:08:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User frequently shares travel and food experiences on Instagram.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Instagram",
+          "travel sharing",
+          "food sharing",
+          "social media"
+        ]
+      },
+      "window_index": 15,
+      "memory_index": 8
+    },
+    {
+      "source_id": 1,
+      "source_time": "2023-02-26T07:33:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user is staying in the Shibuya area during a trip to Tokyo.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "Shibuya, Tokyo, Japan",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Shibuya",
+          "Tokyo",
+          "trip",
+          "accommodation"
+        ]
+      },
+      "window_index": 16,
+      "memory_index": 0
+    },
+    {
+      "source_id": 2,
+      "source_time": "2023-02-26T07:33:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user plans to visit Tokyo Tower from Shibuya.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Tokyo Tower, Tokyo, Japan",
+        "reason": "",
+        "purpose": "visit Tokyo Tower",
+        "keywords": [
+          "Tokyo Tower",
+          "Shibuya",
+          "visit"
+        ]
+      },
+      "window_index": 16,
+      "memory_index": 1
+    },
+    {
+      "source_id": 3,
+      "source_time": "2023-02-26T07:33:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user plans to visit the outer market of Tsukiji Fish Market from Shibuya.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Tsukiji Fish Market (outer market), Tokyo",
+        "reason": "",
+        "purpose": "visit Tsukiji outer market",
+        "keywords": [
+          "Tsukiji Fish Market",
+          "outer market",
+          "Shibuya"
+        ]
+      },
+      "window_index": 16,
+      "memory_index": 2
+    },
+    {
+      "source_id": 4,
+      "source_time": "2023-02-26T07:33:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user posted about a visit to Tsukiji Fish Market on Instagram Story and received 42 views.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Instagram Story",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Tsukiji Fish Market",
+          "Instagram Story",
+          "42 views"
+        ]
+      },
+      "window_index": 16,
+      "memory_index": 3
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-02-26T07:33:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user is trying to organize their coupons and gift cards.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "2023-02-28",
+        "location": "",
+        "reason": "to keep track",
+        "purpose": "organize coupons and gift cards",
+        "keywords": [
+          "coupons",
+          "gift cards",
+          "organization"
+        ]
+      },
+      "window_index": 16,
+      "memory_index": 4
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-02-26T07:33:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user decided to use a binder method to organize their coupons and gift cards on 2023-02-28.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-28",
+        "location": "",
+        "reason": "to organize coupons and gift cards",
+        "purpose": "use binder method",
+        "keywords": [
+          "binder method",
+          "coupons",
+          "gift cards",
+          "organization"
+        ]
+      },
+      "window_index": 16,
+      "memory_index": 5
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-02-28T06:02:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user saw a coupon for 20% off kitchen appliances at Best Buy in the newspaper on 2023-02-26.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-26",
+        "location": "Best Buy, newspaper",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "coupon",
+          "20% off",
+          "kitchen appliances",
+          "Best Buy",
+          "newspaper"
+        ]
+      },
+      "window_index": 16,
+      "memory_index": 6
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-02-28T06:02:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user has a discount voucher for Bed Bath & Beyond that is $20 off a $100 purchase, obtained around 2023-01-28, and expiring soon.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "2023-01-28",
+        "location": "Bed Bath & Beyond",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "Bed Bath & Beyond",
+          "discount voucher",
+          "$20 off $100",
+          "expiring soon"
+        ]
+      },
+      "window_index": 16,
+      "memory_index": 7
+    },
+    {
+      "source_id": 1,
+      "source_time": "2023-03-02T11:54:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user loves contemporary art.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "contemporary art",
+          "love"
+        ]
+      },
+      "window_index": 17,
+      "memory_index": 0
+    },
+    {
+      "source_id": 2,
+      "source_time": "2023-03-02T11:54:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user is always excited to discover new contemporary artists.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "excitement",
+          "discover",
+          "contemporary artists"
+        ]
+      },
+      "window_index": 17,
+      "memory_index": 1
+    },
+    {
+      "source_id": 3,
+      "source_time": "2023-03-02T11:54:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user plans to use Artsy and ArtNet and local art museums to find contemporary artists.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "to discover contemporary artists",
+        "keywords": [
+          "Artsy",
+          "ArtNet",
+          "local art museums",
+          "contemporary artists"
+        ]
+      },
+      "window_index": 17,
+      "memory_index": 2
+    },
+    {
+      "source_id": 4,
+      "source_time": "2023-03-02T11:54:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user has recently developed an interest in art installations.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "art installations",
+          "interest"
+        ]
+      },
+      "window_index": 17,
+      "memory_index": 3
+    },
+    {
+      "source_id": 5,
+      "source_time": "2023-03-02T11:54:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "On 2023-03-04, the user took their niece to the Natural History Museum to see the 'Dinosaur Fossils' exhibition, and the niece loved the life-sized T-Rex replica.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-03-04",
+        "location": "Natural History Museum",
+        "reason": "",
+        "purpose": "to see the exhibition",
+        "keywords": [
+          "Natural History Museum",
+          "Dinosaur Fossils",
+          "T-Rex replica",
+          "niece"
+        ]
+      },
+      "window_index": 17,
+      "memory_index": 4
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-03-02T11:54:02.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user visited the Metropolitan Museum of Art to see the Ancient Egyptian Artifacts exhibition and was impressed by the golden mask of Pharaoh Tutankhamun.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Metropolitan Museum of Art",
+        "reason": "",
+        "purpose": "to see the exhibition",
+        "keywords": [
+          "Metropolitan Museum of Art",
+          "Ancient Egyptian Artifacts",
+          "golden mask",
+          "Pharaoh Tutankhamun"
+        ]
+      },
+      "window_index": 17,
+      "memory_index": 5
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-03-04T19:42:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user and their niece enjoyed the hands-on activities section at the Natural History Museum's 'Dinosaur Fossils' exhibition.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Natural History Museum",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "hands-on activities",
+          "Dinosaur Fossils",
+          "Natural History Museum",
+          "niece"
+        ]
+      },
+      "window_index": 17,
+      "memory_index": 6
+    },
+    {
+      "source_id": 8,
+      "source_time": "2023-03-04T19:42:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user plans to take their niece to the Children's Museum.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Children's Museum",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "niece",
+          "Children's Museum"
+        ]
+      },
+      "window_index": 17,
+      "memory_index": 7
+    },
+    {
+      "source_id": 9,
+      "source_time": "2023-03-04T19:42:01",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user attended a guided tour of the Modern Art Museum's installation 'The Evolution of Abstract Expressionism' and was moved by the large-scale installation by Anselm Kiefer.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Modern Art Museum",
+        "reason": "",
+        "purpose": "to attend a guided tour",
+        "keywords": [
+          "Modern Art Museum",
+          "The Evolution of Abstract Expressionism",
+          "guided tour",
+          "Anselm Kiefer",
+          "large-scale installation"
+        ]
+      },
+      "window_index": 17,
+      "memory_index": 8
+    },
+    {
+      "source_id": 10,
+      "source_time": "2023-03-04T19:42:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user attended a lecture series at the Museum of Contemporary Art where Dr. Maria Rodriguez spoke about the role of feminist art in the 1970s, and the user enjoyed networking with other art enthusiasts during the reception.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "",
+        "location": "Museum of Contemporary Art",
+        "reason": "",
+        "purpose": "to attend a lecture series",
+        "keywords": [
+          "Museum of Contemporary Art",
+          "lecture series",
+          "Dr. Maria Rodriguez",
+          "feminist art",
+          "1970s",
+          "networking",
+          "art enthusiasts"
+        ]
+      },
+      "window_index": 17,
+      "memory_index": 9
+    },
+    {
+      "source_id": 11,
+      "source_time": "2023-03-04T19:42:02",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "On the weekend around 2023-02-25, the user removed heavy drapes from their bedroom windows to let in natural light.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-02-25",
+        "location": "bedroom",
+        "reason": "",
+        "purpose": "to let in natural light",
+        "keywords": [
+          "heavy drapes",
+          "bedroom",
+          "natural light",
+          "removal"
+        ]
+      },
+      "window_index": 17,
+      "memory_index": 10
+    },
+    {
+      "source_id": 12,
+      "source_time": "2023-03-04T13:19:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "The user has a niece.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "niece"
+        ]
+      },
+      "window_index": 17,
+      "memory_index": 11
+    },
+    {
+      "source_id": 6,
+      "source_time": "2023-03-04T14:26:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User prefers the assistant to keep responses concise.",
+      "dimension": {
+        "memory_type": "profile",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "response style",
+          "concise"
+        ]
+      },
+      "window_index": 18,
+      "memory_index": 0
+    },
+    {
+      "source_id": 7,
+      "source_time": "2023-03-04T14:26:00.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is planning a Discord bot project that listens to JIRA webhooks and determines which Discord user to mention based on the event type.",
+      "dimension": {
+        "memory_type": "episodic",
+        "time": "2023-03-04T14:26:00",
+        "location": "",
+        "reason": "",
+        "purpose": "to determine who to mention in a Discord server based on JIRA webhook events",
+        "keywords": [
+          "Discord bot",
+          "JIRA webhook",
+          "event type",
+          "mention",
+          "project planning"
+        ]
+      },
+      "window_index": 18,
+      "memory_index": 1
+    },
+    {
+      "source_id": 9,
+      "source_time": "2023-03-04T14:26:01.500000",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User designed a data model for a Discord bot project with entities User, EventRule, and UserType, with many-to-many relationships between User and EventRule, and between UserType and EventRule, and a one-to-many relationship from UserType to User.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": [
+          "data model",
+          "Discord bot",
+          "User",
+          "EventRule",
+          "UserType",
+          "many-to-many",
+          "one-to-many"
+        ]
+      },
+      "window_index": 18,
+      "memory_index": 2
+    },
+    {
+      "source_id": 11,
+      "source_time": "2023-03-04T20:16:00",
+      "session_id": "",
+      "session_local_user_index": 0,
+      "content": "User is associated with GMBM LTD, a company that has patented technology for sea rafts made from inside-concreted bottoms of shipping containers, capable of movement on water and land, connectable into arrays with power lift adaptability and hydraulic freight and passenger elevators, aimed at reducing seaport congestion and providing alternative real estate.",
+      "dimension": {
+        "memory_type": "fact",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "to reduce seaport congestion and provide an alternative to traditional real estate development",
+        "keywords": [
+          "GMBM LTD",
+          "sea rafts",
+          "shipping containers",
+          "patented technology",
+          "marine settlements",
+          "seaport congestion",
+          "real estate"
+        ]
+      },
+      "window_index": 18,
+      "memory_index": 3
+    }
+  ]
+}

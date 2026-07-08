@@ -1,0 +1,3032 @@
+[
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "The user is a beginner considering purchasing a NAS device for home network storage due to storage capacity issues.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "home network",
+      "reason": "storage capacity issues",
+      "purpose": "",
+      "keywords": [
+        "NAS",
+        "beginner",
+        "home network",
+        "storage"
+      ]
+    },
+    "entities": [
+      "NAS",
+      "beginner",
+      "home network",
+      "storage"
+    ],
+    "embedding_text": "The user is a beginner considering purchasing a NAS device for home network storage due to storage capacity issues.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0134",
+    "source_time": "2023-05-29 05:27:00",
+    "record_time": "2026-07-07T19:50:59.042624",
+    "score": 14.206372929854071,
+    "score_components": {
+      "bm25_score": 14.206372929854071,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 14.206372929854071,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 14.206372929854071
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.325
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.619337608986774
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "The user plans to try out the Fender Mustang II guitar amp at a downtown music store during the weekend of June 3, 2023.",
+    "dimension": {
+      "time": "2023-06-03",
+      "location": "downtown music store",
+      "reason": "to test the amp's sound and feel",
+      "purpose": "to decide whether to buy it",
+      "keywords": [
+        "Fender Mustang II",
+        "guitar amp",
+        "try out",
+        "weekend"
+      ]
+    },
+    "entities": [
+      "Fender Mustang II",
+      "guitar amp",
+      "try out",
+      "weekend"
+    ],
+    "embedding_text": "The user plans to try out the Fender Mustang II guitar amp at a downtown music store during the weekend of June 3, 2023.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0161",
+    "source_time": "2023-05-30 12:51:01",
+    "record_time": "2026-07-07T19:50:59.042780",
+    "score": 12.088066577408846,
+    "score_components": {
+      "bm25_score": 12.088066577408846,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 12.088066577408846,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 12.088066577408846
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.225
+      },
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.2444912129785065
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "The user needs to buy new drumheads for their drum set and plans to call a store to check availability.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "need new drumheads",
+      "purpose": "to replace or get new drumheads",
+      "keywords": [
+        "drumheads",
+        "drum set",
+        "buy"
+      ]
+    },
+    "entities": [
+      "drumheads",
+      "drum set",
+      "buy"
+    ],
+    "embedding_text": "The user needs to buy new drumheads for their drum set and plans to call a store to check availability.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0162",
+    "source_time": "2023-05-30 12:51:01.500000",
+    "record_time": "2026-07-07T19:50:59.042786",
+    "score": 11.472476760131237,
+    "score_components": {
+      "bm25_score": 11.472476760131237,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 11.472476760131237,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 11.472476760131237
+      },
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.225
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "As of 2023-05-29, the user backs up files to an external hard drive and wants a NAS for central backup for all devices including laptop and phone.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "",
+      "reason": "",
+      "purpose": "central backup for all devices",
+      "keywords": [
+        "external hard drive",
+        "backup",
+        "NAS",
+        "central backup",
+        "laptop",
+        "phone"
+      ]
+    },
+    "entities": [
+      "external hard drive",
+      "backup",
+      "NAS",
+      "central backup",
+      "laptop",
+      "phone"
+    ],
+    "embedding_text": "As of 2023-05-29, the user backs up files to an external hard drive and wants a NAS for central backup for all devices including laptop and phone.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0135",
+    "source_time": "2023-05-29 05:27:01",
+    "record_time": "2026-07-07T19:50:59.042631",
+    "score": 8.171094332445454,
+    "score_components": {
+      "bm25_score": 8.171094332445454,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 8.171094332445454,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 8.171094332445454
+      },
+      {
+        "method": "structured",
+        "rank": 10,
+        "score": 0.1
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.45355722571478857
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "profile",
+    "content": "User uses a tea infuser for herbal teas and is open to trying cold brew for teas.",
+    "dimension": {
+      "time": "2023-05-24T21:03:01",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "tea infuser",
+        "cold brew",
+        "tea",
+        "brewing method"
+      ]
+    },
+    "entities": [
+      "tea infuser",
+      "cold brew",
+      "tea",
+      "brewing method"
+    ],
+    "embedding_text": "User uses a tea infuser for herbal teas and is open to trying cold brew for teas.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0076",
+    "source_time": "2023-05-24 21:03:01",
+    "record_time": "2026-07-07T19:50:59.042289",
+    "score": 8.11379159659005,
+    "score_components": {
+      "bm25_score": 8.11379159659005,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 8.11379159659005,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 8.11379159659005
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "The user is concerned about data security on a NAS and seeks devices with encryption and access control features.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "",
+      "reason": "concern about data security",
+      "purpose": "",
+      "keywords": [
+        "NAS",
+        "security",
+        "encryption",
+        "access control"
+      ]
+    },
+    "entities": [
+      "NAS",
+      "security",
+      "encryption",
+      "access control"
+    ],
+    "embedding_text": "The user is concerned about data security on a NAS and seeks devices with encryption and access control features.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0136",
+    "source_time": "2023-05-29 05:27:02",
+    "record_time": "2026-07-07T19:50:59.042636",
+    "score": 8.096624803820049,
+    "score_components": {
+      "bm25_score": 8.096624803820049,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 8.096624803820049,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 8.096624803820049
+      },
+      {
+        "method": "structured",
+        "rank": 11,
+        "score": 0.1
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.5816691543469487
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "User is concerned whether 20 watts is enough power for a small band and considers the Mustang II instead.",
+    "dimension": {
+      "time": "2023-05-30",
+      "location": "",
+      "reason": "plays in small band at small to medium venues",
+      "purpose": "ensure sufficient power",
+      "keywords": [
+        "20 watts",
+        "Mustang II",
+        "band venues"
+      ]
+    },
+    "entities": [
+      "20 watts",
+      "Mustang II",
+      "band venues"
+    ],
+    "embedding_text": "User is concerned whether 20 watts is enough power for a small band and considers the Mustang II instead.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0157",
+    "source_time": "2023-05-30 10:40:00",
+    "record_time": "2026-07-07T19:50:59.042757",
+    "score": 8.003154274162393,
+    "score_components": {
+      "bm25_score": 8.003154274162393,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 8.003154274162393,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 8.003154274162393
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "The user plans a day trip to Hague, Virginia to rent kayaks or canoes.",
+    "dimension": {
+      "time": "",
+      "location": "Hague, Virginia",
+      "reason": "",
+      "purpose": "day trip for kayaking or canoeing",
+      "keywords": [
+        "day trip",
+        "Hague",
+        "Virginia",
+        "kayak rental",
+        "canoe rental"
+      ]
+    },
+    "entities": [
+      "day trip",
+      "Hague",
+      "Virginia",
+      "kayak rental",
+      "canoe rental"
+    ],
+    "embedding_text": "The user plans a day trip to Hague, Virginia to rent kayaks or canoes.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0010",
+    "source_time": "2023-05-20 11:36:01",
+    "record_time": "2026-07-07T19:50:59.041822",
+    "score": 7.586291309244784,
+    "score_components": {
+      "bm25_score": 7.586291309244784,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 7.586291309244784,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 7.586291309244784
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "User traded in an iPhone 11 Pro at Best Buy to offset the cost of a Samsung Galaxy S22 Ultra.",
+    "dimension": {
+      "time": "",
+      "location": "Best Buy",
+      "reason": "offset cost",
+      "purpose": "purchase new phone",
+      "keywords": [
+        "iPhone 11 Pro",
+        "trade-in",
+        "Best Buy",
+        "Samsung Galaxy S22 Ultra"
+      ]
+    },
+    "entities": [
+      "iPhone 11 Pro",
+      "trade-in",
+      "Best Buy",
+      "Samsung Galaxy S22 Ultra"
+    ],
+    "embedding_text": "User traded in an iPhone 11 Pro at Best Buy to offset the cost of a Samsung Galaxy S22 Ultra.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0145",
+    "source_time": "2023-05-29 16:27:00.500000",
+    "record_time": "2026-07-07T19:50:59.042689",
+    "score": 6.326264292058534,
+    "score_components": {
+      "bm25_score": 6.326264292058534,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 6.326264292058534,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 6.326264292058534
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.225
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.3565952270675913
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "User has been working on a clay vase and is trying to improve their clay modeling skills, specifically coiling and scoring.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "to improve skills",
+      "purpose": "",
+      "keywords": [
+        "clay vase",
+        "coiling",
+        "scoring",
+        "clay modeling"
+      ]
+    },
+    "entities": [
+      "clay vase",
+      "coiling",
+      "scoring",
+      "clay modeling"
+    ],
+    "embedding_text": "User has been working on a clay vase and is trying to improve their clay modeling skills, specifically coiling and scoring.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0002",
+    "source_time": "2023-05-20 06:39:01",
+    "record_time": "2026-07-07T19:50:59.041767",
+    "score": 6.2598875158835225,
+    "score_components": {
+      "bm25_score": 6.2598875158835225,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 6.2598875158835225,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 6.2598875158835225
+      },
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "User is developing a game where a player reaches a target or encounters a bot.",
+    "dimension": {
+      "time": "2023-05-26",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "game",
+        "player",
+        "target",
+        "bot"
+      ]
+    },
+    "entities": [
+      "game",
+      "player",
+      "target",
+      "bot"
+    ],
+    "embedding_text": "User is developing a game where a player reaches a target or encounters a bot.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0107",
+    "source_time": "2023-05-26 07:11:00",
+    "record_time": "2026-07-07T19:50:59.042469",
+    "score": 6.250653364453687,
+    "score_components": {
+      "bm25_score": 6.250653364453687,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 6.250653364453687,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 6.250653364453687
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "User is looking for a laptop with an Intel Core i5 or i7 processor for gaming, considering models from Acer, Lenovo, and HP.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "",
+      "reason": "want smooth gaming performance",
+      "purpose": "purchase laptop",
+      "keywords": [
+        "Intel Core i5",
+        "Intel Core i7",
+        "gaming laptop",
+        "Acer",
+        "Lenovo",
+        "HP"
+      ]
+    },
+    "entities": [
+      "Intel Core i5",
+      "Intel Core i7",
+      "gaming laptop",
+      "Acer",
+      "Lenovo",
+      "HP"
+    ],
+    "embedding_text": "User is looking for a laptop with an Intel Core i5 or i7 processor for gaming, considering models from Acer, Lenovo, and HP.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0146",
+    "source_time": "2023-05-29 16:27:02",
+    "record_time": "2026-07-07T19:50:59.042695",
+    "score": 6.034754543665656,
+    "score_components": {
+      "bm25_score": 6.034754543665656,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 6.034754543665656,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 6.034754543665656
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "The user added Ethiopia to their travel bucket list and is interested in trying local Ethiopian dishes.",
+    "dimension": {
+      "time": "2023-05-21",
+      "location": "Ethiopia",
+      "reason": "",
+      "purpose": "planning future travel and experiencing local cuisine",
+      "keywords": [
+        "Ethiopia",
+        "travel bucket list",
+        "local dishes",
+        "cuisine"
+      ]
+    },
+    "entities": [
+      "Ethiopia",
+      "travel bucket list",
+      "local dishes",
+      "cuisine"
+    ],
+    "embedding_text": "The user added Ethiopia to their travel bucket list and is interested in trying local Ethiopian dishes.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0041",
+    "source_time": "2023-05-21 14:04:01.500000",
+    "record_time": "2026-07-07T19:50:59.042009",
+    "score": 5.614952194858871,
+    "score_components": {
+      "bm25_score": 5.614952194858871,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 5.614952194858871,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 5.614952194858871
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "profile",
+    "content": "User enjoys cooking and trying new recipes.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "cooking",
+        "new recipes"
+      ]
+    },
+    "entities": [
+      "cooking",
+      "new recipes"
+    ],
+    "embedding_text": "User enjoys cooking and trying new recipes.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0111",
+    "source_time": "2023-05-26 08:30:00",
+    "record_time": "2026-07-07T19:50:59.042493",
+    "score": 4.79729168543562,
+    "score_components": {
+      "bm25_score": 4.79729168543562,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 4.79729168543562,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 4.79729168543562
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "The user recently visited a Korean BBQ joint with coworkers and enjoyed trying different meats and kimchi.",
+    "dimension": {
+      "time": "",
+      "location": "Korean BBQ joint",
+      "reason": "outing with coworkers",
+      "purpose": "enjoyment",
+      "keywords": [
+        "Korean BBQ",
+        "coworkers",
+        "meats",
+        "kimchi",
+        "dining out"
+      ]
+    },
+    "entities": [
+      "Korean BBQ",
+      "coworkers",
+      "meats",
+      "kimchi",
+      "dining out"
+    ],
+    "embedding_text": "The user recently visited a Korean BBQ joint with coworkers and enjoyed trying different meats and kimchi.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0094",
+    "source_time": "2023-05-25 13:14:02",
+    "record_time": "2026-07-07T19:50:59.042393",
+    "score": 4.787263337615534,
+    "score_components": {
+      "bm25_score": 4.787263337615534,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 4.787263337615534,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 4.787263337615534
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "profile",
+    "content": "User prefers a synthetic fiber rug with frieze texture for the living room because it is easy to clean and maintain.",
+    "dimension": {
+      "time": "2023-05-30",
+      "location": "living room",
+      "reason": "easy to clean and maintain",
+      "purpose": "",
+      "keywords": [
+        "synthetic fiber rug",
+        "frieze texture",
+        "easy clean",
+        "maintenance"
+      ]
+    },
+    "entities": [
+      "synthetic fiber rug",
+      "frieze texture",
+      "easy clean",
+      "maintenance"
+    ],
+    "embedding_text": "User prefers a synthetic fiber rug with frieze texture for the living room because it is easy to clean and maintain.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0151",
+    "source_time": "2023-05-30 10:40:00",
+    "record_time": "2026-07-07T19:50:59.042724",
+    "score": 4.719447049405271,
+    "score_components": {
+      "bm25_score": 4.719447049405271,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 16,
+    "retrieval_score": 4.719447049405271,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 16,
+        "score": 4.719447049405271
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "User uses a new cold brew coffee blend from a coffee shop in Chicago and drinks it black without sugar or creamer.",
+    "dimension": {
+      "time": "2023-05-24T21:03:00.500000",
+      "location": "Chicago",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "cold brew",
+        "coffee",
+        "Chicago",
+        "black coffee"
+      ]
+    },
+    "entities": [
+      "cold brew",
+      "coffee",
+      "Chicago",
+      "black coffee"
+    ],
+    "embedding_text": "User uses a new cold brew coffee blend from a coffee shop in Chicago and drinks it black without sugar or creamer.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0075",
+    "source_time": "2023-05-24 21:03:00.500000",
+    "record_time": "2026-07-07T19:50:59.042284",
+    "score": 4.5875859347818615,
+    "score_components": {
+      "bm25_score": 4.5875859347818615,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 17,
+    "retrieval_score": 4.5875859347818615,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 17,
+        "score": 4.5875859347818615
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "The user went to El Patio with friends on approximately 2023-05-11 and enjoyed trying tacos and burritos.",
+    "dimension": {
+      "time": "2023-05-11",
+      "location": "El Patio",
+      "reason": "social outing with friends",
+      "purpose": "enjoyment",
+      "keywords": [
+        "El Patio",
+        "friends",
+        "tacos",
+        "burritos",
+        "dining out"
+      ]
+    },
+    "entities": [
+      "El Patio",
+      "friends",
+      "tacos",
+      "burritos",
+      "dining out"
+    ],
+    "embedding_text": "The user went to El Patio with friends on approximately 2023-05-11 and enjoyed trying tacos and burritos.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0090",
+    "source_time": "2023-05-25 13:14:00",
+    "record_time": "2026-07-07T19:50:59.042369",
+    "score": 4.53491807534491,
+    "score_components": {
+      "bm25_score": 4.53491807534491,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 18,
+    "retrieval_score": 4.53491807534491,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 18,
+        "score": 4.53491807534491
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "User is looking for a new amp and is interested in Fender Mustang and Marshall MG30.",
+    "dimension": {
+      "time": "2023-05-30",
+      "location": "",
+      "reason": "",
+      "purpose": "find suitable amp",
+      "keywords": [
+        "amp",
+        "Fender Mustang",
+        "Marshall MG30"
+      ]
+    },
+    "entities": [
+      "amp",
+      "Fender Mustang",
+      "Marshall MG30"
+    ],
+    "embedding_text": "User is looking for a new amp and is interested in Fender Mustang and Marshall MG30.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0156",
+    "source_time": "2023-05-30 10:40:02.500000",
+    "record_time": "2026-07-07T19:50:59.042751",
+    "score": 4.432464560034727,
+    "score_components": {
+      "bm25_score": 4.432464560034727,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 19,
+    "retrieval_score": 4.432464560034727,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 19,
+        "score": 4.432464560034727
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "User plans a trip to Paris and seeks recommendations for reliable ATMs, affordable hotels, authentic French cuisine, and off-peak evening/weekend activities.",
+    "dimension": {
+      "time": "",
+      "location": "Paris",
+      "reason": "planning a trip",
+      "purpose": "to prepare for the trip",
+      "keywords": [
+        "Paris",
+        "trip",
+        "ATM",
+        "hotels",
+        "French cuisine",
+        "off-peak activities"
+      ]
+    },
+    "entities": [
+      "Paris",
+      "trip",
+      "ATM",
+      "hotels",
+      "French cuisine",
+      "off-peak activities"
+    ],
+    "embedding_text": "User plans a trip to Paris and seeks recommendations for reliable ATMs, affordable hotels, authentic French cuisine, and off-peak evening/weekend activities.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0127",
+    "source_time": "2023-05-27 00:11:01.500000",
+    "record_time": "2026-07-07T19:50:59.042583",
+    "score": 4.180877336937157,
+    "score_components": {
+      "bm25_score": 4.180877336937157,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 20,
+    "retrieval_score": 4.180877336937157,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 20,
+        "score": 4.180877336937157
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "profile",
+    "content": "The user enjoys creating themed playlists for events like cookouts and takes pride in introducing lesser-known songs to others.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "The user fancies themselves a music kid and wants to share music others might not know.",
+      "purpose": "To introduce others to lesser-known music.",
+      "keywords": [
+        "playlist",
+        "cookout",
+        "music discovery",
+        "sharing"
+      ]
+    },
+    "entities": [
+      "playlist",
+      "cookout",
+      "music discovery",
+      "sharing"
+    ],
+    "embedding_text": "The user enjoys creating themed playlists for events like cookouts and takes pride in introducing lesser-known songs to others.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0045",
+    "source_time": "2023-05-21 19:36:02",
+    "record_time": "2026-07-07T19:50:59.042034",
+    "score": 0.125,
+    "structural_score": 0.125,
+    "score_components": {
+      "score": 0.125,
+      "answer_field_score": 1.0,
+      "memory_type_score": 0.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.25,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "keyword_phrase_match": 0.5,
+        "keyword_token_overlap": 0.5
+      },
+      "active_components": {
+        "keyword_phrase_match": 0.25,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user enjoys creating themed playlists for events like cookouts and takes pride in introducing lesser-known songs to others. | playlist | cookout | music discovery | sharing | The user fancies themselves a music kid and wants to share music others might not know. | To introduce others to lesser-known music. | playlist | cookout | music discovery | sharing"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 5,
+    "retrieval_score": 0.125,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.125
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "User is planning a trip to Paris, France soon.",
+    "dimension": {
+      "time": "2023-05-27",
+      "location": "Paris, France",
+      "reason": "vacation",
+      "purpose": "know currency and payment",
+      "keywords": [
+        "Paris",
+        "trip"
+      ]
+    },
+    "entities": [
+      "Paris",
+      "trip"
+    ],
+    "embedding_text": "User is planning a trip to Paris, France soon.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0124",
+    "source_time": "2023-05-27 00:11:00.500000",
+    "record_time": "2026-07-07T19:50:59.042564",
+    "score": 0.125,
+    "structural_score": 0.125,
+    "score_components": {
+      "score": 0.125,
+      "answer_field_score": 1.0,
+      "memory_type_score": 0.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.25,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "keyword_phrase_match": 0.5,
+        "keyword_token_overlap": 0.5
+      },
+      "active_components": {
+        "keyword_phrase_match": 0.25,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User is planning a trip to Paris, France soon. | Paris | trip | 2023-05-27 | Paris, France | vacation | know currency and payment | Paris | trip"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 6,
+    "retrieval_score": 0.125,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.125
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "User wants to know about local currency (Euro) and exchange rates for their trip to Paris.",
+    "dimension": {
+      "time": "",
+      "location": "Paris, France",
+      "reason": "trip planning",
+      "purpose": "budget",
+      "keywords": [
+        "Euro",
+        "exchange rate"
+      ]
+    },
+    "entities": [
+      "Euro",
+      "exchange rate"
+    ],
+    "embedding_text": "User wants to know about local currency (Euro) and exchange rates for their trip to Paris.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0125",
+    "source_time": "2023-05-27 00:11:00.500000",
+    "record_time": "2026-07-07T19:50:59.042570",
+    "score": 0.125,
+    "structural_score": 0.125,
+    "score_components": {
+      "score": 0.125,
+      "answer_field_score": 1.0,
+      "memory_type_score": 0.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.25,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "keyword_phrase_match": 0.5,
+        "keyword_token_overlap": 0.5
+      },
+      "active_components": {
+        "keyword_phrase_match": 0.25,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User wants to know about local currency (Euro) and exchange rates for their trip to Paris. | Euro | exchange rate | Paris, France | trip planning | budget | Euro | exchange rate"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 7,
+    "retrieval_score": 0.125,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 7,
+        "score": 0.125
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "User uses American Express card and wants to know if it is accepted in Paris in addition to cash.",
+    "dimension": {
+      "time": "",
+      "location": "Paris, France",
+      "reason": "payment method",
+      "purpose": "plan payment",
+      "keywords": [
+        "American Express",
+        "payment methods",
+        "Paris"
+      ]
+    },
+    "entities": [
+      "American Express",
+      "payment methods",
+      "Paris"
+    ],
+    "embedding_text": "User uses American Express card and wants to know if it is accepted in Paris in addition to cash.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0126",
+    "source_time": "2023-05-27 00:11:01",
+    "record_time": "2026-07-07T19:50:59.042576",
+    "score": 0.125,
+    "structural_score": 0.125,
+    "score_components": {
+      "score": 0.125,
+      "answer_field_score": 1.0,
+      "memory_type_score": 0.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.25,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "keyword_phrase_match": 0.5,
+        "keyword_token_overlap": 0.5
+      },
+      "active_components": {
+        "keyword_phrase_match": 0.25,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User uses American Express card and wants to know if it is accepted in Paris in addition to cash. | American Express | payment methods | Paris | Paris, France | payment method | plan payment | American Express | payment methods | Paris"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 8,
+    "retrieval_score": 0.125,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 8,
+        "score": 0.125
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "User is considering buying a storage ottoman with removable tops to store running shoes and other bulky sports gear.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "",
+      "reason": "need storage for bulky gear",
+      "purpose": "organization",
+      "keywords": [
+        "storage ottoman",
+        "removable tops",
+        "running shoes",
+        "sports gear"
+      ]
+    },
+    "entities": [
+      "storage ottoman",
+      "removable tops",
+      "running shoes",
+      "sports gear"
+    ],
+    "embedding_text": "User is considering buying a storage ottoman with removable tops to store running shoes and other bulky sports gear.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0142",
+    "source_time": "2023-05-29 14:11:02.500000",
+    "record_time": "2026-07-07T19:50:59.042672",
+    "score": 0.125,
+    "structural_score": 0.125,
+    "score_components": {
+      "score": 0.125,
+      "answer_field_score": 1.0,
+      "memory_type_score": 0.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.25,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "keyword_phrase_match": 0.5,
+        "keyword_token_overlap": 0.5
+      },
+      "active_components": {
+        "keyword_phrase_match": 0.25,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User is considering buying a storage ottoman with removable tops to store running shoes and other bulky sports gear. | storage ottoman | removable tops | running shoes | sports gear | 2023-05-29 | need storage for bulky gear | organization | storage ottoman | removable tops | running shoes | sports gear"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 9,
+    "retrieval_score": 0.125,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 9,
+        "score": 0.125
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "User visited an art museum in their city on 2023-05-20 and saw a modern sculpture exhibit that inspired them.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "art museum in the city",
+      "reason": "inspired by the exhibit",
+      "purpose": "seeking information on modern sculptors",
+      "keywords": [
+        "modern sculpture",
+        "art museum",
+        "inspiration"
+      ]
+    },
+    "entities": [
+      "modern sculpture",
+      "art museum",
+      "inspiration"
+    ],
+    "embedding_text": "User visited an art museum in their city on 2023-05-20 and saw a modern sculpture exhibit that inspired them.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0000",
+    "source_time": "2023-05-20 06:39:00",
+    "record_time": "2026-07-07T19:50:59.041744",
+    "score": 0.0,
+    "structural_score": 0.0,
+    "score_components": {
+      "score": 0.0,
+      "answer_field_score": 1.0,
+      "memory_type_score": 0.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "keyword_phrase_match": 0.5,
+        "keyword_token_overlap": 0.5
+      },
+      "active_components": {
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User visited an art museum in their city on 2023-05-20 and saw a modern sculpture exhibit that inspired them. | modern sculpture | art museum | inspiration | 2023-05-20 | art museum in the city | inspired by the exhibit | seeking information on modern sculptors | modern sculpture | art museum | inspiration"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.0,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 12,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "profile",
+    "content": "User is interested in Anish Kapoor's work, especially his use of reflective surfaces.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Anish Kapoor",
+        "reflective surfaces"
+      ]
+    },
+    "entities": [
+      "Anish Kapoor",
+      "reflective surfaces"
+    ],
+    "embedding_text": "User is interested in Anish Kapoor's work, especially his use of reflective surfaces.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0001",
+    "source_time": "2023-05-20 06:39:00.500000",
+    "record_time": "2026-07-07T19:50:59.041759",
+    "score": 0.0,
+    "structural_score": 0.0,
+    "score_components": {
+      "score": 0.0,
+      "answer_field_score": 1.0,
+      "memory_type_score": 0.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "keyword_phrase_match": 0.5,
+        "keyword_token_overlap": 0.5
+      },
+      "active_components": {
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User is interested in Anish Kapoor's work, especially his use of reflective surfaces. | Anish Kapoor | reflective surfaces | Anish Kapoor | reflective surfaces"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 13,
+    "retrieval_score": 0.0,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 13,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "User works with earthenware clay and wants to try air-dry clay and stoneware clay.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to learn about different clay bodies",
+      "purpose": "",
+      "keywords": [
+        "earthenware clay",
+        "air-dry clay",
+        "stoneware clay"
+      ]
+    },
+    "entities": [
+      "earthenware clay",
+      "air-dry clay",
+      "stoneware clay"
+    ],
+    "embedding_text": "User works with earthenware clay and wants to try air-dry clay and stoneware clay.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0003",
+    "source_time": "2023-05-20 06:39:01.500000",
+    "record_time": "2026-07-07T19:50:59.041775",
+    "score": 0.0,
+    "structural_score": 0.0,
+    "score_components": {
+      "score": 0.0,
+      "answer_field_score": 1.0,
+      "memory_type_score": 0.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "keyword_phrase_match": 0.5,
+        "keyword_token_overlap": 0.5
+      },
+      "active_components": {
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User works with earthenware clay and wants to try air-dry clay and stoneware clay. | earthenware clay | air-dry clay | stoneware clay | to learn about different clay bodies | earthenware clay | air-dry clay | stoneware clay"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.0,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 15,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "User experiments with glazes on earthenware pieces and seeks to achieve a consistent food-safe finish.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to achieve a food-safe finish",
+      "purpose": "learning glazing and firing techniques",
+      "keywords": [
+        "glazes",
+        "earthenware",
+        "food-safe finish"
+      ]
+    },
+    "entities": [
+      "glazes",
+      "earthenware",
+      "food-safe finish"
+    ],
+    "embedding_text": "User experiments with glazes on earthenware pieces and seeks to achieve a consistent food-safe finish.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0004",
+    "source_time": "2023-05-20 06:39:02",
+    "record_time": "2026-07-07T19:50:59.041781",
+    "score": 0.0,
+    "structural_score": 0.0,
+    "score_components": {
+      "score": 0.0,
+      "answer_field_score": 1.0,
+      "memory_type_score": 0.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "keyword_phrase_match": 0.5,
+        "keyword_token_overlap": 0.5
+      },
+      "active_components": {
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User experiments with glazes on earthenware pieces and seeks to achieve a consistent food-safe finish. | glazes | earthenware | food-safe finish | to achieve a food-safe finish | learning glazing and firing techniques | glazes | earthenware | food-safe finish"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.0,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 16,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "User bought a silver necklace from Zara as a birthday gift for their sister who turned 25 on 2023-05-15.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "mall",
+      "reason": "sister's birthday",
+      "purpose": "gift",
+      "keywords": [
+        "silver necklace",
+        "Zara",
+        "sister",
+        "birthday gift",
+        "age 25"
+      ]
+    },
+    "entities": [
+      "silver necklace",
+      "Zara",
+      "sister",
+      "birthday gift",
+      "age 25"
+    ],
+    "embedding_text": "User bought a silver necklace from Zara as a birthday gift for their sister who turned 25 on 2023-05-15.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0005",
+    "source_time": "2023-05-20 09:27:00",
+    "record_time": "2026-07-07T19:50:59.041788",
+    "score": 0.0,
+    "structural_score": 0.0,
+    "score_components": {
+      "score": 0.0,
+      "answer_field_score": 1.0,
+      "memory_type_score": 0.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "keyword_phrase_match": 0.5,
+        "keyword_token_overlap": 0.5
+      },
+      "active_components": {
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User bought a silver necklace from Zara as a birthday gift for their sister who turned 25 on 2023-05-15. | silver necklace | Zara | sister | birthday gift | age 25 | 2023-05-20 | mall | sister's birthday | gift | silver necklace | Zara | sister | birthday gift | age 25"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.0,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 17,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "profile",
+    "content": "User prefers personalized gifts and values unique handmade items for friends.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "personalized gifts",
+        "handmade items",
+        "unique"
+      ]
+    },
+    "entities": [
+      "personalized gifts",
+      "handmade items",
+      "unique"
+    ],
+    "embedding_text": "User prefers personalized gifts and values unique handmade items for friends.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0006",
+    "source_time": "2023-05-20 09:27:01",
+    "record_time": "2026-07-07T19:50:59.041795",
+    "score": 0.0,
+    "structural_score": 0.0,
+    "score_components": {
+      "score": 0.0,
+      "answer_field_score": 1.0,
+      "memory_type_score": 0.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "keyword_phrase_match": 0.5,
+        "keyword_token_overlap": 0.5
+      },
+      "active_components": {
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User prefers personalized gifts and values unique handmade items for friends. | personalized gifts | handmade items | unique | personalized gifts | handmade items | unique"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.0,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 18,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "User is in a long-distance relationship and wants to surprise their partner with romantic activities.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "maintain intimacy",
+      "purpose": "surprise partner",
+      "keywords": [
+        "long-distance relationship",
+        "romantic activities",
+        "partner"
+      ]
+    },
+    "entities": [
+      "long-distance relationship",
+      "romantic activities",
+      "partner"
+    ],
+    "embedding_text": "User is in a long-distance relationship and wants to surprise their partner with romantic activities.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0007",
+    "source_time": "2023-05-20 11:36:00",
+    "record_time": "2026-07-07T19:50:59.041801",
+    "score": 0.0,
+    "structural_score": 0.0,
+    "score_components": {
+      "score": 0.0,
+      "answer_field_score": 1.0,
+      "memory_type_score": 0.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "keyword_phrase_match": 0.5,
+        "keyword_token_overlap": 0.5
+      },
+      "active_components": {
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User is in a long-distance relationship and wants to surprise their partner with romantic activities. | long-distance relationship | romantic activities | partner | 2023-05-20 | maintain intimacy | surprise partner | long-distance relationship | romantic activities | partner"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.0,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 19,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "The user drove alone to San Francisco to attend a music festival in Golden Gate Park during the weekend of 2023-05-13 to 2023-05-14.",
+    "dimension": {
+      "time": "2023-05-13 to 2023-05-14",
+      "location": "San Francisco, Golden Gate Park",
+      "reason": "to attend a music festival",
+      "purpose": "",
+      "keywords": [
+        "solo drive",
+        "San Francisco",
+        "music festival",
+        "Golden Gate Park"
+      ]
+    },
+    "entities": [
+      "solo drive",
+      "San Francisco",
+      "music festival",
+      "Golden Gate Park"
+    ],
+    "embedding_text": "The user drove alone to San Francisco to attend a music festival in Golden Gate Park during the weekend of 2023-05-13 to 2023-05-14.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0008",
+    "source_time": "2023-05-20 11:36:00",
+    "record_time": "2026-07-07T19:50:59.041808",
+    "score": 0.0,
+    "structural_score": 0.0,
+    "score_components": {
+      "score": 0.0,
+      "answer_field_score": 1.0,
+      "memory_type_score": 0.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "keyword_phrase_match": 0.5,
+        "keyword_token_overlap": 0.5
+      },
+      "active_components": {
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user drove alone to San Francisco to attend a music festival in Golden Gate Park during the weekend of 2023-05-13 to 2023-05-14. | solo drive | San Francisco | music festival | Golden Gate Park | 2023-05-13 to 2023-05-14 | San Francisco, Golden Gate Park | to attend a music festival | solo drive | San Francisco | music festival | Golden Gate Park"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 20,
+    "retrieval_score": 0.0,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 20,
+        "score": 0.0
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "User's current laptop is about three years old and slowing down, prompting consideration of a new MacBook Air with M1 chip.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "",
+      "reason": "laptop slowing down",
+      "purpose": "replace laptop",
+      "keywords": [
+        "laptop",
+        "three years old",
+        "MacBook Air",
+        "M1 chip"
+      ]
+    },
+    "entities": [
+      "laptop",
+      "three years old",
+      "MacBook Air",
+      "M1 chip"
+    ],
+    "embedding_text": "User's current laptop is about three years old and slowing down, prompting consideration of a new MacBook Air with M1 chip.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0144",
+    "source_time": "2023-05-29 16:27:00",
+    "record_time": "2026-07-07T19:50:59.042684",
+    "score": 0.3254678606345704,
+    "score_components": {
+      "dense_cosine_score": 0.3254678606345704,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 5,
+    "retrieval_score": 0.3254678606345704,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.3254678606345704
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "profile",
+    "content": "User has a morning coffee routine that is a non-negotiable part of their day.",
+    "dimension": {
+      "time": "2023-05-24T21:03:00",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "morning coffee",
+        "routine",
+        "non-negotiable"
+      ]
+    },
+    "entities": [
+      "morning coffee",
+      "routine",
+      "non-negotiable"
+    ],
+    "embedding_text": "User has a morning coffee routine that is a non-negotiable part of their day.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0072",
+    "source_time": "2023-05-24 21:03:00",
+    "record_time": "2026-07-07T19:50:59.042266",
+    "score": 0.30437567986084374,
+    "score_components": {
+      "dense_cosine_score": 0.30437567986084374,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 6,
+    "retrieval_score": 0.30437567986084374,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 6,
+        "score": 0.30437567986084374
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "profile",
+    "content": "User prioritizes outdoor adventures and travel in their free time.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "outdoor adventures",
+        "travel",
+        "priority"
+      ]
+    },
+    "entities": [
+      "outdoor adventures",
+      "travel",
+      "priority"
+    ],
+    "embedding_text": "User prioritizes outdoor adventures and travel in their free time.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0025",
+    "source_time": "2023-05-21 01:22:02",
+    "record_time": "2026-07-07T19:50:59.041910",
+    "score": 0.29391084361356995,
+    "score_components": {
+      "dense_cosine_score": 0.29391084361356995,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 7,
+    "retrieval_score": 0.29391084361356995,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 7,
+        "score": 0.29391084361356995
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "The user attended a digital marketing workshop around February 10-11, 2023.",
+    "dimension": {
+      "time": "2023-02-10 to 2023-02-11",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "digital marketing workshop",
+        "February 2023"
+      ]
+    },
+    "entities": [
+      "digital marketing workshop",
+      "February 2023"
+    ],
+    "embedding_text": "The user attended a digital marketing workshop around February 10-11, 2023.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0081",
+    "source_time": "2023-05-25 04:12:00.500000",
+    "record_time": "2026-07-07T19:50:59.042318",
+    "score": 0.29073813180758334,
+    "score_components": {
+      "dense_cosine_score": 0.29073813180758334,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 8,
+    "retrieval_score": 0.29073813180758334,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 8,
+        "score": 0.29073813180758334
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "profile",
+    "content": "User is aware of their own backpacking limitations and seeks appropriate difficulty levels.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "backpacking limitations",
+        "difficulty awareness"
+      ]
+    },
+    "entities": [
+      "backpacking limitations",
+      "difficulty awareness"
+    ],
+    "embedding_text": "User is aware of their own backpacking limitations and seeks appropriate difficulty levels.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0029",
+    "source_time": null,
+    "record_time": "2026-07-07T19:50:59.041933",
+    "score": 0.2780947972539176,
+    "score_components": {
+      "dense_cosine_score": 0.2780947972539176,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 9,
+    "retrieval_score": 0.2780947972539176,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.2780947972539176
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "User requested adding mobile controls to the game.",
+    "dimension": {
+      "time": "2023-05-26",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "mobile controls",
+        "game"
+      ]
+    },
+    "entities": [
+      "mobile controls",
+      "game"
+    ],
+    "embedding_text": "User requested adding mobile controls to the game.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0109",
+    "source_time": "2023-05-26 07:11:01",
+    "record_time": "2026-07-07T19:50:59.042481",
+    "score": 0.27745197906793445,
+    "score_components": {
+      "dense_cosine_score": 0.27745197906793445,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.27745197906793445,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 10,
+        "score": 0.27745197906793445
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "profile",
+    "content": "The user seeks eco-friendly transportation, accommodations, airlines, gear, and apps for travel.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "eco-friendly",
+        "transportation",
+        "accommodations",
+        "airlines",
+        "travel gear",
+        "travel apps",
+        "sustainable"
+      ]
+    },
+    "entities": [
+      "eco-friendly",
+      "transportation",
+      "accommodations",
+      "airlines",
+      "travel gear",
+      "travel apps",
+      "sustainable"
+    ],
+    "embedding_text": "The user seeks eco-friendly transportation, accommodations, airlines, gear, and apps for travel.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0032",
+    "source_time": "2023-05-21 08:20:00.500000",
+    "record_time": "2026-07-07T19:50:59.041954",
+    "score": 0.27732501176629704,
+    "score_components": {
+      "dense_cosine_score": 0.27732501176629704,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 11,
+    "retrieval_score": 0.27732501176629704,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.27732501176629704
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "User is a guitarist.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "guitarist"
+      ]
+    },
+    "entities": [
+      "guitarist"
+    ],
+    "embedding_text": "User is a guitarist.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0153",
+    "source_time": "2023-05-30 10:40:01",
+    "record_time": "2026-07-07T19:50:59.042734",
+    "score": 0.2682369975917629,
+    "score_components": {
+      "dense_cosine_score": 0.2682369975917629,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.2682369975917629,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.2682369975917629
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "The user created a business plan outline on February 10, 2023.",
+    "dimension": {
+      "time": "2023-02-10",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "business plan",
+        "outline",
+        "February 10, 2023"
+      ]
+    },
+    "entities": [
+      "business plan",
+      "outline",
+      "February 10, 2023"
+    ],
+    "embedding_text": "The user created a business plan outline on February 10, 2023.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0059",
+    "source_time": "2023-05-22 23:34:01.500000",
+    "record_time": "2026-07-07T19:50:59.042119",
+    "score": 0.2615477946467983,
+    "score_components": {
+      "dense_cosine_score": 0.2615477946467983,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 13,
+    "retrieval_score": 0.2615477946467983,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 13,
+        "score": 0.2615477946467983
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "profile",
+    "content": "The user prefers flying American Airlines.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "prefer",
+        "American Airlines",
+        "air travel"
+      ]
+    },
+    "entities": [
+      "prefer",
+      "American Airlines",
+      "air travel"
+    ],
+    "embedding_text": "The user prefers flying American Airlines.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0064",
+    "source_time": "2023-05-23 02:10:00",
+    "record_time": "2026-07-07T19:50:59.042218",
+    "score": 0.25118078294306445,
+    "score_components": {
+      "dense_cosine_score": 0.25118078294306445,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.25118078294306445,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 14,
+        "score": 0.25118078294306445
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "episodic",
+    "content": "The user found Rachel Lee's presentation style engaging and easy to understand at the digital marketing workshop.",
+    "dimension": {
+      "time": "2023-02-10 to 2023-02-11",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Rachel Lee",
+        "presentation style",
+        "engaging"
+      ]
+    },
+    "entities": [
+      "Rachel Lee",
+      "presentation style",
+      "engaging"
+    ],
+    "embedding_text": "The user found Rachel Lee's presentation style engaging and easy to understand at the digital marketing workshop.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0084",
+    "source_time": "2023-05-25 04:12:01",
+    "record_time": "2026-07-07T19:50:59.042335",
+    "score": 0.25100940510119163,
+    "score_components": {
+      "dense_cosine_score": 0.25100940510119163,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.25100940510119163,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 15,
+        "score": 0.25100940510119163
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "profile",
+    "content": "User enjoys trying new herbal teas.",
+    "dimension": {
+      "time": "2023-05-24T21:03:00",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "herbal tea",
+        "new flavors"
+      ]
+    },
+    "entities": [
+      "herbal tea",
+      "new flavors"
+    ],
+    "embedding_text": "User enjoys trying new herbal teas.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0073",
+    "source_time": "2023-05-24 21:03:00",
+    "record_time": "2026-07-07T19:50:59.042272",
+    "score": 0.24990752925855755,
+    "score_components": {
+      "dense_cosine_score": 0.24990752925855755,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.24990752925855755,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 16,
+        "score": 0.24990752925855755
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "User uses a Samsung Galaxy S22 Ultra and charges it nightly with a Belkin wireless charging pad purchased on Amazon for $25.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Samsung Galaxy S22 Ultra",
+        "Belkin wireless charging pad",
+        "Amazon",
+        "$25"
+      ]
+    },
+    "entities": [
+      "Samsung Galaxy S22 Ultra",
+      "Belkin wireless charging pad",
+      "Amazon",
+      "$25"
+    ],
+    "embedding_text": "User uses a Samsung Galaxy S22 Ultra and charges it nightly with a Belkin wireless charging pad purchased on Amazon for $25.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0143",
+    "source_time": "2023-05-29 16:27:00",
+    "record_time": "2026-07-07T19:50:59.042678",
+    "score": 0.2462166096664434,
+    "score_components": {
+      "dense_cosine_score": 0.2462166096664434,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.2462166096664434,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 17,
+        "score": 0.2462166096664434
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "fact",
+    "content": "The user met speaker Rachel Lee at the digital marketing workshop and connected with her on LinkedIn.",
+    "dimension": {
+      "time": "2023-02-10 to 2023-02-11",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Rachel Lee",
+        "LinkedIn",
+        "digital marketing workshop"
+      ]
+    },
+    "entities": [
+      "Rachel Lee",
+      "LinkedIn",
+      "digital marketing workshop"
+    ],
+    "embedding_text": "The user met speaker Rachel Lee at the digital marketing workshop and connected with her on LinkedIn.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0082",
+    "source_time": "2023-05-25 04:12:01",
+    "record_time": "2026-07-07T19:50:59.042324",
+    "score": 0.24301270698860666,
+    "score_components": {
+      "dense_cosine_score": 0.24301270698860666,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.24301270698860666,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 19,
+        "score": 0.24301270698860666
+      }
+    ]
+  },
+  {
+    "user_id": "0029_1da05512",
+    "memory_type": "profile",
+    "content": "User does not have access to a TV for slides and prefers creative instructional materials like Venn diagrams and graphic organizers.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "no TV access",
+      "purpose": "make materials enjoyable",
+      "keywords": [
+        "instructional materials",
+        "Venn diagrams",
+        "graphic organizers"
+      ]
+    },
+    "entities": [
+      "instructional materials",
+      "Venn diagrams",
+      "graphic organizers"
+    ],
+    "embedding_text": "User does not have access to a TV for slides and prefers creative instructional materials like Venn diagrams and graphic organizers.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0123",
+    "source_time": "2023-05-26 15:16:00",
+    "record_time": "2026-07-07T19:50:59.042559",
+    "score": 0.2419601563491877,
+    "score_components": {
+      "dense_cosine_score": 0.2419601563491877,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 20,
+    "retrieval_score": 0.2419601563491877,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 20,
+        "score": 0.2419601563491877
+      }
+    ]
+  }
+]

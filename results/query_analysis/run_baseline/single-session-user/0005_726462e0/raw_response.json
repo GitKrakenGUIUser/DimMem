@@ -1,0 +1,32 @@
+{
+  "id": "d33cc09b-0fb3-4ad3-87e4-446dd0544ef6",
+  "object": "chat.completion",
+  "created": 1783356376,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"The user's discount on their first purchase from the new clothing brand\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"first purchase\", \"clothing brand\", \"discount\"],\n    \"time\": \"\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"content\"\n}",
+        "reasoning_content": "We need to parse the user question: \"What was the discount I got on my first purchase from the new clothing brand?\" into the structured JSON format.\n\nGiven question date: 2023/05/30, but question doesn't have explicit time constraint; it asks about \"first purchase\" which is an episodic memory with a specific event. The discount amount is the answer dimension.\n\n- query_anchor: Rewrite as \"The user's discount on their first purchase from the new clothing brand\"\n- need_assistant_context: False. No reference to previous conversation or assistant output.\n- dimension.target_memory_type: episodic (first purchase event) and possibly fact (discount value). But primary is episodic.\n- dimension.keywords: \"first purchase\", \"new clothing brand\", \"discount\" – but keywords should be short phrases. Extract key entities: \"first purchase\", \"clothing brand\"\n- dimension.time: No explicit time constraint. The phrase \"first purchase\" implies the earliest purchase, but that's not a time constraint like a date. So empty.\n- dimension.location: Not mentioned.\n- answer_dim: The discount is a number or percentage, which is part of the event content. So \"content\" because it's a specific piece of information about the event.\n\nBut careful: \"What was the discount\" is asking for the discount amount, which is likely stored as part of the purchase event. So answer_dim = \"content\".\n\nThus JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 691,
+    "completion_tokens": 384,
+    "total_tokens": 1075,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 296
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 51
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

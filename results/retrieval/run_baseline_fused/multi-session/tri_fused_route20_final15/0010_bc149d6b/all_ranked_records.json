@@ -1,0 +1,3200 @@
+[
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user observed an improvement in egg quality after switching to a new layer feed.",
+    "dimension": {
+      "time": "2023-05-22",
+      "location": "",
+      "reason": "switching to new layer feed",
+      "purpose": "to improve egg quality",
+      "keywords": [
+        "egg quality",
+        "improvement",
+        "layer feed",
+        "new feed"
+      ]
+    },
+    "entities": [
+      "egg quality",
+      "improvement",
+      "layer feed",
+      "new feed"
+    ],
+    "embedding_text": "The user observed an improvement in egg quality after switching to a new layer feed.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0039",
+    "source_time": "2023-05-22 05:24:01.500000",
+    "record_time": "2026-07-07T19:50:46.939714",
+    "score": 10.923705715247946,
+    "score_components": {
+      "bm25_score": 10.923705715247946,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 10.923705715247946,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 10.923705715247946
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.4333333333333333
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.3038866592572113
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user purchased a 50-pound batch of layer feed for approximately $120 after a 10% discount from a local farm supply store.",
+    "dimension": {
+      "time": "",
+      "location": "local farm supply store",
+      "reason": "to feed chickens",
+      "purpose": "to feed chickens",
+      "keywords": [
+        "layer feed",
+        "50-pound",
+        "purchase",
+        "$120",
+        "10% discount",
+        "farm supply store"
+      ]
+    },
+    "entities": [
+      "layer feed",
+      "50-pound",
+      "purchase",
+      "$120",
+      "10% discount",
+      "farm supply store"
+    ],
+    "embedding_text": "The user purchased a 50-pound batch of layer feed for approximately $120 after a 10% discount from a local farm supply store.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0038",
+    "source_time": "2023-05-22 05:24:01",
+    "record_time": "2026-07-07T19:50:46.939708",
+    "score": 10.735298615505554,
+    "score_components": {
+      "bm25_score": 10.735298615505554,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 10.735298615505554,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 10.735298615505554
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.4333333333333333
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.5143531245850093
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "fact",
+    "content": "The user helps with the props department for an upcoming community theater production of 'Chicago' (1920s-themed) as of 2023-05-29.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "community theater",
+      "reason": "",
+      "purpose": "upcoming production of Chicago",
+      "keywords": [
+        "props department",
+        "Chicago",
+        "community theater",
+        "1920s-themed"
+      ]
+    },
+    "entities": [
+      "props department",
+      "Chicago",
+      "community theater",
+      "1920s-themed"
+    ],
+    "embedding_text": "The user helps with the props department for an upcoming community theater production of 'Chicago' (1920s-themed) as of 2023-05-29.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0139",
+    "source_time": "2023-05-29 09:22:00",
+    "record_time": "2026-07-07T19:50:46.940419",
+    "score": 8.063227872368179,
+    "score_components": {
+      "bm25_score": 8.063227872368179,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 8.063227872368179,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 8.063227872368179
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User attended a Chinese New Year parade in April 2023 and a Diwali festival in early May 2023.",
+    "dimension": {
+      "time": "2023-04 to 2023-05-10",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Chinese New Year parade",
+        "Diwali festival",
+        "cultural events",
+        "community"
+      ]
+    },
+    "entities": [
+      "Chinese New Year parade",
+      "Diwali festival",
+      "cultural events",
+      "community"
+    ],
+    "embedding_text": "User attended a Chinese New Year parade in April 2023 and a Diwali festival in early May 2023.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0089",
+    "source_time": "2023-05-26 18:11:00",
+    "record_time": "2026-07-07T19:50:46.940123",
+    "score": 7.738900758191947,
+    "score_components": {
+      "bm25_score": 7.738900758191947,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 7.738900758191947,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 7.738900758191947
+      },
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.2666666666666666
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user watched the movie musical 'Evita' around 2023-05-08 and loved it.",
+    "dimension": {
+      "time": "2023-05-08",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Evita",
+        "movie musical",
+        "user watched",
+        "loved"
+      ]
+    },
+    "entities": [
+      "Evita",
+      "movie musical",
+      "user watched",
+      "loved"
+    ],
+    "embedding_text": "The user watched the movie musical 'Evita' around 2023-05-08 and loved it.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0129",
+    "source_time": "2023-05-29 04:41:00",
+    "record_time": "2026-07-07T19:50:46.940360",
+    "score": 7.496815652680699,
+    "score_components": {
+      "bm25_score": 7.496815652680699,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 7.496815652680699,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 7.496815652680699
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user's sister had a birthday three weeks before 2023-05-26.",
+    "dimension": {
+      "time": "2023-05-05",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "sister",
+        "birthday"
+      ]
+    },
+    "entities": [
+      "sister",
+      "birthday"
+    ],
+    "embedding_text": "The user's sister had a birthday three weeks before 2023-05-26.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0083",
+    "source_time": "2023-05-25 23:41:02.500000",
+    "record_time": "2026-07-07T19:50:46.940086",
+    "score": 7.207220744704735,
+    "score_components": {
+      "bm25_score": 7.207220744704735,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 7.207220744704735,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 7.207220744704735
+      },
+      {
+        "method": "minilm",
+        "rank": 19,
+        "score": 0.20096950760057594
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user went on a 5-day hiking trip to Yellowstone National Park with friends in April 2023, hiking over 30 miles and seeing grizzly bears, wolves, and elk.",
+    "dimension": {
+      "time": "2023-04",
+      "location": "Yellowstone National Park",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Yellowstone National Park",
+        "hiking",
+        "grizzly bears",
+        "wolves",
+        "elk",
+        "camping"
+      ]
+    },
+    "entities": [
+      "Yellowstone National Park",
+      "hiking",
+      "grizzly bears",
+      "wolves",
+      "elk",
+      "camping"
+    ],
+    "embedding_text": "The user went on a 5-day hiking trip to Yellowstone National Park with friends in April 2023, hiking over 30 miles and seeing grizzly bears, wolves, and elk.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0163",
+    "source_time": "2023-05-29 16:35:02.500000",
+    "record_time": "2026-07-07T19:50:46.940561",
+    "score": 7.010471733197726,
+    "score_components": {
+      "bm25_score": 7.010471733197726,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 7.010471733197726,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 7.010471733197726
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user ate a burger with bacon and cheese at his friend Mike's house a few weeks before 2023-05-25.",
+    "dimension": {
+      "time": "",
+      "location": "Mike's house",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "burger",
+        "bacon",
+        "cheese",
+        "Mike"
+      ]
+    },
+    "entities": [
+      "burger",
+      "bacon",
+      "cheese",
+      "Mike"
+    ],
+    "embedding_text": "The user ate a burger with bacon and cheese at his friend Mike's house a few weeks before 2023-05-25.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0071",
+    "source_time": "2023-05-25 10:09:02.500000",
+    "record_time": "2026-07-07T19:50:46.940014",
+    "score": 6.623642164780247,
+    "score_components": {
+      "bm25_score": 6.623642164780247,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 6.623642164780247,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 6.623642164780247
+      },
+      {
+        "method": "minilm",
+        "rank": 7,
+        "score": 0.253929526463029
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user listened to the 'Hamilton' soundtrack on their daily commute from around 2023-05-15 and became hooked, appreciating the clever and dense lyrics.",
+    "dimension": {
+      "time": "2023-05-15",
+      "location": "daily commute",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Hamilton",
+        "soundtrack",
+        "daily commute",
+        "clever lyrics",
+        "user hooked"
+      ]
+    },
+    "entities": [
+      "Hamilton",
+      "soundtrack",
+      "daily commute",
+      "clever lyrics",
+      "user hooked"
+    ],
+    "embedding_text": "The user listened to the 'Hamilton' soundtrack on their daily commute from around 2023-05-15 and became hooked, appreciating the clever and dense lyrics.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0136",
+    "source_time": "2023-05-29 04:41:02",
+    "record_time": "2026-07-07T19:50:46.940401",
+    "score": 6.465411692798675,
+    "score_components": {
+      "bm25_score": 6.465411692798675,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 6.465411692798675,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 6.465411692798675
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "fact",
+    "content": "The user owns a flock of chickens and recently added two new hens to the flock.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "chickens",
+        "flock",
+        "hens",
+        "addition"
+      ]
+    },
+    "entities": [
+      "chickens",
+      "flock",
+      "hens",
+      "addition"
+    ],
+    "embedding_text": "The user owns a flock of chickens and recently added two new hens to the flock.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0035",
+    "source_time": "2023-05-22 00:06:02.500000",
+    "record_time": "2026-07-07T19:50:46.939690",
+    "score": 6.421621495189503,
+    "score_components": {
+      "bm25_score": 6.421621495189503,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 6.421621495189503,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 6.421621495189503
+      },
+      {
+        "method": "minilm",
+        "rank": 8,
+        "score": 0.2531270132504874
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "fact",
+    "content": "User is an Account Executive at OwnBackup, a SaaS data protection platform, with achievements including President's Club 2022, highest ACV in segment 2022, Top Performer at Global 2023 Sales Kick-Off, and closing over 50 new logos.",
+    "dimension": {
+      "time": "2021-02 to present",
+      "location": "OwnBackup",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "OwnBackup",
+        "Account Executive",
+        "President's Club",
+        "ACV",
+        "Top Performer",
+        "new logos"
+      ]
+    },
+    "entities": [
+      "OwnBackup",
+      "Account Executive",
+      "President's Club",
+      "ACV",
+      "Top Performer",
+      "new logos"
+    ],
+    "embedding_text": "User is an Account Executive at OwnBackup, a SaaS data protection platform, with achievements including President's Club 2022, highest ACV in segment 2022, Top Performer at Global 2023 Sales Kick-Off, and closing over 50 new logos.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0093",
+    "source_time": "2023-05-26 19:18:00",
+    "record_time": "2026-07-07T19:50:46.940147",
+    "score": 6.186354320253081,
+    "score_components": {
+      "bm25_score": 6.186354320253081,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 6.186354320253081,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 6.186354320253081
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user volunteered backstage at the city theater production of 'The Importance of Being Earnest' in April 2023 and found props and costumes at an estate sale.",
+    "dimension": {
+      "time": "2023-04",
+      "location": "city theater",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "The Importance of Being Earnest",
+        "backstage volunteer",
+        "estate sale",
+        "props and costumes"
+      ]
+    },
+    "entities": [
+      "The Importance of Being Earnest",
+      "backstage volunteer",
+      "estate sale",
+      "props and costumes"
+    ],
+    "embedding_text": "The user volunteered backstage at the city theater production of 'The Importance of Being Earnest' in April 2023 and found props and costumes at an estate sale.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0141",
+    "source_time": "2023-05-29 09:22:01",
+    "record_time": "2026-07-07T19:50:46.940431",
+    "score": 6.047389831262769,
+    "score_components": {
+      "bm25_score": 6.047389831262769,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 6.047389831262769,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 6.047389831262769
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "fact",
+    "content": "User purchased black leather boots from Zara on January 15th.",
+    "dimension": {
+      "time": "2023-01-15",
+      "location": "Zara",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "black leather boots",
+        "Zara",
+        "purchased"
+      ]
+    },
+    "entities": [
+      "black leather boots",
+      "Zara",
+      "purchased"
+    ],
+    "embedding_text": "User purchased black leather boots from Zara on January 15th.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0029",
+    "source_time": "2023-05-22 00:06:01.500000",
+    "record_time": "2026-07-07T19:50:46.939653",
+    "score": 5.994677215787964,
+    "score_components": {
+      "bm25_score": 5.994677215787964,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 5.994677215787964,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 5.994677215787964
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User recently bought 20 pounds of organic scratch grains for chickens.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "for chickens",
+      "purpose": "to feed chickens",
+      "keywords": [
+        "organic scratch grains",
+        "20 pounds",
+        "chickens",
+        "purchase"
+      ]
+    },
+    "entities": [
+      "organic scratch grains",
+      "20 pounds",
+      "chickens",
+      "purchase"
+    ],
+    "embedding_text": "User recently bought 20 pounds of organic scratch grains for chickens.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0043",
+    "source_time": "2023-05-22 16:34:00",
+    "record_time": "2026-07-07T19:50:46.939738",
+    "score": 5.810409616853912,
+    "score_components": {
+      "bm25_score": 5.810409616853912,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 5.810409616853912,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 5.810409616853912
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.2666666666666666
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.34655444291653154
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user had an oil change approximately two months before 2023-05-24, using synthetic blend oil, performed at a dealership.",
+    "dimension": {
+      "time": "2023-03-24",
+      "location": "a dealership",
+      "reason": "routine maintenance",
+      "purpose": "",
+      "keywords": [
+        "oil change",
+        "synthetic blend oil",
+        "dealership"
+      ]
+    },
+    "entities": [
+      "oil change",
+      "synthetic blend oil",
+      "dealership"
+    ],
+    "embedding_text": "The user had an oil change approximately two months before 2023-05-24, using synthetic blend oil, performed at a dealership.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0054",
+    "source_time": "2023-05-22 17:26:03.500000",
+    "record_time": "2026-07-07T19:50:46.939824",
+    "score": 5.64195049265844,
+    "score_components": {
+      "bm25_score": 5.64195049265844,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 5.64195049265844,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 5.64195049265844
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.26541433979145695
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user plans to purchase WeatherTech DigitalFit floor mats for the front and rear seats of their 2018 Honda Civic.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "the user wants new floor mats",
+      "purpose": "to replace existing floor mats",
+      "keywords": [
+        "WeatherTech",
+        "DigitalFit",
+        "floor mats",
+        "2018 Honda Civic"
+      ]
+    },
+    "entities": [
+      "WeatherTech",
+      "DigitalFit",
+      "floor mats",
+      "2018 Honda Civic"
+    ],
+    "embedding_text": "The user plans to purchase WeatherTech DigitalFit floor mats for the front and rear seats of their 2018 Honda Civic.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0053",
+    "source_time": "2023-05-22 17:26:03",
+    "record_time": "2026-07-07T19:50:46.939818",
+    "score": 4.98134349308509,
+    "score_components": {
+      "bm25_score": 4.98134349308509,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 16,
+    "retrieval_score": 4.98134349308509,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 16,
+        "score": 4.98134349308509
+      },
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.2666666666666666
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "fact",
+    "content": "The user met a woman who runs a successful marketing agency at a Chamber of Commerce networking breakfast last month (April 2023).",
+    "dimension": {
+      "time": "2023-04",
+      "location": "Chamber of Commerce networking breakfast",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "woman",
+        "marketing agency",
+        "Chamber of Commerce",
+        "networking breakfast"
+      ]
+    },
+    "entities": [
+      "woman",
+      "marketing agency",
+      "Chamber of Commerce",
+      "networking breakfast"
+    ],
+    "embedding_text": "The user met a woman who runs a successful marketing agency at a Chamber of Commerce networking breakfast last month (April 2023).",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0055",
+    "source_time": "2023-05-24 04:27:00",
+    "record_time": "2026-07-07T19:50:46.939830",
+    "score": 4.870319988088463,
+    "score_components": {
+      "bm25_score": 4.870319988088463,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 17,
+    "retrieval_score": 4.870319988088463,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 17,
+        "score": 4.870319988088463
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user attended a stage production of 'The Glass Menagerie' around 2023-04-29 at a local theater company with an intimate setting of about 50 seats.",
+    "dimension": {
+      "time": "2023-04-29",
+      "location": "local theater company",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "The Glass Menagerie",
+        "stage production",
+        "intimate setting",
+        "50 seats"
+      ]
+    },
+    "entities": [
+      "The Glass Menagerie",
+      "stage production",
+      "intimate setting",
+      "50 seats"
+    ],
+    "embedding_text": "The user attended a stage production of 'The Glass Menagerie' around 2023-04-29 at a local theater company with an intimate setting of about 50 seats.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0133",
+    "source_time": "2023-05-29 04:41:01",
+    "record_time": "2026-07-07T19:50:46.940383",
+    "score": 4.756065835566677,
+    "score_components": {
+      "bm25_score": 4.756065835566677,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 18,
+    "retrieval_score": 4.756065835566677,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 18,
+        "score": 4.756065835566677
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User is considering trying kickboxing and looking for beginner-friendly classes or online resources.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "interest in new workout",
+      "purpose": "get started with kickboxing",
+      "keywords": [
+        "kickboxing",
+        "beginner",
+        "classes",
+        "online resources"
+      ]
+    },
+    "entities": [
+      "kickboxing",
+      "beginner",
+      "classes",
+      "online resources"
+    ],
+    "embedding_text": "User is considering trying kickboxing and looking for beginner-friendly classes or online resources.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0116",
+    "source_time": "2023-05-27 17:59:02.500000",
+    "record_time": "2026-07-07T19:50:46.940282",
+    "score": 4.663127094523296,
+    "score_components": {
+      "bm25_score": 4.663127094523296,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 19,
+    "retrieval_score": 4.663127094523296,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 19,
+        "score": 4.663127094523296
+      },
+      {
+        "method": "structured",
+        "rank": 8,
+        "score": 0.2666666666666666
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "profile",
+    "content": "User is experimenting with different types of tofu and tempeh.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "tofu",
+        "tempeh",
+        "experimenting"
+      ]
+    },
+    "entities": [
+      "tofu",
+      "tempeh",
+      "experimenting"
+    ],
+    "embedding_text": "User is experimenting with different types of tofu and tempeh.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0021",
+    "source_time": "2023-05-21 13:35:00.500000",
+    "record_time": "2026-07-07T19:50:46.939607",
+    "score": 4.649764636020189,
+    "score_components": {
+      "bm25_score": 4.649764636020189,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 20,
+    "retrieval_score": 4.649764636020189,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 20,
+        "score": 4.649764636020189
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user plans to get another pig as a companion for their goat Luna and is seeking advice on how to introduce them.",
+    "dimension": {
+      "time": "",
+      "location": "farm",
+      "reason": "to provide a companion for Luna",
+      "purpose": "to introduce a new pig to Luna",
+      "keywords": [
+        "Luna",
+        "goat",
+        "pig",
+        "companion",
+        "introduction"
+      ]
+    },
+    "entities": [
+      "Luna",
+      "goat",
+      "pig",
+      "companion",
+      "introduction"
+    ],
+    "embedding_text": "The user plans to get another pig as a companion for their goat Luna and is seeking advice on how to introduce them.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0067",
+    "source_time": "2023-05-25 07:14:02.500000",
+    "record_time": "2026-07-07T19:50:46.939988",
+    "score": 0.2666666666666666,
+    "structural_score": 0.2666666666666666,
+    "score_components": {
+      "score": 0.2666666666666666,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-05-25T07:14:02.500000",
+            "end": "2023-05-25T07:14:02.500000",
+            "granularity": "datetime",
+            "raw": "2023-05-25T07:14:02.500000"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.3333333333333333,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.3333333333333333
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to get another pig as a companion for their goat Luna and is seeking advice on how to introduce them. | Luna | goat | pig | companion | introduction | farm | to provide a companion for Luna | to introduce a new pig to Luna | Luna | goat | pig | companion | introduction"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 5,
+    "retrieval_score": 0.2666666666666666,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.2666666666666666
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User recently bought a new dog bed from PetSmart for Max, which is black and brown with a soft cushion.",
+    "dimension": {
+      "time": "",
+      "location": "PetSmart",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "dog bed",
+        "PetSmart",
+        "black",
+        "brown",
+        "soft cushion",
+        "Max"
+      ]
+    },
+    "entities": [
+      "dog bed",
+      "PetSmart",
+      "black",
+      "brown",
+      "soft cushion",
+      "Max"
+    ],
+    "embedding_text": "User recently bought a new dog bed from PetSmart for Max, which is black and brown with a soft cushion.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0101",
+    "source_time": "2023-05-27 13:52:02",
+    "record_time": "2026-07-07T19:50:46.940195",
+    "score": 0.2666666666666666,
+    "structural_score": 0.2666666666666666,
+    "score_components": {
+      "score": 0.2666666666666666,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-05-27T13:52:02",
+            "end": "2023-05-27T13:52:02",
+            "granularity": "datetime",
+            "raw": "2023-05-27T13:52:02"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.3333333333333333,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.3333333333333333
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User recently bought a new dog bed from PetSmart for Max, which is black and brown with a soft cushion. | dog bed | PetSmart | black | brown | soft cushion | Max | PetSmart | dog bed | PetSmart | black | brown | soft cushion | Max"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 7,
+    "retrieval_score": 0.2666666666666666,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 7,
+        "score": 0.2666666666666666
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user made homemade pasta from scratch for the first time on March 12, 2023 (Sunday).",
+    "dimension": {
+      "time": "2023-03-12",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "homemade pasta",
+        "first time",
+        "March 12 2023"
+      ]
+    },
+    "entities": [
+      "homemade pasta",
+      "first time",
+      "March 12 2023"
+    ],
+    "embedding_text": "The user made homemade pasta from scratch for the first time on March 12, 2023 (Sunday).",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0006",
+    "source_time": "2023-05-20 07:38:00",
+    "record_time": "2026-07-07T19:50:46.939512",
+    "score": 0.19999999999999998,
+    "structural_score": 0.19999999999999998,
+    "score_components": {
+      "score": 0.19999999999999998,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-03-12T00:00:00",
+            "end": "2023-03-12T23:59:59.999999",
+            "granularity": "day",
+            "raw": "2023-03-12"
+          },
+          {
+            "start": "2023-05-20T07:38:00",
+            "end": "2023-05-20T07:38:00",
+            "granularity": "datetime",
+            "raw": "2023-05-20T07:38:00"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user made homemade pasta from scratch for the first time on March 12, 2023 (Sunday). | homemade pasta | first time | March 12 2023 | 2023-03-12 | homemade pasta | first time | March 12 2023"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 9,
+    "retrieval_score": 0.19999999999999998,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 9,
+        "score": 0.19999999999999998
+      },
+      {
+        "method": "minilm",
+        "rank": 20,
+        "score": 0.20000432022854508
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user made fettuccine, shaped the noodles by hand using a recipe from a cooking blog, and it turned out surprisingly well.",
+    "dimension": {
+      "time": "2023-03-12",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "fettuccine",
+        "hand-shaped noodles",
+        "cooking blog",
+        "successful"
+      ]
+    },
+    "entities": [
+      "fettuccine",
+      "hand-shaped noodles",
+      "cooking blog",
+      "successful"
+    ],
+    "embedding_text": "The user made fettuccine, shaped the noodles by hand using a recipe from a cooking blog, and it turned out surprisingly well.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0007",
+    "source_time": "2023-05-20 07:38:00.500000",
+    "record_time": "2026-07-07T19:50:46.939519",
+    "score": 0.19999999999999998,
+    "structural_score": 0.19999999999999998,
+    "score_components": {
+      "score": 0.19999999999999998,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-03-12T00:00:00",
+            "end": "2023-03-12T23:59:59.999999",
+            "granularity": "day",
+            "raw": "2023-03-12"
+          },
+          {
+            "start": "2023-05-20T07:38:00.500000",
+            "end": "2023-05-20T07:38:00.500000",
+            "granularity": "datetime",
+            "raw": "2023-05-20T07:38:00.500000"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user made fettuccine, shaped the noodles by hand using a recipe from a cooking blog, and it turned out surprisingly well. | fettuccine | hand-shaped noodles | cooking blog | successful | 2023-03-12 | fettuccine | hand-shaped noodles | cooking blog | successful"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.19999999999999998,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 10,
+        "score": 0.19999999999999998
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user tried Pad Thai from Thai Basil via Uber Eats in mid-May 2023 and has ordered it three times.",
+    "dimension": {
+      "time": "2023-05-13/2023-05-19",
+      "location": "Thai Basil (Uber Eats)",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Pad Thai",
+        "Thai Basil",
+        "Uber Eats",
+        "ordered three times"
+      ]
+    },
+    "entities": [
+      "Pad Thai",
+      "Thai Basil",
+      "Uber Eats",
+      "ordered three times"
+    ],
+    "embedding_text": "The user tried Pad Thai from Thai Basil via Uber Eats in mid-May 2023 and has ordered it three times.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0010",
+    "source_time": "2023-05-20 07:38:02",
+    "record_time": "2026-07-07T19:50:46.939538",
+    "score": 0.19999999999999998,
+    "structural_score": 0.19999999999999998,
+    "score_components": {
+      "score": 0.19999999999999998,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-05-20T07:38:02",
+            "end": "2023-05-20T07:38:02",
+            "granularity": "datetime",
+            "raw": "2023-05-20T07:38:02"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user tried Pad Thai from Thai Basil via Uber Eats in mid-May 2023 and has ordered it three times. | Pad Thai | Thai Basil | Uber Eats | ordered three times | 2023-05-13/2023-05-19 | Thai Basil (Uber Eats) | Pad Thai | Thai Basil | Uber Eats | ordered three times"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 11,
+    "retrieval_score": 0.19999999999999998,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 11,
+        "score": 0.19999999999999998
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user plans to add shrimp to Tom Yum Soup and try using galangal for the first time.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Tom Yum Soup",
+        "shrimp",
+        "galangal",
+        "first time"
+      ]
+    },
+    "entities": [
+      "Tom Yum Soup",
+      "shrimp",
+      "galangal",
+      "first time"
+    ],
+    "embedding_text": "The user plans to add shrimp to Tom Yum Soup and try using galangal for the first time.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0014",
+    "source_time": "2023-05-20 17:11:01.500000",
+    "record_time": "2026-07-07T19:50:46.939563",
+    "score": 0.19999999999999998,
+    "structural_score": 0.19999999999999998,
+    "score_components": {
+      "score": 0.19999999999999998,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-05-20T00:00:00",
+            "end": "2023-05-20T23:59:59.999999",
+            "granularity": "day",
+            "raw": "2023-05-20"
+          },
+          {
+            "start": "2023-05-20T17:11:01.500000",
+            "end": "2023-05-20T17:11:01.500000",
+            "granularity": "datetime",
+            "raw": "2023-05-20T17:11:01.500000"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to add shrimp to Tom Yum Soup and try using galangal for the first time. | Tom Yum Soup | shrimp | galangal | first time | 2023-05-20 | Tom Yum Soup | shrimp | galangal | first time"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.19999999999999998,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 12,
+        "score": 0.19999999999999998
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user wants to learn to make Pad Thai at home because they love the Pad Thai from Thai Basil.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "",
+      "purpose": "to make Pad Thai at home",
+      "keywords": [
+        "Pad Thai",
+        "home cooking",
+        "Thai Basil"
+      ]
+    },
+    "entities": [
+      "Pad Thai",
+      "home cooking",
+      "Thai Basil"
+    ],
+    "embedding_text": "The user wants to learn to make Pad Thai at home because they love the Pad Thai from Thai Basil.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0016",
+    "source_time": "2023-05-20 17:11:02.500000",
+    "record_time": "2026-07-07T19:50:46.939575",
+    "score": 0.19999999999999998,
+    "structural_score": 0.19999999999999998,
+    "score_components": {
+      "score": 0.19999999999999998,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-05-20T00:00:00",
+            "end": "2023-05-20T23:59:59.999999",
+            "granularity": "day",
+            "raw": "2023-05-20"
+          },
+          {
+            "start": "2023-05-20T17:11:02.500000",
+            "end": "2023-05-20T17:11:02.500000",
+            "granularity": "datetime",
+            "raw": "2023-05-20T17:11:02.500000"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user wants to learn to make Pad Thai at home because they love the Pad Thai from Thai Basil. | Pad Thai | home cooking | Thai Basil | 2023-05-20 | to make Pad Thai at home | Pad Thai | home cooking | Thai Basil"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 13,
+    "retrieval_score": 0.19999999999999998,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 13,
+        "score": 0.19999999999999998
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User recently had a Korean-inspired sauce with tofu.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Korean-inspired",
+        "sauce",
+        "tofu"
+      ]
+    },
+    "entities": [
+      "Korean-inspired",
+      "sauce",
+      "tofu"
+    ],
+    "embedding_text": "User recently had a Korean-inspired sauce with tofu.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0020",
+    "source_time": "2023-05-21 13:35:00",
+    "record_time": "2026-07-07T19:50:46.939601",
+    "score": 0.19999999999999998,
+    "structural_score": 0.19999999999999998,
+    "score_components": {
+      "score": 0.19999999999999998,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-05-21T13:35:00",
+            "end": "2023-05-21T13:35:00",
+            "granularity": "datetime",
+            "raw": "2023-05-21T13:35:00"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User recently had a Korean-inspired sauce with tofu. | Korean-inspired | sauce | tofu | Korean-inspired | sauce | tofu"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.19999999999999998,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.19999999999999998
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User plans to try gochujang chocolate chip cookies.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "gochujang",
+        "chocolate chip cookies",
+        "vegan"
+      ]
+    },
+    "entities": [
+      "gochujang",
+      "chocolate chip cookies",
+      "vegan"
+    ],
+    "embedding_text": "User plans to try gochujang chocolate chip cookies.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0023",
+    "source_time": "2023-05-21 13:35:01.500000",
+    "record_time": "2026-07-07T19:50:46.939619",
+    "score": 0.19999999999999998,
+    "structural_score": 0.19999999999999998,
+    "score_components": {
+      "score": 0.19999999999999998,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-05-21T13:35:01.500000",
+            "end": "2023-05-21T13:35:01.500000",
+            "granularity": "datetime",
+            "raw": "2023-05-21T13:35:01.500000"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User plans to try gochujang chocolate chip cookies. | gochujang | chocolate chip cookies | vegan | gochujang | chocolate chip cookies | vegan"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.19999999999999998,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 15,
+        "score": 0.19999999999999998
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User plans to try gochujang granola.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "gochujang",
+        "granola",
+        "vegan"
+      ]
+    },
+    "entities": [
+      "gochujang",
+      "granola",
+      "vegan"
+    ],
+    "embedding_text": "User plans to try gochujang granola.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0026",
+    "source_time": "2023-05-22 00:06:00",
+    "record_time": "2026-07-07T19:50:46.939636",
+    "score": 0.19999999999999998,
+    "structural_score": 0.19999999999999998,
+    "score_components": {
+      "score": 0.19999999999999998,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-05-22T00:06:00",
+            "end": "2023-05-22T00:06:00",
+            "granularity": "datetime",
+            "raw": "2023-05-22T00:06:00"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User plans to try gochujang granola. | gochujang | granola | vegan | gochujang | granola | vegan"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.19999999999999998,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 16,
+        "score": 0.19999999999999998
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User sought outfit ideas for black leather boots.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "outfit ideas",
+        "black leather boots"
+      ]
+    },
+    "entities": [
+      "outfit ideas",
+      "black leather boots"
+    ],
+    "embedding_text": "User sought outfit ideas for black leather boots.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0030",
+    "source_time": "2023-05-22 00:06:02",
+    "record_time": "2026-07-07T19:50:46.939659",
+    "score": 0.19999999999999998,
+    "structural_score": 0.19999999999999998,
+    "score_components": {
+      "score": 0.19999999999999998,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-05-22T00:06:02",
+            "end": "2023-05-22T00:06:02",
+            "granularity": "datetime",
+            "raw": "2023-05-22T00:06:02"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User sought outfit ideas for black leather boots. | outfit ideas | black leather boots | outfit ideas | black leather boots"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.19999999999999998,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 17,
+        "score": 0.19999999999999998
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User wore a grey sweater with black leather boots to brunch with friends and received compliments.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "grey sweater",
+        "black leather boots",
+        "brunch",
+        "friends",
+        "compliments"
+      ]
+    },
+    "entities": [
+      "grey sweater",
+      "black leather boots",
+      "brunch",
+      "friends",
+      "compliments"
+    ],
+    "embedding_text": "User wore a grey sweater with black leather boots to brunch with friends and received compliments.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0031",
+    "source_time": "2023-05-22 00:06:02.500000",
+    "record_time": "2026-07-07T19:50:46.939665",
+    "score": 0.19999999999999998,
+    "structural_score": 0.19999999999999998,
+    "score_components": {
+      "score": 0.19999999999999998,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-05-22T00:06:02.500000",
+            "end": "2023-05-22T00:06:02.500000",
+            "granularity": "datetime",
+            "raw": "2023-05-22T00:06:02.500000"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User wore a grey sweater with black leather boots to brunch with friends and received compliments. | grey sweater | black leather boots | brunch | friends | compliments | grey sweater | black leather boots | brunch | friends | compliments"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.19999999999999998,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 18,
+        "score": 0.19999999999999998
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user plans to add homemade jam to their product line at the farmer's market.",
+    "dimension": {
+      "time": "2023-05-22",
+      "location": "farmer's market",
+      "reason": "",
+      "purpose": "to sell homemade jam",
+      "keywords": [
+        "homemade jam",
+        "product line",
+        "farmer's market"
+      ]
+    },
+    "entities": [
+      "homemade jam",
+      "product line",
+      "farmer's market"
+    ],
+    "embedding_text": "The user plans to add homemade jam to their product line at the farmer's market.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0037",
+    "source_time": "2023-05-22 05:24:00.500000",
+    "record_time": "2026-07-07T19:50:46.939701",
+    "score": 0.19999999999999998,
+    "structural_score": 0.19999999999999998,
+    "score_components": {
+      "score": 0.19999999999999998,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-05-22T00:00:00",
+            "end": "2023-05-22T23:59:59.999999",
+            "granularity": "day",
+            "raw": "2023-05-22"
+          },
+          {
+            "start": "2023-05-22T05:24:00.500000",
+            "end": "2023-05-22T05:24:00.500000",
+            "granularity": "datetime",
+            "raw": "2023-05-22T05:24:00.500000"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to add homemade jam to their product line at the farmer's market. | homemade jam | product line | farmer's market | 2023-05-22 | farmer's market | to sell homemade jam | homemade jam | product line | farmer's market"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.19999999999999998,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 19,
+        "score": 0.19999999999999998
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User plans to expand the farm's product line to include homemade jam and honey.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to expand product line",
+      "purpose": "to sell at farmer's market",
+      "keywords": [
+        "expanding product line",
+        "homemade jam",
+        "honey",
+        "farmer's market"
+      ]
+    },
+    "entities": [
+      "expanding product line",
+      "homemade jam",
+      "honey",
+      "farmer's market"
+    ],
+    "embedding_text": "User plans to expand the farm's product line to include homemade jam and honey.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0042",
+    "source_time": "2023-05-22 16:34:00",
+    "record_time": "2026-07-07T19:50:46.939732",
+    "score": 0.19999999999999998,
+    "structural_score": 0.19999999999999998,
+    "score_components": {
+      "score": 0.19999999999999998,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-05-22T16:34:00",
+            "end": "2023-05-22T16:34:00",
+            "granularity": "datetime",
+            "raw": "2023-05-22T16:34:00"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User plans to expand the farm's product line to include homemade jam and honey. | expanding product line | homemade jam | honey | farmer's market | to expand product line | to sell at farmer's market | expanding product line | homemade jam | honey | farmer's market"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 20,
+    "retrieval_score": 0.19999999999999998,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 20,
+        "score": 0.19999999999999998
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "fact",
+    "content": "User has a pet named Max who eats grain-free kibble. User recently purchased a stainless steel food bowl from Amazon for $15 and a measuring cup from a pet store for $5 for Max.",
+    "dimension": {
+      "time": "2023-05-27",
+      "location": "Amazon and pet store",
+      "reason": "pet care",
+      "purpose": "feeding Max",
+      "keywords": [
+        "Max",
+        "pet",
+        "grain-free kibble",
+        "stainless steel food bowl",
+        "measuring cup"
+      ]
+    },
+    "entities": [
+      "Max",
+      "pet",
+      "grain-free kibble",
+      "stainless steel food bowl",
+      "measuring cup"
+    ],
+    "embedding_text": "User has a pet named Max who eats grain-free kibble. User recently purchased a stainless steel food bowl from Amazon for $15 and a measuring cup from a pet store for $5 for Max.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0096",
+    "source_time": "2023-05-27 13:52:00",
+    "record_time": "2026-07-07T19:50:46.940166",
+    "score": 0.36670971631637356,
+    "score_components": {
+      "dense_cosine_score": 0.36670971631637356,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 2,
+    "retrieval_score": 0.36670971631637356,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.36670971631637356
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User plans to start tracking food intake to correlate with how they feel during workouts.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "identify nutrition-performance correlations",
+      "purpose": "improve workout performance",
+      "keywords": [
+        "food tracking",
+        "nutrition",
+        "workout",
+        "correlation",
+        "performance"
+      ]
+    },
+    "entities": [
+      "food tracking",
+      "nutrition",
+      "workout",
+      "correlation",
+      "performance"
+    ],
+    "embedding_text": "User plans to start tracking food intake to correlate with how they feel during workouts.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0117",
+    "source_time": "2023-05-28 04:13:00",
+    "record_time": "2026-07-07T19:50:46.940288",
+    "score": 0.2625483949907059,
+    "score_components": {
+      "dense_cosine_score": 0.2625483949907059,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 6,
+    "retrieval_score": 0.2625483949907059,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 6,
+        "score": 0.2625483949907059
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "profile",
+    "content": "The user plans to add shrimp to Tom Yum Soup for extra protein.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "for extra protein",
+      "keywords": [
+        "shrimp",
+        "Tom Yum Soup",
+        "protein addition"
+      ]
+    },
+    "entities": [
+      "shrimp",
+      "Tom Yum Soup",
+      "protein addition"
+    ],
+    "embedding_text": "The user plans to add shrimp to Tom Yum Soup for extra protein.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0012",
+    "source_time": "2023-05-20 17:11:00",
+    "record_time": "2026-07-07T19:50:46.939550",
+    "score": 0.22752235118796174,
+    "score_components": {
+      "dense_cosine_score": 0.22752235118796174,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 9,
+    "retrieval_score": 0.22752235118796174,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.22752235118796174
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user has already sourced fedoras and canes for the props department of 'Chicago'.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "fedoras",
+        "canes",
+        "props",
+        "Chicago"
+      ]
+    },
+    "entities": [
+      "fedoras",
+      "canes",
+      "props",
+      "Chicago"
+    ],
+    "embedding_text": "The user has already sourced fedoras and canes for the props department of 'Chicago'.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0140",
+    "source_time": "2023-05-29 09:22:00.500000",
+    "record_time": "2026-07-07T19:50:46.940425",
+    "score": 0.22645945628567213,
+    "score_components": {
+      "dense_cosine_score": 0.22645945628567213,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.22645945628567213,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 10,
+        "score": 0.22645945628567213
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User decided to use MyFitnessPal for food tracking.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "heard great things about it",
+      "purpose": "",
+      "keywords": [
+        "MyFitnessPal",
+        "food tracking",
+        "decided"
+      ]
+    },
+    "entities": [
+      "MyFitnessPal",
+      "food tracking",
+      "decided"
+    ],
+    "embedding_text": "User decided to use MyFitnessPal for food tracking.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0118",
+    "source_time": "2023-05-28 04:13:00.500000",
+    "record_time": "2026-07-07T19:50:46.940293",
+    "score": 0.22308781969395264,
+    "score_components": {
+      "dense_cosine_score": 0.22308781969395264,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 11,
+    "retrieval_score": 0.22308781969395264,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.22308781969395264
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User is considering repurposing an old plow for garden use.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to use in garden",
+      "purpose": "repurposing old plow",
+      "keywords": [
+        "repurposing",
+        "old plow",
+        "garden"
+      ]
+    },
+    "entities": [
+      "repurposing",
+      "old plow",
+      "garden"
+    ],
+    "embedding_text": "User is considering repurposing an old plow for garden use.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0048",
+    "source_time": "2023-05-22 16:34:01.500000",
+    "record_time": "2026-07-07T19:50:46.939768",
+    "score": 0.22135390751310594,
+    "score_components": {
+      "dense_cosine_score": 0.22135390751310594,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.22135390751310594,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.22135390751310594
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User learned to make Filipino dishes adobo and lumpia from their grandma in late May 2023.",
+    "dimension": {
+      "time": "2023-05-19/2023-05-25",
+      "location": "home",
+      "reason": "learning from grandma",
+      "purpose": "",
+      "keywords": [
+        "adobo",
+        "lumpia",
+        "grandma",
+        "Filipino cooking"
+      ]
+    },
+    "entities": [
+      "adobo",
+      "lumpia",
+      "grandma",
+      "Filipino cooking"
+    ],
+    "embedding_text": "User learned to make Filipino dishes adobo and lumpia from their grandma in late May 2023.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0091",
+    "source_time": "2023-05-26 18:11:02",
+    "record_time": "2026-07-07T19:50:46.940135",
+    "score": 0.21672781296597227,
+    "score_components": {
+      "dense_cosine_score": 0.21672781296597227,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 13,
+    "retrieval_score": 0.21672781296597227,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 13,
+        "score": 0.21672781296597227
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "fact",
+    "content": "The user sells products at a farmer's market.",
+    "dimension": {
+      "time": "",
+      "location": "farmer's market",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "farmer's market",
+        "selling"
+      ]
+    },
+    "entities": [
+      "farmer's market",
+      "selling"
+    ],
+    "embedding_text": "The user sells products at a farmer's market.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0036",
+    "source_time": "2023-05-22 05:24:00",
+    "record_time": "2026-07-07T19:50:46.939695",
+    "score": 0.21642383820211253,
+    "score_components": {
+      "dense_cosine_score": 0.21642383820211253,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.21642383820211253,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 14,
+        "score": 0.21642383820211253
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User is planning to increase workout intensity in the next month.",
+    "dimension": {
+      "time": "next month",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "workout",
+        "intensity",
+        "increase",
+        "next month"
+      ]
+    },
+    "entities": [
+      "workout",
+      "intensity",
+      "increase",
+      "next month"
+    ],
+    "embedding_text": "User is planning to increase workout intensity in the next month.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0115",
+    "source_time": "2023-05-27 17:59:02",
+    "record_time": "2026-07-07T19:50:46.940276",
+    "score": 0.21551300873704057,
+    "score_components": {
+      "dense_cosine_score": 0.21551300873704057,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.21551300873704057,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 15,
+        "score": 0.21551300873704057
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "The user had a burger with bacon and a type of cheese at their friend Mike's house a few weeks ago.",
+    "dimension": {
+      "time": "",
+      "location": "Mike's house",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Mike",
+        "burger",
+        "bacon",
+        "cheese"
+      ]
+    },
+    "entities": [
+      "Mike",
+      "burger",
+      "bacon",
+      "cheese"
+    ],
+    "embedding_text": "The user had a burger with bacon and a type of cheese at their friend Mike's house a few weeks ago.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0070",
+    "source_time": "2023-05-25 11:47:00.500000",
+    "record_time": "2026-07-07T19:50:46.940008",
+    "score": 0.21309120957407957,
+    "score_components": {
+      "dense_cosine_score": 0.21309120957407957,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.21309120957407957,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 16,
+        "score": 0.21309120957407957
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User recently acquired a first pressing of a debut album by a famous band at a thrift store for $10.",
+    "dimension": {
+      "time": "",
+      "location": "thrift store",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "first pressing",
+        "debut album",
+        "famous band",
+        "thrift store",
+        "$10"
+      ]
+    },
+    "entities": [
+      "first pressing",
+      "debut album",
+      "famous band",
+      "thrift store",
+      "$10"
+    ],
+    "embedding_text": "User recently acquired a first pressing of a debut album by a famous band at a thrift store for $10.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0110",
+    "source_time": "2023-05-27 16:24:02",
+    "record_time": "2026-07-07T19:50:46.940246",
+    "score": 0.20768527496492134,
+    "score_components": {
+      "dense_cosine_score": 0.20768527496492134,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.20768527496492134,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 17,
+        "score": 0.20768527496492134
+      }
+    ]
+  },
+  {
+    "user_id": "0010_bc149d6b",
+    "memory_type": "episodic",
+    "content": "User decided to try repurposing an old plow for garden use.",
+    "dimension": {
+      "time": "2023-05-22T16:34:02",
+      "location": "",
+      "reason": "to use in garden",
+      "purpose": "repurposing old plow",
+      "keywords": [
+        "decision",
+        "repurposing",
+        "old plow",
+        "garden"
+      ]
+    },
+    "entities": [
+      "decision",
+      "repurposing",
+      "old plow",
+      "garden"
+    ],
+    "embedding_text": "User decided to try repurposing an old plow for garden use.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0049",
+    "source_time": "2023-05-22 16:34:02",
+    "record_time": "2026-07-07T19:50:46.939793",
+    "score": 0.20622253868020632,
+    "score_components": {
+      "dense_cosine_score": 0.20622253868020632,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.20622253868020632,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.20622253868020632
+      }
+    ]
+  }
+]

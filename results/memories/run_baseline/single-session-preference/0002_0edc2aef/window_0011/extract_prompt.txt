@@ -1,0 +1,157 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-27T00:05:02, Sat] 1.User: I'm thinking of adding a blog section to my website to share more about my family's history and my experience with changing my surname. Do you have any tips on how to write engaging blog posts, especially for someone who isn't a professional writer?
+[2023-05-27T00:05:02.500000, Sat] 2.User: I'm thinking of writing a blog post about my experience changing my surname, and I'd like to include some tips and advice for others who might be considering a similar decision. Do you have any suggestions for what I could include in the post?
+[2023-05-27T01:12:00, Sat] 3.User: I'm looking for a good cleaner for my brown loafers. I spilled coffee on them last month and the stain is still visible.
+[2023-05-27T01:12:00.500000, Sat] 4.User: I think they're made of leather. I actually wore them to work on Friday, January 13th, and I remember getting compliments on my new black boots that day. Anyway, I'll try the leather cleaner or conditioner method first. Do you think it'll remove the stain completely?
+[2023-05-27T01:12:01, Sat] 5.User: I'm pretty sure I got the right shoes. So, I'll try the leather cleaner or conditioner method. Do you know any good brands for leather cleaners or conditioners that I can use?
+[2023-05-27T01:12:01.500000, Sat] 6.User: What are some good hiking boots that I'm looking for? I went on a hike with friends on February 11th and my old boots were not comfortable at all.
+[2023-05-27T01:12:02, Sat] 7.User: I'm still looking for hiking boots. I think I'll do some research on the brands you mentioned. Do you know when I bought my new black boots from Zara? I remember they were on sale and I finally got them after eyeing them for weeks.
+[2023-05-27T01:12:02.500000, Sat] 8.User: You mentioned you got your new black boots from Zara on sale after eyeing them for weeks. If I recall correctly, I think you said you bought them on January 10th, right?
+[2023-05-27T06:17:00, Sat] 9.User: rewrite this very good piece and include some of the elements you mentioned for turning it into an origins story:
+
+""I am Kadence, a 25-year-old musician from New York City who was raised in Jamaica. Music has been a constant in my life, a source of comfort and inspiration that has seen me through the ups and downs of my journey. From a young age, I was drawn to the rhythms of the Caribbean and the art of music-making, and it was in Jamaica where I first discovered my love for rap and hip-hop.
+
+I started my journey as a rap artist under the name 'Kadence' in 2012, and it wasn't long before I became well-known in my home city of Mandeville for my skills as a producer, vocalist, and songwriter. I spent countless hours honing my craft, pouring my heart and soul into each beat, each verse, each chorus. I knew that music was my calling, and I was determined to make it my life's work.
+
+So, in 2015, I made the bold decision to move to Toronto, Canada, to pursue my dream of becoming a successful musician. It was a difficult decision, leaving behind my family and friends, but I was driven by a deep passion for music and a fierce determination to succeed. And I am proud to say that today, I produce and record my own music, blending elements of rap and hip-hop, R&B, dancehall, and pop into a sound that is uniquely my own.
+
+My music reflects my experiences, my emotions, and my journey. It is a testament to my resilience and my determination. But it is more than just entertainment, it is a source of comfort and inspiration for those who need it most. I use my songs to help others through difficult times, to bring light into the darkness, and to bring people together. I have an empathy that is rare in this world, a genuine desire to make a positive impact on those around me. I want my music to make a difference, to touch people's hearts, and to help heal the world.
+
+My brand is defined by my authenticity, my empathy, my passion, my creativity, my resilience, and my humility. I am more than just an artist, I am a source of inspiration, a voice for the voiceless, and a shining light in a dark world. I hope to become known worldwide, remain independent and profitable, and eventually become close friends with my idols. But most of all, I want to be known for always releasing high-quality music that speaks to the hearts of my listeners.
+
+I believe that music has the power to change lives, to bring people together, and to make the world a better place. And I am proud to be a part of that tradition, to be a part of that legacy. I will continue to pour my heart and soul into each song I write, each beat I produce, because I know that music is more than just entertainment, it is a way of life. And I am honored to share my life's work with you."
+[2023-05-27T06:17:00.500000, Sat] 10.User: Okay I added that to a section within "The Journey" titled "Who is Kadence", what is the next logical chapter?
+[2023-05-27T06:17:01, Sat] 11.User: Can you ask me questions to help you write that section better and as deeply as possible?
+[2023-05-27T06:17:01.500000, Sat] 12.User: 1. The purpose of this section is to serve as an ever deepening framework for internal use behind the scenes with Kadence. It serves are a point of conclusion and reference for future content specifically for Kadence.
+
+2. I want to include storytelling information in order to extract the parts of my life that would best serve the overall book we are writing. It is also a precursor to the coming sections which will further the story and will continue to develop over time as I learn more about myself and my audience.
+
+3. I would like to present it as a story but written in an autobiographical style, as if it were the narration on top of a movie.
+
+4. There are many, but I'm not sure how to define them right now. Some include my first experiences with love, sex, drugs, music, friends, betrayal, envy, and jealousy. Some other might include the things I've taken away from my life experiences and how I believe I might view the World differently from most people on the planet. I believe there is a way to clarify and grow my character in the eyes of my audience.
+
+5. In this section, I believe the theme should just be more of an introduction to Kadence's reaching the point of transitioning from the ordinary world into the next phase of the hero's journey.
+
+6. I want the reader to feel inspired, like they want to read more. Above all, I want them to feel touched, as if the whimsical nature of Kadence brings joy and intrigue to their heart and mind.
+
+7. Not that I can think of... Maybe you can leave some room for me to fill in the blanks with my own stories and then we can rewrite it all later on.
+[2023-05-27T08:24:00, Sat] 13.User: I want to create a color palette for the concepts of "storage", "function" and "output"
+[2023-05-27T08:24:00.500000, Sat] 14.User: Great! What are good background colors for each of these? And what are good border colors?
+[2023-05-27T08:24:01, Sat] 15.User: Can you summarize these colors in a table with their hex codes?

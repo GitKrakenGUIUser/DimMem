@@ -1,0 +1,49 @@
+[2023-03-04T13:19:00.500000, Sat] 1.User: That's really helpful, thanks for the tips! I'll definitely experiment with different arrangements. Speaking of natural light, I also removed them last weekend, and it's amazing how much brighter my bedroom feels now. Do you have any suggestions on what kind of window treatments would be best for my bedroom?
+[2023-03-04T13:19:01, Sat] 2.User: I meant to say that I removed the heavy drapes from the windows in my bedroom last weekend, not the curtains. Now, can you tell me more about plantation shutters? Are they expensive and difficult to install?
+[2023-03-04T13:19:01.500000, Sat] 3.User: I'm still deciding on what to do with my couch in the living room. Do you have any suggestions on how to incorporate a home office area into the room without making it look cluttered?
+[2023-03-04T13:19:02, Sat] 4.User: That's a great idea about using a room divider to separate the office area from the rest of the living room. I was thinking of setting up my home office in the spare bedroom, but now I'm considering using a corner of the living room instead. Do you have any suggestions on how to choose the right desk and chair for my home office?
+[2023-03-04T13:19:02.500000, Sat] 5.User: I'm glad you found the suggestions helpful! Choosing the right desk and chair can make a big difference in your comfort and productivity. Remember to consider your specific needs, the size and style of your living room, and your personal preferences when making your selection. If you have any more questions or need further guidance, feel free to ask!
+[2023-03-04T14:26:00, Sat] 6.User: From now own, I need you to keep your response nice and concise
+[2023-03-04T14:26:00.500000, Sat] 7.User: I am planning a discord bot project that listens to JIRA webhook and determine who to mention in a discord server based on the type of events invoked. I need your suggestions on this project.
+[2023-03-04T14:26:01, Sat] 8.User: Can you suggest the minimum viable product requirements for this project?
+[2023-03-04T14:26:01.500000, Sat] 9.User: Here is a draft of the data model that I have design, can you give some suggestions based on this? 
+
+User
+---------
+- jira id: string
+- discord id: string
+- type: UserType
+- excludedRules: EventRule[]
+
+EventRule
+--------
+- type: string // webhook event type
+- targets: UserType[]
+- exclusion: User[]
+- includeInvokedUser: boolean
+
+UserType
+-------
+- users: User[]
+- name: string
+- registeredRules: EventRule[]
+
+relations are, between User and EventRule there is many to many, between UserType to EventRule there is many to many, and from UserType to User there is one to many.
+[2023-03-04T14:26:02, Sat] 10.User: Is there any issue with the basic design that I have provided?
+[2023-03-04T20:16:00, Sat] 11.User: rewrite the following considering this is the company motto:
+"Revolutionizing humanity seashore boundaries one raft at a time"
+
+Welcome to GMBM LTD, a pioneering company that is revolutionizing marine settlements. We have developed and patented a unique solution that addresses two major challenges in the industry: congestion in seaports and the rising cost and scarcity of real estate. Our innovative solution is cost-effective, efficient and has the potential to disrupt the industry.
+
+Our patented technology involves the construction of sea rafts using inside-concreted bottoms of shipping containers, which are capable of movement on both water and land. These rafts can also be connected to each other to form an array of rafts with power lift adaptability for various purposes. The rafts also feature hydraulic freight and passenger elevators that allow them to rise and lower from the platform.
+
+Our goal at GMBM LTD is to transform the way seaport operations and real estate development are conducted. We are committed to reducing congestion in seaports and providing an alternative to the high prices and shortages of traditional real estate development. Our target market includes seaport operators, shipping companies and real estate developers.
+
+At GMBM LTD, we are convinced that our solution has the potential to not only enhance the efficiency of seaport operations but also provide a new option for real estate development. We invite you to join us on this exciting journey and be a part of shaping the future of marine settlements. Together, we can create a brighter tomorrow.
+[2023-03-04T20:16:00.500000, Sat] 12.User: Please provide five possible options for the paragraph explaining the company's purpose and why we exist. 
+write in a formal style and inspiring tone of voice and focus. 
+focus equally on both solutions.
+dont focus on marine settlements industry
+[2023-03-04T20:16:01, Sat] 13.User: Write it again in a way that conveys confidence in the idea and the ability of the company to implement such a revolutionary change without sounding like a sales pitch
+[2023-03-04T20:16:01.500000, Sat] 14.User: Rewrite it so the reader believes the solution exists and that the company can make the changes it wants to make to the industry
+[2023-03-04T20:16:02, Sat] 15.User: Please write to me based on what exists and what are the five values that guide your company

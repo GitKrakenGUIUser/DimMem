@@ -1,0 +1,32 @@
+{
+  "id": "b46b8448-1b8a-4290-8c43-2b6b48536250",
+  "object": "chat.completion",
+  "created": 1783427823,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\":\"WRONG\"}",
+        "reasoning_content": "We need to compare the gold answer \"2\" with the generated answer \"1\". They are different numbers. The question asks for the number of bikes serviced or planned to service in March. Gold says 2, generated says 1. This is a factual mismatch. So it's WRONG."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 402,
+    "completion_tokens": 68,
+    "total_tokens": 470,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 61
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 146
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

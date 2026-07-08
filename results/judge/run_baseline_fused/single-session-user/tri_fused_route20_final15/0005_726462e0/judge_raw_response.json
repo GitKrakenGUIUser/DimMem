@@ -1,0 +1,32 @@
+{
+  "id": "83d22f9e-ea52-483c-ac73-972b3f126947",
+  "object": "chat.completion",
+  "created": 1783427965,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\": \"WRONG\"}",
+        "reasoning_content": "We need to evaluate if the generated answer matches the gold answer. Gold answer is \"10%\". Generated answer is \"I don't know.\" which clearly does not provide the discount percentage. So it's wrong. Explanation: The generated answer does not provide the requested discount percentage. Label: WRONG."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 407,
+    "completion_tokens": 69,
+    "total_tokens": 476,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 61
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 151
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

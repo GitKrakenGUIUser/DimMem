@@ -1,0 +1,180 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-22T18:11:00.500000, Mon] 1.User: I've been trying to establish a consistent wake-up time for a while now. On days when I wake up at 7:00 or 7:30, I feel more productive and refreshed, like this Monday when I woke up at 7:00 AM and felt really refreshed. Do you think it's more important to focus on establishing a consistent wake-up time or having a consistent bedtime routine to improve my sleep quality?
+[2023-05-22T18:11:01, Mon] 2.User: I've been trying to establish a consistent wake-up time for a while now. I've noticed that when I wake up earlier, I tend to have a more productive morning routine.
+[2023-05-22T18:11:01.500000, Mon] 3.User: I'm also interested in using my wake-up time as an opportunity to set intentions for the day. I've found that when I wake up earlier, I have time to reflect on what I want to accomplish and set some goals for myself. This has really helped me stay focused and motivated throughout the day. Can you suggest some tips on how to effectively set intentions and make the most out of my morning reflection time?
+[2023-05-22T18:11:02, Mon] 4.User: I like the idea of setting intentions for the day. I've found that when I wake up at 7:00 or 7:30, I have time to reflect on what I want to accomplish and set some goals for myself. This has really helped me stay focused and motivated throughout the day. Do you think it's a good idea to also set a theme or focus for the week, in addition to daily intentions?
+[2023-05-22T18:11:02.500000, Mon] 5.User: Setting a theme or focus for the week can be a great way to add an extra layer of direction to my daily intentions. I like the idea of breaking down my weekly goals into daily tasks to help me stay focused and motivated. I think I'll try setting a theme for the week and see how it goes. Thanks for the tips!
+[2023-05-22T18:38:00, Mon] 6.User: Transform is an emerging brand that delivers marketing services, but with a focus on live events and production. The brand's services are structured as follows:
+
+ 1. Strategy
+ Where it covers services such as branding, copy, content writing, email marketing and split testing among others.
+ 
+ 2. Digital
+ Through which Transform delivers services in regards to digital campaigns, web design and development, customer services platforms and social media marketing
+ 
+ 3. Production
+ Where Transform delivers live video production services, animation, exhibition stands, D.T.P. services and the creation of 3D assets
+ 
+The team is formed out of 5 people:
+
+ Eric Russel: The head of the operation with a vast experience in most of the areas covered by Transform. Eric mainly focuses on strategy, customer relationship and internal management.
+ 
+ Irene Callander: Gives the brand the much needed feminine touch. Irene is a creative powerhouse focusing on communications, copywriting and strategy.
+ 
+ John Abrams: A technical expert that puts misbehaving hardware into it's rightful place, making sure that the time always has functional equipment available for the task at hand.
+
+ Liam Dawson: A jack of all trades which likes to get involved in all types of projects, but within the brand is focused on development, video editing, 3D and graphics.
+ 
+ Benjamin Powell: An experienced programmer that can manipulate any database. He covers the security and optimization aspects of any piece of software that Transform develops.
+ 
+ 
+Create an description for the "About us" section of the Transform website. The description should be around 100 words.
+[2023-05-22T18:38:00.500000, Mon] 7.User: Make it more generic. Refrain from listing each person and providing details for each individual in this text. That will be done in a separate section of the website. Focus more on what Transform is and does as a team
+[2023-05-23T06:30:00, Tue] 8.User: I'm looking to find some new kitchen gadgets to complement my new pots and pans. Can you suggest some must-have items for a home cook like me? By the way, I'm loving the extra storage space in my kitchen now that I've replaced my old kitchen towels with new ones - and I just received my bulk pack of toilet paper and paper towels today, so I'm all set for a while!
+[2023-05-23T06:30:00.500000, Tue] 9.User: I'm really interested in the silicone baking mats and the immersion blender. Can you tell me more about the different types of immersion blenders available, and what features I should look for when choosing one?
+[2023-05-23T06:30:01, Tue] 10.User: That's a lot of info, but really helpful. I think I'll go for a variable speed immersion blender with a stainless steel blade and comfortable grip. Do you have any recommendations for silicone baking mats?
+[2023-05-23T06:30:01.500000, Tue] 11.User: Thanks for the info! I think I'll go for a Silpat silicone baking mat, I've heard great things about their products. I'm also thinking of getting a kitchen scale, do you have any recommendations for that?
+[2023-05-23T06:30:02, Tue] 12.User: I'm thinking of getting a digital kitchen scale with high accuracy and a tare function. I've been meaning to bake more often, and I think a scale will really help me with that. By the way, I'm really enjoying my new kitchen utensils and the extra storage space in my kitchen - and I'm so glad I stocked up on toilet paper and paper towels, it's always a relief to have those essentials on hand!
+[2023-05-23T06:30:02.500000, Tue] 13.User: I'm thinking of getting a cookbook that focuses on desserts, since I've been wanting to try out some new recipes. Do you have any recommendations for a good dessert cookbook?
+[2023-05-23T17:39:00, Tue] 14.User: continue with "Being a maker I found it cheap and interesting for what it is
+Cheaper than buying things separately.
+Portability
+Ingenuity, compact, quality
+I like the products I previously purchased
+I am a avid crafter and this product really interest me in term of functionality and mobility
+because I just gave most of my large tools to my daughter and this will still let me have fun
+Stable use of rotary tool
+Its something I can use if it is good quality
+because it looks awesome and I need tools
+...
+ons projects
+Hobby
+Might be useful for my remodel business
+I just thought it looked awesome, I like to make stuff for tabletop gaming
+craft projects
+Sounds like a great tool for some of my small proje
+...
+l looked useful and fun
+Something i definitely could use
+I have been looking for an all in one tool that was not too expensive for my hobby work. I am particularly interested because this has the lathe function.
+Im a maker and I found it so complete e usefull"
+
+Please write in English (US) language.
+[2023-05-23T18:50:00, Tue] 15.User: I'm looking for some advice on finding affordable alternatives to high-end skincare products. I recently splurged on a $150 moisturizer, but I'm wondering if there are similar products out there for a lower price. By the way, I've been noticing a trend in my spending habits - like yesterday, I saw a similar-looking bag at Forever 21 for $30, and I couldn't help but wonder if I had made a mistake by spending so much money on a designer handbag last month.

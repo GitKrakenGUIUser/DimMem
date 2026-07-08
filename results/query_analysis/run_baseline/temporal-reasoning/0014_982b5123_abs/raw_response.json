@@ -1,0 +1,32 @@
+{
+  "id": "b8b15813-e0e2-4c7f-b7cf-ad7dc425ad27",
+  "object": "chat.completion",
+  "created": 1783356347,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"When did the user book the Airbnb in Sacramento?\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"Airbnb\", \"Sacramento\"],\n    \"time\": \"\",\n    \"location\": \"Sacramento\"\n  },\n  \"answer_dim\": \"time\"\n}",
+        "reasoning_content": "We need to parse the question: \"When did I book the Airbnb in Sacramento?\" The question date is 2023/05/27 (Sat) 17:10. The user asks about the time of booking an Airbnb in Sacramento. This is about a past event (booking) with a location constraint (Sacramento). The question asks \"When did I book...\" so the answer dimension is \"time\". No need for assistant context. Memory type: episodic (specific event). Keywords: \"Airbnb\", \"Sacramento\". Time: explicit? The question asks for time, so leave dimension.time empty and set answer_dim = \"time\". Location: \"Sacramento\" is a location, but since the question asks about time, we leave dimension.location empty? Wait: the instruction says: \"If the question asks about the time itself, leave this field empty and set answer_dim = 'time'\". Similarly for location: if asking about location, leave location empty. Here we have a location constraint but the answer is about time. So we should put location in dimension.location because it's a constraint. The rule: \"If the question asks about the location itself, leave this field empty and set answer_dim = 'location'.\" Here it asks about time, so location is a constraint, so we fill it. So dimension.location = \"Sacramento\". query_anchor: Rewrite as retrieval-friendly: \"When did the user book the Airbnb in Sacramento?\" need_assistant_context: false. target_memory_type: [\"episodic\"]. keywords: [\"Airbnb\", \"Sacramento\"]. time: \"\" (since question asks for time, not constraint). location: \"Sacramento\". answer_dim: \"time\". Output valid JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 684,
+    "completion_tokens": 433,
+    "total_tokens": 1117,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 350
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 44
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

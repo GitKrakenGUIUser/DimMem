@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-20T22:13:02.500000, Sat] 1.User: That's good to know. I've been using the flea and tick prevention medication on Lola for a while now, and it's been working well. I got it for $25 for a 3-month supply, which I think is a good deal.
+[2023-05-21T01:10:00, Sun] 2.User: I'm thinking of baking again this weekend and I want to try out a new recipe. Can you give me some tips on how to ensure my cookies turn out right? By the way, I attempted to bake a batch of cookies two weeks ago, so I'm hoping to build on that experience.
+[2023-05-21T01:10:00.500000, Sun] 3.User: I'm actually thinking of trying out a new recipe for oatmeal raisin cookies. I've heard they can be a bit tricky to get right, so I want to make sure I'm doing everything correctly. Do you have any specific tips for oatmeal raisin cookies?
+[2023-05-21T01:10:01, Sun] 4.User: I'll definitely keep those tips in mind. I've also been experimenting with different cooking oils lately, like avocado oil and grapeseed oil, and I'm wondering if I could use any of those in the oatmeal raisin cookie recipe instead of butter. Would that work?
+[2023-05-21T01:10:01.500000, Sun] 5.User: I think I'll stick with butter for this recipe, but it's good to know that I could experiment with oils in the future. Speaking of future baking projects, I've been thinking about replacing my stand mixer soon. Do you have any recommendations for a good stand mixer that can handle heavy mixing and kneading?
+[2023-05-21T01:10:02, Sun] 6.User: I've been thinking about getting a mixer with a larger bowl capacity, since I've been making bigger batches of dough lately. Also, I've heard that some mixers have a feature that allows for slow and steady mixing, which I think would be helpful for yeast doughs. Do any of the mixers you mentioned have that feature?
+[2023-05-21T01:10:02.500000, Sun] 7.User: I think I'll stick with the KitchenAid Classic Plus. I've heard great things about it and it seems to have all the features I need. Plus, I've always wanted a KitchenAid mixer!
+[2023-05-21T13:52:00, Sun] 8.User: I'm looking for some new healthy snack ideas. Do you have any recommendations? By the way, I've been loving sweet potato fries lately - I've even made them at home a few times, and I've also been stocking up on the frozen kind from the grocery store.
+[2023-05-21T13:52:00.500000, Sun] 9.User: What are some healthy breakfast ideas? I've been making a lot of overnight oats lately, and I'm looking for some new inspiration.
+[2023-05-21T13:52:01, Sun] 10.User: I've been meaning to try a breakfast burrito, that sounds like a great idea. Do you have any suggestions for a healthy salad dressing? I've been frequenting this new salad place down the street and I want to replicate their quinoa bowl with roasted vegetables at home.
+[2023-05-21T13:52:01.500000, Sun] 11.User: I've been experimenting with new recipes and I was wondering if you have any recommendations for a good recipe for homemade granola.
+[2023-05-21T13:52:02, Sun] 12.User: That sounds like a great recipe. I've already tried making homemade granola once, and it turned out amazing. I've been snacking on it all week. Speaking of snacks, I've been trying to cut down on junk food, but I did give in to a sale on potato chips last week and ended up eating an entire bag in one sitting while watching TV - not my finest moment. Do you have any tips on how to resist junk food cravings?
+[2023-05-21T13:52:02.500000, Sun] 13.User: I think I can apply these tips by being more mindful of my snacking habits and planning my snacks in advance. I've been doing well with meal prep, but I need to work on planning my snacks too. I also want to try to find healthier alternatives to my favorite junk foods, like baked sweet potato fries instead of regular potato chips. And, I need to remember to be kind to myself when I do give in to cravings, because it's not the end of the world. By the way, I've been making sweet potato fries at home a lot lately, and I've even tried different seasonings like paprika and garlic powder.
+[2023-05-21T21:23:00, Sun] 14.User: I'm looking for some advice on managing stress and anxiety. I've been doing some research on mindfulness and meditation, and I was wondering if you could recommend any good apps or resources to help me get started. By the way, I started taking a serotonin supplement in mid-June, which my doctor recommended to help regulate my mood.
+[2023-05-21T21:23:00.500000, Sun] 15.User: I'm interested in trying out some of these apps, especially Headspace and Insight Timer. I've heard great things about them. Do you have any advice on how to stay motivated and consistent with my meditation practice?

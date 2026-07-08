@@ -1,0 +1,872 @@
+[
+  {
+    "user_id": "0009_gpt4_7abb270c",
+    "memory_type": "episodic",
+    "content": "The user plans to use Artsy and ArtNet and local art museums to find contemporary artists.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to discover contemporary artists",
+      "keywords": [
+        "Artsy",
+        "ArtNet",
+        "local art museums",
+        "contemporary artists"
+      ]
+    },
+    "entities": [
+      "Artsy",
+      "ArtNet",
+      "local art museums",
+      "contemporary artists"
+    ],
+    "embedding_text": "The user plans to use Artsy and ArtNet and local art museums to find contemporary artists.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0169",
+    "source_time": "2023-03-02 11:54:01",
+    "record_time": "2026-07-07T19:51:00.809917",
+    "score": 7.921917320803857,
+    "score_components": {
+      "bm25_score": 7.921917320803857,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 7.921917320803857,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 7.921917320803857
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 1.0
+      },
+      {
+        "method": "minilm",
+        "rank": 16,
+        "score": 0.3639842196517334
+      }
+    ]
+  },
+  {
+    "user_id": "0009_gpt4_7abb270c",
+    "memory_type": "episodic",
+    "content": "User visited the Metropolitan Museum of Art and saw the golden mask of Pharaoh Tutankhamun, which impressed them, and took photos to remember the details.",
+    "dimension": {
+      "time": "",
+      "location": "Metropolitan Museum of Art",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Metropolitan Museum of Art",
+        "golden mask",
+        "Tutankhamun",
+        "ancient Egyptian artifacts"
+      ]
+    },
+    "entities": [
+      "Metropolitan Museum of Art",
+      "golden mask",
+      "Tutankhamun",
+      "ancient Egyptian artifacts"
+    ],
+    "embedding_text": "User visited the Metropolitan Museum of Art and saw the golden mask of Pharaoh Tutankhamun, which impressed them, and took photos to remember the details.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0111",
+    "source_time": "2023-02-20 22:50:01",
+    "record_time": "2026-07-07T19:51:00.809584",
+    "score": 6.371619555144905,
+    "score_components": {
+      "bm25_score": 6.371619555144905,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 6.371619555144905,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 6.371619555144905
+      },
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.4028856420711324
+      }
+    ]
+  },
+  {
+    "user_id": "0009_gpt4_7abb270c",
+    "memory_type": "episodic",
+    "content": "The user visited the Metropolitan Museum of Art to see the Ancient Egyptian Artifacts exhibition and was impressed by the golden mask of Pharaoh Tutankhamun.",
+    "dimension": {
+      "time": "",
+      "location": "Metropolitan Museum of Art",
+      "reason": "",
+      "purpose": "to see the exhibition",
+      "keywords": [
+        "Metropolitan Museum of Art",
+        "Ancient Egyptian Artifacts",
+        "golden mask",
+        "Pharaoh Tutankhamun"
+      ]
+    },
+    "entities": [
+      "Metropolitan Museum of Art",
+      "Ancient Egyptian Artifacts",
+      "golden mask",
+      "Pharaoh Tutankhamun"
+    ],
+    "embedding_text": "The user visited the Metropolitan Museum of Art to see the Ancient Egyptian Artifacts exhibition and was impressed by the golden mask of Pharaoh Tutankhamun.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0172",
+    "source_time": "2023-03-02 11:54:02.500000",
+    "record_time": "2026-07-07T19:51:00.809934",
+    "score": 6.362156575769895,
+    "score_components": {
+      "bm25_score": 6.362156575769895,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 6.362156575769895,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 6.362156575769895
+      },
+      {
+        "method": "minilm",
+        "rank": 6,
+        "score": 0.44988136340979146
+      }
+    ]
+  },
+  {
+    "user_id": "0009_gpt4_7abb270c",
+    "memory_type": "episodic",
+    "content": "The user plans to visit the outer market of Tsukiji Fish Market from Shibuya.",
+    "dimension": {
+      "time": "",
+      "location": "Tsukiji Fish Market (outer market), Tokyo",
+      "reason": "",
+      "purpose": "visit Tsukiji outer market",
+      "keywords": [
+        "Tsukiji Fish Market",
+        "outer market",
+        "Shibuya"
+      ]
+    },
+    "entities": [
+      "Tsukiji Fish Market",
+      "outer market",
+      "Shibuya"
+    ],
+    "embedding_text": "The user plans to visit the outer market of Tsukiji Fish Market from Shibuya.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0161",
+    "source_time": "2023-02-26 07:33:01",
+    "record_time": "2026-07-07T19:51:00.809872",
+    "score": 5.409170445600827,
+    "score_components": {
+      "bm25_score": 5.409170445600827,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 5.409170445600827,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 5.409170445600827
+      }
+    ]
+  },
+  {
+    "user_id": "0009_gpt4_7abb270c",
+    "memory_type": "episodic",
+    "content": "User plans to ask for feedback or advice from members of the 'Foodie Frenzy' group.",
+    "dimension": {
+      "time": "",
+      "location": "Foodie Frenzy group",
+      "reason": "",
+      "purpose": "to get feedback and advice",
+      "keywords": [
+        "feedback",
+        "advice",
+        "Foodie Frenzy group"
+      ]
+    },
+    "entities": [
+      "feedback",
+      "advice",
+      "Foodie Frenzy group"
+    ],
+    "embedding_text": "User plans to ask for feedback or advice from members of the 'Foodie Frenzy' group.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0124",
+    "source_time": "2023-02-22 00:44:02",
+    "record_time": "2026-07-07T19:51:00.809657",
+    "score": 5.40630074524145,
+    "score_components": {
+      "bm25_score": 5.40630074524145,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 5.40630074524145,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 5.40630074524145
+      }
+    ]
+  },
+  {
+    "user_id": "0009_gpt4_7abb270c",
+    "memory_type": "episodic",
+    "content": "On 2023-02-09, the user needed to order essential oils, specifically lavender oil, for their diffuser and asked for online store recommendations.",
+    "dimension": {
+      "time": "2023-02-09T04:57:01",
+      "location": "",
+      "reason": "",
+      "purpose": "to restock essential oils for diffuser",
+      "keywords": [
+        "essential oils",
+        "lavender oil",
+        "online stores"
+      ]
+    },
+    "entities": [
+      "essential oils",
+      "lavender oil",
+      "online stores"
+    ],
+    "embedding_text": "On 2023-02-09, the user needed to order essential oils, specifically lavender oil, for their diffuser and asked for online store recommendations.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0055",
+    "source_time": "2023-02-09 04:57:01",
+    "record_time": "2026-07-07T19:51:00.809255",
+    "score": 5.375848115011702,
+    "score_components": {
+      "bm25_score": 5.375848115011702,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 5.375848115011702,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 5.375848115011702
+      }
+    ]
+  },
+  {
+    "user_id": "0009_gpt4_7abb270c",
+    "memory_type": "episodic",
+    "content": "On 2023-02-10, the user planned to write an essay about ancient civilizations and visited the 'Ancient Egyptian Artifacts' exhibition, where they took photos of artifacts.",
+    "dimension": {
+      "time": "2023-02-10T22:26:00",
+      "location": "Metropolitan Museum of Art (possibly mistaken, but exhibition attended)",
+      "reason": "",
+      "purpose": "to research for an essay about ancient civilizations",
+      "keywords": [
+        "essay",
+        "ancient civilizations",
+        "Ancient Egyptian Artifacts exhibition",
+        "photos"
+      ]
+    },
+    "entities": [
+      "essay",
+      "ancient civilizations",
+      "Ancient Egyptian Artifacts exhibition",
+      "photos"
+    ],
+    "embedding_text": "On 2023-02-10, the user planned to write an essay about ancient civilizations and visited the 'Ancient Egyptian Artifacts' exhibition, where they took photos of artifacts.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0058",
+    "source_time": "2023-02-10 22:26:00",
+    "record_time": "2026-07-07T19:51:00.809274",
+    "score": 5.041613416766918,
+    "score_components": {
+      "bm25_score": 5.041613416766918,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 5.041613416766918,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 5.041613416766918
+      },
+      {
+        "method": "minilm",
+        "rank": 8,
+        "score": 0.41807029703133136
+      }
+    ]
+  },
+  {
+    "user_id": "0009_gpt4_7abb270c",
+    "memory_type": "episodic",
+    "content": "User is considering upgrading to a 4K OLED TV from LG or Sony.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "upgrade TV",
+      "keywords": [
+        "4K OLED TV",
+        "LG",
+        "Sony",
+        "TV upgrade"
+      ]
+    },
+    "entities": [
+      "4K OLED TV",
+      "LG",
+      "Sony",
+      "TV upgrade"
+    ],
+    "embedding_text": "User is considering upgrading to a 4K OLED TV from LG or Sony.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0005",
+    "source_time": "2022-12-19 19:53:02.500000",
+    "record_time": "2026-07-07T19:51:00.808886",
+    "score": 4.782849450101234,
+    "score_components": {
+      "bm25_score": 4.782849450101234,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 4.782849450101234,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 4.782849450101234
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0009_gpt4_7abb270c",
+    "memory_type": "episodic",
+    "content": "User plans to purchase a Dell XPS laptop from the Dell website and is looking for student discounts.",
+    "dimension": {
+      "time": "",
+      "location": "Dell website",
+      "reason": "",
+      "purpose": "purchase a new laptop",
+      "keywords": [
+        "Dell XPS",
+        "laptop",
+        "student discount",
+        "purchase plan"
+      ]
+    },
+    "entities": [
+      "Dell XPS",
+      "laptop",
+      "student discount",
+      "purchase plan"
+    ],
+    "embedding_text": "User plans to purchase a Dell XPS laptop from the Dell website and is looking for student discounts.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0004",
+    "source_time": "2022-12-19 19:53:02",
+    "record_time": "2026-07-07T19:51:00.808879",
+    "score": 4.659636873386207,
+    "score_components": {
+      "bm25_score": 4.659636873386207,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 4.659636873386207,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 4.659636873386207
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0009_gpt4_7abb270c",
+    "memory_type": "fact",
+    "content": "The user is a fan of 'The Sandman' comic book series.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "The Sandman",
+        "comic book series",
+        "fan"
+      ]
+    },
+    "entities": [
+      "The Sandman",
+      "comic book series",
+      "fan"
+    ],
+    "embedding_text": "The user is a fan of 'The Sandman' comic book series.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0045",
+    "source_time": "2023-01-27 11:21:01.500000",
+    "record_time": "2026-07-07T19:51:00.809125",
+    "score": 4.262401894311981,
+    "score_components": {
+      "bm25_score": 4.262401894311981,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 4.262401894311981,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 4.262401894311981
+      }
+    ]
+  },
+  {
+    "user_id": "0009_gpt4_7abb270c",
+    "memory_type": "profile",
+    "content": "User is interested in learning more about the history of space exploration.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "space exploration",
+        "history"
+      ]
+    },
+    "entities": [
+      "space exploration",
+      "history"
+    ],
+    "embedding_text": "User is interested in learning more about the history of space exploration.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0023",
+    "source_time": "2023-01-12 22:45:02",
+    "record_time": "2026-07-07T19:51:00.808994",
+    "score": 4.210963494412336,
+    "score_components": {
+      "bm25_score": 4.210963494412336,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 4.210963494412336,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 4.210963494412336
+      },
+      {
+        "method": "minilm",
+        "rank": 19,
+        "score": 0.32379449048626197
+      }
+    ]
+  },
+  {
+    "user_id": "0009_gpt4_7abb270c",
+    "memory_type": "fact",
+    "content": "User is associated with GMBM LTD, a company that has patented technology for sea rafts made from inside-concreted bottoms of shipping containers, capable of movement on water and land, connectable into arrays with power lift adaptability and hydraulic freight and passenger elevators, aimed at reducing seaport congestion and providing alternative real estate.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to reduce seaport congestion and provide an alternative to traditional real estate development",
+      "keywords": [
+        "GMBM LTD",
+        "sea rafts",
+        "shipping containers",
+        "patented technology",
+        "marine settlements",
+        "seaport congestion",
+        "real estate"
+      ]
+    },
+    "entities": [
+      "GMBM LTD",
+      "sea rafts",
+      "shipping containers",
+      "patented technology",
+      "marine settlements",
+      "seaport congestion",
+      "real estate"
+    ],
+    "embedding_text": "User is associated with GMBM LTD, a company that has patented technology for sea rafts made from inside-concreted bottoms of shipping containers, capable of movement on water and land, connectable into arrays with power lift adaptability and hydraulic freight and passenger elevators, aimed at reducing seaport congestion and providing alternative real estate.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0182",
+    "source_time": "2023-03-04 20:16:00",
+    "record_time": "2026-07-07T19:51:00.809994",
+    "score": 4.098306466132638,
+    "score_components": {
+      "bm25_score": 4.098306466132638,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 4.098306466132638,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 4.098306466132638
+      }
+    ]
+  },
+  {
+    "user_id": "0009_gpt4_7abb270c",
+    "memory_type": "episodic",
+    "content": "The user plans to visit Tokyo Tower from Shibuya.",
+    "dimension": {
+      "time": "",
+      "location": "Tokyo Tower, Tokyo, Japan",
+      "reason": "",
+      "purpose": "visit Tokyo Tower",
+      "keywords": [
+        "Tokyo Tower",
+        "Shibuya",
+        "visit"
+      ]
+    },
+    "entities": [
+      "Tokyo Tower",
+      "Shibuya",
+      "visit"
+    ],
+    "embedding_text": "The user plans to visit Tokyo Tower from Shibuya.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0160",
+    "source_time": "2023-02-26 07:33:00.500000",
+    "record_time": "2026-07-07T19:51:00.809866",
+    "score": 4.0641516066736125,
+    "score_components": {
+      "bm25_score": 4.0641516066736125,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 4.0641516066736125,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 4.0641516066736125
+      }
+    ]
+  },
+  {
+    "user_id": "0009_gpt4_7abb270c",
+    "memory_type": "episodic",
+    "content": "User visited Tokyo Tower during a previous trip and posted a photo on Instagram that received significant engagement.",
+    "dimension": {
+      "time": "",
+      "location": "Tokyo Tower",
+      "reason": "",
+      "purpose": "to share the photo on Instagram",
+      "keywords": [
+        "Tokyo Tower",
+        "Instagram",
+        "engagement",
+        "photo"
+      ]
+    },
+    "entities": [
+      "Tokyo Tower",
+      "Instagram",
+      "engagement",
+      "photo"
+    ],
+    "embedding_text": "User visited Tokyo Tower during a previous trip and posted a photo on Instagram that received significant engagement.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0155",
+    "source_time": "2023-02-26 02:28:01",
+    "record_time": "2026-07-07T19:51:00.809837",
+    "score": 4.048531529730018,
+    "score_components": {
+      "bm25_score": 4.048531529730018,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 4.048531529730018,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 4.048531529730018
+      }
+    ]
+  },
+  {
+    "user_id": "0009_gpt4_7abb270c",
+    "memory_type": "profile",
+    "content": "User is interested in learning more about the history of feminist art in the 1970s.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "feminist art",
+        "1970s",
+        "art history"
+      ]
+    },
+    "entities": [
+      "feminist art",
+      "1970s",
+      "art history"
+    ],
+    "embedding_text": "User is interested in learning more about the history of feminist art in the 1970s.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0024",
+    "source_time": "2023-01-12 22:45:02.500000",
+    "record_time": "2026-07-07T19:51:00.809000",
+    "score": 3.992462839436083,
+    "score_components": {
+      "bm25_score": 3.992462839436083,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 3.992462839436083,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 3.992462839436083
+      }
+    ]
+  }
+]

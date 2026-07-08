@@ -1,0 +1,3325 @@
+[
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user planned a trip to Seattle and sought hotel recommendations with great city views on 2023-05-29.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "Seattle",
+      "reason": "planning a trip",
+      "purpose": "to find a hotel with a great view",
+      "keywords": [
+        "Seattle",
+        "trip",
+        "hotel",
+        "city view"
+      ]
+    },
+    "entities": [
+      "Seattle",
+      "trip",
+      "hotel",
+      "city view"
+    ],
+    "embedding_text": "The user planned a trip to Seattle and sought hotel recommendations with great city views on 2023-05-29.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0152",
+    "source_time": "2023-05-29 14:06:00",
+    "record_time": "2026-07-07T19:50:58.762847",
+    "score": 11.32876778472726,
+    "score_components": {
+      "bm25_score": 11.32876778472726,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 11.32876778472726,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 11.32876778472726
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.5499119682910873
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user plans to pack a portable laundry detergent packet for their Las Vegas trip to wash clothes in the hotel sink if needed.",
+    "dimension": {
+      "time": "",
+      "location": "Las Vegas",
+      "reason": "",
+      "purpose": "to wash clothes in hotel sink",
+      "keywords": [
+        "laundry detergent",
+        "portable",
+        "hotel sink",
+        "Las Vegas"
+      ]
+    },
+    "entities": [
+      "laundry detergent",
+      "portable",
+      "hotel sink",
+      "Las Vegas"
+    ],
+    "embedding_text": "The user plans to pack a portable laundry detergent packet for their Las Vegas trip to wash clothes in the hotel sink if needed.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0171",
+    "source_time": "2023-05-30 10:45:00.500000",
+    "record_time": "2026-07-07T19:50:58.762960",
+    "score": 10.5564635299108,
+    "score_components": {
+      "bm25_score": 10.5564635299108,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 10.5564635299108,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 10.5564635299108
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.3887483717466878
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user plans to pack nuts, energy bars, and dried fruit as snacks for their Las Vegas trip to avoid airport or hotel food.",
+    "dimension": {
+      "time": "",
+      "location": "Las Vegas",
+      "reason": "to avoid relying on airport or hotel food",
+      "purpose": "",
+      "keywords": [
+        "snacks",
+        "nuts",
+        "energy bars",
+        "dried fruit",
+        "Las Vegas"
+      ]
+    },
+    "entities": [
+      "snacks",
+      "nuts",
+      "energy bars",
+      "dried fruit",
+      "Las Vegas"
+    ],
+    "embedding_text": "The user plans to pack nuts, energy bars, and dried fruit as snacks for their Las Vegas trip to avoid airport or hotel food.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0170",
+    "source_time": "2023-05-30 10:45:00",
+    "record_time": "2026-07-07T19:50:58.762954",
+    "score": 8.667213700228961,
+    "score_components": {
+      "bm25_score": 8.667213700228961,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 8.667213700228961,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 8.667213700228961
+      },
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.3636118627289931
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "profile",
+    "content": "The user is interested in street photography and is looking for local workshops or classes to learn more.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to learn street photography techniques",
+      "keywords": [
+        "street photography",
+        "workshops",
+        "classes"
+      ]
+    },
+    "entities": [
+      "street photography",
+      "workshops",
+      "classes"
+    ],
+    "embedding_text": "The user is interested in street photography and is looking for local workshops or classes to learn more.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0012",
+    "source_time": "2023-05-20 20:13:00.500000",
+    "record_time": "2026-07-07T19:50:58.761944",
+    "score": 8.519039970711376,
+    "score_components": {
+      "bm25_score": 8.519039970711376,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 8.519039970711376,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 8.519039970711376
+      },
+      {
+        "method": "structured",
+        "rank": 9,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user plans to pack hand-washable clothes, including quick-drying t-shirts and travel pants, for the upcoming Seattle trip.",
+    "dimension": {
+      "time": "2023-06",
+      "location": "Seattle",
+      "reason": "",
+      "purpose": "to have clean clothes while traveling",
+      "keywords": [
+        "hand-washable clothes",
+        "quick-drying t-shirts",
+        "travel pants"
+      ]
+    },
+    "entities": [
+      "hand-washable clothes",
+      "quick-drying t-shirts",
+      "travel pants"
+    ],
+    "embedding_text": "The user plans to pack hand-washable clothes, including quick-drying t-shirts and travel pants, for the upcoming Seattle trip.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0088",
+    "source_time": "2023-05-26 02:21:02",
+    "record_time": "2026-07-07T19:50:58.762467",
+    "score": 8.456860532042148,
+    "score_components": {
+      "bm25_score": 8.456860532042148,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 8.456860532042148,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 8.456860532042148
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user is planning a trip to Las Vegas and wants tips on packing light for 4 days.",
+    "dimension": {
+      "time": "",
+      "location": "Las Vegas",
+      "reason": "",
+      "purpose": "to pack light",
+      "keywords": [
+        "Las Vegas",
+        "packing light",
+        "4-day trip"
+      ]
+    },
+    "entities": [
+      "Las Vegas",
+      "packing light",
+      "4-day trip"
+    ],
+    "embedding_text": "The user is planning a trip to Las Vegas and wants tips on packing light for 4 days.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0168",
+    "source_time": "2023-05-30 04:56:02",
+    "record_time": "2026-07-07T19:50:58.762942",
+    "score": 8.307539128164635,
+    "score_components": {
+      "bm25_score": 8.307539128164635,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 8.307539128164635,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 8.307539128164635
+      },
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.3692508611746696
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "fact",
+    "content": "User is looking for new hiking boots.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "old boots uncomfortable",
+      "purpose": "replace uncomfortable boots",
+      "keywords": [
+        "new hiking boots",
+        "buying"
+      ]
+    },
+    "entities": [
+      "new hiking boots",
+      "buying"
+    ],
+    "embedding_text": "User is looking for new hiking boots.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0110",
+    "source_time": "2023-05-27 01:12:00.500000",
+    "record_time": "2026-07-07T19:50:58.762594",
+    "score": 7.903596752061754,
+    "score_components": {
+      "bm25_score": 7.903596752061754,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 7.903596752061754,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 7.903596752061754
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User is planning a solo trip to Arizona to explore more of the state.",
+    "dimension": {
+      "time": "",
+      "location": "Arizona",
+      "reason": "",
+      "purpose": "explore more of the state",
+      "keywords": [
+        "solo trip",
+        "Arizona",
+        "explore"
+      ]
+    },
+    "entities": [
+      "solo trip",
+      "Arizona",
+      "explore"
+    ],
+    "embedding_text": "User is planning a solo trip to Arizona to explore more of the state.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0098",
+    "source_time": "2023-05-26 13:53:01",
+    "record_time": "2026-07-07T19:50:58.762525",
+    "score": 7.585953176471868,
+    "score_components": {
+      "bm25_score": 7.585953176471868,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 7.585953176471868,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 7.585953176471868
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.4034523739356236
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user is involved in organizing an upcoming Cybersecurity Conference in April, aiming to collect at least 200 qualified leads from IT professionals and cybersecurity experts.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to collect at least 200 qualified leads",
+      "keywords": [
+        "Cybersecurity Conference",
+        "lead generation",
+        "IT professionals",
+        "cybersecurity experts",
+        "qualified leads",
+        "200"
+      ]
+    },
+    "entities": [
+      "Cybersecurity Conference",
+      "lead generation",
+      "IT professionals",
+      "cybersecurity experts",
+      "qualified leads",
+      "200"
+    ],
+    "embedding_text": "The user is involved in organizing an upcoming Cybersecurity Conference in April, aiming to collect at least 200 qualified leads from IT professionals and cybersecurity experts.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0123",
+    "source_time": "2023-05-27 08:24:00",
+    "record_time": "2026-07-07T19:50:58.762676",
+    "score": 7.182299247197689,
+    "score_components": {
+      "bm25_score": 7.182299247197689,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 7.182299247197689,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 7.182299247197689
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User is looking for new car floor mats, specifically WeatherTech, due to his dirty driving habit.",
+    "dimension": {
+      "time": "2023-05-25",
+      "location": "",
+      "reason": "dirty driving habit",
+      "purpose": "protect car interior",
+      "keywords": [
+        "floor mats",
+        "WeatherTech",
+        "car",
+        "dirty driving habit"
+      ]
+    },
+    "entities": [
+      "floor mats",
+      "WeatherTech",
+      "car",
+      "dirty driving habit"
+    ],
+    "embedding_text": "User is looking for new car floor mats, specifically WeatherTech, due to his dirty driving habit.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0073",
+    "source_time": "2023-05-25 03:27:00",
+    "record_time": "2026-07-07T19:50:58.762378",
+    "score": 7.032157089175189,
+    "score_components": {
+      "bm25_score": 7.032157089175189,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 7.032157089175189,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 7.032157089175189
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user plans a trip to Seattle in June 2023.",
+    "dimension": {
+      "time": "2023-06",
+      "location": "Seattle",
+      "reason": "",
+      "purpose": "travel",
+      "keywords": [
+        "Seattle",
+        "trip",
+        "June 2023"
+      ]
+    },
+    "entities": [
+      "Seattle",
+      "trip",
+      "June 2023"
+    ],
+    "embedding_text": "The user plans a trip to Seattle in June 2023.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0086",
+    "source_time": "2023-05-26 02:21:00",
+    "record_time": "2026-07-07T19:50:58.762456",
+    "score": 6.358589104856764,
+    "score_components": {
+      "bm25_score": 6.358589104856764,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 6.358589104856764,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 6.358589104856764
+      },
+      {
+        "method": "minilm",
+        "rank": 6,
+        "score": 0.38820203250192137
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user plans to book the Space Needle Romance Package at The Edgewater Hotel in Seattle, which includes a room with a hot tub on the balcony facing the Space Needle, complimentary room service breakfast, and a $100 credit towards a couples' massage.",
+    "dimension": {
+      "time": "",
+      "location": "The Edgewater Hotel, Seattle",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Space Needle Romance Package",
+        "The Edgewater Hotel",
+        "hot tub balcony",
+        "Space Needle view",
+        "room service breakfast",
+        "couples massage"
+      ]
+    },
+    "entities": [
+      "Space Needle Romance Package",
+      "The Edgewater Hotel",
+      "hot tub balcony",
+      "Space Needle view",
+      "room service breakfast",
+      "couples massage"
+    ],
+    "embedding_text": "The user plans to book the Space Needle Romance Package at The Edgewater Hotel in Seattle, which includes a room with a hot tub on the balcony facing the Space Needle, complimentary room service breakfast, and a $100 credit towards a couples' massage.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0156",
+    "source_time": "2023-05-29 14:06:04.500000",
+    "record_time": "2026-07-07T19:50:58.762871",
+    "score": 5.663997763589906,
+    "score_components": {
+      "bm25_score": 5.663997763589906,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 5.663997763589906,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 5.663997763589906
+      },
+      {
+        "method": "minilm",
+        "rank": 13,
+        "score": 0.3504364952191461
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user plans to decant favorite toiletries into smaller containers and pack travel-sized options for the Seattle trip.",
+    "dimension": {
+      "time": "2023-06",
+      "location": "Seattle",
+      "reason": "",
+      "purpose": "to save space in luggage",
+      "keywords": [
+        "toiletries",
+        "decanting",
+        "travel-sized"
+      ]
+    },
+    "entities": [
+      "toiletries",
+      "decanting",
+      "travel-sized"
+    ],
+    "embedding_text": "The user plans to decant favorite toiletries into smaller containers and pack travel-sized options for the Seattle trip.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0089",
+    "source_time": "2023-05-26 02:21:02.500000",
+    "record_time": "2026-07-07T19:50:58.762473",
+    "score": 5.377711866818832,
+    "score_components": {
+      "bm25_score": 5.377711866818832,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 5.377711866818832,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 5.377711866818832
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user recently returned from a trip to New York City where they packed 7 tops but only wore 3, leading them to pack lighter for future trips.",
+    "dimension": {
+      "time": "before 2023-05-30",
+      "location": "New York City",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "New York City",
+        "overpacking",
+        "tops",
+        "packing light"
+      ]
+    },
+    "entities": [
+      "New York City",
+      "overpacking",
+      "tops",
+      "packing light"
+    ],
+    "embedding_text": "The user recently returned from a trip to New York City where they packed 7 tops but only wore 3, leading them to pack lighter for future trips.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0167",
+    "source_time": "2023-05-30 04:56:01.500000",
+    "record_time": "2026-07-07T19:50:58.762937",
+    "score": 5.375516228325936,
+    "score_components": {
+      "bm25_score": 5.375516228325936,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 5.375516228325936,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 5.375516228325936
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user plans to pack 3-4 tops and 2-3 bottoms for their 4-day Las Vegas trip.",
+    "dimension": {
+      "time": "",
+      "location": "Las Vegas",
+      "reason": "",
+      "purpose": "to pack light",
+      "keywords": [
+        "packing",
+        "tops",
+        "bottoms",
+        "Las Vegas"
+      ]
+    },
+    "entities": [
+      "packing",
+      "tops",
+      "bottoms",
+      "Las Vegas"
+    ],
+    "embedding_text": "The user plans to pack 3-4 tops and 2-3 bottoms for their 4-day Las Vegas trip.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0169",
+    "source_time": "2023-05-30 04:56:02.500000",
+    "record_time": "2026-07-07T19:50:58.762948",
+    "score": 5.270156279944851,
+    "score_components": {
+      "bm25_score": 5.270156279944851,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 5.270156279944851,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 5.270156279944851
+      },
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.3098765061177562
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "profile",
+    "content": "User is an avid reader.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "avid reader"
+      ]
+    },
+    "entities": [
+      "avid reader"
+    ],
+    "embedding_text": "User is an avid reader.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0022",
+    "source_time": "2023-05-22 05:12:00.500000",
+    "record_time": "2026-07-07T19:50:58.762004",
+    "score": 5.266661205799762,
+    "score_components": {
+      "bm25_score": 5.266661205799762,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 16,
+    "retrieval_score": 5.266661205799762,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 16,
+        "score": 5.266661205799762
+      },
+      {
+        "method": "structured",
+        "rank": 19,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User visited the Grand Canyon with their family on a road trip across the American Southwest a few years ago.",
+    "dimension": {
+      "time": "",
+      "location": "Grand Canyon, American Southwest",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Grand Canyon",
+        "family road trip",
+        "American Southwest"
+      ]
+    },
+    "entities": [
+      "Grand Canyon",
+      "family road trip",
+      "American Southwest"
+    ],
+    "embedding_text": "User visited the Grand Canyon with their family on a road trip across the American Southwest a few years ago.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0097",
+    "source_time": "2023-05-26 13:53:00.500000",
+    "record_time": "2026-07-07T19:50:58.762519",
+    "score": 5.248949838428586,
+    "score_components": {
+      "bm25_score": 5.248949838428586,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 17,
+    "retrieval_score": 5.248949838428586,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 17,
+        "score": 5.248949838428586
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "fact",
+    "content": "The user bought a rare 18th-century Chinese vase at an antique fair for $500.",
+    "dimension": {
+      "time": "",
+      "location": "antique fair",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Chinese vase",
+        "18th-century",
+        "antique fair",
+        "$500"
+      ]
+    },
+    "entities": [
+      "Chinese vase",
+      "18th-century",
+      "antique fair",
+      "$500"
+    ],
+    "embedding_text": "The user bought a rare 18th-century Chinese vase at an antique fair for $500.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0058",
+    "source_time": "2023-05-24 09:24:00",
+    "record_time": "2026-07-07T19:50:58.762288",
+    "score": 5.241912136856445,
+    "score_components": {
+      "bm25_score": 5.241912136856445,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 18,
+    "retrieval_score": 5.241912136856445,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 18,
+        "score": 5.241912136856445
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "profile",
+    "content": "The 'Who is Kadence' section is an introduction to the hero's journey transition from ordinary world, aiming to inspire and touch readers with whimsical joy.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "inspire and engage readers",
+      "keywords": [
+        "Who is Kadence",
+        "hero's journey",
+        "transition",
+        "inspire",
+        "whimsical"
+      ]
+    },
+    "entities": [
+      "Who is Kadence",
+      "hero's journey",
+      "transition",
+      "inspire",
+      "whimsical"
+    ],
+    "embedding_text": "The 'Who is Kadence' section is an introduction to the hero's journey transition from ordinary world, aiming to inspire and touch readers with whimsical joy.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0121",
+    "source_time": "2023-05-27 08:24:01",
+    "record_time": "2026-07-07T19:50:58.762664",
+    "score": 5.19342018557969,
+    "score_components": {
+      "bm25_score": 5.19342018557969,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 19,
+    "retrieval_score": 5.19342018557969,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 19,
+        "score": 5.19342018557969
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user plans a longer bike trip of 80-100 miles on their Trek Emonda this weekend (2023-06-03 to 2023-06-04).",
+    "dimension": {
+      "time": "2023-06-03 to 2023-06-04",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "bike trip",
+        "80-100 miles",
+        "weekend",
+        "Trek Emonda"
+      ]
+    },
+    "entities": [
+      "bike trip",
+      "80-100 miles",
+      "weekend",
+      "Trek Emonda"
+    ],
+    "embedding_text": "The user plans a longer bike trip of 80-100 miles on their Trek Emonda this weekend (2023-06-03 to 2023-06-04).",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0161",
+    "source_time": "2023-05-30 04:56:00",
+    "record_time": "2026-07-07T19:50:58.762901",
+    "score": 5.056413624277495,
+    "score_components": {
+      "bm25_score": 5.056413624277495,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 20,
+    "retrieval_score": 5.056413624277495,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 20,
+        "score": 5.056413624277495
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User met a comedian named Rachel at an open mic event and plans to have coffee with her to discuss comedy writing.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "shared love of comedy writing",
+      "purpose": "discuss comedy writing and get feedback",
+      "keywords": [
+        "user",
+        "Rachel",
+        "open mic",
+        "coffee",
+        "comedy writing"
+      ]
+    },
+    "entities": [
+      "user",
+      "Rachel",
+      "open mic",
+      "coffee",
+      "comedy writing"
+    ],
+    "embedding_text": "User met a comedian named Rachel at an open mic event and plans to have coffee with her to discuss comedy writing.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0001",
+    "source_time": "2023-05-20 02:14:00",
+    "record_time": "2026-07-07T19:50:58.761873",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User met a comedian named Rachel at an open mic event and plans to have coffee with her to discuss comedy writing. | user | Rachel | open mic | coffee | comedy writing | 2023-05-20 | shared love of comedy writing | discuss comedy writing and get feedback | user | Rachel | open mic | coffee | comedy writing"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 1,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User is considering starting a comedy blog to share writing and connect with other comedians.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "online",
+      "reason": "",
+      "purpose": "share writing and connect with comedians",
+      "keywords": [
+        "user",
+        "comedy blog",
+        "start"
+      ]
+    },
+    "entities": [
+      "user",
+      "comedy blog",
+      "start"
+    ],
+    "embedding_text": "User is considering starting a comedy blog to share writing and connect with other comedians.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0004",
+    "source_time": "2023-05-20 02:14:02",
+    "record_time": "2026-07-07T19:50:58.761893",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User is considering starting a comedy blog to share writing and connect with other comedians. | user | comedy blog | start | 2023-05-20 | online | share writing and connect with comedians | user | comedy blog | start"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 2,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User wants to get feedback on their comedy writing from Rachel and considers collaborating on a blog post or comedy project.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "shared love for comedy writing",
+      "purpose": "get feedback and potentially collaborate",
+      "keywords": [
+        "user",
+        "Rachel",
+        "feedback",
+        "collaboration",
+        "comedy writing"
+      ]
+    },
+    "entities": [
+      "user",
+      "Rachel",
+      "feedback",
+      "collaboration",
+      "comedy writing"
+    ],
+    "embedding_text": "User wants to get feedback on their comedy writing from Rachel and considers collaborating on a blog post or comedy project.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0005",
+    "source_time": "2023-05-20 02:14:02.500000",
+    "record_time": "2026-07-07T19:50:58.761900",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User wants to get feedback on their comedy writing from Rachel and considers collaborating on a blog post or comedy project. | user | Rachel | feedback | collaboration | comedy writing | 2023-05-20 | shared love for comedy writing | get feedback and potentially collaborate | user | Rachel | feedback | collaboration | comedy writing"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 3,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user is considering pursuing a certification in data science and is seeking online resources to learn about the field and available programs.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to obtain certification and learn data science",
+      "keywords": [
+        "data science",
+        "certification",
+        "online resources"
+      ]
+    },
+    "entities": [
+      "data science",
+      "certification",
+      "online resources"
+    ],
+    "embedding_text": "The user is considering pursuing a certification in data science and is seeking online resources to learn about the field and available programs.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0006",
+    "source_time": "2023-05-20 02:14:02.500000",
+    "record_time": "2026-07-07T19:50:58.761906",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user is considering pursuing a certification in data science and is seeking online resources to learn about the field and available programs. | data science | certification | online resources | to obtain certification and learn data science | data science | certification | online resources"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 4,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user attended their niece's high school graduation ceremony on June 15, 2023.",
+    "dimension": {
+      "time": "2023-06-15",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "niece",
+        "high school graduation",
+        "ceremony"
+      ]
+    },
+    "entities": [
+      "niece",
+      "high school graduation",
+      "ceremony"
+    ],
+    "embedding_text": "The user attended their niece's high school graduation ceremony on June 15, 2023.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0007",
+    "source_time": "2023-05-20 03:03:00",
+    "record_time": "2026-07-07T19:50:58.761912",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user attended their niece's high school graduation ceremony on June 15, 2023. | niece | high school graduation | ceremony | 2023-06-15 | niece | high school graduation | ceremony"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 5,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user wants to explore data science projects on Kaggle to practice their skills.",
+    "dimension": {
+      "time": "",
+      "location": "Kaggle",
+      "reason": "",
+      "purpose": "to practice data science skills",
+      "keywords": [
+        "Kaggle",
+        "data science projects",
+        "practice"
+      ]
+    },
+    "entities": [
+      "Kaggle",
+      "data science projects",
+      "practice"
+    ],
+    "embedding_text": "The user wants to explore data science projects on Kaggle to practice their skills.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0008",
+    "source_time": "2023-05-20 03:03:00.500000",
+    "record_time": "2026-07-07T19:50:58.761919",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user wants to explore data science projects on Kaggle to practice their skills. | Kaggle | data science projects | practice | Kaggle | to practice data science skills | Kaggle | data science projects | practice"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 6,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user visited the Photography Museum with their cousin Alex.",
+    "dimension": {
+      "time": "",
+      "location": "Photography Museum",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Photography Museum",
+        "cousin Alex",
+        "visit"
+      ]
+    },
+    "entities": [
+      "Photography Museum",
+      "cousin Alex",
+      "visit"
+    ],
+    "embedding_text": "The user visited the Photography Museum with their cousin Alex.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0010",
+    "source_time": "2023-05-20 03:03:01.500000",
+    "record_time": "2026-07-07T19:50:58.761931",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user visited the Photography Museum with their cousin Alex. | Photography Museum | cousin Alex | visit | Photography Museum | Photography Museum | cousin Alex | visit"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 7,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 7,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user is seeking inspiration for their next photography project after being inspired by a visit to the Photography Museum.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "The user visited the Photography Museum and was inspired.",
+      "purpose": "to find inspiration for next photography project",
+      "keywords": [
+        "photography project",
+        "inspiration",
+        "Photography Museum"
+      ]
+    },
+    "entities": [
+      "photography project",
+      "inspiration",
+      "Photography Museum"
+    ],
+    "embedding_text": "The user is seeking inspiration for their next photography project after being inspired by a visit to the Photography Museum.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0011",
+    "source_time": "2023-05-20 20:13:00",
+    "record_time": "2026-07-07T19:50:58.761938",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user is seeking inspiration for their next photography project after being inspired by a visit to the Photography Museum. | photography project | inspiration | Photography Museum | The user visited the Photography Museum and was inspired. | to find inspiration for next photography project | photography project | inspiration | Photography Museum"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 8,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 8,
+        "score": 0.23076923076923075
+      },
+      {
+        "method": "minilm",
+        "rank": 17,
+        "score": 0.3125864829447967
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user plans to visit the Museum of Modern Art (MoMA) this weekend to see the Contemporary Art Exhibition.",
+    "dimension": {
+      "time": "",
+      "location": "Museum of Modern Art (MoMA)",
+      "reason": "",
+      "purpose": "to see the Contemporary Art Exhibition",
+      "keywords": [
+        "MoMA",
+        "Contemporary Art Exhibition",
+        "visit"
+      ]
+    },
+    "entities": [
+      "MoMA",
+      "Contemporary Art Exhibition",
+      "visit"
+    ],
+    "embedding_text": "The user plans to visit the Museum of Modern Art (MoMA) this weekend to see the Contemporary Art Exhibition.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0013",
+    "source_time": "2023-05-20 20:13:01",
+    "record_time": "2026-07-07T19:50:58.761950",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to visit the Museum of Modern Art (MoMA) this weekend to see the Contemporary Art Exhibition. | MoMA | Contemporary Art Exhibition | visit | Museum of Modern Art (MoMA) | to see the Contemporary Art Exhibition | MoMA | Contemporary Art Exhibition | visit"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 10,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "profile",
+    "content": "User is interested in street photography.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "street photography",
+        "interest"
+      ]
+    },
+    "entities": [
+      "street photography",
+      "interest"
+    ],
+    "embedding_text": "User is interested in street photography.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0014",
+    "source_time": "2023-05-20 20:41:02",
+    "record_time": "2026-07-07T19:50:58.761957",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User is interested in street photography. | street photography | interest | street photography | interest"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 11,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 11,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User plans to capture street scenes around the Museum of Modern Art (MoMA) in New York City.",
+    "dimension": {
+      "time": "",
+      "location": "New York City",
+      "reason": "inspired by street photography",
+      "purpose": "",
+      "keywords": [
+        "street photography",
+        "MoMA",
+        "New York City",
+        "street scenes"
+      ]
+    },
+    "entities": [
+      "street photography",
+      "MoMA",
+      "New York City",
+      "street scenes"
+    ],
+    "embedding_text": "User plans to capture street scenes around the Museum of Modern Art (MoMA) in New York City.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0015",
+    "source_time": "2023-05-20 20:41:02",
+    "record_time": "2026-07-07T19:50:58.761963",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User plans to capture street scenes around the Museum of Modern Art (MoMA) in New York City. | street photography | MoMA | New York City | street scenes | New York City | inspired by street photography | street photography | MoMA | New York City | street scenes"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 12,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "profile",
+    "content": "User believes that individuals should self-regulate their medication usage and that government should not control personal health choices, even if it leads to addiction.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "opioid regulation",
+        "personal autonomy",
+        "health choices",
+        "government control",
+        "addiction"
+      ]
+    },
+    "entities": [
+      "opioid regulation",
+      "personal autonomy",
+      "health choices",
+      "government control",
+      "addiction"
+    ],
+    "embedding_text": "User believes that individuals should self-regulate their medication usage and that government should not control personal health choices, even if it leads to addiction.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0016",
+    "source_time": "2023-05-20 21:51:00.500000",
+    "record_time": "2026-07-07T19:50:58.761970",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User believes that individuals should self-regulate their medication usage and that government should not control personal health choices, even if it leads to addiction. | opioid regulation | personal autonomy | health choices | government control | addiction | opioid regulation | personal autonomy | health choices | government control | addiction"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 13,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 13,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User finished reading 'The Nightingale' and loved it.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "The Nightingale",
+        "reading",
+        "loved"
+      ]
+    },
+    "entities": [
+      "The Nightingale",
+      "reading",
+      "loved"
+    ],
+    "embedding_text": "User finished reading 'The Nightingale' and loved it.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0017",
+    "source_time": "2023-05-22 05:12:00",
+    "record_time": "2026-07-07T19:50:58.761976",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User finished reading 'The Nightingale' and loved it. | The Nightingale | reading | loved | The Nightingale | reading | loved"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "profile",
+    "content": "User enjoys historical fiction genre.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "historical fiction",
+        "genre preference"
+      ]
+    },
+    "entities": [
+      "historical fiction",
+      "genre preference"
+    ],
+    "embedding_text": "User enjoys historical fiction genre.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0018",
+    "source_time": "2023-05-22 05:12:00",
+    "record_time": "2026-07-07T19:50:58.761981",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User enjoys historical fiction genre. | historical fiction | genre preference | historical fiction | genre preference"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 15,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User finished six books in the three months prior to May 22, 2023.",
+    "dimension": {
+      "time": "2023-02-22 to 2023-05-22",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "six books",
+        "reading",
+        "three months"
+      ]
+    },
+    "entities": [
+      "six books",
+      "reading",
+      "three months"
+    ],
+    "embedding_text": "User finished six books in the three months prior to May 22, 2023.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0019",
+    "source_time": "2023-05-22 05:12:00.500000",
+    "record_time": "2026-07-07T19:50:58.761988",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User finished six books in the three months prior to May 22, 2023. | six books | reading | three months | 2023-02-22 to 2023-05-22 | six books | reading | three months"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 16,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User plans to start reading 'All the Light We Cannot See'.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "All the Light We Cannot See",
+        "reading plan"
+      ]
+    },
+    "entities": [
+      "All the Light We Cannot See",
+      "reading plan"
+    ],
+    "embedding_text": "User plans to start reading 'All the Light We Cannot See'.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0020",
+    "source_time": "2023-05-22 05:12:00.500000",
+    "record_time": "2026-07-07T19:50:58.761993",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User plans to start reading 'All the Light We Cannot See'. | All the Light We Cannot See | reading plan | All the Light We Cannot See | reading plan"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 17,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "profile",
+    "content": "User has a daily commute and listens to audiobooks.",
+    "dimension": {
+      "time": "",
+      "location": "daily commute",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "daily commute",
+        "audiobooks"
+      ]
+    },
+    "entities": [
+      "daily commute",
+      "audiobooks"
+    ],
+    "embedding_text": "User has a daily commute and listens to audiobooks.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0021",
+    "source_time": "2023-05-22 05:12:00.500000",
+    "record_time": "2026-07-07T19:50:58.761999",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User has a daily commute and listens to audiobooks. | daily commute | audiobooks | daily commute | daily commute | audiobooks"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 18,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User purchased 'The Song of Achilles' in physical form from a used bookstore around May 20, 2023.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "used bookstore",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "The Song of Achilles",
+        "purchase",
+        "used bookstore"
+      ]
+    },
+    "entities": [
+      "The Song of Achilles",
+      "purchase",
+      "used bookstore"
+    ],
+    "embedding_text": "User purchased 'The Song of Achilles' in physical form from a used bookstore around May 20, 2023.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0023",
+    "source_time": "2023-05-22 05:12:01",
+    "record_time": "2026-07-07T19:50:58.762010",
+    "score": 0.23076923076923075,
+    "structural_score": 0.23076923076923075,
+    "score_components": {
+      "score": 0.23076923076923075,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.23076923076923075,
+        "location_constraint": 0.3076923076923077,
+        "keyword_phrase_match": 0.23076923076923075,
+        "keyword_token_overlap": 0.23076923076923075
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "location_constraint": 0.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User purchased 'The Song of Achilles' in physical form from a used bookstore around May 20, 2023. | The Song of Achilles | purchase | used bookstore | 2023-05-20 | used bookstore | The Song of Achilles | purchase | used bookstore"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 20,
+    "retrieval_score": 0.23076923076923075,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 20,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "profile",
+    "content": "The user prefers hotels with unique features such as rooftop pools or balcony hot tubs.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "hotel preference",
+        "unique features",
+        "rooftop pool",
+        "balcony hot tub"
+      ]
+    },
+    "entities": [
+      "hotel preference",
+      "unique features",
+      "rooftop pool",
+      "balcony hot tub"
+    ],
+    "embedding_text": "The user prefers hotels with unique features such as rooftop pools or balcony hot tubs.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0153",
+    "source_time": "2023-05-29 14:06:00.500000",
+    "record_time": "2026-07-07T19:50:58.762853",
+    "score": 0.5311313035094408,
+    "score_components": {
+      "dense_cosine_score": 0.5311313035094408,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 2,
+    "retrieval_score": 0.5311313035094408,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.5311313035094408
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User is thinking of hosting a family game night soon.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "family game night",
+        "hosting",
+        "plan"
+      ]
+    },
+    "entities": [
+      "family game night",
+      "hosting",
+      "plan"
+    ],
+    "embedding_text": "User is thinking of hosting a family game night soon.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0029",
+    "source_time": "2023-05-22 06:36:00",
+    "record_time": "2026-07-07T19:50:58.762045",
+    "score": 0.4121771144938697,
+    "score_components": {
+      "dense_cosine_score": 0.4121771144938697,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 3,
+    "retrieval_score": 0.4121771144938697,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.4121771144938697
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User is planning a family game night.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "family game night",
+        "plan"
+      ]
+    },
+    "entities": [
+      "family game night",
+      "plan"
+    ],
+    "embedding_text": "User is planning a family game night.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0041",
+    "source_time": "2023-05-22 14:24:00",
+    "record_time": "2026-07-07T19:50:58.762115",
+    "score": 0.3861494586513154,
+    "score_components": {
+      "dense_cosine_score": 0.3861494586513154,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 7,
+    "retrieval_score": 0.3861494586513154,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 7,
+        "score": 0.3861494586513154
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "fact",
+    "content": "The user works in marketing for a real estate company in Dubai.",
+    "dimension": {
+      "time": "",
+      "location": "Dubai",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "user",
+        "marketing",
+        "real estate company",
+        "Dubai"
+      ]
+    },
+    "entities": [
+      "user",
+      "marketing",
+      "real estate company",
+      "Dubai"
+    ],
+    "embedding_text": "The user works in marketing for a real estate company in Dubai.",
+    "source_message_ids": [
+      "19"
+    ],
+    "source_boundary_id": "19_0182",
+    "source_time": "2023-05-30 19:40:00",
+    "record_time": "2026-07-07T19:50:58.763024",
+    "score": 0.3851604011872839,
+    "score_components": {
+      "dense_cosine_score": 0.3851604011872839,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 8,
+    "retrieval_score": 0.3851604011872839,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 8,
+        "score": 0.3851604011872839
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user attended the Tech Expo in Las Vegas.",
+    "dimension": {
+      "time": "",
+      "location": "Las Vegas",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Tech Expo",
+        "Las Vegas",
+        "lead generation"
+      ]
+    },
+    "entities": [
+      "Tech Expo",
+      "Las Vegas",
+      "lead generation"
+    ],
+    "embedding_text": "The user attended the Tech Expo in Las Vegas.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0124",
+    "source_time": "2023-05-27 08:24:00.500000",
+    "record_time": "2026-07-07T19:50:58.762682",
+    "score": 0.3678850346314282,
+    "score_components": {
+      "dense_cosine_score": 0.3678850346314282,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.3678850346314282,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 10,
+        "score": 0.3678850346314282
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User plans to check out expansions for Ticket to Ride with his roommate Mike.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to play with Mike",
+      "keywords": [
+        "Ticket to Ride",
+        "expansions",
+        "Mike",
+        "plan"
+      ]
+    },
+    "entities": [
+      "Ticket to Ride",
+      "expansions",
+      "Mike",
+      "plan"
+    ],
+    "embedding_text": "User plans to check out expansions for Ticket to Ride with his roommate Mike.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0040",
+    "source_time": "2023-05-22 06:36:02.500000",
+    "record_time": "2026-07-07T19:50:58.762109",
+    "score": 0.35137526416615183,
+    "score_components": {
+      "dense_cosine_score": 0.35137526416615183,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.35137526416615183,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.35137526416615183
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User frequently visits a nearby trail with a bike and plans to purchase a bike rack to transport the bike.",
+    "dimension": {
+      "time": "",
+      "location": "nearby trail",
+      "reason": "",
+      "purpose": "transport bike to trail",
+      "keywords": [
+        "bike rack",
+        "transportation",
+        "trail"
+      ]
+    },
+    "entities": [
+      "bike rack",
+      "transportation",
+      "trail"
+    ],
+    "embedding_text": "User frequently visits a nearby trail with a bike and plans to purchase a bike rack to transport the bike.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0076",
+    "source_time": "2023-05-25 03:27:00",
+    "record_time": "2026-07-07T19:50:58.762397",
+    "score": 0.33750790919680457,
+    "score_components": {
+      "dense_cosine_score": 0.33750790919680457,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.33750790919680457,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 14,
+        "score": 0.33750790919680457
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "profile",
+    "content": "User is interested in book festivals and author events.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "book festivals",
+        "author events",
+        "interest"
+      ]
+    },
+    "entities": [
+      "book festivals",
+      "author events",
+      "interest"
+    ],
+    "embedding_text": "User is interested in book festivals and author events.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0027",
+    "source_time": "2023-05-22 05:12:01",
+    "record_time": "2026-07-07T19:50:58.762033",
+    "score": 0.327485903688947,
+    "score_components": {
+      "dense_cosine_score": 0.327485903688947,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.327485903688947,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 15,
+        "score": 0.327485903688947
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User is thinking of starting a book club with friends.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "book club",
+        "friends",
+        "plan"
+      ]
+    },
+    "entities": [
+      "book club",
+      "friends",
+      "plan"
+    ],
+    "embedding_text": "User is thinking of starting a book club with friends.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0028",
+    "source_time": "2023-05-22 05:12:02.500000",
+    "record_time": "2026-07-07T19:50:58.762039",
+    "score": 0.32508379740918764,
+    "score_components": {
+      "dense_cosine_score": 0.32508379740918764,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.32508379740918764,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 16,
+        "score": 0.32508379740918764
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "fact",
+    "content": "User believes his family would enjoy the games Forbidden Island and Pandemic.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "family",
+        "Forbidden Island",
+        "Pandemic",
+        "game preference"
+      ]
+    },
+    "entities": [
+      "family",
+      "Forbidden Island",
+      "Pandemic",
+      "game preference"
+    ],
+    "embedding_text": "User believes his family would enjoy the games Forbidden Island and Pandemic.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0036",
+    "source_time": "2023-05-22 06:36:00.500000",
+    "record_time": "2026-07-07T19:50:58.762086",
+    "score": 0.3060780997004381,
+    "score_components": {
+      "dense_cosine_score": 0.3060780997004381,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.3060780997004381,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 19,
+        "score": 0.3060780997004381
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "profile",
+    "content": "User prefers strategic games like Ticket to Ride.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "strategic games",
+        "Ticket to Ride",
+        "preference"
+      ]
+    },
+    "entities": [
+      "strategic games",
+      "Ticket to Ride",
+      "preference"
+    ],
+    "embedding_text": "User prefers strategic games like Ticket to Ride.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0033",
+    "source_time": "2023-05-22 06:36:00.500000",
+    "record_time": "2026-07-07T19:50:58.762068",
+    "score": 0.3037165655068873,
+    "score_components": {
+      "dense_cosine_score": 0.3037165655068873,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 20,
+    "retrieval_score": 0.3037165655068873,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 20,
+        "score": 0.3037165655068873
+      }
+    ]
+  }
+]

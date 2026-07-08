@@ -1,0 +1,32 @@
+{
+  "id": "4370b02a-245b-40ba-b3d6-175cb9ea62ca",
+  "object": "chat.completion",
+  "created": 1783427985,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\": \"CORRECT\"}",
+        "reasoning_content": "We need to compare the generated answer \"Grand Ballroom\" with the gold answer \"The Grand Ballroom\". They are essentially the same, just missing \"The\". The topic is the same, so it should be CORRECT. Explanation: The generated answer matches the gold answer with only a minor difference in article usage."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 401,
+    "completion_tokens": 72,
+    "total_tokens": 473,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 145
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

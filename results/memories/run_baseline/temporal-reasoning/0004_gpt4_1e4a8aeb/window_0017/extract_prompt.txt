@@ -1,0 +1,156 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-04-21T18:47:01, Fri] 1.User: I'm glad you like the music suggestions! For the board games, I'm interested in learning more about Ticket to Ride. I've played it once before at a board game meetup, and I was impressed by the winner's strategy of focusing on the longest train routes. Can you tell me more about the game's mechanics and what makes it so popular?
+[2023-04-21T18:47:01.500000, Fri] 2.User: I'm interested in learning more about the expansions and spin-offs of Ticket to Ride. Are there any that you would recommend for someone who's already familiar with the base game?
+[2023-04-21T18:47:02, Fri] 3.User: I'm interested in learning more about Ticket to Ride: Rails & Sails. How does the naval route-building mechanism work, and what are the main differences between it and the traditional train route-building mechanism?
+[2023-04-21T13:19:00, Fri] 4.User: I'm looking for some recommendations on photography exhibitions or events in my area. I just got back into editing and posting my photos, and I finally got around to editing the photos I took on my solo hike to Red Rock Canyon three weeks ago.
+[2023-04-21T13:19:00.500000, Fri] 5.User: I'm in Las Vegas, Nevada. I'm open to all types of photography exhibitions, but I have a soft spot for landscapes and astrophotography. I prefer in-person events, and I'm free to attend anytime within the next few months.
+[2023-04-21T13:19:01, Fri] 6.User: I'm also interested in learning more about photography techniques and improving my skills. Do you know of any online resources, tutorials, or courses that could help me with composition and visual storytelling?
+[2023-04-21T13:19:01.500000, Fri] 7.User: I've been meaning to work on my composition and visual storytelling skills, especially after attending a photography workshop at the local community center earlier this month. The instructor shared some great tips on how to create more dynamic and engaging images. I took notes furiously during the session and have been trying to apply some of those principles to my own photography. Do you have any specific resources or tutorials that focus on intentional camera movement and creating a sense of blur and motion in images?
+[2023-04-21T13:19:02, Fri] 8.User: I've been experimenting with intentional camera movement and creating a sense of blur and motion in my images, especially after attending that photography workshop at the local community center. I tried out a new technique involving intentional camera movement to create a sense of blur and motion in a shot of a beautiful sunset I captured on my evening walk around the neighborhood. It was a bit hit-or-miss, but I liked the outcome. Do you have any tips on how to improve my panning skills, especially when tracking fast-moving subjects like cars or cyclists?
+[2023-04-21T13:19:02.500000, Fri] 9.User: I've been meaning to try out astrophotography, so I set up my tripod and camera in my backyard last Saturday night to capture some shots of the Milky Way. It was a bit tricky to get the focus right, but I managed to snag a few decent photos. I need to work on reducing the noise and improving the overall quality, but it was a great learning experience. Do you have any tips on how to improve my astrophotography skills, especially when it comes to focusing and noise reduction?
+[2023-04-21T22:18:00, Fri] 10.User: Can you read this text and produce a flowchart for me? Tax and Duty Manual Importation of Motor Vehicles from the UK
+The information in this document is provided as a guide only
+and is not professional advice, including legal advice. It should
+not be assumed that the guidance is comprehensive or that it
+provides a definitive answer in every case.
+1
+Importation of Motor Vehicles from the UK
+Document last updated December 2022
+Enquiries concerning this manual:
+importpolicy@revenue.ie
+Tel: + 353 1 
+...
+here the vehicle is reimported by the same
+person/entity which originally exported it, no VAT on
+import will be payable.
+Tax and Duty Manual Importation of Motor Vehicles from the UK
+12
+2. Vehicles im
+...
+eCustoms Helpdesk Notification Ref 36/2020.
+Postponed accounting for Value-Added Tax (VAT) on imports is available to all
+traders that are registered for VAT and Customs and Excise. The traders must fulfil
+certain conditions. Further detail is available on eCustoms Helpdesk Notification Ref
+32/2020.
+[2023-04-21T14:59:00, Fri] 11.User: I'm looking for some advice on how to stay organized with my online orders. I've made at least 10 online purchases in the last three months, and it's getting hard to keep track of everything.
+[2023-04-21T14:59:00.500000, Fri] 12.User: That's really helpful, thanks. I think I'll start with setting up a dedicated email folder and a tracking spreadsheet. Do you have any recommendations for a specific spreadsheet template I could use, or any specific columns I should prioritize?
+[2023-04-21T14:59:01, Fri] 13.User: I think I'll start with the basic columns you suggested and add more as needed. By the way, I've noticed that I tend to shop more on weekends when I have more free time, and I spend more money on Sundays probably because I'm browsing online stores out of boredom. Do you have any tips on how to avoid impulse purchases and stay mindful of my online shopping habits?
+[2023-04-21T14:59:01.500000, Fri] 14.User: I think I'll try the 30-day rule and schedule specific times for online shopping. I've also been thinking about opting for in-store pickup whenever possible to avoid the temptation of browsing online while I'm waiting for my items to arrive. Do you have any advice on how to make the most of in-store pickup?
+[2023-04-21T14:59:02, Fri] 15.User: I was thinking about my online shopping habits, and I realized that I tend to shop more during sales or when there are promotions. Do you have any advice on how to navigate sales and promotions without overspending?

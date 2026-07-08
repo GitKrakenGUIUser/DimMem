@@ -1,0 +1,32 @@
+{
+  "id": "5d9b4a7d-e3df-473c-bd29-2585ed296c60",
+  "object": "chat.completion",
+  "created": 1783346451,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": []\n}",
+        "reasoning_content": "We need to extract memories from messages 4 onwards (since first 3 are overlapping context). Let's go through each message.\n\nMessage 4: User asks who ended up winning the World Cup. This is a question, no long-term value. Not extracting.\n\nMessage 5: User comments on nail-biting final, glad England won, asks if they'll do well next. No extraction.\n\nMessage 6: User asks about human activities impact on Mississippi River ecosystem food web. This is a question, not a fact about user. No extraction.\n\nMessage 7: User expresses surprise and asks if anything being done. No.\n\nMessage 8: User asks if efforts will be enough. No.\n\nMessage 9: User asks about government regulations vs individual efforts. No.\n\nMessage 10: User expresses concern and asks about specific initiatives/organizations. No.\n\nMessage 11: User asks about negative consequences of protection efforts. No.\n\nMessage 12: User comments on balance and cooperation. No.\n\nMessage 13: User asks about effects of global climate change. No.\n\nMessage 14: User asks about possibilities for responding to climate change and decision-making power. No.\n\nMessage 15: User asks to distinguish between greenhouse effect and global warming. No.\n\nNone of these messages contain factual information about the user, events they experienced, or profile. They are all questions or comments about external topics. The only potential memory might be from message 1 (but that's overlapping context, excluded). So no memories to extract.\n\nThus output should be an empty memories array."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2006,
+    "completion_tokens": 325,
+    "total_tokens": 2331,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 316
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 854
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "cbbe30ba-e91d-4730-b5e6-edc9825e1c5e",
+  "object": "chat.completion",
+  "created": 1783352463,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": [\n    {\n      \"source_id\": 4,\n      \"content\": \"The user requested the assistant to create Instagram and Facebook posts for a property, with a highly clickbait and engaging style, and to expand the post with bullet points.\",\n      \"dimension\": {\n        \"memory_type\": \"episodic\",\n        \"time\": \"2023-05-30\",\n        \"location\": \"Instagram, Facebook\",\n        \"reason\": \"\",\n        \"purpose\": \"promote the property\",\n        \"keywords\": [\"property\", \"Instagram post\", \"Facebook post\", \"clickbait\", \"engaging\", \"bullet points\"]\n      }\n    }\n  ]\n}",
+        "reasoning_content": "We need to extract memories from the conversation. The input consists of user messages from 2023-05-30. The first 3 messages are overlapping context and cannot be used as new memory sources. So only messages 4-8 are eligible for extraction.\n\nThe user is giving instructions to create social media posts (Instagram, Facebook) for a property, asking for variations, more clickbait, lively, engaging, expand with bullet points. This seems like a specific event/task: the user is creating marketing content for a property on social media platforms. This is a specific event/action, so likely episodic. But note: the user is instructing an assistant (presumably an AI) to generate these posts. The user's behavior: they are repeatedly asking for variations and more clickbait. This could indicate a preference for highly engaging, clickbait-style content, but we need to be careful not to overgeneralize from a single interaction. However, the user explicitly says \"make it lively\", \"more click bait\", \"more engaging\", \"create variation\". This could be a profile: user prefers clickbait/engaging style for social media posts. But since it's a single event, it's safer to extract as episodic: the user asked to create Instagram and Facebook posts for a property with clickbait and engaging style. Also, the user asked to expand with bullet points.\n\nBut we need to extract atomic memories. Let's list potential facts/episodic profiles:\n\n- The user is creating social media posts for a property (fact? or episodic? It's an action during this conversation.)\n- The user wants Instagram and Facebook posts.\n- The user requested more clickbait style.\n- The user requested more engaging variations.\n- The user requested to expand with bullet points.\n\nSince it's all part of one task, we can combine into one episodic memory: The user asked the assistant to create Instagram and Facebook posts for a property, with clickbait, engaging style, and expand with bullet points. Time: 2023-05-30. Location: online (social media platforms). Purpose: to promote property. Keywords: property, Instagram, Facebook, clickbait, engaging, bullet points.\n\nAlternatively, we could split into separate memories: one for Instagram, one for Facebook, and one for the expansion request. But they are all related to the same task. To keep atomic, we can have a single memory capturing the overall request.\n\nAlso note: messages 4-8 are sequential: \"Even more click bait\", \"Create variation making more engaging\", \"create more variations\", \"Make a facebook post\", \"Expand it a little more with some bullet points\". So the user is iterating on the same task.\n\nThus, I'll produce one episodic memory: The user requested the assistant to create Instagram and Facebook posts for a property, with a highly clickbait and engaging style, and to expand the post with bullet points.\n\nDimension: memory_type: episodic, time: 2023-05-30, location: \"\" (not explicitly stated, but online platforms implied? But rule says only if explicitly mentioned or strongly implied. The user mentions Instagram and Facebook, so location could be \"Instagram, Facebook\". But location is physical place or online platform? It says \"online platform\" so yes. I'll set location: \"Instagram, Facebook\". But careful: location field should be a single string? The format shows location as a string. I'll put \"Instagram, Facebook\" as a single string. Alternatively, I could put \"\" and rely on keywords. I think it's fine to put \"Instagram, Facebook\". Reason: \"\" because not explicitly stated. Purpose: promote property (or create marketing content). Keywords: property, Instagram post, Facebook post, clickbait, engaging, bullet points.\n\nLet's check the extraction targets: factual information, specific experiences, long-term preferences. The user's repeated requests for clickbait might indicate a preference for that style, but it's a single event, so we should not overgeneralize into profile. So I'll keep as episodic.\n\nAlso note: message 4 \"Even more click bait\" is a request to increase clickbait. So it's all part of the same.\n\nThus, output: one memory.\n\nBut ensure content is self-contained: \"The user requested the assistant to create Instagram and Facebook posts for a property, with a highly clickbait and engaging style, and to expand the post with bullet points.\"\n\nI'll format accordingly.\n\nAlso, the output must be valid JSON. I'll produce only the JSON object."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1471,
+    "completion_tokens": 1082,
+    "total_tokens": 2553,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 937
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 319
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

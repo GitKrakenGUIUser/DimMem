@@ -1,0 +1,2940 @@
+[
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "profile",
+    "content": "The user is interested in learning music theory, has been intimidated by it, and wants to improve their playing.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to take their playing to the next level",
+      "purpose": "to learn music theory",
+      "keywords": [
+        "music theory",
+        "learning",
+        "playing improvement"
+      ]
+    },
+    "entities": [
+      "music theory",
+      "learning",
+      "playing improvement"
+    ],
+    "embedding_text": "The user is interested in learning music theory, has been intimidated by it, and wants to improve their playing.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0008",
+    "source_time": "2023-05-20 08:21:00.500000",
+    "record_time": "2026-07-07T19:50:58.270270",
+    "score": 19.920047671866005,
+    "score_components": {
+      "bm25_score": 19.920047671866005,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 19.920047671866005,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 19.920047671866005
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.7291194547755725
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user plans to learn music theory using MusicTheory.net and YouTube channels to improve their playing.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "",
+      "purpose": "improve playing",
+      "keywords": [
+        "music theory",
+        "MusicTheory.net",
+        "YouTube",
+        "learning plan"
+      ]
+    },
+    "entities": [
+      "music theory",
+      "MusicTheory.net",
+      "YouTube",
+      "learning plan"
+    ],
+    "embedding_text": "The user plans to learn music theory using MusicTheory.net and YouTube channels to improve their playing.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0010",
+    "source_time": "2023-05-20 08:21:02.500000",
+    "record_time": "2026-07-07T19:50:58.270283",
+    "score": 15.252801322876588,
+    "score_components": {
+      "bm25_score": 15.252801322876588,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 15.252801322876588,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 15.252801322876588
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.4833333333333334
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.6694629414178447
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "profile",
+    "content": "The user is considering enrolling in an online Master of Science program and is concerned about the level of faculty interaction, support, and workload.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "online Master of Science program",
+        "faculty interaction",
+        "workload"
+      ]
+    },
+    "entities": [
+      "online Master of Science program",
+      "faculty interaction",
+      "workload"
+    ],
+    "embedding_text": "The user is considering enrolling in an online Master of Science program and is concerned about the level of faculty interaction, support, and workload.",
+    "source_message_ids": [
+      "19"
+    ],
+    "source_boundary_id": "19_0170",
+    "source_time": "2023-05-29 00:04:00",
+    "record_time": "2026-07-07T19:50:58.271307",
+    "score": 12.458109946614556,
+    "score_components": {
+      "bm25_score": 12.458109946614556,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 12.458109946614556,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 12.458109946614556
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "User agreed to try a screen-free dinner and wind-down routine, but expressed concern about limiting Netflix time as it is used for unwinding.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to reduce screen time",
+      "purpose": "to balance relaxation and screen reduction",
+      "keywords": [
+        "screen-free dinner",
+        "wind-down routine",
+        "Netflix",
+        "relaxation",
+        "screen time reduction"
+      ]
+    },
+    "entities": [
+      "screen-free dinner",
+      "wind-down routine",
+      "Netflix",
+      "relaxation",
+      "screen time reduction"
+    ],
+    "embedding_text": "User agreed to try a screen-free dinner and wind-down routine, but expressed concern about limiting Netflix time as it is used for unwinding.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0047",
+    "source_time": "2023-05-23 01:16:01",
+    "record_time": "2026-07-07T19:50:58.270514",
+    "score": 11.16658539311152,
+    "score_components": {
+      "bm25_score": 11.16658539311152,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 11.16658539311152,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 11.16658539311152
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.37500000000000006
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "profile",
+    "content": "The user is frustrated about the spread of fake news on social media and thinks there should be stricter regulations on what can be posted.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "fake news",
+        "social media regulation",
+        "frustration"
+      ]
+    },
+    "entities": [
+      "fake news",
+      "social media regulation",
+      "frustration"
+    ],
+    "embedding_text": "The user is frustrated about the spread of fake news on social media and thinks there should be stricter regulations on what can be posted.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0084",
+    "source_time": "2023-05-25 03:50:03",
+    "record_time": "2026-07-07T19:50:58.270815",
+    "score": 11.031803594719836,
+    "score_components": {
+      "bm25_score": 11.031803594719836,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 11.031803594719836,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 11.031803594719836
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "User was nervous before their first dance class because they had never taken a dance class before.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "no previous dance experience",
+      "purpose": "",
+      "keywords": [
+        "nervous",
+        "first dance class",
+        "no previous experience"
+      ]
+    },
+    "entities": [
+      "nervous",
+      "first dance class",
+      "no previous experience"
+    ],
+    "embedding_text": "User was nervous before their first dance class because they had never taken a dance class before.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0139",
+    "source_time": "2023-05-26 10:56:02.500000",
+    "record_time": "2026-07-07T19:50:58.271129",
+    "score": 10.129928150010821,
+    "score_components": {
+      "bm25_score": 10.129928150010821,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 10.129928150010821,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 10.129928150010821
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "profile",
+    "content": "The user is interested in learning about shorebird migration patterns and habitats.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "shorebird migration",
+        "habitats"
+      ]
+    },
+    "entities": [
+      "shorebird migration",
+      "habitats"
+    ],
+    "embedding_text": "The user is interested in learning about shorebird migration patterns and habitats.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0121",
+    "source_time": "2023-05-26 08:13:01.500000",
+    "record_time": "2026-07-07T19:50:58.271028",
+    "score": 9.421428845660634,
+    "score_components": {
+      "bm25_score": 9.421428845660634,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 9.421428845660634,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 9.421428845660634
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user sold their old leather jacket online for a good price.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "leather jacket",
+        "online sale",
+        "decluttering"
+      ]
+    },
+    "entities": [
+      "leather jacket",
+      "online sale",
+      "decluttering"
+    ],
+    "embedding_text": "The user sold their old leather jacket online for a good price.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0156",
+    "source_time": "2023-05-27 13:22:01.500000",
+    "record_time": "2026-07-07T19:50:58.271226",
+    "score": 9.148006093551324,
+    "score_components": {
+      "bm25_score": 9.148006093551324,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 9.148006093551324,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 9.148006093551324
+      },
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.37500000000000006
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user asked about how the music scene in Nashville, Tennessee has changed over the past decade.",
+    "dimension": {
+      "time": "2023-05-26T04:32:00",
+      "location": "Nashville, Tennessee",
+      "reason": "",
+      "purpose": "to learn about Nashville music scene evolution",
+      "keywords": [
+        "Nashville music scene",
+        "change over decade"
+      ]
+    },
+    "entities": [
+      "Nashville music scene",
+      "change over decade"
+    ],
+    "embedding_text": "The user asked about how the music scene in Nashville, Tennessee has changed over the past decade.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0101",
+    "source_time": "2023-05-26 04:32:00",
+    "record_time": "2026-07-07T19:50:58.270914",
+    "score": 9.044120125718464,
+    "score_components": {
+      "bm25_score": 9.044120125718464,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 9.044120125718464,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 9.044120125718464
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.37500000000000006
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.43530795102499964
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "User is attempting to get back on track with their bedtime routine after a week of staying up until 1 am due to work projects.",
+    "dimension": {
+      "time": "2023-05-23",
+      "location": "",
+      "reason": "to recover from exception week",
+      "purpose": "to resume normal routine",
+      "keywords": [
+        "bedtime routine",
+        "late nights",
+        "work projects",
+        "get back on track"
+      ]
+    },
+    "entities": [
+      "bedtime routine",
+      "late nights",
+      "work projects",
+      "get back on track"
+    ],
+    "embedding_text": "User is attempting to get back on track with their bedtime routine after a week of staying up until 1 am due to work projects.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0048",
+    "source_time": "2023-05-23 01:16:02",
+    "record_time": "2026-07-07T19:50:58.270520",
+    "score": 8.75694316449659,
+    "score_components": {
+      "bm25_score": 8.75694316449659,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 8.75694316449659,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 8.75694316449659
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user is interested in learning more about the City Theater Academy and the Performing Arts Conservatory.",
+    "dimension": {
+      "time": "2023-05-23",
+      "location": "",
+      "reason": "",
+      "purpose": "gather information about theater programs",
+      "keywords": [
+        "City Theater Academy",
+        "Performing Arts Conservatory"
+      ]
+    },
+    "entities": [
+      "City Theater Academy",
+      "Performing Arts Conservatory"
+    ],
+    "embedding_text": "The user is interested in learning more about the City Theater Academy and the Performing Arts Conservatory.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0054",
+    "source_time": "2023-05-23 13:37:01.500000",
+    "record_time": "2026-07-07T19:50:58.270555",
+    "score": 8.571174213963058,
+    "score_components": {
+      "bm25_score": 8.571174213963058,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 8.571174213963058,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 8.571174213963058
+      },
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.3158127940153714
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user is interested in the City Theater Academy's Certificate Program and wants to know about the application process and audition requirements.",
+    "dimension": {
+      "time": "2023-05-23",
+      "location": "",
+      "reason": "",
+      "purpose": "learn about application and audition",
+      "keywords": [
+        "City Theater Academy Certificate Program",
+        "application",
+        "audition"
+      ]
+    },
+    "entities": [
+      "City Theater Academy Certificate Program",
+      "application",
+      "audition"
+    ],
+    "embedding_text": "The user is interested in the City Theater Academy's Certificate Program and wants to know about the application process and audition requirements.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0055",
+    "source_time": "2023-05-23 13:37:02",
+    "record_time": "2026-07-07T19:50:58.270561",
+    "score": 8.405252599982953,
+    "score_components": {
+      "bm25_score": 8.405252599982953,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 8.405252599982953,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 8.405252599982953
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user plans to read a variety of newspapers to be critical of news.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to know impartiality",
+      "purpose": "critical reading",
+      "keywords": [
+        "diverse news sources",
+        "critical reading",
+        "newspapers"
+      ]
+    },
+    "entities": [
+      "diverse news sources",
+      "critical reading",
+      "newspapers"
+    ],
+    "embedding_text": "The user plans to read a variety of newspapers to be critical of news.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0083",
+    "source_time": "2023-05-25 03:50:02.500000",
+    "record_time": "2026-07-07T19:50:58.270809",
+    "score": 8.1963137963981,
+    "score_components": {
+      "bm25_score": 8.1963137963981,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 8.1963137963981,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 8.1963137963981
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "profile",
+    "content": "User reads literary fiction and wants to discover more authors in that genre.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to discover more authors",
+      "keywords": [
+        "literary fiction",
+        "reading",
+        "authors"
+      ]
+    },
+    "entities": [
+      "literary fiction",
+      "reading",
+      "authors"
+    ],
+    "embedding_text": "User reads literary fiction and wants to discover more authors in that genre.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0166",
+    "source_time": "2023-05-28 10:37:00",
+    "record_time": "2026-07-07T19:50:58.271283",
+    "score": 8.067378280062991,
+    "score_components": {
+      "bm25_score": 8.067378280062991,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 8.067378280062991,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 8.067378280062991
+      },
+      {
+        "method": "minilm",
+        "rank": 20,
+        "score": 0.2997167216293689
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user plans to continue watching Servant to find out what is going on with Leanne.",
+    "dimension": {
+      "time": "2023-05-21",
+      "location": "",
+      "reason": "to figure out what is going on with Leanne",
+      "purpose": "to understand Leanne's character",
+      "keywords": [
+        "Servant",
+        "Leanne"
+      ]
+    },
+    "entities": [
+      "Servant",
+      "Leanne"
+    ],
+    "embedding_text": "The user plans to continue watching Servant to find out what is going on with Leanne.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0025",
+    "source_time": "2023-05-21 19:08:01",
+    "record_time": "2026-07-07T19:50:58.270386",
+    "score": 7.862928829679998,
+    "score_components": {
+      "bm25_score": 7.862928829679998,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 7.862928829679998,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 7.862928829679998
+      },
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user expressed surprise at Nashville's music scene diversification and asked if the trend will continue.",
+    "dimension": {
+      "time": "2023-05-26T04:32:01",
+      "location": "Nashville, Tennessee",
+      "reason": "",
+      "purpose": "to know future trend of Nashville music scene",
+      "keywords": [
+        "Nashville music scene diversification",
+        "future trend"
+      ]
+    },
+    "entities": [
+      "Nashville music scene diversification",
+      "future trend"
+    ],
+    "embedding_text": "The user expressed surprise at Nashville's music scene diversification and asked if the trend will continue.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0103",
+    "source_time": "2023-05-26 04:32:01",
+    "record_time": "2026-07-07T19:50:58.270925",
+    "score": 7.806311971142678,
+    "score_components": {
+      "bm25_score": 7.806311971142678,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 16,
+    "retrieval_score": 7.806311971142678,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 16,
+        "score": 7.806311971142678
+      },
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.37500000000000006
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user wants to try a new recipe for a spinach and feta quiche.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "spinach and feta quiche",
+        "new recipe",
+        "baking plan"
+      ]
+    },
+    "entities": [
+      "spinach and feta quiche",
+      "new recipe",
+      "baking plan"
+    ],
+    "embedding_text": "The user wants to try a new recipe for a spinach and feta quiche.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0098",
+    "source_time": "2023-05-26 02:43:02",
+    "record_time": "2026-07-07T19:50:58.270897",
+    "score": 7.565147756385306,
+    "score_components": {
+      "bm25_score": 7.565147756385306,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 17,
+    "retrieval_score": 7.565147756385306,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 17,
+        "score": 7.565147756385306
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user asked if there have been notable musicians who emerged from the diversified music scene in Nashville.",
+    "dimension": {
+      "time": "2023-05-26T04:32:00.500000",
+      "location": "Nashville, Tennessee",
+      "reason": "",
+      "purpose": "to learn about notable musicians",
+      "keywords": [
+        "notable musicians",
+        "Nashville music scene diversification"
+      ]
+    },
+    "entities": [
+      "notable musicians",
+      "Nashville music scene diversification"
+    ],
+    "embedding_text": "The user asked if there have been notable musicians who emerged from the diversified music scene in Nashville.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0102",
+    "source_time": "2023-05-26 04:32:00.500000",
+    "record_time": "2026-07-07T19:50:58.270919",
+    "score": 7.478244041564059,
+    "score_components": {
+      "bm25_score": 7.478244041564059,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 18,
+    "retrieval_score": 7.478244041564059,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 18,
+        "score": 7.478244041564059
+      },
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.37500000000000006
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.396468230877287
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user is creating a road trip playlist and wants song suggestions.",
+    "dimension": {
+      "time": "2023-05-27",
+      "location": "",
+      "reason": "",
+      "purpose": "to build a road trip playlist",
+      "keywords": [
+        "user",
+        "road trip playlist",
+        "song suggestions"
+      ]
+    },
+    "entities": [
+      "user",
+      "road trip playlist",
+      "song suggestions"
+    ],
+    "embedding_text": "The user is creating a road trip playlist and wants song suggestions.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0153",
+    "source_time": "2023-05-27 05:09:02",
+    "record_time": "2026-07-07T19:50:58.271209",
+    "score": 6.760728819632202,
+    "score_components": {
+      "bm25_score": 6.760728819632202,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 19,
+    "retrieval_score": 6.760728819632202,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 19,
+        "score": 6.760728819632202
+      },
+      {
+        "method": "minilm",
+        "rank": 6,
+        "score": 0.37663841818543226
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "profile",
+    "content": "User prefers dishes that are easy to transport and serve for gatherings.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "easy transport",
+        "serve",
+        "gatherings",
+        "preference"
+      ]
+    },
+    "entities": [
+      "easy transport",
+      "serve",
+      "gatherings",
+      "preference"
+    ],
+    "embedding_text": "User prefers dishes that are easy to transport and serve for gatherings.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0144",
+    "source_time": "2023-05-26 22:20:02",
+    "record_time": "2026-07-07T19:50:58.271157",
+    "score": 6.744956684199382,
+    "score_components": {
+      "bm25_score": 6.744956684199382,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 20,
+    "retrieval_score": 6.744956684199382,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 20,
+        "score": 6.744956684199382
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user is planning to buy new tennis shoes for their regular play.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to buy new tennis shoes",
+      "keywords": [
+        "tennis shoes",
+        "purchase plan"
+      ]
+    },
+    "entities": [
+      "tennis shoes",
+      "purchase plan"
+    ],
+    "embedding_text": "The user is planning to buy new tennis shoes for their regular play.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0001",
+    "source_time": "2023-05-20 04:04:00.500000",
+    "record_time": "2026-07-07T19:50:58.270220",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user is planning to buy new tennis shoes for their regular play. | tennis shoes | purchase plan | to buy new tennis shoes | tennis shoes | purchase plan"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 7,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 7,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user is interested in trying Wilson NXT Tour hybrid string.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to try the Wilson NXT Tour",
+      "keywords": [
+        "Wilson NXT Tour",
+        "hybrid string",
+        "tennis"
+      ]
+    },
+    "entities": [
+      "Wilson NXT Tour",
+      "hybrid string",
+      "tennis"
+    ],
+    "embedding_text": "The user is interested in trying Wilson NXT Tour hybrid string.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0005",
+    "source_time": "2023-05-20 06:10:00",
+    "record_time": "2026-07-07T19:50:58.270250",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user is interested in trying Wilson NXT Tour hybrid string. | Wilson NXT Tour | hybrid string | tennis | to try the Wilson NXT Tour | Wilson NXT Tour | hybrid string | tennis"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 8,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 8,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user played a demo of the unreleased RPG Eternity's Edge at a gaming event at a local convention center around 2023-04-29, and loved its action combat, fantasy setting, storyline, and character customization.",
+    "dimension": {
+      "time": "2023-04-29",
+      "location": "local convention center",
+      "reason": "attended gaming event",
+      "purpose": "enjoyment",
+      "keywords": [
+        "Eternity's Edge",
+        "demo",
+        "gaming event",
+        "convention center",
+        "action combat",
+        "fantasy setting",
+        "storyline",
+        "character customization"
+      ]
+    },
+    "entities": [
+      "Eternity's Edge",
+      "demo",
+      "gaming event",
+      "convention center",
+      "action combat",
+      "fantasy setting",
+      "storyline",
+      "character customization"
+    ],
+    "embedding_text": "The user played a demo of the unreleased RPG Eternity's Edge at a gaming event at a local convention center around 2023-04-29, and loved its action combat, fantasy setting, storyline, and character customization.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0011",
+    "source_time": "2023-05-20 15:06:00",
+    "record_time": "2026-07-07T19:50:58.270292",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user played a demo of the unreleased RPG Eternity's Edge at a gaming event at a local convention center around 2023-04-29, and loved its action combat, fantasy setting, storyline, and character customization. | Eternity's Edge | demo | gaming event | convention center | action combat | fantasy setting | storyline | character customization | 2023-04-29 | local convention center | attended gaming event | enjoyment | Eternity's Edge | demo | gaming event | convention center | action combat | fantasy setting | storyline | character customization"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 9,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 9,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user plans to pre-order the unreleased RPG Eternity's Edge when it is released later in 2023.",
+    "dimension": {
+      "time": "2023",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Eternity's Edge",
+        "pre-order",
+        "2023"
+      ]
+    },
+    "entities": [
+      "Eternity's Edge",
+      "pre-order",
+      "2023"
+    ],
+    "embedding_text": "The user plans to pre-order the unreleased RPG Eternity's Edge when it is released later in 2023.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0014",
+    "source_time": "2023-05-20 21:14:00",
+    "record_time": "2026-07-07T19:50:58.270313",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to pre-order the unreleased RPG Eternity's Edge when it is released later in 2023. | Eternity's Edge | pre-order | 2023 | 2023 | Eternity's Edge | pre-order | 2023"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 10,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user gave their mother-in-law a potted plant and a scented candle from a nearby garden center for Mother's Day 2023, spending around $30.",
+    "dimension": {
+      "time": "2023-05-14",
+      "location": "nearby garden center",
+      "reason": "Mother's Day gift",
+      "purpose": "appreciation",
+      "keywords": [
+        "mother-in-law",
+        "potted plant",
+        "scented candle",
+        "garden center",
+        "Mother's Day",
+        "$30"
+      ]
+    },
+    "entities": [
+      "mother-in-law",
+      "potted plant",
+      "scented candle",
+      "garden center",
+      "Mother's Day",
+      "$30"
+    ],
+    "embedding_text": "The user gave their mother-in-law a potted plant and a scented candle from a nearby garden center for Mother's Day 2023, spending around $30.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0015",
+    "source_time": "2023-05-20 21:14:00.500000",
+    "record_time": "2026-07-07T19:50:58.270320",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user gave their mother-in-law a potted plant and a scented candle from a nearby garden center for Mother's Day 2023, spending around $30. | mother-in-law | potted plant | scented candle | garden center | Mother's Day | $30 | 2023-05-14 | nearby garden center | Mother's Day gift | appreciation | mother-in-law | potted plant | scented candle | garden center | Mother's Day | $30"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 11,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 11,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user is planning a bigger trip later in 2023, possibly to Europe or Asia.",
+    "dimension": {
+      "time": "later in 2023",
+      "location": "Europe or Asia",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "trip",
+        "Europe",
+        "Asia",
+        "2023"
+      ]
+    },
+    "entities": [
+      "trip",
+      "Europe",
+      "Asia",
+      "2023"
+    ],
+    "embedding_text": "The user is planning a bigger trip later in 2023, possibly to Europe or Asia.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0016",
+    "source_time": "2023-05-21 09:08:00",
+    "record_time": "2026-07-07T19:50:58.270328",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user is planning a bigger trip later in 2023, possibly to Europe or Asia. | trip | Europe | Asia | 2023 | later in 2023 | Europe or Asia | trip | Europe | Asia | 2023"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 12,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user has booked a flight to Miami for a bachelor party in June 2023.",
+    "dimension": {
+      "time": "June 2023",
+      "location": "Miami",
+      "reason": "bachelor party",
+      "purpose": "",
+      "keywords": [
+        "Miami",
+        "bachelor party",
+        "flight"
+      ]
+    },
+    "entities": [
+      "Miami",
+      "bachelor party",
+      "flight"
+    ],
+    "embedding_text": "The user has booked a flight to Miami for a bachelor party in June 2023.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0019",
+    "source_time": "2023-05-21 09:08:01.500000",
+    "record_time": "2026-07-07T19:50:58.270347",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user has booked a flight to Miami for a bachelor party in June 2023. | Miami | bachelor party | flight | June 2023 | Miami | bachelor party | Miami | bachelor party | flight"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 13,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 13,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user is looking forward to watching the movie Avatar 2.",
+    "dimension": {
+      "time": "2023-05-22",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Avatar 2",
+        "looking forward"
+      ]
+    },
+    "entities": [
+      "Avatar 2",
+      "looking forward"
+    ],
+    "embedding_text": "The user is looking forward to watching the movie Avatar 2.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0026",
+    "source_time": "2023-05-21 19:08:01.500000",
+    "record_time": "2026-07-07T19:50:58.270391",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user is looking forward to watching the movie Avatar 2. | Avatar 2 | looking forward | 2023-05-22 | Avatar 2 | looking forward"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 15,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user plans to crate train their puppy to ensure comfort and safety.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to ensure comfort and safety",
+      "purpose": "",
+      "keywords": [
+        "crate training",
+        "puppy"
+      ]
+    },
+    "entities": [
+      "crate training",
+      "puppy"
+    ],
+    "embedding_text": "The user plans to crate train their puppy to ensure comfort and safety.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0030",
+    "source_time": "2023-05-22 11:44:03",
+    "record_time": "2026-07-07T19:50:58.270414",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to crate train their puppy to ensure comfort and safety. | crate training | puppy | to ensure comfort and safety | crate training | puppy"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 16,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user is going to participate in the Emerging Filmmakers Lab at the Sundance Film Festival.",
+    "dimension": {
+      "time": "",
+      "location": "Sundance Film Festival",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Sundance Film Festival",
+        "Emerging Filmmakers Lab"
+      ]
+    },
+    "entities": [
+      "Sundance Film Festival",
+      "Emerging Filmmakers Lab"
+    ],
+    "embedding_text": "The user is going to participate in the Emerging Filmmakers Lab at the Sundance Film Festival.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0031",
+    "source_time": "2023-05-22 12:24:00",
+    "record_time": "2026-07-07T19:50:58.270419",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user is going to participate in the Emerging Filmmakers Lab at the Sundance Film Festival. | Sundance Film Festival | Emerging Filmmakers Lab | Sundance Film Festival | Sundance Film Festival | Emerging Filmmakers Lab"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 17,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user plans to attend panels and workshops at the Sundance Film Festival in addition to the Emerging Filmmakers Lab.",
+    "dimension": {
+      "time": "",
+      "location": "Sundance Film Festival",
+      "reason": "",
+      "purpose": "to learn about independent filmmaking",
+      "keywords": [
+        "Sundance Film Festival",
+        "panels",
+        "workshops",
+        "independent filmmaking"
+      ]
+    },
+    "entities": [
+      "Sundance Film Festival",
+      "panels",
+      "workshops",
+      "independent filmmaking"
+    ],
+    "embedding_text": "The user plans to attend panels and workshops at the Sundance Film Festival in addition to the Emerging Filmmakers Lab.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0032",
+    "source_time": "2023-05-22 12:24:01",
+    "record_time": "2026-07-07T19:50:58.270425",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to attend panels and workshops at the Sundance Film Festival in addition to the Emerging Filmmakers Lab. | Sundance Film Festival | panels | workshops | independent filmmaking | Sundance Film Festival | to learn about independent filmmaking | Sundance Film Festival | panels | workshops | independent filmmaking"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 18,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user plans to record a new song at home on the weekend of May 27–28, 2023.",
+    "dimension": {
+      "time": "2023-05-27 to 2023-05-28",
+      "location": "home studio",
+      "reason": "",
+      "purpose": "to record a new song",
+      "keywords": [
+        "record song",
+        "home studio",
+        "weekend"
+      ]
+    },
+    "entities": [
+      "record song",
+      "home studio",
+      "weekend"
+    ],
+    "embedding_text": "The user plans to record a new song at home on the weekend of May 27–28, 2023.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0034",
+    "source_time": "2023-05-22 18:58:00",
+    "record_time": "2026-07-07T19:50:58.270436",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to record a new song at home on the weekend of May 27–28, 2023. | record song | home studio | weekend | 2023-05-27 to 2023-05-28 | home studio | to record a new song | record song | home studio | weekend"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 19,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user is experimenting with overdrive and distortion pedals to find the perfect sound for their Ibanez RG Series.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to find the perfect sound",
+      "purpose": "",
+      "keywords": [
+        "overdrive pedals",
+        "distortion pedals",
+        "Ibanez RG Series",
+        "tone"
+      ]
+    },
+    "entities": [
+      "overdrive pedals",
+      "distortion pedals",
+      "Ibanez RG Series",
+      "tone"
+    ],
+    "embedding_text": "The user is experimenting with overdrive and distortion pedals to find the perfect sound for their Ibanez RG Series.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0038",
+    "source_time": "2023-05-22 18:58:01",
+    "record_time": "2026-07-07T19:50:58.270459",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user is experimenting with overdrive and distortion pedals to find the perfect sound for their Ibanez RG Series. | overdrive pedals | distortion pedals | Ibanez RG Series | tone | to find the perfect sound | overdrive pedals | distortion pedals | Ibanez RG Series | tone"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 20,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 20,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user is looking for musical theater classes in their area.",
+    "dimension": {
+      "time": "2023-05-23",
+      "location": "",
+      "reason": "",
+      "purpose": "find musical theater classes",
+      "keywords": [
+        "musical theater",
+        "classes"
+      ]
+    },
+    "entities": [
+      "musical theater",
+      "classes"
+    ],
+    "embedding_text": "The user is looking for musical theater classes in their area.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0051",
+    "source_time": "2023-05-23 13:37:00",
+    "record_time": "2026-07-07T19:50:58.270537",
+    "score": 0.4066660620691558,
+    "score_components": {
+      "dense_cosine_score": 0.4066660620691558,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 4,
+    "retrieval_score": 0.4066660620691558,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.4066660620691558
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "fact",
+    "content": "The user plays a musical instrument.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "musician",
+        "instrument"
+      ]
+    },
+    "entities": [
+      "musician",
+      "instrument"
+    ],
+    "embedding_text": "The user plays a musical instrument.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0009",
+    "source_time": "2023-05-20 08:21:01",
+    "record_time": "2026-07-07T19:50:58.270276",
+    "score": 0.3755046943039762,
+    "score_components": {
+      "dense_cosine_score": 0.3755046943039762,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 7,
+    "retrieval_score": 0.3755046943039762,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 7,
+        "score": 0.3755046943039762
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "profile",
+    "content": "User is interested in learning various dance styles, including Afro-Cuban and salsa, and seeks opportunities to learn from different instructors.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "dance styles",
+        "Afro-Cuban",
+        "salsa",
+        "learn from different instructors"
+      ]
+    },
+    "entities": [
+      "dance styles",
+      "Afro-Cuban",
+      "salsa",
+      "learn from different instructors"
+    ],
+    "embedding_text": "User is interested in learning various dance styles, including Afro-Cuban and salsa, and seeks opportunities to learn from different instructors.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0145",
+    "source_time": "2023-05-26 22:20:02.500000",
+    "record_time": "2026-07-07T19:50:58.271163",
+    "score": 0.3716210877002947,
+    "score_components": {
+      "dense_cosine_score": 0.3716210877002947,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 8,
+    "retrieval_score": 0.3716210877002947,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 8,
+        "score": 0.3716210877002947
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "profile",
+    "content": "The user wants to add summer-themed songs to their road trip playlist.",
+    "dimension": {
+      "time": "2023-05-27",
+      "location": "",
+      "reason": "",
+      "purpose": "to capture the essence of summer",
+      "keywords": [
+        "user",
+        "summer-themed songs",
+        "road trip playlist"
+      ]
+    },
+    "entities": [
+      "user",
+      "summer-themed songs",
+      "road trip playlist"
+    ],
+    "embedding_text": "The user wants to add summer-themed songs to their road trip playlist.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0154",
+    "source_time": "2023-05-27 05:09:02.500000",
+    "record_time": "2026-07-07T19:50:58.271214",
+    "score": 0.35999501684876173,
+    "score_components": {
+      "dense_cosine_score": 0.35999501684876173,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 9,
+    "retrieval_score": 0.35999501684876173,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.35999501684876173
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user attended a workshop with instructor Sarah that combined singing, acting, and dancing to bring a character to life.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "workshop",
+        "Sarah",
+        "singing",
+        "acting",
+        "dancing",
+        "character"
+      ]
+    },
+    "entities": [
+      "workshop",
+      "Sarah",
+      "singing",
+      "acting",
+      "dancing",
+      "character"
+    ],
+    "embedding_text": "The user attended a workshop with instructor Sarah that combined singing, acting, and dancing to bring a character to life.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0052",
+    "source_time": "2023-05-23 13:37:00.500000",
+    "record_time": "2026-07-07T19:50:58.270543",
+    "score": 0.35649555894362694,
+    "score_components": {
+      "dense_cosine_score": 0.35649555894362694,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.35649555894362694,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 10,
+        "score": 0.35649555894362694
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "fact",
+    "content": "User's previous dance classes were hip hop, which they enjoyed for its high-energy vibe.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "hip hop",
+        "dance classes",
+        "high-energy"
+      ]
+    },
+    "entities": [
+      "hip hop",
+      "dance classes",
+      "high-energy"
+    ],
+    "embedding_text": "User's previous dance classes were hip hop, which they enjoyed for its high-energy vibe.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0133",
+    "source_time": "2023-05-26 10:23:02.500000",
+    "record_time": "2026-07-07T19:50:58.271095",
+    "score": 0.3558314828009581,
+    "score_components": {
+      "dense_cosine_score": 0.3558314828009581,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 11,
+    "retrieval_score": 0.3558314828009581,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.3558314828009581
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "profile",
+    "content": "The user prefers comprehensive training that combines singing, acting, and dancing to bring a character to life.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "comprehensive training",
+        "singing",
+        "acting",
+        "dancing",
+        "character"
+      ]
+    },
+    "entities": [
+      "comprehensive training",
+      "singing",
+      "acting",
+      "dancing",
+      "character"
+    ],
+    "embedding_text": "The user prefers comprehensive training that combines singing, acting, and dancing to bring a character to life.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0053",
+    "source_time": "2023-05-23 13:37:01",
+    "record_time": "2026-07-07T19:50:58.270550",
+    "score": 0.3388455247554409,
+    "score_components": {
+      "dense_cosine_score": 0.3388455247554409,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.3388455247554409,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.3388455247554409
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "The user is planning to take more theater classes to improve their skills.",
+    "dimension": {
+      "time": "2023-05-23",
+      "location": "",
+      "reason": "to improve their skills",
+      "purpose": "improve skills",
+      "keywords": [
+        "theater classes",
+        "skills improvement"
+      ]
+    },
+    "entities": [
+      "theater classes",
+      "skills improvement"
+    ],
+    "embedding_text": "The user is planning to take more theater classes to improve their skills.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0050",
+    "source_time": "2023-05-23 13:37:00",
+    "record_time": "2026-07-07T19:50:58.270531",
+    "score": 0.3319786025735054,
+    "score_components": {
+      "dense_cosine_score": 0.3319786025735054,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 13,
+    "retrieval_score": 0.3319786025735054,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 13,
+        "score": 0.3319786025735054
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "User asked for recommendations on airbrushing tutorials for beginners.",
+    "dimension": {
+      "time": "2023-05-24T20:55:00",
+      "location": "",
+      "reason": "",
+      "purpose": "To learn airbrushing.",
+      "keywords": [
+        "airbrushing",
+        "tutorials",
+        "beginners"
+      ]
+    },
+    "entities": [
+      "airbrushing",
+      "tutorials",
+      "beginners"
+    ],
+    "embedding_text": "User asked for recommendations on airbrushing tutorials for beginners.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0064",
+    "source_time": "2023-05-24 20:55:00.500000",
+    "record_time": "2026-07-07T19:50:58.270691",
+    "score": 0.32798614995619585,
+    "score_components": {
+      "dense_cosine_score": 0.32798614995619585,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.32798614995619585,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 14,
+        "score": 0.32798614995619585
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "profile",
+    "content": "The user is a fan of M. Night Shyamalan's work.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "M. Night Shyamalan",
+        "fan",
+        "director"
+      ]
+    },
+    "entities": [
+      "M. Night Shyamalan",
+      "fan",
+      "director"
+    ],
+    "embedding_text": "The user is a fan of M. Night Shyamalan's work.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0024",
+    "source_time": "2023-05-21 19:08:01",
+    "record_time": "2026-07-07T19:50:58.270379",
+    "score": 0.32777508594263394,
+    "score_components": {
+      "dense_cosine_score": 0.32777508594263394,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.32777508594263394,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 15,
+        "score": 0.32777508594263394
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "User learned Afro-Cuban dance at a festival in April 2023.",
+    "dimension": {
+      "time": "2023-04",
+      "location": "dance festival",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Afro-Cuban dance",
+        "April 2023",
+        "festival"
+      ]
+    },
+    "entities": [
+      "Afro-Cuban dance",
+      "April 2023",
+      "festival"
+    ],
+    "embedding_text": "User learned Afro-Cuban dance at a festival in April 2023.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0136",
+    "source_time": "2023-05-26 10:56:01",
+    "record_time": "2026-07-07T19:50:58.271112",
+    "score": 0.3255113847835206,
+    "score_components": {
+      "dense_cosine_score": 0.3255113847835206,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.3255113847835206,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 16,
+        "score": 0.3255113847835206
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "episodic",
+    "content": "User recently attended a dance festival with friends and had a blast.",
+    "dimension": {
+      "time": "2023-05",
+      "location": "dance festival",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "dance festival",
+        "friends",
+        "blast"
+      ]
+    },
+    "entities": [
+      "dance festival",
+      "friends",
+      "blast"
+    ],
+    "embedding_text": "User recently attended a dance festival with friends and had a blast.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0135",
+    "source_time": "2023-05-26 10:56:00.500000",
+    "record_time": "2026-07-07T19:50:58.271106",
+    "score": 0.32112166999791814,
+    "score_components": {
+      "dense_cosine_score": 0.32112166999791814,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.32112166999791814,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 17,
+        "score": 0.32112166999791814
+      }
+    ]
+  },
+  {
+    "user_id": "0027_28bcfaac",
+    "memory_type": "profile",
+    "content": "User is currently focusing on evaluating their grandpa's coin collection and vintage guitar rather than expanding their watch collection.",
+    "dimension": {
+      "time": "2023-05-26",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "collecting focus",
+        "coin collection",
+        "vintage guitar",
+        "watch collection"
+      ]
+    },
+    "entities": [
+      "collecting focus",
+      "coin collection",
+      "vintage guitar",
+      "watch collection"
+    ],
+    "embedding_text": "User is currently focusing on evaluating their grandpa's coin collection and vintage guitar rather than expanding their watch collection.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0116",
+    "source_time": "2023-05-26 07:03:01.500000",
+    "record_time": "2026-07-07T19:50:58.271001",
+    "score": 0.3134283850280458,
+    "score_components": {
+      "dense_cosine_score": 0.3134283850280458,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.3134283850280458,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 19,
+        "score": 0.3134283850280458
+      }
+    ]
+  }
+]

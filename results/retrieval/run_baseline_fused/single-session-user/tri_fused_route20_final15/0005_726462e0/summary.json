@@ -1,0 +1,551 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "single-session-user",
+  "sample_id": "0005_726462e0",
+  "query_text": "The user's discount on their first purchase from the new clothing brand",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 189,
+  "fused_candidate_count_before_final_cut": 48,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/single-session-user/tri_fused_route20_final15/0005_726462e0",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 9.33430150998722,
+      "memory_type": "episodic",
+      "content": "User purchased a new camera bag on 2023-02-22 that is more compact and easier to carry than their old one.",
+      "source_boundary_id": "all_memories_0000",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 9.33430150998722,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 9.33430150998722
+        },
+        {
+          "method": "structured",
+          "rank": 2,
+          "score": 0.4
+        },
+        {
+          "method": "minilm",
+          "rank": 19,
+          "score": 0.2834873209591855
+        }
+      ],
+      "score_components": {
+        "bm25_score": 9.33430150998722,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 8.512796494360554,
+      "memory_type": "fact",
+      "content": "User plans to bring a backpack containing water, snacks, sunscreen, and a first aid kit on the trip.",
+      "source_boundary_id": "14_0140",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 8.512796494360554,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 8.512796494360554
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.512796494360554,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 7.805552492224015,
+      "memory_type": "episodic",
+      "content": "The user requested examples from 'The Port-Royal Grammar', Kant's 'Critique of Pure Reason', and Schleicher's 'Stammbaumtheorie' to illustrate their views on language, meaning, and evolution.",
+      "source_boundary_id": "13_0123",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 7.805552492224015,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 7.805552492224015
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.805552492224015,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 6.999056631167294,
+      "memory_type": "fact",
+      "content": "User owns hiking boots, outdoor clothing, and a camera for capturing scenery and wildlife.",
+      "source_boundary_id": "14_0139",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 6.999056631167294,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 6.999056631167294
+        },
+        {
+          "method": "minilm",
+          "rank": 12,
+          "score": 0.3480458598369948
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.999056631167294,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 6.731236040773268,
+      "memory_type": "episodic",
+      "content": "The user went to Trader Joe's with their sister around 2023-05-21 and spent about $75 on groceries.",
+      "source_boundary_id": "17_0169",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 6.731236040773268,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 6.731236040773268
+        },
+        {
+          "method": "minilm",
+          "rank": 9,
+          "score": 0.37503608143438333
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.731236040773268,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 6.296177906828939,
+      "memory_type": "fact",
+      "content": "The user's dog is named Max, and the user currently uses a toothbrush from the vet's office as of 2023-05-25.",
+      "source_boundary_id": "10_0106",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 6.296177906828939,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 6.296177906828939
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.296177906828939,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 6.140471526113274,
+      "memory_type": "fact",
+      "content": "The user built a new gaming PC with a friend's help, and it runs Cyberpunk 2077 and Assassin's Creed Valhalla smoothly.",
+      "source_boundary_id": "13_0118",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 6.140471526113274,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 6.140471526113274
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.140471526113274,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 5.8694825693663635,
+      "memory_type": "episodic",
+      "content": "The user previously created a content calendar for their cousin's art exhibition.",
+      "source_boundary_id": "4_0051",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 5.8694825693663635,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 5.8694825693663635
+        },
+        {
+          "method": "structured",
+          "rank": 18,
+          "score": 0.33333333333333337
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.8694825693663635,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 5.700083763109932,
+      "memory_type": "episodic",
+      "content": "User is considering buying a portable charger for the upcoming road trip.",
+      "source_boundary_id": "14_0141",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 5.700083763109932,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 5.700083763109932
+        },
+        {
+          "method": "structured",
+          "rank": 3,
+          "score": 0.4
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.700083763109932,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 5.258554029539381,
+      "memory_type": "episodic",
+      "content": "The user wants to organize their grocery expenses from the past few weeks and track savings from coupons and discounts.",
+      "source_boundary_id": "17_0166",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 5.258554029539381,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 5.258554029539381
+        },
+        {
+          "method": "structured",
+          "rank": 1,
+          "score": 0.4444444444444445
+        },
+        {
+          "method": "minilm",
+          "rank": 7,
+          "score": 0.3926764221831582
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.258554029539381,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 4.817809687472709,
+      "memory_type": "fact",
+      "content": "The user owns a pair of new earbuds.",
+      "source_boundary_id": "9_0096",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 4.817809687472709,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 4.817809687472709
+        },
+        {
+          "method": "minilm",
+          "rank": 15,
+          "score": 0.32742642790353815
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.817809687472709,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 4.705197522594883,
+      "memory_type": "episodic",
+      "content": "User plans to try a new recipe for chicken enchiladas on the weekend of 2023-05-20.",
+      "source_boundary_id": "all_memories_0004",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 4.705197522594883,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 4.705197522594883
+        },
+        {
+          "method": "structured",
+          "rank": 6,
+          "score": 0.33333333333333337
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.705197522594883,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 4.630660508561512,
+      "memory_type": "episodic",
+      "content": "The user chose the Oxyfresh Pet Toothbrush for Max's dental care because of its ultra-soft bristles as of 2023-05-25.",
+      "source_boundary_id": "10_0107",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 4.630660508561512,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 4.630660508561512
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.630660508561512,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 4.465558588937613,
+      "memory_type": "episodic",
+      "content": "User replaced the goat water trough with a new one that has a built-in filter on 2023-05-27.",
+      "source_boundary_id": "15_0148",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 4.465558588937613,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 4.465558588937613
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.465558588937613,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 4.403239509652607,
+      "memory_type": "episodic",
+      "content": "User is considering buying guitar accessories and a guitar-themed gift basket for their brother's birthday.",
+      "source_boundary_id": "8_0092",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 4.403239509652607,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 4.403239509652607
+        },
+        {
+          "method": "minilm",
+          "rank": 17,
+          "score": 0.2942350668906351
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.403239509652607,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 0.28745555877685547
+}

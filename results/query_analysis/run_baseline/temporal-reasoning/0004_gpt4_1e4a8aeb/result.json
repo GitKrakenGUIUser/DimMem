@@ -1,0 +1,22 @@
+{
+  "conv_name": "temporal-reasoning",
+  "index": 4,
+  "question": "How many days passed between the day I attended the gardening workshop and the day I planted the tomato saplings?",
+  "ok": true,
+  "error": null,
+  "elapsed_seconds": 3.7885231971740723,
+  "usage": {
+    "prompt_tokens": 697,
+    "completion_tokens": 349,
+    "total_tokens": 1046,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 248
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 57
+  },
+  "output_dir": "results/query_analysis/run_baseline/temporal-reasoning/0004_gpt4_1e4a8aeb"
+}

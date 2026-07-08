@@ -1,0 +1,101 @@
+{
+  "model_name": "deepseek-v4-flash",
+  "query": "I received a piece of jewelry last Saturday from whom?",
+  "gold_answer": "my aunt",
+  "question_date": "2023/03/09 (Thu) 15:47",
+  "retrieved_records": [
+    {
+      "source_time": "2023-03-03 20:06:00",
+      "content": "User inherited a crystal chandelier from their great-grandmother on 2023-03-04.",
+      "dimension": {
+        "reason": "inherited from great-grandmother"
+      }
+    },
+    {
+      "source_time": "2023-03-04 18:26:00",
+      "content": "On 2023-03-04, the user sanded and primed a wooden rocking chair as part of a refurbishing project.",
+      "dimension": {
+        "purpose": "to refurbish the rocking chair"
+      }
+    },
+    {
+      "source_time": "2023-03-04 20:16:00",
+      "content": "On 2023-03-04, the user changed the target to Kirkwood Ski Resort for the food truck operation request.",
+      "dimension": {
+        "reason": "changed from Northstar",
+        "purpose": "to request permission for food truck operation at Kirkwood"
+      }
+    },
+    {
+      "source_time": "2023-02-14 02:40:02",
+      "content": "User has read and loved 'The Seven Husbands of Evelyn Hugo', which was narrated by Julia Whelan."
+    },
+    {
+      "source_time": "2023-02-10 01:31:01.500000",
+      "content": "The user asked for recommendations of true-crime podcasts similar to 'Last Seen' on 2023-02-10.",
+      "dimension": {
+        "purpose": "discover new true-crime podcasts"
+      }
+    },
+    {
+      "source_time": "2023-02-11 02:09:00.500000",
+      "content": "On 2023-02-04, the user achieved a personal best of 12,345 steps while running errands."
+    },
+    {
+      "source_time": "2023-03-04 10:34:01",
+      "content": "On 2023-03-04, the user planned to contact Northstar Ski Resort to request permission to operate their food truck there.",
+      "dimension": {
+        "reason": "wanted to operate food truck",
+        "purpose": "to obtain permission for food truck operation"
+      }
+    },
+    {
+      "source_time": "2023-02-11 02:09:01.500000",
+      "content": "The user's foam roller arrived on 2023-03-02."
+    },
+    {
+      "source_time": "2023-02-28 10:47:02.500000",
+      "content": "As of 2023-03-01, User had never tried Huachinango a la Veracruzana."
+    },
+    {
+      "source_time": "2023-02-15 00:24:02",
+      "content": "User completed a set of Marvel Comic's 'The Avengers' action figures in the week of February 8-14, 2023, after 6 months of searching for the last Black Widow figure."
+    },
+    {
+      "source_time": "2023-02-10 01:31:01",
+      "content": "The user listens to the true-crime podcast 'Last Seen' and is currently on episode 7."
+    },
+    {
+      "source_time": "2023-02-28 10:47:00",
+      "content": "On 2023-02-28, User had last changed their car's oil about 5,000 miles prior and planned to check the car manual for the recommended oil change interval.",
+      "dimension": {
+        "reason": "last oil change 5000 miles ago",
+        "purpose": "to determine recommended interval"
+      }
+    },
+    {
+      "source_time": "2023-03-02 07:50:00",
+      "content": "The user made chicken fajitas using a recipe from the NYT Cooking app on 2023-02-28.",
+      "dimension": {
+        "reason": "experimenting with seasonings",
+        "purpose": "cooking"
+      }
+    },
+    {
+      "source_time": "2023-03-04 18:26:02.500000",
+      "content": "User is considering using wire-wrapped jewelry-making tools to create decorative accents for the wooden coasters.",
+      "dimension": {
+        "purpose": "decorative accents for coasters"
+      }
+    },
+    {
+      "source_time": "2023-02-28 17:55:01.500000",
+      "content": "On 2023-02-28, User noticed their car's battery was draining faster than usual and planned to have it checked at a local mechanic.",
+      "dimension": {
+        "reason": "faster battery drain",
+        "purpose": "to check for a bigger issue"
+      }
+    }
+  ],
+  "retrieval_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/temporal-reasoning/tri_fused_route20_final15/0016_71017277"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "9ae1fc3e-6c1f-4ed3-8bb2-68d70da17322",
+  "object": "chat.completion",
+  "created": 1783356404,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"The amount the user was pre-approved for when they got their mortgage from Wells Fargo\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"fact\", \"episodic\"],\n    \"keywords\": [\"pre-approved\", \"mortgage\", \"Wells Fargo\"],\n    \"time\": \"\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"content\"\n}",
+        "reasoning_content": "We need to parse the question: \"What was the amount I was pre-approved for when I got my mortgage from Wells Fargo?\" The user is asking about a specific fact: the pre-approval amount for a mortgage from Wells Fargo. This is a past event (getting mortgage), so memory types: fact (the amount) and episodic (the event of getting mortgage). The question asks about the amount itself, so answer_dim should be \"content\" or \"keywords\"? The amount is a specific number, likely stored as part of the fact/episodic memory. Since it's directly asking for a value, answer_dim=\"content\". Need_assistant_context: false, because it's not asking to recall assistant output. Query anchor: rewrite as a retrieval sentence: \"The amount the user was pre-approved for when they got their mortgage from Wells Fargo.\" Keywords: \"pre-approved\", \"mortgage\", \"Wells Fargo\". Time: \"when I got my mortgage\" implies a past event, but no explicit date; the question date is 2023/12/18, but the mortgage event could be any time. No explicit time constraint, so leave time empty. Location: \"Wells Fargo\" is a bank, possibly a location? But it's an institution; location field is for physical location or platform. Since it's a bank name, it could be considered a location? But typically, \"location\" is for places like \"New York\", \"home\", \"office\". Wells Fargo is a bank name, which is more like an entity. We can put it in keywords. So location empty. answer_dim=\"content\". target_memory_type: fact and episodic."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 693,
+    "completion_tokens": 434,
+    "total_tokens": 1127,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 340
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 53
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

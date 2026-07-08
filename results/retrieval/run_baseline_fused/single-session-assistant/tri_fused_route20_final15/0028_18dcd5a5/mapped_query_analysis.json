@@ -1,0 +1,72 @@
+{
+  "query_text": "In our previous chat, we discussed the Lost Temple of the Djinn one-shot. Remind me how many mummies the party will face in the temple.",
+  "query_anchor": "In our previous chat, we discussed the Lost Temple of the Djinn one-shot. Remind me how many mummies the party will face in the temple.",
+  "dimension": {
+    "target_memory_type": [
+      "episodic",
+      "fact"
+    ],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "Lost Temple of the Djinn",
+      "mummies",
+      "party"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "In our previous chat, we discussed the Lost Temple of the Djinn one-shot. Remind me how many mummies the party will face in the temple.",
+      "keywords": [
+        "Lost Temple of the Djinn",
+        "mummies",
+        "party"
+      ],
+      "query_terms": [
+        "in",
+        "our",
+        "previous",
+        "chat",
+        "we",
+        "discussed",
+        "the",
+        "lost",
+        "temple",
+        "of",
+        "djinn",
+        "one",
+        "shot",
+        "remind",
+        "me",
+        "how",
+        "many",
+        "mummies",
+        "party",
+        "will",
+        "face"
+      ]
+    },
+    "structured": {
+      "query_text": "In our previous chat, we discussed the Lost Temple of the Djinn one-shot. Remind me how many mummies the party will face in the temple.",
+      "rewrite": "In our previous chat, we discussed the Lost Temple of the Djinn one-shot. Remind me how many mummies the party will face in the temple.",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "In our previous chat, we discussed the Lost Temple of the Djinn one-shot. Remind me how many mummies the party will face in the temple.",
+      "target_memory_types": [
+        "episodic",
+        "fact"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "Lost Temple of the Djinn",
+        "mummies",
+        "party"
+      ],
+      "canonical_text": "In our previous chat, we discussed the Lost Temple of the Djinn one-shot. Remind me how many mummies the party will face in the temple."
+    },
+    "minilm": {
+      "query_text": "In our previous chat, we discussed the Lost Temple of the Djinn one-shot. Remind me how many mummies the party will face in the temple."
+    }
+  }
+}

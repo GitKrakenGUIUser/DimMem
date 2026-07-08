@@ -1,0 +1,135 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-24T06:03:01, Wed] 1.User: I think it's mainly the pressure to get married and start a family. They keep asking me when I'm going to settle down, like there's something wrong with being single. It's like they think I'm not complete without a partner or kids.
+[2023-05-24T06:03:01.500000, Wed] 2.User: I think I'll try to have the conversation with them soon, maybe during our next family gathering. I'm a bit worried that they might not understand my perspective or think I'm being too sensitive, but I need to try. It's been weighing on me for too long.
+[2023-05-24T06:03:02, Wed] 3.User: That's a great idea. I think preparing a script or outline would really help me feel more confident and in control of the conversation. It would also help me make sure I don't forget to express certain feelings or concerns. Do you have any tips on how to structure the script or what specific points I should include?
+[2023-05-24T06:03:02.500000, Wed] 4.User: It seems like I've been spending a lot of time alone lately, even before this conversation. I think it's been a few weeks now that I've been focusing on myself and my hobbies. It's been nice to have some time to recharge and reflect on my priorities.
+[2023-05-24T18:53:00, Wed] 5.User: I'm thinking of trying a new coffee recipe this weekend. Do you have any recommendations for a good breakfast coffee blend? By the way, I've been experimenting with different coffee beans and brewing methods, and I think I've finally found a combination that I like.
+[2023-05-24T18:53:00.500000, Wed] 6.User: I've been using a pour-over method lately, and it's been working well for me. I've been experimenting with different beans, but I've recently settled on a medium-roast blend that I really like. Speaking of breakfast, I've been trying to cook more meals at home and eat healthier. On Sunday, I made myself a larger breakfast, including scrambled eggs and whole-grain toast, around 10 am after getting ready for the day. Do you have any healthy breakfast recipe suggestions or ideas?
+[2023-05-24T18:53:01, Wed] 7.User: I'm interested in the smoothie bowl and the breakfast burrito recipes. Can you give me some specific suggestions for the smoothie bowl? Like, what fruits should I use, and how much Greek yogurt and milk should I add?
+[2023-05-24T18:53:01.500000, Wed] 8.User: That's really helpful, thanks! I think I'll try the tropical smoothie bowl with pineapple and mango. I'm also interested in the breakfast burrito recipe. Can you give me some suggestions for the fillings and tortilla options?
+[2023-05-24T18:53:02, Wed] 9.User: That's really helpful! I think I'll try the breakfast burrito with scrambled eggs, black beans, and avocado. I've been trying to incorporate more physical activity into my daily routine, and I've found that taking short walks during the day helps me stay focused and energized. After breakfast, I usually take a 30-minute walk around the neighborhood to get some fresh air and clear my head.
+[2023-05-24T18:53:02.500000, Wed] 10.User: I've noticed that since I started going to the gym three times a week, I've had a significant improvement in my overall energy levels and mood. I've also found that I'm more focused and productive throughout the day. In addition, I've been trying to stay more organized and prioritize my tasks better, which has helped me manage my time more efficiently.
+
+It's great to hear that you're interested in my experience with physical activity!
+[2023-05-25T08:21:00, Thu] 11.User: I'm planning a trip to Las Vegas in July and I'm considering flying with American Airlines again. Can you help me find the cheapest flights for that route? By the way, I've been pretty frequent with my travels lately, averaging 2 flights per month since January.
+[2023-05-25T08:21:00.500000, Thu] 12.User: I'm flying from O'Hare International Airport in Chicago, and I'm flexible with my travel dates, but I'd prefer to travel during the weekdays. I have Platinum status with American Airlines, so I'd like to take advantage of that. Also, I'm looking for a round-trip ticket.
+[2023-05-25T08:21:01, Thu] 13.User: I'd like to explore more dates. Can you show me options for the entire month of July?
+[2023-05-25T08:21:01.500000, Thu] 14.User: I'm interested in the July 25-28 option. Can you tell me more about the flight schedule and layovers for that option?
+[2023-05-25T08:21:02, Thu] 15.User: I'm ready to book the July 25-28 option. Can you walk me through the booking process and also let me know what's the total cost including the upgrade to Main Cabin Extra?

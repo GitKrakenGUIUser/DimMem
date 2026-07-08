@@ -1,0 +1,141 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-25T09:09:02.500000, Thu] 1.User: I think I'll take your advice and wait until I've narrowed down my options before seeking my mom's opinion. Thanks for the suggestion! Now, I'm curious about how to care for my new geometric prints once I get them. Do you have any tips on how to hang and maintain them?
+[2023-05-25T18:26:00, Thu] 2.User: I'm looking for some gift ideas for my family members. I've already got a few gifts recently, like a set of kitchen utensils for my sister, which cost around $70. Do you have any suggestions for a gift for my mom?
+[2023-05-25T18:26:00.500000, Thu] 3.User: I like the idea of a personalized jewelry, but I'm not sure if it's something my mom would wear. Do you have any suggestions for a photo album or frame that would be similar in quality to the one I got for my mom's anniversary, which took around an hour to customize and cost around $40?
+[2023-05-25T18:26:01, Thu] 4.User: I think I'll go with Mixbook. I've heard good things about their products. Can you tell me more about their shipping options and turnaround time?
+[2023-05-25T18:26:01.500000, Thu] 5.User: I'm planning to order a photo album, but I'm not sure what size to choose. Can you tell me what sizes Mixbook offers and what's the most popular one?
+[2023-05-25T18:26:02, Thu] 6.User: I think I'll go with the medium size, 8x8 inches. That seems like a good balance between showcasing the photos and keeping the album compact.
+[2023-05-25T18:26:02.500000, Thu] 7.User: I'm going to start designing the album now. One more thing, I want to make sure the album is of high quality, so can you tell me what kind of paper Mixbook uses for their photo albums?
+[2023-05-26T00:39:00, Fri] 8.User: I'm looking for some recommendations on indie rock and alternative bands from the 90s. I've been getting into vinyl collecting about three months ago and I've been focusing on my favorite genre, but I'm always open to discovering new music.
+[2023-05-26T00:39:00.500000, Fri] 9.User: I'm really interested in Pavement and Guided by Voices, I'll have to check them out. Do you think you could recommend some record stores or online marketplaces where I could find rare or hard-to-find indie rock records?
+[2023-05-26T00:39:01, Fri] 10.User: I've heard good things about Amoeba Music, I'll have to check it out next time I'm in California. I'm also interested in checking out online marketplaces like Discogs and eBay. Do you think you could give me some tips on how to find rare records on these sites, and how to negotiate prices with sellers?
+[2023-05-26T00:39:01.500000, Fri] 11.User: I'm glad you're excited to start exploring these online marketplaces. I've had some great experiences finding rare records on Discogs and eBay, and I'm sure you will too. One thing I've learned is to always keep an eye out for sellers who are willing to bundle records together - it can be a great way to score some amazing deals. And don't be afraid to reach out to sellers with questions or to negotiate prices. Most of the time, they're willing to work with you to come to a fair price.
+[2023-05-26T00:39:02, Fri] 12.User: I've been really lucky to find some amazing rare records, including that rare pressing of The Cure's "Wish" album I mentioned earlier. I've also been searching for a rare pressing of My Bloody Valentine's "Loveless" album, but it's been elusive so far. I've got my eye on a few leads, though!
+
+What about you? Do you have any rare records that you're particularly proud of, or ones that you're still searching for?
+[2023-05-26T00:39:02.500000, Fri] 13.User: I've been searching for the original 1991 UK pressing of "Loveless" on Creation Records, which is notoriously hard to find. I've heard that only a limited number of copies were pressed, and it's become a holy grail for many My Bloody Valentine fans.
+
+What draws me to this particular pressing is the unique sound quality and the fact that it's a piece of music history. I've heard that the original pressing has a warmer, more analog sound compared to later reissues, and I'd love to experience it firsthand.
+
+I've been scouring online marketplaces, record stores, and collector forums, but so far, I haven't had any luck. I've even considered reaching out to other collectors and dealers to see if they have any leads.
+
+Do you think you could help me brainstorm some strategies or point me in the right direction? I'd really appreciate any advice or guidance you could offer!
+[2023-05-26T02:36:00, Fri] 14.User: I'm thinking of creating a YouTube channel to showcase my collection and share tips with other collectors. Do you have any advice on how to get started and grow an audience? By the way, I've actually been branching out from vinyl records and exploring other areas, like coins and sports cards, which has been really fascinating.
+[2023-05-26T02:36:00.500000, Fri] 15.User: That's super helpful! I was thinking of focusing on the stories behind my collections, like how I acquired certain items and the history behind them. For my coins, I've been researching the different minting processes and learning about the historical events that led to certain coin designs.

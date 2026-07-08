@@ -1,0 +1,32 @@
+{
+  "id": "2fa81930-4899-4c34-8881-cc293a5d23c0",
+  "object": "chat.completion",
+  "created": 1783427783,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: The question asks how many times the user baked egg tarts in the two weeks prior to 2023-05-30. The retrieved memories contain various baking activities (cookies, chicken wings, sourdough bread, chocolate cake), but none mention baking egg tarts. Since there is no evidence of egg tart baking, the answer cannot be determined from the provided memories.\n\nAnswer: I don't know.",
+        "reasoning_content": "We need to answer: \"How many times did I bake egg tarts in the past two weeks?\" with question date 2023-05-30. The past two weeks would be from 2023-05-16 to 2023-05-30. We must use only retrieved memories. Check all memories for any mention of baking egg tarts. None of the memories mention egg tarts. Memories about baking: [4] oven convection for cookies on May 25, [8] same, [5] plans to bake chicken wings on May 28, [6] attempted sourdough bread on May 23, [13] baked chocolate cake around May 13-14 (outside two-week window? May 13-14 is before May 16, so not in past two weeks from May 30). No mention of egg tarts. Therefore, insufficient evidence. Answer: I don't know."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1131,
+    "completion_tokens": 276,
+    "total_tokens": 1407,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 189
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 875
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

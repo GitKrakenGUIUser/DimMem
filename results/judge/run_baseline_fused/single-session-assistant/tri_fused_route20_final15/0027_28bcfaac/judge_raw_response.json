@@ -1,0 +1,32 @@
+{
+  "id": "433ab28d-f4c8-44af-979c-8540b934d4d4",
+  "object": "chat.completion",
+  "created": 1783427925,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "The generated answer matches the gold answer exactly.\n\n{\"label\": \"CORRECT\"}",
+        "reasoning_content": "We need to compare generated answer to gold answer. Both are \"MusicTheory.net\". So it's correct. Provide explanation and then label in JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 428,
+    "completion_tokens": 47,
+    "total_tokens": 475,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 30
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 172
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

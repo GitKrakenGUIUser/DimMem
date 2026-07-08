@@ -1,0 +1,2455 @@
+[
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "The user had their road bike serviced at Pedal Power on March 10, 2023, where the brake pads and cables were replaced.",
+    "dimension": {
+      "time": "2023-03-10",
+      "location": "Pedal Power",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "road bike",
+        "service",
+        "Pedal Power",
+        "brake pads",
+        "cables"
+      ]
+    },
+    "entities": [
+      "road bike",
+      "service",
+      "Pedal Power",
+      "brake pads",
+      "cables"
+    ],
+    "embedding_text": "The user had their road bike serviced at Pedal Power on March 10, 2023, where the brake pads and cables were replaced.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0154",
+    "source_time": "2023-03-20 17:29:01",
+    "record_time": "2026-07-07T19:50:55.476112",
+    "score": 11.6631872143585,
+    "score_components": {
+      "bm25_score": 11.6631872143585,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 11.6631872143585,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 11.6631872143585
+      },
+      {
+        "method": "structured",
+        "rank": 10,
+        "score": 0.33333333333333326
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.614945692419676
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "User planned to mow their lawn on the weekend after March 20, 2023.",
+    "dimension": {
+      "time": "2023-03-25",
+      "location": "user's backyard",
+      "reason": "",
+      "purpose": "lawn care",
+      "keywords": [
+        "mowing",
+        "lawn",
+        "weekend",
+        "March 2023"
+      ]
+    },
+    "entities": [
+      "mowing",
+      "lawn",
+      "weekend",
+      "March 2023"
+    ],
+    "embedding_text": "User planned to mow their lawn on the weekend after March 20, 2023.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0017",
+    "source_time": "2023-03-20 01:05:02",
+    "record_time": "2026-07-07T19:50:55.475199",
+    "score": 11.248142152839243,
+    "score_components": {
+      "bm25_score": 11.248142152839243,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 11.248142152839243,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 11.248142152839243
+      },
+      {
+        "method": "structured",
+        "rank": 13,
+        "score": 0.2666666666666666
+      },
+      {
+        "method": "minilm",
+        "rank": 13,
+        "score": 0.40233603852293703
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "The user plans to declutter their desk and workspace on the weekend of March 25-26, 2023.",
+    "dimension": {
+      "time": "2023-03-25 to 2023-03-26",
+      "location": "desk and workspace",
+      "reason": "",
+      "purpose": "declutter",
+      "keywords": [
+        "decluttering",
+        "desk",
+        "workspace",
+        "weekend plan"
+      ]
+    },
+    "entities": [
+      "decluttering",
+      "desk",
+      "workspace",
+      "weekend plan"
+    ],
+    "embedding_text": "The user plans to declutter their desk and workspace on the weekend of March 25-26, 2023.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0181",
+    "source_time": "2023-03-20 21:42:00.500000",
+    "record_time": "2026-07-07T19:50:55.476266",
+    "score": 11.055044957865714,
+    "score_components": {
+      "bm25_score": 11.055044957865714,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 11.055044957865714,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 11.055044957865714
+      },
+      {
+        "method": "structured",
+        "rank": 11,
+        "score": 0.33333333333333326
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "fact",
+    "content": "The user planned a trip to Europe in April 2023.",
+    "dimension": {
+      "time": "April 2023",
+      "location": "Europe",
+      "reason": "",
+      "purpose": "travel",
+      "keywords": [
+        "trip",
+        "Europe",
+        "April 2023"
+      ]
+    },
+    "entities": [
+      "trip",
+      "Europe",
+      "April 2023"
+    ],
+    "embedding_text": "The user planned a trip to Europe in April 2023.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0141",
+    "source_time": "2023-03-20 17:01:00",
+    "record_time": "2026-07-07T19:50:55.476033",
+    "score": 10.124516507523161,
+    "score_components": {
+      "bm25_score": 10.124516507523161,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 10.124516507523161,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 10.124516507523161
+      },
+      {
+        "method": "minilm",
+        "rank": 16,
+        "score": 0.38277879589971786
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "The user planned a 40-60 mile bike ride on the weekend of March 25-26, 2023, in the San Francisco Bay Area, including crossing the Golden Gate Bridge on Route 1 (Marin Headlands and Highway 1), preferring paved roads with hills and scenic coastal/rural views.",
+    "dimension": {
+      "time": "2023-03-25 to 2023-03-26",
+      "location": "San Francisco Bay Area, Marin Headlands, Highway 1, Golden Gate Bridge",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "bike ride",
+        "40-60 miles",
+        "Golden Gate Bridge",
+        "Marin Headlands",
+        "Highway 1",
+        "scenic route",
+        "weekend plan"
+      ]
+    },
+    "entities": [
+      "bike ride",
+      "40-60 miles",
+      "Golden Gate Bridge",
+      "Marin Headlands",
+      "Highway 1",
+      "scenic route",
+      "weekend plan"
+    ],
+    "embedding_text": "The user planned a 40-60 mile bike ride on the weekend of March 25-26, 2023, in the San Francisco Bay Area, including crossing the Golden Gate Bridge on Route 1 (Marin Headlands and Highway 1), preferring paved roads with hills and scenic coastal/rural views.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0086",
+    "source_time": "2023-03-20 10:35:01.500000",
+    "record_time": "2026-07-07T19:50:55.475699",
+    "score": 9.469027413976079,
+    "score_components": {
+      "bm25_score": 9.469027413976079,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 9.469027413976079,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 9.469027413976079
+      },
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.33333333333333326
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.5214469659700098
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "User plans to check out restaurants in the downtown area this weekend (around March 25-26, 2023).",
+    "dimension": {
+      "time": "2023-03-25",
+      "location": "downtown",
+      "reason": "",
+      "purpose": "find lunch or dinner",
+      "keywords": [
+        "restaurants",
+        "downtown"
+      ]
+    },
+    "entities": [
+      "restaurants",
+      "downtown"
+    ],
+    "embedding_text": "User plans to check out restaurants in the downtown area this weekend (around March 25-26, 2023).",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0042",
+    "source_time": "2023-03-20 05:14:02",
+    "record_time": "2026-07-07T19:50:55.475433",
+    "score": 9.29381267028199,
+    "score_components": {
+      "bm25_score": 9.29381267028199,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 9.29381267028199,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 9.29381267028199
+      },
+      {
+        "method": "structured",
+        "rank": 19,
+        "score": 0.2666666666666666
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "User watched a lot of documentaries on Netflix in the three months prior to March 20, 2023.",
+    "dimension": {
+      "time": "2022-12 to 2023-03",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "documentaries",
+        "Netflix",
+        "three months"
+      ]
+    },
+    "entities": [
+      "documentaries",
+      "Netflix",
+      "three months"
+    ],
+    "embedding_text": "User watched a lot of documentaries on Netflix in the three months prior to March 20, 2023.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0133",
+    "source_time": "2023-03-20 14:57:01",
+    "record_time": "2026-07-07T19:50:55.475987",
+    "score": 8.942916859510563,
+    "score_components": {
+      "bm25_score": 8.942916859510563,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 8.942916859510563,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 8.942916859510563
+      },
+      {
+        "method": "minilm",
+        "rank": 8,
+        "score": 0.4199279001839509
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "The user had their Toyota Camry serviced at the Toyota dealership on January 10, 2023, for $250, including air filter replacement, oil change, and tire rotation.",
+    "dimension": {
+      "time": "2023-01-10",
+      "location": "Toyota dealership",
+      "reason": "Vehicle maintenance",
+      "purpose": "To maintain the car",
+      "keywords": [
+        "Toyota Camry",
+        "service",
+        "air filter",
+        "oil change",
+        "tire rotation",
+        "$250"
+      ]
+    },
+    "entities": [
+      "Toyota Camry",
+      "service",
+      "air filter",
+      "oil change",
+      "tire rotation",
+      "$250"
+    ],
+    "embedding_text": "The user had their Toyota Camry serviced at the Toyota dealership on January 10, 2023, for $250, including air filter replacement, oil change, and tire rotation.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0018",
+    "source_time": "2023-03-20 02:04:00.500000",
+    "record_time": "2026-07-07T19:50:55.475206",
+    "score": 8.745099829138402,
+    "score_components": {
+      "bm25_score": 8.745099829138402,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 8.745099829138402,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 8.745099829138402
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.33333333333333326
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "fact",
+    "content": "User is interested in a Thule Hitch Bike Rack for two bikes.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Thule Hitch Bike Rack",
+        "bike rack",
+        "two bikes"
+      ]
+    },
+    "entities": [
+      "Thule Hitch Bike Rack",
+      "bike rack",
+      "two bikes"
+    ],
+    "embedding_text": "User is interested in a Thule Hitch Bike Rack for two bikes.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0005",
+    "source_time": "2023-03-20 00:12:01.500000",
+    "record_time": "2026-07-07T19:50:55.475122",
+    "score": 8.492786018777041,
+    "score_components": {
+      "bm25_score": 8.492786018777041,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 8.492786018777041,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 8.492786018777041
+      },
+      {
+        "method": "minilm",
+        "rank": 20,
+        "score": 0.36447392517071936
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "On March 2, 2023, the user cleaned and lubricated the chain of their road bike, which improved shifting performance.",
+    "dimension": {
+      "time": "2023-03-02",
+      "location": "",
+      "reason": "To improve shifting performance",
+      "purpose": "",
+      "keywords": [
+        "bike chain cleaning",
+        "lubrication",
+        "road bike maintenance",
+        "March 2 2023"
+      ]
+    },
+    "entities": [
+      "bike chain cleaning",
+      "lubrication",
+      "road bike maintenance",
+      "March 2 2023"
+    ],
+    "embedding_text": "On March 2, 2023, the user cleaned and lubricated the chain of their road bike, which improved shifting performance.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0085",
+    "source_time": "2023-03-20 10:35:01",
+    "record_time": "2026-07-07T19:50:55.475693",
+    "score": 7.9683784707985,
+    "score_components": {
+      "bm25_score": 7.9683784707985,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 7.9683784707985,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 7.9683784707985
+      },
+      {
+        "method": "minilm",
+        "rank": 7,
+        "score": 0.4273761442126678
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "The user is planning to build a small cabin on the inherited plot of land, which is located in a rural area.",
+    "dimension": {
+      "time": "",
+      "location": "rural area",
+      "reason": "",
+      "purpose": "to build a cabin",
+      "keywords": [
+        "building cabin",
+        "plan",
+        "inherited land",
+        "rural area"
+      ]
+    },
+    "entities": [
+      "building cabin",
+      "plan",
+      "inherited land",
+      "rural area"
+    ],
+    "embedding_text": "The user is planning to build a small cabin on the inherited plot of land, which is located in a rural area.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0137",
+    "source_time": "2023-03-20 16:48:00",
+    "record_time": "2026-07-07T19:50:55.476010",
+    "score": 7.317077337807868,
+    "score_components": {
+      "bm25_score": 7.317077337807868,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 7.317077337807868,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 7.317077337807868
+      },
+      {
+        "method": "structured",
+        "rank": 8,
+        "score": 0.33333333333333326
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "User is considering canceling their HBO subscription and comparing it with Hulu to see which streaming service offers more shows they would be interested in.",
+    "dimension": {
+      "time": "2023-03-20",
+      "location": "",
+      "reason": "wanting to decide which service to keep",
+      "purpose": "find better streaming service",
+      "keywords": [
+        "HBO subscription",
+        "cancel",
+        "Hulu",
+        "comparison",
+        "streaming service"
+      ]
+    },
+    "entities": [
+      "HBO subscription",
+      "cancel",
+      "Hulu",
+      "comparison",
+      "streaming service"
+    ],
+    "embedding_text": "User is considering canceling their HBO subscription and comparing it with Hulu to see which streaming service offers more shows they would be interested in.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0124",
+    "source_time": "2023-03-20 14:31:02.500000",
+    "record_time": "2026-07-07T19:50:55.475935",
+    "score": 7.311333360602196,
+    "score_components": {
+      "bm25_score": 7.311333360602196,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 7.311333360602196,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 7.311333360602196
+      },
+      {
+        "method": "structured",
+        "rank": 7,
+        "score": 0.33333333333333326
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "fact",
+    "content": "User moved into a new house as of March 20, 2023.",
+    "dimension": {
+      "time": "2023-03-20",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "new house",
+        "move"
+      ]
+    },
+    "entities": [
+      "new house",
+      "move"
+    ],
+    "embedding_text": "User moved into a new house as of March 20, 2023.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0008",
+    "source_time": "2023-03-20 00:35:02.500000",
+    "record_time": "2026-07-07T19:50:55.475143",
+    "score": 7.225220233316435,
+    "score_components": {
+      "bm25_score": 7.225220233316435,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 7.225220233316435,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 7.225220233316435
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "The user plans to try Dinnerly meal kit service.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Dinnerly",
+        "meal kit service"
+      ]
+    },
+    "entities": [
+      "Dinnerly",
+      "meal kit service"
+    ],
+    "embedding_text": "The user plans to try Dinnerly meal kit service.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0104",
+    "source_time": "2023-03-20 12:18:02",
+    "record_time": "2026-07-07T19:50:55.475814",
+    "score": 7.210987617154766,
+    "score_components": {
+      "bm25_score": 7.210987617154766,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 7.210987617154766,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 7.210987617154766
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.3999999999999999
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "User plans to check out thrift stores in the downtown area near the Zara location this weekend (around March 25-26, 2023).",
+    "dimension": {
+      "time": "2023-03-25",
+      "location": "downtown near Zara",
+      "reason": "",
+      "purpose": "thrift shopping",
+      "keywords": [
+        "thrift stores",
+        "downtown",
+        "Zara"
+      ]
+    },
+    "entities": [
+      "thrift stores",
+      "downtown",
+      "Zara"
+    ],
+    "embedding_text": "User plans to check out thrift stores in the downtown area near the Zara location this weekend (around March 25-26, 2023).",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0043",
+    "source_time": "2023-03-20 05:14:02.500000",
+    "record_time": "2026-07-07T19:50:55.475439",
+    "score": 6.3165637930888465,
+    "score_components": {
+      "bm25_score": 6.3165637930888465,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 6.3165637930888465,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 6.3165637930888465
+      },
+      {
+        "method": "structured",
+        "rank": 20,
+        "score": 0.2666666666666666
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "fact",
+    "content": "User has a Netflix subscription and has been using it for about two years as of March 2023.",
+    "dimension": {
+      "time": "2023-03-20",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Netflix",
+        "subscription",
+        "two years"
+      ]
+    },
+    "entities": [
+      "Netflix",
+      "subscription",
+      "two years"
+    ],
+    "embedding_text": "User has a Netflix subscription and has been using it for about two years as of March 2023.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0129",
+    "source_time": "2023-03-20 14:43:02",
+    "record_time": "2026-07-07T19:50:55.475964",
+    "score": 6.214033622674236,
+    "score_components": {
+      "bm25_score": 6.214033622674236,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 16,
+    "retrieval_score": 6.214033622674236,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 16,
+        "score": 6.214033622674236
+      },
+      {
+        "method": "minilm",
+        "rank": 19,
+        "score": 0.3664067102391283
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "User plans to deploy payment-service and first-data-xtp-mux in DC1 and DC2 using a traffic diversion and sequential stop-start procedure.",
+    "dimension": {
+      "time": "",
+      "location": "DC1, DC2",
+      "reason": "",
+      "purpose": "production deployment",
+      "keywords": [
+        "payment-service",
+        "first-data-xtp-mux",
+        "deployment",
+        "DC1",
+        "DC2"
+      ]
+    },
+    "entities": [
+      "payment-service",
+      "first-data-xtp-mux",
+      "deployment",
+      "DC1",
+      "DC2"
+    ],
+    "embedding_text": "User plans to deploy payment-service and first-data-xtp-mux in DC1 and DC2 using a traffic diversion and sequential stop-start procedure.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0148",
+    "source_time": "2023-03-20 17:22:00",
+    "record_time": "2026-07-07T19:50:55.476075",
+    "score": 6.097781254134654,
+    "score_components": {
+      "bm25_score": 6.097781254134654,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 17,
+    "retrieval_score": 6.097781254134654,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 17,
+        "score": 6.097781254134654
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.3999999999999999
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "The user plans to fix the fence before enrolling Max in obedience training.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to prevent Max from escaping",
+      "purpose": "to ensure training is effective",
+      "keywords": [
+        "fix fence",
+        "obedience training",
+        "Max",
+        "plan"
+      ]
+    },
+    "entities": [
+      "fix fence",
+      "obedience training",
+      "Max",
+      "plan"
+    ],
+    "embedding_text": "The user plans to fix the fence before enrolling Max in obedience training.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0067",
+    "source_time": "2023-03-20 07:49:00.500000",
+    "record_time": "2026-07-07T19:50:55.475582",
+    "score": 6.089515574056419,
+    "score_components": {
+      "bm25_score": 6.089515574056419,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 18,
+    "retrieval_score": 6.089515574056419,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 18,
+        "score": 6.089515574056419
+      },
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.33333333333333326
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "User plans a road trip to the mountains in April 2023.",
+    "dimension": {
+      "time": "2023-04",
+      "location": "mountains",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "road trip",
+        "mountains",
+        "April 2023"
+      ]
+    },
+    "entities": [
+      "road trip",
+      "mountains",
+      "April 2023"
+    ],
+    "embedding_text": "User plans a road trip to the mountains in April 2023.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0002",
+    "source_time": "2023-03-20 00:12:02",
+    "record_time": "2026-07-07T19:50:55.475103",
+    "score": 5.502913320908803,
+    "score_components": {
+      "bm25_score": 5.502913320908803,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 19,
+    "retrieval_score": 5.502913320908803,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 19,
+        "score": 5.502913320908803
+      },
+      {
+        "method": "structured",
+        "rank": 12,
+        "score": 0.2666666666666666
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.4614434269703418
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "profile",
+    "content": "The user finds consistency the most challenging part of starting an exercise routine and tends to get discouraged when missing a day or two.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "consistency",
+        "challenge",
+        "exercise routine",
+        "discouragement"
+      ]
+    },
+    "entities": [
+      "consistency",
+      "challenge",
+      "exercise routine",
+      "discouragement"
+    ],
+    "embedding_text": "The user finds consistency the most challenging part of starting an exercise routine and tends to get discouraged when missing a day or two.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0028",
+    "source_time": "2023-03-20 02:14:02.500000",
+    "record_time": "2026-07-07T19:50:55.475267",
+    "score": 5.499007836987222,
+    "score_components": {
+      "bm25_score": 5.499007836987222,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 20,
+    "retrieval_score": 5.499007836987222,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 20,
+        "score": 5.499007836987222
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "The user plans to visit Yellowstone National Park.",
+    "dimension": {
+      "time": "",
+      "location": "Yellowstone National Park",
+      "reason": "",
+      "purpose": "to experience the park as a first-time visitor",
+      "keywords": [
+        "Yellowstone National Park",
+        "travel plan",
+        "first-timer"
+      ]
+    },
+    "entities": [
+      "Yellowstone National Park",
+      "travel plan",
+      "first-timer"
+    ],
+    "embedding_text": "The user plans to visit Yellowstone National Park.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0070",
+    "source_time": "2023-03-20 07:49:02",
+    "record_time": "2026-07-07T19:50:55.475600",
+    "score": 0.33333333333333326,
+    "structural_score": 0.33333333333333326,
+    "score_components": {
+      "score": 0.33333333333333326,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-03-20T07:49:02",
+            "end": "2023-03-20T07:49:02",
+            "granularity": "datetime",
+            "raw": "2023-03-20T07:49:02"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.3333333333333333,
+      "keyword_token_overlap_score": 0.3333333333333333,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.3333333333333333,
+        "keyword_token_overlap": 0.3333333333333333
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to visit Yellowstone National Park. | Yellowstone National Park | travel plan | first-timer | Yellowstone National Park | to experience the park as a first-time visitor | Yellowstone National Park | travel plan | first-timer"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 5,
+    "retrieval_score": 0.33333333333333326,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.33333333333333326
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "The user plans to try Ilford HP5 Plus 400 film for black and white photography.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "black and white photography",
+      "keywords": [
+        "Ilford HP5 Plus 400",
+        "film",
+        "black and white photography",
+        "plan"
+      ]
+    },
+    "entities": [
+      "Ilford HP5 Plus 400",
+      "film",
+      "black and white photography",
+      "plan"
+    ],
+    "embedding_text": "The user plans to try Ilford HP5 Plus 400 film for black and white photography.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0146",
+    "source_time": "2023-03-20 17:20:02",
+    "record_time": "2026-07-07T19:50:55.476063",
+    "score": 0.33333333333333326,
+    "structural_score": 0.33333333333333326,
+    "score_components": {
+      "score": 0.33333333333333326,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-03-20T17:20:02",
+            "end": "2023-03-20T17:20:02",
+            "granularity": "datetime",
+            "raw": "2023-03-20T17:20:02"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.3333333333333333,
+      "keyword_token_overlap_score": 0.3333333333333333,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.3333333333333333,
+        "keyword_token_overlap": 0.3333333333333333
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to try Ilford HP5 Plus 400 film for black and white photography. | Ilford HP5 Plus 400 | film | black and white photography | plan | black and white photography | Ilford HP5 Plus 400 | film | black and white photography | plan"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 9,
+    "retrieval_score": 0.33333333333333326,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 9,
+        "score": 0.33333333333333326
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "The user plans to use extra morning time for a 30-minute walk or jog before work to increase daily activity and reach step goals.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "Desire to increase daily activity",
+      "purpose": "To reach step goal and improve fitness",
+      "keywords": [
+        "morning walk",
+        "jog",
+        "30 minutes",
+        "step goal",
+        "exercise routine"
+      ]
+    },
+    "entities": [
+      "morning walk",
+      "jog",
+      "30 minutes",
+      "step goal",
+      "exercise routine"
+    ],
+    "embedding_text": "The user plans to use extra morning time for a 30-minute walk or jog before work to increase daily activity and reach step goals.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0025",
+    "source_time": "2023-03-20 02:14:01",
+    "record_time": "2026-07-07T19:50:55.475248",
+    "score": 0.2666666666666666,
+    "structural_score": 0.2666666666666666,
+    "score_components": {
+      "score": 0.2666666666666666,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-03-20T02:14:01",
+            "end": "2023-03-20T02:14:01",
+            "granularity": "datetime",
+            "raw": "2023-03-20T02:14:01"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.3333333333333333,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.3333333333333333,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to use extra morning time for a 30-minute walk or jog before work to increase daily activity and reach step goals. | morning walk | jog | 30 minutes | step goal | exercise routine | Desire to increase daily activity | To reach step goal and improve fitness | morning walk | jog | 30 minutes | step goal | exercise routine"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.2666666666666666,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.2666666666666666
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "The user plans to track daily steps, distance, and calories burned using their Fitbit, and log morning walks/jogs in the Fitbit app.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "To monitor progress and gain motivation",
+      "purpose": "To track fitness and stay motivated",
+      "keywords": [
+        "Fitbit",
+        "step tracking",
+        "distance",
+        "calories burned",
+        "Fitbit app"
+      ]
+    },
+    "entities": [
+      "Fitbit",
+      "step tracking",
+      "distance",
+      "calories burned",
+      "Fitbit app"
+    ],
+    "embedding_text": "The user plans to track daily steps, distance, and calories burned using their Fitbit, and log morning walks/jogs in the Fitbit app.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0026",
+    "source_time": "2023-03-20 02:14:01.500000",
+    "record_time": "2026-07-07T19:50:55.475254",
+    "score": 0.2666666666666666,
+    "structural_score": 0.2666666666666666,
+    "score_components": {
+      "score": 0.2666666666666666,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-03-20T02:14:01.500000",
+            "end": "2023-03-20T02:14:01.500000",
+            "granularity": "datetime",
+            "raw": "2023-03-20T02:14:01.500000"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.3333333333333333,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.3333333333333333,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to track daily steps, distance, and calories burned using their Fitbit, and log morning walks/jogs in the Fitbit app. | Fitbit | step tracking | distance | calories burned | Fitbit app | To monitor progress and gain motivation | To track fitness and stay motivated | Fitbit | step tracking | distance | calories burned | Fitbit app"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.2666666666666666,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 15,
+        "score": 0.2666666666666666
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "User plans to upgrade suspension for an upcoming drift event and is considering coilover brands for his 1995 Honda Civic.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "to improve performance for next drift event",
+      "purpose": "upgrade suspension",
+      "keywords": [
+        "suspension upgrade",
+        "drift event",
+        "coilovers",
+        "1995 Honda Civic"
+      ]
+    },
+    "entities": [
+      "suspension upgrade",
+      "drift event",
+      "coilovers",
+      "1995 Honda Civic"
+    ],
+    "embedding_text": "User plans to upgrade suspension for an upcoming drift event and is considering coilover brands for his 1995 Honda Civic.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0036",
+    "source_time": "2023-03-20 05:11:02",
+    "record_time": "2026-07-07T19:50:55.475317",
+    "score": 0.2666666666666666,
+    "structural_score": 0.2666666666666666,
+    "score_components": {
+      "score": 0.2666666666666666,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-03-20T05:11:02",
+            "end": "2023-03-20T05:11:02",
+            "granularity": "datetime",
+            "raw": "2023-03-20T05:11:02"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.3333333333333333,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.3333333333333333,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User plans to upgrade suspension for an upcoming drift event and is considering coilover brands for his 1995 Honda Civic. | suspension upgrade | drift event | coilovers | 1995 Honda Civic | to improve performance for next drift event | upgrade suspension | suspension upgrade | drift event | coilovers | 1995 Honda Civic"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.2666666666666666,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 16,
+        "score": 0.2666666666666666
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "User plans to go to Sephora this weekend (around March 25-26, 2023) to redeem loyalty points for a free eyeshadow palette.",
+    "dimension": {
+      "time": "2023-03-25",
+      "location": "Sephora",
+      "reason": "to redeem loyalty points",
+      "purpose": "get free eyeshadow palette",
+      "keywords": [
+        "Sephora",
+        "loyalty points",
+        "eyeshadow palette"
+      ]
+    },
+    "entities": [
+      "Sephora",
+      "loyalty points",
+      "eyeshadow palette"
+    ],
+    "embedding_text": "User plans to go to Sephora this weekend (around March 25-26, 2023) to redeem loyalty points for a free eyeshadow palette.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0040",
+    "source_time": "2023-03-20 05:14:00.500000",
+    "record_time": "2026-07-07T19:50:55.475341",
+    "score": 0.2666666666666666,
+    "structural_score": 0.2666666666666666,
+    "score_components": {
+      "score": 0.2666666666666666,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-03-25T00:00:00",
+            "end": "2023-03-25T23:59:59.999999",
+            "granularity": "day",
+            "raw": "2023-03-25"
+          },
+          {
+            "start": "2023-03-20T05:14:00.500000",
+            "end": "2023-03-20T05:14:00.500000",
+            "granularity": "datetime",
+            "raw": "2023-03-20T05:14:00.500000"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.3333333333333333,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.3333333333333333,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User plans to go to Sephora this weekend (around March 25-26, 2023) to redeem loyalty points for a free eyeshadow palette. | Sephora | loyalty points | eyeshadow palette | 2023-03-25 | Sephora | to redeem loyalty points | get free eyeshadow palette | Sephora | loyalty points | eyeshadow palette"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.2666666666666666,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 17,
+        "score": 0.2666666666666666
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "User plans to go shopping and comparison shopping at stores near the new Zara downtown this weekend (around March 25-26, 2023).",
+    "dimension": {
+      "time": "2023-03-25",
+      "location": "downtown near Zara",
+      "reason": "",
+      "purpose": "comparison shopping",
+      "keywords": [
+        "shopping",
+        "downtown",
+        "Zara",
+        "comparison shopping"
+      ]
+    },
+    "entities": [
+      "shopping",
+      "downtown",
+      "Zara",
+      "comparison shopping"
+    ],
+    "embedding_text": "User plans to go shopping and comparison shopping at stores near the new Zara downtown this weekend (around March 25-26, 2023).",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0041",
+    "source_time": "2023-03-20 05:14:01.500000",
+    "record_time": "2026-07-07T19:50:55.475426",
+    "score": 0.2666666666666666,
+    "structural_score": 0.2666666666666666,
+    "score_components": {
+      "score": 0.2666666666666666,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": [
+          {
+            "start": "2023-03-25T00:00:00",
+            "end": "2023-03-25T23:59:59.999999",
+            "granularity": "day",
+            "raw": "2023-03-25"
+          },
+          {
+            "start": "2023-03-20T05:14:01.500000",
+            "end": "2023-03-20T05:14:01.500000",
+            "granularity": "datetime",
+            "raw": "2023-03-20T05:14:01.500000"
+          }
+        ]
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.3333333333333333,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.19999999999999998,
+        "time_constraint": 0.39999999999999997,
+        "keyword_phrase_match": 0.19999999999999998,
+        "keyword_token_overlap": 0.19999999999999998
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "time_constraint": 0.0,
+        "keyword_phrase_match": 0.3333333333333333,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User plans to go shopping and comparison shopping at stores near the new Zara downtown this weekend (around March 25-26, 2023). | shopping | downtown | Zara | comparison shopping | 2023-03-25 | downtown near Zara | comparison shopping | shopping | downtown | Zara | comparison shopping"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.2666666666666666,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 18,
+        "score": 0.2666666666666666
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "The user plans to replace the front tire of their commuter bike before April 2023.",
+    "dimension": {
+      "time": "before 2023-04",
+      "location": "",
+      "reason": "tire showing wear and flat tire",
+      "purpose": "",
+      "keywords": [
+        "tire replacement",
+        "front tire",
+        "commuter bike"
+      ]
+    },
+    "entities": [
+      "tire replacement",
+      "front tire",
+      "commuter bike"
+    ],
+    "embedding_text": "The user plans to replace the front tire of their commuter bike before April 2023.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0056",
+    "source_time": "2023-03-20 05:52:02.500000",
+    "record_time": "2026-07-07T19:50:55.475518",
+    "score": 0.6104355144188089,
+    "score_components": {
+      "dense_cosine_score": 0.6104355144188089,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 2,
+    "retrieval_score": 0.6104355144188089,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.6104355144188089
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "The user experienced a flat tire on their commuter bike on February 20, 2023.",
+    "dimension": {
+      "time": "2023-02-20",
+      "location": "on the way to work",
+      "reason": "tire wear",
+      "purpose": "",
+      "keywords": [
+        "flat tire",
+        "commuter bike",
+        "February 20, 2023"
+      ]
+    },
+    "entities": [
+      "flat tire",
+      "commuter bike",
+      "February 20, 2023"
+    ],
+    "embedding_text": "The user experienced a flat tire on their commuter bike on February 20, 2023.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0055",
+    "source_time": "2023-03-20 05:52:02",
+    "record_time": "2026-07-07T19:50:55.475511",
+    "score": 0.4980722691112667,
+    "score_components": {
+      "dense_cosine_score": 0.4980722691112667,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 4,
+    "retrieval_score": 0.4980722691112667,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.4980722691112667
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "fact",
+    "content": "The user owns a hybrid bike used for commuting to work on paved roads and bike paths.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "commuting",
+      "keywords": [
+        "hybrid bike",
+        "commuter",
+        "paved roads",
+        "bike paths",
+        "commuting"
+      ]
+    },
+    "entities": [
+      "hybrid bike",
+      "commuter",
+      "paved roads",
+      "bike paths",
+      "commuting"
+    ],
+    "embedding_text": "The user owns a hybrid bike used for commuting to work on paved roads and bike paths.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0054",
+    "source_time": "2023-03-20 05:52:01.500000",
+    "record_time": "2026-07-07T19:50:55.475506",
+    "score": 0.4469751609725607,
+    "score_components": {
+      "dense_cosine_score": 0.4469751609725607,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 6,
+    "retrieval_score": 0.4469751609725607,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 6,
+        "score": 0.4469751609725607
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "fact",
+    "content": "The user acquired a Fitbit Charge 3 fitness tracker approximately three months before March 20, 2023 (around December 2022).",
+    "dimension": {
+      "time": "2022-12-20",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Fitbit Charge 3",
+        "fitness tracker",
+        "purchase"
+      ]
+    },
+    "entities": [
+      "Fitbit Charge 3",
+      "fitness tracker",
+      "purchase"
+    ],
+    "embedding_text": "The user acquired a Fitbit Charge 3 fitness tracker approximately three months before March 20, 2023 (around December 2022).",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0021",
+    "source_time": "2023-03-20 02:04:02",
+    "record_time": "2026-07-07T19:50:55.475224",
+    "score": 0.4117544001824406,
+    "score_components": {
+      "dense_cosine_score": 0.4117544001824406,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 9,
+    "retrieval_score": 0.4117544001824406,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.4117544001824406
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "The user plans to purchase a bike computer and bike lights for their early morning rides.",
+    "dimension": {
+      "time": "2023-03-20",
+      "location": "",
+      "reason": "useful for early morning rides",
+      "purpose": "",
+      "keywords": [
+        "bike computer",
+        "bike lights",
+        "accessories"
+      ]
+    },
+    "entities": [
+      "bike computer",
+      "bike lights",
+      "accessories"
+    ],
+    "embedding_text": "The user plans to purchase a bike computer and bike lights for their early morning rides.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0060",
+    "source_time": "2023-03-20 07:03:01.500000",
+    "record_time": "2026-07-07T19:50:55.475542",
+    "score": 0.41117287552657916,
+    "score_components": {
+      "dense_cosine_score": 0.41117287552657916,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.41117287552657916,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 10,
+        "score": 0.41117287552657916
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "fact",
+    "content": "The user's employer updated their payroll information on February 20, 2023.",
+    "dimension": {
+      "time": "2023-02-20",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "employer",
+        "payroll",
+        "February 20"
+      ]
+    },
+    "entities": [
+      "employer",
+      "payroll",
+      "February 20"
+    ],
+    "embedding_text": "The user's employer updated their payroll information on February 20, 2023.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0186",
+    "source_time": "2023-03-20 22:54:00",
+    "record_time": "2026-07-07T19:50:55.476328",
+    "score": 0.41106586107359777,
+    "score_components": {
+      "dense_cosine_score": 0.41106586107359777,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 11,
+    "retrieval_score": 0.41106586107359777,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.41106586107359777
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "fact",
+    "content": "The user owns a road bike.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "road bike",
+        "bicycle"
+      ]
+    },
+    "entities": [
+      "road bike",
+      "bicycle"
+    ],
+    "embedding_text": "The user owns a road bike.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0084",
+    "source_time": "2023-03-20 10:35:00.500000",
+    "record_time": "2026-07-07T19:50:55.475687",
+    "score": 0.4101020830355864,
+    "score_components": {
+      "dense_cosine_score": 0.4101020830355864,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.4101020830355864,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.4101020830355864
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "The user acquired a new water bottle cage for their mountain bike around early March 2023, which securely holds a 27 oz bottle.",
+    "dimension": {
+      "time": "2023-03",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "water bottle cage",
+        "mountain bike",
+        "27 oz bottle"
+      ]
+    },
+    "entities": [
+      "water bottle cage",
+      "mountain bike",
+      "27 oz bottle"
+    ],
+    "embedding_text": "The user acquired a new water bottle cage for their mountain bike around early March 2023, which securely holds a 27 oz bottle.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0156",
+    "source_time": "2023-03-20 17:29:02",
+    "record_time": "2026-07-07T19:50:55.476123",
+    "score": 0.4008164910330375,
+    "score_components": {
+      "dense_cosine_score": 0.4008164910330375,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.4008164910330375,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 14,
+        "score": 0.4008164910330375
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "profile",
+    "content": "The user rides their bike in the early morning.",
+    "dimension": {
+      "time": "early morning",
+      "location": "",
+      "reason": "",
+      "purpose": "commute and exercise",
+      "keywords": [
+        "early morning rides",
+        "bike riding"
+      ]
+    },
+    "entities": [
+      "early morning rides",
+      "bike riding"
+    ],
+    "embedding_text": "The user rides their bike in the early morning.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0059",
+    "source_time": "2023-03-20 07:03:01",
+    "record_time": "2026-07-07T19:50:55.475535",
+    "score": 0.3990146899764477,
+    "score_components": {
+      "dense_cosine_score": 0.3990146899764477,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.3990146899764477,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 15,
+        "score": 0.3990146899764477
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "episodic",
+    "content": "User visited a new Zara store downtown around early March 2023.",
+    "dimension": {
+      "time": "2023-03-01",
+      "location": "downtown area",
+      "reason": "",
+      "purpose": "browsing",
+      "keywords": [
+        "Zara",
+        "downtown",
+        "shopping"
+      ]
+    },
+    "entities": [
+      "Zara",
+      "downtown",
+      "shopping"
+    ],
+    "embedding_text": "User visited a new Zara store downtown around early March 2023.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0038",
+    "source_time": "2023-03-20 05:14:00",
+    "record_time": "2026-07-07T19:50:55.475328",
+    "score": 0.37866807819778237,
+    "score_components": {
+      "dense_cosine_score": 0.37866807819778237,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.37866807819778237,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 17,
+        "score": 0.37866807819778237
+      }
+    ]
+  },
+  {
+    "user_id": "0013_a9f6b44c",
+    "memory_type": "fact",
+    "content": "The user is considering buying a Garmin Edge bike computer.",
+    "dimension": {
+      "time": "2023-03-20",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Garmin Edge",
+        "bike computer"
+      ]
+    },
+    "entities": [
+      "Garmin Edge",
+      "bike computer"
+    ],
+    "embedding_text": "The user is considering buying a Garmin Edge bike computer.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0061",
+    "source_time": "2023-03-20 07:32:00",
+    "record_time": "2026-07-07T19:50:55.475547",
+    "score": 0.37438274769371144,
+    "score_components": {
+      "dense_cosine_score": 0.37438274769371144,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.37438274769371144,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.37438274769371144
+      }
+    ]
+  }
+]

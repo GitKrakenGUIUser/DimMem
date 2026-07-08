@@ -1,0 +1,102 @@
+{
+  "model_name": "deepseek-v4-flash",
+  "query": "What is the total amount I spent on gifts for my coworker and brother?",
+  "gold_answer": "$200",
+  "question_date": "2023/05/30 (Tue) 21:10",
+  "retrieved_records": [
+    {
+      "source_time": "2023-05-28 08:47:02",
+      "content": "User bought a set of baby clothes and toys from Buy Buy Baby for coworker's baby shower, costing around $100, in April 2023.",
+      "dimension": {
+        "reason": "coworker's baby shower"
+      }
+    },
+    {
+      "source_time": "2023-05-27 09:08:02",
+      "content": "In May 2023, the user gave their brother a $100 gift card to an electronics store as a graduation gift.",
+      "dimension": {
+        "reason": "brother's graduation"
+      }
+    },
+    {
+      "source_time": "2023-05-27 09:08:01.500000",
+      "content": "The user has a brother and a sister."
+    },
+    {
+      "source_time": "2023-05-29 11:32:00.500000",
+      "content": "The user spends approximately $500 per month on gifts for friends and family."
+    },
+    {
+      "source_time": "2023-05-29 11:32:00.500000",
+      "content": "In April 2023, the user bought a birthday present for their sister, a housewarming gift for their friend, and attended a baby shower where they bought a gift for their coworker's baby.",
+      "dimension": {
+        "reason": "birthday, housewarming, baby shower",
+        "purpose": "gifting"
+      }
+    },
+    {
+      "source_time": "2023-05-29 11:32:02.500000",
+      "content": "The user tends to spend a lot on gifts during special occasions and is considering whether to cut back."
+    },
+    {
+      "source_time": "2023-05-22 15:45:01",
+      "content": "The user is working on a report and needs an updated workflow model diagram and notes from a coworker, requesting them by May 24, 2023.",
+      "dimension": {
+        "reason": "to include in a report",
+        "purpose": "to get the latest workflow model information"
+      }
+    },
+    {
+      "source_time": "2023-05-28 19:02:02.500000",
+      "content": "User prefers personalized gifts and memory books."
+    },
+    {
+      "source_time": "2023-05-24 20:10:00",
+      "content": "The user plans to break down goals into smaller tasks and focus on one task at a time to manage workload.",
+      "dimension": {
+        "reason": "feeling overwhelmed by amount of information to learn",
+        "purpose": "make learning more manageable"
+      }
+    },
+    {
+      "source_time": "2023-05-23 18:50:02",
+      "content": "User's favorite secondhand find is a pair of designer boots bought on ThredUp for $50, originally $500."
+    },
+    {
+      "source_time": "2023-05-29 11:32:01.500000",
+      "content": "The user recently attended a baby shower and purchased baby clothes and toys from Buy Buy Baby for $100, including a gift receipt.",
+      "dimension": {
+        "reason": "baby shower",
+        "purpose": "gift for coworker"
+      }
+    },
+    {
+      "source_time": "2023-05-29 11:57:00.500000",
+      "content": "The user has Hendrick's gin at home and is open to trying other gin brands.",
+      "dimension": {
+        "purpose": "cocktail making"
+      }
+    },
+    {
+      "source_time": "2023-05-20 22:13:00",
+      "content": "The user is looking for a mid-range dog bed around $40 with a 3-inch thick cushion for their dog Max's joint health.",
+      "dimension": {
+        "reason": "for Max's joint health",
+        "purpose": "to purchase a suitable dog bed"
+      }
+    },
+    {
+      "source_time": "2023-05-29 11:32:00.500000",
+      "content": "The user plans to spend $150 to $200 on their mother's anniversary gift and is leaning towards a personalized photo album.",
+      "dimension": {
+        "reason": "anniversary",
+        "purpose": "select a gift"
+      }
+    },
+    {
+      "source_time": "2023-05-30 18:02:00",
+      "content": "The user recently had a nasty flu that kept her bedridden for almost two weeks, and is now focusing on recovering her health."
+    }
+  ],
+  "retrieval_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/multi-session/tri_fused_route20_final15/0026_a3332713"
+}

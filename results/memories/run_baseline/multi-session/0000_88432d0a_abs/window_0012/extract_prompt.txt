@@ -1,0 +1,137 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-27T00:24:02, Sat] 1.User: I'll definitely check out those outdoor gear stores this weekend. Do you think I could find some good deals on fleece jackets during the summer season?
+[2023-05-27T00:24:02.500000, Sat] 2.User: Do you know if they have any sales or discounts on hiking boots as well? I've been thinking of getting a new pair for my next hike.
+[2023-05-27T02:28:00, Sat] 3.User: I'm trying to find a new coffee creamer to replace my favorite one that's been out of stock at the cafe near station A. Can you recommend some popular coffee creamer brands that I might like? By the way, I'm still recovering from yesterday's commute - it rained heavily on my way home from work that evening, and I had to walk in the rain without an umbrella and got completely soaked on a Wednesday.
+[2023-05-27T02:28:00.500000, Sat] 4.User: I'll give Coffee Mate a try, thanks! I've had it before and it's not bad. Do you have any tips on how to make my morning commute more comfortable? I've been standing for the entire ride for the past two weeks, and it's been exhausting.
+[2023-05-27T02:28:01, Sat] 5.User: I'll definitely try to arrive earlier at the station. Speaking of commutes, do you have any tips on how to reduce fuel consumption and improve fuel efficiency, especially in heavy traffic? I've been driving my car on Wednesdays and Fridays, and I've noticed that the fuel efficiency has been getting worse due to the heavy traffic.
+[2023-05-27T02:28:01.500000, Sat] 6.User: I'll definitely try to maintain a consistent speed and avoid idling. It's also a good reminder to check my tire pressure regularly. By the way, I've been getting off the train one stop earlier and walking the remaining 20 minutes to the office as part of my effort to get more exercise. Do you have any tips on how to make the most out of this walk and incorporate more physical activity into my daily routine?
+[2023-05-27T02:28:02, Sat] 7.User: I'll definitely try to mix up my walking route and incorporate strength training exercises during my walk. It's also a good reminder to schedule my walk into my daily routine and make it a habit. By the way, I've been taking notes on my commute home from work to review before the next meeting. Do you have any tips on how to organize my notes and make them more effective for future reference?
+[2023-05-27T02:28:02.500000, Sat] 8.User: I'm glad you found the tips helpful! Now, I'd like to ask you a question: How do you usually prioritize your tasks and stay focused during the day? Do you use any specific productivity techniques or tools to help you stay on track?
+[2023-05-27T08:05:00, Sat] 9.User: I'm trying to plan a road trip to Philly and was wondering if you could recommend some good restaurants near the Wells Fargo Center?
+[2023-05-27T08:05:00.500000, Sat] 10.User: I'm actually going to a concert at the Wells Fargo Center soon, so I'll definitely check out some of those restaurants beforehand. Speaking of concerts, do you have any recommendations for good music festivals in the US?
+[2023-05-27T08:05:01, Sat] 11.User: I've been to Austin City Limits before, and it was an amazing experience! I'm actually a big fan of rock and indie music. Do you have any recommendations for concerts or festivals in the Philly area, since I'll be there soon?
+[2023-05-27T08:05:01.500000, Sat] 12.User: I've actually seen The 1975 before, they were amazing live! I'm really excited for my upcoming concert at the Wells Fargo Center, I've been listening to the band's new album nonstop. Speaking of which, I met the lead singer of Imagine Dragons backstage at their show at the Wells Fargo Center last year, it was such a surreal experience!
+[2023-05-27T08:05:02, Sat] 13.User: Yeah, it was definitely a crazy experience! I was with my friends Rachel and Mike, and we were all super stoked to meet him. We got to chat with him for a bit, and he was really down-to-earth and nice. We talked about the new album and how much we loved the energy of the show. He even signed our merch and took a photo with us!
+
+As for how I got into Imagine Dragons, I think it was their album "Smoke + Mirrors" that really drew me in. The song "Demons" is still one of my favorites to this day. But I've been listening to their new album nonstop, and I'm loving the new direction they're taking their sound in.
+
+And haha, no tips or advice from Dan on how to rock out, but he did tell us to "keep being loud and proud"!
+[2023-05-27T08:05:02.500000, Sat] 14.User: I'm actually thinking of planning a trip to Austin, Texas soon. I've heard great things about the city and its music scene. Have you been to Austin before?
+[2023-05-27T21:06:00, Sat] 15.User: can you suggest a name for the above perfume

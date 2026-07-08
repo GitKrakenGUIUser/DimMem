@@ -1,0 +1,32 @@
+{
+  "id": "b1f06b2b-3897-4d3c-9353-dfc0913293db",
+  "object": "chat.completion",
+  "created": 1783356294,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"How many times did the user bake egg tarts in the past two weeks?\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"bake\", \"egg tarts\"],\n    \"time\": \"between 2023/05/16 and 2023/05/30\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"\"\n}",
+        "reasoning_content": "We need to parse the question: \"How many times did I bake egg tarts in the past two weeks?\" Given question date: 2023/05/30 (Tue) 23:40. The past two weeks from 2023/05/30 would be from 2023/05/16 to 2023/05/30 (approximately, but we can say \"between 2023/05/16 and 2023/05/30\" or \"in the past two weeks\"). Need to extract time constraint: \"past two weeks\" is relative, so normalize to dates. Also need to determine answer_dim: it's asking \"how many times\" - that's a count, so it requires calculation/summarization. So answer_dim should be \"\".\n\nQuery anchor: rewrite as \"How many times did the user bake egg tarts in the past two weeks?\" (preserving core intent). need_assistant_context: false (no mention of assistant previous conversation). target_memory_type: episodic (specific events like baking). keywords: \"bake\", \"egg tarts\". time: explicitly \"between 2023/05/16 and 2023/05/30\". location: none. answer_dim: \"\" (because counting requires summarization)."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 690,
+    "completion_tokens": 364,
+    "total_tokens": 1054,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 262
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 690
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

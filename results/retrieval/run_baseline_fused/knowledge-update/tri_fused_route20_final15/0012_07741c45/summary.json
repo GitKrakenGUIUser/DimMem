@@ -1,0 +1,571 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "knowledge-update",
+  "sample_id": "0012_07741c45",
+  "query_text": "Where does the user currently keep their old sneakers?",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 156,
+  "fused_candidate_count_before_final_cut": 42,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/knowledge-update/tri_fused_route20_final15/0012_07741c45",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 12.386215774889006,
+      "memory_type": "fact",
+      "content": "User's old sneakers are currently taking up space.",
+      "source_boundary_id": "14_0105",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 12.386215774889006,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 12.386215774889006
+        },
+        {
+          "method": "structured",
+          "rank": 2,
+          "score": 1.0
+        },
+        {
+          "method": "minilm",
+          "rank": 1,
+          "score": 0.7753337901132923
+        }
+      ],
+      "score_components": {
+        "bm25_score": 12.386215774889006,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 10.66937257946048,
+      "memory_type": "episodic",
+      "content": "User plans to organize closet this weekend on 2023-06-03 and store old sneakers in a shoe rack.",
+      "source_boundary_id": "14_0104",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 10.66937257946048,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 10.66937257946048
+        },
+        {
+          "method": "structured",
+          "rank": 5,
+          "score": 0.6666666666666667
+        },
+        {
+          "method": "minilm",
+          "rank": 3,
+          "score": 0.6929598525901365
+        }
+      ],
+      "score_components": {
+        "bm25_score": 10.66937257946048,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 9.838426871353706,
+      "memory_type": "episodic",
+      "content": "User plans to get their old sneakers polished and conditioned at a cobbler this weekend.",
+      "source_boundary_id": "1_0007",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 9.838426871353706,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 9.838426871353706
+        },
+        {
+          "method": "structured",
+          "rank": 3,
+          "score": 0.6666666666666667
+        },
+        {
+          "method": "minilm",
+          "rank": 5,
+          "score": 0.6149405015348551
+        }
+      ],
+      "score_components": {
+        "bm25_score": 9.838426871353706,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 9.596785527870477,
+      "memory_type": "fact",
+      "content": "User has old sneakers stored under their bed that are starting to smell.",
+      "source_boundary_id": "1_0006",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 9.596785527870477,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 9.596785527870477
+        },
+        {
+          "method": "structured",
+          "rank": 1,
+          "score": 1.0
+        },
+        {
+          "method": "minilm",
+          "rank": 2,
+          "score": 0.6959988361232365
+        }
+      ],
+      "score_components": {
+        "bm25_score": 9.596785527870477,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 8.430752270255883,
+      "memory_type": "episodic",
+      "content": "User plans to organize their closet and get rid of old sneakers on the weekend of 2023-05-27.",
+      "source_boundary_id": "13_0096",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 8.430752270255883,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 8.430752270255883
+        },
+        {
+          "method": "structured",
+          "rank": 4,
+          "score": 0.6666666666666667
+        },
+        {
+          "method": "minilm",
+          "rank": 4,
+          "score": 0.6732475043643735
+        }
+      ],
+      "score_components": {
+        "bm25_score": 8.430752270255883,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 6.916668605379982,
+      "memory_type": "profile",
+      "content": "The user relies on their own motivation and does not have a workout buddy.",
+      "source_boundary_id": "15_0110",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 6.916668605379982,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 6.916668605379982
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.916668605379982,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 5.807793710968311,
+      "memory_type": "episodic",
+      "content": "User is trying to keep track of expenses and wants to create a budget for their vehicles.",
+      "source_boundary_id": "5_0039",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 5.807793710968311,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 5.807793710968311
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.807793710968311,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 5.3727428579517875,
+      "memory_type": "episodic",
+      "content": "User is considering organizing their closet by type (e.g., boots together, sneakers together).",
+      "source_boundary_id": "1_0010",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 5.3727428579517875,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 5.3727428579517875
+        },
+        {
+          "method": "minilm",
+          "rank": 13,
+          "score": 0.4731920933269412
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.3727428579517875,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 5.309606651511034,
+      "memory_type": "episodic",
+      "content": "The user plans to track their cultural heritage research findings using a spreadsheet and a digital note-taking app.",
+      "source_boundary_id": "16_0126",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 5.309606651511034,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 5.309606651511034
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.309606651511034,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 5.274686588521208,
+      "memory_type": "episodic",
+      "content": "User plans to donate their old dress shoes to a local charity thrift store this Saturday.",
+      "source_boundary_id": "1_0008",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 5.274686588521208,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 5.274686588521208
+        },
+        {
+          "method": "minilm",
+          "rank": 9,
+          "score": 0.5610389613692971
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.274686588521208,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 4.795813215789596,
+      "memory_type": "profile",
+      "content": "User wears white sneakers frequently.",
+      "source_boundary_id": "11_0075",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 4.795813215789596,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 4.795813215789596
+        },
+        {
+          "method": "minilm",
+          "rank": 8,
+          "score": 0.5711684899940198
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.795813215789596,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 4.608295963287818,
+      "memory_type": "episodic",
+      "content": "User is considering buying cargo pants to go with white sneakers.",
+      "source_boundary_id": "11_0079",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 4.608295963287818,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 4.608295963287818
+        },
+        {
+          "method": "minilm",
+          "rank": 12,
+          "score": 0.4856348144414161
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.608295963287818,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 4.529837239337195,
+      "memory_type": "episodic",
+      "content": "The user is thinking of listing their old motorcycle on Craigslist or Facebook Marketplace because they haven't ridden it in years.",
+      "source_boundary_id": "20_0149",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 4.529837239337195,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 4.529837239337195
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.529837239337195,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 4.501952630354245,
+      "memory_type": "episodic",
+      "content": "The user attended a conference on emerging technologies around May 18-24, 2023, where the latest developments in AI, blockchain, and cybersecurity were discussed.",
+      "source_boundary_id": "2_0015",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 4.501952630354245,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 4.501952630354245
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.501952630354245,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 4.4369476630997635,
+      "memory_type": "episodic",
+      "content": "User bought white sneakers on sale at the Adidas store in a mall on 2023-05-27.",
+      "source_boundary_id": "11_0076",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 4.4369476630997635,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 4.4369476630997635
+        },
+        {
+          "method": "minilm",
+          "rank": 7,
+          "score": 0.5811280736763228
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.4369476630997635,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 0.2440488338470459
+}

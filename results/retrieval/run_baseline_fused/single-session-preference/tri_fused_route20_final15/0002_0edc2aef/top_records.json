@@ -1,0 +1,881 @@
+[
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user planned a trip to Seattle and sought hotel recommendations with great city views on 2023-05-29.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "Seattle",
+      "reason": "planning a trip",
+      "purpose": "to find a hotel with a great view",
+      "keywords": [
+        "Seattle",
+        "trip",
+        "hotel",
+        "city view"
+      ]
+    },
+    "entities": [
+      "Seattle",
+      "trip",
+      "hotel",
+      "city view"
+    ],
+    "embedding_text": "The user planned a trip to Seattle and sought hotel recommendations with great city views on 2023-05-29.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0152",
+    "source_time": "2023-05-29 14:06:00",
+    "record_time": "2026-07-07T19:50:58.762847",
+    "score": 11.32876778472726,
+    "score_components": {
+      "bm25_score": 11.32876778472726,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 11.32876778472726,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 11.32876778472726
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.5499119682910873
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user plans to pack a portable laundry detergent packet for their Las Vegas trip to wash clothes in the hotel sink if needed.",
+    "dimension": {
+      "time": "",
+      "location": "Las Vegas",
+      "reason": "",
+      "purpose": "to wash clothes in hotel sink",
+      "keywords": [
+        "laundry detergent",
+        "portable",
+        "hotel sink",
+        "Las Vegas"
+      ]
+    },
+    "entities": [
+      "laundry detergent",
+      "portable",
+      "hotel sink",
+      "Las Vegas"
+    ],
+    "embedding_text": "The user plans to pack a portable laundry detergent packet for their Las Vegas trip to wash clothes in the hotel sink if needed.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0171",
+    "source_time": "2023-05-30 10:45:00.500000",
+    "record_time": "2026-07-07T19:50:58.762960",
+    "score": 10.5564635299108,
+    "score_components": {
+      "bm25_score": 10.5564635299108,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 10.5564635299108,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 10.5564635299108
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.3887483717466878
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user plans to pack nuts, energy bars, and dried fruit as snacks for their Las Vegas trip to avoid airport or hotel food.",
+    "dimension": {
+      "time": "",
+      "location": "Las Vegas",
+      "reason": "to avoid relying on airport or hotel food",
+      "purpose": "",
+      "keywords": [
+        "snacks",
+        "nuts",
+        "energy bars",
+        "dried fruit",
+        "Las Vegas"
+      ]
+    },
+    "entities": [
+      "snacks",
+      "nuts",
+      "energy bars",
+      "dried fruit",
+      "Las Vegas"
+    ],
+    "embedding_text": "The user plans to pack nuts, energy bars, and dried fruit as snacks for their Las Vegas trip to avoid airport or hotel food.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0170",
+    "source_time": "2023-05-30 10:45:00",
+    "record_time": "2026-07-07T19:50:58.762954",
+    "score": 8.667213700228961,
+    "score_components": {
+      "bm25_score": 8.667213700228961,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 8.667213700228961,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 8.667213700228961
+      },
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.3636118627289931
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "profile",
+    "content": "The user is interested in street photography and is looking for local workshops or classes to learn more.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to learn street photography techniques",
+      "keywords": [
+        "street photography",
+        "workshops",
+        "classes"
+      ]
+    },
+    "entities": [
+      "street photography",
+      "workshops",
+      "classes"
+    ],
+    "embedding_text": "The user is interested in street photography and is looking for local workshops or classes to learn more.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0012",
+    "source_time": "2023-05-20 20:13:00.500000",
+    "record_time": "2026-07-07T19:50:58.761944",
+    "score": 8.519039970711376,
+    "score_components": {
+      "bm25_score": 8.519039970711376,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 8.519039970711376,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 8.519039970711376
+      },
+      {
+        "method": "structured",
+        "rank": 9,
+        "score": 0.23076923076923075
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user plans to pack hand-washable clothes, including quick-drying t-shirts and travel pants, for the upcoming Seattle trip.",
+    "dimension": {
+      "time": "2023-06",
+      "location": "Seattle",
+      "reason": "",
+      "purpose": "to have clean clothes while traveling",
+      "keywords": [
+        "hand-washable clothes",
+        "quick-drying t-shirts",
+        "travel pants"
+      ]
+    },
+    "entities": [
+      "hand-washable clothes",
+      "quick-drying t-shirts",
+      "travel pants"
+    ],
+    "embedding_text": "The user plans to pack hand-washable clothes, including quick-drying t-shirts and travel pants, for the upcoming Seattle trip.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0088",
+    "source_time": "2023-05-26 02:21:02",
+    "record_time": "2026-07-07T19:50:58.762467",
+    "score": 8.456860532042148,
+    "score_components": {
+      "bm25_score": 8.456860532042148,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 8.456860532042148,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 8.456860532042148
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user is planning a trip to Las Vegas and wants tips on packing light for 4 days.",
+    "dimension": {
+      "time": "",
+      "location": "Las Vegas",
+      "reason": "",
+      "purpose": "to pack light",
+      "keywords": [
+        "Las Vegas",
+        "packing light",
+        "4-day trip"
+      ]
+    },
+    "entities": [
+      "Las Vegas",
+      "packing light",
+      "4-day trip"
+    ],
+    "embedding_text": "The user is planning a trip to Las Vegas and wants tips on packing light for 4 days.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0168",
+    "source_time": "2023-05-30 04:56:02",
+    "record_time": "2026-07-07T19:50:58.762942",
+    "score": 8.307539128164635,
+    "score_components": {
+      "bm25_score": 8.307539128164635,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 8.307539128164635,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 8.307539128164635
+      },
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.3692508611746696
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "fact",
+    "content": "User is looking for new hiking boots.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "old boots uncomfortable",
+      "purpose": "replace uncomfortable boots",
+      "keywords": [
+        "new hiking boots",
+        "buying"
+      ]
+    },
+    "entities": [
+      "new hiking boots",
+      "buying"
+    ],
+    "embedding_text": "User is looking for new hiking boots.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0110",
+    "source_time": "2023-05-27 01:12:00.500000",
+    "record_time": "2026-07-07T19:50:58.762594",
+    "score": 7.903596752061754,
+    "score_components": {
+      "bm25_score": 7.903596752061754,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 7.903596752061754,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 7.903596752061754
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User is planning a solo trip to Arizona to explore more of the state.",
+    "dimension": {
+      "time": "",
+      "location": "Arizona",
+      "reason": "",
+      "purpose": "explore more of the state",
+      "keywords": [
+        "solo trip",
+        "Arizona",
+        "explore"
+      ]
+    },
+    "entities": [
+      "solo trip",
+      "Arizona",
+      "explore"
+    ],
+    "embedding_text": "User is planning a solo trip to Arizona to explore more of the state.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0098",
+    "source_time": "2023-05-26 13:53:01",
+    "record_time": "2026-07-07T19:50:58.762525",
+    "score": 7.585953176471868,
+    "score_components": {
+      "bm25_score": 7.585953176471868,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 7.585953176471868,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 7.585953176471868
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.4034523739356236
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user is involved in organizing an upcoming Cybersecurity Conference in April, aiming to collect at least 200 qualified leads from IT professionals and cybersecurity experts.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "to collect at least 200 qualified leads",
+      "keywords": [
+        "Cybersecurity Conference",
+        "lead generation",
+        "IT professionals",
+        "cybersecurity experts",
+        "qualified leads",
+        "200"
+      ]
+    },
+    "entities": [
+      "Cybersecurity Conference",
+      "lead generation",
+      "IT professionals",
+      "cybersecurity experts",
+      "qualified leads",
+      "200"
+    ],
+    "embedding_text": "The user is involved in organizing an upcoming Cybersecurity Conference in April, aiming to collect at least 200 qualified leads from IT professionals and cybersecurity experts.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0123",
+    "source_time": "2023-05-27 08:24:00",
+    "record_time": "2026-07-07T19:50:58.762676",
+    "score": 7.182299247197689,
+    "score_components": {
+      "bm25_score": 7.182299247197689,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 7.182299247197689,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 7.182299247197689
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "User is looking for new car floor mats, specifically WeatherTech, due to his dirty driving habit.",
+    "dimension": {
+      "time": "2023-05-25",
+      "location": "",
+      "reason": "dirty driving habit",
+      "purpose": "protect car interior",
+      "keywords": [
+        "floor mats",
+        "WeatherTech",
+        "car",
+        "dirty driving habit"
+      ]
+    },
+    "entities": [
+      "floor mats",
+      "WeatherTech",
+      "car",
+      "dirty driving habit"
+    ],
+    "embedding_text": "User is looking for new car floor mats, specifically WeatherTech, due to his dirty driving habit.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0073",
+    "source_time": "2023-05-25 03:27:00",
+    "record_time": "2026-07-07T19:50:58.762378",
+    "score": 7.032157089175189,
+    "score_components": {
+      "bm25_score": 7.032157089175189,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 7.032157089175189,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 7.032157089175189
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user plans a trip to Seattle in June 2023.",
+    "dimension": {
+      "time": "2023-06",
+      "location": "Seattle",
+      "reason": "",
+      "purpose": "travel",
+      "keywords": [
+        "Seattle",
+        "trip",
+        "June 2023"
+      ]
+    },
+    "entities": [
+      "Seattle",
+      "trip",
+      "June 2023"
+    ],
+    "embedding_text": "The user plans a trip to Seattle in June 2023.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0086",
+    "source_time": "2023-05-26 02:21:00",
+    "record_time": "2026-07-07T19:50:58.762456",
+    "score": 6.358589104856764,
+    "score_components": {
+      "bm25_score": 6.358589104856764,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 6.358589104856764,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 6.358589104856764
+      },
+      {
+        "method": "minilm",
+        "rank": 6,
+        "score": 0.38820203250192137
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user plans to book the Space Needle Romance Package at The Edgewater Hotel in Seattle, which includes a room with a hot tub on the balcony facing the Space Needle, complimentary room service breakfast, and a $100 credit towards a couples' massage.",
+    "dimension": {
+      "time": "",
+      "location": "The Edgewater Hotel, Seattle",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Space Needle Romance Package",
+        "The Edgewater Hotel",
+        "hot tub balcony",
+        "Space Needle view",
+        "room service breakfast",
+        "couples massage"
+      ]
+    },
+    "entities": [
+      "Space Needle Romance Package",
+      "The Edgewater Hotel",
+      "hot tub balcony",
+      "Space Needle view",
+      "room service breakfast",
+      "couples massage"
+    ],
+    "embedding_text": "The user plans to book the Space Needle Romance Package at The Edgewater Hotel in Seattle, which includes a room with a hot tub on the balcony facing the Space Needle, complimentary room service breakfast, and a $100 credit towards a couples' massage.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0156",
+    "source_time": "2023-05-29 14:06:04.500000",
+    "record_time": "2026-07-07T19:50:58.762871",
+    "score": 5.663997763589906,
+    "score_components": {
+      "bm25_score": 5.663997763589906,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 5.663997763589906,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 5.663997763589906
+      },
+      {
+        "method": "minilm",
+        "rank": 13,
+        "score": 0.3504364952191461
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user plans to decant favorite toiletries into smaller containers and pack travel-sized options for the Seattle trip.",
+    "dimension": {
+      "time": "2023-06",
+      "location": "Seattle",
+      "reason": "",
+      "purpose": "to save space in luggage",
+      "keywords": [
+        "toiletries",
+        "decanting",
+        "travel-sized"
+      ]
+    },
+    "entities": [
+      "toiletries",
+      "decanting",
+      "travel-sized"
+    ],
+    "embedding_text": "The user plans to decant favorite toiletries into smaller containers and pack travel-sized options for the Seattle trip.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0089",
+    "source_time": "2023-05-26 02:21:02.500000",
+    "record_time": "2026-07-07T19:50:58.762473",
+    "score": 5.377711866818832,
+    "score_components": {
+      "bm25_score": 5.377711866818832,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 5.377711866818832,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 5.377711866818832
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user recently returned from a trip to New York City where they packed 7 tops but only wore 3, leading them to pack lighter for future trips.",
+    "dimension": {
+      "time": "before 2023-05-30",
+      "location": "New York City",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "New York City",
+        "overpacking",
+        "tops",
+        "packing light"
+      ]
+    },
+    "entities": [
+      "New York City",
+      "overpacking",
+      "tops",
+      "packing light"
+    ],
+    "embedding_text": "The user recently returned from a trip to New York City where they packed 7 tops but only wore 3, leading them to pack lighter for future trips.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0167",
+    "source_time": "2023-05-30 04:56:01.500000",
+    "record_time": "2026-07-07T19:50:58.762937",
+    "score": 5.375516228325936,
+    "score_components": {
+      "bm25_score": 5.375516228325936,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 5.375516228325936,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 5.375516228325936
+      }
+    ]
+  },
+  {
+    "user_id": "0002_0edc2aef",
+    "memory_type": "episodic",
+    "content": "The user plans to pack 3-4 tops and 2-3 bottoms for their 4-day Las Vegas trip.",
+    "dimension": {
+      "time": "",
+      "location": "Las Vegas",
+      "reason": "",
+      "purpose": "to pack light",
+      "keywords": [
+        "packing",
+        "tops",
+        "bottoms",
+        "Las Vegas"
+      ]
+    },
+    "entities": [
+      "packing",
+      "tops",
+      "bottoms",
+      "Las Vegas"
+    ],
+    "embedding_text": "The user plans to pack 3-4 tops and 2-3 bottoms for their 4-day Las Vegas trip.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0169",
+    "source_time": "2023-05-30 04:56:02.500000",
+    "record_time": "2026-07-07T19:50:58.762948",
+    "score": 5.270156279944851,
+    "score_components": {
+      "bm25_score": 5.270156279944851,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 5.270156279944851,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 5.270156279944851
+      },
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.3098765061177562
+      }
+    ]
+  }
+]

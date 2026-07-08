@@ -1,0 +1,224 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-21T07:48:00.500000, Sun] 1.User: Can you complete the list above? It stopped at number 88.
+[2023-05-21T07:48:01, Sun] 2.User: Not including the festivals above, what are the topic 75 international film festivals? Please do not include any in the US.
+[2023-05-21T13:40:00, Sun] 3.User: I'm planning a charity event for a local animal shelter and I need some help with organization. Can you suggest some popular fundraising ideas and tips on how to promote the event? By the way, I got inspired to organize this event after participating in several charity events recently, like that breast cancer awareness walk I did on October 17th.
+[2023-05-21T13:40:00.500000, Sun] 4.User: I like the walk/run idea. How can I make it more engaging and entertaining for the participants and spectators? Can you suggest some ways to incorporate music, food, and activities into the event?
+[2023-05-21T13:40:01, Sun] 5.User: I like the idea of a pet costume contest. How can I make it more engaging and encourage more participants to join in?
+[2023-05-21T13:40:01.500000, Sun] 6.User: I want to know more about the auction/raffle idea. Can you give me some tips on how to acquire items for the auction or raffle and how to promote it to get more people to participate?
+[2023-05-21T13:40:02, Sun] 7.User: I'm planning to display some photos from my previous charity events at the auction/raffle, including the breast cancer awareness walk I did on October 17th. Do you think that's a good idea?
+[2023-05-21T13:40:02.500000, Sun] 8.User: That's a great idea! Displaying photos from your previous charity events, including the breast cancer awareness walk on October 17th, can help create a sense of continuity and showcase your dedication to supporting important causes. It's a wonderful way to share your story and inspire others to get involved.
+[2023-05-21T18:22:00, Sun] 9.User: Recommend fashion style that suits my physical condition.
+You are a styleist who coordinates clothes for people of different body types.
+
+My physical condition is as follows.
+- Height: 160cm
+- Weight: 63kg
+- Body type: a type with a lot of fat in the lower body
+[2023-05-21T18:22:00.500000, Sun] 10.User: I prefer a clean, professional style for my work. It's a job with a lot of movement, so it's hard to wear clothes that are too tight.
+I want you to feel comfortable, stylish, and professional while lecturing.
+[2023-05-21T18:22:01, Sun] 11.User: I like the style you describe. Here are the clothes I have. Can you recommend a coordination based on the clothes I have?
+
+Detail:
+Jackets: black suit jacket, gray suit jacket, light pink tweed jacket, brown tweed jacket, orange short cardigan, gray thick long knit, herringbone coat jacket, fur vest
+
+Pants: spandex jeans, straight black trousers, beige straight trousers, black flared suit trousers, long flared skirt
+
+Dress: Black suit basic dress, zebra pattern dress
+
+Top: black knit, red knit
+
+Shoes: black 6cm dress shoes, white pumps, black sneakers, leather beige 3cm boots
+[2023-05-21T18:22:01.500000, Sun] 12.User: thank you very much for your recommendation. Would you like me to coordinate the 7 days of March based on the items I have?
+
+I'm from Korea, and in March, the lowerst temperature is 2 degrees and the highest is 18 degrees. 
+I'm a cold person.
+[2023-05-21T18:22:02, Sun] 13.User: Can you organize it in a table?
+[2023-05-22T05:37:00, Mon] 14.User: "X [m] Y [m] Wert [nT]"
+"-0.463 22.455 -31.270"
+"-0.463 22.523 -32.160"
+"-0.462 22.591 -31.510"
+"-0.461 22.658 -29.810"
+"-0.460 22.726 -21.040"
+"-0.459 22.794 -9.470"
+"-0.458 22.862 7.670"
+"-0.457 22.930 23.600"
+"-0.456 22.998 45.450"
+"-0.455 23.064 62.750"
+"-0.453 23.131 80.960"
+"-0.451 23.198 95.470"
+"-0.449 23.264 107.750"
+"-0.448 23.331 114.040"
+"-0.446 23.397 115.670"
+"-0.444 23.464 103.890"
+"-0.442 23.531 84.100"
+"-0.440 23.597 62.860"
+"-0.439 23.664 54.750"
+"-0.437 23.731 39.430"
+"-0.435 23.797 24.030"
+"-0.433 23.864 12.880"
+"-0.432 23.930 5.890"
+"-0.430 23.997 -2.080"
+"-0.428 24.064 -5.590"
+"-0.426 24.130 -8.650"
+"-0.424 24.197 -10.520"
+"-0.423 24.264 -12.500"
+"-0.421 24.330 -12.680"
+"-0.422 24.402 -11.770"
+"-0.423 24.475 -12.410"
+"-0.424 24.547 -12.170"
+"-0.426 24.619 -10.430"
+"-0.427 24.691 -10.040"
+"-0.428 24.763 -8.530"
+"-0.429 24.835 -10.720"
+"-0.431 24.907 -8.540"
+"-0.432 24.979 -7.570"
+"-0.433 25.051 -8.840"
+"-0.434 25.124 -6.020"
+"-0.436 25.196 -6.870"
+"-0.437 25.268 -5.130"
+"-0.438 25.340 -4.880"
+"-0.439 25.412 -4.480"
+"-0.440 25.484 -4.290"
+"-0.442 25.556 -4.770"
+"-0.443 25.628 -1.960"
+"-0.444 25.700 -1.990"
+"-0.445 25.773 -2.820"
+"-0.447 25.843 -2.150"
+"-0.449 25.914 -1.400"
+"-0.451 25.985 -2.390"
+"-0.452 26.056 -1.030"
+"-0.454 26.127 -1.860"
+"-0.456 26.198 -2.710"
+"-0.457 26.269 -2.560"
+"-0.459 26.340 -3.880"
+"-0.461 26.410 -2.020"
+"-0.463 26.481 -0.640"
+"-0.464 26.552 -0.340"
+"-0.466 26.623 -0.290"
+"-0.468 26.694 0.060"
+"-0.470 26.765 0.130"
+"-0.471 26.836 -0.800"
+"-0.473 26.906 -0.370"
+"-0.475 26.977 -0.220"
+"-0.477 27.048 1.500"
+"-0.478 27.119 0.950"
+"-0.480 27.190 0.350"
+Load into a data farame df
+[2023-05-22T06:33:00, Mon] 15.User: The spirit takes Newman to a high mountaintop and tempts him to throw himself down so that Kramer will catch him mid air.

@@ -1,0 +1,107 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-03-02 11:54:01
+content: The user plans to use Artsy and ArtNet and local art museums to find contemporary artists.
+purpose: to discover contemporary artists
+
+[2]
+source_time: 2023-02-20 22:50:01
+content: User visited the Metropolitan Museum of Art and saw the golden mask of Pharaoh Tutankhamun, which impressed them, and took photos to remember the details.
+
+[3]
+source_time: 2023-03-02 11:54:02.500000
+content: The user visited the Metropolitan Museum of Art to see the Ancient Egyptian Artifacts exhibition and was impressed by the golden mask of Pharaoh Tutankhamun.
+purpose: to see the exhibition
+
+[4]
+source_time: 2023-02-26 07:33:01
+content: The user plans to visit the outer market of Tsukiji Fish Market from Shibuya.
+purpose: visit Tsukiji outer market
+
+[5]
+source_time: 2023-02-22 00:44:02
+content: User plans to ask for feedback or advice from members of the 'Foodie Frenzy' group.
+purpose: to get feedback and advice
+
+[6]
+source_time: 2023-02-09 04:57:01
+content: On 2023-02-09, the user needed to order essential oils, specifically lavender oil, for their diffuser and asked for online store recommendations.
+purpose: to restock essential oils for diffuser
+
+[7]
+source_time: 2023-02-10 22:26:00
+content: On 2023-02-10, the user planned to write an essay about ancient civilizations and visited the 'Ancient Egyptian Artifacts' exhibition, where they took photos of artifacts.
+purpose: to research for an essay about ancient civilizations
+
+[8]
+source_time: 2022-12-19 19:53:02.500000
+content: User is considering upgrading to a 4K OLED TV from LG or Sony.
+purpose: upgrade TV
+
+[9]
+source_time: 2022-12-19 19:53:02
+content: User plans to purchase a Dell XPS laptop from the Dell website and is looking for student discounts.
+purpose: purchase a new laptop
+
+[10]
+source_time: 2023-01-27 11:21:01.500000
+content: The user is a fan of 'The Sandman' comic book series.
+
+[11]
+source_time: 2023-01-12 22:45:02
+content: User is interested in learning more about the history of space exploration.
+
+[12]
+source_time: 2023-03-04 20:16:00
+content: User is associated with GMBM LTD, a company that has patented technology for sea rafts made from inside-concreted bottoms of shipping containers, capable of movement on water and land, connectable into arrays with power lift adaptability and hydraulic freight and passenger elevators, aimed at reducing seaport congestion and providing alternative real estate.
+purpose: to reduce seaport congestion and provide an alternative to traditional real estate development
+
+[13]
+source_time: 2023-02-26 07:33:00.500000
+content: The user plans to visit Tokyo Tower from Shibuya.
+purpose: visit Tokyo Tower
+
+[14]
+source_time: 2023-02-26 02:28:01
+content: User visited Tokyo Tower during a previous trip and posted a photo on Instagram that received significant engagement.
+purpose: to share the photo on Instagram
+
+[15]
+source_time: 2023-01-12 22:45:02.500000
+content: User is interested in learning more about the history of feminist art in the 1970s.
+
+Now answer the question:
+User Question:What is the order of the six museums I visited from earliest to latest?
+Question Date:2023/03/10 (Fri) 08:15

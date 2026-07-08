@@ -1,0 +1,98 @@
+{
+  "model_name": "deepseek-v4-flash",
+  "query": "How many bikes did I service or plan to service in March?",
+  "gold_answer": 2,
+  "question_date": "2023/03/20 (Mon) 23:57",
+  "retrieved_records": [
+    {
+      "source_time": "2023-03-20 17:29:01",
+      "content": "The user had their road bike serviced at Pedal Power on March 10, 2023, where the brake pads and cables were replaced."
+    },
+    {
+      "source_time": "2023-03-20 01:05:02",
+      "content": "User planned to mow their lawn on the weekend after March 20, 2023.",
+      "dimension": {
+        "purpose": "lawn care"
+      }
+    },
+    {
+      "source_time": "2023-03-20 21:42:00.500000",
+      "content": "The user plans to declutter their desk and workspace on the weekend of March 25-26, 2023.",
+      "dimension": {
+        "purpose": "declutter"
+      }
+    },
+    {
+      "source_time": "2023-03-20 17:01:00",
+      "content": "The user planned a trip to Europe in April 2023.",
+      "dimension": {
+        "purpose": "travel"
+      }
+    },
+    {
+      "source_time": "2023-03-20 10:35:01.500000",
+      "content": "The user planned a 40-60 mile bike ride on the weekend of March 25-26, 2023, in the San Francisco Bay Area, including crossing the Golden Gate Bridge on Route 1 (Marin Headlands and Highway 1), preferring paved roads with hills and scenic coastal/rural views."
+    },
+    {
+      "source_time": "2023-03-20 05:14:02",
+      "content": "User plans to check out restaurants in the downtown area this weekend (around March 25-26, 2023).",
+      "dimension": {
+        "purpose": "find lunch or dinner"
+      }
+    },
+    {
+      "source_time": "2023-03-20 14:57:01",
+      "content": "User watched a lot of documentaries on Netflix in the three months prior to March 20, 2023."
+    },
+    {
+      "source_time": "2023-03-20 02:04:00.500000",
+      "content": "The user had their Toyota Camry serviced at the Toyota dealership on January 10, 2023, for $250, including air filter replacement, oil change, and tire rotation.",
+      "dimension": {
+        "reason": "Vehicle maintenance",
+        "purpose": "To maintain the car"
+      }
+    },
+    {
+      "source_time": "2023-03-20 00:12:01.500000",
+      "content": "User is interested in a Thule Hitch Bike Rack for two bikes."
+    },
+    {
+      "source_time": "2023-03-20 10:35:01",
+      "content": "On March 2, 2023, the user cleaned and lubricated the chain of their road bike, which improved shifting performance.",
+      "dimension": {
+        "reason": "To improve shifting performance"
+      }
+    },
+    {
+      "source_time": "2023-03-20 16:48:00",
+      "content": "The user is planning to build a small cabin on the inherited plot of land, which is located in a rural area.",
+      "dimension": {
+        "purpose": "to build a cabin"
+      }
+    },
+    {
+      "source_time": "2023-03-20 14:31:02.500000",
+      "content": "User is considering canceling their HBO subscription and comparing it with Hulu to see which streaming service offers more shows they would be interested in.",
+      "dimension": {
+        "reason": "wanting to decide which service to keep",
+        "purpose": "find better streaming service"
+      }
+    },
+    {
+      "source_time": "2023-03-20 00:35:02.500000",
+      "content": "User moved into a new house as of March 20, 2023."
+    },
+    {
+      "source_time": "2023-03-20 12:18:02",
+      "content": "The user plans to try Dinnerly meal kit service."
+    },
+    {
+      "source_time": "2023-03-20 05:14:02.500000",
+      "content": "User plans to check out thrift stores in the downtown area near the Zara location this weekend (around March 25-26, 2023).",
+      "dimension": {
+        "purpose": "thrift shopping"
+      }
+    }
+  ],
+  "retrieval_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/multi-session/tri_fused_route20_final15/0013_a9f6b44c"
+}

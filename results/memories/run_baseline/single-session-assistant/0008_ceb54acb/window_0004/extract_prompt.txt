@@ -1,0 +1,139 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-23T06:20:00.500000, Tue] 1.User: I'm also trying to find a good place to sell my vintage vinyl records, do you know any reputable online marketplaces or stores that would be interested in buying them?
+[2023-05-23T06:20:01, Tue] 2.User: I'm also thinking of selling my rare first edition book. Do you know any online marketplaces or stores that specialize in rare books?
+[2023-05-23T06:20:01.500000, Tue] 3.User: I also have a vintage typewriter that I'm thinking of selling. Do you know any online marketplaces or stores that specialize in vintage typewriters?
+[2023-05-23T06:20:02, Tue] 4.User: I'm also looking to sell my 1960s Leica camera. Do you know any online marketplaces or stores that specialize in vintage cameras?
+[2023-05-23T06:20:02.500000, Tue] 5.User: I'm also thinking of selling my rare coin collection. Do you know any online marketplaces or stores that specialize in rare coins?
+[2023-05-23T06:39:00, Tue] 6.User: Make AI1 convince AI2
+[2023-05-23T16:21:00, Tue] 7.User: I'm trying to reduce my screen time and was wondering if you could suggest some phone apps that can help me track and limit my social media use. By the way, I read an article in The New Yorker about the impact of social media on mental health today, and it really got me thinking about making some changes.
+[2023-05-23T16:21:00.500000, Tue] 8.User: I'm interested in trying out Freedom and Moment. Can you tell me more about how they work and what kind of data they track?
+[2023-05-23T16:21:01, Tue] 9.User: I'm interested in trying out Freedom's Locked mode. Can you tell me more about how it works and if it's customizable?
+[2023-05-23T16:21:01.500000, Tue] 10.User: I'm interested in trying out Freedom's Scheduled blocks feature. Can you tell me more about how it works and if it's customizable? By the way, the article I read in The New Yorker about the impact of social media on mental health really got me thinking about my own social media use, and I'm looking for ways to cut back.
+[2023-05-23T16:21:02, Tue] 11.User: Yeah, it really made me think about my social media use and how it's affecting my mental health. I've been trying to cut back on my screen time and focus on more meaningful activities. I'm hoping that using Freedom's Scheduled blocks will help me stay on track and develop healthier habits. Do you think it's possible to set up a schedule that blocks social media during certain times of the day, but still allows me to access other websites and apps?
+[2023-05-23T16:21:02.500000, Tue] 12.User: I apologize for the mistake. Here's a revised response:
+
+Yes, you can definitely set up a schedule that blocks social media during certain times of the day but still allows you to access other websites and apps. With Freedom's Scheduled blocks, you can create a custom block list for social media platforms and schedule blocks during specific times of the day or week, while allowing access to other websites and apps.
+
+For example, you could block social media from 8:00 AM to 12:00 PM, but still allow access to email, news, and productivity tools during that time. You can customize the block list and schedule to fit your needs and goals.
+
+Let me know if you have any other questions or if there's anything else I can help you with!
+[2023-05-23T21:52:00, Tue] 13.User: I'm trying to figure out what to watch next. Can you recommend some sci-fi shows or movies similar to Star Wars and Stranger Things?
+[2023-05-23T21:52:00.500000, Tue] 14.User: I'm actually thinking of rewatching some Marvel movies in preparation for the next MCU release. Do you know when the next Marvel movie is coming out? By the way, I've been watching a lot of movies lately, and I think it started when I got my new 4K TV in late January.
+[2023-05-23T21:52:01, Tue] 15.User: I think I'll start with Captain America: The First Avenger and work my way up in chronological order, just like I did last time.

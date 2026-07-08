@@ -1,0 +1,135 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-22T03:40:02.500000, Mon] 1.User: I'm thinking of selling some of my own artwork online, and I've been doing some research on different platforms and pricing strategies. Do you have any advice on how to price my art?
+[2023-05-22T14:56:00, Mon] 2.User: I'm looking for some new recipe ideas for Indian dishes, do you have any suggestions? By the way, I just got back from a cooking class and I've been thinking about all the different types of cuisine I've been trying out lately, it's crazy how much my cooking has improved since I started classes 6 weeks ago!
+[2023-05-22T14:56:00.500000, Mon] 3.User: I'm really interested in trying out some vegetarian options. I've been experimenting with different types of cuisine at home, and I've recently discovered a great recipe for roasted sweet potato and black bean tacos, which have become a staple in my household. Do you have any Indian vegetarian recipes that incorporate sweet potatoes?
+[2023-05-22T14:56:01, Mon] 4.User: I've been meaning to try out some new cooking techniques, like braising. Do you have any tips or recipes for braising vegetables?
+[2023-05-22T14:56:01.500000, Mon] 5.User: I've been meaning to try out some new cooking techniques, like braising. I've heard it's a great way to cook tougher cuts of meat, but I've also seen some recipes that use braising for vegetables. Do you think I could use braising for sweet potatoes? I've been experimenting with different types of cuisine at home, and I've recently discovered a great recipe for roasted sweet potato and black bean tacos, which have become a staple in my household.
+[2023-05-22T14:56:02, Mon] 6.User: I'm excited to try braising sweet potatoes! I think I'll try using chicken stock as the braising liquid and add some aromatics like onions and garlic. Do you think I could also add some spices like cumin and paprika to give it a bit of a Mexican flavor? That would pair well with the black beans and tacos.
+[2023-05-22T14:56:02.500000, Mon] 7.User: I'm thinking of trying out some other spices like chipotle peppers or ancho chili powder to give the sweet potatoes an extra kick of heat. Do you think that would work well with the cumin and paprika?
+[2023-05-22T15:45:00, Mon] 8.User: need an email to coworker about inquing workflow model info
+[2023-05-22T15:45:00.500000, Mon] 9.User: great make it less formal make deadline wednesday instead
+[2023-05-22T15:45:01, Mon] 10.User: does this work for asking about workflow data? Hope you're doing well! I need a quick favor. I'm working on a report and I wanted to make sure I have the latest info on our workflow model. Could you send me an updated version of the diagram and any notes about any changes made?
+
+If possible, I'd appreciate it if you could send it over by Wednesday. That way I can make sure to include everything in my rep
+[2023-05-22T15:45:01.500000, Mon] 11.User: need a email template for thank you after a virtual meeting
+[2023-05-22T18:11:00, Mon] 12.User: I'm trying to establish a consistent wake-up time, but I've been struggling with it. This Monday, I woke up at 7:00 AM and felt really refreshed, which is a good start. I was thinking of getting some tips on how to maintain this schedule.
+[2023-05-22T18:11:00.500000, Mon] 13.User: I've been trying to establish a consistent wake-up time for a while now. On days when I wake up at 7:00 or 7:30, I feel more productive and refreshed, like this Monday when I woke up at 7:00 AM and felt really refreshed. Do you think it's more important to focus on establishing a consistent wake-up time or having a consistent bedtime routine to improve my sleep quality?
+[2023-05-22T18:11:01, Mon] 14.User: I've been trying to establish a consistent wake-up time for a while now. I've noticed that when I wake up earlier, I tend to have a more productive morning routine.
+[2023-05-22T18:11:01.500000, Mon] 15.User: I'm also interested in using my wake-up time as an opportunity to set intentions for the day. I've found that when I wake up earlier, I have time to reflect on what I want to accomplish and set some goals for myself. This has really helped me stay focused and motivated throughout the day. Can you suggest some tips on how to effectively set intentions and make the most out of my morning reflection time?

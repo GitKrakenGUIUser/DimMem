@@ -1,0 +1,61 @@
+{
+  "query_text": "The user's discount on their first purchase from the new clothing brand",
+  "query_anchor": "The user's discount on their first purchase from the new clothing brand",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "first purchase",
+      "clothing brand",
+      "discount"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "The user's discount on their first purchase from the new clothing brand",
+      "keywords": [
+        "first purchase",
+        "clothing brand",
+        "discount"
+      ],
+      "query_terms": [
+        "the",
+        "user",
+        "s",
+        "discount",
+        "on",
+        "their",
+        "first",
+        "purchase",
+        "from",
+        "new",
+        "clothing",
+        "brand"
+      ]
+    },
+    "structured": {
+      "query_text": "The user's discount on their first purchase from the new clothing brand",
+      "rewrite": "The user's discount on their first purchase from the new clothing brand",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "The user's discount on their first purchase from the new clothing brand",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "first purchase",
+        "clothing brand",
+        "discount"
+      ],
+      "canonical_text": "The user's discount on their first purchase from the new clothing brand"
+    },
+    "minilm": {
+      "query_text": "The user's discount on their first purchase from the new clothing brand"
+    }
+  }
+}

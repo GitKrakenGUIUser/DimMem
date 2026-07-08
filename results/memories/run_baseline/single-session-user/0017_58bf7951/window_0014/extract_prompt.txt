@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-26T10:12:00.500000, Fri] 1.User: I'm interested in the productivity podcasts, especially the ones that focus on morning routines. Can you recommend any other podcasts that discuss morning routines and habits in more detail?
+[2023-05-26T10:12:01, Fri] 2.User: I'm particularly interested in the podcasts focused on habit formation and productivity. Can you recommend any specific episodes or guests that discuss creating habits that help with time management and prioritization?
+[2023-05-26T10:12:01.500000, Fri] 3.User: I'm interested in learning more about time blocking. Can you recommend any tools or apps that can help me implement time blocking in my daily routine?
+[2023-05-26T10:12:02, Fri] 4.User: I've been using Google Calendar for my scheduling needs, but I'm interested in exploring other options. I've heard great things about Trello, and I think its visual approach could help me better organize my tasks and time block more effectively. Can you tell me more about how to use Trello for time blocking?
+[2023-05-26T10:12:02.500000, Fri] 5.User: I'd like to explore more about Trello's automation features. Can you tell me more about how I can use them to streamline my workflow and save time?
+[2023-05-26T12:02:00, Fri] 6.User: What level on the CEFR would you place this student
+[2023-05-26T18:57:00, Fri] 7.User: Can you suggest some board games that are perfect for a family game night, where ages and interests of all participants differ?
+[2023-05-26T18:57:00.500000, Fri] 8.User: These all sound great! Which one do you think is the easiest to learn for someone who has never played board games before?
+[2023-05-26T18:57:01, Fri] 9.User: Great suggestion! I think we'll go with Sushi Go! for our family game night.
+[2023-05-26T18:57:01.500000, Fri] 10.User: I just bought Sushi Go! and I'm excited to try it out with my family. Do you have any tips for how to play the game?
+[2023-05-26T18:57:02, Fri] 11.User: I'm looking forward to playing Sushi Go! with my family and using these strategies to beat them all ;)
+[2023-05-27T04:33:00, Sat] 12.User: I'm planning to host a game night at my new apartment and I'm looking for some decoration ideas. Can you give me some suggestions on how to arrange the furniture to create a cozy atmosphere? By the way, I just got a new coffee table and I'm excited to use it - it's a big upgrade from the old one I got from my parents when I first moved out, which I finally got rid of.
+[2023-05-27T04:33:00.500000, Sat] 13.User: I like the idea of creating a conversational circle. Can you suggest some games that are suitable for a group of 6-8 people and can be played while seated around the coffee table?
+[2023-05-27T04:33:01, Sat] 14.User: I think I'll go with Ticket to Ride and Codenames. They seem like a good mix of strategy and social interaction. Do you have any recommendations on how to display the games and snacks on the coffee table to make it visually appealing and functional?
+[2023-05-27T04:33:01.500000, Sat] 15.User: I'm thinking of making some finger foods and appetizers for the game night. Do you have any recommendations for easy-to-make and easy-to-eat snacks that can be placed on the coffee table?

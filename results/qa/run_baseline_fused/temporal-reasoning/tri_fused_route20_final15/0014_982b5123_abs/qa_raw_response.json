@@ -1,0 +1,32 @@
+{
+  "id": "98a81114-8b0b-44c2-9bcd-6cbd0eba55cf",
+  "object": "chat.completion",
+  "created": 1783428003,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: The retrieved memories contain no information about an Airbnb in Sacramento. The only Airbnb-related memory (source_time 2023-05-27 02:21:01) refers to a stay in Haight-Ashbury (San Francisco) for a wedding, booked three months in advance. There is no mention of Sacramento or any booking for Sacramento. Therefore, the evidence is insufficient to answer the question.\n\nAnswer: I don't know.",
+        "reasoning_content": "We need to answer: \"When did I book the Airbnb in Sacramento?\" The retrieved memories mention a stay in Haight-Ashbury (San Francisco area) for a wedding, and accommodations in Japan (Shinjuku, Harajuku). No mention of Sacramento. So no evidence about booking an Airbnb in Sacramento. Therefore, I don't know."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1091,
+    "completion_tokens": 163,
+    "total_tokens": 1254,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 71
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 835
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

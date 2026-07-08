@@ -1,0 +1,69 @@
+{
+  "query_text": "When the user just started their new role as Software Engineer Manager, how many engineers did they lead?",
+  "query_anchor": "When the user just started their new role as Software Engineer Manager, how many engineers did they lead?",
+  "dimension": {
+    "target_memory_type": [
+      "episodic",
+      "fact"
+    ],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "engineers",
+      "lead",
+      "Software Engineer Manager"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "When the user just started their new role as Software Engineer Manager, how many engineers did they lead?",
+      "keywords": [
+        "engineers",
+        "lead",
+        "Software Engineer Manager"
+      ],
+      "query_terms": [
+        "when",
+        "the",
+        "user",
+        "just",
+        "started",
+        "their",
+        "new",
+        "role",
+        "as",
+        "software",
+        "engineer",
+        "manager",
+        "how",
+        "many",
+        "engineers",
+        "did",
+        "they",
+        "lead"
+      ]
+    },
+    "structured": {
+      "query_text": "When the user just started their new role as Software Engineer Manager, how many engineers did they lead?",
+      "rewrite": "When the user just started their new role as Software Engineer Manager, how many engineers did they lead?",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "When the user just started their new role as Software Engineer Manager, how many engineers did they lead?",
+      "target_memory_types": [
+        "episodic",
+        "fact"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "engineers",
+        "lead",
+        "Software Engineer Manager"
+      ],
+      "canonical_text": "When the user just started their new role as Software Engineer Manager, how many engineers did they lead?"
+    },
+    "minilm": {
+      "query_text": "When the user just started their new role as Software Engineer Manager, how many engineers did they lead?"
+    }
+  }
+}

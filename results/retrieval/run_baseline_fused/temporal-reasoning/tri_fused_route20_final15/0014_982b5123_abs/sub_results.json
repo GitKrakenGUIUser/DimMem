@@ -1,0 +1,3401 @@
+{
+  "bm25": {
+    "mapped_query_analysis": {
+      "query_text": "When did the user book the Airbnb in Sacramento?",
+      "keywords": [
+        "Airbnb",
+        "Sacramento"
+      ],
+      "query_terms": [
+        "when",
+        "did",
+        "the",
+        "user",
+        "book",
+        "airbnb",
+        "in",
+        "sacramento"
+      ]
+    },
+    "top_records": [
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "The user previously stayed in Haight-Ashbury for a best friend's wedding and booked the Airbnb three months in advance.",
+        "dimension": {
+          "time": "",
+          "location": "Haight-Ashbury, San Francisco",
+          "reason": "for a best friend's wedding",
+          "purpose": "to attend the wedding",
+          "keywords": [
+            "Haight-Ashbury",
+            "Airbnb",
+            "best friend's wedding",
+            "booked three months in advance"
+          ]
+        },
+        "entities": [
+          "Haight-Ashbury",
+          "Airbnb",
+          "best friend's wedding",
+          "booked three months in advance"
+        ],
+        "embedding_text": "The user previously stayed in Haight-Ashbury for a best friend's wedding and booked the Airbnb three months in advance.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0171",
+        "source_time": "2023-05-27 02:21:01",
+        "record_time": "2026-07-07T19:51:01.075100",
+        "score": 7.4797503035360995,
+        "score_components": {
+          "bm25_score": 7.4797503035360995,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User is considering accommodation options: a hostel in Shinjuku for $30/night or an Airbnb in Harajuku for $50/night.",
+        "dimension": {
+          "time": "",
+          "location": "Shinjuku, Tokyo; Harajuku, Tokyo",
+          "reason": "",
+          "purpose": "To decide accommodation for Japan trip.",
+          "keywords": [
+            "hostel",
+            "Shinjuku",
+            "Airbnb",
+            "Harajuku",
+            "$30",
+            "$50",
+            "accommodation"
+          ]
+        },
+        "entities": [
+          "hostel",
+          "Shinjuku",
+          "Airbnb",
+          "Harajuku",
+          "$30",
+          "$50",
+          "accommodation"
+        ],
+        "embedding_text": "User is considering accommodation options: a hostel in Shinjuku for $30/night or an Airbnb in Harajuku for $50/night.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0143",
+        "source_time": "2023-05-27 09:36:00",
+        "record_time": "2026-07-07T19:51:01.074937",
+        "score": 6.891094697184487,
+        "score_components": {
+          "bm25_score": 6.891094697184487,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User participated in an online book club discussion of 'The Seven Husbands of Evelyn Hugo' by Taylor Jenkins Reid.",
+        "dimension": {
+          "time": "",
+          "location": "online",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "book club",
+            "The Seven Husbands of Evelyn Hugo",
+            "Taylor Jenkins Reid",
+            "online discussion"
+          ]
+        },
+        "entities": [
+          "book club",
+          "The Seven Husbands of Evelyn Hugo",
+          "Taylor Jenkins Reid",
+          "online discussion"
+        ],
+        "embedding_text": "User participated in an online book club discussion of 'The Seven Husbands of Evelyn Hugo' by Taylor Jenkins Reid.",
+        "source_message_ids": [
+          "14"
+        ],
+        "source_boundary_id": "14_0128",
+        "source_time": "2023-05-27 06:53:01.500000",
+        "record_time": "2026-07-07T19:51:01.074847",
+        "score": 6.066166657105206,
+        "score_components": {
+          "bm25_score": 6.066166657105206,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "profile",
+        "content": "User seeks book recommendations similar to 'The Nightingale' by Kristin Hannah.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "book recommendations",
+            "similar to The Nightingale"
+          ]
+        },
+        "entities": [
+          "book recommendations",
+          "similar to The Nightingale"
+        ],
+        "embedding_text": "User seeks book recommendations similar to 'The Nightingale' by Kristin Hannah.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0153",
+        "source_time": "2023-05-27 18:44:01",
+        "record_time": "2026-07-07T19:51:01.074996",
+        "score": 6.025103284880288,
+        "score_components": {
+          "bm25_score": 6.025103284880288,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User attended Billie Eilish concert at Los Angeles Forum with best friend Emily, sang along to songs including 'Bad Guy' and 'When the Party's Over'.",
+        "dimension": {
+          "time": "",
+          "location": "Los Angeles Forum",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Billie Eilish",
+            "concert",
+            "Los Angeles Forum",
+            "Emily",
+            "Bad Guy",
+            "When the Party's Over"
+          ]
+        },
+        "entities": [
+          "Billie Eilish",
+          "concert",
+          "Los Angeles Forum",
+          "Emily",
+          "Bad Guy",
+          "When the Party's Over"
+        ],
+        "embedding_text": "User attended Billie Eilish concert at Los Angeles Forum with best friend Emily, sang along to songs including 'Bad Guy' and 'When the Party's Over'.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0034",
+        "source_time": "2023-05-27 19:08:02.500000",
+        "record_time": "2026-07-07T19:51:01.074220",
+        "score": 5.6903247369724586,
+        "score_components": {
+          "bm25_score": 5.6903247369724586,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "fact",
+        "content": "User is interested in the book 'The Royal We' by Heather Cocks and Jessica Morgan, particularly its themes of identity, class, privilege, fame, and social media scrutiny.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "Heard positive reviews about the book's satire.",
+          "purpose": "",
+          "keywords": [
+            "The Royal We",
+            "Heather Cocks",
+            "Jessica Morgan",
+            "identity",
+            "class",
+            "privilege",
+            "fame",
+            "social media scrutiny"
+          ]
+        },
+        "entities": [
+          "The Royal We",
+          "Heather Cocks",
+          "Jessica Morgan",
+          "identity",
+          "class",
+          "privilege",
+          "fame",
+          "social media scrutiny"
+        ],
+        "embedding_text": "User is interested in the book 'The Royal We' by Heather Cocks and Jessica Morgan, particularly its themes of identity, class, privilege, fame, and social media scrutiny.",
+        "source_message_ids": [
+          "14"
+        ],
+        "source_boundary_id": "14_0129",
+        "source_time": "2023-05-27 06:53:02",
+        "record_time": "2026-07-07T19:51:01.074854",
+        "score": 5.408798140376578,
+        "score_components": {
+          "bm25_score": 5.408798140376578,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "fact",
+        "content": "User read 'The 7 1/2 Deaths of Evelyn Hardcastle' by Stuart Turton, finishing on March 20, 2023, as a library e-book borrow.",
+        "dimension": {
+          "time": "2023-03-20",
+          "location": "online library",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "The 7 1/2 Deaths of Evelyn Hardcastle",
+            "Stuart Turton",
+            "library e-book",
+            "finished date"
+          ]
+        },
+        "entities": [
+          "The 7 1/2 Deaths of Evelyn Hardcastle",
+          "Stuart Turton",
+          "library e-book",
+          "finished date"
+        ],
+        "embedding_text": "User read 'The 7 1/2 Deaths of Evelyn Hardcastle' by Stuart Turton, finishing on March 20, 2023, as a library e-book borrow.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0151",
+        "source_time": "2023-05-27 18:44:00",
+        "record_time": "2026-07-07T19:51:01.074984",
+        "score": 4.806877948669044,
+        "score_components": {
+          "bm25_score": 4.806877948669044,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "fact",
+        "content": "User's birthday is February 15, 2023, when they turned 32 years old.",
+        "dimension": {
+          "time": "2023-02-15",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "birthday",
+            "age",
+            "32"
+          ]
+        },
+        "entities": [
+          "birthday",
+          "age",
+          "32"
+        ],
+        "embedding_text": "User's birthday is February 15, 2023, when they turned 32 years old.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0131",
+        "source_time": "2023-05-27 02:26:00",
+        "record_time": "2026-07-07T19:51:01.074866",
+        "score": 4.788324053099137,
+        "score_components": {
+          "bm25_score": 4.788324053099137,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "The user plans to purchase a smart timer for their new IKEA lamp to automatically turn it off when leaving the room.",
+        "dimension": {
+          "time": "",
+          "location": "living room at home",
+          "reason": "forgets to turn off the lamp",
+          "purpose": "save energy and automate lighting",
+          "keywords": [
+            "smart timer",
+            "IKEA lamp",
+            "energy efficiency"
+          ]
+        },
+        "entities": [
+          "smart timer",
+          "IKEA lamp",
+          "energy efficiency"
+        ],
+        "embedding_text": "The user plans to purchase a smart timer for their new IKEA lamp to automatically turn it off when leaving the room.",
+        "source_message_ids": [
+          "8"
+        ],
+        "source_boundary_id": "8_0099",
+        "source_time": "2023-05-27 23:04:01.500000",
+        "record_time": "2026-07-07T19:51:01.074678",
+        "score": 4.398977010498897,
+        "score_components": {
+          "bm25_score": 4.398977010498897,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "profile",
+        "content": "User prefers psychological thriller books.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "psychological thriller",
+            "book genre preference"
+          ]
+        },
+        "entities": [
+          "psychological thriller",
+          "book genre preference"
+        ],
+        "embedding_text": "User prefers psychological thriller books.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0150",
+        "source_time": "2023-05-27 09:36:02.500000",
+        "record_time": "2026-07-07T19:51:01.074978",
+        "score": 4.3396045400378656,
+        "score_components": {
+          "bm25_score": 4.3396045400378656,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "profile",
+        "content": "User enjoys historical fiction novels with strong female characters and thrilling plots, similar to 'The Nightingale' and 'The Alice Network'.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "historical fiction",
+            "strong female characters",
+            "thrilling plots",
+            "book preference"
+          ]
+        },
+        "entities": [
+          "historical fiction",
+          "strong female characters",
+          "thrilling plots",
+          "book preference"
+        ],
+        "embedding_text": "User enjoys historical fiction novels with strong female characters and thrilling plots, similar to 'The Nightingale' and 'The Alice Network'.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0157",
+        "source_time": "2023-05-27 10:30:00",
+        "record_time": "2026-07-07T19:51:01.075019",
+        "score": 4.087617665804637,
+        "score_components": {
+          "bm25_score": 4.087617665804637,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "profile",
+        "content": "User enjoys thriller books featuring strong female characters.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "thriller",
+            "strong female characters",
+            "book preference"
+          ]
+        },
+        "entities": [
+          "thriller",
+          "strong female characters",
+          "book preference"
+        ],
+        "embedding_text": "User enjoys thriller books featuring strong female characters.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0156",
+        "source_time": "2023-05-27 18:44:02.500000",
+        "record_time": "2026-07-07T19:51:01.075013",
+        "score": 4.015115162666539,
+        "score_components": {
+          "bm25_score": 4.015115162666539,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "profile",
+        "content": "The user is interested in watching the musical 'The Prom' on Netflix.",
+        "dimension": {
+          "time": "",
+          "location": "Netflix",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "The Prom",
+            "Netflix",
+            "musical"
+          ]
+        },
+        "entities": [
+          "The Prom",
+          "Netflix",
+          "musical"
+        ],
+        "embedding_text": "The user is interested in watching the musical 'The Prom' on Netflix.",
+        "source_message_ids": [
+          "6"
+        ],
+        "source_boundary_id": "6_0075",
+        "source_time": "2023-05-27 01:39:01",
+        "record_time": "2026-07-07T19:51:01.074536",
+        "score": 2.4899604167552707,
+        "score_components": {
+          "bm25_score": 2.4899604167552707,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "profile",
+        "content": "The user is fascinated by the process of creating music and lyrics in musicals and is interested in the work of songwriters.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "songwriting",
+            "musicals",
+            "music",
+            "lyrics",
+            "songwriters"
+          ]
+        },
+        "entities": [
+          "songwriting",
+          "musicals",
+          "music",
+          "lyrics",
+          "songwriters"
+        ],
+        "embedding_text": "The user is fascinated by the process of creating music and lyrics in musicals and is interested in the work of songwriters.",
+        "source_message_ids": [
+          "6"
+        ],
+        "source_boundary_id": "6_0077",
+        "source_time": "2023-05-27 01:39:02",
+        "record_time": "2026-07-07T19:51:01.074549",
+        "score": 2.48839302595019,
+        "score_components": {
+          "bm25_score": 2.48839302595019,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "The user's professor mentioned a research project about the impact of AI on the job market, which sparked the user's interest in the role of education in preparing students for the future of work.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "professor",
+            "research project",
+            "AI",
+            "job market",
+            "education",
+            "future of work"
+          ]
+        },
+        "entities": [
+          "professor",
+          "research project",
+          "AI",
+          "job market",
+          "education",
+          "future of work"
+        ],
+        "embedding_text": "The user's professor mentioned a research project about the impact of AI on the job market, which sparked the user's interest in the role of education in preparing students for the future of work.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0016",
+        "source_time": "2023-05-27 15:49:01",
+        "record_time": "2026-07-07T19:51:01.074108",
+        "score": 2.3447815310155935,
+        "score_components": {
+          "bm25_score": 2.3447815310155935,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "fact",
+        "content": "User lives in the city of Springfield.",
+        "dimension": {
+          "time": "",
+          "location": "Springfield",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Springfield",
+            "user location"
+          ]
+        },
+        "entities": [
+          "Springfield",
+          "user location"
+        ],
+        "embedding_text": "User lives in the city of Springfield.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0000",
+        "source_time": "2023-05-27 09:48:00",
+        "record_time": "2026-07-07T19:51:01.073996",
+        "score": 2.3059638199661427,
+        "score_components": {
+          "bm25_score": 2.3059638199661427,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "profile",
+        "content": "User is interested in the impact of AI on the job market.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "AI",
+            "job market",
+            "impact"
+          ]
+        },
+        "entities": [
+          "AI",
+          "job market",
+          "impact"
+        ],
+        "embedding_text": "User is interested in the impact of AI on the job market.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0013",
+        "source_time": "2023-05-27 15:49:00",
+        "record_time": "2026-07-07T19:51:01.074089",
+        "score": 2.3022705209117578,
+        "score_components": {
+          "bm25_score": 2.3022705209117578,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "profile",
+        "content": "The user enjoyed watching Justin Timberlake in the movie Friends with Benefits the most.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Justin Timberlake",
+            "Friends with Benefits",
+            "movie",
+            "enjoyment"
+          ]
+        },
+        "entities": [
+          "Justin Timberlake",
+          "Friends with Benefits",
+          "movie",
+          "enjoyment"
+        ],
+        "embedding_text": "The user enjoyed watching Justin Timberlake in the movie Friends with Benefits the most.",
+        "source_message_ids": [
+          "11"
+        ],
+        "source_boundary_id": "11_0116",
+        "source_time": "2023-05-27 13:29:06",
+        "record_time": "2026-07-07T19:51:01.074777",
+        "score": 2.2708589517021003,
+        "score_components": {
+          "bm25_score": 2.2708589517021003,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "fact",
+        "content": "The user lives in zip code 94536.",
+        "dimension": {
+          "time": "",
+          "location": "94536",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "zip code 94536",
+            "location"
+          ]
+        },
+        "entities": [
+          "zip code 94536",
+          "location"
+        ],
+        "embedding_text": "The user lives in zip code 94536.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0175",
+        "source_time": "2023-05-27 03:04:00",
+        "record_time": "2026-07-07T19:51:01.075124",
+        "score": 2.257717549150006,
+        "score_components": {
+          "bm25_score": 2.257717549150006,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "fact",
+        "content": "User is interested in reading 'The Alice Network' by Kate Quinn.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "The Alice Network",
+            "Kate Quinn",
+            "reading interest"
+          ]
+        },
+        "entities": [
+          "The Alice Network",
+          "Kate Quinn",
+          "reading interest"
+        ],
+        "embedding_text": "User is interested in reading 'The Alice Network' by Kate Quinn.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0155",
+        "source_time": "2023-05-27 18:44:02",
+        "record_time": "2026-07-07T19:51:01.075007",
+        "score": 2.235363351646818,
+        "score_components": {
+          "bm25_score": 2.235363351646818,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      }
+    ]
+  },
+  "structured": {
+    "mapped_query_analysis": {
+      "query_text": "When did the user book the Airbnb in Sacramento?",
+      "rewrite": "When did the user book the Airbnb in Sacramento?",
+      "intent": "lookup",
+      "answer_field": "time",
+      "content_query": "When did the user book the Airbnb in Sacramento?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {
+        "location": [
+          "Sacramento"
+        ]
+      },
+      "keywords": [
+        "Airbnb",
+        "Sacramento"
+      ],
+      "canonical_text": "When did the user book the Airbnb in Sacramento?"
+    },
+    "top_records": [
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User is considering accommodation options: a hostel in Shinjuku for $30/night or an Airbnb in Harajuku for $50/night.",
+        "dimension": {
+          "time": "",
+          "location": "Shinjuku, Tokyo; Harajuku, Tokyo",
+          "reason": "",
+          "purpose": "To decide accommodation for Japan trip.",
+          "keywords": [
+            "hostel",
+            "Shinjuku",
+            "Airbnb",
+            "Harajuku",
+            "$30",
+            "$50",
+            "accommodation"
+          ]
+        },
+        "entities": [
+          "hostel",
+          "Shinjuku",
+          "Airbnb",
+          "Harajuku",
+          "$30",
+          "$50",
+          "accommodation"
+        ],
+        "embedding_text": "User is considering accommodation options: a hostel in Shinjuku for $30/night or an Airbnb in Harajuku for $50/night.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0143",
+        "source_time": "2023-05-27 09:36:00",
+        "record_time": "2026-07-07T19:51:01.074937",
+        "score": 0.4615384615384615,
+        "structural_score": 0.4615384615384615,
+        "score_components": {
+          "score": 0.4615384615384615,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.5,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.5
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is considering accommodation options: a hostel in Shinjuku for $30/night or an Airbnb in Harajuku for $50/night. | hostel | Shinjuku | Airbnb | Harajuku | $30 | $50 | accommodation | Shinjuku, Tokyo; Harajuku, Tokyo | To decide accommodation for Japan trip. | hostel | Shinjuku | Airbnb | Harajuku | $30 | $50 | accommodation"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "The user previously stayed in Haight-Ashbury for a best friend's wedding and booked the Airbnb three months in advance.",
+        "dimension": {
+          "time": "",
+          "location": "Haight-Ashbury, San Francisco",
+          "reason": "for a best friend's wedding",
+          "purpose": "to attend the wedding",
+          "keywords": [
+            "Haight-Ashbury",
+            "Airbnb",
+            "best friend's wedding",
+            "booked three months in advance"
+          ]
+        },
+        "entities": [
+          "Haight-Ashbury",
+          "Airbnb",
+          "best friend's wedding",
+          "booked three months in advance"
+        ],
+        "embedding_text": "The user previously stayed in Haight-Ashbury for a best friend's wedding and booked the Airbnb three months in advance.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0171",
+        "source_time": "2023-05-27 02:21:01",
+        "record_time": "2026-07-07T19:51:01.075100",
+        "score": 0.4615384615384615,
+        "structural_score": 0.4615384615384615,
+        "score_components": {
+          "score": 0.4615384615384615,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.5,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.5
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user previously stayed in Haight-Ashbury for a best friend's wedding and booked the Airbnb three months in advance. | Haight-Ashbury | Airbnb | best friend's wedding | booked three months in advance | Haight-Ashbury, San Francisco | for a best friend's wedding | to attend the wedding | Haight-Ashbury | Airbnb | best friend's wedding | booked three months in advance"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User hosted a big family dinner for Easter at his house on March 27, 2023.",
+        "dimension": {
+          "time": "2023-03-27",
+          "location": "user's house",
+          "reason": "Easter",
+          "purpose": "family gathering",
+          "keywords": [
+            "Easter",
+            "family dinner",
+            "hosting"
+          ]
+        },
+        "entities": [
+          "Easter",
+          "family dinner",
+          "hosting"
+        ],
+        "embedding_text": "User hosted a big family dinner for Easter at his house on March 27, 2023.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0001",
+        "source_time": "2023-05-27 09:48:00.500000",
+        "record_time": "2026-07-07T19:51:01.074011",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User hosted a big family dinner for Easter at his house on March 27, 2023. | Easter | family dinner | hosting | 2023-03-27 | user's house | Easter | family gathering | Easter | family dinner | hosting"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User participated in the Walk for Hunger charity event at a local park on May 21, 2023.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "local park",
+          "reason": "charity",
+          "purpose": "giving back to community",
+          "keywords": [
+            "Walk for Hunger",
+            "charity event",
+            "community"
+          ]
+        },
+        "entities": [
+          "Walk for Hunger",
+          "charity event",
+          "community"
+        ],
+        "embedding_text": "User participated in the Walk for Hunger charity event at a local park on May 21, 2023.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0002",
+        "source_time": "2023-05-27 09:48:01",
+        "record_time": "2026-07-07T19:51:01.074019",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User participated in the Walk for Hunger charity event at a local park on May 21, 2023. | Walk for Hunger | charity event | community | 2023-05-21 | local park | charity | giving back to community | Walk for Hunger | charity event | community"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User is planning a summer BBQ for family and friends with approximately 20-25 guests.",
+        "dimension": {
+          "time": "summer 2023",
+          "location": "user's backyard",
+          "reason": "summer gathering",
+          "purpose": "social event",
+          "keywords": [
+            "summer BBQ",
+            "family",
+            "friends",
+            "20-25 guests"
+          ]
+        },
+        "entities": [
+          "summer BBQ",
+          "family",
+          "friends",
+          "20-25 guests"
+        ],
+        "embedding_text": "User is planning a summer BBQ for family and friends with approximately 20-25 guests.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0005",
+        "source_time": "2023-05-27 09:55:00",
+        "record_time": "2026-07-07T19:51:01.074039",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is planning a summer BBQ for family and friends with approximately 20-25 guests. | summer BBQ | family | friends | 20-25 guests | summer 2023 | user's backyard | summer gathering | social event | summer BBQ | family | friends | 20-25 guests"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User plans to check out The Dam Cafe in Holyoke for a post-hike meal, having heard good things about their sandwiches and coffee.",
+        "dimension": {
+          "time": "",
+          "location": "The Dam Cafe, Holyoke",
+          "reason": "to relax and enjoy a meal after the hike",
+          "purpose": "to relax and enjoy a meal",
+          "keywords": [
+            "The Dam Cafe",
+            "Holyoke",
+            "hike",
+            "outdoor seating"
+          ]
+        },
+        "entities": [
+          "The Dam Cafe",
+          "Holyoke",
+          "hike",
+          "outdoor seating"
+        ],
+        "embedding_text": "User plans to check out The Dam Cafe in Holyoke for a post-hike meal, having heard good things about their sandwiches and coffee.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0007",
+        "source_time": "2023-05-27 14:00:02",
+        "record_time": "2026-07-07T19:51:01.074052",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to check out The Dam Cafe in Holyoke for a post-hike meal, having heard good things about their sandwiches and coffee. | The Dam Cafe | Holyoke | hike | outdoor seating | The Dam Cafe, Holyoke | to relax and enjoy a meal after the hike | to relax and enjoy a meal | The Dam Cafe | Holyoke | hike | outdoor seating"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User plans to ask The Dam Cafe about sponsoring a future Walk for Hunger charity event.",
+        "dimension": {
+          "time": "",
+          "location": "The Dam Cafe, Holyoke",
+          "reason": "to seek sponsorship for charity event",
+          "purpose": "to get support for the next Walk for Hunger",
+          "keywords": [
+            "The Dam Cafe",
+            "sponsorship",
+            "Walk for Hunger",
+            "charity event"
+          ]
+        },
+        "entities": [
+          "The Dam Cafe",
+          "sponsorship",
+          "Walk for Hunger",
+          "charity event"
+        ],
+        "embedding_text": "User plans to ask The Dam Cafe about sponsoring a future Walk for Hunger charity event.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0008",
+        "source_time": "2023-05-27 14:00:02.500000",
+        "record_time": "2026-07-07T19:51:01.074058",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to ask The Dam Cafe about sponsoring a future Walk for Hunger charity event. | The Dam Cafe | sponsorship | Walk for Hunger | charity event | The Dam Cafe, Holyoke | to seek sponsorship for charity event | to get support for the next Walk for Hunger | The Dam Cafe | sponsorship | Walk for Hunger | charity event"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User's professor mentioned a research project about the impact of AI on the job market.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "professor",
+            "research project",
+            "AI",
+            "job market"
+          ]
+        },
+        "entities": [
+          "professor",
+          "research project",
+          "AI",
+          "job market"
+        ],
+        "embedding_text": "User's professor mentioned a research project about the impact of AI on the job market.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0014",
+        "source_time": "2023-05-27 15:49:02",
+        "record_time": "2026-07-07T19:51:01.074095",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User's professor mentioned a research project about the impact of AI on the job market. | professor | research project | AI | job market | professor | research project | AI | job market"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "The user's professor mentioned a research project about the impact of AI on the job market, which sparked the user's interest in the role of education in preparing students for the future of work.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "professor",
+            "research project",
+            "AI",
+            "job market",
+            "education",
+            "future of work"
+          ]
+        },
+        "entities": [
+          "professor",
+          "research project",
+          "AI",
+          "job market",
+          "education",
+          "future of work"
+        ],
+        "embedding_text": "The user's professor mentioned a research project about the impact of AI on the job market, which sparked the user's interest in the role of education in preparing students for the future of work.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0016",
+        "source_time": "2023-05-27 15:49:01",
+        "record_time": "2026-07-07T19:51:01.074108",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user's professor mentioned a research project about the impact of AI on the job market, which sparked the user's interest in the role of education in preparing students for the future of work. | professor | research project | AI | job market | education | future of work | professor | research project | AI | job market | education | future of work"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "The user built a server and client shell script using netcat, where the client sends the string 'unquiesce' to stop the server.",
+        "dimension": {
+          "time": "2023-05-27",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "server",
+            "shell script",
+            "netcat",
+            "unquiesce",
+            "client"
+          ]
+        },
+        "entities": [
+          "server",
+          "shell script",
+          "netcat",
+          "unquiesce",
+          "client"
+        ],
+        "embedding_text": "The user built a server and client shell script using netcat, where the client sends the string 'unquiesce' to stop the server.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0017",
+        "source_time": "2023-05-27 15:49:01.500000",
+        "record_time": "2026-07-07T19:51:01.074114",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user built a server and client shell script using netcat, where the client sends the string 'unquiesce' to stop the server. | server | shell script | netcat | unquiesce | client | 2023-05-27 | server | shell script | netcat | unquiesce | client"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "The user started experimenting with Instagram Live in April 2023 to connect with followers and is considering creating a series of live streams focused on skincare and beauty products.",
+        "dimension": {
+          "time": "2023-04",
+          "location": "Instagram",
+          "reason": "",
+          "purpose": "to connect with followers",
+          "keywords": [
+            "Instagram Live",
+            "skincare",
+            "beauty products",
+            "live streaming"
+          ]
+        },
+        "entities": [
+          "Instagram Live",
+          "skincare",
+          "beauty products",
+          "live streaming"
+        ],
+        "embedding_text": "The user started experimenting with Instagram Live in April 2023 to connect with followers and is considering creating a series of live streams focused on skincare and beauty products.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0018",
+        "source_time": "2023-05-27 15:49:02",
+        "record_time": "2026-07-07T19:51:01.074120",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user started experimenting with Instagram Live in April 2023 to connect with followers and is considering creating a series of live streams focused on skincare and beauty products. | Instagram Live | skincare | beauty products | live streaming | 2023-04 | Instagram | to connect with followers | Instagram Live | skincare | beauty products | live streaming"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "The user plans to do a 10-minute Instagram Live stream on their morning skincare routine and is considering camera setups such as a tripod and ring light or natural light.",
+        "dimension": {
+          "time": "",
+          "location": "Instagram",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "morning skincare routine",
+            "Instagram Live",
+            "tripod",
+            "ring light",
+            "natural light"
+          ]
+        },
+        "entities": [
+          "morning skincare routine",
+          "Instagram Live",
+          "tripod",
+          "ring light",
+          "natural light"
+        ],
+        "embedding_text": "The user plans to do a 10-minute Instagram Live stream on their morning skincare routine and is considering camera setups such as a tripod and ring light or natural light.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0019",
+        "source_time": "2023-05-27 15:49:02.500000",
+        "record_time": "2026-07-07T19:51:01.074126",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to do a 10-minute Instagram Live stream on their morning skincare routine and is considering camera setups such as a tripod and ring light or natural light. | morning skincare routine | Instagram Live | tripod | ring light | natural light | Instagram | morning skincare routine | Instagram Live | tripod | ring light | natural light"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User plans a 10-minute Instagram Live on morning skincare routine using natural light and a tripod.",
+        "dimension": {
+          "time": "",
+          "location": "Instagram",
+          "reason": "",
+          "purpose": "share morning skincare routine",
+          "keywords": [
+            "morning skincare routine",
+            "Instagram Live",
+            "natural light",
+            "tripod"
+          ]
+        },
+        "entities": [
+          "morning skincare routine",
+          "Instagram Live",
+          "natural light",
+          "tripod"
+        ],
+        "embedding_text": "User plans a 10-minute Instagram Live on morning skincare routine using natural light and a tripod.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0021",
+        "source_time": "2023-05-27 01:35:01.500000",
+        "record_time": "2026-07-07T19:51:01.074138",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans a 10-minute Instagram Live on morning skincare routine using natural light and a tripod. | morning skincare routine | Instagram Live | natural light | tripod | Instagram | share morning skincare routine | morning skincare routine | Instagram Live | natural light | tripod"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User plans to promote her live stream by creating a countdown on Instagram Stories and sharing behind-the-scenes content.",
+        "dimension": {
+          "time": "",
+          "location": "Instagram Stories",
+          "reason": "to build anticipation",
+          "purpose": "promote live stream",
+          "keywords": [
+            "Instagram Stories",
+            "countdown",
+            "behind-the-scenes",
+            "promotion"
+          ]
+        },
+        "entities": [
+          "Instagram Stories",
+          "countdown",
+          "behind-the-scenes",
+          "promotion"
+        ],
+        "embedding_text": "User plans to promote her live stream by creating a countdown on Instagram Stories and sharing behind-the-scenes content.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0023",
+        "source_time": "2023-05-27 01:35:02",
+        "record_time": "2026-07-07T19:51:01.074150",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to promote her live stream by creating a countdown on Instagram Stories and sharing behind-the-scenes content. | Instagram Stories | countdown | behind-the-scenes | promotion | Instagram Stories | to build anticipation | promote live stream | Instagram Stories | countdown | behind-the-scenes | promotion"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User plans to find collaborators on Instagram using search and hashtag research, and will personalize messages.",
+        "dimension": {
+          "time": "",
+          "location": "Instagram",
+          "reason": "",
+          "purpose": "find collaborators",
+          "keywords": [
+            "Instagram search",
+            "hashtag research",
+            "personalized message",
+            "collaboration"
+          ]
+        },
+        "entities": [
+          "Instagram search",
+          "hashtag research",
+          "personalized message",
+          "collaboration"
+        ],
+        "embedding_text": "User plans to find collaborators on Instagram using search and hashtag research, and will personalize messages.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0025",
+        "source_time": "2023-05-27 01:35:02.500000",
+        "record_time": "2026-07-07T19:51:01.074162",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to find collaborators on Instagram using search and hashtag research, and will personalize messages. | Instagram search | hashtag research | personalized message | collaboration | Instagram | find collaborators | Instagram search | hashtag research | personalized message | collaboration"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User recently attended Jonas Brothers concert at Hollywood Bowl with family.",
+        "dimension": {
+          "time": "",
+          "location": "Hollywood Bowl",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Jonas Brothers",
+            "concert",
+            "Hollywood Bowl",
+            "family"
+          ]
+        },
+        "entities": [
+          "Jonas Brothers",
+          "concert",
+          "Hollywood Bowl",
+          "family"
+        ],
+        "embedding_text": "User recently attended Jonas Brothers concert at Hollywood Bowl with family.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0026",
+        "source_time": "2023-05-27 19:08:00",
+        "record_time": "2026-07-07T19:51:01.074168",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User recently attended Jonas Brothers concert at Hollywood Bowl with family. | Jonas Brothers | concert | Hollywood Bowl | family | Hollywood Bowl | Jonas Brothers | concert | Hollywood Bowl | family"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User is planning a road trip to Chicago to check out music venues.",
+        "dimension": {
+          "time": "",
+          "location": "Chicago",
+          "reason": "",
+          "purpose": "check out music venues",
+          "keywords": [
+            "road trip",
+            "Chicago",
+            "music venues"
+          ]
+        },
+        "entities": [
+          "road trip",
+          "Chicago",
+          "music venues"
+        ],
+        "embedding_text": "User is planning a road trip to Chicago to check out music venues.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0027",
+        "source_time": "2023-05-27 19:08:00",
+        "record_time": "2026-07-07T19:51:01.074174",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is planning a road trip to Chicago to check out music venues. | road trip | Chicago | music venues | Chicago | check out music venues | road trip | Chicago | music venues"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User is interested in music festivals in Chicago this summer.",
+        "dimension": {
+          "time": "summer 2023",
+          "location": "Chicago",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "music festivals",
+            "Chicago",
+            "summer"
+          ]
+        },
+        "entities": [
+          "music festivals",
+          "Chicago",
+          "summer"
+        ],
+        "embedding_text": "User is interested in music festivals in Chicago this summer.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0028",
+        "source_time": "2023-05-27 19:08:00.500000",
+        "record_time": "2026-07-07T19:51:01.074180",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is interested in music festivals in Chicago this summer. | music festivals | Chicago | summer | summer 2023 | Chicago | music festivals | Chicago | summer"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User attended Lollapalooza in Grant Park with college friends, saw The Chainsmokers, H.E.R., Tame Impala, and Ariana Grande's headlining set.",
+        "dimension": {
+          "time": "2023-05-20 to 2023-05-21",
+          "location": "Grant Park, Chicago",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Lollapalooza",
+            "Grant Park",
+            "college friends",
+            "The Chainsmokers",
+            "H.E.R.",
+            "Tame Impala",
+            "Ariana Grande"
+          ]
+        },
+        "entities": [
+          "Lollapalooza",
+          "Grant Park",
+          "college friends",
+          "The Chainsmokers",
+          "H.E.R.",
+          "Tame Impala",
+          "Ariana Grande"
+        ],
+        "embedding_text": "User attended Lollapalooza in Grant Park with college friends, saw The Chainsmokers, H.E.R., Tame Impala, and Ariana Grande's headlining set.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0029",
+        "source_time": "2023-05-27 19:08:01",
+        "record_time": "2026-07-07T19:51:01.074188",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User attended Lollapalooza in Grant Park with college friends, saw The Chainsmokers, H.E.R., Tame Impala, and Ariana Grande's headlining set. | Lollapalooza | Grant Park | college friends | The Chainsmokers | H.E.R. | Tame Impala | Ariana Grande | 2023-05-20 to 2023-05-21 | Grant Park, Chicago | Lollapalooza | Grant Park | college friends | The Chainsmokers | H.E.R. | Tame Impala | Ariana Grande"
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User hopes Pale Waves announces a tour soon.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Pale Waves",
+            "tour",
+            "announcement"
+          ]
+        },
+        "entities": [
+          "Pale Waves",
+          "tour",
+          "announcement"
+        ],
+        "embedding_text": "User hopes Pale Waves announces a tour soon.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0033",
+        "source_time": "2023-05-27 19:08:02",
+        "record_time": "2026-07-07T19:51:01.074213",
+        "score": 0.23076923076923075,
+        "structural_score": 0.23076923076923075,
+        "score_components": {
+          "score": 0.23076923076923075,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.23076923076923075,
+            "location_constraint": 0.3076923076923077,
+            "keyword_phrase_match": 0.23076923076923075,
+            "keyword_token_overlap": 0.23076923076923075
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "location_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User hopes Pale Waves announces a tour soon. | Pale Waves | tour | announcement | Pale Waves | tour | announcement"
+        }
+      }
+    ]
+  },
+  "minilm": {
+    "mapped_query_analysis": {
+      "query_text": "When did the user book the Airbnb in Sacramento?"
+    },
+    "top_records": [
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "The user previously stayed in Haight-Ashbury for a best friend's wedding and booked the Airbnb three months in advance.",
+        "dimension": {
+          "time": "",
+          "location": "Haight-Ashbury, San Francisco",
+          "reason": "for a best friend's wedding",
+          "purpose": "to attend the wedding",
+          "keywords": [
+            "Haight-Ashbury",
+            "Airbnb",
+            "best friend's wedding",
+            "booked three months in advance"
+          ]
+        },
+        "entities": [
+          "Haight-Ashbury",
+          "Airbnb",
+          "best friend's wedding",
+          "booked three months in advance"
+        ],
+        "embedding_text": "The user previously stayed in Haight-Ashbury for a best friend's wedding and booked the Airbnb three months in advance.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0171",
+        "source_time": "2023-05-27 02:21:01",
+        "record_time": "2026-07-07T19:51:01.075100",
+        "score": 0.5835717843502222,
+        "score_components": {
+          "dense_cosine_score": 0.5835717843502222,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User attended their best friend's wedding in San Francisco for a 5-day trip starting on 2023-03-27 and had an amazing time.",
+        "dimension": {
+          "time": "2023-03-27 to 2023-03-31",
+          "location": "San Francisco",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "San Francisco",
+            "best friend's wedding",
+            "5-day trip"
+          ]
+        },
+        "entities": [
+          "San Francisco",
+          "best friend's wedding",
+          "5-day trip"
+        ],
+        "embedding_text": "User attended their best friend's wedding in San Francisco for a 5-day trip starting on 2023-03-27 and had an amazing time.",
+        "source_message_ids": [
+          "19"
+        ],
+        "source_boundary_id": "19_0177",
+        "source_time": "2023-05-27 15:38:00",
+        "record_time": "2026-07-07T19:51:01.075135",
+        "score": 0.39840857239834987,
+        "score_components": {
+          "dense_cosine_score": 0.39840857239834987,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User hosted a big family dinner for Easter at his house on March 27, 2023.",
+        "dimension": {
+          "time": "2023-03-27",
+          "location": "user's house",
+          "reason": "Easter",
+          "purpose": "family gathering",
+          "keywords": [
+            "Easter",
+            "family dinner",
+            "hosting"
+          ]
+        },
+        "entities": [
+          "Easter",
+          "family dinner",
+          "hosting"
+        ],
+        "embedding_text": "User hosted a big family dinner for Easter at his house on March 27, 2023.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0001",
+        "source_time": "2023-05-27 09:48:00.500000",
+        "record_time": "2026-07-07T19:51:01.074011",
+        "score": 0.384759044895364,
+        "score_components": {
+          "dense_cosine_score": 0.384759044895364,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "The user has booked a viewing for a shared flat in the Marchmont area of Edinburgh.",
+        "dimension": {
+          "time": "",
+          "location": "Marchmont, Edinburgh",
+          "reason": "",
+          "purpose": "to view the flat for potential rental",
+          "keywords": [
+            "shared flat",
+            "Marchmont",
+            "Edinburgh",
+            "viewing",
+            "accommodation"
+          ]
+        },
+        "entities": [
+          "shared flat",
+          "Marchmont",
+          "Edinburgh",
+          "viewing",
+          "accommodation"
+        ],
+        "embedding_text": "The user has booked a viewing for a shared flat in the Marchmont area of Edinburgh.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0168",
+        "source_time": "2023-05-27 03:24:00.500000",
+        "record_time": "2026-07-07T19:51:01.075083",
+        "score": 0.3747159749844994,
+        "score_components": {
+          "dense_cosine_score": 0.3747159749844994,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User is interested in music festivals in Chicago this summer.",
+        "dimension": {
+          "time": "summer 2023",
+          "location": "Chicago",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "music festivals",
+            "Chicago",
+            "summer"
+          ]
+        },
+        "entities": [
+          "music festivals",
+          "Chicago",
+          "summer"
+        ],
+        "embedding_text": "User is interested in music festivals in Chicago this summer.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0028",
+        "source_time": "2023-05-27 19:08:00.500000",
+        "record_time": "2026-07-07T19:51:01.074180",
+        "score": 0.36047273237571587,
+        "score_components": {
+          "dense_cosine_score": 0.36047273237571587,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "About six weeks ago (around 2023-04-15), user drove to their sister's place (2 hours from hometown) to help her move into a new apartment; they packed and unpacked boxes, ordered pizza, watched a movie, and on the return trip encountered a road closure due to a landslide and took a detour.",
+        "dimension": {
+          "time": "2023-04-15",
+          "location": "sister's place (2 hours from hometown)",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "sister's move",
+            "packing",
+            "unpacking",
+            "pizza",
+            "movie",
+            "road closure",
+            "landslide",
+            "detour"
+          ]
+        },
+        "entities": [
+          "sister's move",
+          "packing",
+          "unpacking",
+          "pizza",
+          "movie",
+          "road closure",
+          "landslide",
+          "detour"
+        ],
+        "embedding_text": "About six weeks ago (around 2023-04-15), user drove to their sister's place (2 hours from hometown) to help her move into a new apartment; they packed and unpacked boxes, ordered pizza, watched a movie, and on the return trip encountered a road closure due to a landslide and took a detour.",
+        "source_message_ids": [
+          "19"
+        ],
+        "source_boundary_id": "19_0181",
+        "source_time": "2023-05-27 15:38:02.500000",
+        "record_time": "2026-07-07T19:51:01.075161",
+        "score": 0.3494535861510912,
+        "score_components": {
+          "dense_cosine_score": 0.3494535861510912,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User attended a Dear Evan Hansen viewing party at their friend Rachel's house around 2023-05-06.",
+        "dimension": {
+          "time": "2023-05-06",
+          "location": "Rachel's house",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Dear Evan Hansen",
+            "viewing party",
+            "Rachel"
+          ]
+        },
+        "entities": [
+          "Dear Evan Hansen",
+          "viewing party",
+          "Rachel"
+        ],
+        "embedding_text": "User attended a Dear Evan Hansen viewing party at their friend Rachel's house around 2023-05-06.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0078",
+        "source_time": "2023-05-27 17:30:02",
+        "record_time": "2026-07-07T19:51:01.074554",
+        "score": 0.3428374227887873,
+        "score_components": {
+          "dense_cosine_score": 0.3428374227887873,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "The user plans to stay in Haight-Ashbury during the San Francisco trip and will take BART and a taxi from the airport.",
+        "dimension": {
+          "time": "",
+          "location": "Haight-Ashbury, San Francisco",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Haight-Ashbury",
+            "BART",
+            "taxi",
+            "airport transportation"
+          ]
+        },
+        "entities": [
+          "Haight-Ashbury",
+          "BART",
+          "taxi",
+          "airport transportation"
+        ],
+        "embedding_text": "The user plans to stay in Haight-Ashbury during the San Francisco trip and will take BART and a taxi from the airport.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0172",
+        "source_time": "2023-05-27 02:21:01.500000",
+        "record_time": "2026-07-07T19:51:01.075106",
+        "score": 0.33821478275328276,
+        "score_components": {
+          "dense_cosine_score": 0.33821478275328276,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "fact",
+        "content": "User works as a marketing specialist at a tech startup and has been in that role for 8 months as of 2023-05-27.",
+        "dimension": {
+          "time": "2022-09",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "marketing specialist",
+            "tech startup"
+          ]
+        },
+        "entities": [
+          "marketing specialist",
+          "tech startup"
+        ],
+        "embedding_text": "User works as a marketing specialist at a tech startup and has been in that role for 8 months as of 2023-05-27.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0081",
+        "source_time": "2023-05-27 03:07:00",
+        "record_time": "2026-07-07T19:51:01.074571",
+        "score": 0.3352861691181465,
+        "score_components": {
+          "dense_cosine_score": 0.3352861691181465,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "fact",
+        "content": "User lives in the city of Springfield.",
+        "dimension": {
+          "time": "",
+          "location": "Springfield",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Springfield",
+            "user location"
+          ]
+        },
+        "entities": [
+          "Springfield",
+          "user location"
+        ],
+        "embedding_text": "User lives in the city of Springfield.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0000",
+        "source_time": "2023-05-27 09:48:00",
+        "record_time": "2026-07-07T19:51:01.073996",
+        "score": 0.326503350244599,
+        "score_components": {
+          "dense_cosine_score": 0.326503350244599,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "fact",
+        "content": "The user lives in zip code 94536.",
+        "dimension": {
+          "time": "",
+          "location": "94536",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "zip code 94536",
+            "location"
+          ]
+        },
+        "entities": [
+          "zip code 94536",
+          "location"
+        ],
+        "embedding_text": "The user lives in zip code 94536.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0175",
+        "source_time": "2023-05-27 03:04:00",
+        "record_time": "2026-07-07T19:51:01.075124",
+        "score": 0.3235294521830106,
+        "score_components": {
+          "dense_cosine_score": 0.3235294521830106,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "The user decided to give a wine country gift basket as a wedding gift and is seeking wine shops in San Francisco.",
+        "dimension": {
+          "time": "",
+          "location": "San Francisco",
+          "reason": "as a wedding gift",
+          "purpose": "to purchase a wine country gift basket",
+          "keywords": [
+            "wine country gift basket",
+            "wedding gift",
+            "wine shop",
+            "San Francisco"
+          ]
+        },
+        "entities": [
+          "wine country gift basket",
+          "wedding gift",
+          "wine shop",
+          "San Francisco"
+        ],
+        "embedding_text": "The user decided to give a wine country gift basket as a wedding gift and is seeking wine shops in San Francisco.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0174",
+        "source_time": "2023-05-27 02:21:02.500000",
+        "record_time": "2026-07-07T19:51:01.075118",
+        "score": 0.3180431595415567,
+        "score_components": {
+          "dense_cosine_score": 0.3180431595415567,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "The user's flatmate Rachel suggested planning a flat-warming party for the weekend of August 20, 2023.",
+        "dimension": {
+          "time": "2023-08-20",
+          "location": "Marchmont, Edinburgh",
+          "reason": "",
+          "purpose": "to celebrate moving in together",
+          "keywords": [
+            "flat-warming party",
+            "August 20",
+            "Rachel",
+            "flatmate"
+          ]
+        },
+        "entities": [
+          "flat-warming party",
+          "August 20",
+          "Rachel",
+          "flatmate"
+        ],
+        "embedding_text": "The user's flatmate Rachel suggested planning a flat-warming party for the weekend of August 20, 2023.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0169",
+        "source_time": "2023-05-27 02:21:00",
+        "record_time": "2026-07-07T19:51:01.075089",
+        "score": 0.3152015354466878,
+        "score_components": {
+          "dense_cosine_score": 0.3152015354466878,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User recently attended Jonas Brothers concert at Hollywood Bowl with family.",
+        "dimension": {
+          "time": "",
+          "location": "Hollywood Bowl",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Jonas Brothers",
+            "concert",
+            "Hollywood Bowl",
+            "family"
+          ]
+        },
+        "entities": [
+          "Jonas Brothers",
+          "concert",
+          "Hollywood Bowl",
+          "family"
+        ],
+        "embedding_text": "User recently attended Jonas Brothers concert at Hollywood Bowl with family.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0026",
+        "source_time": "2023-05-27 19:08:00",
+        "record_time": "2026-07-07T19:51:01.074168",
+        "score": 0.3148446546230457,
+        "score_components": {
+          "dense_cosine_score": 0.3148446546230457,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "fact",
+        "content": "User is interested in reading 'The Alice Network' by Kate Quinn.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "The Alice Network",
+            "Kate Quinn",
+            "reading interest"
+          ]
+        },
+        "entities": [
+          "The Alice Network",
+          "Kate Quinn",
+          "reading interest"
+        ],
+        "embedding_text": "User is interested in reading 'The Alice Network' by Kate Quinn.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0155",
+        "source_time": "2023-05-27 18:44:02",
+        "record_time": "2026-07-07T19:51:01.075007",
+        "score": 0.3144587393862302,
+        "score_components": {
+          "dense_cosine_score": 0.3144587393862302,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "fact",
+        "content": "User has heard of BroadwayHD but has not used it.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "BroadwayHD"
+          ]
+        },
+        "entities": [
+          "BroadwayHD"
+        ],
+        "embedding_text": "User has heard of BroadwayHD but has not used it.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0080",
+        "source_time": "2023-05-27 17:30:02.500000",
+        "record_time": "2026-07-07T19:51:01.074565",
+        "score": 0.31078761089042795,
+        "score_components": {
+          "dense_cosine_score": 0.31078761089042795,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "profile",
+        "content": "User is a big fan of music festivals.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "music festivals",
+            "fan"
+          ]
+        },
+        "entities": [
+          "music festivals",
+          "fan"
+        ],
+        "embedding_text": "User is a big fan of music festivals.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0030",
+        "source_time": "2023-05-27 19:08:01",
+        "record_time": "2026-07-07T19:51:01.074194",
+        "score": 0.3078974380960561,
+        "score_components": {
+          "dense_cosine_score": 0.3078974380960561,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User took a 3-day road trip to nearby mountains with their family about a week after returning from San Francisco, driving 4 hours to a campsite where they pitched a tent, roasted marshmallows, and told ghost stories.",
+        "dimension": {
+          "time": "2023-04-07 to 2023-04-09",
+          "location": "nearby mountains",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "road trip",
+            "mountains",
+            "family",
+            "camping",
+            "tent",
+            "marshmallows",
+            "ghost stories"
+          ]
+        },
+        "entities": [
+          "road trip",
+          "mountains",
+          "family",
+          "camping",
+          "tent",
+          "marshmallows",
+          "ghost stories"
+        ],
+        "embedding_text": "User took a 3-day road trip to nearby mountains with their family about a week after returning from San Francisco, driving 4 hours to a campsite where they pitched a tent, roasted marshmallows, and told ghost stories.",
+        "source_message_ids": [
+          "19"
+        ],
+        "source_boundary_id": "19_0180",
+        "source_time": "2023-05-27 15:38:01.500000",
+        "record_time": "2026-07-07T19:51:01.075155",
+        "score": 0.3063049435256165,
+        "score_components": {
+          "dense_cosine_score": 0.3063049435256165,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "The user attended a 'Dear Evan Hansen' viewing party at their friend Rachel's house about three weeks before May 27, 2023.",
+        "dimension": {
+          "time": "2023-05-06",
+          "location": "friend Rachel's house",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Dear Evan Hansen",
+            "viewing party",
+            "Rachel"
+          ]
+        },
+        "entities": [
+          "Dear Evan Hansen",
+          "viewing party",
+          "Rachel"
+        ],
+        "embedding_text": "The user attended a 'Dear Evan Hansen' viewing party at their friend Rachel's house about three weeks before May 27, 2023.",
+        "source_message_ids": [
+          "6"
+        ],
+        "source_boundary_id": "6_0074",
+        "source_time": "2023-05-27 01:39:00.500000",
+        "record_time": "2026-07-07T19:51:01.074530",
+        "score": 0.3003464058943628,
+        "score_components": {
+          "dense_cosine_score": 0.3003464058943628,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0014_982b5123_abs",
+        "memory_type": "episodic",
+        "content": "User participated in the Walk for Hunger charity event at a local park on May 21, 2023.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "local park",
+          "reason": "charity",
+          "purpose": "giving back to community",
+          "keywords": [
+            "Walk for Hunger",
+            "charity event",
+            "community"
+          ]
+        },
+        "entities": [
+          "Walk for Hunger",
+          "charity event",
+          "community"
+        ],
+        "embedding_text": "User participated in the Walk for Hunger charity event at a local park on May 21, 2023.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0002",
+        "source_time": "2023-05-27 09:48:01",
+        "record_time": "2026-07-07T19:51:01.074019",
+        "score": 0.30027191318662166,
+        "score_components": {
+          "dense_cosine_score": 0.30027191318662166,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      }
+    ]
+  }
+}

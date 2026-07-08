@@ -1,0 +1,86 @@
+{
+  "model_name": "deepseek-v4-flash",
+  "query": "Which event happened first, my cousin's wedding or Michael's engagement party?",
+  "gold_answer": "Michael's engagement party",
+  "question_date": "2023/10/01 (Sun) 07:41",
+  "retrieved_records": [
+    {
+      "source_time": "2023-05-06 03:02:00",
+      "content": "The user attended Michael's engagement party at a trendy rooftop bar on 2023-05-06.",
+      "dimension": {
+        "reason": "engagement party for Michael"
+      }
+    },
+    {
+      "source_time": "2023-06-15 03:20:00",
+      "content": "User was a bridesmaid at their cousin's wedding on 2023-06-15."
+    },
+    {
+      "source_time": "2023-06-15 03:20:00.500000",
+      "content": "User attended her cousin's wedding as a bridesmaid on 2023-06-15 and was inspired by a special song played during the ceremony.",
+      "dimension": {
+        "reason": "User was a bridesmaid at her cousin's wedding"
+      }
+    },
+    {
+      "source_time": "2023-06-15 03:20:01",
+      "content": "User plans to incorporate a meaningful song into her own wedding ceremony, inspired by her cousin's wedding.",
+      "dimension": {
+        "reason": "Inspired by her cousin's wedding",
+        "purpose": "To make her ceremony feel intimate"
+      }
+    },
+    {
+      "source_time": "2023-04-28 10:19:01",
+      "content": "User lived near a stadium built for a major event that disrupted the neighborhood.",
+      "dimension": {
+        "reason": "stadium construction for a major event"
+      }
+    },
+    {
+      "source_time": "2023-06-15 02:07:02.500000",
+      "content": "The user is developing a fundraising strategy and is considering legal/ethical considerations, transparency, inclusivity, and donor engagement."
+    },
+    {
+      "source_time": "2023-06-15 08:00:00",
+      "content": "The user owns a rare first edition of F. Scott Fitzgerald's 'The Great Gatsby', one of only 300 copies with a misprinted title page, purchased for $2,500."
+    },
+    {
+      "source_time": "2023-05-06 14:48:00",
+      "content": "The user attended the 'Taste of Hope' charity dinner on 2023-04-17 at a fancy restaurant in the West Loop area, which raised funds for a local children's hospital.",
+      "dimension": {
+        "reason": "charity dinner for local children's hospital",
+        "purpose": "raise funds"
+      }
+    },
+    {
+      "source_time": "2023-06-15 14:14:00.500000",
+      "content": "The user wants to know which hotel loyalty program offers the best rewards and benefits."
+    },
+    {
+      "source_time": "2023-05-06 03:02:00",
+      "content": "The user is planning their own wedding next year."
+    },
+    {
+      "source_time": "2023-05-06 03:02:01",
+      "content": "The user is considering hiring a wedding planner."
+    },
+    {
+      "source_time": "2023-04-06 00:11:00",
+      "content": "The user is planning a trip to Japan, flying into Narita International Airport, staying at a hotel in the Shinjuku district, arriving on a Friday afternoon, and considering taking the train from the airport to the hotel, which the user's friend said costs around $10."
+    },
+    {
+      "source_time": "2023-06-15 03:20:00",
+      "content": "User wants her wedding ceremony to feel intimate and special."
+    },
+    {
+      "source_time": "2023-05-06 03:02:00.500000",
+      "content": "The user is considering a countryside bed and breakfast and a city art museum as wedding venue options."
+    },
+    {
+      "source_time": "2023-06-15 03:20:00",
+      "content": "User is planning their own wedding."
+    }
+  ],
+  "retrieval_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/temporal-reasoning/tri_fused_route20_final15/0022_gpt4_4929293a"
+}

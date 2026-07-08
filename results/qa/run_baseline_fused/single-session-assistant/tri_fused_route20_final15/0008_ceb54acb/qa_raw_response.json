@@ -1,0 +1,32 @@
+{
+  "id": "b1929a30-9c03-43f3-98bb-8faca707a0a0",
+  "object": "chat.completion",
+  "created": 1783427878,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: The user is asking about a previous conversation where \"sexual compulsions\" and other alternative terms for certain behaviors were discussed. None of the retrieved memory records contain any mention of \"sexual compulsions\" or related alternative terms. The memories cover topics like movies, triathlons, retirement accounts, TensorFlow, dinner parties, trips, symbolism, book tracking, coastal decorations, strength training, a college project, loyalty programs, a digital marketing conference, sleep schedules, and Broadway tickets. None are relevant to the query. Therefore, the evidence is insufficient to provide an answer.\n\nAnswer: I don't know.",
+        "reasoning_content": "We need to answer based on retrieved memories. The user asks about previous chat where we suggested \"sexual compulsions\" and a few other options for alternative terms for certain behaviors. They want the other four options. However, none of the retrieved memories mention anything about \"sexual compulsions\" or alternative terms for behaviors. The memories cover various topics: movies, triathlon, IRA, TensorFlow, dinner party, Fuji-Q Highland, symbolism, book tracking, coastal decor, strength training, college project, loyalty apps, digital marketing conference, sleep schedule, Broadway tickets. No memory relates to the question. Therefore, insufficient evidence. Answer: I don't know."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1236,
+    "completion_tokens": 259,
+    "total_tokens": 1495,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 133
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 980
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "98fab043-0e1a-4b8b-bdf5-723ce2ab3099",
+  "object": "chat.completion",
+  "created": 1783428036,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: Memory [1] explicitly states the user attended Michael's engagement party on 2023-05-06. Memories [2] and [3] state the user attended her cousin's wedding on 2023-06-15. Comparing dates, May 6 is earlier than June 15, so Michael's engagement party occurred first.\n\nAnswer: Michael's engagement party happened first.",
+        "reasoning_content": "We need to answer: Which event happened first, cousin's wedding or Michael's engagement party? Based on memories, Michael's engagement party was on 2023-05-06 (memory [1]). Cousin's wedding was on 2023-06-15 (memories [2] and [3]). So Michael's engagement party (May 6) happened before cousin's wedding (June 15). Answer: Michael's engagement party happened first."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1073,
+    "completion_tokens": 174,
+    "total_tokens": 1247,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 93
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 817
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

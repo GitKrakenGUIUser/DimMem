@@ -1,0 +1,104 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-05-29 11:41:01
+content: On 2023-05-29, the user asked the assistant to identify the specific Buddhist sutta that prohibits monks from giving food to naked ascetics.
+
+[2]
+source_time: 2023-05-20 14:18:02
+content: The user wore their favourite yoga pants to the gym on 2023-05-18.
+
+[3]
+source_time: 2023-05-20 15:48:02
+content: The user started participating in the choir at St. Mary's Church, with their first time on October 15th.
+
+[4]
+source_time: 2023-05-21 10:01:01
+content: The user plans to play Apex Legends on 2023-05-21 with friends and asked for tips on playing Wraith and Octane.
+
+[5]
+source_time: 2023-05-30 00:00:00.500000
+content: User wants a clinic within one hour drive from home.
+reason: previous clinic took two hours
+
+[6]
+source_time: 2023-05-27 09:38:02
+content: On 2023-05-27, the user sought inspiring quotes about forgiveness after recently hearing a sermon on the topic.
+reason: heard a sermon about forgiveness
+purpose: find inspiring quotes
+
+[7]
+source_time: 2023-05-30 00:00:00
+content: User needs to reschedule a follow-up doctor appointment and wants to find a nearby clinic.
+reason: previous clinic was two hours away
+purpose: find a closer clinic
+
+[8]
+source_time: 2023-05-27 09:38:01.500000
+content: On 2023-05-27, the user engaged in a discussion about women's empowerment in Islamic societies, focusing on entrepreneurship and economic empowerment.
+
+[9]
+source_time: 2023-05-27 14:30:00
+content: On 2023-05-27, the user expressed being moved by the passage in Romans 8 about not being separated from God's love.
+
+[10]
+source_time: 2023-05-27 09:38:00.500000
+content: On 2023-05-27, the user asked for details to make Herby Parmesan Popcorn, including the amount of popcorn kernels and the process of combining ingredients.
+
+[11]
+source_time: 2023-05-27 09:38:01
+content: On 2023-05-27, the user asked about adding garlic powder to the herb mixture of Herby Parmesan Popcorn for extra flavor.
+purpose: add extra flavor
+
+[12]
+source_time: 2023-05-22 13:12:00.500000
+content: User struggles to resist checking their phone in the evenings while trying to limit screen time.
+
+[13]
+source_time: 2023-05-26 12:14:00
+content: User moved into a new apartment approximately three months before 2023-05-26, i.e., around February 2023.
+
+[14]
+source_time: 2023-05-27 09:38:02.500000
+content: On 2023-05-27, the user recalled attending a Bible study group at their friend Emily's house where they discussed forgiveness and brought homemade cookies.
+purpose: discuss forgiveness
+
+[15]
+source_time: 2023-05-20 23:43:00.500000
+content: User had a doctor's appointment on 2023-05-15; left home at 7 AM, took a half-day off work, and returned to the office around 1:00 PM.
+reason: doctor's appointment
+
+Now answer the question:
+User Question:What time did I reach the clinic on Monday?
+Question Date:2023/05/30 (Tue) 22:10

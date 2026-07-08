@@ -1,0 +1,66 @@
+{
+  "query_text": "What is the total weight of the new feed the user purchased between 2023/03/30 and 2023/05/30?",
+  "query_anchor": "What is the total weight of the new feed the user purchased between 2023/03/30 and 2023/05/30?",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "between 2023/03/30 and 2023/05/30",
+    "location": "",
+    "keywords": [
+      "new feed",
+      "purchased"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "What is the total weight of the new feed the user purchased between 2023/03/30 and 2023/05/30?",
+      "keywords": [
+        "new feed",
+        "purchased"
+      ],
+      "query_terms": [
+        "what",
+        "is",
+        "the",
+        "total",
+        "weight",
+        "of",
+        "new",
+        "feed",
+        "user",
+        "purchased",
+        "between",
+        "2023",
+        "03",
+        "30",
+        "and",
+        "05"
+      ]
+    },
+    "structured": {
+      "query_text": "What is the total weight of the new feed the user purchased between 2023/03/30 and 2023/05/30?",
+      "rewrite": "What is the total weight of the new feed the user purchased between 2023/03/30 and 2023/05/30?",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "What is the total weight of the new feed the user purchased between 2023/03/30 and 2023/05/30?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {
+        "time": [
+          "between 2023/03/30 and 2023/05/30"
+        ]
+      },
+      "keywords": [
+        "new feed",
+        "purchased"
+      ],
+      "canonical_text": "What is the total weight of the new feed the user purchased between 2023/03/30 and 2023/05/30?"
+    },
+    "minilm": {
+      "query_text": "What is the total weight of the new feed the user purchased between 2023/03/30 and 2023/05/30?"
+    }
+  }
+}

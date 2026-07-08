@@ -1,0 +1,235 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-04-17T00:04:00.500000, Mon] 1.User: It's amazing to think that the Emancipation Proclamation was issued over 150 years ago and yet racial discrimination is still a major issue in our society today.
+[2023-04-17T00:04:01, Mon] 2.User: It's frustrating to see that progress has been made but so much more still needs to be done. What can we do as individuals to help fight against racism and discrimination?
+[2023-04-17T01:36:00, Mon] 3.User: This is the third content. Also, provide me with the headings of the third content.
+I only want you to reply "acknowledged" to remember the third content. I will give you the next content after you acknowledge the third content. 
+
+WHAT ARE SUBCONTRACTOR STATEMENTS AND WHAT TO DO ABOUT THEM?
+Q: A NSW business can be liable for the business’s contractor’s liability for NSW payroll tax, wages and workers compensation insurance premiums of the contractor unless the business complies with the subcontractor rules.
+
+A: The NSW industrial relations, payroll tax and workers compensation insurance laws potentially expose businesses that retain contractors to the contractor’s payroll tax, wages and workers compensation insurance liabilities.
+
+Each of the laws that regulate the obligation to pay wages, payroll tax and workers compensation insurance make a business liable for their contractors wages, payroll tax and workers compensation insurance liabilities in respect only of the work done under the contract if:
+
+the contractor does not satisfy them; and
+
+the business did not get a subcontractor statement from the contractor that relates to the period for which work has been done.
+
+Q: In what situations will these rules apply?
+
+A: These rules apply to all contracts where work is being carried out after 1 July 2003 even if the contract was entered before then and:
+
+there is a contract for work (whether oral or in writing) between a business and a contractor; and
+
+the contractor employs or is deemed to employ workers who carry out the work; and
+the work done is in connection with the business of the business that retained the contractor.
+
+Q: When don’t these rules apply?
+
+A: There rules do not apply:
+where a contractor is in receivership, being wound up, or is bankrupt and payments under the contract are being made by the business to the receiver, liquidator or trustee in bankruptcy; or
+
+where a business has contracted for work to be carried out and that work does not relate the business of the business, for example it may be for work on a residence of a director
+
+Q: At what times must the subcontractor statement be given?
+
+A: The subcontractor statement must be given for each period for which work is actually done and technically, it does not matter if it has not been given before the work has been done.
+
+However, it is best that a statement be given before any work is done and that fresh statements are obtained if work continues beyond the period to which the earlier statement relates.
+
+Q: What is a subcontractor?
+
+A: The legislation defines “subcontractor” in broad terms. In short, it is an entity engaged to carry out work under a contract.
+
+However, the liability of a business for pay roll tax, wages and workers compensation insurance premiums will not arise where the subcontractor is a sole trader or a partnership without employees. Although there may still be the obligation to get a statement.
+
+Q: Is there an equivalent law in each state or territory of Australia?
+
+A: There is no equivalent law in the other states or territories that permits for subcontractor statements. However, there are for example laws in the other states and territories which deem a business to be jointly and severally liable to pay workers compensation with their contractors.
+
+The practical implication of that is that there is no way to get out of these unpaid pay-roll tax, wages and workers compensation insurance premium obligations in states and territories other than NSW.
+
+Q: What happens if a subcontractor statement is knowingly false?
+
+A: A subcontractor statement provided by a contractor will not relieve a business of liability if at the time the statement was provided the business believed the statement to be false.
+
+Q: How long must the subcontractor statement be kept for?
+
+A: A business must keep a copy of the subcontractor statement for at least 5 years (payroll tax) 6 years (wages) and 7 years (workers compensation).
+
+If a subcontractor statement relates to all 3 items, it will need to be kept for 7 years.
+
+Q: Does the subcontractor statement exclude liability if the contractor is actually an employee?
+
+A: A business will need to ensure that its contractors are not deemed employees because of their particular relationship with the business. If that happened, the business could not avoid these liabilities by using a subcontractor statement.
+
+Suggested action by businesses as a result of these laws
+
+Businesses should review their contracts with their contractors:
+
+to ensure that they require subcontractor statements to be given
+
+to permit for termination of a contract when a subcontractor statement is not given
+so that it is clear to the contractor that the business has no obligation to pay any money due under the contract for the period for which a subcontractor statement has not been given (or any penalty or other fees for late payment of that money) (however each of the 3 laws do make some provision for this if the contract does not deal with it)
+[2023-04-17T01:36:00.500000, Mon] 4.User: This is the fourth content. Also, provide me with the headings of the fourth content.
+I only want you to reply "acknowledged" to remember the fourth content. I will give you the next content after you acknowledge the fourth content. 
+How Do Subcontractor Statements Work?
+A subcontractor statement is a written contract between a subcontractor and principal contractor. It is provided by a subcontractor and applies to specified periods of subcontracted work, most commonly performing work on a construction site. 
+
+Purpose of Subcontractor Statements
+Through subcontractor statements, subcontractors declare that they have met insurance premium payment, payroll tax payment and remuneration obligations. 
+
+Subcontractor statements also give the subcontractor the right to work on the principal contractor’s project, be paid for working on the project and take full responsibility in case of non-compliance with the law.
+
+What is included in a Subcontractor Statement?
+A subcontractor statement may include a subcontractor agreeing to the following: 
+
+You have paid and compensated your employed workers with appropriate insurance premiums.
+You have paid your employees with their respective payroll taxes for their work.
+You have paid remuneration, or the amount payable relevant to the employees of the project.
+An example of a subcontractor statement is available on the NSW government website.
+
+Do I need to provide/obtain a Subcontractor Statement?
+A subcontractor statement must be submitted to the relevant principal contractor in order to comply with three laws; Workers Compensation Act 1987, Payroll Tax Act 2007, and the Industrial Relations Act 1996. 
+
+As a principal contractor, you should make sure you obtain a subcontractor statement from the subcontractor that relates to the period for which work has been done, otherwise you may face liability for the subcontractor’s obligations. 
+
+As a subcontractor, you should make sure the subcontractor statement you provide is trustworthy. If information you stated in the subcontractor statement is false, then you may be subject to an offence.
+
+Consequences of failing to provide/obtain a Subcontractor Statement
+Two main consequences of failing to provide a subcontractor statement are:
+
+The principal contractor may be liable for the payment of the workers compensation premiums, payroll tax and wages due or payable by the subcontractor.
+The principal contractor may withhold payment to a subcontractor until the subcontractor provides a subcontractor statement.
+Key Takeaways
+A subcontractor statement is a written contract provided by a subcontractor to a principal contractor that applies to specified periods of subcontracted work. It is a declaration that the subcontractor has met their insurance premium payment, payroll tax payment and remuneration obligations.
+
+Should you require further legal advice please contact OpenLegal by filling in the form on this page or calling 1300 982 068.
+[2023-04-18T19:35:00, Tue] 5.User: I'm trying to plan a trip to Austin, Texas, and I was wondering if you could recommend some good restaurants near the Omni Barton Creek Resort & Spa, where I stayed last week for a friend's wedding.
+[2023-04-18T19:35:00.500000, Tue] 6.User: I'm actually thinking of planning a day trip to nearby Hill Country. Do you know any scenic drives or wineries that are worth visiting in the area?
+[2023-04-18T19:35:01, Tue] 7.User: I actually stayed at the Omni Barton Creek Resort & Spa last week for a friend's wedding, and I was really impressed by the beautiful hill country views from my room. I was thinking of exploring more of the area, and your recommendations really helped. I'm particularly interested in visiting some wineries. Do you think I could fit in two wineries and a scenic drive in a day, or would that be too rushed?
+[2023-04-18T19:35:01.500000, Tue] 8.User: I think I'll go with Option 1, the relaxed pace. I'd rather enjoy the scenic drive and the wineries without feeling rushed. Do you think I should make reservations at the wineries in advance, or is it okay to just show up?
+[2023-04-18T19:35:02, Tue] 9.User: I think I'll make a reservation for a wine tasting and tour at Driftwood Estate Winery and Duchman Family Winery. That way, I can ensure a smooth and enjoyable experience. Thanks for the advice!
+[2023-04-18T19:35:02.500000, Tue] 10.User: I'm planning to grab lunch at one of the wineries or nearby restaurants. Do you have any recommendations for good food in the area, or should I just ask the wineries for suggestions?
+[2023-04-18T05:48:00, Tue] 11.User: Are there any specific initiatives in place to manage population growth in Walsall?
+[2023-04-18T05:48:00.500000, Tue] 12.User: Can you tell me how successful these initiatives have been in managing population growth in other cities?
+[2023-04-18T05:48:01, Tue] 13.User: Interesting examples! Can you tell me more about the housing situation in Walsall? Is affordable housing readily available?
+[2023-04-18T05:48:01.500000, Tue] 14.User: It's good to know that Walsall is committed to affordable housing options. Do they have any plans to introduce measures to help first-time buyers get on the property ladder?
+[2023-04-18T05:48:02, Tue] 15.User: I don't think these measures are enough. I'm worried that first-time buyers like myself will continue to struggle to afford a home in Walsall. Are there any other options available?

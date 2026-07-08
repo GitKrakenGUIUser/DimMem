@@ -1,0 +1,32 @@
+{
+  "id": "d8e667b6-ad5e-4023-a761-685df933b0bf",
+  "object": "chat.completion",
+  "created": 1783427860,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\":\"CORRECT\"}",
+        "reasoning_content": "We need to compare the gold answer \"2\" with the generated answer \"2\". They are identical. So it's correct. Explanation: The generated answer matches the gold answer exactly. Label: CORRECT."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 400,
+    "completion_tokens": 49,
+    "total_tokens": 449,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 42
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 144
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

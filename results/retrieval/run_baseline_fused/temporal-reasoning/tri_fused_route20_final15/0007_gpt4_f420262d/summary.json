@@ -1,0 +1,526 @@
+{
+  "parse_mode": "fused",
+  "retrieval_method": "tri_fused_route20_final15",
+  "question_type": "temporal-reasoning",
+  "sample_id": "0007_gpt4_f420262d",
+  "query_text": "What airline did the user fly with on Valentine's Day?",
+  "route_top_k": 20,
+  "final_top_k": 15,
+  "record_count": 188,
+  "fused_candidate_count_before_final_cut": 41,
+  "final_top_record_count": 15,
+  "output_dir": "/home/bowenzheng/projects/DimMemTest-test/DimMem/results/retrieval/run_baseline_fused/temporal-reasoning/tri_fused_route20_final15/0007_gpt4_f420262d",
+  "top_records": [
+    {
+      "rank": 1,
+      "score": 7.258820442150919,
+      "memory_type": "profile",
+      "content": "The user values seat selection and amenities when choosing an airline.",
+      "source_boundary_id": "12_0125",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 1,
+      "retrieval_score": 7.258820442150919,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 1,
+          "score": 7.258820442150919
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.258820442150919,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 2,
+      "score": 7.033639535689842,
+      "memory_type": "episodic",
+      "content": "The user plans to host a sports-themed party with nachos, sliders, caprese skewers, beer, soda, Game Day Punch, multiple TV stations, and a squares game.",
+      "source_boundary_id": "17_0178",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 2,
+      "retrieval_score": 7.033639535689842,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 2,
+          "score": 7.033639535689842
+        },
+        {
+          "method": "structured",
+          "rank": 19,
+          "score": 0.24999999999999997
+        }
+      ],
+      "score_components": {
+        "bm25_score": 7.033639535689842,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 3,
+      "score": 6.512753669313268,
+      "memory_type": "profile",
+      "content": "The user wants to be notified when an upgrade becomes available on their flights.",
+      "source_boundary_id": "12_0129",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 3,
+      "retrieval_score": 6.512753669313268,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 3,
+          "score": 6.512753669313268
+        }
+      ],
+      "score_components": {
+        "bm25_score": 6.512753669313268,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 4,
+      "score": 5.683588622633218,
+      "memory_type": "episodic",
+      "content": "The user inquired about the weather in Paris in March 2023 to determine what to pack.",
+      "source_boundary_id": "18_0186",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 4,
+      "retrieval_score": 5.683588622633218,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 4,
+          "score": 5.683588622633218
+        }
+      ],
+      "score_components": {
+        "bm25_score": 5.683588622633218,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 5,
+      "score": 4.369785763656896,
+      "memory_type": "fact",
+      "content": "The user's friend Rachel is a sales associate at Athleta and keeps the user informed about Athleta's promotions.",
+      "source_boundary_id": "8_0070",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 5,
+      "retrieval_score": 4.369785763656896,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 5,
+          "score": 4.369785763656896
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.369785763656896,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 6,
+      "score": 4.086063686306337,
+      "memory_type": "episodic",
+      "content": "User had a terrible experience with the in-flight entertainment on an American Airlines flight from New York to Los Angeles on 2023-02-20.",
+      "source_boundary_id": "14_0144",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 6,
+      "retrieval_score": 4.086063686306337,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 6,
+          "score": 4.086063686306337
+        },
+        {
+          "method": "structured",
+          "rank": 6,
+          "score": 0.3
+        },
+        {
+          "method": "minilm",
+          "rank": 4,
+          "score": 0.5549871238283697
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.086063686306337,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 7,
+      "score": 4.0390683777957666,
+      "memory_type": "episodic",
+      "content": "User commented on a fashion influencer's post about summer dresses and discussed prices and availability.",
+      "source_boundary_id": "7_0055",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 7,
+      "retrieval_score": 4.0390683777957666,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 7,
+          "score": 4.0390683777957666
+        },
+        {
+          "method": "structured",
+          "rank": 16,
+          "score": 0.24999999999999997
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.0390683777957666,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 8,
+      "score": 4.031615425362251,
+      "memory_type": "fact",
+      "content": "The user was accepted into a Master's program in International Relations at the University of Melbourne a few months prior to November 2022 and is planning to move to Melbourne.",
+      "source_boundary_id": "3_0024",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 8,
+      "retrieval_score": 4.031615425362251,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 8,
+          "score": 4.031615425362251
+        }
+      ],
+      "score_components": {
+        "bm25_score": 4.031615425362251,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 9,
+      "score": 3.85883277286045,
+      "memory_type": "episodic",
+      "content": "The user is experiencing difficulty with the bank's online application system for opening an Australian bank account and is unsure about proof of address requirements since they haven't moved to Melbourne yet.",
+      "source_boundary_id": "3_0026",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 9,
+      "retrieval_score": 3.85883277286045,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 9,
+          "score": 3.85883277286045
+        },
+        {
+          "method": "structured",
+          "rank": 14,
+          "score": 0.24999999999999997
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.85883277286045,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 10,
+      "score": 3.780704809038384,
+      "memory_type": "profile",
+      "content": "The user's favorite food at the Super Bowl party was nachos.",
+      "source_boundary_id": "17_0179",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 10,
+      "retrieval_score": 3.780704809038384,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 10,
+          "score": 3.780704809038384
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.780704809038384,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 11,
+      "score": 3.7650975593564517,
+      "memory_type": "episodic",
+      "content": "The user watched the Duke vs. North Carolina college basketball game on February 1, 2023 at home with roommate Rachel.",
+      "source_boundary_id": "17_0177",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 11,
+      "retrieval_score": 3.7650975593564517,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 11,
+          "score": 3.7650975593564517
+        },
+        {
+          "method": "structured",
+          "rank": 18,
+          "score": 0.24999999999999997
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.7650975593564517,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 12,
+      "score": 3.7434788419090945,
+      "memory_type": "profile",
+      "content": "The user is considering whether to focus on earning more miles with American Airlines or diversify miles across different airlines.",
+      "source_boundary_id": "8_0079",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 12,
+      "retrieval_score": 3.7434788419090945,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 12,
+          "score": 3.7434788419090945
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.7434788419090945,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 13,
+      "score": 3.676458747869126,
+      "memory_type": "fact",
+      "content": "User's 2018 Toyota Corolla had 23,000 miles when it was due for a synthetic oil change on 2023-02-25.",
+      "source_boundary_id": "16_0163",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 13,
+      "retrieval_score": 3.676458747869126,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 13,
+          "score": 3.676458747869126
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.676458747869126,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 14,
+      "score": 3.6086059917754296,
+      "memory_type": "profile",
+      "content": "User engages more on Instagram with visual content and on Twitter in discussions and debates using hashtags.",
+      "source_boundary_id": "7_0060",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 14,
+      "retrieval_score": 3.6086059917754296,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 14,
+          "score": 3.6086059917754296
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.6086059917754296,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    },
+    {
+      "rank": 15,
+      "score": 3.5160077236003096,
+      "memory_type": "fact",
+      "content": "User's salsa instructor is named Maria.",
+      "source_boundary_id": "10_0101",
+      "retrieval_method": "bm25",
+      "retrieval_rank": 15,
+      "retrieval_score": 3.5160077236003096,
+      "fusion_sources": [
+        {
+          "method": "bm25",
+          "rank": 15,
+          "score": 3.5160077236003096
+        }
+      ],
+      "score_components": {
+        "bm25_score": 3.5160077236003096,
+        "bm25_k1": 1.2,
+        "bm25_b": 0.75,
+        "query_fields": [
+          "query_anchor",
+          "dimension.keywords"
+        ],
+        "memory_fields": [
+          "content",
+          "dimension.reason",
+          "dimension.purpose",
+          "dimension.keywords"
+        ]
+      }
+    }
+  ],
+  "elapsed_seconds": 0.2742760181427002
+}

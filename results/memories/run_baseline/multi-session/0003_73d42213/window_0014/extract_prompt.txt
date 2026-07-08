@@ -1,0 +1,143 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-27T22:16:00, Sat] 1.User: I'm looking for some inspiring quotes about forgiveness. I was thinking about a sermon I heard recently and it really stuck with me. Do you have any quotes that might resonate with me?
+[2023-05-27T22:16:00.500000, Sat] 2.User: I loved the part about forgiveness being a constant attitude. It made me think of a recent Bible study group I attended at my friend Emily's house, where we discussed the importance of forgiveness in our daily lives. I brought some homemade cookies to share, and it was a great way to bond over our shared values. Do you have any quotes that might relate to applying forgiveness in our relationships with others?
+[2023-05-27T22:16:01, Sat] 3.User: Yeah, I was really moved by the passage about not being separated from God's love in Romans 8. It's amazing how much comfort and strength we can find in those words.
+[2023-05-27T22:16:01.500000, Sat] 4.User: I actually like to take notes on my phone during sermons or Bible studies, and then reflect on them later. I also like to share inspiring quotes or passages on my social media stories to encourage my friends and family. It's a great way to stay connected with others and keep the conversation going about our faith.
+[2023-05-27T22:16:02, Sat] 5.User: I've had a few instances where someone reached out to me after I shared a quote or passage on social media, and we ended up having a great conversation about faith or a specific Bible study. It's always amazing to see how God can use social media to connect people and spark meaningful conversations.
+
+As for Bible study apps and resources, I really like using the YouVersion Bible app. It has so many great features, like devotionals, reading plans, and study notes. I also enjoy using the Bible Gateway website, which has a vast library of commentaries, devotionals, and study resources.
+
+What about you? Do you have any favorite Bible study apps or resources that you'd recommend?
+[2023-05-27T22:16:02.500000, Sat] 6.User: I think the most important aspect of Bible study is applying the scripture to daily life. While understanding the historical context is important, and it's fascinating to learn about the cultural and historical background of the Bible, ultimately, I believe the Bible is meant to be lived out in our daily lives.
+
+For me, Bible study is not just about intellectual understanding, but about transformation. It's about allowing God's word to shape my thoughts, attitudes, and actions, and to inform my decisions and relationships. When I apply scripture to my daily life, I feel more connected to God, and I'm able to live out my faith in a more intentional and meaningful way.
+
+Plus, when we apply scripture to our daily lives, it becomes more relatable and relevant to others. I think that's why my cookies at Emily's Bible study group were such a hit - it was a small way to show God's love and care for others, and to put scripture into practice.
+
+What do you think? Do you
+[2023-05-28T09:34:00, Sun] 7.User: How has the legal recognition of same-sex marriage impacted the custody battles involving same-sex parents?
+[2023-05-28T09:34:00.500000, Sun] 8.User: Have there been any notable cases where same-sex parents faced discriminatory legal barriers, despite the legal recognition of same-sex marriage?
+[2023-05-28T09:34:01, Sun] 9.User: It's sad to see that even with the legal recognition of same-sex marriage, legal battles and discriminatory barriers are still being faced by same-sex parents. What more can be done to ensure equal rights for them?
+[2023-05-28T09:34:01.500000, Sun] 10.User: I agree that it's important to educate people about the rights of same-sex parents, but how can we change the minds of those who are fundamentally opposed to same-sex marriage and parenting? It seems like there will always be people who refuse to accept it, no matter what the law says.
+[2023-05-28T09:34:02, Sun] 11.User: I appreciate your insights on this topic. In your opinion, do you think that same-sex parents face more challenges in custody battles compared to opposite-sex parents?
+[2023-05-28T15:02:00, Sun] 12.User: Could you recommend some mindfulness exercises for reducing stress and anxiety?
+[2023-05-28T15:02:00.500000, Sun] 13.User: I never seem to have enough time to do any of these mindfulness exercises. Can you recommend any that can be done quickly?
+[2023-05-28T15:02:01, Sun] 14.User: Hmm, these seem like too much work. Can't I just take a bubble bath or watch a movie to destress?
+[2023-05-28T18:26:00, Sun] 15.User: I'm thinking of getting a heart rate monitor for my workouts, can you recommend some good options? By the way, I've been using my fitness tracker for the past 6 months to track my daily step count and calorie burn, and it's been really helpful in keeping me motivated to reach my daily goal of 10,000 steps.

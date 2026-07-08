@@ -1,0 +1,32 @@
+{
+  "id": "f106ad3f-29b2-492f-9a05-fb4ee2eb6021",
+  "object": "chat.completion",
+  "created": 1783356308,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"the number of bikes the user serviced or planned to service in March 2023\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"bikes\", \"service\", \"plan\"],\n    \"time\": \"between 2023/03/01 and 2023/03/31\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"\"\n}",
+        "reasoning_content": "We need to parse the question: \"How many bikes did I service or plan to service in March?\" The question date is 2023/03/20. So March refers to March 2023. The user wants a count of bikes that were serviced or planned to be serviced in March. This is a retrieval for episodic events (servicing bikes) and possibly plans. Need to rewrite as retrieval sentence: \"the number of bikes the user serviced or planned to service in March 2023\". need_assistant_context: false because no reference to assistant output. target_memory_type: episodic (events, services, plans). keywords: bikes, service, plan. time: \"between 2023/03/01 and 2023/03/31\" or \"in March 2023\". Since question date is March, we can use \"in March 2023\" as explicit constraint. location: none. answer_dim: \"\" because it requires calculation (count). So output JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 688,
+    "completion_tokens": 309,
+    "total_tokens": 997,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 205
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 48
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "2fb9a778-9ec1-416e-be05-7d00e22f7534",
+  "object": "chat.completion",
+  "created": 1783356440,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"In our previous chat, we discussed the Lost Temple of the Djinn one-shot. Remind me how many mummies the party will face in the temple.\",\n  \"need_assistant_context\": true,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\", \"fact\"],\n    \"keywords\": [\"Lost Temple of the Djinn\", \"mummies\", \"party\"],\n    \"time\": \"\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"content\"\n}",
+        "reasoning_content": "We need to parse the question: \"I'm going back to our previous chat about the Lost Temple of the Djinn one-shot. Can you remind me how many mummies the party will face in the temple?\"\n\nGiven question date: 2023/05/30 (Tue) 23:50.\n\nFirst, query_anchor: rewrite as retrieval-friendly sentence. \"I'm going back to our previous chat\" -> refer to previous conversation. So: \"In our previous chat, we discussed the Lost Temple of the Djinn one-shot. Remind me how many mummies the party will face in the temple.\"\n\nneed_assistant_context: true because it mentions \"our previous chat\", \"remind me\", and \"you\" (implied assistant context). So true.\n\ndimension.target_memory_type: This seems like a specific event details (one-shot) and fact about number of mummies. Could be episodic (specific event) or fact. Multiple: [\"episodic\", \"fact\"]? But the question is about a planned event (a one-shot). Probably episodic. Also maybe fact about the number. I'll put [\"episodic\", \"fact\"].\n\nkeywords: key entities: \"Lost Temple of the Djinn\" (the one-shot), \"mummies\", \"party\". Also \"temple\". So keywords: [\"Lost Temple of the Djinn\", \"mummies\", \"party\"].\n\ntime: No explicit time constraint in question. The question date is given but the question is about previous chat (not about time). So leave \"\".\n\nlocation: Not explicit. The temple is a location but it's part of the game. The question asks about number of mummies, not location. So leave \"\".\n\nanswer_dim: The question asks \"how many mummies\" - that is a number, which is a fact content. But it's a specific number. That would be \"content\" (since it's the content of the memory about the one-shot). Alternatively, \"keywords\" could be for key objects? No, answer_dim is the memory field corresponding to the answer. The answer is the number, which is part of the content. So \"content\".\n\nBut careful: The question is asking to remind me of a number. That is a fact. So answer_dim = \"content\".\n\nThus JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 710,
+    "completion_tokens": 584,
+    "total_tokens": 1294,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 473
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 70
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,100 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-05-20 03:59:00
+content: User purchased a new camera bag on 2023-02-22 that is more compact and easier to carry than their old one.
+
+[2]
+content: User plans to bring a backpack containing water, snacks, sunscreen, and a first aid kit on the trip.
+
+[3]
+source_time: 2023-05-26 05:48:01
+content: The user requested examples from 'The Port-Royal Grammar', Kant's 'Critique of Pure Reason', and Schleicher's 'Stammbaumtheorie' to illustrate their views on language, meaning, and evolution.
+reason: to illustrate views on language, meaning, and evolution
+purpose: to obtain examples from these works
+
+[4]
+content: User owns hiking boots, outdoor clothing, and a camera for capturing scenery and wildlife.
+
+[5]
+source_time: 2023-05-28 07:36:01.500000
+content: The user went to Trader Joe's with their sister around 2023-05-21 and spent about $75 on groceries.
+
+[6]
+source_time: 2023-05-25 18:17:00.500000
+content: The user's dog is named Max, and the user currently uses a toothbrush from the vet's office as of 2023-05-25.
+
+[7]
+source_time: 2023-05-26 05:04:00.500000
+content: The user built a new gaming PC with a friend's help, and it runs Cyberpunk 2077 and Assassin's Creed Valhalla smoothly.
+
+[8]
+source_time: 2023-05-23 00:22:01
+content: The user previously created a content calendar for their cousin's art exhibition.
+
+[9]
+content: User is considering buying a portable charger for the upcoming road trip.
+
+[10]
+source_time: 2023-05-28 07:36:00
+content: The user wants to organize their grocery expenses from the past few weeks and track savings from coupons and discounts.
+purpose: track spending and savings
+
+[11]
+source_time: 2023-05-25 10:49:01
+content: The user owns a pair of new earbuds.
+
+[12]
+source_time: 2023-05-20 08:57:00
+content: User plans to try a new recipe for chicken enchiladas on the weekend of 2023-05-20.
+
+[13]
+source_time: 2023-05-25 18:17:01
+content: The user chose the Oxyfresh Pet Toothbrush for Max's dental care because of its ultra-soft bristles as of 2023-05-25.
+reason: ultra-soft bristles are gentle on Max's gums
+purpose: for Max's dental care
+
+[14]
+source_time: 2023-05-27 06:15:01
+content: User replaced the goat water trough with a new one that has a built-in filter on 2023-05-27.
+
+[15]
+source_time: 2023-05-24 23:34:01.500000
+content: User is considering buying guitar accessories and a guitar-themed gift basket for their brother's birthday.
+reason: brother's birthday
+purpose: to surprise brother with a gift
+
+Now answer the question:
+User Question:What was the discount I got on my first purchase from the new clothing brand?
+Question Date:2023/05/30 (Tue) 23:15

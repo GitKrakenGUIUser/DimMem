@@ -1,0 +1,105 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-05-20 00:12:00.500000
+content: User plans to host a party for March Madness games and intends to recreate the best nachos from a previous game-watching party.
+
+[2]
+source_time: 2023-05-29 18:35:01
+content: The user plays Dungeons & Dragons and requested a one-shot adventure for level 8 characters with a surprise twist, cool layer actions, and detailed traps.
+purpose: to run a D&D game
+
+[3]
+source_time: 2023-05-24 15:45:02
+content: The user recently attended a spiritual retreat at a local Buddhist temple, which included meditation and yoga sessions that helped with relaxation and focus.
+
+[4]
+source_time: 2023-05-28 18:43:00
+content: On 2023-05-29, the user asked about common criticisms of political correctness and how proponents have responded.
+
+[5]
+source_time: 2023-05-26 04:04:00
+content: The user is planning a dinner party this weekend and needs Italian recipes for 8 people.
+reason: planning a dinner party
+purpose: to find Italian recipes for 8 people
+
+[6]
+source_time: 2023-05-20 07:17:02
+content: User believes that traditional financial transactions will persist despite blockchain technology.
+
+[7]
+source_time: 2023-05-27 17:19:00
+content: The user recently replaced the goats' water trough with a new one that has a built-in filter.
+purpose: provide clean water for goats
+
+[8]
+source_time: 2023-05-30 01:04:00.500000
+content: The user asked about how to prevent router overheating.
+
+[9]
+source_time: 2023-05-20 05:22:00
+content: User's favorite pair of Vans shoes was repaired in the week prior to 2023-05-20.
+
+[10]
+source_time: 2023-05-24 19:11:00.500000
+content: The user is interested in the decline and fall of historical empires, using real-world examples.
+
+[11]
+source_time: 2023-05-26 04:04:00.500000
+content: The user is looking for a recipe to recreate a pasta sauce similar to one they had at Sophia's house.
+purpose: to recreate the sauce
+
+[12]
+source_time: 2023-05-30 01:04:01
+content: The user wants to know how to check their Asus RT-AC68U router's logs.
+reason: to diagnose the connection drop issue
+purpose: to diagnose the connection drop issue
+
+[13]
+source_time: 2023-05-20 00:12:00
+content: User watched a Duke vs. North Carolina college basketball game with their roommate, had delicious nachos, and the atmosphere at the location was electric.
+
+[14]
+source_time: 2023-05-29 04:26:02
+content: The user plans to attend a local production of 'The Phantom of the Opera'.
+
+[15]
+source_time: 2023-05-29 18:35:00.500000
+content: The user is planning a weekend trip to Cherokee, North Carolina to visit the Great Smoky Mountains National Park, the Oconaluftee Indian Village, and the Cherokee Heritage Center, aiming to learn about the Eastern Band of Cherokee Indians.
+reason: interest in Great Smoky Mountains and Cherokee culture
+purpose: to learn about the Eastern Band of Cherokee Indians
+
+Now answer the question:
+User Question:I'm going back to our previous chat about the Lost Temple of the Djinn one-shot. Can you remind me how many mummies the party will face in the temple?
+Question Date:2023/05/30 (Tue) 23:50

@@ -1,0 +1,3347 @@
+{
+  "bm25": {
+    "mapped_query_analysis": {
+      "query_text": "What is the chronological order of the six museums the user visited, from earliest to latest?",
+      "keywords": [
+        "museums"
+      ],
+      "query_terms": [
+        "what",
+        "is",
+        "the",
+        "chronological",
+        "order",
+        "of",
+        "six",
+        "museums",
+        "user",
+        "visited",
+        "from",
+        "earliest",
+        "to",
+        "latest"
+      ]
+    },
+    "top_records": [
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user plans to use Artsy and ArtNet and local art museums to find contemporary artists.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "to discover contemporary artists",
+          "keywords": [
+            "Artsy",
+            "ArtNet",
+            "local art museums",
+            "contemporary artists"
+          ]
+        },
+        "entities": [
+          "Artsy",
+          "ArtNet",
+          "local art museums",
+          "contemporary artists"
+        ],
+        "embedding_text": "The user plans to use Artsy and ArtNet and local art museums to find contemporary artists.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0169",
+        "source_time": "2023-03-02 11:54:01",
+        "record_time": "2026-07-07T19:51:00.809917",
+        "score": 7.921917320803857,
+        "score_components": {
+          "bm25_score": 7.921917320803857,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User visited the Metropolitan Museum of Art and saw the golden mask of Pharaoh Tutankhamun, which impressed them, and took photos to remember the details.",
+        "dimension": {
+          "time": "",
+          "location": "Metropolitan Museum of Art",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Metropolitan Museum of Art",
+            "golden mask",
+            "Tutankhamun",
+            "ancient Egyptian artifacts"
+          ]
+        },
+        "entities": [
+          "Metropolitan Museum of Art",
+          "golden mask",
+          "Tutankhamun",
+          "ancient Egyptian artifacts"
+        ],
+        "embedding_text": "User visited the Metropolitan Museum of Art and saw the golden mask of Pharaoh Tutankhamun, which impressed them, and took photos to remember the details.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0111",
+        "source_time": "2023-02-20 22:50:01",
+        "record_time": "2026-07-07T19:51:00.809584",
+        "score": 6.371619555144905,
+        "score_components": {
+          "bm25_score": 6.371619555144905,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user visited the Metropolitan Museum of Art to see the Ancient Egyptian Artifacts exhibition and was impressed by the golden mask of Pharaoh Tutankhamun.",
+        "dimension": {
+          "time": "",
+          "location": "Metropolitan Museum of Art",
+          "reason": "",
+          "purpose": "to see the exhibition",
+          "keywords": [
+            "Metropolitan Museum of Art",
+            "Ancient Egyptian Artifacts",
+            "golden mask",
+            "Pharaoh Tutankhamun"
+          ]
+        },
+        "entities": [
+          "Metropolitan Museum of Art",
+          "Ancient Egyptian Artifacts",
+          "golden mask",
+          "Pharaoh Tutankhamun"
+        ],
+        "embedding_text": "The user visited the Metropolitan Museum of Art to see the Ancient Egyptian Artifacts exhibition and was impressed by the golden mask of Pharaoh Tutankhamun.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0172",
+        "source_time": "2023-03-02 11:54:02.500000",
+        "record_time": "2026-07-07T19:51:00.809934",
+        "score": 6.362156575769895,
+        "score_components": {
+          "bm25_score": 6.362156575769895,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user plans to visit the outer market of Tsukiji Fish Market from Shibuya.",
+        "dimension": {
+          "time": "",
+          "location": "Tsukiji Fish Market (outer market), Tokyo",
+          "reason": "",
+          "purpose": "visit Tsukiji outer market",
+          "keywords": [
+            "Tsukiji Fish Market",
+            "outer market",
+            "Shibuya"
+          ]
+        },
+        "entities": [
+          "Tsukiji Fish Market",
+          "outer market",
+          "Shibuya"
+        ],
+        "embedding_text": "The user plans to visit the outer market of Tsukiji Fish Market from Shibuya.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0161",
+        "source_time": "2023-02-26 07:33:01",
+        "record_time": "2026-07-07T19:51:00.809872",
+        "score": 5.409170445600827,
+        "score_components": {
+          "bm25_score": 5.409170445600827,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User plans to ask for feedback or advice from members of the 'Foodie Frenzy' group.",
+        "dimension": {
+          "time": "",
+          "location": "Foodie Frenzy group",
+          "reason": "",
+          "purpose": "to get feedback and advice",
+          "keywords": [
+            "feedback",
+            "advice",
+            "Foodie Frenzy group"
+          ]
+        },
+        "entities": [
+          "feedback",
+          "advice",
+          "Foodie Frenzy group"
+        ],
+        "embedding_text": "User plans to ask for feedback or advice from members of the 'Foodie Frenzy' group.",
+        "source_message_ids": [
+          "13"
+        ],
+        "source_boundary_id": "13_0124",
+        "source_time": "2023-02-22 00:44:02",
+        "record_time": "2026-07-07T19:51:00.809657",
+        "score": 5.40630074524145,
+        "score_components": {
+          "bm25_score": 5.40630074524145,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "On 2023-02-09, the user needed to order essential oils, specifically lavender oil, for their diffuser and asked for online store recommendations.",
+        "dimension": {
+          "time": "2023-02-09T04:57:01",
+          "location": "",
+          "reason": "",
+          "purpose": "to restock essential oils for diffuser",
+          "keywords": [
+            "essential oils",
+            "lavender oil",
+            "online stores"
+          ]
+        },
+        "entities": [
+          "essential oils",
+          "lavender oil",
+          "online stores"
+        ],
+        "embedding_text": "On 2023-02-09, the user needed to order essential oils, specifically lavender oil, for their diffuser and asked for online store recommendations.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0055",
+        "source_time": "2023-02-09 04:57:01",
+        "record_time": "2026-07-07T19:51:00.809255",
+        "score": 5.375848115011702,
+        "score_components": {
+          "bm25_score": 5.375848115011702,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "On 2023-02-10, the user planned to write an essay about ancient civilizations and visited the 'Ancient Egyptian Artifacts' exhibition, where they took photos of artifacts.",
+        "dimension": {
+          "time": "2023-02-10T22:26:00",
+          "location": "Metropolitan Museum of Art (possibly mistaken, but exhibition attended)",
+          "reason": "",
+          "purpose": "to research for an essay about ancient civilizations",
+          "keywords": [
+            "essay",
+            "ancient civilizations",
+            "Ancient Egyptian Artifacts exhibition",
+            "photos"
+          ]
+        },
+        "entities": [
+          "essay",
+          "ancient civilizations",
+          "Ancient Egyptian Artifacts exhibition",
+          "photos"
+        ],
+        "embedding_text": "On 2023-02-10, the user planned to write an essay about ancient civilizations and visited the 'Ancient Egyptian Artifacts' exhibition, where they took photos of artifacts.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0058",
+        "source_time": "2023-02-10 22:26:00",
+        "record_time": "2026-07-07T19:51:00.809274",
+        "score": 5.041613416766918,
+        "score_components": {
+          "bm25_score": 5.041613416766918,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User is considering upgrading to a 4K OLED TV from LG or Sony.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "upgrade TV",
+          "keywords": [
+            "4K OLED TV",
+            "LG",
+            "Sony",
+            "TV upgrade"
+          ]
+        },
+        "entities": [
+          "4K OLED TV",
+          "LG",
+          "Sony",
+          "TV upgrade"
+        ],
+        "embedding_text": "User is considering upgrading to a 4K OLED TV from LG or Sony.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0005",
+        "source_time": "2022-12-19 19:53:02.500000",
+        "record_time": "2026-07-07T19:51:00.808886",
+        "score": 4.782849450101234,
+        "score_components": {
+          "bm25_score": 4.782849450101234,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User plans to purchase a Dell XPS laptop from the Dell website and is looking for student discounts.",
+        "dimension": {
+          "time": "",
+          "location": "Dell website",
+          "reason": "",
+          "purpose": "purchase a new laptop",
+          "keywords": [
+            "Dell XPS",
+            "laptop",
+            "student discount",
+            "purchase plan"
+          ]
+        },
+        "entities": [
+          "Dell XPS",
+          "laptop",
+          "student discount",
+          "purchase plan"
+        ],
+        "embedding_text": "User plans to purchase a Dell XPS laptop from the Dell website and is looking for student discounts.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0004",
+        "source_time": "2022-12-19 19:53:02",
+        "record_time": "2026-07-07T19:51:00.808879",
+        "score": 4.659636873386207,
+        "score_components": {
+          "bm25_score": 4.659636873386207,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "fact",
+        "content": "The user is a fan of 'The Sandman' comic book series.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "The Sandman",
+            "comic book series",
+            "fan"
+          ]
+        },
+        "entities": [
+          "The Sandman",
+          "comic book series",
+          "fan"
+        ],
+        "embedding_text": "The user is a fan of 'The Sandman' comic book series.",
+        "source_message_ids": [
+          "4"
+        ],
+        "source_boundary_id": "4_0045",
+        "source_time": "2023-01-27 11:21:01.500000",
+        "record_time": "2026-07-07T19:51:00.809125",
+        "score": 4.262401894311981,
+        "score_components": {
+          "bm25_score": 4.262401894311981,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "profile",
+        "content": "User is interested in learning more about the history of space exploration.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "space exploration",
+            "history"
+          ]
+        },
+        "entities": [
+          "space exploration",
+          "history"
+        ],
+        "embedding_text": "User is interested in learning more about the history of space exploration.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0023",
+        "source_time": "2023-01-12 22:45:02",
+        "record_time": "2026-07-07T19:51:00.808994",
+        "score": 4.210963494412336,
+        "score_components": {
+          "bm25_score": 4.210963494412336,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "fact",
+        "content": "User is associated with GMBM LTD, a company that has patented technology for sea rafts made from inside-concreted bottoms of shipping containers, capable of movement on water and land, connectable into arrays with power lift adaptability and hydraulic freight and passenger elevators, aimed at reducing seaport congestion and providing alternative real estate.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "to reduce seaport congestion and provide an alternative to traditional real estate development",
+          "keywords": [
+            "GMBM LTD",
+            "sea rafts",
+            "shipping containers",
+            "patented technology",
+            "marine settlements",
+            "seaport congestion",
+            "real estate"
+          ]
+        },
+        "entities": [
+          "GMBM LTD",
+          "sea rafts",
+          "shipping containers",
+          "patented technology",
+          "marine settlements",
+          "seaport congestion",
+          "real estate"
+        ],
+        "embedding_text": "User is associated with GMBM LTD, a company that has patented technology for sea rafts made from inside-concreted bottoms of shipping containers, capable of movement on water and land, connectable into arrays with power lift adaptability and hydraulic freight and passenger elevators, aimed at reducing seaport congestion and providing alternative real estate.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0182",
+        "source_time": "2023-03-04 20:16:00",
+        "record_time": "2026-07-07T19:51:00.809994",
+        "score": 4.098306466132638,
+        "score_components": {
+          "bm25_score": 4.098306466132638,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user plans to visit Tokyo Tower from Shibuya.",
+        "dimension": {
+          "time": "",
+          "location": "Tokyo Tower, Tokyo, Japan",
+          "reason": "",
+          "purpose": "visit Tokyo Tower",
+          "keywords": [
+            "Tokyo Tower",
+            "Shibuya",
+            "visit"
+          ]
+        },
+        "entities": [
+          "Tokyo Tower",
+          "Shibuya",
+          "visit"
+        ],
+        "embedding_text": "The user plans to visit Tokyo Tower from Shibuya.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0160",
+        "source_time": "2023-02-26 07:33:00.500000",
+        "record_time": "2026-07-07T19:51:00.809866",
+        "score": 4.0641516066736125,
+        "score_components": {
+          "bm25_score": 4.0641516066736125,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User visited Tokyo Tower during a previous trip and posted a photo on Instagram that received significant engagement.",
+        "dimension": {
+          "time": "",
+          "location": "Tokyo Tower",
+          "reason": "",
+          "purpose": "to share the photo on Instagram",
+          "keywords": [
+            "Tokyo Tower",
+            "Instagram",
+            "engagement",
+            "photo"
+          ]
+        },
+        "entities": [
+          "Tokyo Tower",
+          "Instagram",
+          "engagement",
+          "photo"
+        ],
+        "embedding_text": "User visited Tokyo Tower during a previous trip and posted a photo on Instagram that received significant engagement.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0155",
+        "source_time": "2023-02-26 02:28:01",
+        "record_time": "2026-07-07T19:51:00.809837",
+        "score": 4.048531529730018,
+        "score_components": {
+          "bm25_score": 4.048531529730018,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "profile",
+        "content": "User is interested in learning more about the history of feminist art in the 1970s.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "feminist art",
+            "1970s",
+            "art history"
+          ]
+        },
+        "entities": [
+          "feminist art",
+          "1970s",
+          "art history"
+        ],
+        "embedding_text": "User is interested in learning more about the history of feminist art in the 1970s.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0024",
+        "source_time": "2023-01-12 22:45:02.500000",
+        "record_time": "2026-07-07T19:51:00.809000",
+        "score": 3.992462839436083,
+        "score_components": {
+          "bm25_score": 3.992462839436083,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "On 2023-02-13, the user had a breakthrough in therapy, realizing they had been carrying anger towards their emotionally abusive ex-partner, and felt overwhelmed and anxious.",
+        "dimension": {
+          "time": "2023-02-13",
+          "location": "therapy",
+          "reason": "realization of anger from emotional abuse",
+          "purpose": "to process emotions",
+          "keywords": [
+            "therapy breakthrough",
+            "anger",
+            "emotional abuse",
+            "ex-partner",
+            "anxiety"
+          ]
+        },
+        "entities": [
+          "therapy breakthrough",
+          "anger",
+          "emotional abuse",
+          "ex-partner",
+          "anxiety"
+        ],
+        "embedding_text": "On 2023-02-13, the user had a breakthrough in therapy, realizing they had been carrying anger towards their emotionally abusive ex-partner, and felt overwhelmed and anxious.",
+        "source_message_ids": [
+          "6"
+        ],
+        "source_boundary_id": "6_0064",
+        "source_time": "2023-02-13 08:28:00",
+        "record_time": "2026-07-07T19:51:00.809309",
+        "score": 3.9470519832596516,
+        "score_components": {
+          "bm25_score": 3.9470519832596516,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User plans to try taking breaks and celebrating small wins to improve motivation while working from home, starting on February 21, 2023.",
+        "dimension": {
+          "time": "2023-02-21",
+          "location": "home",
+          "reason": "to stay motivated",
+          "purpose": "improve motivation",
+          "keywords": [
+            "breaks",
+            "celebrating small wins",
+            "motivation",
+            "work from home"
+          ]
+        },
+        "entities": [
+          "breaks",
+          "celebrating small wins",
+          "motivation",
+          "work from home"
+        ],
+        "embedding_text": "User plans to try taking breaks and celebrating small wins to improve motivation while working from home, starting on February 21, 2023.",
+        "source_message_ids": [
+          "11"
+        ],
+        "source_boundary_id": "11_0103",
+        "source_time": "2023-02-20 05:59:01",
+        "record_time": "2026-07-07T19:51:00.809538",
+        "score": 3.9358685349333626,
+        "score_components": {
+          "bm25_score": 3.9358685349333626,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "profile",
+        "content": "User works from home during the COVID-19 pandemic and struggles with motivation and procrastination.",
+        "dimension": {
+          "time": "",
+          "location": "home",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "work from home",
+            "COVID-19",
+            "motivation",
+            "procrastination"
+          ]
+        },
+        "entities": [
+          "work from home",
+          "COVID-19",
+          "motivation",
+          "procrastination"
+        ],
+        "embedding_text": "User works from home during the COVID-19 pandemic and struggles with motivation and procrastination.",
+        "source_message_ids": [
+          "11"
+        ],
+        "source_boundary_id": "11_0102",
+        "source_time": "2023-02-20 05:59:00",
+        "record_time": "2026-07-07T19:51:00.809532",
+        "score": 3.9099878254203055,
+        "score_components": {
+          "bm25_score": 3.9099878254203055,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "profile",
+        "content": "User has been eyeing a canvas tote bag from a local brand that is made from sustainable materials and has a simple classic design, for daily errands and grocery shopping.",
+        "dimension": {
+          "time": "",
+          "location": "local brand",
+          "reason": "",
+          "purpose": "for daily errands and grocery shopping",
+          "keywords": [
+            "canvas tote bag",
+            "local brand",
+            "sustainable materials",
+            "simple design"
+          ]
+        },
+        "entities": [
+          "canvas tote bag",
+          "local brand",
+          "sustainable materials",
+          "simple design"
+        ],
+        "embedding_text": "User has been eyeing a canvas tote bag from a local brand that is made from sustainable materials and has a simple classic design, for daily errands and grocery shopping.",
+        "source_message_ids": [
+          "13"
+        ],
+        "source_boundary_id": "13_0135",
+        "source_time": "2023-02-23 02:29:02",
+        "record_time": "2026-07-07T19:51:00.809720",
+        "score": 3.90113776899645,
+        "score_components": {
+          "bm25_score": 3.90113776899645,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user plans to create an art installation incorporating sound, light, and texture to simulate the experience of walking through a forest, and another installation exploring collective memory using found objects from different cultures and time periods.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "simulate forest experience and explore collective memory",
+          "keywords": [
+            "art installation",
+            "sound",
+            "light",
+            "texture",
+            "forest simulation",
+            "collective memory",
+            "found objects"
+          ]
+        },
+        "entities": [
+          "art installation",
+          "sound",
+          "light",
+          "texture",
+          "forest simulation",
+          "collective memory",
+          "found objects"
+        ],
+        "embedding_text": "The user plans to create an art installation incorporating sound, light, and texture to simulate the experience of walking through a forest, and another installation exploring collective memory using found objects from different cultures and time periods.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0041",
+        "source_time": "2023-01-22 20:21:01",
+        "record_time": "2026-07-07T19:51:00.809101",
+        "score": 3.8802010382114234,
+        "score_components": {
+          "bm25_score": 3.8802010382114234,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      }
+    ]
+  },
+  "structured": {
+    "mapped_query_analysis": {
+      "query_text": "What is the chronological order of the six museums the user visited, from earliest to latest?",
+      "rewrite": "What is the chronological order of the six museums the user visited, from earliest to latest?",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "What is the chronological order of the six museums the user visited, from earliest to latest?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "museums"
+      ],
+      "canonical_text": "What is the chronological order of the six museums the user visited, from earliest to latest?"
+    },
+    "top_records": [
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user plans to use Artsy and ArtNet and local art museums to find contemporary artists.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "to discover contemporary artists",
+          "keywords": [
+            "Artsy",
+            "ArtNet",
+            "local art museums",
+            "contemporary artists"
+          ]
+        },
+        "entities": [
+          "Artsy",
+          "ArtNet",
+          "local art museums",
+          "contemporary artists"
+        ],
+        "embedding_text": "The user plans to use Artsy and ArtNet and local art museums to find contemporary artists.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0169",
+        "source_time": "2023-03-02 11:54:01",
+        "record_time": "2026-07-07T19:51:00.809917",
+        "score": 1.0,
+        "structural_score": 1.0,
+        "score_components": {
+          "score": 1.0,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 1.0,
+          "keyword_token_overlap_score": 1.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 1.0,
+            "keyword_token_overlap": 1.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to use Artsy and ArtNet and local art museums to find contemporary artists. | Artsy | ArtNet | local art museums | contemporary artists | to discover contemporary artists | Artsy | ArtNet | local art museums | contemporary artists"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User plans to purchase a Dell XPS laptop from the Dell website and is looking for student discounts.",
+        "dimension": {
+          "time": "",
+          "location": "Dell website",
+          "reason": "",
+          "purpose": "purchase a new laptop",
+          "keywords": [
+            "Dell XPS",
+            "laptop",
+            "student discount",
+            "purchase plan"
+          ]
+        },
+        "entities": [
+          "Dell XPS",
+          "laptop",
+          "student discount",
+          "purchase plan"
+        ],
+        "embedding_text": "User plans to purchase a Dell XPS laptop from the Dell website and is looking for student discounts.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0004",
+        "source_time": "2022-12-19 19:53:02",
+        "record_time": "2026-07-07T19:51:00.808879",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to purchase a Dell XPS laptop from the Dell website and is looking for student discounts. | Dell XPS | laptop | student discount | purchase plan | Dell website | purchase a new laptop | Dell XPS | laptop | student discount | purchase plan"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User is considering upgrading to a 4K OLED TV from LG or Sony.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "upgrade TV",
+          "keywords": [
+            "4K OLED TV",
+            "LG",
+            "Sony",
+            "TV upgrade"
+          ]
+        },
+        "entities": [
+          "4K OLED TV",
+          "LG",
+          "Sony",
+          "TV upgrade"
+        ],
+        "embedding_text": "User is considering upgrading to a 4K OLED TV from LG or Sony.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0005",
+        "source_time": "2022-12-19 19:53:02.500000",
+        "record_time": "2026-07-07T19:51:00.808886",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is considering upgrading to a 4K OLED TV from LG or Sony. | 4K OLED TV | LG | Sony | TV upgrade | upgrade TV | 4K OLED TV | LG | Sony | TV upgrade"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User is considering getting new throw pillows and a faux fur throw blanket in pale silver to complement the living room decor.",
+        "dimension": {
+          "time": "",
+          "location": "living room",
+          "reason": "to match the Moroccan-inspired berber rug",
+          "purpose": "decorate living room",
+          "keywords": [
+            "throw pillows",
+            "faux fur blanket",
+            "pale silver",
+            "living room decor"
+          ]
+        },
+        "entities": [
+          "throw pillows",
+          "faux fur blanket",
+          "pale silver",
+          "living room decor"
+        ],
+        "embedding_text": "User is considering getting new throw pillows and a faux fur throw blanket in pale silver to complement the living room decor.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0006",
+        "source_time": "2022-12-21 18:31:00",
+        "record_time": "2026-07-07T19:51:00.808892",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is considering getting new throw pillows and a faux fur throw blanket in pale silver to complement the living room decor. | throw pillows | faux fur blanket | pale silver | living room decor | living room | to match the Moroccan-inspired berber rug | decorate living room | throw pillows | faux fur blanket | pale silver | living room decor"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user decided to purchase a fiddle leaf fig plant for their living room.",
+        "dimension": {
+          "time": "",
+          "location": "living room",
+          "reason": "The user liked its unique shape and was willing to put in extra care.",
+          "purpose": "to add variety to their plant collection and complement the snake plant",
+          "keywords": [
+            "fiddle leaf fig",
+            "purchase",
+            "living room",
+            "plant"
+          ]
+        },
+        "entities": [
+          "fiddle leaf fig",
+          "purchase",
+          "living room",
+          "plant"
+        ],
+        "embedding_text": "The user decided to purchase a fiddle leaf fig plant for their living room.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0015",
+        "source_time": "2023-01-06 20:31:00",
+        "record_time": "2026-07-07T19:51:00.808946",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user decided to purchase a fiddle leaf fig plant for their living room. | fiddle leaf fig | purchase | living room | plant | living room | The user liked its unique shape and was willing to put in extra care. | to add variety to their plant collection and complement the snake plant | fiddle leaf fig | purchase | living room | plant"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user ordered prints from Society6 for wall art.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "to use as wall art in their living room",
+          "keywords": [
+            "Society6",
+            "prints",
+            "wall art"
+          ]
+        },
+        "entities": [
+          "Society6",
+          "prints",
+          "wall art"
+        ],
+        "embedding_text": "The user ordered prints from Society6 for wall art.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0016",
+        "source_time": "2023-01-06 20:31:00.500000",
+        "record_time": "2026-07-07T19:51:00.808952",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user ordered prints from Society6 for wall art. | Society6 | prints | wall art | to use as wall art in their living room | Society6 | prints | wall art"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user plans to travel to Europe in summer 2023.",
+        "dimension": {
+          "time": "2023 summer",
+          "location": "Europe",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "travel",
+            "Europe",
+            "summer 2023"
+          ]
+        },
+        "entities": [
+          "travel",
+          "Europe",
+          "summer 2023"
+        ],
+        "embedding_text": "The user plans to travel to Europe in summer 2023.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0017",
+        "source_time": "2023-01-06 20:31:01",
+        "record_time": "2026-07-07T19:51:00.808958",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to travel to Europe in summer 2023. | travel | Europe | summer 2023 | 2023 summer | Europe | travel | Europe | summer 2023"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user will fly to visit their family on April 10, 2023.",
+        "dimension": {
+          "time": "2023-04-10",
+          "location": "",
+          "reason": "to visit family",
+          "purpose": "family visit",
+          "keywords": [
+            "fly",
+            "family visit",
+            "April 10, 2023"
+          ]
+        },
+        "entities": [
+          "fly",
+          "family visit",
+          "April 10, 2023"
+        ],
+        "embedding_text": "The user will fly to visit their family on April 10, 2023.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0018",
+        "source_time": "2023-01-06 20:31:01.500000",
+        "record_time": "2026-07-07T19:51:00.808964",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user will fly to visit their family on April 10, 2023. | fly | family visit | April 10, 2023 | 2023-04-10 | to visit family | family visit | fly | family visit | April 10, 2023"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User plans to visit their family for Easter.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "to celebrate Easter with family",
+          "keywords": [
+            "Easter",
+            "family visit"
+          ]
+        },
+        "entities": [
+          "Easter",
+          "family visit"
+        ],
+        "embedding_text": "User plans to visit their family for Easter.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0019",
+        "source_time": "2023-01-12 22:45:00",
+        "record_time": "2026-07-07T19:51:00.808969",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to visit their family for Easter. | Easter | family visit | to celebrate Easter with family | Easter | family visit"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User plans to use travel time during flights or layovers to catch up on work projects.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "to make productive use of travel time",
+          "purpose": "to catch up on work",
+          "keywords": [
+            "travel",
+            "work",
+            "productivity"
+          ]
+        },
+        "entities": [
+          "travel",
+          "work",
+          "productivity"
+        ],
+        "embedding_text": "User plans to use travel time during flights or layovers to catch up on work projects.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0020",
+        "source_time": "2023-01-12 22:45:00.500000",
+        "record_time": "2026-07-07T19:51:00.808975",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to use travel time during flights or layovers to catch up on work projects. | travel | work | productivity | to make productive use of travel time | to catch up on work | travel | work | productivity"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User visited the Science Museum's 'Space Exploration' exhibition with colleague David on 2023-01-15.",
+        "dimension": {
+          "time": "2023-01-15",
+          "location": "Science Museum",
+          "reason": "interest in space exploration",
+          "purpose": "",
+          "keywords": [
+            "Science Museum",
+            "Space Exploration",
+            "David",
+            "exhibition"
+          ]
+        },
+        "entities": [
+          "Science Museum",
+          "Space Exploration",
+          "David",
+          "exhibition"
+        ],
+        "embedding_text": "User visited the Science Museum's 'Space Exploration' exhibition with colleague David on 2023-01-15.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0022",
+        "source_time": "2023-01-12 22:45:01.500000",
+        "record_time": "2026-07-07T19:51:00.808987",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User visited the Science Museum's 'Space Exploration' exhibition with colleague David on 2023-01-15. | Science Museum | Space Exploration | David | exhibition | 2023-01-15 | Science Museum | interest in space exploration | Science Museum | Space Exploration | David | exhibition"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User attended a lecture series at the Museum of Contemporary Art where Dr. Maria Rodriguez spoke about feminist art in the 1970s, and user enjoyed networking with other art enthusiasts during the reception.",
+        "dimension": {
+          "time": "",
+          "location": "Museum of Contemporary Art",
+          "reason": "interest in feminist art",
+          "purpose": "to learn and network",
+          "keywords": [
+            "Museum of Contemporary Art",
+            "Dr. Maria Rodriguez",
+            "feminist art",
+            "lecture",
+            "networking"
+          ]
+        },
+        "entities": [
+          "Museum of Contemporary Art",
+          "Dr. Maria Rodriguez",
+          "feminist art",
+          "lecture",
+          "networking"
+        ],
+        "embedding_text": "User attended a lecture series at the Museum of Contemporary Art where Dr. Maria Rodriguez spoke about feminist art in the 1970s, and user enjoyed networking with other art enthusiasts during the reception.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0025",
+        "source_time": "2023-01-15 16:31:00",
+        "record_time": "2026-07-07T19:51:00.809006",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User attended a lecture series at the Museum of Contemporary Art where Dr. Maria Rodriguez spoke about feminist art in the 1970s, and user enjoyed networking with other art enthusiasts during the reception. | Museum of Contemporary Art | Dr. Maria Rodriguez | feminist art | lecture | networking | Museum of Contemporary Art | interest in feminist art | to learn and network | Museum of Contemporary Art | Dr. Maria Rodriguez | feminist art | lecture | networking"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User attended a weekend-long yoga retreat in November 2022.",
+        "dimension": {
+          "time": "2022-11",
+          "location": "",
+          "reason": "",
+          "purpose": "to practice yoga, meditation, pranayama, and asana",
+          "keywords": [
+            "yoga retreat",
+            "November 2022"
+          ]
+        },
+        "entities": [
+          "yoga retreat",
+          "November 2022"
+        ],
+        "embedding_text": "User attended a weekend-long yoga retreat in November 2022.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0026",
+        "source_time": "2023-01-15 16:31:00.500000",
+        "record_time": "2026-07-07T19:51:00.809012",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User attended a weekend-long yoga retreat in November 2022. | yoga retreat | November 2022 | 2022-11 | to practice yoga, meditation, pranayama, and asana | yoga retreat | November 2022"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User attended a photography workshop in December 2022 and wants to continue improving photography skills.",
+        "dimension": {
+          "time": "2022-12",
+          "location": "",
+          "reason": "",
+          "purpose": "to improve photography skills",
+          "keywords": [
+            "photography workshop",
+            "December 2022"
+          ]
+        },
+        "entities": [
+          "photography workshop",
+          "December 2022"
+        ],
+        "embedding_text": "User attended a photography workshop in December 2022 and wants to continue improving photography skills.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0028",
+        "source_time": "2023-01-15 16:31:01.500000",
+        "record_time": "2026-07-07T19:51:00.809023",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User attended a photography workshop in December 2022 and wants to continue improving photography skills. | photography workshop | December 2022 | 2022-12 | to improve photography skills | photography workshop | December 2022"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User participated in a series of online workshops on digital marketing in 2022 covering SEO, social media, and email marketing, and is interested in improving SEO skills.",
+        "dimension": {
+          "time": "2022",
+          "location": "online",
+          "reason": "",
+          "purpose": "to improve digital marketing skills",
+          "keywords": [
+            "digital marketing",
+            "SEO",
+            "social media",
+            "email marketing",
+            "workshops"
+          ]
+        },
+        "entities": [
+          "digital marketing",
+          "SEO",
+          "social media",
+          "email marketing",
+          "workshops"
+        ],
+        "embedding_text": "User participated in a series of online workshops on digital marketing in 2022 covering SEO, social media, and email marketing, and is interested in improving SEO skills.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0029",
+        "source_time": "2023-01-19 06:30:00",
+        "record_time": "2026-07-07T19:51:00.809029",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User participated in a series of online workshops on digital marketing in 2022 covering SEO, social media, and email marketing, and is interested in improving SEO skills. | digital marketing | SEO | social media | email marketing | workshops | 2022 | online | to improve digital marketing skills | digital marketing | SEO | social media | email marketing | workshops"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User participated in a two-day coding bootcamp in December 2022 and is interested in improving JavaScript and HTML skills.",
+        "dimension": {
+          "time": "2022-12",
+          "location": "",
+          "reason": "",
+          "purpose": "to improve coding skills",
+          "keywords": [
+            "coding bootcamp",
+            "JavaScript",
+            "HTML",
+            "December 2022"
+          ]
+        },
+        "entities": [
+          "coding bootcamp",
+          "JavaScript",
+          "HTML",
+          "December 2022"
+        ],
+        "embedding_text": "User participated in a two-day coding bootcamp in December 2022 and is interested in improving JavaScript and HTML skills.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0030",
+        "source_time": "2023-01-19 06:30:00.500000",
+        "record_time": "2026-07-07T19:51:00.809036",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User participated in a two-day coding bootcamp in December 2022 and is interested in improving JavaScript and HTML skills. | coding bootcamp | JavaScript | HTML | December 2022 | 2022-12 | to improve coding skills | coding bootcamp | JavaScript | HTML | December 2022"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user attended a lecture series at the Museum of Contemporary Art where Dr. Maria Rodriguez spoke about the role of feminist art in the 1970s, and networked with other art enthusiasts during the reception.",
+        "dimension": {
+          "time": "",
+          "location": "Museum of Contemporary Art",
+          "reason": "",
+          "purpose": "learn about feminist art and network with art enthusiasts",
+          "keywords": [
+            "lecture series",
+            "Dr. Maria Rodriguez",
+            "feminist art",
+            "1970s",
+            "Museum of Contemporary Art",
+            "networking"
+          ]
+        },
+        "entities": [
+          "lecture series",
+          "Dr. Maria Rodriguez",
+          "feminist art",
+          "1970s",
+          "Museum of Contemporary Art",
+          "networking"
+        ],
+        "embedding_text": "The user attended a lecture series at the Museum of Contemporary Art where Dr. Maria Rodriguez spoke about the role of feminist art in the 1970s, and networked with other art enthusiasts during the reception.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0036",
+        "source_time": "2023-01-20 12:18:00.500000",
+        "record_time": "2026-07-07T19:51:00.809070",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user attended a lecture series at the Museum of Contemporary Art where Dr. Maria Rodriguez spoke about the role of feminist art in the 1970s, and networked with other art enthusiasts during the reception. | lecture series | Dr. Maria Rodriguez | feminist art | 1970s | Museum of Contemporary Art | networking | Museum of Contemporary Art | learn about feminist art and network with art enthusiasts | lecture series | Dr. Maria Rodriguez | feminist art | 1970s | Museum of Contemporary Art | networking"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user met artists working on feminist art projects and a curator at the reception, exchanged contact information for potential future collaboration, and the curator offered advice on how to get the user's artwork seen by a wider audience.",
+        "dimension": {
+          "time": "",
+          "location": "Museum of Contemporary Art reception",
+          "reason": "",
+          "purpose": "potential collaboration and getting advice",
+          "keywords": [
+            "artists",
+            "curator",
+            "contact exchange",
+            "collaboration",
+            "advice",
+            "artwork visibility"
+          ]
+        },
+        "entities": [
+          "artists",
+          "curator",
+          "contact exchange",
+          "collaboration",
+          "advice",
+          "artwork visibility"
+        ],
+        "embedding_text": "The user met artists working on feminist art projects and a curator at the reception, exchanged contact information for potential future collaboration, and the curator offered advice on how to get the user's artwork seen by a wider audience.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0037",
+        "source_time": "2023-01-20 12:18:01",
+        "record_time": "2026-07-07T19:51:00.809077",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user met artists working on feminist art projects and a curator at the reception, exchanged contact information for potential future collaboration, and the curator offered advice on how to get the user's artwork seen by a wider audience. | artists | curator | contact exchange | collaboration | advice | artwork visibility | Museum of Contemporary Art reception | potential collaboration and getting advice | artists | curator | contact exchange | collaboration | advice | artwork visibility"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user plans to create an art installation incorporating sound, light, and texture to simulate the experience of walking through a forest, and another installation exploring collective memory using found objects from different cultures and time periods.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "simulate forest experience and explore collective memory",
+          "keywords": [
+            "art installation",
+            "sound",
+            "light",
+            "texture",
+            "forest simulation",
+            "collective memory",
+            "found objects"
+          ]
+        },
+        "entities": [
+          "art installation",
+          "sound",
+          "light",
+          "texture",
+          "forest simulation",
+          "collective memory",
+          "found objects"
+        ],
+        "embedding_text": "The user plans to create an art installation incorporating sound, light, and texture to simulate the experience of walking through a forest, and another installation exploring collective memory using found objects from different cultures and time periods.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0041",
+        "source_time": "2023-01-22 20:21:01",
+        "record_time": "2026-07-07T19:51:00.809101",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to create an art installation incorporating sound, light, and texture to simulate the experience of walking through a forest, and another installation exploring collective memory using found objects from different cultures and time periods. | art installation | sound | light | texture | forest simulation | collective memory | found objects | simulate forest experience and explore collective memory | art installation | sound | light | texture | forest simulation | collective memory | found objects"
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user plans to check out the true crime podcasts 'Crime Junkie' and 'Last Podcast on the Left'.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "interest in similar tone to My Favorite Murder",
+          "purpose": "to find new true crime podcasts",
+          "keywords": [
+            "Crime Junkie",
+            "Last Podcast on the Left",
+            "true crime",
+            "podcasts"
+          ]
+        },
+        "entities": [
+          "Crime Junkie",
+          "Last Podcast on the Left",
+          "true crime",
+          "podcasts"
+        ],
+        "embedding_text": "The user plans to check out the true crime podcasts 'Crime Junkie' and 'Last Podcast on the Left'.",
+        "source_message_ids": [
+          "4"
+        ],
+        "source_boundary_id": "4_0044",
+        "source_time": "2023-01-27 11:21:01",
+        "record_time": "2026-07-07T19:51:00.809120",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to check out the true crime podcasts 'Crime Junkie' and 'Last Podcast on the Left'. | Crime Junkie | Last Podcast on the Left | true crime | podcasts | interest in similar tone to My Favorite Murder | to find new true crime podcasts | Crime Junkie | Last Podcast on the Left | true crime | podcasts"
+        }
+      }
+    ]
+  },
+  "minilm": {
+    "mapped_query_analysis": {
+      "query_text": "What is the chronological order of the six museums the user visited, from earliest to latest?"
+    },
+    "top_records": [
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "profile",
+        "content": "User enjoys guided tours for museum visits.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "guided tours",
+            "museum visits"
+          ]
+        },
+        "entities": [
+          "guided tours",
+          "museum visits"
+        ],
+        "embedding_text": "User enjoys guided tours for museum visits.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0110",
+        "source_time": "2023-02-20 22:50:00.500000",
+        "record_time": "2026-07-07T19:51:00.809578",
+        "score": 0.5519858517800083,
+        "score_components": {
+          "dense_cosine_score": 0.5519858517800083,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User plans to check the Modern Art Museum's website and sign up for their newsletter.",
+        "dimension": {
+          "time": "2023-02-20",
+          "location": "",
+          "reason": "",
+          "purpose": "to stay informed about exhibitions",
+          "keywords": [
+            "Modern Art Museum",
+            "website",
+            "newsletter"
+          ]
+        },
+        "entities": [
+          "Modern Art Museum",
+          "website",
+          "newsletter"
+        ],
+        "embedding_text": "User plans to check the Modern Art Museum's website and sign up for their newsletter.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0108",
+        "source_time": "2023-02-20 05:59:03",
+        "record_time": "2026-07-07T19:51:00.809567",
+        "score": 0.5315006409119597,
+        "score_components": {
+          "dense_cosine_score": 0.5315006409119597,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User plans to visit the Modern Art Museum again soon.",
+        "dimension": {
+          "time": "",
+          "location": "Modern Art Museum",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Modern Art Museum",
+            "future visit"
+          ]
+        },
+        "entities": [
+          "Modern Art Museum",
+          "future visit"
+        ],
+        "embedding_text": "User plans to visit the Modern Art Museum again soon.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0107",
+        "source_time": "2023-02-20 05:59:02.500000",
+        "record_time": "2026-07-07T19:51:00.809561",
+        "score": 0.5262458177808611,
+        "score_components": {
+          "dense_cosine_score": 0.5262458177808611,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "On February 15, 2023, the user participated in a behind-the-scenes tour of the Museum of History's conservation lab and tried basic conservation techniques.",
+        "dimension": {
+          "time": "2023-02-15",
+          "location": "Museum of History",
+          "reason": "interest in conservation",
+          "purpose": "learn about preservation",
+          "keywords": [
+            "behind-the-scenes tour",
+            "conservation lab",
+            "historical artifacts",
+            "basic conservation techniques"
+          ]
+        },
+        "entities": [
+          "behind-the-scenes tour",
+          "conservation lab",
+          "historical artifacts",
+          "basic conservation techniques"
+        ],
+        "embedding_text": "On February 15, 2023, the user participated in a behind-the-scenes tour of the Museum of History's conservation lab and tried basic conservation techniques.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0078",
+        "source_time": "2023-02-14 06:03:00",
+        "record_time": "2026-07-07T19:51:00.809392",
+        "score": 0.5114308497139362,
+        "score_components": {
+          "dense_cosine_score": 0.5114308497139362,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User visited the Science Museum's 'Space Exploration' exhibition with colleague David on 2023-01-15.",
+        "dimension": {
+          "time": "2023-01-15",
+          "location": "Science Museum",
+          "reason": "interest in space exploration",
+          "purpose": "",
+          "keywords": [
+            "Science Museum",
+            "Space Exploration",
+            "David",
+            "exhibition"
+          ]
+        },
+        "entities": [
+          "Science Museum",
+          "Space Exploration",
+          "David",
+          "exhibition"
+        ],
+        "embedding_text": "User visited the Science Museum's 'Space Exploration' exhibition with colleague David on 2023-01-15.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0022",
+        "source_time": "2023-01-12 22:45:01.500000",
+        "record_time": "2026-07-07T19:51:00.808987",
+        "score": 0.4660380478422146,
+        "score_components": {
+          "dense_cosine_score": 0.4660380478422146,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user visited the Metropolitan Museum of Art to see the Ancient Egyptian Artifacts exhibition and was impressed by the golden mask of Pharaoh Tutankhamun.",
+        "dimension": {
+          "time": "",
+          "location": "Metropolitan Museum of Art",
+          "reason": "",
+          "purpose": "to see the exhibition",
+          "keywords": [
+            "Metropolitan Museum of Art",
+            "Ancient Egyptian Artifacts",
+            "golden mask",
+            "Pharaoh Tutankhamun"
+          ]
+        },
+        "entities": [
+          "Metropolitan Museum of Art",
+          "Ancient Egyptian Artifacts",
+          "golden mask",
+          "Pharaoh Tutankhamun"
+        ],
+        "embedding_text": "The user visited the Metropolitan Museum of Art to see the Ancient Egyptian Artifacts exhibition and was impressed by the golden mask of Pharaoh Tutankhamun.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0172",
+        "source_time": "2023-03-02 11:54:02.500000",
+        "record_time": "2026-07-07T19:51:00.809934",
+        "score": 0.44988136340979146,
+        "score_components": {
+          "dense_cosine_score": 0.44988136340979146,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User saw a large-scale installation by Anselm Kiefer at the Modern Art Museum's guided tour on 2023-02-20 and was moved by it.",
+        "dimension": {
+          "time": "2023-02-20",
+          "location": "Modern Art Museum",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Anselm Kiefer",
+            "large-scale installation",
+            "Modern Art Museum"
+          ]
+        },
+        "entities": [
+          "Anselm Kiefer",
+          "large-scale installation",
+          "Modern Art Museum"
+        ],
+        "embedding_text": "User saw a large-scale installation by Anselm Kiefer at the Modern Art Museum's guided tour on 2023-02-20 and was moved by it.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0115",
+        "source_time": "2023-02-20 03:12:00",
+        "record_time": "2026-07-07T19:51:00.809607",
+        "score": 0.4282333250225913,
+        "score_components": {
+          "dense_cosine_score": 0.4282333250225913,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "On 2023-02-10, the user planned to write an essay about ancient civilizations and visited the 'Ancient Egyptian Artifacts' exhibition, where they took photos of artifacts.",
+        "dimension": {
+          "time": "2023-02-10T22:26:00",
+          "location": "Metropolitan Museum of Art (possibly mistaken, but exhibition attended)",
+          "reason": "",
+          "purpose": "to research for an essay about ancient civilizations",
+          "keywords": [
+            "essay",
+            "ancient civilizations",
+            "Ancient Egyptian Artifacts exhibition",
+            "photos"
+          ]
+        },
+        "entities": [
+          "essay",
+          "ancient civilizations",
+          "Ancient Egyptian Artifacts exhibition",
+          "photos"
+        ],
+        "embedding_text": "On 2023-02-10, the user planned to write an essay about ancient civilizations and visited the 'Ancient Egyptian Artifacts' exhibition, where they took photos of artifacts.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0058",
+        "source_time": "2023-02-10 22:26:00",
+        "record_time": "2026-07-07T19:51:00.809274",
+        "score": 0.41807029703133136,
+        "score_components": {
+          "dense_cosine_score": 0.41807029703133136,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "profile",
+        "content": "The user is interested in art and plans to attend art-related events to stay updated on trends and exhibitions.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "stay updated on trends and exhibitions",
+          "keywords": [
+            "art",
+            "art events",
+            "art blogs",
+            "exhibitions"
+          ]
+        },
+        "entities": [
+          "art",
+          "art events",
+          "art blogs",
+          "exhibitions"
+        ],
+        "embedding_text": "The user is interested in art and plans to attend art-related events to stay updated on trends and exhibitions.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0033",
+        "source_time": "2023-01-19 06:30:02",
+        "record_time": "2026-07-07T19:51:00.809053",
+        "score": 0.4108602132927651,
+        "score_components": {
+          "dense_cosine_score": 0.4108602132927651,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user and their niece enjoyed the hands-on activities section at the Natural History Museum's 'Dinosaur Fossils' exhibition.",
+        "dimension": {
+          "time": "",
+          "location": "Natural History Museum",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "hands-on activities",
+            "Dinosaur Fossils",
+            "Natural History Museum",
+            "niece"
+          ]
+        },
+        "entities": [
+          "hands-on activities",
+          "Dinosaur Fossils",
+          "Natural History Museum",
+          "niece"
+        ],
+        "embedding_text": "The user and their niece enjoyed the hands-on activities section at the Natural History Museum's 'Dinosaur Fossils' exhibition.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0173",
+        "source_time": "2023-03-04 19:42:00",
+        "record_time": "2026-07-07T19:51:00.809940",
+        "score": 0.40891162700658096,
+        "score_components": {
+          "dense_cosine_score": 0.40891162700658096,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User visited the Metropolitan Museum of Art and saw the golden mask of Pharaoh Tutankhamun, which impressed them, and took photos to remember the details.",
+        "dimension": {
+          "time": "",
+          "location": "Metropolitan Museum of Art",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Metropolitan Museum of Art",
+            "golden mask",
+            "Tutankhamun",
+            "ancient Egyptian artifacts"
+          ]
+        },
+        "entities": [
+          "Metropolitan Museum of Art",
+          "golden mask",
+          "Tutankhamun",
+          "ancient Egyptian artifacts"
+        ],
+        "embedding_text": "User visited the Metropolitan Museum of Art and saw the golden mask of Pharaoh Tutankhamun, which impressed them, and took photos to remember the details.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0111",
+        "source_time": "2023-02-20 22:50:01",
+        "record_time": "2026-07-07T19:51:00.809584",
+        "score": 0.4028856420711324,
+        "score_components": {
+          "dense_cosine_score": 0.4028856420711324,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user attended a guided tour of the Modern Art Museum's installation 'The Evolution of Abstract Expressionism' and was moved by the large-scale installation by Anselm Kiefer.",
+        "dimension": {
+          "time": "",
+          "location": "Modern Art Museum",
+          "reason": "",
+          "purpose": "to attend a guided tour",
+          "keywords": [
+            "Modern Art Museum",
+            "The Evolution of Abstract Expressionism",
+            "guided tour",
+            "Anselm Kiefer",
+            "large-scale installation"
+          ]
+        },
+        "entities": [
+          "Modern Art Museum",
+          "The Evolution of Abstract Expressionism",
+          "guided tour",
+          "Anselm Kiefer",
+          "large-scale installation"
+        ],
+        "embedding_text": "The user attended a guided tour of the Modern Art Museum's installation 'The Evolution of Abstract Expressionism' and was moved by the large-scale installation by Anselm Kiefer.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0175",
+        "source_time": "2023-03-04 19:42:01",
+        "record_time": "2026-07-07T19:51:00.809952",
+        "score": 0.39894118721230465,
+        "score_components": {
+          "dense_cosine_score": 0.39894118721230465,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User plans to visit the Modern Art Gallery again soon.",
+        "dimension": {
+          "time": "",
+          "location": "Modern Art Gallery",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "visit",
+            "Modern Art Gallery",
+            "future plan"
+          ]
+        },
+        "entities": [
+          "visit",
+          "Modern Art Gallery",
+          "future plan"
+        ],
+        "embedding_text": "User plans to visit the Modern Art Gallery again soon.",
+        "source_message_ids": [
+          "11"
+        ],
+        "source_boundary_id": "11_0099",
+        "source_time": "2023-02-20 06:37:00",
+        "record_time": "2026-07-07T19:51:00.809515",
+        "score": 0.38976972332728616,
+        "score_components": {
+          "dense_cosine_score": 0.38976972332728616,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "profile",
+        "content": "The user is interested in exploring interactive and immersive art installations.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "interactive installations",
+            "immersive art"
+          ]
+        },
+        "entities": [
+          "interactive installations",
+          "immersive art"
+        ],
+        "embedding_text": "The user is interested in exploring interactive and immersive art installations.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0039",
+        "source_time": "2023-01-22 20:21:00",
+        "record_time": "2026-07-07T19:51:00.809088",
+        "score": 0.3752018126490493,
+        "score_components": {
+          "dense_cosine_score": 0.3752018126490493,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user plans to take their niece to the Children's Museum.",
+        "dimension": {
+          "time": "",
+          "location": "Children's Museum",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "niece",
+            "Children's Museum"
+          ]
+        },
+        "entities": [
+          "niece",
+          "Children's Museum"
+        ],
+        "embedding_text": "The user plans to take their niece to the Children's Museum.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0174",
+        "source_time": "2023-03-04 19:42:00.500000",
+        "record_time": "2026-07-07T19:51:00.809945",
+        "score": 0.37053158397839875,
+        "score_components": {
+          "dense_cosine_score": 0.37053158397839875,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user plans to use Artsy and ArtNet and local art museums to find contemporary artists.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "to discover contemporary artists",
+          "keywords": [
+            "Artsy",
+            "ArtNet",
+            "local art museums",
+            "contemporary artists"
+          ]
+        },
+        "entities": [
+          "Artsy",
+          "ArtNet",
+          "local art museums",
+          "contemporary artists"
+        ],
+        "embedding_text": "The user plans to use Artsy and ArtNet and local art museums to find contemporary artists.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0169",
+        "source_time": "2023-03-02 11:54:01",
+        "record_time": "2026-07-07T19:51:00.809917",
+        "score": 0.3639842196517334,
+        "score_components": {
+          "dense_cosine_score": 0.3639842196517334,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "User participated in a guided tour at the Modern Art Gallery on February 17, 2023, focused on Abstract Expressionism.",
+        "dimension": {
+          "time": "2023-02-17",
+          "location": "Modern Art Gallery",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "guided tour",
+            "Modern Art Gallery",
+            "Abstract Expressionism",
+            "February 17, 2023"
+          ]
+        },
+        "entities": [
+          "guided tour",
+          "Modern Art Gallery",
+          "Abstract Expressionism",
+          "February 17, 2023"
+        ],
+        "embedding_text": "User participated in a guided tour at the Modern Art Gallery on February 17, 2023, focused on Abstract Expressionism.",
+        "source_message_ids": [
+          "11"
+        ],
+        "source_boundary_id": "11_0098",
+        "source_time": "2023-02-20 06:37:00",
+        "record_time": "2026-07-07T19:51:00.809509",
+        "score": 0.3554680969415208,
+        "score_components": {
+          "dense_cosine_score": 0.3554680969415208,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "On 2023-03-04, the user took their niece to the Natural History Museum to see the 'Dinosaur Fossils' exhibition, and the niece loved the life-sized T-Rex replica.",
+        "dimension": {
+          "time": "2023-03-04",
+          "location": "Natural History Museum",
+          "reason": "",
+          "purpose": "to see the exhibition",
+          "keywords": [
+            "Natural History Museum",
+            "Dinosaur Fossils",
+            "T-Rex replica",
+            "niece"
+          ]
+        },
+        "entities": [
+          "Natural History Museum",
+          "Dinosaur Fossils",
+          "T-Rex replica",
+          "niece"
+        ],
+        "embedding_text": "On 2023-03-04, the user took their niece to the Natural History Museum to see the 'Dinosaur Fossils' exhibition, and the niece loved the life-sized T-Rex replica.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0171",
+        "source_time": "2023-03-02 11:54:02",
+        "record_time": "2026-07-07T19:51:00.809928",
+        "score": 0.35141129580139513,
+        "score_components": {
+          "dense_cosine_score": 0.35141129580139513,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "profile",
+        "content": "User is interested in learning more about the history of space exploration.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "space exploration",
+            "history"
+          ]
+        },
+        "entities": [
+          "space exploration",
+          "history"
+        ],
+        "embedding_text": "User is interested in learning more about the history of space exploration.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0023",
+        "source_time": "2023-01-12 22:45:02",
+        "record_time": "2026-07-07T19:51:00.808994",
+        "score": 0.32379449048626197,
+        "score_components": {
+          "dense_cosine_score": 0.32379449048626197,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0009_gpt4_7abb270c",
+        "memory_type": "episodic",
+        "content": "The user decided to use a binder method to organize their coupons and gift cards on 2023-02-28.",
+        "dimension": {
+          "time": "2023-02-28",
+          "location": "",
+          "reason": "to organize coupons and gift cards",
+          "purpose": "use binder method",
+          "keywords": [
+            "binder method",
+            "coupons",
+            "gift cards",
+            "organization"
+          ]
+        },
+        "entities": [
+          "binder method",
+          "coupons",
+          "gift cards",
+          "organization"
+        ],
+        "embedding_text": "The user decided to use a binder method to organize their coupons and gift cards on 2023-02-28.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0164",
+        "source_time": "2023-02-26 07:33:02.500000",
+        "record_time": "2026-07-07T19:51:00.809889",
+        "score": 0.3203605587047208,
+        "score_components": {
+          "dense_cosine_score": 0.3203605587047208,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      }
+    ]
+  }
+}

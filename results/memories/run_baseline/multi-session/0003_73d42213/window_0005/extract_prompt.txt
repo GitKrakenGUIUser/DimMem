@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-22T02:30:00.500000, Mon] 1.User: I'm considering the Michelin Pilot Sport 4S, but I want to know more about their durability and treadwear. How long can I expect them to last, and are they suitable for daily driving?
+[2023-05-22T02:30:01, Mon] 2.User: I'm also looking into upgrading my brakes, as I want to ensure I can handle the increased speed and performance of the new tires. Do you have any recommendations for high-performance brake pads and rotors that would work well with my 2018 Mustang GT?
+[2023-05-22T02:30:01.500000, Mon] 3.User: I've heard good things about Brembo brakes, but I'm not sure if they're worth the extra cost. Do they really make that big of a difference in terms of stopping power and performance?
+[2023-05-22T02:30:02, Mon] 4.User: I've been doing some research on Brembo brakes and I think I'm leaning towards upgrading to their GT-R rotors. I've heard they're a great option for high-performance driving and can handle the increased speed and aggression of my Mustang GT.
+[2023-05-22T02:30:02.500000, Mon] 5.User: I'm glad I decided to wash and wax my car to make it look its best, and now I'm excited to upgrade my brakes with the Brembo GT-R rotors. Do you think I should also consider upgrading my brake fluid to a high-performance fluid, such as the Brembo Racing Brake Fluid?
+[2023-05-22T13:12:00, Mon] 6.User: I'm having some trouble with my sleep schedule. I've been trying to establish a consistent bedtime routine, but I'm not sure if I'm doing it right. Can you give me some general tips on how to wind down before bed? Oh, and by the way, I've been listening to calming music or nature sounds on Spotify before bed for about an hour before I drift off to sleep, it helps me relax a lot.
+[2023-05-22T13:12:00.500000, Mon] 7.User: I've actually been trying to limit my screen time in the evenings, but I find it hard to resist checking my phone sometimes. Do you have any tips on how to avoid the temptation of screens before bed?
+[2023-05-22T13:12:01, Mon] 8.User: I've been trying to limit my screen time in the evenings, but I find it hard to resist checking my phone sometimes. I also want to know if I should prioritize sleep or waking up early in the morning?
+[2023-05-22T13:12:01.500000, Mon] 9.User: I've been trying to establish a consistent bedtime routine, and I've found that listening to calming music or nature sounds on Spotify for about an hour before bed really helps me relax.
+[2023-05-22T13:12:02, Mon] 10.User: I've also been trying to establish a consistent bedtime routine, and I've found that reading a book before bed really helps me wind down. I usually spend around 30-45 minutes reading before I feel sleepy. Do you have any book recommendations that might help me relax before bed?
+[2023-05-22T13:12:02.500000, Mon] 11.User: What about a book that's a mix of calming and engaging? I've been really into fantasy novels lately, and I find that they help me escape into a different world and relax. Do you have any fantasy book recommendations that might be calming and not too stimulating before bed?
+[2023-05-22T17:44:00, Mon] 12.User: How did Shakespeare's works reflect the political and social contexts of his time?
+[2023-05-22T17:44:00.500000, Mon] 13.User: It's interesting how Shakespeare's works are still relevant even today. Do you think future generations will continue to find value in his plays?
+[2023-05-22T17:44:01, Mon] 14.User: I couldn't agree more! I think Shakespeare's works will never lose their relevance because they deal with themes that are still relevant today, and his characters are so complex and memorable. Do you have a favorite play or character?
+[2023-05-22T17:44:01.500000, Mon] 15.User: Agreed, each play has its own appeal. Out of all the themes Shakespeare explored, I find his portrayal of human nature the most fascinating. He really understood the complexities of the human psyche.

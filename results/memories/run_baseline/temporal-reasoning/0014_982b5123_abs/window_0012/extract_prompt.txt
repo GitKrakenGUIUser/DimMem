@@ -1,0 +1,141 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-27T14:20:01, Sat] 1.User: This is what I got it is taking the 1:26 as GMT and giving 8:26 as opposed to 12:26 as if I convert in sql db the epoch is Epoch timestamp: 1673958391 and the GMT time is 5:26PM
+
+B1 Alarm First Reported Time New Time from Formula
+B2 1/17/2023 1:26:31 PM 01/17/2023 08:26:31 AM
+[2023-05-27T14:20:01.500000, Sat] 2.User: ok and what if we dont know what the offset is , can we just convert to epoch then do the offset to GMT-5?
+[2023-05-27T14:20:02, Sat] 3.User: still getting 8:26
+[2023-05-27T14:20:02.500000, Sat] 4.User: shortcut to open Format Cells?
+[2023-05-27T14:20:03, Sat] 5.User: ok the cell B2 is in the right format but still 8:26.
+
+If I -1 I get 12:26 
+=TEXT(((B2-DATE(1899,12,30))\*86400-(1\*3600))/86400+DATE(1899,12,30),"MM/DD/YYYY hh:mm:ss AM/PM")
+
+But first let me see the unix epoch of 01/17/2023 1:26:31 PM
+[2023-05-27T14:20:03.500000, Sat] 6.User: too large to show message in excel
+[2023-05-27T14:20:04, Sat] 7.User: ok now take that epoch and convert to date string but with offset as gmt-5
+[2023-05-27T14:20:04.500000, Sat] 8.User: nah it gives 01/17/2023 07:26:31 AM . Come on do better, you are about to be fired. Save your job
+[2023-05-27T17:52:00, Sat] 9.User: How do I pick the right type of mattress for my sleeping preferences?
+[2023-05-27T17:52:00.500000, Sat] 10.User: Do you have any recommendations for specific mattress brands or models that fit these criteria?
+[2023-05-27T17:52:01, Sat] 11.User: I'll definitely look into those options. Do you have any advice on how to test a mattress before buying it?
+[2023-05-27T17:52:01.500000, Sat] 12.User: Those are great tips! I'm definitely going to try out some mattresses at a showroom. Do you have any advice on negotiating prices, or should I just stick to the listed price?
+[2023-05-27T21:37:00, Sat] 13.User: I've been thinking about the lack of female representation in STEM fields and was wondering if you could provide some resources or organizations that support women in these fields, especially in my local area.
+[2023-05-27T21:37:00.500000, Sat] 14.User: I'm based in Los Angeles, can you provide some local organizations that support women in STEM fields?
+[2023-05-27T21:37:01, Sat] 15.User: Can you tell me more about the gender demographics of the people involved in these organizations? For example, what percentage of the leadership positions are held by women?

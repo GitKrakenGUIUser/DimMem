@@ -1,0 +1,32 @@
+{
+  "id": "3639e1e2-8ed0-435e-bc64-e4de325659e3",
+  "object": "chat.completion",
+  "created": 1783355655,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": [\n    {\n      \"source_id\": 4,\n      \"content\": \"The user asked about the specific reason why Blackfoot artists are able to blend traditional and modern elements well.\",\n      \"dimension\": {\n        \"memory_type\": \"episodic\",\n        \"time\": \"2023-05-30T18:50:01.500000\",\n        \"location\": \"\",\n        \"reason\": \"curiosity about Blackfoot art blending tradition and modernity\",\n        \"purpose\": \"to learn about the cultural or artistic reasons behind the blending\",\n        \"keywords\": [\"Blackfoot artists\", \"tradition\", \"modernity\", \"blending\"]\n      }\n    }\n  ]\n}",
+        "reasoning_content": "We need to extract memories from messages 4 onwards. Messages 1-3 are overlapping context, so only message 4 is new. Message 4 is: \"That's really interesting. I didn't know there were so many places that celebrated Blackfoot art. Do you think there's a specific reason why Blackfoot artists are able to blend traditional and modern elements so well?\" This shows user's surprise and curiosity about Blackfoot art blending. But it's a question, not a fact or event about the user. However, extraction targets include long-term preferences, habits, interests, values, goals. The user is showing interest in Blackfoot art and cultural blending. Could be a profile: user is interested in Blackfoot art and the blending of tradition and modernity. But we need to be careful not to overgeneralize from a single message. The user's question is a follow-up, indicating ongoing interest. Possibly extract as profile: interest in Blackfoot art and how artists blend traditional and modern elements. But the instruction says \"Do not overgeneralize a single event into a long-term profile.\" However, multiple messages (1-3 are not to be extracted but give context) show sustained interest. Since message 4 is the only new one, we can extract one memory: user expresses interest in understanding why Blackfoot artists blend tradition and modernity well. That's a fact about the user's current curiosity, but it's an episodic event? Actually, it's a question, not a concrete event. Alternatively, we could treat it as a profile: user has an interest in Blackfoot art and cultural blending. But to be safe, we can extract a fact: user asked about the reason Blackfoot artists blend traditional and modern elements well. That is a fact about the user's action (asked a question). But the content should be self-contained. Let's see: \"The user asked about the specific reason why Blackfoot artists are able to blend traditional and modern elements well.\" That's a fact. memory_type: fact? Or episodic? It's a specific action (asking) at a specific time. So episodic with time = \"2023-05-30T18:50:01.500000\" (the message timestamp). Location: online conversation, but not strongly implied. Reason: curiosity. Purpose: to learn. Keywords: Blackfoot artists, tradition, modernity, blending. \n\nBut we must ensure we don't extract from messages 1-3. Message 4 is standalone. So output one memory. Also note: the user's first three messages show interest, but we cannot extract from them. So only message 4. \n\nLet's format JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1465,
+    "completion_tokens": 690,
+    "total_tokens": 2155,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 542
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 313
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

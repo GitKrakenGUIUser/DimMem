@@ -1,0 +1,58 @@
+{
+  "query_text": "What is the user's favorite type of rice?",
+  "query_anchor": "What is the user's favorite type of rice?",
+  "dimension": {
+    "target_memory_type": [
+      "profile"
+    ],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "rice",
+      "favorite",
+      "type"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "What is the user's favorite type of rice?",
+      "keywords": [
+        "rice",
+        "favorite",
+        "type"
+      ],
+      "query_terms": [
+        "what",
+        "is",
+        "the",
+        "user",
+        "s",
+        "favorite",
+        "type",
+        "of",
+        "rice"
+      ]
+    },
+    "structured": {
+      "query_text": "What is the user's favorite type of rice?",
+      "rewrite": "What is the user's favorite type of rice?",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "What is the user's favorite type of rice?",
+      "target_memory_types": [
+        "profile"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "rice",
+        "favorite",
+        "type"
+      ],
+      "canonical_text": "What is the user's favorite type of rice?"
+    },
+    "minilm": {
+      "query_text": "What is the user's favorite type of rice?"
+    }
+  }
+}

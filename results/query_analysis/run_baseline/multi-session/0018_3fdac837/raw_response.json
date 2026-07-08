@@ -1,0 +1,32 @@
+{
+  "id": "22c3e6c3-0f8f-4dc7-884d-5cc8b8b4733f",
+  "object": "chat.completion",
+  "created": 1783356311,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"What is the total number of days the user spent in Japan and Chicago?\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"Japan\", \"Chicago\"],\n    \"time\": \"\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"\"\n}",
+        "reasoning_content": "We need to parse the question: \"What is the total number of days I spent in Japan and Chicago?\" The question date is 2023/05/30. The user asks for total number of days spent in two locations: Japan and Chicago. This is a retrospective question about past experiences (episodic memory). No explicit time constraint, but the question asks for a sum of days. No mention of assistant context. So need_assistant_context: false. target_memory_type: likely episodic (events/trips). Keywords: Japan, Chicago. No explicit time constraint, so time: \"\". Location: explicitly mentioned, but question asks for \"days spent\" which is a quantity, not location itself, so answer_dim should be \"\" because it requires calculation (summation). Also, query_anchor: rewrite as \"What is the total number of days the user spent in Japan and Chicago?\" Preserve core intent.\n\nThus JSON output."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 689,
+    "completion_tokens": 272,
+    "total_tokens": 961,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 191
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 49
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

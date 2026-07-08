@@ -1,0 +1,59 @@
+{
+  "query_text": "How many times has the user worn their new black Converse Chuck Taylor All Star sneakers?",
+  "query_anchor": "How many times has the user worn their new black Converse Chuck Taylor All Star sneakers?",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "black Converse Chuck Taylor All Star sneakers"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "How many times has the user worn their new black Converse Chuck Taylor All Star sneakers?",
+      "keywords": [
+        "black Converse Chuck Taylor All Star sneakers"
+      ],
+      "query_terms": [
+        "how",
+        "many",
+        "times",
+        "has",
+        "the",
+        "user",
+        "worn",
+        "their",
+        "new",
+        "black",
+        "converse",
+        "chuck",
+        "taylor",
+        "all",
+        "star",
+        "sneakers"
+      ]
+    },
+    "structured": {
+      "query_text": "How many times has the user worn their new black Converse Chuck Taylor All Star sneakers?",
+      "rewrite": "How many times has the user worn their new black Converse Chuck Taylor All Star sneakers?",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "How many times has the user worn their new black Converse Chuck Taylor All Star sneakers?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "black Converse Chuck Taylor All Star sneakers"
+      ],
+      "canonical_text": "How many times has the user worn their new black Converse Chuck Taylor All Star sneakers?"
+    },
+    "minilm": {
+      "query_text": "How many times has the user worn their new black Converse Chuck Taylor All Star sneakers?"
+    }
+  }
+}

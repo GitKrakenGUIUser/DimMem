@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-22T14:41:00.500000, Mon] 1.User: Give me 30 Inspirational and motivational factsShare Prompt
+[2023-05-22T14:41:01, Mon] 2.User: Give me 30 Inspirational and motivational quotesShare Prompt
+[2023-05-23T00:22:00, Tue] 3.User: I'm trying to get organized with my properties and was wondering if you can help me create a spreadsheet to keep track of my land ownership and expenses?
+[2023-05-23T00:22:00.500000, Tue] 4.User: I'd like to add another sheet to track the permits and licenses I need for each property. Can you help me with that?
+[2023-05-23T00:22:01, Tue] 5.User: I'd like to add a column to the property list sheet to track the type of property, such as residential, commercial, or vacant land.
+[2023-05-23T00:22:01.500000, Tue] 6.User: I'd like to add a column to the Expenses by Property sheet to track the payment method, such as cash, credit card, or check.
+[2023-05-23T00:22:02, Tue] 7.User: I'd like to add a column to the Property List sheet to track the current status of each property, such as "Active", "Under Construction", or "Vacant".
+[2023-05-23T00:22:02.500000, Tue] 8.User: I'd like to add a column to the Property List sheet to track the property manager or contact person responsible for each property.
+[2023-05-23T05:40:00, Tue] 9.User: I'm looking to grow my social media presence for my freelance writing business. Can you provide some tips on how to increase engagement on my posts?
+[2023-05-23T05:40:00.500000, Tue] 10.User: I'm also thinking of exploring other platforms like Instagram and Twitter to promote my writing services. Do you have any tips on how to get started with those platforms, especially since I don't have much experience with them? By the way, speaking of first purchases, I remember getting a 10% discount on my first purchase from that new clothing brand last month, which was nice.
+[2023-05-23T05:40:01, Tue] 11.User: I've been thinking about my own social media campaigns, and I realized I've been doing a lot of promoting for others, but not enough for myself. I should create a content calendar like I did for my cousin's art exhibition to promote my own blog and writing services. Do you have any tips on how to create an effective content calendar?
+[2023-05-23T05:40:01.500000, Tue] 12.User: That's a great start! I think I'll also create a separate column in my content calendar to track engagement metrics, like likes, comments, and shares, to see what's working and what isn't. Do you have any tips on how to measure the success of my social media campaigns, especially since I'm just starting out?
+[2023-05-23T05:40:02, Tue] 13.User: I think I'm good for now. Thanks for the tips! I'll start setting up my content calendar and tracking my engagement metrics.
+[2023-05-23T05:40:02.500000, Tue] 14.User: Thanks for the quote! I'll definitely keep that in mind as I work on my social media strategy. And yeah, consistency is important, but I also don't want to overposting or sacrifice quality for the sake of sticking to a schedule. Finding that balance will be key. Anyway, thanks again for the help!
+[2023-05-23T06:50:00, Tue] 15.User: I'm trying to get more eyes on my social media content. Can you help me come up with some ideas to increase my engagement? By the way, I tweeted about a book titled 'The Nightingale' last week, and it did pretty well.

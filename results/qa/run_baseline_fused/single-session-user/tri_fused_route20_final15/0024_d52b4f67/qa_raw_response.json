@@ -1,0 +1,32 @@
+{
+  "id": "995ab715-623a-4bdb-92ae-3041ae9964b7",
+  "object": "chat.completion",
+  "created": 1783427983,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: Memory [1] explicitly states that the user attended their cousin's wedding at the Grand Ballroom. No other retrieved memory contradicts this or provides an alternative location for the cousin's wedding.\n\nAnswer: Grand Ballroom",
+        "reasoning_content": "We need to answer: \"Where did I attend my cousin's wedding?\" Based on retrieved memories, memory [1] says: \"User attended their cousin's wedding at the Grand Ballroom during the weekend of May 20-21, 2023.\" That directly answers the location. No other memory contradicts or provides different location. So answer: Grand Ballroom."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1046,
+    "completion_tokens": 120,
+    "total_tokens": 1166,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 790
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

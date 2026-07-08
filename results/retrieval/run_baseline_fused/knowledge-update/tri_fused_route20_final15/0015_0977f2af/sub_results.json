@@ -1,0 +1,3526 @@
+{
+  "bm25": {
+    "mapped_query_analysis": {
+      "query_text": "What new kitchen gadget did the user invest in before getting the Air Fryer?",
+      "keywords": [
+        "kitchen gadget",
+        "Air Fryer"
+      ],
+      "query_terms": [
+        "what",
+        "new",
+        "kitchen",
+        "gadget",
+        "did",
+        "the",
+        "user",
+        "invest",
+        "in",
+        "before",
+        "getting",
+        "air",
+        "fryer"
+      ]
+    },
+    "top_records": [
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "fact",
+        "content": "The user acquired an Air Fryer on 2023-05-20.",
+        "dimension": {
+          "time": "2023-05-20",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Air Fryer"
+          ]
+        },
+        "entities": [
+          "Air Fryer"
+        ],
+        "embedding_text": "The user acquired an Air Fryer on 2023-05-20.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0148",
+        "source_time": "2023-05-21 22:54:00.500000",
+        "record_time": "2026-07-07T19:50:12.321797",
+        "score": 14.023214811562266,
+        "score_components": {
+          "bm25_score": 14.023214811562266,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user plans to make crispy sweet potato fries using the Air Fryer.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "sweet potato fries",
+            "Air Fryer"
+          ]
+        },
+        "entities": [
+          "sweet potato fries",
+          "Air Fryer"
+        ],
+        "embedding_text": "The user plans to make crispy sweet potato fries using the Air Fryer.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0149",
+        "source_time": "2023-05-21 22:54:00.500000",
+        "record_time": "2026-07-07T19:50:12.321804",
+        "score": 13.134163795425419,
+        "score_components": {
+          "bm25_score": 13.134163795425419,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "fact",
+        "content": "The user is a sales representative who closed 50 net new deals in the past year (likely 2022).",
+        "dimension": {
+          "time": "2022",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "sales representative",
+            "net new deals",
+            "50 deals"
+          ]
+        },
+        "entities": [
+          "sales representative",
+          "net new deals",
+          "50 deals"
+        ],
+        "embedding_text": "The user is a sales representative who closed 50 net new deals in the past year (likely 2022).",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0012",
+        "source_time": "2023-04-22 23:57:00.500000",
+        "record_time": "2026-07-07T19:50:12.320913",
+        "score": 6.104090487547297,
+        "score_components": {
+          "bm25_score": 6.104090487547297,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "fact",
+        "content": "The user had not cooked with gochujang before.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "gochujang"
+          ]
+        },
+        "entities": [
+          "gochujang"
+        ],
+        "embedding_text": "The user had not cooked with gochujang before.",
+        "source_message_ids": [
+          "10"
+        ],
+        "source_boundary_id": "10_0076",
+        "source_time": "2023-05-21 05:48:01.500000",
+        "record_time": "2026-07-07T19:50:12.321379",
+        "score": 5.815819398998901,
+        "score_components": {
+          "bm25_score": 5.815819398998901,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "fact",
+        "content": "The user is considering buying a smartwatch, high-tech gadget, or experience-based gift for their brother's birthday and is looking for deals or reviews.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "brother's birthday",
+          "purpose": "find a suitable gift",
+          "keywords": [
+            "smartwatch",
+            "high-tech gadget",
+            "experience gift",
+            "brother's birthday",
+            "deals",
+            "reviews"
+          ]
+        },
+        "entities": [
+          "smartwatch",
+          "high-tech gadget",
+          "experience gift",
+          "brother's birthday",
+          "deals",
+          "reviews"
+        ],
+        "embedding_text": "The user is considering buying a smartwatch, high-tech gadget, or experience-based gift for their brother's birthday and is looking for deals or reviews.",
+        "source_message_ids": [
+          "13"
+        ],
+        "source_boundary_id": "13_0106",
+        "source_time": "2023-05-21 13:25:00",
+        "record_time": "2026-07-07T19:50:12.321557",
+        "score": 5.6459216960281795,
+        "score_components": {
+          "bm25_score": 5.6459216960281795,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "profile",
+        "content": "User enjoys reading sci-fi and fantasy books and is looking for new releases in those genres.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "sci-fi",
+            "fantasy",
+            "book recommendations",
+            "new releases"
+          ]
+        },
+        "entities": [
+          "sci-fi",
+          "fantasy",
+          "book recommendations",
+          "new releases"
+        ],
+        "embedding_text": "User enjoys reading sci-fi and fantasy books and is looking for new releases in those genres.",
+        "source_message_ids": [
+          "9"
+        ],
+        "source_boundary_id": "9_0069",
+        "source_time": "2023-05-21 00:03:00",
+        "record_time": "2026-07-07T19:50:12.321338",
+        "score": 5.549876525359381,
+        "score_components": {
+          "bm25_score": 5.549876525359381,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User attended a 5-day business conference in Tokyo approximately 3 weeks before May 21, 2023.",
+        "dimension": {
+          "time": "2023-04-30",
+          "location": "Tokyo",
+          "reason": "business conference",
+          "purpose": "",
+          "keywords": [
+            "business conference",
+            "Tokyo",
+            "5-day trip"
+          ]
+        },
+        "entities": [
+          "business conference",
+          "Tokyo",
+          "5-day trip"
+        ],
+        "embedding_text": "User attended a 5-day business conference in Tokyo approximately 3 weeks before May 21, 2023.",
+        "source_message_ids": [
+          "14"
+        ],
+        "source_boundary_id": "14_0108",
+        "source_time": "2023-05-21 00:27:00",
+        "record_time": "2026-07-07T19:50:12.321568",
+        "score": 5.1708657335168695,
+        "score_components": {
+          "bm25_score": 5.1708657335168695,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "fact",
+        "content": "The user owns a new Instant Pot.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Instant Pot"
+          ]
+        },
+        "entities": [
+          "Instant Pot"
+        ],
+        "embedding_text": "The user owns a new Instant Pot.",
+        "source_message_ids": [
+          "10"
+        ],
+        "source_boundary_id": "10_0075",
+        "source_time": "2023-05-21 05:48:00.500000",
+        "record_time": "2026-07-07T19:50:12.321373",
+        "score": 4.784590118677227,
+        "score_components": {
+          "bm25_score": 4.784590118677227,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "profile",
+        "content": "The user is concerned that being older than most colleagues may hinder adapting to new technologies.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "",
+          "reason": "age compared to colleagues",
+          "purpose": "",
+          "keywords": [
+            "age",
+            "adaptability",
+            "new technologies",
+            "concern"
+          ]
+        },
+        "entities": [
+          "age",
+          "adaptability",
+          "new technologies",
+          "concern"
+        ],
+        "embedding_text": "The user is concerned that being older than most colleagues may hinder adapting to new technologies.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0138",
+        "source_time": "2023-05-21 20:16:00.500000",
+        "record_time": "2026-07-07T19:50:12.321739",
+        "score": 4.6824674060134575,
+        "score_components": {
+          "bm25_score": 4.6824674060134575,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "profile",
+        "content": "User feels motivated to take on a new fitness challenge after the 5K personal best.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "fitness motivation",
+            "personal best"
+          ]
+        },
+        "entities": [
+          "fitness motivation",
+          "personal best"
+        ],
+        "embedding_text": "User feels motivated to take on a new fitness challenge after the 5K personal best.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0025",
+        "source_time": "2023-04-27 13:45:00",
+        "record_time": "2026-07-07T19:50:12.320995",
+        "score": 3.9130343474343854,
+        "score_components": {
+          "bm25_score": 3.9130343474343854,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user has been carbo-loading for a few days before the 2023-05-27 cycling event to ensure sufficient energy for the ride.",
+        "dimension": {
+          "time": "2023-05-18 to 2023-05-21",
+          "location": "",
+          "reason": "to have energy for the cycling event",
+          "purpose": "ensure energy",
+          "keywords": [
+            "carbo-loading",
+            "cycling event"
+          ]
+        },
+        "entities": [
+          "carbo-loading",
+          "cycling event"
+        ],
+        "embedding_text": "The user has been carbo-loading for a few days before the 2023-05-27 cycling event to ensure sufficient energy for the ride.",
+        "source_message_ids": [
+          "13"
+        ],
+        "source_boundary_id": "13_0101",
+        "source_time": "2023-05-21 13:07:01.500000",
+        "record_time": "2026-07-07T19:50:12.321527",
+        "score": 3.91211012769768,
+        "score_components": {
+          "bm25_score": 3.91211012769768,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User is considering trying a new BBQ joint called Smokey's that recently opened downtown.",
+        "dimension": {
+          "time": "",
+          "location": "Smokey's downtown",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Smokey's",
+            "BBQ joint",
+            "downtown"
+          ]
+        },
+        "entities": [
+          "Smokey's",
+          "BBQ joint",
+          "downtown"
+        ],
+        "embedding_text": "User is considering trying a new BBQ joint called Smokey's that recently opened downtown.",
+        "source_message_ids": [
+          "9"
+        ],
+        "source_boundary_id": "9_0066",
+        "source_time": "2023-05-12 05:11:01.500000",
+        "record_time": "2026-07-07T19:50:12.321319",
+        "score": 3.3494289830837403,
+        "score_components": {
+          "bm25_score": 3.3494289830837403,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user plans to tell a manager that they achieved 156% attainment of a $420,000 quota, with over 50 deals averaging $15,000 each, including cross-sells and upsells, and 82% net new.",
+        "dimension": {
+          "time": "2023-04-23",
+          "location": "",
+          "reason": "to communicate performance to manager",
+          "purpose": "to present a favorable performance report",
+          "keywords": [
+            "quota attainment",
+            "156%",
+            "$420,000",
+            "average deal size $15,000",
+            "cross-sell",
+            "upsell",
+            "net new 82%"
+          ]
+        },
+        "entities": [
+          "quota attainment",
+          "156%",
+          "$420,000",
+          "average deal size $15,000",
+          "cross-sell",
+          "upsell",
+          "net new 82%"
+        ],
+        "embedding_text": "The user plans to tell a manager that they achieved 156% attainment of a $420,000 quota, with over 50 deals averaging $15,000 each, including cross-sells and upsells, and 82% net new.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0013",
+        "source_time": "2023-04-22 23:57:01",
+        "record_time": "2026-07-07T19:50:12.320920",
+        "score": 3.2910291246416374,
+        "score_components": {
+          "bm25_score": 3.2910291246416374,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user plans to participate in the 'Art in the Park' sculpture festival on June 15-16, 2023.",
+        "dimension": {
+          "time": "2023-06-15 to 2023-06-16",
+          "location": "nearby city",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Art in the Park",
+            "sculpture festival",
+            "amateur"
+          ]
+        },
+        "entities": [
+          "Art in the Park",
+          "sculpture festival",
+          "amateur"
+        ],
+        "embedding_text": "The user plans to participate in the 'Art in the Park' sculpture festival on June 15-16, 2023.",
+        "source_message_ids": [
+          "8"
+        ],
+        "source_boundary_id": "8_0055",
+        "source_time": "2023-05-08 18:28:00.500000",
+        "record_time": "2026-07-07T19:50:12.321176",
+        "score": 2.7394073665724745,
+        "score_components": {
+          "bm25_score": 2.7394073665724745,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "profile",
+        "content": "User is interested in trying Tteokbokki in Seoul and Pad Thai in Bangkok during the upcoming trip.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Tteokbokki",
+            "Seoul",
+            "Pad Thai",
+            "Bangkok",
+            "street food"
+          ]
+        },
+        "entities": [
+          "Tteokbokki",
+          "Seoul",
+          "Pad Thai",
+          "Bangkok",
+          "street food"
+        ],
+        "embedding_text": "User is interested in trying Tteokbokki in Seoul and Pad Thai in Bangkok during the upcoming trip.",
+        "source_message_ids": [
+          "14"
+        ],
+        "source_boundary_id": "14_0112",
+        "source_time": "2023-05-21 00:27:02.500000",
+        "record_time": "2026-07-07T19:50:12.321592",
+        "score": 2.449377944168993,
+        "score_components": {
+          "bm25_score": 2.449377944168993,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "fact",
+        "content": "The user works as a software engineer in the IT industry.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "software engineer",
+            "IT industry"
+          ]
+        },
+        "entities": [
+          "software engineer",
+          "IT industry"
+        ],
+        "embedding_text": "The user works as a software engineer in the IT industry.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0136",
+        "source_time": "2023-05-21 20:16:00.500000",
+        "record_time": "2026-07-07T19:50:12.321728",
+        "score": 2.2036120075415506,
+        "score_components": {
+          "bm25_score": 2.2036120075415506,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "profile",
+        "content": "The user believes sustainability in fashion should be prioritized and hopes it becomes the norm.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "sustainability",
+            "fashion",
+            "norm",
+            "environment"
+          ]
+        },
+        "entities": [
+          "sustainability",
+          "fashion",
+          "norm",
+          "environment"
+        ],
+        "embedding_text": "The user believes sustainability in fashion should be prioritized and hopes it becomes the norm.",
+        "source_message_ids": [
+          "11"
+        ],
+        "source_boundary_id": "11_0082",
+        "source_time": "2023-05-21 12:35:01",
+        "record_time": "2026-07-07T19:50:12.321414",
+        "score": 2.0601880568939728,
+        "score_components": {
+          "bm25_score": 2.0601880568939728,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user is planning a trip to Italy, intending to visit Rome, Florence, and Venice, and is interested in scenic drives in Tuscany and the Amalfi Coast.",
+        "dimension": {
+          "time": "",
+          "location": "Italy",
+          "reason": "",
+          "purpose": "travel",
+          "keywords": [
+            "Italy",
+            "Rome",
+            "Florence",
+            "Venice",
+            "Tuscany",
+            "Amalfi Coast",
+            "scenic drives",
+            "trip plan"
+          ]
+        },
+        "entities": [
+          "Italy",
+          "Rome",
+          "Florence",
+          "Venice",
+          "Tuscany",
+          "Amalfi Coast",
+          "scenic drives",
+          "trip plan"
+        ],
+        "embedding_text": "The user is planning a trip to Italy, intending to visit Rome, Florence, and Venice, and is interested in scenic drives in Tuscany and the Amalfi Coast.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0017",
+        "source_time": "2023-04-26 15:22:00",
+        "record_time": "2026-07-07T19:50:12.320947",
+        "score": 2.027423992417602,
+        "score_components": {
+          "bm25_score": 2.027423992417602,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "profile",
+        "content": "User is interested in AI singularity themes in science fiction.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "AI singularity",
+            "sci-fi"
+          ]
+        },
+        "entities": [
+          "AI singularity",
+          "sci-fi"
+        ],
+        "embedding_text": "User is interested in AI singularity themes in science fiction.",
+        "source_message_ids": [
+          "9"
+        ],
+        "source_boundary_id": "9_0073",
+        "source_time": "2023-05-21 00:03:02",
+        "record_time": "2026-07-07T19:50:12.321362",
+        "score": 1.9698614512674328,
+        "score_components": {
+          "bm25_score": 1.9698614512674328,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user's favorite part of the road trip was the hike to McWay Falls in Big Sur.",
+        "dimension": {
+          "time": "",
+          "location": "Big Sur, California",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "McWay Falls",
+            "hike",
+            "Big Sur",
+            "road trip"
+          ]
+        },
+        "entities": [
+          "McWay Falls",
+          "hike",
+          "Big Sur",
+          "road trip"
+        ],
+        "embedding_text": "The user's favorite part of the road trip was the hike to McWay Falls in Big Sur.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0016",
+        "source_time": "2023-04-26 15:22:01",
+        "record_time": "2026-07-07T19:50:12.320939",
+        "score": 1.967109879034659,
+        "score_components": {
+          "bm25_score": 1.967109879034659,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      }
+    ]
+  },
+  "structured": {
+    "mapped_query_analysis": {
+      "query_text": "What new kitchen gadget did the user invest in before getting the Air Fryer?",
+      "rewrite": "What new kitchen gadget did the user invest in before getting the Air Fryer?",
+      "intent": "lookup",
+      "answer_field": "keywords",
+      "content_query": "What new kitchen gadget did the user invest in before getting the Air Fryer?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {
+        "time": [
+          "before getting the Air Fryer"
+        ]
+      },
+      "keywords": [
+        "kitchen gadget",
+        "Air Fryer"
+      ],
+      "canonical_text": "What new kitchen gadget did the user invest in before getting the Air Fryer?"
+    },
+    "top_records": [
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user plans to make crispy sweet potato fries using the Air Fryer.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "sweet potato fries",
+            "Air Fryer"
+          ]
+        },
+        "entities": [
+          "sweet potato fries",
+          "Air Fryer"
+        ],
+        "embedding_text": "The user plans to make crispy sweet potato fries using the Air Fryer.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0149",
+        "source_time": "2023-05-21 22:54:00.500000",
+        "record_time": "2026-07-07T19:50:12.321804",
+        "score": 0.39999999999999997,
+        "structural_score": 0.39999999999999997,
+        "score_components": {
+          "score": 0.39999999999999997,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-05-21T22:54:00.500000",
+                "end": "2023-05-21T22:54:00.500000",
+                "granularity": "datetime",
+                "raw": "2023-05-21T22:54:00.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.5,
+          "keyword_token_overlap_score": 0.5,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.5,
+            "keyword_token_overlap": 0.5
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to make crispy sweet potato fries using the Air Fryer. | sweet potato fries | Air Fryer | sweet potato fries | Air Fryer"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User planned a 30-day daily show schedule outline for 'The Legacy Show' on 2023-04-21.",
+        "dimension": {
+          "time": "2023-04-21",
+          "location": "",
+          "reason": "",
+          "purpose": "to create a structured podcast series",
+          "keywords": [
+            "30-day schedule",
+            "outline",
+            "The Legacy Show"
+          ]
+        },
+        "entities": [
+          "30-day schedule",
+          "outline",
+          "The Legacy Show"
+        ],
+        "embedding_text": "User planned a 30-day daily show schedule outline for 'The Legacy Show' on 2023-04-21.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0002",
+        "source_time": "2023-04-21 22:19:01",
+        "record_time": "2026-07-07T19:50:12.320850",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-21T00:00:00",
+                "end": "2023-04-21T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-04-21"
+              },
+              {
+                "start": "2023-04-21T22:19:01",
+                "end": "2023-04-21T22:19:01",
+                "granularity": "datetime",
+                "raw": "2023-04-21T22:19:01"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User planned a 30-day daily show schedule outline for 'The Legacy Show' on 2023-04-21. | 30-day schedule | outline | The Legacy Show | 2023-04-21 | to create a structured podcast series | 30-day schedule | outline | The Legacy Show"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User spent approximately $80 on Instacart for grocery delivery in April 2023.",
+        "dimension": {
+          "time": "2023-04",
+          "location": "",
+          "reason": "",
+          "purpose": "grocery shopping",
+          "keywords": [
+            "Instacart",
+            "grocery delivery",
+            "$80",
+            "April 2023"
+          ]
+        },
+        "entities": [
+          "Instacart",
+          "grocery delivery",
+          "$80",
+          "April 2023"
+        ],
+        "embedding_text": "User spent approximately $80 on Instacart for grocery delivery in April 2023.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0008",
+        "source_time": "2023-04-22 04:35:00.500000",
+        "record_time": "2026-07-07T19:50:12.320887",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-01T00:00:00",
+                "end": "2023-04-30T23:59:59.999999",
+                "granularity": "month",
+                "raw": "2023-04"
+              },
+              {
+                "start": "2023-04-22T04:35:00.500000",
+                "end": "2023-04-22T04:35:00.500000",
+                "granularity": "datetime",
+                "raw": "2023-04-22T04:35:00.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User spent approximately $80 on Instacart for grocery delivery in April 2023. | Instacart | grocery delivery | $80 | April 2023 | 2023-04 | grocery shopping | Instacart | grocery delivery | $80 | April 2023"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user decided to track spending by saving email receipts from Instacart and requesting email receipts from other stores.",
+        "dimension": {
+          "time": "2023-04-22",
+          "location": "",
+          "reason": "to track spending",
+          "purpose": "to track spending",
+          "keywords": [
+            "digital receipts",
+            "email method",
+            "Instacart",
+            "spending tracking"
+          ]
+        },
+        "entities": [
+          "digital receipts",
+          "email method",
+          "Instacart",
+          "spending tracking"
+        ],
+        "embedding_text": "The user decided to track spending by saving email receipts from Instacart and requesting email receipts from other stores.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0010",
+        "source_time": "2023-04-22 04:35:02.500000",
+        "record_time": "2026-07-07T19:50:12.320900",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-22T00:00:00",
+                "end": "2023-04-22T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-04-22"
+              },
+              {
+                "start": "2023-04-22T04:35:02.500000",
+                "end": "2023-04-22T04:35:02.500000",
+                "granularity": "datetime",
+                "raw": "2023-04-22T04:35:02.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user decided to track spending by saving email receipts from Instacart and requesting email receipts from other stores. | digital receipts | email method | Instacart | spending tracking | 2023-04-22 | to track spending | to track spending | digital receipts | email method | Instacart | spending tracking"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user plans to try out Plan to Eat's free trial to create meal plans and grocery lists.",
+        "dimension": {
+          "time": "2023-04-22",
+          "location": "",
+          "reason": "to reduce food waste and save money on groceries",
+          "purpose": "to reduce food waste and save money on groceries",
+          "keywords": [
+            "Plan to Eat",
+            "meal planning",
+            "grocery list",
+            "free trial"
+          ]
+        },
+        "entities": [
+          "Plan to Eat",
+          "meal planning",
+          "grocery list",
+          "free trial"
+        ],
+        "embedding_text": "The user plans to try out Plan to Eat's free trial to create meal plans and grocery lists.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0011",
+        "source_time": "2023-04-22 23:57:00",
+        "record_time": "2026-07-07T19:50:12.320906",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-22T00:00:00",
+                "end": "2023-04-22T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-04-22"
+              },
+              {
+                "start": "2023-04-22T23:57:00",
+                "end": "2023-04-22T23:57:00",
+                "granularity": "datetime",
+                "raw": "2023-04-22T23:57:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to try out Plan to Eat's free trial to create meal plans and grocery lists. | Plan to Eat | meal planning | grocery list | free trial | 2023-04-22 | to reduce food waste and save money on groceries | to reduce food waste and save money on groceries | Plan to Eat | meal planning | grocery list | free trial"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user plans to tell a manager that they achieved 156% attainment of a $420,000 quota, with over 50 deals averaging $15,000 each, including cross-sells and upsells, and 82% net new.",
+        "dimension": {
+          "time": "2023-04-23",
+          "location": "",
+          "reason": "to communicate performance to manager",
+          "purpose": "to present a favorable performance report",
+          "keywords": [
+            "quota attainment",
+            "156%",
+            "$420,000",
+            "average deal size $15,000",
+            "cross-sell",
+            "upsell",
+            "net new 82%"
+          ]
+        },
+        "entities": [
+          "quota attainment",
+          "156%",
+          "$420,000",
+          "average deal size $15,000",
+          "cross-sell",
+          "upsell",
+          "net new 82%"
+        ],
+        "embedding_text": "The user plans to tell a manager that they achieved 156% attainment of a $420,000 quota, with over 50 deals averaging $15,000 each, including cross-sells and upsells, and 82% net new.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0013",
+        "source_time": "2023-04-22 23:57:01",
+        "record_time": "2026-07-07T19:50:12.320920",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-23T00:00:00",
+                "end": "2023-04-23T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-04-23"
+              },
+              {
+                "start": "2023-04-22T23:57:01",
+                "end": "2023-04-22T23:57:01",
+                "granularity": "datetime",
+                "raw": "2023-04-22T23:57:01"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to tell a manager that they achieved 156% attainment of a $420,000 quota, with over 50 deals averaging $15,000 each, including cross-sells and upsells, and 82% net new. | quota attainment | 156% | $420,000 | average deal size $15,000 | cross-sell | upsell | net new 82% | 2023-04-23 | to communicate performance to manager | to present a favorable performance report | quota attainment | 156% | $420,000 | average deal size $15,000 | cross-sell | upsell | net new 82%"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user is interested in Rippling.com and is preparing to explain their interest to a manager.",
+        "dimension": {
+          "time": "2023-04-23",
+          "location": "",
+          "reason": "user is considering Rippling as a potential employer or opportunity",
+          "purpose": "to craft a response to a manager about why they are interested in Rippling",
+          "keywords": [
+            "Rippling.com",
+            "job interest",
+            "manager conversation"
+          ]
+        },
+        "entities": [
+          "Rippling.com",
+          "job interest",
+          "manager conversation"
+        ],
+        "embedding_text": "The user is interested in Rippling.com and is preparing to explain their interest to a manager.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0014",
+        "source_time": "2023-04-22 23:57:01.500000",
+        "record_time": "2026-07-07T19:50:12.320926",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-23T00:00:00",
+                "end": "2023-04-23T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-04-23"
+              },
+              {
+                "start": "2023-04-22T23:57:01.500000",
+                "end": "2023-04-22T23:57:01.500000",
+                "granularity": "datetime",
+                "raw": "2023-04-22T23:57:01.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user is interested in Rippling.com and is preparing to explain their interest to a manager. | Rippling.com | job interest | manager conversation | 2023-04-23 | user is considering Rippling as a potential employer or opportunity | to craft a response to a manager about why they are interested in Rippling | Rippling.com | job interest | manager conversation"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user took a 5-day road trip with friends from San Francisco to Los Angeles, stopping at Big Sur, Santa Barbara, and Monterey along the Pacific Coast Highway.",
+        "dimension": {
+          "time": "",
+          "location": "California, USA",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "road trip",
+            "San Francisco",
+            "Los Angeles",
+            "Big Sur",
+            "Santa Barbara",
+            "Monterey",
+            "Pacific Coast Highway",
+            "friends",
+            "5 days"
+          ]
+        },
+        "entities": [
+          "road trip",
+          "San Francisco",
+          "Los Angeles",
+          "Big Sur",
+          "Santa Barbara",
+          "Monterey",
+          "Pacific Coast Highway",
+          "friends",
+          "5 days"
+        ],
+        "embedding_text": "The user took a 5-day road trip with friends from San Francisco to Los Angeles, stopping at Big Sur, Santa Barbara, and Monterey along the Pacific Coast Highway.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0015",
+        "source_time": "2023-04-26 15:22:00",
+        "record_time": "2026-07-07T19:50:12.320933",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-26T15:22:00",
+                "end": "2023-04-26T15:22:00",
+                "granularity": "datetime",
+                "raw": "2023-04-26T15:22:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user took a 5-day road trip with friends from San Francisco to Los Angeles, stopping at Big Sur, Santa Barbara, and Monterey along the Pacific Coast Highway. | road trip | San Francisco | Los Angeles | Big Sur | Santa Barbara | Monterey | Pacific Coast Highway | friends | 5 days | California, USA | road trip | San Francisco | Los Angeles | Big Sur | Santa Barbara | Monterey | Pacific Coast Highway | friends | 5 days"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user's favorite part of the road trip was the hike to McWay Falls in Big Sur.",
+        "dimension": {
+          "time": "",
+          "location": "Big Sur, California",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "McWay Falls",
+            "hike",
+            "Big Sur",
+            "road trip"
+          ]
+        },
+        "entities": [
+          "McWay Falls",
+          "hike",
+          "Big Sur",
+          "road trip"
+        ],
+        "embedding_text": "The user's favorite part of the road trip was the hike to McWay Falls in Big Sur.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0016",
+        "source_time": "2023-04-26 15:22:01",
+        "record_time": "2026-07-07T19:50:12.320939",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-26T15:22:01",
+                "end": "2023-04-26T15:22:01",
+                "granularity": "datetime",
+                "raw": "2023-04-26T15:22:01"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user's favorite part of the road trip was the hike to McWay Falls in Big Sur. | McWay Falls | hike | Big Sur | road trip | Big Sur, California | McWay Falls | hike | Big Sur | road trip"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user is planning a trip to Italy, intending to visit Rome, Florence, and Venice, and is interested in scenic drives in Tuscany and the Amalfi Coast.",
+        "dimension": {
+          "time": "",
+          "location": "Italy",
+          "reason": "",
+          "purpose": "travel",
+          "keywords": [
+            "Italy",
+            "Rome",
+            "Florence",
+            "Venice",
+            "Tuscany",
+            "Amalfi Coast",
+            "scenic drives",
+            "trip plan"
+          ]
+        },
+        "entities": [
+          "Italy",
+          "Rome",
+          "Florence",
+          "Venice",
+          "Tuscany",
+          "Amalfi Coast",
+          "scenic drives",
+          "trip plan"
+        ],
+        "embedding_text": "The user is planning a trip to Italy, intending to visit Rome, Florence, and Venice, and is interested in scenic drives in Tuscany and the Amalfi Coast.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0017",
+        "source_time": "2023-04-26 15:22:00",
+        "record_time": "2026-07-07T19:50:12.320947",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-26T15:22:00",
+                "end": "2023-04-26T15:22:00",
+                "granularity": "datetime",
+                "raw": "2023-04-26T15:22:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user is planning a trip to Italy, intending to visit Rome, Florence, and Venice, and is interested in scenic drives in Tuscany and the Amalfi Coast. | Italy | Rome | Florence | Venice | Tuscany | Amalfi Coast | scenic drives | trip plan | Italy | travel | Italy | Rome | Florence | Venice | Tuscany | Amalfi Coast | scenic drives | trip plan"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User plans to rent a car in Italy to explore the countryside and scenic routes at their own pace.",
+        "dimension": {
+          "time": "",
+          "location": "Italy",
+          "reason": "User had a good experience driving in California.",
+          "purpose": "To have freedom to explore at own pace.",
+          "keywords": [
+            "Italy",
+            "car rental",
+            "scenic drives",
+            "freedom"
+          ]
+        },
+        "entities": [
+          "Italy",
+          "car rental",
+          "scenic drives",
+          "freedom"
+        ],
+        "embedding_text": "User plans to rent a car in Italy to explore the countryside and scenic routes at their own pace.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0018",
+        "source_time": "2023-04-26 15:22:01.500000",
+        "record_time": "2026-07-07T19:50:12.320953",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-26T15:22:01.500000",
+                "end": "2023-04-26T15:22:01.500000",
+                "granularity": "datetime",
+                "raw": "2023-04-26T15:22:01.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to rent a car in Italy to explore the countryside and scenic routes at their own pace. | Italy | car rental | scenic drives | freedom | Italy | User had a good experience driving in California. | To have freedom to explore at own pace. | Italy | car rental | scenic drives | freedom"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User had a positive driving experience during a road trip from San Francisco to Los Angeles.",
+        "dimension": {
+          "time": "",
+          "location": "California",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "road trip",
+            "San Francisco",
+            "Los Angeles",
+            "California driving"
+          ]
+        },
+        "entities": [
+          "road trip",
+          "San Francisco",
+          "Los Angeles",
+          "California driving"
+        ],
+        "embedding_text": "User had a positive driving experience during a road trip from San Francisco to Los Angeles.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0019",
+        "source_time": "2023-04-26 15:22:01.500000",
+        "record_time": "2026-07-07T19:50:12.320959",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-26T15:22:01.500000",
+                "end": "2023-04-26T15:22:01.500000",
+                "granularity": "datetime",
+                "raw": "2023-04-26T15:22:01.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User had a positive driving experience during a road trip from San Francisco to Los Angeles. | road trip | San Francisco | Los Angeles | California driving | California | road trip | San Francisco | Los Angeles | California driving"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User plans to focus on Tuscany and the Amalfi Coast for their Italy trip.",
+        "dimension": {
+          "time": "",
+          "location": "Italy, Tuscany, Amalfi Coast",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Italy trip",
+            "Tuscany",
+            "Amalfi Coast"
+          ]
+        },
+        "entities": [
+          "Italy trip",
+          "Tuscany",
+          "Amalfi Coast"
+        ],
+        "embedding_text": "User plans to focus on Tuscany and the Amalfi Coast for their Italy trip.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0020",
+        "source_time": "2023-04-26 15:22:02",
+        "record_time": "2026-07-07T19:50:12.320965",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-26T15:22:02",
+                "end": "2023-04-26T15:22:02",
+                "granularity": "datetime",
+                "raw": "2023-04-26T15:22:02"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to focus on Tuscany and the Amalfi Coast for their Italy trip. | Italy trip | Tuscany | Amalfi Coast | Italy, Tuscany, Amalfi Coast | Italy trip | Tuscany | Amalfi Coast"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User plans to stay in Siena and then Positano or Amalfi, with day trips to Pompeii and the Isle of Capri.",
+        "dimension": {
+          "time": "",
+          "location": "Siena, Positano, Amalfi, Pompeii, Capri",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Italy itinerary",
+            "Siena",
+            "Positano",
+            "Amalfi",
+            "Pompeii",
+            "Capri"
+          ]
+        },
+        "entities": [
+          "Italy itinerary",
+          "Siena",
+          "Positano",
+          "Amalfi",
+          "Pompeii",
+          "Capri"
+        ],
+        "embedding_text": "User plans to stay in Siena and then Positano or Amalfi, with day trips to Pompeii and the Isle of Capri.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0022",
+        "source_time": "2023-04-26 15:22:02.500000",
+        "record_time": "2026-07-07T19:50:12.320978",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-26T15:22:02.500000",
+                "end": "2023-04-26T15:22:02.500000",
+                "granularity": "datetime",
+                "raw": "2023-04-26T15:22:02.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to stay in Siena and then Positano or Amalfi, with day trips to Pompeii and the Isle of Capri. | Italy itinerary | Siena | Positano | Amalfi | Pompeii | Capri | Siena, Positano, Amalfi, Pompeii, Capri | Italy itinerary | Siena | Positano | Amalfi | Pompeii | Capri"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User participated in a charity 5K run on October 16th and achieved a personal best time.",
+        "dimension": {
+          "time": "October 16th",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "charity 5K run",
+            "personal best"
+          ]
+        },
+        "entities": [
+          "charity 5K run",
+          "personal best"
+        ],
+        "embedding_text": "User participated in a charity 5K run on October 16th and achieved a personal best time.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0024",
+        "source_time": "2023-04-27 13:45:00",
+        "record_time": "2026-07-07T19:50:12.320989",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-27T13:45:00",
+                "end": "2023-04-27T13:45:00",
+                "granularity": "datetime",
+                "raw": "2023-04-27T13:45:00"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User participated in a charity 5K run on October 16th and achieved a personal best time. | charity 5K run | personal best | October 16th | charity 5K run | personal best"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User wants to combine swimming and running with learning to ride a bike for a triathlon.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "triathlon",
+            "learn to ride bike",
+            "swimming",
+            "running"
+          ]
+        },
+        "entities": [
+          "triathlon",
+          "learn to ride bike",
+          "swimming",
+          "running"
+        ],
+        "embedding_text": "User wants to combine swimming and running with learning to ride a bike for a triathlon.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0027",
+        "source_time": "2023-04-27 13:45:00.500000",
+        "record_time": "2026-07-07T19:50:12.321007",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-27T13:45:00.500000",
+                "end": "2023-04-27T13:45:00.500000",
+                "granularity": "datetime",
+                "raw": "2023-04-27T13:45:00.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User wants to combine swimming and running with learning to ride a bike for a triathlon. | triathlon | learn to ride bike | swimming | running | triathlon | learn to ride bike | swimming | running"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User plans to search for a sprint-distance triathlon in their local area, aiming for the spring.",
+        "dimension": {
+          "time": "spring",
+          "location": "local area",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "sprint triathlon",
+            "spring",
+            "local"
+          ]
+        },
+        "entities": [
+          "sprint triathlon",
+          "spring",
+          "local"
+        ],
+        "embedding_text": "User plans to search for a sprint-distance triathlon in their local area, aiming for the spring.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0028",
+        "source_time": "2023-04-27 13:45:01",
+        "record_time": "2026-07-07T19:50:12.321013",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-27T13:45:01",
+                "end": "2023-04-27T13:45:01",
+                "granularity": "datetime",
+                "raw": "2023-04-27T13:45:01"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to search for a sprint-distance triathlon in their local area, aiming for the spring. | sprint triathlon | spring | local | spring | local area | sprint triathlon | spring | local"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User visited their grandmother two weekends ago and had a nice time together.",
+        "dimension": {
+          "time": "2023-04-22",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "grandmother",
+            "visit",
+            "nice time"
+          ]
+        },
+        "entities": [
+          "grandmother",
+          "visit",
+          "nice time"
+        ],
+        "embedding_text": "User visited their grandmother two weekends ago and had a nice time together.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0033",
+        "source_time": "2023-04-30 06:36:06",
+        "record_time": "2026-07-07T19:50:12.321043",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-22T00:00:00",
+                "end": "2023-04-22T23:59:59.999999",
+                "granularity": "day",
+                "raw": "2023-04-22"
+              },
+              {
+                "start": "2023-04-30T06:36:06",
+                "end": "2023-04-30T06:36:06",
+                "granularity": "datetime",
+                "raw": "2023-04-30T06:36:06"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User visited their grandmother two weekends ago and had a nice time together. | grandmother | visit | nice time | 2023-04-22 | grandmother | visit | nice time"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User is planning a family reunion for summer and wants to rent a big house by a lake to accommodate a large group.",
+        "dimension": {
+          "time": "",
+          "location": "lake house",
+          "reason": "",
+          "purpose": "accommodate a large group",
+          "keywords": [
+            "family reunion",
+            "lake house",
+            "large group"
+          ]
+        },
+        "entities": [
+          "family reunion",
+          "lake house",
+          "large group"
+        ],
+        "embedding_text": "User is planning a family reunion for summer and wants to rent a big house by a lake to accommodate a large group.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0034",
+        "source_time": "2023-04-30 06:36:06.500000",
+        "record_time": "2026-07-07T19:50:12.321049",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-30T06:36:06.500000",
+                "end": "2023-04-30T06:36:06.500000",
+                "granularity": "datetime",
+                "raw": "2023-04-30T06:36:06.500000"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is planning a family reunion for summer and wants to rent a big house by a lake to accommodate a large group. | family reunion | lake house | large group | lake house | accommodate a large group | family reunion | lake house | large group"
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User plans to include family Olympics and scavenger hunt as activities for the family reunion, considering kids and seniors.",
+        "dimension": {
+          "time": "",
+          "location": "lake house",
+          "reason": "",
+          "purpose": "fun for kids and adults",
+          "keywords": [
+            "family Olympics",
+            "scavenger hunt",
+            "kids",
+            "seniors"
+          ]
+        },
+        "entities": [
+          "family Olympics",
+          "scavenger hunt",
+          "kids",
+          "seniors"
+        ],
+        "embedding_text": "User plans to include family Olympics and scavenger hunt as activities for the family reunion, considering kids and seniors.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0035",
+        "source_time": "2023-04-30 06:36:07",
+        "record_time": "2026-07-07T19:50:12.321055",
+        "score": 0.19999999999999998,
+        "structural_score": 0.19999999999999998,
+        "score_components": {
+          "score": 0.19999999999999998,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": [
+              {
+                "start": "2023-04-30T06:36:07",
+                "end": "2023-04-30T06:36:07",
+                "granularity": "datetime",
+                "raw": "2023-04-30T06:36:07"
+              }
+            ]
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.19999999999999998,
+            "time_constraint": 0.39999999999999997,
+            "keyword_phrase_match": 0.19999999999999998,
+            "keyword_token_overlap": 0.19999999999999998
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "time_constraint": 0.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to include family Olympics and scavenger hunt as activities for the family reunion, considering kids and seniors. | family Olympics | scavenger hunt | kids | seniors | lake house | fun for kids and adults | family Olympics | scavenger hunt | kids | seniors"
+        }
+      }
+    ]
+  },
+  "minilm": {
+    "mapped_query_analysis": {
+      "query_text": "What new kitchen gadget did the user invest in before getting the Air Fryer?"
+    },
+    "top_records": [
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "fact",
+        "content": "The user acquired an Air Fryer on 2023-05-20.",
+        "dimension": {
+          "time": "2023-05-20",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Air Fryer"
+          ]
+        },
+        "entities": [
+          "Air Fryer"
+        ],
+        "embedding_text": "The user acquired an Air Fryer on 2023-05-20.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0148",
+        "source_time": "2023-05-21 22:54:00.500000",
+        "record_time": "2026-07-07T19:50:12.321797",
+        "score": 0.7525381926195738,
+        "score_components": {
+          "dense_cosine_score": 0.7525381926195738,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user plans to make crispy sweet potato fries using the Air Fryer.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "sweet potato fries",
+            "Air Fryer"
+          ]
+        },
+        "entities": [
+          "sweet potato fries",
+          "Air Fryer"
+        ],
+        "embedding_text": "The user plans to make crispy sweet potato fries using the Air Fryer.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0149",
+        "source_time": "2023-05-21 22:54:00.500000",
+        "record_time": "2026-07-07T19:50:12.321804",
+        "score": 0.5456721455451923,
+        "score_components": {
+          "dense_cosine_score": 0.5456721455451923,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "fact",
+        "content": "The user owns a new Instant Pot.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Instant Pot"
+          ]
+        },
+        "entities": [
+          "Instant Pot"
+        ],
+        "embedding_text": "The user owns a new Instant Pot.",
+        "source_message_ids": [
+          "10"
+        ],
+        "source_boundary_id": "10_0075",
+        "source_time": "2023-05-21 05:48:00.500000",
+        "record_time": "2026-07-07T19:50:12.321373",
+        "score": 0.4400732523364583,
+        "score_components": {
+          "dense_cosine_score": 0.4400732523364583,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User went grocery shopping on 2023-04-29 and bought chicken breasts.",
+        "dimension": {
+          "time": "2023-04-29",
+          "location": "grocery store",
+          "reason": "shopping",
+          "purpose": "for cooking",
+          "keywords": [
+            "chicken breasts",
+            "grocery shopping",
+            "2023-04-29"
+          ]
+        },
+        "entities": [
+          "chicken breasts",
+          "grocery shopping",
+          "2023-04-29"
+        ],
+        "embedding_text": "User went grocery shopping on 2023-04-29 and bought chicken breasts.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0040",
+        "source_time": "2023-05-02 22:58:01",
+        "record_time": "2026-07-07T19:50:12.321086",
+        "score": 0.4281448558620066,
+        "score_components": {
+          "dense_cosine_score": 0.4281448558620066,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User planned to make a stir-fry for dinner on 2023-05-02.",
+        "dimension": {
+          "time": "2023-05-02",
+          "location": "home",
+          "reason": "dinner",
+          "purpose": "cook dinner",
+          "keywords": [
+            "stir-fry",
+            "dinner",
+            "2023-05-02"
+          ]
+        },
+        "entities": [
+          "stir-fry",
+          "dinner",
+          "2023-05-02"
+        ],
+        "embedding_text": "User planned to make a stir-fry for dinner on 2023-05-02.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0038",
+        "source_time": "2023-05-02 22:58:00",
+        "record_time": "2026-07-07T19:50:12.321074",
+        "score": 0.41959882574726715,
+        "score_components": {
+          "dense_cosine_score": 0.41959882574726715,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User plans to add a small fridge and a coffee maker to his garage workstation.",
+        "dimension": {
+          "time": "",
+          "location": "garage",
+          "reason": "comfort and convenience",
+          "purpose": "",
+          "keywords": [
+            "small fridge",
+            "coffee maker",
+            "garage workstation"
+          ]
+        },
+        "entities": [
+          "small fridge",
+          "coffee maker",
+          "garage workstation"
+        ],
+        "embedding_text": "User plans to add a small fridge and a coffee maker to his garage workstation.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0125",
+        "source_time": "2023-05-21 18:25:02.500000",
+        "record_time": "2026-07-07T19:50:12.321665",
+        "score": 0.39280693332731725,
+        "score_components": {
+          "dense_cosine_score": 0.39280693332731725,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user recently made chili con carne.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "chili con carne"
+          ]
+        },
+        "entities": [
+          "chili con carne"
+        ],
+        "embedding_text": "The user recently made chili con carne.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0146",
+        "source_time": "2023-05-21 22:54:00",
+        "record_time": "2026-07-07T19:50:12.321786",
+        "score": 0.3547636409807845,
+        "score_components": {
+          "dense_cosine_score": 0.3547636409807845,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User spent approximately $80 on Instacart for grocery delivery in April 2023.",
+        "dimension": {
+          "time": "2023-04",
+          "location": "",
+          "reason": "",
+          "purpose": "grocery shopping",
+          "keywords": [
+            "Instacart",
+            "grocery delivery",
+            "$80",
+            "April 2023"
+          ]
+        },
+        "entities": [
+          "Instacart",
+          "grocery delivery",
+          "$80",
+          "April 2023"
+        ],
+        "embedding_text": "User spent approximately $80 on Instacart for grocery delivery in April 2023.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0008",
+        "source_time": "2023-04-22 04:35:00.500000",
+        "record_time": "2026-07-07T19:50:12.320887",
+        "score": 0.352796787106137,
+        "score_components": {
+          "dense_cosine_score": 0.352796787106137,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "fact",
+        "content": "User has old tools inherited from his dad.",
+        "dimension": {
+          "time": "",
+          "location": "garage",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "old tools",
+            "dad"
+          ]
+        },
+        "entities": [
+          "old tools",
+          "dad"
+        ],
+        "embedding_text": "User has old tools inherited from his dad.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0121",
+        "source_time": "2023-05-21 18:25:01",
+        "record_time": "2026-07-07T19:50:12.321642",
+        "score": 0.34407822470132426,
+        "score_components": {
+          "dense_cosine_score": 0.34407822470132426,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "fact",
+        "content": "User previously bought a funny mug with an inside joke from an online store for a colleague's going-away party for about $15.",
+        "dimension": {
+          "time": "",
+          "location": "online store",
+          "reason": "going-away party",
+          "purpose": "gift",
+          "keywords": [
+            "funny mug",
+            "inside joke",
+            "$15",
+            "going-away party"
+          ]
+        },
+        "entities": [
+          "funny mug",
+          "inside joke",
+          "$15",
+          "going-away party"
+        ],
+        "embedding_text": "User previously bought a funny mug with an inside joke from an online store for a colleague's going-away party for about $15.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0126",
+        "source_time": "2023-05-21 00:24:00",
+        "record_time": "2026-07-07T19:50:12.321671",
+        "score": 0.3376754199839313,
+        "score_components": {
+          "dense_cosine_score": 0.3376754199839313,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "User is considering trying a new BBQ joint called Smokey's that recently opened downtown.",
+        "dimension": {
+          "time": "",
+          "location": "Smokey's downtown",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Smokey's",
+            "BBQ joint",
+            "downtown"
+          ]
+        },
+        "entities": [
+          "Smokey's",
+          "BBQ joint",
+          "downtown"
+        ],
+        "embedding_text": "User is considering trying a new BBQ joint called Smokey's that recently opened downtown.",
+        "source_message_ids": [
+          "9"
+        ],
+        "source_boundary_id": "9_0066",
+        "source_time": "2023-05-12 05:11:01.500000",
+        "record_time": "2026-07-07T19:50:12.321319",
+        "score": 0.3356724642688037,
+        "score_components": {
+          "dense_cosine_score": 0.3356724642688037,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "profile",
+        "content": "User was looking for a winter coat and considered buying a puffer jacket.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "winter coat",
+            "puffer jacket"
+          ]
+        },
+        "entities": [
+          "winter coat",
+          "puffer jacket"
+        ],
+        "embedding_text": "User was looking for a winter coat and considered buying a puffer jacket.",
+        "source_message_ids": [
+          "14"
+        ],
+        "source_boundary_id": "14_0114",
+        "source_time": "2023-05-21 22:36:00.500000",
+        "record_time": "2026-07-07T19:50:12.321603",
+        "score": 0.33321587902481836,
+        "score_components": {
+          "dense_cosine_score": 0.33321587902481836,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "fact",
+        "content": "User has frozen peas and carrots in their freezer.",
+        "dimension": {
+          "time": "",
+          "location": "home freezer",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "frozen peas",
+            "frozen carrots",
+            "freezer"
+          ]
+        },
+        "entities": [
+          "frozen peas",
+          "frozen carrots",
+          "freezer"
+        ],
+        "embedding_text": "User has frozen peas and carrots in their freezer.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0042",
+        "source_time": "2023-05-02 22:58:02",
+        "record_time": "2026-07-07T19:50:12.321098",
+        "score": 0.3326779314446054,
+        "score_components": {
+          "dense_cosine_score": 0.3326779314446054,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "fact",
+        "content": "User has frozen vegetables in their freezer.",
+        "dimension": {
+          "time": "",
+          "location": "home freezer",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "frozen vegetables",
+            "freezer"
+          ]
+        },
+        "entities": [
+          "frozen vegetables",
+          "freezer"
+        ],
+        "embedding_text": "User has frozen vegetables in their freezer.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0041",
+        "source_time": "2023-05-02 22:58:01.500000",
+        "record_time": "2026-07-07T19:50:12.321093",
+        "score": 0.32875199815050643,
+        "score_components": {
+          "dense_cosine_score": 0.32875199815050643,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user planned to sell old furniture and household items at the Flea Market.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "",
+          "reason": "",
+          "purpose": "selling at Flea Market",
+          "keywords": [
+            "old furniture",
+            "household items",
+            "Flea Market"
+          ]
+        },
+        "entities": [
+          "old furniture",
+          "household items",
+          "Flea Market"
+        ],
+        "embedding_text": "The user planned to sell old furniture and household items at the Flea Market.",
+        "source_message_ids": [
+          "10"
+        ],
+        "source_boundary_id": "10_0080",
+        "source_time": "2023-05-21 06:33:01.500000",
+        "record_time": "2026-07-07T19:50:12.321402",
+        "score": 0.32698157419982143,
+        "score_components": {
+          "dense_cosine_score": 0.32698157419982143,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "fact",
+        "content": "The user is a sales representative who closed 50 net new deals in the past year (likely 2022).",
+        "dimension": {
+          "time": "2022",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "sales representative",
+            "net new deals",
+            "50 deals"
+          ]
+        },
+        "entities": [
+          "sales representative",
+          "net new deals",
+          "50 deals"
+        ],
+        "embedding_text": "The user is a sales representative who closed 50 net new deals in the past year (likely 2022).",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0012",
+        "source_time": "2023-04-22 23:57:00.500000",
+        "record_time": "2026-07-07T19:50:12.320913",
+        "score": 0.3087899176256268,
+        "score_components": {
+          "dense_cosine_score": 0.3087899176256268,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "On 2023-05-21 afternoon, the user prepared for a Flea Market by cleaning and pricing about 20 items, including a vintage armchair and some kitchenware.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "",
+          "reason": "",
+          "purpose": "preparing for Flea Market",
+          "keywords": [
+            "Flea Market",
+            "vintage armchair",
+            "kitchenware"
+          ]
+        },
+        "entities": [
+          "Flea Market",
+          "vintage armchair",
+          "kitchenware"
+        ],
+        "embedding_text": "On 2023-05-21 afternoon, the user prepared for a Flea Market by cleaning and pricing about 20 items, including a vintage armchair and some kitchenware.",
+        "source_message_ids": [
+          "10"
+        ],
+        "source_boundary_id": "10_0078",
+        "source_time": "2023-05-21 06:33:00",
+        "record_time": "2026-07-07T19:50:12.321391",
+        "score": 0.3072691036962115,
+        "score_components": {
+          "dense_cosine_score": 0.3072691036962115,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "episodic",
+        "content": "The user made homemade BBQ sauce around May 6-7, 2023, but found it too sweet.",
+        "dimension": {
+          "time": "2023-05-06 to 2023-05-07",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "homemade BBQ sauce",
+            "too sweet"
+          ]
+        },
+        "entities": [
+          "homemade BBQ sauce",
+          "too sweet"
+        ],
+        "embedding_text": "The user made homemade BBQ sauce around May 6-7, 2023, but found it too sweet.",
+        "source_message_ids": [
+          "8"
+        ],
+        "source_boundary_id": "8_0062",
+        "source_time": "2023-05-12 05:11:00",
+        "record_time": "2026-07-07T19:50:12.321224",
+        "score": 0.305478510743759,
+        "score_components": {
+          "dense_cosine_score": 0.305478510743759,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "fact",
+        "content": "User owns a pair of brown loafers.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "brown loafers",
+            "user"
+          ]
+        },
+        "entities": [
+          "brown loafers",
+          "user"
+        ],
+        "embedding_text": "User owns a pair of brown loafers.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0004",
+        "source_time": "2023-04-21 22:19:02",
+        "record_time": "2026-07-07T19:50:12.320862",
+        "score": 0.29540765689243675,
+        "score_components": {
+          "dense_cosine_score": 0.29540765689243675,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0015_0977f2af",
+        "memory_type": "profile",
+        "content": "User prefers digital receipt tracking over using a notebook or a budgeting app for managing grocery spending.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "receipt tracking",
+            "digital",
+            "grocery spending",
+            "preference"
+          ]
+        },
+        "entities": [
+          "receipt tracking",
+          "digital",
+          "grocery spending",
+          "preference"
+        ],
+        "embedding_text": "User prefers digital receipt tracking over using a notebook or a budgeting app for managing grocery spending.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0009",
+        "source_time": "2023-04-22 04:35:01",
+        "record_time": "2026-07-07T19:50:12.320894",
+        "score": 0.2849214523743964,
+        "score_components": {
+          "dense_cosine_score": 0.2849214523743964,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      }
+    ]
+  }
+}

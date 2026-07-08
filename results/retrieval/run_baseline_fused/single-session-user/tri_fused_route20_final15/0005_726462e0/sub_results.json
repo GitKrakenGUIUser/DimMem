@@ -1,0 +1,3291 @@
+{
+  "bm25": {
+    "mapped_query_analysis": {
+      "query_text": "The user's discount on their first purchase from the new clothing brand",
+      "keywords": [
+        "first purchase",
+        "clothing brand",
+        "discount"
+      ],
+      "query_terms": [
+        "the",
+        "user",
+        "s",
+        "discount",
+        "on",
+        "their",
+        "first",
+        "purchase",
+        "from",
+        "new",
+        "clothing",
+        "brand"
+      ]
+    },
+    "top_records": [
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User purchased a new camera bag on 2023-02-22 that is more compact and easier to carry than their old one.",
+        "dimension": {
+          "time": "2023-02-22",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "camera bag",
+            "purchase",
+            "compact",
+            "February 22"
+          ]
+        },
+        "entities": [
+          "camera bag",
+          "purchase",
+          "compact",
+          "February 22"
+        ],
+        "embedding_text": "User purchased a new camera bag on 2023-02-22 that is more compact and easier to carry than their old one.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0000",
+        "source_time": "2023-05-20 03:59:00",
+        "record_time": "2026-07-07T19:50:59.284034",
+        "score": 9.33430150998722,
+        "score_components": {
+          "bm25_score": 9.33430150998722,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "fact",
+        "content": "User plans to bring a backpack containing water, snacks, sunscreen, and a first aid kit on the trip.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "backpack",
+            "water",
+            "snacks",
+            "sunscreen",
+            "first aid kit"
+          ]
+        },
+        "entities": [
+          "backpack",
+          "water",
+          "snacks",
+          "sunscreen",
+          "first aid kit"
+        ],
+        "embedding_text": "User plans to bring a backpack containing water, snacks, sunscreen, and a first aid kit on the trip.",
+        "source_message_ids": [
+          "14"
+        ],
+        "source_boundary_id": "14_0140",
+        "source_time": null,
+        "record_time": "2026-07-07T19:50:59.284949",
+        "score": 8.512796494360554,
+        "score_components": {
+          "bm25_score": 8.512796494360554,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "The user requested examples from 'The Port-Royal Grammar', Kant's 'Critique of Pure Reason', and Schleicher's 'Stammbaumtheorie' to illustrate their views on language, meaning, and evolution.",
+        "dimension": {
+          "time": "2023-05-26",
+          "location": "",
+          "reason": "to illustrate views on language, meaning, and evolution",
+          "purpose": "to obtain examples from these works",
+          "keywords": [
+            "Port-Royal Grammar",
+            "Kant",
+            "Critique of Pure Reason",
+            "Schleicher",
+            "Stammbaumtheorie",
+            "linguistics"
+          ]
+        },
+        "entities": [
+          "Port-Royal Grammar",
+          "Kant",
+          "Critique of Pure Reason",
+          "Schleicher",
+          "Stammbaumtheorie",
+          "linguistics"
+        ],
+        "embedding_text": "The user requested examples from 'The Port-Royal Grammar', Kant's 'Critique of Pure Reason', and Schleicher's 'Stammbaumtheorie' to illustrate their views on language, meaning, and evolution.",
+        "source_message_ids": [
+          "13"
+        ],
+        "source_boundary_id": "13_0123",
+        "source_time": "2023-05-26 05:48:01",
+        "record_time": "2026-07-07T19:50:59.284850",
+        "score": 7.805552492224015,
+        "score_components": {
+          "bm25_score": 7.805552492224015,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "fact",
+        "content": "User owns hiking boots, outdoor clothing, and a camera for capturing scenery and wildlife.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "hiking boots",
+            "outdoor clothing",
+            "camera",
+            "photography"
+          ]
+        },
+        "entities": [
+          "hiking boots",
+          "outdoor clothing",
+          "camera",
+          "photography"
+        ],
+        "embedding_text": "User owns hiking boots, outdoor clothing, and a camera for capturing scenery and wildlife.",
+        "source_message_ids": [
+          "14"
+        ],
+        "source_boundary_id": "14_0139",
+        "source_time": null,
+        "record_time": "2026-07-07T19:50:59.284942",
+        "score": 6.999056631167294,
+        "score_components": {
+          "bm25_score": 6.999056631167294,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "The user went to Trader Joe's with their sister around 2023-05-21 and spent about $75 on groceries.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "Trader Joe's",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Trader Joe's",
+            "sister",
+            "$75"
+          ]
+        },
+        "entities": [
+          "Trader Joe's",
+          "sister",
+          "$75"
+        ],
+        "embedding_text": "The user went to Trader Joe's with their sister around 2023-05-21 and spent about $75 on groceries.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0169",
+        "source_time": "2023-05-28 07:36:01.500000",
+        "record_time": "2026-07-07T19:50:59.285114",
+        "score": 6.731236040773268,
+        "score_components": {
+          "bm25_score": 6.731236040773268,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "fact",
+        "content": "The user's dog is named Max, and the user currently uses a toothbrush from the vet's office as of 2023-05-25.",
+        "dimension": {
+          "time": "2023-05-25",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Max",
+            "dog",
+            "toothbrush",
+            "vet's office"
+          ]
+        },
+        "entities": [
+          "Max",
+          "dog",
+          "toothbrush",
+          "vet's office"
+        ],
+        "embedding_text": "The user's dog is named Max, and the user currently uses a toothbrush from the vet's office as of 2023-05-25.",
+        "source_message_ids": [
+          "10"
+        ],
+        "source_boundary_id": "10_0106",
+        "source_time": "2023-05-25 18:17:00.500000",
+        "record_time": "2026-07-07T19:50:59.284752",
+        "score": 6.296177906828939,
+        "score_components": {
+          "bm25_score": 6.296177906828939,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "fact",
+        "content": "The user built a new gaming PC with a friend's help, and it runs Cyberpunk 2077 and Assassin's Creed Valhalla smoothly.",
+        "dimension": {
+          "time": "2023-05-26",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "gaming PC",
+            "Cyberpunk 2077",
+            "Assassin's Creed Valhalla"
+          ]
+        },
+        "entities": [
+          "gaming PC",
+          "Cyberpunk 2077",
+          "Assassin's Creed Valhalla"
+        ],
+        "embedding_text": "The user built a new gaming PC with a friend's help, and it runs Cyberpunk 2077 and Assassin's Creed Valhalla smoothly.",
+        "source_message_ids": [
+          "13"
+        ],
+        "source_boundary_id": "13_0118",
+        "source_time": "2023-05-26 05:04:00.500000",
+        "record_time": "2026-07-07T19:50:59.284821",
+        "score": 6.140471526113274,
+        "score_components": {
+          "bm25_score": 6.140471526113274,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "The user previously created a content calendar for their cousin's art exhibition.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "content calendar",
+            "cousin's art exhibition"
+          ]
+        },
+        "entities": [
+          "content calendar",
+          "cousin's art exhibition"
+        ],
+        "embedding_text": "The user previously created a content calendar for their cousin's art exhibition.",
+        "source_message_ids": [
+          "4"
+        ],
+        "source_boundary_id": "4_0051",
+        "source_time": "2023-05-23 00:22:01",
+        "record_time": "2026-07-07T19:50:59.284428",
+        "score": 5.8694825693663635,
+        "score_components": {
+          "bm25_score": 5.8694825693663635,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User is considering buying a portable charger for the upcoming road trip.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "portable charger",
+            "purchase consideration"
+          ]
+        },
+        "entities": [
+          "portable charger",
+          "purchase consideration"
+        ],
+        "embedding_text": "User is considering buying a portable charger for the upcoming road trip.",
+        "source_message_ids": [
+          "14"
+        ],
+        "source_boundary_id": "14_0141",
+        "source_time": null,
+        "record_time": "2026-07-07T19:50:59.284954",
+        "score": 5.700083763109932,
+        "score_components": {
+          "bm25_score": 5.700083763109932,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "The user wants to organize their grocery expenses from the past few weeks and track savings from coupons and discounts.",
+        "dimension": {
+          "time": "2023-05-29",
+          "location": "",
+          "reason": "",
+          "purpose": "track spending and savings",
+          "keywords": [
+            "grocery expenses",
+            "tracking",
+            "coupons",
+            "savings"
+          ]
+        },
+        "entities": [
+          "grocery expenses",
+          "tracking",
+          "coupons",
+          "savings"
+        ],
+        "embedding_text": "The user wants to organize their grocery expenses from the past few weeks and track savings from coupons and discounts.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0166",
+        "source_time": "2023-05-28 07:36:00",
+        "record_time": "2026-07-07T19:50:59.285097",
+        "score": 5.258554029539381,
+        "score_components": {
+          "bm25_score": 5.258554029539381,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "fact",
+        "content": "The user owns a pair of new earbuds.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "new earbuds",
+            "earbuds"
+          ]
+        },
+        "entities": [
+          "new earbuds",
+          "earbuds"
+        ],
+        "embedding_text": "The user owns a pair of new earbuds.",
+        "source_message_ids": [
+          "9"
+        ],
+        "source_boundary_id": "9_0096",
+        "source_time": "2023-05-25 10:49:01",
+        "record_time": "2026-07-07T19:50:59.284693",
+        "score": 4.817809687472709,
+        "score_components": {
+          "bm25_score": 4.817809687472709,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User plans to try a new recipe for chicken enchiladas on the weekend of 2023-05-20.",
+        "dimension": {
+          "time": "2023-05-20",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "chicken enchiladas",
+            "recipe",
+            "weekend"
+          ]
+        },
+        "entities": [
+          "chicken enchiladas",
+          "recipe",
+          "weekend"
+        ],
+        "embedding_text": "User plans to try a new recipe for chicken enchiladas on the weekend of 2023-05-20.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0004",
+        "source_time": "2023-05-20 08:57:00",
+        "record_time": "2026-07-07T19:50:59.284070",
+        "score": 4.705197522594883,
+        "score_components": {
+          "bm25_score": 4.705197522594883,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "The user chose the Oxyfresh Pet Toothbrush for Max's dental care because of its ultra-soft bristles as of 2023-05-25.",
+        "dimension": {
+          "time": "2023-05-25",
+          "location": "",
+          "reason": "ultra-soft bristles are gentle on Max's gums",
+          "purpose": "for Max's dental care",
+          "keywords": [
+            "Oxyfresh Pet Toothbrush",
+            "Max",
+            "dental care",
+            "ultra-soft bristles"
+          ]
+        },
+        "entities": [
+          "Oxyfresh Pet Toothbrush",
+          "Max",
+          "dental care",
+          "ultra-soft bristles"
+        ],
+        "embedding_text": "The user chose the Oxyfresh Pet Toothbrush for Max's dental care because of its ultra-soft bristles as of 2023-05-25.",
+        "source_message_ids": [
+          "10"
+        ],
+        "source_boundary_id": "10_0107",
+        "source_time": "2023-05-25 18:17:01",
+        "record_time": "2026-07-07T19:50:59.284757",
+        "score": 4.630660508561512,
+        "score_components": {
+          "bm25_score": 4.630660508561512,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User replaced the goat water trough with a new one that has a built-in filter on 2023-05-27.",
+        "dimension": {
+          "time": "2023-05-27",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "goat",
+            "water trough",
+            "filter"
+          ]
+        },
+        "entities": [
+          "goat",
+          "water trough",
+          "filter"
+        ],
+        "embedding_text": "User replaced the goat water trough with a new one that has a built-in filter on 2023-05-27.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0148",
+        "source_time": "2023-05-27 06:15:01",
+        "record_time": "2026-07-07T19:50:59.284994",
+        "score": 4.465558588937613,
+        "score_components": {
+          "bm25_score": 4.465558588937613,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User is considering buying guitar accessories and a guitar-themed gift basket for their brother's birthday.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "brother's birthday",
+          "purpose": "to surprise brother with a gift",
+          "keywords": [
+            "guitar accessories",
+            "gift basket",
+            "brother",
+            "birthday"
+          ]
+        },
+        "entities": [
+          "guitar accessories",
+          "gift basket",
+          "brother",
+          "birthday"
+        ],
+        "embedding_text": "User is considering buying guitar accessories and a guitar-themed gift basket for their brother's birthday.",
+        "source_message_ids": [
+          "8"
+        ],
+        "source_boundary_id": "8_0092",
+        "source_time": "2023-05-24 23:34:01.500000",
+        "record_time": "2026-07-07T19:50:59.284669",
+        "score": 4.403239509652607,
+        "score_components": {
+          "bm25_score": 4.403239509652607,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "On 2023-05-25, user watched a new TV series on Netflix and lost track of time.",
+        "dimension": {
+          "time": "2023-05-25",
+          "location": "Netflix",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "TV series",
+            "screen time",
+            "lost track of time"
+          ]
+        },
+        "entities": [
+          "TV series",
+          "screen time",
+          "lost track of time"
+        ],
+        "embedding_text": "On 2023-05-25, user watched a new TV series on Netflix and lost track of time.",
+        "source_message_ids": [
+          "14"
+        ],
+        "source_boundary_id": "14_0128",
+        "source_time": "2023-05-26 17:41:00.500000",
+        "record_time": "2026-07-07T19:50:59.284878",
+        "score": 4.333223031822217,
+        "score_components": {
+          "bm25_score": 4.333223031822217,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "profile",
+        "content": "User has a long-term interest in Verdi's operas, often gets lost in their stories, and appreciates their ability to be both grand and intimate.",
+        "dimension": {
+          "time": "2023-05-20",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Verdi",
+            "opera",
+            "music appreciation"
+          ]
+        },
+        "entities": [
+          "Verdi",
+          "opera",
+          "music appreciation"
+        ],
+        "embedding_text": "User has a long-term interest in Verdi's operas, often gets lost in their stories, and appreciates their ability to be both grand and intimate.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0006",
+        "source_time": "2023-05-20 13:35:02",
+        "record_time": "2026-07-07T19:50:59.284084",
+        "score": 4.308802291822907,
+        "score_components": {
+          "bm25_score": 4.308802291822907,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "profile",
+        "content": "The user frequently plays video games and is always looking for new games to play.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "video games",
+            "new games"
+          ]
+        },
+        "entities": [
+          "video games",
+          "new games"
+        ],
+        "embedding_text": "The user frequently plays video games and is always looking for new games to play.",
+        "source_message_ids": [
+          "13"
+        ],
+        "source_boundary_id": "13_0119",
+        "source_time": "2023-05-26 05:04:01",
+        "record_time": "2026-07-07T19:50:59.284827",
+        "score": 4.30359445766502,
+        "score_components": {
+          "bm25_score": 4.30359445766502,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "The user ordered groceries online from Target on 2023-05-27 for delivery on 2023-05-29, using a 10% off coupon that saved $8.",
+        "dimension": {
+          "time": "2023-05-27",
+          "location": "Target",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Target",
+            "online grocery",
+            "coupon",
+            "savings $8"
+          ]
+        },
+        "entities": [
+          "Target",
+          "online grocery",
+          "coupon",
+          "savings $8"
+        ],
+        "embedding_text": "The user ordered groceries online from Target on 2023-05-27 for delivery on 2023-05-29, using a 10% off coupon that saved $8.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0168",
+        "source_time": "2023-05-28 07:36:01",
+        "record_time": "2026-07-07T19:50:59.285108",
+        "score": 4.255969377949972,
+        "score_components": {
+          "bm25_score": 4.255969377949972,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "profile",
+        "content": "User is looking for sci-fi or fantasy TV show recommendations on Disney+.",
+        "dimension": {
+          "time": "2023-05-22",
+          "location": "Disney+",
+          "reason": "watches The Mandalorian and Loki",
+          "purpose": "find new shows",
+          "keywords": [
+            "sci-fi",
+            "fantasy",
+            "Disney+",
+            "TV recommendations"
+          ]
+        },
+        "entities": [
+          "sci-fi",
+          "fantasy",
+          "Disney+",
+          "TV recommendations"
+        ],
+        "embedding_text": "User is looking for sci-fi or fantasy TV show recommendations on Disney+.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0041",
+        "source_time": null,
+        "record_time": "2026-07-07T19:50:59.284291",
+        "score": 4.24914663923925,
+        "score_components": {
+          "bm25_score": 4.24914663923925,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      }
+    ]
+  },
+  "structured": {
+    "mapped_query_analysis": {
+      "query_text": "The user's discount on their first purchase from the new clothing brand",
+      "rewrite": "The user's discount on their first purchase from the new clothing brand",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "The user's discount on their first purchase from the new clothing brand",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "first purchase",
+        "clothing brand",
+        "discount"
+      ],
+      "canonical_text": "The user's discount on their first purchase from the new clothing brand"
+    },
+    "top_records": [
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "The user wants to organize their grocery expenses from the past few weeks and track savings from coupons and discounts.",
+        "dimension": {
+          "time": "2023-05-29",
+          "location": "",
+          "reason": "",
+          "purpose": "track spending and savings",
+          "keywords": [
+            "grocery expenses",
+            "tracking",
+            "coupons",
+            "savings"
+          ]
+        },
+        "entities": [
+          "grocery expenses",
+          "tracking",
+          "coupons",
+          "savings"
+        ],
+        "embedding_text": "The user wants to organize their grocery expenses from the past few weeks and track savings from coupons and discounts.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0166",
+        "source_time": "2023-05-28 07:36:00",
+        "record_time": "2026-07-07T19:50:59.285097",
+        "score": 0.4444444444444445,
+        "structural_score": 0.4444444444444445,
+        "score_components": {
+          "score": 0.4444444444444445,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.3333333333333333,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.3333333333333333,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user wants to organize their grocery expenses from the past few weeks and track savings from coupons and discounts. | grocery expenses | tracking | coupons | savings | 2023-05-29 | track spending and savings | grocery expenses | tracking | coupons | savings"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User purchased a new camera bag on 2023-02-22 that is more compact and easier to carry than their old one.",
+        "dimension": {
+          "time": "2023-02-22",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "camera bag",
+            "purchase",
+            "compact",
+            "February 22"
+          ]
+        },
+        "entities": [
+          "camera bag",
+          "purchase",
+          "compact",
+          "February 22"
+        ],
+        "embedding_text": "User purchased a new camera bag on 2023-02-22 that is more compact and easier to carry than their old one.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0000",
+        "source_time": "2023-05-20 03:59:00",
+        "record_time": "2026-07-07T19:50:59.284034",
+        "score": 0.4,
+        "structural_score": 0.4,
+        "score_components": {
+          "score": 0.4,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.2,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.2
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User purchased a new camera bag on 2023-02-22 that is more compact and easier to carry than their old one. | camera bag | purchase | compact | February 22 | 2023-02-22 | camera bag | purchase | compact | February 22"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User is considering buying a portable charger for the upcoming road trip.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "portable charger",
+            "purchase consideration"
+          ]
+        },
+        "entities": [
+          "portable charger",
+          "purchase consideration"
+        ],
+        "embedding_text": "User is considering buying a portable charger for the upcoming road trip.",
+        "source_message_ids": [
+          "14"
+        ],
+        "source_boundary_id": "14_0141",
+        "source_time": null,
+        "record_time": "2026-07-07T19:50:59.284954",
+        "score": 0.4,
+        "structural_score": 0.4,
+        "score_components": {
+          "score": 0.4,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.2,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.2
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is considering buying a portable charger for the upcoming road trip. | portable charger | purchase consideration | portable charger | purchase consideration"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User plans to upgrade their camera body to a model capable of shooting 4K video at 60 frames per second as of 2023-05-20.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "to have better video capabilities",
+          "keywords": [
+            "camera body upgrade",
+            "4K video",
+            "60fps"
+          ]
+        },
+        "entities": [
+          "camera body upgrade",
+          "4K video",
+          "60fps"
+        ],
+        "embedding_text": "User plans to upgrade their camera body to a model capable of shooting 4K video at 60 frames per second as of 2023-05-20.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0001",
+        "source_time": "2023-05-20 03:59:01.500000",
+        "record_time": "2026-07-07T19:50:59.284049",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to upgrade their camera body to a model capable of shooting 4K video at 60 frames per second as of 2023-05-20. | camera body upgrade | 4K video | 60fps | to have better video capabilities | camera body upgrade | 4K video | 60fps"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User organized their kitchen cabinets around April 29, 2023, which improved their cooking routine by getting rid of unused gadgets and rearranging space.",
+        "dimension": {
+          "time": "2023-04-29",
+          "location": "kitchen",
+          "reason": "",
+          "purpose": "to make the most of space and get rid of unused gadgets",
+          "keywords": [
+            "kitchen cabinets",
+            "organization",
+            "cooking routine"
+          ]
+        },
+        "entities": [
+          "kitchen cabinets",
+          "organization",
+          "cooking routine"
+        ],
+        "embedding_text": "User organized their kitchen cabinets around April 29, 2023, which improved their cooking routine by getting rid of unused gadgets and rearranging space.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0003",
+        "source_time": "2023-05-20 08:57:01.500000",
+        "record_time": "2026-07-07T19:50:59.284064",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User organized their kitchen cabinets around April 29, 2023, which improved their cooking routine by getting rid of unused gadgets and rearranging space. | kitchen cabinets | organization | cooking routine | 2023-04-29 | kitchen | to make the most of space and get rid of unused gadgets | kitchen cabinets | organization | cooking routine"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User plans to try a new recipe for chicken enchiladas on the weekend of 2023-05-20.",
+        "dimension": {
+          "time": "2023-05-20",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "chicken enchiladas",
+            "recipe",
+            "weekend"
+          ]
+        },
+        "entities": [
+          "chicken enchiladas",
+          "recipe",
+          "weekend"
+        ],
+        "embedding_text": "User plans to try a new recipe for chicken enchiladas on the weekend of 2023-05-20.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0004",
+        "source_time": "2023-05-20 08:57:00",
+        "record_time": "2026-07-07T19:50:59.284070",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to try a new recipe for chicken enchiladas on the weekend of 2023-05-20. | chicken enchiladas | recipe | weekend | 2023-05-20 | chicken enchiladas | recipe | weekend"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "On 2023-05-20, user requested assistance to write a cover letter for a senior backend engineer position, providing their resume and the job description.",
+        "dimension": {
+          "time": "2023-05-20",
+          "location": "",
+          "reason": "user needed help with cover letter",
+          "purpose": "to write a cover letter for a job application",
+          "keywords": [
+            "cover letter",
+            "job application",
+            "senior backend engineer"
+          ]
+        },
+        "entities": [
+          "cover letter",
+          "job application",
+          "senior backend engineer"
+        ],
+        "embedding_text": "On 2023-05-20, user requested assistance to write a cover letter for a senior backend engineer position, providing their resume and the job description.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0021",
+        "source_time": "2023-05-20 23:06:00",
+        "record_time": "2026-07-07T19:50:59.284175",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "On 2023-05-20, user requested assistance to write a cover letter for a senior backend engineer position, providing their resume and the job description. | cover letter | job application | senior backend engineer | 2023-05-20 | user needed help with cover letter | to write a cover letter for a job application | cover letter | job application | senior backend engineer"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User plans to incorporate more salmon and shrimp into meals for weight loss.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "",
+          "reason": "weight loss",
+          "purpose": "weight loss",
+          "keywords": [
+            "salmon",
+            "shrimp",
+            "weight loss"
+          ]
+        },
+        "entities": [
+          "salmon",
+          "shrimp",
+          "weight loss"
+        ],
+        "embedding_text": "User plans to incorporate more salmon and shrimp into meals for weight loss.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0022",
+        "source_time": "2023-05-20 23:06:01",
+        "record_time": "2026-07-07T19:50:59.284181",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to incorporate more salmon and shrimp into meals for weight loss. | salmon | shrimp | weight loss | 2023-05-21 | weight loss | weight loss | salmon | shrimp | weight loss"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User saw the musical Hamilton at the Orpheum Theatre in San Francisco on approximately 2023-05-14.",
+        "dimension": {
+          "time": "2023-05-14",
+          "location": "Orpheum Theatre, San Francisco",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Hamilton",
+            "Orpheum Theatre",
+            "San Francisco"
+          ]
+        },
+        "entities": [
+          "Hamilton",
+          "Orpheum Theatre",
+          "San Francisco"
+        ],
+        "embedding_text": "User saw the musical Hamilton at the Orpheum Theatre in San Francisco on approximately 2023-05-14.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0023",
+        "source_time": "2023-05-21 22:48:00",
+        "record_time": "2026-07-07T19:50:59.284187",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User saw the musical Hamilton at the Orpheum Theatre in San Francisco on approximately 2023-05-14. | Hamilton | Orpheum Theatre | San Francisco | 2023-05-14 | Orpheum Theatre, San Francisco | Hamilton | Orpheum Theatre | San Francisco"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User has listened to the soundtracks of Hadestown and Dear Evan Hansen.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Hadestown",
+            "Dear Evan Hansen",
+            "soundtracks"
+          ]
+        },
+        "entities": [
+          "Hadestown",
+          "Dear Evan Hansen",
+          "soundtracks"
+        ],
+        "embedding_text": "User has listened to the soundtracks of Hadestown and Dear Evan Hansen.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0026",
+        "source_time": "2023-05-21 23:00:00",
+        "record_time": "2026-07-07T19:50:59.284205",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User has listened to the soundtracks of Hadestown and Dear Evan Hansen. | Hadestown | Dear Evan Hansen | soundtracks | Hadestown | Dear Evan Hansen | soundtracks"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User plans to check out the musical soundtracks of The Band's Visit and In the Heights.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "The Band's Visit",
+            "In the Heights",
+            "soundtracks"
+          ]
+        },
+        "entities": [
+          "The Band's Visit",
+          "In the Heights",
+          "soundtracks"
+        ],
+        "embedding_text": "User plans to check out the musical soundtracks of The Band's Visit and In the Heights.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0027",
+        "source_time": "2023-05-21 23:00:00.500000",
+        "record_time": "2026-07-07T19:50:59.284211",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to check out the musical soundtracks of The Band's Visit and In the Heights. | The Band's Visit | In the Heights | soundtracks | 2023-05-21 | The Band's Visit | In the Heights | soundtracks"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User has enrolled in a theater appreciation course on Coursera starting in June 2023.",
+        "dimension": {
+          "time": "2023-06",
+          "location": "Coursera",
+          "reason": "",
+          "purpose": "learn theater appreciation",
+          "keywords": [
+            "theater appreciation course",
+            "Coursera"
+          ]
+        },
+        "entities": [
+          "theater appreciation course",
+          "Coursera"
+        ],
+        "embedding_text": "User has enrolled in a theater appreciation course on Coursera starting in June 2023.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0029",
+        "source_time": "2023-05-21 23:00:01.500000",
+        "record_time": "2026-07-07T19:50:59.284222",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User has enrolled in a theater appreciation course on Coursera starting in June 2023. | theater appreciation course | Coursera | 2023-06 | Coursera | learn theater appreciation | theater appreciation course | Coursera"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User saw the play 'The Play That Goes Wrong' in April 2023 and found it hilarious.",
+        "dimension": {
+          "time": "2023-04",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "The Play That Goes Wrong",
+            "hilarious"
+          ]
+        },
+        "entities": [
+          "The Play That Goes Wrong",
+          "hilarious"
+        ],
+        "embedding_text": "User saw the play 'The Play That Goes Wrong' in April 2023 and found it hilarious.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0030",
+        "source_time": "2023-05-21 23:00:02",
+        "record_time": "2026-07-07T19:50:59.284228",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User saw the play 'The Play That Goes Wrong' in April 2023 and found it hilarious. | The Play That Goes Wrong | hilarious | 2023-04 | The Play That Goes Wrong | hilarious"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User is considering seeing 'The Play That Goes Wrong' again or another live show.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "The Play That Goes Wrong",
+            "live show"
+          ]
+        },
+        "entities": [
+          "The Play That Goes Wrong",
+          "live show"
+        ],
+        "embedding_text": "User is considering seeing 'The Play That Goes Wrong' again or another live show.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0031",
+        "source_time": "2023-05-21 23:00:02.500000",
+        "record_time": "2026-07-07T19:50:59.284234",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is considering seeing 'The Play That Goes Wrong' again or another live show. | The Play That Goes Wrong | live show | 2023-05-21 | The Play That Goes Wrong | live show"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User has been listening to the Hamilton original cast recording nonstop since seeing the show.",
+        "dimension": {
+          "time": "2023-05-14 to 2023-05-21",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Hamilton",
+            "original cast recording"
+          ]
+        },
+        "entities": [
+          "Hamilton",
+          "original cast recording"
+        ],
+        "embedding_text": "User has been listening to the Hamilton original cast recording nonstop since seeing the show.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0034",
+        "source_time": "2023-05-22 06:37:01",
+        "record_time": "2026-07-07T19:50:59.284250",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User has been listening to the Hamilton original cast recording nonstop since seeing the show. | Hamilton | original cast recording | 2023-05-14 to 2023-05-21 | Hamilton | original cast recording"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User recently finished reading the book 'The Nightingale'.",
+        "dimension": {
+          "time": "2023-05-22",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "The Nightingale",
+            "book"
+          ]
+        },
+        "entities": [
+          "The Nightingale",
+          "book"
+        ],
+        "embedding_text": "User recently finished reading the book 'The Nightingale'.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0035",
+        "source_time": "2023-05-22 06:37:01.500000",
+        "record_time": "2026-07-07T19:50:59.284256",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User recently finished reading the book 'The Nightingale'. | The Nightingale | book | 2023-05-22 | The Nightingale | book"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "The user plans to watch the animated series Star Wars: The Clone Wars.",
+        "dimension": {
+          "time": "2023-05-22T06:37:02.500000",
+          "location": "",
+          "reason": "User heard great things about the series and is always interested in more Star Wars content.",
+          "purpose": "",
+          "keywords": [
+            "Star Wars: The Clone Wars",
+            "animated series",
+            "Star Wars content"
+          ]
+        },
+        "entities": [
+          "Star Wars: The Clone Wars",
+          "animated series",
+          "Star Wars content"
+        ],
+        "embedding_text": "The user plans to watch the animated series Star Wars: The Clone Wars.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0042",
+        "source_time": "2023-05-22 06:37:02.500000",
+        "record_time": "2026-07-07T19:50:59.284296",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to watch the animated series Star Wars: The Clone Wars. | Star Wars: The Clone Wars | animated series | Star Wars content | 2023-05-22T06:37:02.500000 | User heard great things about the series and is always interested in more Star Wars content. | Star Wars: The Clone Wars | animated series | Star Wars content"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "The user previously created a content calendar for their cousin's art exhibition.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "content calendar",
+            "cousin's art exhibition"
+          ]
+        },
+        "entities": [
+          "content calendar",
+          "cousin's art exhibition"
+        ],
+        "embedding_text": "The user previously created a content calendar for their cousin's art exhibition.",
+        "source_message_ids": [
+          "4"
+        ],
+        "source_boundary_id": "4_0051",
+        "source_time": "2023-05-23 00:22:01",
+        "record_time": "2026-07-07T19:50:59.284428",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user previously created a content calendar for their cousin's art exhibition. | content calendar | cousin's art exhibition | content calendar | cousin's art exhibition"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "The user tweeted about the book 'The Nightingale' last week (around May 15-21, 2023).",
+        "dimension": {
+          "time": "2023-05-15 to 2023-05-21",
+          "location": "Twitter",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "tweet",
+            "The Nightingale",
+            "book"
+          ]
+        },
+        "entities": [
+          "tweet",
+          "The Nightingale",
+          "book"
+        ],
+        "embedding_text": "The user tweeted about the book 'The Nightingale' last week (around May 15-21, 2023).",
+        "source_message_ids": [
+          "4"
+        ],
+        "source_boundary_id": "4_0052",
+        "source_time": "2023-05-23 00:22:01.500000",
+        "record_time": "2026-07-07T19:50:59.284434",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user tweeted about the book 'The Nightingale' last week (around May 15-21, 2023). | tweet | The Nightingale | book | 2023-05-15 to 2023-05-21 | Twitter | tweet | The Nightingale | book"
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "The user plans to create a content calendar for promoting their own blog and writing services.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "promote own blog and writing services",
+          "keywords": [
+            "content calendar",
+            "own blog",
+            "writing services"
+          ]
+        },
+        "entities": [
+          "content calendar",
+          "own blog",
+          "writing services"
+        ],
+        "embedding_text": "The user plans to create a content calendar for promoting their own blog and writing services.",
+        "source_message_ids": [
+          "4"
+        ],
+        "source_boundary_id": "4_0053",
+        "source_time": "2023-05-23 00:22:02",
+        "record_time": "2026-07-07T19:50:59.284439",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to create a content calendar for promoting their own blog and writing services. | content calendar | own blog | writing services | promote own blog and writing services | content calendar | own blog | writing services"
+        }
+      }
+    ]
+  },
+  "minilm": {
+    "mapped_query_analysis": {
+      "query_text": "The user's discount on their first purchase from the new clothing brand"
+    },
+    "top_records": [
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "profile",
+        "content": "User is interested in affordable fashion brands that offer high-quality, timeless pieces.",
+        "dimension": {
+          "time": "2023-05-29",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "affordable fashion",
+            "high-quality",
+            "timeless pieces",
+            "fashion brands"
+          ]
+        },
+        "entities": [
+          "affordable fashion",
+          "high-quality",
+          "timeless pieces",
+          "fashion brands"
+        ],
+        "embedding_text": "User is interested in affordable fashion brands that offer high-quality, timeless pieces.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0181",
+        "source_time": "2023-05-29 14:40:00.500000",
+        "record_time": "2026-07-07T19:50:59.285184",
+        "score": 0.5362822529297343,
+        "score_components": {
+          "dense_cosine_score": 0.5362822529297343,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "fact",
+        "content": "User previously purchased a Givenchy gown from Neiman Marcus.",
+        "dimension": {
+          "time": "",
+          "location": "Neiman Marcus",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Givenchy gown",
+            "Neiman Marcus"
+          ]
+        },
+        "entities": [
+          "Givenchy gown",
+          "Neiman Marcus"
+        ],
+        "embedding_text": "User previously purchased a Givenchy gown from Neiman Marcus.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0176",
+        "source_time": "2023-05-29 01:02:02.500000",
+        "record_time": "2026-07-07T19:50:59.285155",
+        "score": 0.5361298135079606,
+        "score_components": {
+          "dense_cosine_score": 0.5361298135079606,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "profile",
+        "content": "User enjoys browsing physical stores but prefers online shopping for its convenience, easy returns, availability of unique products, and product reviews.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "online shopping",
+            "physical stores",
+            "convenience",
+            "returns",
+            "unique products",
+            "product reviews"
+          ]
+        },
+        "entities": [
+          "online shopping",
+          "physical stores",
+          "convenience",
+          "returns",
+          "unique products",
+          "product reviews"
+        ],
+        "embedding_text": "User enjoys browsing physical stores but prefers online shopping for its convenience, easy returns, availability of unique products, and product reviews.",
+        "source_message_ids": [
+          "6"
+        ],
+        "source_boundary_id": "6_0071",
+        "source_time": "2023-05-24 05:12:01",
+        "record_time": "2026-07-07T19:50:59.284547",
+        "score": 0.4524571238455381,
+        "score_components": {
+          "dense_cosine_score": 0.4524571238455381,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "profile",
+        "content": "User is currently trying to be more frugal and mindful of spending, focusing on value rather than luxury.",
+        "dimension": {
+          "time": "2023-05-29",
+          "location": "",
+          "reason": "Past overspending on luxury items",
+          "purpose": "",
+          "keywords": [
+            "frugal",
+            "mindful spending",
+            "value",
+            "luxury"
+          ]
+        },
+        "entities": [
+          "frugal",
+          "mindful spending",
+          "value",
+          "luxury"
+        ],
+        "embedding_text": "User is currently trying to be more frugal and mindful of spending, focusing on value rather than luxury.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0177",
+        "source_time": "2023-05-29 03:06:00",
+        "record_time": "2026-07-07T19:50:59.285161",
+        "score": 0.44512378698888283,
+        "score_components": {
+          "dense_cosine_score": 0.44512378698888283,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "The user ordered groceries online from Target on 2023-05-27 for delivery on 2023-05-29, using a 10% off coupon that saved $8.",
+        "dimension": {
+          "time": "2023-05-27",
+          "location": "Target",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Target",
+            "online grocery",
+            "coupon",
+            "savings $8"
+          ]
+        },
+        "entities": [
+          "Target",
+          "online grocery",
+          "coupon",
+          "savings $8"
+        ],
+        "embedding_text": "The user ordered groceries online from Target on 2023-05-27 for delivery on 2023-05-29, using a 10% off coupon that saved $8.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0168",
+        "source_time": "2023-05-28 07:36:01",
+        "record_time": "2026-07-07T19:50:59.285108",
+        "score": 0.41809105138250596,
+        "score_components": {
+          "dense_cosine_score": 0.41809105138250596,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "fact",
+        "content": "User used to spend $200 on La Mer moisturizer.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "La Mer",
+            "moisturizer",
+            "$200"
+          ]
+        },
+        "entities": [
+          "La Mer",
+          "moisturizer",
+          "$200"
+        ],
+        "embedding_text": "User used to spend $200 on La Mer moisturizer.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0175",
+        "source_time": "2023-05-29 01:02:02",
+        "record_time": "2026-07-07T19:50:59.285149",
+        "score": 0.41512506092245965,
+        "score_components": {
+          "dense_cosine_score": 0.41512506092245965,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "The user wants to organize their grocery expenses from the past few weeks and track savings from coupons and discounts.",
+        "dimension": {
+          "time": "2023-05-29",
+          "location": "",
+          "reason": "",
+          "purpose": "track spending and savings",
+          "keywords": [
+            "grocery expenses",
+            "tracking",
+            "coupons",
+            "savings"
+          ]
+        },
+        "entities": [
+          "grocery expenses",
+          "tracking",
+          "coupons",
+          "savings"
+        ],
+        "embedding_text": "The user wants to organize their grocery expenses from the past few weeks and track savings from coupons and discounts.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0166",
+        "source_time": "2023-05-28 07:36:00",
+        "record_time": "2026-07-07T19:50:59.285097",
+        "score": 0.3926764221831582,
+        "score_components": {
+          "dense_cosine_score": 0.3926764221831582,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "The user went to Walmart on 2023-05-28 and spent about $50 on groceries.",
+        "dimension": {
+          "time": "2023-05-28",
+          "location": "Walmart",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Walmart",
+            "grocery",
+            "$50"
+          ]
+        },
+        "entities": [
+          "Walmart",
+          "grocery",
+          "$50"
+        ],
+        "embedding_text": "The user went to Walmart on 2023-05-28 and spent about $50 on groceries.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0167",
+        "source_time": "2023-05-28 07:36:00.500000",
+        "record_time": "2026-07-07T19:50:59.285102",
+        "score": 0.37910613612924565,
+        "score_components": {
+          "dense_cosine_score": 0.37910613612924565,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "The user went to Trader Joe's with their sister around 2023-05-21 and spent about $75 on groceries.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "Trader Joe's",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Trader Joe's",
+            "sister",
+            "$75"
+          ]
+        },
+        "entities": [
+          "Trader Joe's",
+          "sister",
+          "$75"
+        ],
+        "embedding_text": "The user went to Trader Joe's with their sister around 2023-05-21 and spent about $75 on groceries.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0169",
+        "source_time": "2023-05-28 07:36:01.500000",
+        "record_time": "2026-07-07T19:50:59.285114",
+        "score": 0.37503608143438333,
+        "score_components": {
+          "dense_cosine_score": 0.37503608143438333,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "fact",
+        "content": "The user regularly shops at Aldi every 10 to 14 days, spending between $30 and $40 per trip.",
+        "dimension": {
+          "time": "",
+          "location": "Aldi",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Aldi",
+            "regular shopping",
+            "every 10-14 days",
+            "$30-$40"
+          ]
+        },
+        "entities": [
+          "Aldi",
+          "regular shopping",
+          "every 10-14 days",
+          "$30-$40"
+        ],
+        "embedding_text": "The user regularly shops at Aldi every 10 to 14 days, spending between $30 and $40 per trip.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0170",
+        "source_time": "2023-05-28 07:36:02",
+        "record_time": "2026-07-07T19:50:59.285119",
+        "score": 0.37054733932306927,
+        "score_components": {
+          "dense_cosine_score": 0.37054733932306927,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "For the Hawaii trip, user asked for recommendations for affordable alternatives to La Mer moisturizer, a broad-spectrum sunscreen, and sunglasses with UV protection.",
+        "dimension": {
+          "time": "2023-05-29",
+          "location": "",
+          "reason": "Planning a budget trip to Hawaii",
+          "purpose": "To find affordable skincare and accessories",
+          "keywords": [
+            "Hawaii",
+            "trip",
+            "moisturizer",
+            "sunscreen",
+            "sunglasses",
+            "affordable",
+            "La Mer alternative"
+          ]
+        },
+        "entities": [
+          "Hawaii",
+          "trip",
+          "moisturizer",
+          "sunscreen",
+          "sunglasses",
+          "affordable",
+          "La Mer alternative"
+        ],
+        "embedding_text": "For the Hawaii trip, user asked for recommendations for affordable alternatives to La Mer moisturizer, a broad-spectrum sunscreen, and sunglasses with UV protection.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0178",
+        "source_time": "2023-05-29 03:06:00.500000",
+        "record_time": "2026-07-07T19:50:59.285167",
+        "score": 0.35248667056473937,
+        "score_components": {
+          "dense_cosine_score": 0.35248667056473937,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "fact",
+        "content": "User owns hiking boots, outdoor clothing, and a camera for capturing scenery and wildlife.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "hiking boots",
+            "outdoor clothing",
+            "camera",
+            "photography"
+          ]
+        },
+        "entities": [
+          "hiking boots",
+          "outdoor clothing",
+          "camera",
+          "photography"
+        ],
+        "embedding_text": "User owns hiking boots, outdoor clothing, and a camera for capturing scenery and wildlife.",
+        "source_message_ids": [
+          "14"
+        ],
+        "source_boundary_id": "14_0139",
+        "source_time": null,
+        "record_time": "2026-07-07T19:50:59.284942",
+        "score": 0.3480458598369948,
+        "score_components": {
+          "dense_cosine_score": 0.3480458598369948,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "The user visited a local farmer's market around 2023-05-20 and estimated spending $25.",
+        "dimension": {
+          "time": "2023-05-20",
+          "location": "farmer's market",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "farmer's market",
+            "$25"
+          ]
+        },
+        "entities": [
+          "farmer's market",
+          "$25"
+        ],
+        "embedding_text": "The user visited a local farmer's market around 2023-05-20 and estimated spending $25.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0171",
+        "source_time": "2023-05-28 07:36:02.500000",
+        "record_time": "2026-07-07T19:50:59.285125",
+        "score": 0.3415728166387653,
+        "score_components": {
+          "dense_cosine_score": 0.3415728166387653,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "fact",
+        "content": "User uses reusable bags when shopping and uses a refillable coffee mug for daily coffee runs.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "reusable bags",
+            "refillable coffee mug",
+            "shopping",
+            "coffee"
+          ]
+        },
+        "entities": [
+          "reusable bags",
+          "refillable coffee mug",
+          "shopping",
+          "coffee"
+        ],
+        "embedding_text": "User uses reusable bags when shopping and uses a refillable coffee mug for daily coffee runs.",
+        "source_message_ids": [
+          "19"
+        ],
+        "source_boundary_id": "19_0185",
+        "source_time": "2023-05-29 19:59:01",
+        "record_time": "2026-07-07T19:50:59.285207",
+        "score": 0.3384390772282194,
+        "score_components": {
+          "dense_cosine_score": 0.3384390772282194,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "fact",
+        "content": "The user owns a pair of new earbuds.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "new earbuds",
+            "earbuds"
+          ]
+        },
+        "entities": [
+          "new earbuds",
+          "earbuds"
+        ],
+        "embedding_text": "The user owns a pair of new earbuds.",
+        "source_message_ids": [
+          "9"
+        ],
+        "source_boundary_id": "9_0096",
+        "source_time": "2023-05-25 10:49:01",
+        "record_time": "2026-07-07T19:50:59.284693",
+        "score": 0.32742642790353815,
+        "score_components": {
+          "dense_cosine_score": 0.32742642790353815,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User asked about the concept of 'investment pieces' in fashion.",
+        "dimension": {
+          "time": "2023-05-29",
+          "location": "",
+          "reason": "",
+          "purpose": "To understand if they are worth splurging on",
+          "keywords": [
+            "investment pieces",
+            "fashion"
+          ]
+        },
+        "entities": [
+          "investment pieces",
+          "fashion"
+        ],
+        "embedding_text": "User asked about the concept of 'investment pieces' in fashion.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0179",
+        "source_time": "2023-05-29 03:06:01",
+        "record_time": "2026-07-07T19:50:59.285173",
+        "score": 0.3094200179340846,
+        "score_components": {
+          "dense_cosine_score": 0.3094200179340846,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User is considering buying guitar accessories and a guitar-themed gift basket for their brother's birthday.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "brother's birthday",
+          "purpose": "to surprise brother with a gift",
+          "keywords": [
+            "guitar accessories",
+            "gift basket",
+            "brother",
+            "birthday"
+          ]
+        },
+        "entities": [
+          "guitar accessories",
+          "gift basket",
+          "brother",
+          "birthday"
+        ],
+        "embedding_text": "User is considering buying guitar accessories and a guitar-themed gift basket for their brother's birthday.",
+        "source_message_ids": [
+          "8"
+        ],
+        "source_boundary_id": "8_0092",
+        "source_time": "2023-05-24 23:34:01.500000",
+        "record_time": "2026-07-07T19:50:59.284669",
+        "score": 0.2942350668906351,
+        "score_components": {
+          "dense_cosine_score": 0.2942350668906351,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "profile",
+        "content": "The user enjoys exploring new dishes and flavors.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "exploring",
+            "dishes",
+            "flavors"
+          ]
+        },
+        "entities": [
+          "exploring",
+          "dishes",
+          "flavors"
+        ],
+        "embedding_text": "The user enjoys exploring new dishes and flavors.",
+        "source_message_ids": [
+          "11"
+        ],
+        "source_boundary_id": "11_0111",
+        "source_time": "2023-05-25 20:30:01.500000",
+        "record_time": "2026-07-07T19:50:59.284782",
+        "score": 0.28672772854037587,
+        "score_components": {
+          "dense_cosine_score": 0.28672772854037587,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User purchased a new camera bag on 2023-02-22 that is more compact and easier to carry than their old one.",
+        "dimension": {
+          "time": "2023-02-22",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "camera bag",
+            "purchase",
+            "compact",
+            "February 22"
+          ]
+        },
+        "entities": [
+          "camera bag",
+          "purchase",
+          "compact",
+          "February 22"
+        ],
+        "embedding_text": "User purchased a new camera bag on 2023-02-22 that is more compact and easier to carry than their old one.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0000",
+        "source_time": "2023-05-20 03:59:00",
+        "record_time": "2026-07-07T19:50:59.284034",
+        "score": 0.2834873209591855,
+        "score_components": {
+          "dense_cosine_score": 0.2834873209591855,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0005_726462e0",
+        "memory_type": "episodic",
+        "content": "User is planning a trip to Hawaii with a tight budget of $500.",
+        "dimension": {
+          "time": "",
+          "location": "Hawaii",
+          "reason": "",
+          "purpose": "Vacation",
+          "keywords": [
+            "Hawaii",
+            "trip",
+            "budget",
+            "$500"
+          ]
+        },
+        "entities": [
+          "Hawaii",
+          "trip",
+          "budget",
+          "$500"
+        ],
+        "embedding_text": "User is planning a trip to Hawaii with a tight budget of $500.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0174",
+        "source_time": "2023-05-29 01:02:01.500000",
+        "record_time": "2026-07-07T19:50:59.285144",
+        "score": 0.2780298288221618,
+        "score_components": {
+          "dense_cosine_score": 0.2780298288221618,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      }
+    ]
+  }
+}

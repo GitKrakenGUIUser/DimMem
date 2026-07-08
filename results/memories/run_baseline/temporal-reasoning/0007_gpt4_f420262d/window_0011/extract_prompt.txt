@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-02-02T16:14:00, Thu] 1.User: I'm looking for some music recommendations. I've been listening to a lot of Latin music lately, especially salsa and bachata, and I'd love to discover some new artists or songs to add to my playlist. By the way, I just started taking salsa classes on Tuesday evenings about 6 weeks ago, and it's really helped me appreciate the rhythm and beats of this music genre.
+[2023-02-02T16:14:00.500000, Thu] 2.User: I'm really enjoying the classes, thanks for asking! My instructor Maria is great, and she breaks down the steps really well. I was a bit nervous at first because I'd never taken a dance class before, but she made me feel comfortable. I've been going to the classes regularly, and I've noticed that my footwork has improved a lot. Do you have any recommendations for dance events or festivals in my area? I went to a salsa social at a club downtown last weekend and had a blast, and I'm thinking of attending a bachata festival next month.
+[2023-02-02T16:14:01, Thu] 3.User: I've also been watching a lot of dance videos on YouTube to help me improve my technique, focusing on salsa and bachata videos. Do you have any recommendations for YouTube channels or instructors that post high-quality dance tutorials?
+[2023-02-02T16:14:01.500000, Thu] 4.User: I've actually been watching a lot of videos by Salsa With Silvia, and I really like her teaching style. She breaks down the steps really clearly, and her videos are well-produced. I've also been watching some videos by Edie, The Salsa FREAK, and I love her energy and enthusiasm. Do you think it's a good idea to practice in front of a mirror, or is that just a habit of mine?
+[2023-02-02T16:14:02, Thu] 5.User: I've also been practicing some basic moves in front of the mirror, and it's funny because my cat, Luna, always comes to watch me practice and seems really interested in what I'm doing. Do you think it's common for pets to be interested in dance, or is Luna just a unique snowflake?
+[2023-02-02T16:14:02.500000, Thu] 6.User: I'm thinking of attending a bachata festival next month, and I was wondering if you have any tips for preparing for a dance festival or event.
+[2023-02-07T03:20:00, Tue] 7.User: I'm planning a night out with friends and need some dinner recommendations in Brooklyn. We're thinking of grabbing food near the Barclays Center, since we just got back from an Imagine Dragons concert there today with my friends Mike and Emma. Any good spots you'd suggest?
+[2023-02-07T03:20:00.500000, Tue] 8.User: We're actually thinking of grabbing food at the concession stand inside the Barclays Center, since we're already there. Do you know if they have any vegan options?
+[2023-02-07T03:20:01, Tue] 9.User: I remember when I bought the tickets for this Imagine Dragons concert, it was about 2 weeks prior to the event. Do you think it's a good idea to buy concert tickets in advance, or should I wait until the last minute for better deals?
+[2023-02-07T03:20:01.500000, Tue] 10.User: I'm actually thinking of going to another concert soon, Phoebe Bridgers at the Brooklyn Steel on August 10th. Do you know anything about the venue?
+[2023-02-07T03:20:02, Tue] 11.User: I'm planning to go to the Phoebe Bridgers concert with my friend Chris. Do you know if there are any good spots to grab dinner or drinks near Brooklyn Steel before the show?
+[2023-02-07T03:20:02.500000, Tue] 12.User: I think I'll grab dinner at Momo Sushi Shack with Chris before the concert. Do you know if they take reservations or is it more of a walk-in spot?
+[2023-02-08T02:49:00, Wed] 13.User: Two of his students took their homework together and got exactly the same marks as a pair of friends who take their homework by themselves. How many students took their homework alone?
+[2023-02-08T02:00:00, Wed] 14.User: I'm looking for some book recommendations. Can you suggest some historical fiction novels similar to "The Nightingale"?
+[2023-02-08T02:00:00.500000, Wed] 15.User: I've already started reading "The Song of Achilles" for my book club, but I'm interested in "All the Light We Cannot See". Can you tell me how many pages it has?

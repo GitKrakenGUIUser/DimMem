@@ -1,0 +1,2830 @@
+[
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "User bought a set of baby clothes and toys from Buy Buy Baby for coworker's baby shower, costing around $100, in April 2023.",
+    "dimension": {
+      "time": "2023-04",
+      "location": "Buy Buy Baby",
+      "reason": "coworker's baby shower",
+      "purpose": "",
+      "keywords": [
+        "baby clothes",
+        "toys",
+        "Buy Buy Baby",
+        "coworker",
+        "baby shower",
+        "$100"
+      ]
+    },
+    "entities": [
+      "baby clothes",
+      "toys",
+      "Buy Buy Baby",
+      "coworker",
+      "baby shower",
+      "$100"
+    ],
+    "embedding_text": "User bought a set of baby clothes and toys from Buy Buy Baby for coworker's baby shower, costing around $100, in April 2023.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0144",
+    "source_time": "2023-05-28 08:47:02",
+    "record_time": "2026-07-07T19:50:56.421015",
+    "score": 9.229893035332783,
+    "score_components": {
+      "bm25_score": 9.229893035332783,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 9.229893035332783,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 9.229893035332783
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.5555555555555556
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.5272215939425227
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "In May 2023, the user gave their brother a $100 gift card to an electronics store as a graduation gift.",
+    "dimension": {
+      "time": "2023-05",
+      "location": "",
+      "reason": "brother's graduation",
+      "purpose": "",
+      "keywords": [
+        "brother",
+        "graduation",
+        "gift card",
+        "$100",
+        "electronics store"
+      ]
+    },
+    "entities": [
+      "brother",
+      "graduation",
+      "gift card",
+      "$100",
+      "electronics store"
+    ],
+    "embedding_text": "In May 2023, the user gave their brother a $100 gift card to an electronics store as a graduation gift.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0136",
+    "source_time": "2023-05-27 09:08:02",
+    "record_time": "2026-07-07T19:50:56.420963",
+    "score": 8.958277270668685,
+    "score_components": {
+      "bm25_score": 8.958277270668685,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 8.958277270668685,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 8.958277270668685
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.5555555555555556
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.5819475540575337
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "fact",
+    "content": "The user has a brother and a sister.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "brother",
+        "sister"
+      ]
+    },
+    "entities": [
+      "brother",
+      "sister"
+    ],
+    "embedding_text": "The user has a brother and a sister.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0135",
+    "source_time": "2023-05-27 09:08:01.500000",
+    "record_time": "2026-07-07T19:50:56.420956",
+    "score": 8.723592937552263,
+    "score_components": {
+      "bm25_score": 8.723592937552263,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 8.723592937552263,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 8.723592937552263
+      },
+      {
+        "method": "minilm",
+        "rank": 11,
+        "score": 0.4610593713537778
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "profile",
+    "content": "The user spends approximately $500 per month on gifts for friends and family.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "gift spending",
+        "$500 per month",
+        "friends and family"
+      ]
+    },
+    "entities": [
+      "gift spending",
+      "$500 per month",
+      "friends and family"
+    ],
+    "embedding_text": "The user spends approximately $500 per month on gifts for friends and family.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0158",
+    "source_time": "2023-05-29 11:32:00.500000",
+    "record_time": "2026-07-07T19:50:56.421108",
+    "score": 8.474526647884613,
+    "score_components": {
+      "bm25_score": 8.474526647884613,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 8.474526647884613,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 8.474526647884613
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.7894049503922899
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "In April 2023, the user bought a birthday present for their sister, a housewarming gift for their friend, and attended a baby shower where they bought a gift for their coworker's baby.",
+    "dimension": {
+      "time": "2023-04",
+      "location": "",
+      "reason": "birthday, housewarming, baby shower",
+      "purpose": "gifting",
+      "keywords": [
+        "birthday gift",
+        "housewarming gift",
+        "baby shower gift",
+        "sister",
+        "friend",
+        "coworker"
+      ]
+    },
+    "entities": [
+      "birthday gift",
+      "housewarming gift",
+      "baby shower gift",
+      "sister",
+      "friend",
+      "coworker"
+    ],
+    "embedding_text": "In April 2023, the user bought a birthday present for their sister, a housewarming gift for their friend, and attended a baby shower where they bought a gift for their coworker's baby.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0159",
+    "source_time": "2023-05-29 11:32:00.500000",
+    "record_time": "2026-07-07T19:50:56.421115",
+    "score": 7.913523279340435,
+    "score_components": {
+      "bm25_score": 7.913523279340435,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 7.913523279340435,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 7.913523279340435
+      },
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.5555555555555556
+      },
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.48278761204411363
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "profile",
+    "content": "The user tends to spend a lot on gifts during special occasions and is considering whether to cut back.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "gift spending",
+        "special occasions",
+        "cut back"
+      ]
+    },
+    "entities": [
+      "gift spending",
+      "special occasions",
+      "cut back"
+    ],
+    "embedding_text": "The user tends to spend a lot on gifts during special occasions and is considering whether to cut back.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0161",
+    "source_time": "2023-05-29 11:32:02.500000",
+    "record_time": "2026-07-07T19:50:56.421129",
+    "score": 7.901855569065576,
+    "score_components": {
+      "bm25_score": 7.901855569065576,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 7.901855569065576,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 7.901855569065576
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.5643498393805034
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "The user is working on a report and needs an updated workflow model diagram and notes from a coworker, requesting them by May 24, 2023.",
+    "dimension": {
+      "time": "2023-05-22",
+      "location": "workplace",
+      "reason": "to include in a report",
+      "purpose": "to get the latest workflow model information",
+      "keywords": [
+        "workflow model",
+        "diagram",
+        "report",
+        "coworker",
+        "deadline",
+        "May 24 2023"
+      ]
+    },
+    "entities": [
+      "workflow model",
+      "diagram",
+      "report",
+      "coworker",
+      "deadline",
+      "May 24 2023"
+    ],
+    "embedding_text": "The user is working on a report and needs an updated workflow model diagram and notes from a coworker, requesting them by May 24, 2023.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0079",
+    "source_time": "2023-05-22 15:45:01",
+    "record_time": "2026-07-07T19:50:56.420589",
+    "score": 7.475323954740757,
+    "score_components": {
+      "bm25_score": 7.475323954740757,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 7.475323954740757,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 7.475323954740757
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.5555555555555556
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "profile",
+    "content": "User prefers personalized gifts and memory books.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "personalized gifts",
+        "memory books",
+        "preference"
+      ]
+    },
+    "entities": [
+      "personalized gifts",
+      "memory books",
+      "preference"
+    ],
+    "embedding_text": "User prefers personalized gifts and memory books.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0151",
+    "source_time": "2023-05-28 19:02:02.500000",
+    "record_time": "2026-07-07T19:50:56.421062",
+    "score": 7.276577582489664,
+    "score_components": {
+      "bm25_score": 7.276577582489664,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 7.276577582489664,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 7.276577582489664
+      },
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.4584462776147806
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "The user plans to break down goals into smaller tasks and focus on one task at a time to manage workload.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "feeling overwhelmed by amount of information to learn",
+      "purpose": "make learning more manageable",
+      "keywords": [
+        "goal breaking",
+        "task focus",
+        "workload management"
+      ]
+    },
+    "entities": [
+      "goal breaking",
+      "task focus",
+      "workload management"
+    ],
+    "embedding_text": "The user plans to break down goals into smaller tasks and focus on one task at a time to manage workload.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0112",
+    "source_time": "2023-05-24 20:10:00",
+    "record_time": "2026-07-07T19:50:56.420809",
+    "score": 5.998422895706754,
+    "score_components": {
+      "bm25_score": 5.998422895706754,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 5.998422895706754,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 5.998422895706754
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "User's favorite secondhand find is a pair of designer boots bought on ThredUp for $50, originally $500.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "designer boots",
+        "ThredUp",
+        "$50",
+        "$500",
+        "favorite find"
+      ]
+    },
+    "entities": [
+      "designer boots",
+      "ThredUp",
+      "$50",
+      "$500",
+      "favorite find"
+    ],
+    "embedding_text": "User's favorite secondhand find is a pair of designer boots bought on ThredUp for $50, originally $500.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0101",
+    "source_time": "2023-05-23 18:50:02",
+    "record_time": "2026-07-07T19:50:56.420738",
+    "score": 5.97975282308686,
+    "score_components": {
+      "bm25_score": 5.97975282308686,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 5.97975282308686,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 5.97975282308686
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "The user recently attended a baby shower and purchased baby clothes and toys from Buy Buy Baby for $100, including a gift receipt.",
+    "dimension": {
+      "time": "",
+      "location": "Buy Buy Baby",
+      "reason": "baby shower",
+      "purpose": "gift for coworker",
+      "keywords": [
+        "baby shower",
+        "baby clothes",
+        "toys",
+        "Buy Buy Baby",
+        "$100",
+        "gift receipt"
+      ]
+    },
+    "entities": [
+      "baby shower",
+      "baby clothes",
+      "toys",
+      "Buy Buy Baby",
+      "$100",
+      "gift receipt"
+    ],
+    "embedding_text": "The user recently attended a baby shower and purchased baby clothes and toys from Buy Buy Baby for $100, including a gift receipt.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0160",
+    "source_time": "2023-05-29 11:32:01.500000",
+    "record_time": "2026-07-07T19:50:56.421122",
+    "score": 5.551280293024542,
+    "score_components": {
+      "bm25_score": 5.551280293024542,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 5.551280293024542,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 5.551280293024542
+      },
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.5555555555555556
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.6037672471983598
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "fact",
+    "content": "The user has Hendrick's gin at home and is open to trying other gin brands.",
+    "dimension": {
+      "time": "",
+      "location": "home",
+      "reason": "",
+      "purpose": "cocktail making",
+      "keywords": [
+        "Hendrick's gin",
+        "gin brands",
+        "home"
+      ]
+    },
+    "entities": [
+      "Hendrick's gin",
+      "gin brands",
+      "home"
+    ],
+    "embedding_text": "The user has Hendrick's gin at home and is open to trying other gin brands.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0165",
+    "source_time": "2023-05-29 11:57:00.500000",
+    "record_time": "2026-07-07T19:50:56.421155",
+    "score": 5.311677968828478,
+    "score_components": {
+      "bm25_score": 5.311677968828478,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 5.311677968828478,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 5.311677968828478
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "The user is looking for a mid-range dog bed around $40 with a 3-inch thick cushion for their dog Max's joint health.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "for Max's joint health",
+      "purpose": "to purchase a suitable dog bed",
+      "keywords": [
+        "Max",
+        "dog bed",
+        "$40",
+        "3-inch cushion",
+        "joint health"
+      ]
+    },
+    "entities": [
+      "Max",
+      "dog bed",
+      "$40",
+      "3-inch cushion",
+      "joint health"
+    ],
+    "embedding_text": "The user is looking for a mid-range dog bed around $40 with a 3-inch thick cushion for their dog Max's joint health.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0019",
+    "source_time": "2023-05-20 22:13:00",
+    "record_time": "2026-07-07T19:50:56.420117",
+    "score": 5.2419128860048385,
+    "score_components": {
+      "bm25_score": 5.2419128860048385,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 5.2419128860048385,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 5.2419128860048385
+      },
+      {
+        "method": "structured",
+        "rank": 17,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "The user plans to spend $150 to $200 on their mother's anniversary gift and is leaning towards a personalized photo album.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "",
+      "reason": "anniversary",
+      "purpose": "select a gift",
+      "keywords": [
+        "anniversary",
+        "gift",
+        "personalized photo album",
+        "budget",
+        "$150",
+        "$200"
+      ]
+    },
+    "entities": [
+      "anniversary",
+      "gift",
+      "personalized photo album",
+      "budget",
+      "$150",
+      "$200"
+    ],
+    "embedding_text": "The user plans to spend $150 to $200 on their mother's anniversary gift and is leaning towards a personalized photo album.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0157",
+    "source_time": "2023-05-29 11:32:00.500000",
+    "record_time": "2026-07-07T19:50:56.421102",
+    "score": 5.130933550716251,
+    "score_components": {
+      "bm25_score": 5.130933550716251,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 5.130933550716251,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 5.130933550716251
+      },
+      {
+        "method": "minilm",
+        "rank": 6,
+        "score": 0.5081776599127962
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "The user recently had a nasty flu that kept her bedridden for almost two weeks, and is now focusing on recovering her health.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "flu",
+        "bedridden",
+        "health recovery"
+      ]
+    },
+    "entities": [
+      "flu",
+      "bedridden",
+      "health recovery"
+    ],
+    "embedding_text": "The user recently had a nasty flu that kept her bedridden for almost two weeks, and is now focusing on recovering her health.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0196",
+    "source_time": "2023-05-30 18:02:00",
+    "record_time": "2026-07-07T19:50:56.421384",
+    "score": 4.870233036773552,
+    "score_components": {
+      "bm25_score": 4.870233036773552,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 4.870233036773552,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 4.870233036773552
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "User is researching selling channels for their grandmother's antique pearl necklace, including local shops, antique dealers, and online marketplaces.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "selling channels",
+        "antique jewelry",
+        "local shop",
+        "dealer",
+        "online marketplace"
+      ]
+    },
+    "entities": [
+      "selling channels",
+      "antique jewelry",
+      "local shop",
+      "dealer",
+      "online marketplace"
+    ],
+    "embedding_text": "User is researching selling channels for their grandmother's antique pearl necklace, including local shops, antique dealers, and online marketplaces.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0190",
+    "source_time": "2023-05-30 03:02:00",
+    "record_time": "2026-07-07T19:50:56.421346",
+    "score": 4.801785858984701,
+    "score_components": {
+      "bm25_score": 4.801785858984701,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 16,
+    "retrieval_score": 4.801785858984701,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 16,
+        "score": 4.801785858984701
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "User decided to buy a unique shape vase as a gift for best friend's new apartment on 2023-05-20.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "friend's modern decor",
+      "purpose": "as a gift",
+      "keywords": [
+        "unique shape vase",
+        "gift",
+        "best friend"
+      ]
+    },
+    "entities": [
+      "unique shape vase",
+      "gift",
+      "best friend"
+    ],
+    "embedding_text": "User decided to buy a unique shape vase as a gift for best friend's new apartment on 2023-05-20.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0007",
+    "source_time": "2023-05-20 11:46:01",
+    "record_time": "2026-07-07T19:50:56.420031",
+    "score": 4.799690626850312,
+    "score_components": {
+      "bm25_score": 4.799690626850312,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 17,
+    "retrieval_score": 4.799690626850312,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 17,
+        "score": 4.799690626850312
+      },
+      {
+        "method": "structured",
+        "rank": 9,
+        "score": 0.33333333333333337
+      },
+      {
+        "method": "minilm",
+        "rank": 16,
+        "score": 0.41042011005131357
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "User used a face mask on Valentine's Day (February 14, 2023) which helped their skin.",
+    "dimension": {
+      "time": "2023-02-14",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "face mask",
+        "Valentine's Day",
+        "skincare"
+      ]
+    },
+    "entities": [
+      "face mask",
+      "Valentine's Day",
+      "skincare"
+    ],
+    "embedding_text": "User used a face mask on Valentine's Day (February 14, 2023) which helped their skin.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0106",
+    "source_time": "2023-05-24 15:17:01.500000",
+    "record_time": "2026-07-07T19:50:56.420772",
+    "score": 4.413566497646264,
+    "score_components": {
+      "bm25_score": 4.413566497646264,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 18,
+    "retrieval_score": 4.413566497646264,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 18,
+        "score": 4.413566497646264
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "fact",
+    "content": "The user is 32 years old, based on her sister being 35 and three years older.",
+    "dimension": {
+      "time": "2023-05-30",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "age",
+        "32"
+      ]
+    },
+    "entities": [
+      "age",
+      "32"
+    ],
+    "embedding_text": "The user is 32 years old, based on her sister being 35 and three years older.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0194",
+    "source_time": "2023-05-30 15:51:00",
+    "record_time": "2026-07-07T19:50:56.421372",
+    "score": 4.380139052598789,
+    "score_components": {
+      "bm25_score": 4.380139052598789,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 19,
+    "retrieval_score": 4.380139052598789,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 19,
+        "score": 4.380139052598789
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "User purchased 6 candles from Bath & Body Works for best friend's 30th birthday, on sale buy one get one free, spending $30.",
+    "dimension": {
+      "time": "",
+      "location": "Bath & Body Works",
+      "reason": "best friend's 30th birthday",
+      "purpose": "",
+      "keywords": [
+        "candles",
+        "Bath & Body Works",
+        "best friend",
+        "30th birthday",
+        "buy one get one free",
+        "$30"
+      ]
+    },
+    "entities": [
+      "candles",
+      "Bath & Body Works",
+      "best friend",
+      "30th birthday",
+      "buy one get one free",
+      "$30"
+    ],
+    "embedding_text": "User purchased 6 candles from Bath & Body Works for best friend's 30th birthday, on sale buy one get one free, spending $30.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0145",
+    "source_time": "2023-05-28 08:47:02.500000",
+    "record_time": "2026-07-07T19:50:56.421022",
+    "score": 4.370866945046371,
+    "score_components": {
+      "bm25_score": 4.370866945046371,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 20,
+    "retrieval_score": 4.370866945046371,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 20,
+        "score": 4.370866945046371
+      },
+      {
+        "method": "minilm",
+        "rank": 13,
+        "score": 0.4574435178642974
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "User decided to purchase silicone baking mats on 2023-05-20.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "silicone baking mats"
+      ]
+    },
+    "entities": [
+      "silicone baking mats"
+    ],
+    "embedding_text": "User decided to purchase silicone baking mats on 2023-05-20.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0001",
+    "source_time": "2023-05-20 08:34:01",
+    "record_time": "2026-07-07T19:50:56.419986",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User decided to purchase silicone baking mats on 2023-05-20. | silicone baking mats | 2023-05-20 | silicone baking mats"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 6,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "User decided to purchase a Calphalon Hard Anodized Aluminum Baking Sheet with non-stick coating on 2023-05-20.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "easy cleaning and food release",
+      "purpose": "",
+      "keywords": [
+        "Calphalon",
+        "baking sheet",
+        "non-stick coating"
+      ]
+    },
+    "entities": [
+      "Calphalon",
+      "baking sheet",
+      "non-stick coating"
+    ],
+    "embedding_text": "User decided to purchase a Calphalon Hard Anodized Aluminum Baking Sheet with non-stick coating on 2023-05-20.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0002",
+    "source_time": "2023-05-20 08:34:02",
+    "record_time": "2026-07-07T19:50:56.419995",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User decided to purchase a Calphalon Hard Anodized Aluminum Baking Sheet with non-stick coating on 2023-05-20. | Calphalon | baking sheet | non-stick coating | 2023-05-20 | easy cleaning and food release | Calphalon | baking sheet | non-stick coating"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 7,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 7,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "User noticed old tongs are worn out and considered buying new ones on 2023-05-20.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "tongs worn out",
+      "purpose": "",
+      "keywords": [
+        "tongs",
+        "worn out"
+      ]
+    },
+    "entities": [
+      "tongs",
+      "worn out"
+    ],
+    "embedding_text": "User noticed old tongs are worn out and considered buying new ones on 2023-05-20.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0004",
+    "source_time": "2023-05-20 08:34:02.500000",
+    "record_time": "2026-07-07T19:50:56.420009",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User noticed old tongs are worn out and considered buying new ones on 2023-05-20. | tongs | worn out | 2023-05-20 | tongs worn out | tongs | worn out"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 8,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 8,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "User plans to check West Elm and CB2 for vases on 2023-05-20.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "West Elm, CB2",
+      "reason": "",
+      "purpose": "to buy a vase",
+      "keywords": [
+        "West Elm",
+        "CB2",
+        "vases"
+      ]
+    },
+    "entities": [
+      "West Elm",
+      "CB2",
+      "vases"
+    ],
+    "embedding_text": "User plans to check West Elm and CB2 for vases on 2023-05-20.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0008",
+    "source_time": "2023-05-20 11:46:01.500000",
+    "record_time": "2026-07-07T19:50:56.420037",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "User plans to check West Elm and CB2 for vases on 2023-05-20. | West Elm | CB2 | vases | 2023-05-20 | West Elm, CB2 | to buy a vase | West Elm | CB2 | vases"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 10,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "On 2023-05-20, the user asked the assistant to role-play as Tong Chi Ming, a man living in the UK with a background in the chemistry industry and plans to set up a snack factory.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "role-play",
+        "Tong Chi Ming",
+        "snack factory",
+        "chemistry industry",
+        "UK"
+      ]
+    },
+    "entities": [
+      "role-play",
+      "Tong Chi Ming",
+      "snack factory",
+      "chemistry industry",
+      "UK"
+    ],
+    "embedding_text": "On 2023-05-20, the user asked the assistant to role-play as Tong Chi Ming, a man living in the UK with a background in the chemistry industry and plans to set up a snack factory.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0009",
+    "source_time": "2023-05-20 11:46:00.500000",
+    "record_time": "2026-07-07T19:50:56.420046",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "On 2023-05-20, the user asked the assistant to role-play as Tong Chi Ming, a man living in the UK with a background in the chemistry industry and plans to set up a snack factory. | role-play | Tong Chi Ming | snack factory | chemistry industry | UK | 2023-05-20 | role-play | Tong Chi Ming | snack factory | chemistry industry | UK"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 11,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 11,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "Around April 29, 2023, the user redecorated their bedroom with a minimalist style and has been enjoying the new vibe.",
+    "dimension": {
+      "time": "2023-04-29",
+      "location": "user's bedroom",
+      "reason": "",
+      "purpose": "to achieve a minimalist vibe",
+      "keywords": [
+        "bedroom",
+        "minimalist style",
+        "redecorating"
+      ]
+    },
+    "entities": [
+      "bedroom",
+      "minimalist style",
+      "redecorating"
+    ],
+    "embedding_text": "Around April 29, 2023, the user redecorated their bedroom with a minimalist style and has been enjoying the new vibe.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0010",
+    "source_time": "2023-05-20 11:46:01",
+    "record_time": "2026-07-07T19:50:56.420053",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "Around April 29, 2023, the user redecorated their bedroom with a minimalist style and has been enjoying the new vibe. | bedroom | minimalist style | redecorating | 2023-04-29 | user's bedroom | to achieve a minimalist vibe | bedroom | minimalist style | redecorating"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 12,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 12,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "The user is considering adding low-maintenance plants to their dining room, which has natural light during the day but is darker in the evenings.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "dining room",
+      "reason": "",
+      "purpose": "add plants",
+      "keywords": [
+        "low-maintenance plants",
+        "dining room",
+        "natural light",
+        "evening darkness"
+      ]
+    },
+    "entities": [
+      "low-maintenance plants",
+      "dining room",
+      "natural light",
+      "evening darkness"
+    ],
+    "embedding_text": "The user is considering adding low-maintenance plants to their dining room, which has natural light during the day but is darker in the evenings.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0011",
+    "source_time": "2023-05-20 15:48:01",
+    "record_time": "2026-07-07T19:50:56.420061",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user is considering adding low-maintenance plants to their dining room, which has natural light during the day but is darker in the evenings. | low-maintenance plants | dining room | natural light | evening darkness | 2023-05-20 | dining room | add plants | low-maintenance plants | dining room | natural light | evening darkness"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 13,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 13,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "The user plans to add a peace lily to their minimalist bedroom.",
+    "dimension": {
+      "time": "future",
+      "location": "bedroom",
+      "reason": "",
+      "purpose": "add plant to bedroom",
+      "keywords": [
+        "peace lily",
+        "minimalist bedroom"
+      ]
+    },
+    "entities": [
+      "peace lily",
+      "minimalist bedroom"
+    ],
+    "embedding_text": "The user plans to add a peace lily to their minimalist bedroom.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0012",
+    "source_time": "2023-05-20 15:48:01.500000",
+    "record_time": "2026-07-07T19:50:56.420068",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to add a peace lily to their minimalist bedroom. | peace lily | minimalist bedroom | future | bedroom | add plant to bedroom | peace lily | minimalist bedroom"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "The user switched to a simple white duvet cover for their bedroom around April 29, 2023 to achieve a minimalist vibe.",
+    "dimension": {
+      "time": "2023-04-29",
+      "location": "bedroom",
+      "reason": "",
+      "purpose": "to achieve a minimalist vibe",
+      "keywords": [
+        "white duvet cover",
+        "bedroom",
+        "minimalist",
+        "switch"
+      ]
+    },
+    "entities": [
+      "white duvet cover",
+      "bedroom",
+      "minimalist",
+      "switch"
+    ],
+    "embedding_text": "The user switched to a simple white duvet cover for their bedroom around April 29, 2023 to achieve a minimalist vibe.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0014",
+    "source_time": "2023-05-20 15:48:02",
+    "record_time": "2026-07-07T19:50:56.420082",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user switched to a simple white duvet cover for their bedroom around April 29, 2023 to achieve a minimalist vibe. | white duvet cover | bedroom | minimalist | switch | 2023-04-29 | bedroom | to achieve a minimalist vibe | white duvet cover | bedroom | minimalist | switch"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 15,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "The user is planning to choose a sectional sofa for their living room which has a geometric-patterned rug.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "living room",
+      "reason": "",
+      "purpose": "select a sectional sofa",
+      "keywords": [
+        "sectional sofa",
+        "living room",
+        "geometric-patterned rug"
+      ]
+    },
+    "entities": [
+      "sectional sofa",
+      "living room",
+      "geometric-patterned rug"
+    ],
+    "embedding_text": "The user is planning to choose a sectional sofa for their living room which has a geometric-patterned rug.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0015",
+    "source_time": "2023-05-20 15:48:02.500000",
+    "record_time": "2026-07-07T19:50:56.420089",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user is planning to choose a sectional sofa for their living room which has a geometric-patterned rug. | sectional sofa | living room | geometric-patterned rug | 2023-05-20 | living room | select a sectional sofa | sectional sofa | living room | geometric-patterned rug"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 16,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 16,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "The user has been adding steamed vegetables to their dog Max's food to aid digestion and joint health.",
+    "dimension": {
+      "time": "ongoing as of 2023-05-20",
+      "location": "",
+      "reason": "to aid digestion and joint health",
+      "purpose": "improve Max's health",
+      "keywords": [
+        "Max",
+        "steamed vegetables",
+        "dog food",
+        "digestion",
+        "joint health"
+      ]
+    },
+    "entities": [
+      "Max",
+      "steamed vegetables",
+      "dog food",
+      "digestion",
+      "joint health"
+    ],
+    "embedding_text": "The user has been adding steamed vegetables to their dog Max's food to aid digestion and joint health.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0020",
+    "source_time": "2023-05-20 22:13:01",
+    "record_time": "2026-07-07T19:50:56.420124",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user has been adding steamed vegetables to their dog Max's food to aid digestion and joint health. | Max | steamed vegetables | dog food | digestion | joint health | ongoing as of 2023-05-20 | to aid digestion and joint health | improve Max's health | Max | steamed vegetables | dog food | digestion | joint health"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 18,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "The user is considering natural alternatives for flea and tick prevention for their cat Lola.",
+    "dimension": {
+      "time": "2023-05-20",
+      "location": "",
+      "reason": "",
+      "purpose": "find natural flea and tick prevention",
+      "keywords": [
+        "Lola",
+        "cat",
+        "natural alternatives",
+        "flea prevention",
+        "tick prevention"
+      ]
+    },
+    "entities": [
+      "Lola",
+      "cat",
+      "natural alternatives",
+      "flea prevention",
+      "tick prevention"
+    ],
+    "embedding_text": "The user is considering natural alternatives for flea and tick prevention for their cat Lola.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0021",
+    "source_time": "2023-05-20 22:13:02",
+    "record_time": "2026-07-07T19:50:56.420132",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user is considering natural alternatives for flea and tick prevention for their cat Lola. | Lola | cat | natural alternatives | flea prevention | tick prevention | 2023-05-20 | find natural flea and tick prevention | Lola | cat | natural alternatives | flea prevention | tick prevention"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 19,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "The user plans to bake oatmeal raisin cookies this weekend around May 20-21, 2023.",
+    "dimension": {
+      "time": "2023-05-20 to 2023-05-21",
+      "location": "",
+      "reason": "",
+      "purpose": "bake cookies",
+      "keywords": [
+        "oatmeal raisin cookies",
+        "baking",
+        "weekend"
+      ]
+    },
+    "entities": [
+      "oatmeal raisin cookies",
+      "baking",
+      "weekend"
+    ],
+    "embedding_text": "The user plans to bake oatmeal raisin cookies this weekend around May 20-21, 2023.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0022",
+    "source_time": "2023-05-21 01:10:00",
+    "record_time": "2026-07-07T19:50:56.420138",
+    "score": 0.33333333333333337,
+    "structural_score": 0.33333333333333337,
+    "score_components": {
+      "score": 0.33333333333333337,
+      "answer_field_score": 1.0,
+      "memory_type_score": 1.0,
+      "time_constraint_score": 0.0,
+      "time_constraint_match": {
+        "score": 0.0,
+        "matched": false,
+        "mode": "",
+        "matched_constraints": [],
+        "record_time_spans": []
+      },
+      "location_constraint_score": 0.0,
+      "keyword_phrase_match_score": 0.0,
+      "keyword_token_overlap_score": 0.0,
+      "weights": {
+        "memory_type": 0.33333333333333337,
+        "keyword_phrase_match": 0.33333333333333337,
+        "keyword_token_overlap": 0.33333333333333337
+      },
+      "active_components": {
+        "memory_type": 1.0,
+        "keyword_phrase_match": 0.0,
+        "keyword_token_overlap": 0.0
+      },
+      "base_weights": {
+        "memory_type": 0.15,
+        "time_constraint": 0.3,
+        "location_constraint": 0.2,
+        "keyword_phrase_match": 0.15,
+        "keyword_token_overlap": 0.15
+      },
+      "query_fields": [
+        "dimension.time",
+        "dimension.location",
+        "dimension.target_memory_type",
+        "dimension.keywords",
+        "query_anchor"
+      ],
+      "memory_fields": [
+        "dimension.memory_type",
+        "dimension.time",
+        "dimension.location",
+        "dimension.keywords",
+        "content"
+      ],
+      "record_text": "The user plans to bake oatmeal raisin cookies this weekend around May 20-21, 2023. | oatmeal raisin cookies | baking | weekend | 2023-05-20 to 2023-05-21 | bake cookies | oatmeal raisin cookies | baking | weekend"
+    },
+    "retrieval_method": "structured",
+    "retrieval_rank": 20,
+    "retrieval_score": 0.33333333333333337,
+    "fusion_sources": [
+      {
+        "method": "structured",
+        "rank": 20,
+        "score": 0.33333333333333337
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "User saved the most on a secondhand designer handbag bought on eBay for $200, originally $1,500.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "designer handbag",
+        "eBay",
+        "$200",
+        "$1,500",
+        "best savings"
+      ]
+    },
+    "entities": [
+      "designer handbag",
+      "eBay",
+      "$200",
+      "$1,500",
+      "best savings"
+    ],
+    "embedding_text": "User saved the most on a secondhand designer handbag bought on eBay for $200, originally $1,500.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0102",
+    "source_time": "2023-05-23 18:50:02.500000",
+    "record_time": "2026-07-07T19:50:56.420745",
+    "score": 0.4938143207685463,
+    "score_components": {
+      "dense_cosine_score": 0.4938143207685463,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 7,
+    "retrieval_score": 0.4938143207685463,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 7,
+        "score": 0.4938143207685463
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "fact",
+    "content": "User has earned $50 in cashback rewards.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "cashback rewards",
+        "$50"
+      ]
+    },
+    "entities": [
+      "cashback rewards",
+      "$50"
+    ],
+    "embedding_text": "User has earned $50 in cashback rewards.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0140",
+    "source_time": "2023-05-28 08:47:00",
+    "record_time": "2026-07-07T19:50:56.420988",
+    "score": 0.4923476927065423,
+    "score_components": {
+      "dense_cosine_score": 0.4923476927065423,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 8,
+    "retrieval_score": 0.4923476927065423,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 8,
+        "score": 0.4923476927065423
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "In April 2023, the user bought a $75 pair of earrings from a jewelry store downtown as a birthday gift for their sister.",
+    "dimension": {
+      "time": "2023-04",
+      "location": "downtown jewelry store",
+      "reason": "sister's birthday",
+      "purpose": "",
+      "keywords": [
+        "sister",
+        "birthday",
+        "earrings",
+        "$75",
+        "jewelry store"
+      ]
+    },
+    "entities": [
+      "sister",
+      "birthday",
+      "earrings",
+      "$75",
+      "jewelry store"
+    ],
+    "embedding_text": "In April 2023, the user bought a $75 pair of earrings from a jewelry store downtown as a birthday gift for their sister.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0137",
+    "source_time": "2023-05-27 09:08:02.500000",
+    "record_time": "2026-07-07T19:50:56.420970",
+    "score": 0.46790930767876043,
+    "score_components": {
+      "dense_cosine_score": 0.46790930767876043,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 10,
+    "retrieval_score": 0.46790930767876043,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 10,
+        "score": 0.46790930767876043
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "User purchased a limited edition Tom Ford perfume for $200.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Tom Ford perfume",
+        "limited edition",
+        "$200",
+        "luxury perfume"
+      ]
+    },
+    "entities": [
+      "Tom Ford perfume",
+      "limited edition",
+      "$200",
+      "luxury perfume"
+    ],
+    "embedding_text": "User purchased a limited edition Tom Ford perfume for $200.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0098",
+    "source_time": "2023-05-23 18:50:00.500000",
+    "record_time": "2026-07-07T19:50:56.420717",
+    "score": 0.4472836124531227,
+    "score_components": {
+      "dense_cosine_score": 0.4472836124531227,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 14,
+    "retrieval_score": 0.4472836124531227,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 14,
+        "score": 0.4472836124531227
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "User is considering selling their grandmother's antique pearl necklace to fund a trip to Europe.",
+    "dimension": {
+      "time": "",
+      "location": "Europe",
+      "reason": "fund trip",
+      "purpose": "sell necklace",
+      "keywords": [
+        "sell",
+        "grandmother's pearl necklace",
+        "Europe trip"
+      ]
+    },
+    "entities": [
+      "sell",
+      "grandmother's pearl necklace",
+      "Europe trip"
+    ],
+    "embedding_text": "User is considering selling their grandmother's antique pearl necklace to fund a trip to Europe.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0189",
+    "source_time": "2023-05-30 02:07:02.500000",
+    "record_time": "2026-07-07T19:50:56.421339",
+    "score": 0.41071712879958744,
+    "score_components": {
+      "dense_cosine_score": 0.41071712879958744,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 15,
+    "retrieval_score": 0.41071712879958744,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 15,
+        "score": 0.41071712879958744
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "User bought a gently used designer coat from ThredUp for $100, originally $800.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "designer coat",
+        "ThredUp",
+        "$100",
+        "$800",
+        "secondhand"
+      ]
+    },
+    "entities": [
+      "designer coat",
+      "ThredUp",
+      "$100",
+      "$800",
+      "secondhand"
+    ],
+    "embedding_text": "User bought a gently used designer coat from ThredUp for $100, originally $800.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0099",
+    "source_time": "2023-05-23 18:50:01",
+    "record_time": "2026-07-07T19:50:56.420724",
+    "score": 0.4005421671263511,
+    "score_components": {
+      "dense_cosine_score": 0.4005421671263511,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 17,
+    "retrieval_score": 0.4005421671263511,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 17,
+        "score": 0.4005421671263511
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "The user is planning a budget for their mother's anniversary gift and has shortlisted three options: a personalized photo album, a customized piece of jewelry, and a gourmet food basket.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "",
+      "reason": "anniversary",
+      "purpose": "to decide which option to choose",
+      "keywords": [
+        "anniversary",
+        "gift",
+        "personalized photo album",
+        "customized jewelry",
+        "gourmet food basket",
+        "budget",
+        "comparison"
+      ]
+    },
+    "entities": [
+      "anniversary",
+      "gift",
+      "personalized photo album",
+      "customized jewelry",
+      "gourmet food basket",
+      "budget",
+      "comparison"
+    ],
+    "embedding_text": "The user is planning a budget for their mother's anniversary gift and has shortlisted three options: a personalized photo album, a customized piece of jewelry, and a gourmet food basket.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0156",
+    "source_time": "2023-05-29 11:32:00",
+    "record_time": "2026-07-07T19:50:56.421095",
+    "score": 0.39869841780261617,
+    "score_components": {
+      "dense_cosine_score": 0.39869841780261617,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 18,
+    "retrieval_score": 0.39869841780261617,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.39869841780261617
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "episodic",
+    "content": "User bought a meme-themed mug from Amazon for best friend's housewarming party for $20.",
+    "dimension": {
+      "time": "",
+      "location": "Amazon",
+      "reason": "best friend's housewarming party",
+      "purpose": "",
+      "keywords": [
+        "meme mug",
+        "Amazon",
+        "best friend",
+        "housewarming",
+        "$20"
+      ]
+    },
+    "entities": [
+      "meme mug",
+      "Amazon",
+      "best friend",
+      "housewarming",
+      "$20"
+    ],
+    "embedding_text": "User bought a meme-themed mug from Amazon for best friend's housewarming party for $20.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0143",
+    "source_time": "2023-05-28 08:47:01.500000",
+    "record_time": "2026-07-07T19:50:56.421008",
+    "score": 0.39851330512137173,
+    "score_components": {
+      "dense_cosine_score": 0.39851330512137173,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 19,
+    "retrieval_score": 0.39851330512137173,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 19,
+        "score": 0.39851330512137173
+      }
+    ]
+  },
+  {
+    "user_id": "0026_a3332713",
+    "memory_type": "fact",
+    "content": "User's grandmother's antique pearl necklace was appraised at approximately $2,000.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "grandmother",
+        "antique pearl necklace",
+        "appraisal",
+        "$2000"
+      ]
+    },
+    "entities": [
+      "grandmother",
+      "antique pearl necklace",
+      "appraisal",
+      "$2000"
+    ],
+    "embedding_text": "User's grandmother's antique pearl necklace was appraised at approximately $2,000.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0188",
+    "source_time": "2023-05-30 02:07:02",
+    "record_time": "2026-07-07T19:50:56.421332",
+    "score": 0.38471811012361595,
+    "score_components": {
+      "dense_cosine_score": 0.38471811012361595,
+      "query_field": "query_anchor",
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose"
+      ]
+    },
+    "retrieval_method": "minilm",
+    "retrieval_rank": 20,
+    "retrieval_score": 0.38471811012361595,
+    "fusion_sources": [
+      {
+        "method": "minilm",
+        "rank": 20,
+        "score": 0.38471811012361595
+      }
+    ]
+  }
+]

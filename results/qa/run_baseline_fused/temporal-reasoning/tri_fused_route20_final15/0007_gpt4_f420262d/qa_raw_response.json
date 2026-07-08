@@ -1,0 +1,32 @@
+{
+  "id": "f317fd97-f9c0-44b8-ae1a-e4425f16f393",
+  "object": "chat.completion",
+  "created": 1783427991,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: The user asks for the airline flown on Valentine's Day (February 14). Retrieved memories include entries dated February 14, 2023 ([1] and [3]), but neither mentions a specific flight or airline. Memory [6] mentions an American Airlines flight on February 20, which is not Valentine's Day. No memory records a flight on February 14. Therefore, insufficient evidence.\n\nAnswer: I don't know.",
+        "reasoning_content": "We need to answer: \"What was the airline that I flied with on Valentine's day?\" Question date is 2023-03-02. Valentine's day is Feb 14. Retrieved memories: Memory [6] mentions a flight on 2023-02-20 from New York to Los Angeles on American Airlines, but that's not Valentine's day. Memory [1] and [3] are from Feb 14, but they talk about user values seat selection and wanting upgrade notifications, not a specific airline flown. No memory explicitly states which airline the user flew on Valentine's day. Possibly the user didn't fly that day? Or flight not recorded. Evidence insufficient."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1098,
+    "completion_tokens": 230,
+    "total_tokens": 1328,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 139
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 842
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

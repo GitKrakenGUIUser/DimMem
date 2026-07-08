@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-23T23:20:02, Tue] 1.User: I'd like to explore the idea of flow batteries in microgrids further. Can you tell me more about how they're being used in microgrids and what benefits they provide?
+[2023-05-23T23:20:02.500000, Tue] 2.User: I'd like to explore the idea of flow batteries in microgrids further. Can you tell me more about the challenges of integrating flow batteries into microgrids and how they're being addressed?
+[2023-05-24T06:00:00, Wed] 3.User: Can you tell me what is density functional theory
+[2023-05-24T06:00:00.500000, Wed] 4.User: can you write a python script to compute the g(r) function of an atomic system
+[2023-05-24T06:00:01, Wed] 5.User: Can you do it without explicit for loops but using internal loop to increase computational speed as much as possible
+[2023-05-24T06:00:01.500000, Wed] 6.User: can you read positions in a data file in the xyz format?
+[2023-05-24T06:00:02, Wed] 7.User: great! can you know read the position in the xyz file then compute the g(r) without explicit for loops as before
+[2023-05-24T15:34:00, Wed] 8.User: Write a detailed business plan for implementing a internationalization compliance and static code analysis tool to ensure and enablement for global readiness and multilingual deployment. specify market problems, stakeholders this helps (in addition to developers), and implementation activities. include tables.
+[2023-05-24T15:34:00.500000, Wed] 9.User: Write a detailed business plan for implementing a security compliance, governance and static code analysis tool to ensure and enablement for safe and secure research database and information discovery, worldwide. specify market problems, stakeholders this helps (in addition to developers), and implementation activities. include tables.
+[2023-05-24T18:22:00, Wed] 10.User: I'm thinking of getting a fiddle leaf fig, but I've heard they can be finicky. Can you tell me more about their care requirements?
+[2023-05-24T18:22:00.500000, Wed] 11.User: What about succulents? I've heard they're low-maintenance and easy to care for. Would they be a good option for a beginner like me?
+[2023-05-24T18:22:01, Wed] 12.User: I'm considering getting a few succulents to start with, but I'm not sure which ones to choose. Can you recommend some popular and easy-to-care-for species that would do well in indoor conditions?
+[2023-05-24T18:22:01.500000, Wed] 13.User: I already have a ZZ plant, but I'm interested in trying out some of the other ones you mentioned. Do you think I could propagate some succulents from leaf or stem cuttings? I've had success with propagating my snake plant and spider plant from cuttings, so I'm wondering if it's the same with succulents.
+[2023-05-24T18:22:02, Wed] 14.User: That's great, thank you for the tips! I think I'll try propagating some succulent cuttings to add to my collection. Do you think I could also use a propagation tray with a clear plastic dome to help create a humid microclimate and increase the chances of success?
+[2023-05-24T18:22:02.500000, Wed] 15.User: I think I'll give it a try. I've heard that some succulents can be sensitive to over-humidification, so I'll make sure to monitor the humidity levels and vent the dome as needed. Do you think I can also use a heating mat to provide some bottom heat to the cuttings?

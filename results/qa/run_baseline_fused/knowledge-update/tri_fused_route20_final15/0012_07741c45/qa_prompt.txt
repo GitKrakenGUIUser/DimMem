@@ -1,0 +1,109 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-05-29 12:22:01
+content: User's old sneakers are currently taking up space.
+
+[2]
+source_time: 2023-05-29 12:22:00.500000
+content: User plans to organize closet this weekend on 2023-06-03 and store old sneakers in a shoe rack.
+reason: old sneakers are currently taking up space
+purpose: to store sneakers in a shoe rack
+
+[3]
+source_time: 2023-05-25 10:04:01
+content: User plans to get their old sneakers polished and conditioned at a cobbler this weekend.
+purpose: to polish and condition old sneakers
+
+[4]
+source_time: 2023-05-25 10:04:00.500000
+content: User has old sneakers stored under their bed that are starting to smell.
+
+[5]
+source_time: 2023-05-29 15:01:00
+content: User plans to organize their closet and get rid of old sneakers on the weekend of 2023-05-27.
+purpose: decluttering
+
+[6]
+source_time: 2023-05-30 04:12:01.500000
+content: The user relies on their own motivation and does not have a workout buddy.
+
+[7]
+source_time: 2023-05-26 04:54:00
+content: User is trying to keep track of expenses and wants to create a budget for their vehicles.
+purpose: create a budget for vehicles
+
+[8]
+source_time: 2023-05-25 10:04:02.500000
+content: User is considering organizing their closet by type (e.g., boots together, sneakers together).
+purpose: to organize closet by type of footwear
+
+[9]
+source_time: 2023-06-08 15:26:00.500000
+content: The user plans to track their cultural heritage research findings using a spreadsheet and a digital note-taking app.
+reason: to organize research findings
+purpose: to keep track of findings
+
+[10]
+source_time: 2023-05-25 10:04:01.500000
+content: User plans to donate their old dress shoes to a local charity thrift store this Saturday.
+purpose: to donate old dress shoes
+
+[11]
+source_time: 2023-05-28 06:33:01.500000
+content: User wears white sneakers frequently.
+
+[12]
+source_time: 2023-05-28 12:43:00
+content: User is considering buying cargo pants to go with white sneakers.
+purpose: to go with white sneakers
+
+[13]
+source_time: 2023-06-16 08:39:02
+content: The user is thinking of listing their old motorcycle on Craigslist or Facebook Marketplace because they haven't ridden it in years.
+reason: not ridden in years
+purpose: to sell and free up space and cash
+
+[14]
+source_time: 2023-05-25 04:26:01
+content: The user attended a conference on emerging technologies around May 18-24, 2023, where the latest developments in AI, blockchain, and cybersecurity were discussed.
+
+[15]
+source_time: 2023-05-28 06:33:02
+content: User bought white sneakers on sale at the Adidas store in a mall on 2023-05-27.
+reason: on sale
+
+Now answer the question:
+User Question:Where do I currently keep my old sneakers?
+Question Date:2023/06/23 (Fri) 07:31

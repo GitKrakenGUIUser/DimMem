@@ -1,0 +1,888 @@
+[
+  {
+    "user_id": "0007_gpt4_f420262d",
+    "memory_type": "profile",
+    "content": "The user values seat selection and amenities when choosing an airline.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "seat selection",
+        "amenities",
+        "airline preference"
+      ]
+    },
+    "entities": [
+      "seat selection",
+      "amenities",
+      "airline preference"
+    ],
+    "embedding_text": "The user values seat selection and amenities when choosing an airline.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0125",
+    "source_time": "2023-02-14 20:47:00.500000",
+    "record_time": "2026-07-07T19:51:00.534571",
+    "score": 7.258820442150919,
+    "score_components": {
+      "bm25_score": 7.258820442150919,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 7.258820442150919,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 7.258820442150919
+      }
+    ]
+  },
+  {
+    "user_id": "0007_gpt4_f420262d",
+    "memory_type": "episodic",
+    "content": "The user plans to host a sports-themed party with nachos, sliders, caprese skewers, beer, soda, Game Day Punch, multiple TV stations, and a squares game.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "hosting a party",
+      "purpose": "to enjoy sports games",
+      "keywords": [
+        "sports-themed party",
+        "nachos",
+        "sliders",
+        "caprese skewers",
+        "beer",
+        "soda",
+        "Game Day Punch",
+        "squares game",
+        "TV stations"
+      ]
+    },
+    "entities": [
+      "sports-themed party",
+      "nachos",
+      "sliders",
+      "caprese skewers",
+      "beer",
+      "soda",
+      "Game Day Punch",
+      "squares game",
+      "TV stations"
+    ],
+    "embedding_text": "The user plans to host a sports-themed party with nachos, sliders, caprese skewers, beer, soda, Game Day Punch, multiple TV stations, and a squares game.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0178",
+    "source_time": "2023-02-28 10:38:00",
+    "record_time": "2026-07-07T19:51:00.534875",
+    "score": 7.033639535689842,
+    "score_components": {
+      "bm25_score": 7.033639535689842,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 7.033639535689842,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 7.033639535689842
+      },
+      {
+        "method": "structured",
+        "rank": 19,
+        "score": 0.24999999999999997
+      }
+    ]
+  },
+  {
+    "user_id": "0007_gpt4_f420262d",
+    "memory_type": "profile",
+    "content": "The user wants to be notified when an upgrade becomes available on their flights.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "be notified of upgrades",
+      "keywords": [
+        "upgrade notification",
+        "airline upgrades"
+      ]
+    },
+    "entities": [
+      "upgrade notification",
+      "airline upgrades"
+    ],
+    "embedding_text": "The user wants to be notified when an upgrade becomes available on their flights.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0129",
+    "source_time": "2023-02-14 20:47:02.500000",
+    "record_time": "2026-07-07T19:51:00.534593",
+    "score": 6.512753669313268,
+    "score_components": {
+      "bm25_score": 6.512753669313268,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 6.512753669313268,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 6.512753669313268
+      }
+    ]
+  },
+  {
+    "user_id": "0007_gpt4_f420262d",
+    "memory_type": "episodic",
+    "content": "The user inquired about the weather in Paris in March 2023 to determine what to pack.",
+    "dimension": {
+      "time": "2023-02-28",
+      "location": "Paris",
+      "reason": "trip preparation",
+      "purpose": "pack appropriately",
+      "keywords": [
+        "weather",
+        "Paris",
+        "March",
+        "packing"
+      ]
+    },
+    "entities": [
+      "weather",
+      "Paris",
+      "March",
+      "packing"
+    ],
+    "embedding_text": "The user inquired about the weather in Paris in March 2023 to determine what to pack.",
+    "source_message_ids": [
+      "18"
+    ],
+    "source_boundary_id": "18_0186",
+    "source_time": "2023-02-28 14:58:01",
+    "record_time": "2026-07-07T19:51:00.534920",
+    "score": 5.683588622633218,
+    "score_components": {
+      "bm25_score": 5.683588622633218,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 5.683588622633218,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 5.683588622633218
+      }
+    ]
+  },
+  {
+    "user_id": "0007_gpt4_f420262d",
+    "memory_type": "fact",
+    "content": "The user's friend Rachel is a sales associate at Athleta and keeps the user informed about Athleta's promotions.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Rachel",
+        "sales associate",
+        "Athleta",
+        "promotions"
+      ]
+    },
+    "entities": [
+      "Rachel",
+      "sales associate",
+      "Athleta",
+      "promotions"
+    ],
+    "embedding_text": "The user's friend Rachel is a sales associate at Athleta and keeps the user informed about Athleta's promotions.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0070",
+    "source_time": "2023-01-05 14:54:00",
+    "record_time": "2026-07-07T19:51:00.534259",
+    "score": 4.369785763656896,
+    "score_components": {
+      "bm25_score": 4.369785763656896,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 4.369785763656896,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 4.369785763656896
+      }
+    ]
+  },
+  {
+    "user_id": "0007_gpt4_f420262d",
+    "memory_type": "episodic",
+    "content": "User had a terrible experience with the in-flight entertainment on an American Airlines flight from New York to Los Angeles on 2023-02-20.",
+    "dimension": {
+      "time": "2023-02-20",
+      "location": "American Airlines flight New York to Los Angeles",
+      "reason": "terrible experience with in-flight entertainment",
+      "purpose": "",
+      "keywords": [
+        "American Airlines",
+        "flight",
+        "New York",
+        "Los Angeles",
+        "in-flight entertainment",
+        "terrible experience"
+      ]
+    },
+    "entities": [
+      "American Airlines",
+      "flight",
+      "New York",
+      "Los Angeles",
+      "in-flight entertainment",
+      "terrible experience"
+    ],
+    "embedding_text": "User had a terrible experience with the in-flight entertainment on an American Airlines flight from New York to Los Angeles on 2023-02-20.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0144",
+    "source_time": "2023-02-20 18:00:00",
+    "record_time": "2026-07-07T19:51:00.534683",
+    "score": 4.086063686306337,
+    "score_components": {
+      "bm25_score": 4.086063686306337,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 4.086063686306337,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 4.086063686306337
+      },
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.3
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.5549871238283697
+      }
+    ]
+  },
+  {
+    "user_id": "0007_gpt4_f420262d",
+    "memory_type": "episodic",
+    "content": "User commented on a fashion influencer's post about summer dresses and discussed prices and availability.",
+    "dimension": {
+      "time": "",
+      "location": "Instagram",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "fashion influencer",
+        "summer dresses",
+        "prices",
+        "availability",
+        "comment",
+        "conversation"
+      ]
+    },
+    "entities": [
+      "fashion influencer",
+      "summer dresses",
+      "prices",
+      "availability",
+      "comment",
+      "conversation"
+    ],
+    "embedding_text": "User commented on a fashion influencer's post about summer dresses and discussed prices and availability.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0055",
+    "source_time": "2022-12-13 06:04:00",
+    "record_time": "2026-07-07T19:51:00.534168",
+    "score": 4.0390683777957666,
+    "score_components": {
+      "bm25_score": 4.0390683777957666,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 4.0390683777957666,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 4.0390683777957666
+      },
+      {
+        "method": "structured",
+        "rank": 16,
+        "score": 0.24999999999999997
+      }
+    ]
+  },
+  {
+    "user_id": "0007_gpt4_f420262d",
+    "memory_type": "fact",
+    "content": "The user was accepted into a Master's program in International Relations at the University of Melbourne a few months prior to November 2022 and is planning to move to Melbourne.",
+    "dimension": {
+      "time": "",
+      "location": "Melbourne, Australia; University of Melbourne",
+      "reason": "pursuing Master's degree",
+      "purpose": "to study International Relations",
+      "keywords": [
+        "Master's",
+        "International Relations",
+        "University of Melbourne",
+        "move",
+        "Melbourne",
+        "acceptance"
+      ]
+    },
+    "entities": [
+      "Master's",
+      "International Relations",
+      "University of Melbourne",
+      "move",
+      "Melbourne",
+      "acceptance"
+    ],
+    "embedding_text": "The user was accepted into a Master's program in International Relations at the University of Melbourne a few months prior to November 2022 and is planning to move to Melbourne.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0024",
+    "source_time": "2022-11-14 11:15:01.500000",
+    "record_time": "2026-07-07T19:51:00.533910",
+    "score": 4.031615425362251,
+    "score_components": {
+      "bm25_score": 4.031615425362251,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 4.031615425362251,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 4.031615425362251
+      }
+    ]
+  },
+  {
+    "user_id": "0007_gpt4_f420262d",
+    "memory_type": "episodic",
+    "content": "The user is experiencing difficulty with the bank's online application system for opening an Australian bank account and is unsure about proof of address requirements since they haven't moved to Melbourne yet.",
+    "dimension": {
+      "time": "2022-11-15",
+      "location": "",
+      "reason": "lack of lease or utility bill",
+      "purpose": "",
+      "keywords": [
+        "bank account",
+        "online application",
+        "proof of address",
+        "Melbourne",
+        "difficulty"
+      ]
+    },
+    "entities": [
+      "bank account",
+      "online application",
+      "proof of address",
+      "Melbourne",
+      "difficulty"
+    ],
+    "embedding_text": "The user is experiencing difficulty with the bank's online application system for opening an Australian bank account and is unsure about proof of address requirements since they haven't moved to Melbourne yet.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0026",
+    "source_time": "2022-11-14 11:15:02.500000",
+    "record_time": "2026-07-07T19:51:00.533922",
+    "score": 3.85883277286045,
+    "score_components": {
+      "bm25_score": 3.85883277286045,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 3.85883277286045,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 3.85883277286045
+      },
+      {
+        "method": "structured",
+        "rank": 14,
+        "score": 0.24999999999999997
+      }
+    ]
+  },
+  {
+    "user_id": "0007_gpt4_f420262d",
+    "memory_type": "profile",
+    "content": "The user's favorite food at the Super Bowl party was nachos.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "nachos",
+        "favorite food",
+        "Super Bowl party"
+      ]
+    },
+    "entities": [
+      "nachos",
+      "favorite food",
+      "Super Bowl party"
+    ],
+    "embedding_text": "The user's favorite food at the Super Bowl party was nachos.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0179",
+    "source_time": "2023-02-28 10:38:02.500000",
+    "record_time": "2026-07-07T19:51:00.534881",
+    "score": 3.780704809038384,
+    "score_components": {
+      "bm25_score": 3.780704809038384,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 3.780704809038384,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 3.780704809038384
+      }
+    ]
+  },
+  {
+    "user_id": "0007_gpt4_f420262d",
+    "memory_type": "episodic",
+    "content": "The user watched the Duke vs. North Carolina college basketball game on February 1, 2023 at home with roommate Rachel.",
+    "dimension": {
+      "time": "2023-02-01",
+      "location": "user's home",
+      "reason": "to watch the game",
+      "purpose": "",
+      "keywords": [
+        "Duke",
+        "North Carolina",
+        "college basketball",
+        "Rachel"
+      ]
+    },
+    "entities": [
+      "Duke",
+      "North Carolina",
+      "college basketball",
+      "Rachel"
+    ],
+    "embedding_text": "The user watched the Duke vs. North Carolina college basketball game on February 1, 2023 at home with roommate Rachel.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0177",
+    "source_time": "2023-02-28 10:38:01",
+    "record_time": "2026-07-07T19:51:00.534868",
+    "score": 3.7650975593564517,
+    "score_components": {
+      "bm25_score": 3.7650975593564517,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 3.7650975593564517,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 3.7650975593564517
+      },
+      {
+        "method": "structured",
+        "rank": 18,
+        "score": 0.24999999999999997
+      }
+    ]
+  },
+  {
+    "user_id": "0007_gpt4_f420262d",
+    "memory_type": "profile",
+    "content": "The user is considering whether to focus on earning more miles with American Airlines or diversify miles across different airlines.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "American Airlines",
+        "miles",
+        "diversify",
+        "consideration"
+      ]
+    },
+    "entities": [
+      "American Airlines",
+      "miles",
+      "diversify",
+      "consideration"
+    ],
+    "embedding_text": "The user is considering whether to focus on earning more miles with American Airlines or diversify miles across different airlines.",
+    "source_message_ids": [
+      "8"
+    ],
+    "source_boundary_id": "8_0079",
+    "source_time": "2023-01-15 01:09:01.500000",
+    "record_time": "2026-07-07T19:51:00.534310",
+    "score": 3.7434788419090945,
+    "score_components": {
+      "bm25_score": 3.7434788419090945,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 3.7434788419090945,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 3.7434788419090945
+      }
+    ]
+  },
+  {
+    "user_id": "0007_gpt4_f420262d",
+    "memory_type": "fact",
+    "content": "User's 2018 Toyota Corolla had 23,000 miles when it was due for a synthetic oil change on 2023-02-25.",
+    "dimension": {
+      "time": "2023-02-25",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "2018 Toyota Corolla",
+        "23000 miles",
+        "synthetic oil change"
+      ]
+    },
+    "entities": [
+      "2018 Toyota Corolla",
+      "23000 miles",
+      "synthetic oil change"
+    ],
+    "embedding_text": "User's 2018 Toyota Corolla had 23,000 miles when it was due for a synthetic oil change on 2023-02-25.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0163",
+    "source_time": "2023-02-26 01:13:00.500000",
+    "record_time": "2026-07-07T19:51:00.534787",
+    "score": 3.676458747869126,
+    "score_components": {
+      "bm25_score": 3.676458747869126,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 3.676458747869126,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 3.676458747869126
+      }
+    ]
+  },
+  {
+    "user_id": "0007_gpt4_f420262d",
+    "memory_type": "profile",
+    "content": "User engages more on Instagram with visual content and on Twitter in discussions and debates using hashtags.",
+    "dimension": {
+      "time": "",
+      "location": "Instagram, Twitter",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "social media engagement",
+        "Instagram",
+        "visual content",
+        "Twitter",
+        "discussions",
+        "debates",
+        "hashtags"
+      ]
+    },
+    "entities": [
+      "social media engagement",
+      "Instagram",
+      "visual content",
+      "Twitter",
+      "discussions",
+      "debates",
+      "hashtags"
+    ],
+    "embedding_text": "User engages more on Instagram with visual content and on Twitter in discussions and debates using hashtags.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0060",
+    "source_time": "2022-12-13 06:04:02.500000",
+    "record_time": "2026-07-07T19:51:00.534200",
+    "score": 3.6086059917754296,
+    "score_components": {
+      "bm25_score": 3.6086059917754296,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 3.6086059917754296,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 3.6086059917754296
+      }
+    ]
+  },
+  {
+    "user_id": "0007_gpt4_f420262d",
+    "memory_type": "fact",
+    "content": "User's salsa instructor is named Maria.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "salsa instructor",
+        "Maria"
+      ]
+    },
+    "entities": [
+      "salsa instructor",
+      "Maria"
+    ],
+    "embedding_text": "User's salsa instructor is named Maria.",
+    "source_message_ids": [
+      "10"
+    ],
+    "source_boundary_id": "10_0101",
+    "source_time": "2023-02-02 16:14:00.500000",
+    "record_time": "2026-07-07T19:51:00.534435",
+    "score": 3.5160077236003096,
+    "score_components": {
+      "bm25_score": 3.5160077236003096,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 3.5160077236003096,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 3.5160077236003096
+      }
+    ]
+  }
+]

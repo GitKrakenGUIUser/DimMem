@@ -1,0 +1,32 @@
+{
+  "id": "138a6110-1783-448a-834c-19ef705b0d92",
+  "object": "chat.completion",
+  "created": 1783358730,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": [\n    {\n      \"source_id\": 1,\n      \"content\": \"User asked for resources and local organizations supporting women in STEM fields in Los Angeles on 2023-05-27, motivated by concern about lack of female representation.\",\n      \"dimension\": {\n        \"memory_type\": \"episodic\",\n        \"time\": \"2023-05-27\",\n        \"location\": \"Los Angeles\",\n        \"reason\": \"concern about lack of female representation in STEM\",\n        \"purpose\": \"to obtain resources and find local support organizations\",\n        \"keywords\": [\"women in STEM\", \"Los Angeles\", \"resources\", \"organizations\", \"gender representation\"]\n      }\n    }\n  ]\n}",
+        "reasoning_content": "We need to extract memories from messages 4 onward. First 3 messages are overlapping context, ignore.\n\nMessages 4-8: User is working on Excel date/time conversion problems. But these are temporary task details, one-off operations. No long-term value. No clear identity, preferences, etc. So skip.\n\nMessages 9-12: User asks about mattress selection, brands, testing, negotiation. These are specific informational queries, not personal preferences or long-term profile. No extraction of user's own preferences or habits. The user is asking for general advice, not stating their own preferences. So skip.\n\nMessages 13-15: User expresses interest in female representation in STEM, asks for resources and local organizations in Los Angeles. This could be a long-term interest or value? But it's a single query. Could extract as episodic: user asked about organizations supporting women in STEM in Los Angeles. But careful: it's a question, not a statement of personal involvement. However, it indicates interest. Could extract as fact: user is interested in resources for women in STEM. But the instruction says extract memories with long-term value. This might be a temporary curiosity. However, the user explicitly says \"I've been thinking about the lack of female representation... can you provide some resources...\". That suggests a personal interest or value. Could be profile: user values gender equality in STEM. But we need to be cautious not to overgeneralize. Possibly extract as episodic: user requested resources for women in STEM, mentioning Los Angeles. That is a specific event. But the request itself is the event. content should state who did what. Since the user is asking, it's an action. So episodic.\n\nAlso note time: 2023-05-27T21:37:00. So date is May 27, 2023.\n\nWe need to output JSON with memories array. Let's decide which memories to extract.\n\nMemory 1: From messages 9-12? No, those are generic advice-seeking, not personal. Skip.\n\nMemory 2: From messages 13-15. User asked about resources for women in STEM, local to Los Angeles. That is a specific request. Could be episodic: \"User requested resources for women in STEM fields, specifically local organizations in Los Angeles on 2023-05-27.\" But the user also asked about gender demographics in leadership. That is part of the same conversation. Could be a separate memory? But it's all within the same topic. Better to combine into one episodic event: the user inquired about women in STEM resources and demographics in Los Angeles.\n\nAlternatively, could extract as fact: user is interested in women in STEM representation. But that might be profile. However, a single query does not necessarily indicate long-term profile. I'll lean episodic as specific event.\n\nAlso, no explicit time other than message timestamp. So time = \"2023-05-27\".\n\nLocation: Los Angeles (mentioned). So location = \"Los Angeles\".\n\nReason/Purpose: User was thinking about lack of female representation, wanted resources. So purpose could be to find support or information. But we should only fill if explicit. The user says \"I've been thinking about the lack of female representation... and was wondering if you could provide some resources\". So purpose is to obtain resources. Reason is thinking about lack of representation. We can include in content.\n\nKeywords: women, STEM, representation, resources, Los Angeles, organizations.\n\nLet's construct the memory.\n\nAlso note: there is no other extractable information from earlier messages (4-8) because they are just troubleshooting Excel formulas, no long-term value.\n\nThus output one memory.\n\nNow write content: \"User requested resources and organizations supporting women in STEM fields, specifically in Los Angeles, on 2023-05-27, due to their concern about lack of female representation.\"\n\nBut ensure self-contained: mention user. Since user is the only speaker, \"user\" is fine.\n\nSimplify: \"User asked for resources and local organizations supporting women in STEM fields in Los Angeles on 2023-05-27, motivated by concern about gender representation.\"\n\nmemory_type: episodic.\n\ntime: \"2023-05-27\"\n\nlocation: \"Los Angeles\"\n\nreason: \"concern about lack of female representation in STEM\"\n\npurpose: \"to obtain resources and find local support organizations\"\n\nkeywords: [\"women in STEM\", \"Los Angeles\", \"resources\", \"organizations\", \"gender representation\"]\n\nNow output JSON."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2058,
+    "completion_tokens": 1066,
+    "total_tokens": 3124,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 913
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 906
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

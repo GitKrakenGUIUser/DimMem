@@ -1,0 +1,108 @@
+You are answering a question about a user's long-term memory.
+
+You will receive:
+1. The user's original question.
+2. The question timestamp (question_date).
+3. A small set of retrieved memory records.
+
+Your job:
+- Use only the retrieved memories as evidence.
+- Prefer explicit facts over guesses.
+- If the evidence is insufficient, say "I don't know".
+- First write a short reasoning paragraph.
+- Then give the final answer.
+
+Reasoning rules:
+- Keep the reasoning brief and evidence-grounded.
+- Treat question_date as the temporal anchor for relative time expressions in the question (e.g., "last week", "yesterday", "recently").
+- Resolve temporal questions by comparing the timestamps in the memories when possible.
+- If multiple records conflict, prefer the one with the latest source_time.
+- If multiple records conflict and source_time is unavailable or tied, prefer the more explicit and more directly relevant one.
+- Do not invent missing numbers, dates, places, or entities.
+
+Answer rules:
+- The final answer should be concise.
+- If the answer is a count, return the count clearly.
+- If the answer is a date or time difference, state the unit.
+- If multiple answers are acceptable from the evidence, provide the most direct one.
+
+Output format:
+Reasoning: <brief reasoning>
+Answer: <final answer>
+
+Retrieved Memories:
+[1]
+source_time: 2023-04-21 20:27:01.500000
+content: User planted 12 tomato saplings on 2023-04-21.
+
+[2]
+source_time: 2023-03-20 20:20:00
+content: User attended a gardening workshop in their neighborhood on 2023-04-15 where they learned about companion planting and crop rotation to help plan their garden layout.
+purpose: plan garden layout
+
+[3]
+source_time: 2023-04-21 13:19:01.500000
+content: The user attended a photography workshop at the local community center earlier in April 2023 to improve composition and visual storytelling skills.
+reason: to learn photography techniques
+purpose: to improve composition and visual storytelling
+
+[4]
+source_time: 2023-04-21 20:27:02.500000
+content: User uses a gardening app to track weather and soil moisture levels to plan gardening activities.
+reason: to plan gardening activities
+purpose: plan gardening
+
+[5]
+source_time: 2023-04-16 11:40:01
+content: User requested information about the Road to Hana including number of bridges, curves, turns, and history.
+purpose: to include in blog introduction
+
+[6]
+source_time: 2023-04-18 21:33:00.500000
+content: The user read 'The Velveteen Rabbit' as a child and felt sad when the rabbit became worn because the personification of toys made them feel emotions.
+reason: personification of toys made them feel emotions
+
+[7]
+source_time: 2023-04-21 13:19:00.500000
+content: The user prefers in-person photography events.
+
+[8]
+source_time: 2023-04-19 23:57:00
+content: The user attended a business conference in Chicago and stayed at the Hilton Hotel downtown, and asked for restaurant recommendations within walking distance.
+reason: attending a business conference
+purpose: find nearby restaurants
+
+[9]
+source_time: 2023-04-15 23:18:00.500000
+content: User uses a gardening app to track weather and soil moisture levels.
+
+[10]
+source_time: 2023-04-18 05:48:01.500000
+content: User is interested in attending museum exhibits and lectures on cultural events.
+
+[11]
+source_time: 2023-04-15 23:18:02
+content: User grows tomato plants.
+
+[12]
+source_time: 2023-04-16 11:40:02
+content: User used stealth to approach and grab a figure, then removed their mask.
+
+[13]
+source_time: 2023-04-15 23:18:02.500000
+content: User has experienced fungal disease issues on their tomato plants.
+
+[14]
+source_time: 2023-04-21 20:27:02
+content: User is considering using neem oil and insecticidal soap to control aphids and whiteflies on tomato plants.
+reason: to control aphids and whiteflies
+purpose: control pests
+
+[15]
+source_time: 2023-04-21 14:59:02.500000
+content: The user tends to shop more online when feeling stressed or anxious.
+reason: stress or anxiety
+
+Now answer the question:
+User Question:How many days passed between the day I attended the gardening workshop and the day I planted the tomato saplings?
+Question Date:2023/05/08 (Mon) 06:05

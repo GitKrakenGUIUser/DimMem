@@ -1,0 +1,32 @@
+{
+  "id": "7ced4614-824d-4496-81ae-089eeba05a49",
+  "object": "chat.completion",
+  "created": 1783356338,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"What airline did the user fly with on Valentine's Day?\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"airline\", \"Valentine's Day\"],\n    \"time\": \"on 2023/02/14\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"keywords\"\n}",
+        "reasoning_content": "We need to parse the question: \"What was the airline that I flied with on Valentine's day?\" Question date is 2023/03/02 (Thu) 08:00. The question asks about a specific airline used on Valentine's day. Valentine's day is February 14. Since question date is 2023/03/02, the most recent Valentine's day would be 2023/02/14 (if before that date, but the question date is March 2, so after Feb 14, so likely the Valentine's day of 2023). But the question is in past tense \"flied\" so it's an event. It's a specific event memory. No mention of previous conversation, so need_assistant_context false. target_memory_type should be episodic (specific event). Keywords: \"airline\", \"valentine's day\". Time constraint: \"on Valentine's day\" which is February 14, 2023. So dimension.time: \"on 2023/02/14\". Location not specified. answer_dim: the question asks for the airline name, so that's a fact about the event, so answer_dim should be \"keywords\"? Actually, answer_dim is the field that contains the answer. The answer is the airline name, which is a key object (airline). Or could be \"content\" as it's factual content. But the specification says: \"content\" for fact/event/profile content. The airline is part of the event content. But also \"keywords\" is for key objects like people/objects/names/tools. Airline name is a name/tool. However, the primary answer is the airline name, so I think \"keywords\" is appropriate because it's a specific entity name. Alternatively, \"content\" would be broader. Let's see examples. Usually for \"What was the airline?\" answer is a specific name, so it's a keyword. I'll set answer_dim to \"keywords\". Also note query_anchor: rewrite as retrieval-friendly sentence: \"What airline did the user fly with on Valentine's Day?\" Ensure preserve core intent. Use \"the user\" instead of \"I\". So: \"the user flew with which airline on Valentine's Day?\" Also specify date: \"on Valentine's Day (2023/02/14)\". But query_anchor should be natural. I'll write: \"What airline did the user fly with on Valentine's Day?\""
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 689,
+    "completion_tokens": 596,
+    "total_tokens": 1285,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 502
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 49
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

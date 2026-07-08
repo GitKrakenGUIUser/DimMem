@@ -1,0 +1,888 @@
+[
+  {
+    "user_id": "0021_6d550036",
+    "memory_type": "fact",
+    "content": "The user has a good understanding of their team members' strengths and weaknesses from leading the team.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "from leading the team",
+      "purpose": "",
+      "keywords": [
+        "team strengths",
+        "team weaknesses",
+        "leadership experience"
+      ]
+    },
+    "entities": [
+      "team strengths",
+      "team weaknesses",
+      "leadership experience"
+    ],
+    "embedding_text": "The user has a good understanding of their team members' strengths and weaknesses from leading the team.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0103",
+    "source_time": "2023-05-28 03:42:01",
+    "record_time": "2026-07-07T19:50:56.186696",
+    "score": 10.150666691276669,
+    "score_components": {
+      "bm25_score": 10.150666691276669,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 10.150666691276669,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 10.150666691276669
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.5555555555555556
+      },
+      {
+        "method": "minilm",
+        "rank": 6,
+        "score": 0.36639078279353077
+      }
+    ]
+  },
+  {
+    "user_id": "0021_6d550036",
+    "memory_type": "episodic",
+    "content": "The user is currently doing a buddy read of 'The Seven Husbands of Evelyn Hugo' by Taylor Jenkins Reid with a friend and enjoys discussing it.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "buddy read",
+        "The Seven Husbands of Evelyn Hugo",
+        "Taylor Jenkins Reid",
+        "discussion"
+      ]
+    },
+    "entities": [
+      "buddy read",
+      "The Seven Husbands of Evelyn Hugo",
+      "Taylor Jenkins Reid",
+      "discussion"
+    ],
+    "embedding_text": "The user is currently doing a buddy read of 'The Seven Husbands of Evelyn Hugo' by Taylor Jenkins Reid with a friend and enjoys discussing it.",
+    "source_message_ids": [
+      "17"
+    ],
+    "source_boundary_id": "17_0118",
+    "source_time": "2023-05-29 10:53:01",
+    "record_time": "2026-07-07T19:50:56.186786",
+    "score": 7.645694668271663,
+    "score_components": {
+      "bm25_score": 7.645694668271663,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 7.645694668271663,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 7.645694668271663
+      }
+    ]
+  },
+  {
+    "user_id": "0021_6d550036",
+    "memory_type": "profile",
+    "content": "The user is interested in combining wood and stone in sculpting projects, appreciating the contrast between them.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "wood",
+        "stone",
+        "combination",
+        "sculpting",
+        "contrast"
+      ]
+    },
+    "entities": [
+      "wood",
+      "stone",
+      "combination",
+      "sculpting",
+      "contrast"
+    ],
+    "embedding_text": "The user is interested in combining wood and stone in sculpting projects, appreciating the contrast between them.",
+    "source_message_ids": [
+      "6"
+    ],
+    "source_boundary_id": "6_0047",
+    "source_time": "2023-05-24 06:35:01.500000",
+    "record_time": "2026-07-07T19:50:56.186291",
+    "score": 6.175778704631522,
+    "score_components": {
+      "bm25_score": 6.175778704631522,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 6.175778704631522,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 6.175778704631522
+      }
+    ]
+  },
+  {
+    "user_id": "0021_6d550036",
+    "memory_type": "profile",
+    "content": "User enjoys the convenience of a USB port on their lamp for charging devices while watching TV or reading in the living room.",
+    "dimension": {
+      "time": "",
+      "location": "living room",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "USB port",
+        "charging devices",
+        "watching TV",
+        "reading"
+      ]
+    },
+    "entities": [
+      "USB port",
+      "charging devices",
+      "watching TV",
+      "reading"
+    ],
+    "embedding_text": "User enjoys the convenience of a USB port on their lamp for charging devices while watching TV or reading in the living room.",
+    "source_message_ids": [
+      "all_memories"
+    ],
+    "source_boundary_id": "all_memories_0002",
+    "source_time": "2023-05-20 05:54:02",
+    "record_time": "2026-07-07T19:50:56.186014",
+    "score": 5.326509415979553,
+    "score_components": {
+      "bm25_score": 5.326509415979553,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 5.326509415979553,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 5.326509415979553
+      }
+    ]
+  },
+  {
+    "user_id": "0021_6d550036",
+    "memory_type": "fact",
+    "content": "User is planning to start a web design company and is researching how to set it up and price projects for large companies.",
+    "dimension": {
+      "time": "",
+      "location": "web design company",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "user",
+        "web design company",
+        "setup",
+        "pricing",
+        "large company"
+      ]
+    },
+    "entities": [
+      "user",
+      "web design company",
+      "setup",
+      "pricing",
+      "large company"
+    ],
+    "embedding_text": "User is planning to start a web design company and is researching how to set it up and price projects for large companies.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0013",
+    "source_time": "2023-05-21 22:09:00",
+    "record_time": "2026-07-07T19:50:56.186089",
+    "score": 5.31204521524653,
+    "score_components": {
+      "bm25_score": 5.31204521524653,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 5.31204521524653,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 5.31204521524653
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 0.5555555555555556
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.3828214535094761
+      }
+    ]
+  },
+  {
+    "user_id": "0021_6d550036",
+    "memory_type": "fact",
+    "content": "User has experience leading a data analysis team in a Marketing Research class project, where they performed a comprehensive market analysis for a new product launch.",
+    "dimension": {
+      "time": "",
+      "location": "Marketing Research class",
+      "reason": "",
+      "purpose": "to perform market analysis for a new product launch",
+      "keywords": [
+        "Marketing Research",
+        "data analysis team",
+        "market analysis",
+        "new product launch",
+        "experience"
+      ]
+    },
+    "entities": [
+      "Marketing Research",
+      "data analysis team",
+      "market analysis",
+      "new product launch",
+      "experience"
+    ],
+    "embedding_text": "User has experience leading a data analysis team in a Marketing Research class project, where they performed a comprehensive market analysis for a new product launch.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0011",
+    "source_time": "2023-05-20 23:58:04.500000",
+    "record_time": "2026-07-07T19:50:56.186076",
+    "score": 5.0664485428830135,
+    "score_components": {
+      "bm25_score": 5.0664485428830135,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 5.0664485428830135,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 5.0664485428830135
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.5555555555555556
+      },
+      {
+        "method": "minilm",
+        "rank": 10,
+        "score": 0.275602739122516
+      }
+    ]
+  },
+  {
+    "user_id": "0021_6d550036",
+    "memory_type": "episodic",
+    "content": "On 2023-05-24, the user checked their email to see if a UFO expert or Robert Bigelow had replied.",
+    "dimension": {
+      "time": "2023-05-24",
+      "location": "",
+      "reason": "to check for replies from UFO expert or Robert Bigelow",
+      "purpose": "to see if they got back",
+      "keywords": [
+        "UFO expert",
+        "Robert Bigelow",
+        "email",
+        "check"
+      ]
+    },
+    "entities": [
+      "UFO expert",
+      "Robert Bigelow",
+      "email",
+      "check"
+    ],
+    "embedding_text": "On 2023-05-24, the user checked their email to see if a UFO expert or Robert Bigelow had replied.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0058",
+    "source_time": "2023-05-24 18:58:03.500000",
+    "record_time": "2026-07-07T19:50:56.186356",
+    "score": 4.4892450822032,
+    "score_components": {
+      "bm25_score": 4.4892450822032,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 4.4892450822032,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 4.4892450822032
+      }
+    ]
+  },
+  {
+    "user_id": "0021_6d550036",
+    "memory_type": "fact",
+    "content": "The user has smart light bulbs in the living room and intends to adjust their timing.",
+    "dimension": {
+      "time": "2023-05-24",
+      "location": "living room",
+      "reason": "",
+      "purpose": "to adjust timing of smart light bulbs",
+      "keywords": [
+        "smart light bulbs",
+        "living room",
+        "timing"
+      ]
+    },
+    "entities": [
+      "smart light bulbs",
+      "living room",
+      "timing"
+    ],
+    "embedding_text": "The user has smart light bulbs in the living room and intends to adjust their timing.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0057",
+    "source_time": "2023-05-24 17:05:02",
+    "record_time": "2026-07-07T19:50:56.186350",
+    "score": 4.32577174914735,
+    "score_components": {
+      "bm25_score": 4.32577174914735,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 4.32577174914735,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 4.32577174914735
+      }
+    ]
+  },
+  {
+    "user_id": "0021_6d550036",
+    "memory_type": "fact",
+    "content": "The user has contacted a UFO expert and Robert Bigelow, and was awaiting their replies as of 2023-05-24.",
+    "dimension": {
+      "time": "2023-05-24",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "UFO expert",
+        "Robert Bigelow",
+        "contact",
+        "awaiting reply"
+      ]
+    },
+    "entities": [
+      "UFO expert",
+      "Robert Bigelow",
+      "contact",
+      "awaiting reply"
+    ],
+    "embedding_text": "The user has contacted a UFO expert and Robert Bigelow, and was awaiting their replies as of 2023-05-24.",
+    "source_message_ids": [
+      "9"
+    ],
+    "source_boundary_id": "9_0059",
+    "source_time": "2023-05-24 18:58:04",
+    "record_time": "2026-07-07T19:50:56.186362",
+    "score": 4.306739616106693,
+    "score_components": {
+      "bm25_score": 4.306739616106693,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 4.306739616106693,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 4.306739616106693
+      }
+    ]
+  },
+  {
+    "user_id": "0021_6d550036",
+    "memory_type": "fact",
+    "content": "Alex is a junior engineer on the user's team who has been performing well under the user's guidance.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Alex",
+        "junior engineer",
+        "mentorship",
+        "performance"
+      ]
+    },
+    "entities": [
+      "Alex",
+      "junior engineer",
+      "mentorship",
+      "performance"
+    ],
+    "embedding_text": "Alex is a junior engineer on the user's team who has been performing well under the user's guidance.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0105",
+    "source_time": "2023-05-28 03:42:01.500000",
+    "record_time": "2026-07-07T19:50:56.186709",
+    "score": 4.146243387100952,
+    "score_components": {
+      "bm25_score": 4.146243387100952,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 4.146243387100952,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 4.146243387100952
+      },
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.24711050731954926
+      }
+    ]
+  },
+  {
+    "user_id": "0021_6d550036",
+    "memory_type": "profile",
+    "content": "The user is interested in visiting Universal Studios Japan, especially the Wizarding World of Harry Potter.",
+    "dimension": {
+      "time": "",
+      "location": "Universal Studios Japan",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Universal Studios Japan",
+        "Wizarding World of Harry Potter"
+      ]
+    },
+    "entities": [
+      "Universal Studios Japan",
+      "Wizarding World of Harry Potter"
+    ],
+    "embedding_text": "The user is interested in visiting Universal Studios Japan, especially the Wizarding World of Harry Potter.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0075",
+    "source_time": "2023-05-27 05:10:00.500000",
+    "record_time": "2026-07-07T19:50:56.186459",
+    "score": 3.8368547634230943,
+    "score_components": {
+      "bm25_score": 3.8368547634230943,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 3.8368547634230943,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 3.8368547634230943
+      }
+    ]
+  },
+  {
+    "user_id": "0021_6d550036",
+    "memory_type": "profile",
+    "content": "User has a long-term interest in watercolor painting and is actively seeking art supplies and techniques.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "user",
+        "watercolor painting",
+        "art supplies",
+        "techniques"
+      ]
+    },
+    "entities": [
+      "user",
+      "watercolor painting",
+      "art supplies",
+      "techniques"
+    ],
+    "embedding_text": "User has a long-term interest in watercolor painting and is actively seeking art supplies and techniques.",
+    "source_message_ids": [
+      "20"
+    ],
+    "source_boundary_id": "20_0139",
+    "source_time": "2023-05-30 22:48:00",
+    "record_time": "2026-07-07T19:50:56.186908",
+    "score": 3.7194963608400715,
+    "score_components": {
+      "bm25_score": 3.7194963608400715,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 3.7194963608400715,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 3.7194963608400715
+      },
+      {
+        "method": "minilm",
+        "rank": 18,
+        "score": 0.20356783086364164
+      }
+    ]
+  },
+  {
+    "user_id": "0021_6d550036",
+    "memory_type": "profile",
+    "content": "User enjoys writing creative scenes featuring characters Wukong, Macaque, and MK from a mythological or fictional narrative.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "user",
+        "creative writing",
+        "Wukong",
+        "Macaque",
+        "MK",
+        "mythological narrative"
+      ]
+    },
+    "entities": [
+      "user",
+      "creative writing",
+      "Wukong",
+      "Macaque",
+      "MK",
+      "mythological narrative"
+    ],
+    "embedding_text": "User enjoys writing creative scenes featuring characters Wukong, Macaque, and MK from a mythological or fictional narrative.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0014",
+    "source_time": "2023-05-23 08:52:00",
+    "record_time": "2026-07-07T19:50:56.186096",
+    "score": 3.6224456311631656,
+    "score_components": {
+      "bm25_score": 3.6224456311631656,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 3.6224456311631656,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 3.6224456311631656
+      }
+    ]
+  },
+  {
+    "user_id": "0021_6d550036",
+    "memory_type": "fact",
+    "content": "The user's new lampshade is a drum shape made of translucent white fabric.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "drum shape",
+        "translucent white fabric",
+        "lampshade"
+      ]
+    },
+    "entities": [
+      "drum shape",
+      "translucent white fabric",
+      "lampshade"
+    ],
+    "embedding_text": "The user's new lampshade is a drum shape made of translucent white fabric.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0053",
+    "source_time": "2023-05-24 17:05:00.500000",
+    "record_time": "2026-07-07T19:50:56.186327",
+    "score": 3.34691089260091,
+    "score_components": {
+      "bm25_score": 3.34691089260091,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 3.34691089260091,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 3.34691089260091
+      }
+    ]
+  },
+  {
+    "user_id": "0021_6d550036",
+    "memory_type": "fact",
+    "content": "The user is writing a book about a mirror with a past history in England before being shipped to America, and has a chapter one outline with multiple sections.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "writing",
+        "book",
+        "mirror",
+        "history",
+        "England",
+        "America",
+        "chapter one outline"
+      ]
+    },
+    "entities": [
+      "writing",
+      "book",
+      "mirror",
+      "history",
+      "England",
+      "America",
+      "chapter one outline"
+    ],
+    "embedding_text": "The user is writing a book about a mirror with a past history in England before being shipped to America, and has a chapter one outline with multiple sections.",
+    "source_message_ids": [
+      "19"
+    ],
+    "source_boundary_id": "19_0137",
+    "source_time": "2023-05-30 18:15:02.500000",
+    "record_time": "2026-07-07T19:50:56.186896",
+    "score": 3.333666460099944,
+    "score_components": {
+      "bm25_score": 3.333666460099944,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 3.333666460099944,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 3.333666460099944
+      }
+    ]
+  }
+]

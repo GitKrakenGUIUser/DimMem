@@ -1,0 +1,149 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-02-15T10:49:02, Wed] 1.User: I'll start incorporating core and glute strengthening exercises into my training routine, focusing on proper form and technique. I'll aim to do 2-3 strength training sessions per week and gradually increase the intensity and weight as my body adapts. Do you think I should also focus on improving my running form and efficiency to reduce the risk of ankle injuries and improve my overall performance?
+[2023-02-15T10:49:02.500000, Wed] 2.User: I'll definitely work on improving my running form and efficiency. I'll start by getting a gait analysis and incorporating running drills into my training routine. I'll also focus on strengthening my core, glutes, and legs to improve my running efficiency and reduce my risk of injuries. Can you recommend some specific running drills that I can do to improve my running form and efficiency?
+[2023-02-15T19:24:00, Wed] 3.User: could you have the rap done in a style more like the notorious BIG
+[2023-02-18T03:41:00, Sat] 4.User: I'm interested in learning more about different cultural events happening in my community. I've been attending cultural events in my community, like the Chinese New Year parade last month and the Indian festival of lights, Diwali, a few weeks ago. Can you recommend any upcoming events that I shouldn't miss?
+[2023-02-18T03:41:00.500000, Sat] 5.User: I see there's a lot of events happening in May. Can you tell me more about Asian American and Pacific Islander Heritage Month? What kinds of events usually happen during this month?
+[2023-02-18T03:41:01, Sat] 6.User: I'm interested in attending a cultural festival during AAPIHM. Can you tell me more about the types of performances I can expect to see?
+[2023-02-18T03:41:01.500000, Sat] 7.User: I'm really interested in the martial arts demonstrations. Can I expect to see any demonstrations of Filipino martial arts like Arnis or Eskrima?
+[2023-02-18T03:41:02, Sat] 8.User: Can you tell me more about the food options available at the festival? I'm really interested in trying some traditional Filipino dishes, especially after learning how to make adobo and lumpia from my grandma last week.
+[2023-02-18T03:41:02.500000, Sat] 9.User: I'm so excited to try all these dishes! I've heard of some of them before, but I've never had the chance to try them. I'll definitely make sure to try the adobo and lumpia, since I just learned how to make them from my grandma. Do you think I'll be able to find any food vendors selling Filipino desserts like halo-halo or maja blanca? I've heard they're really popular in the Philippines.
+[2023-02-20T20:07:00, Mon] 10.User: Rewrite this for brevity, in outline form:
+
+“The diversity \[OI offers\] means you really can leverage experience from everything. Having broad information about what’s going on, having that information source for me and for a small company as we are, that’s something that’s almost priceless.”
+
+##### Sascha Huber | President, RUAG Inc.
+
+“Our OperationsInc resource was tremendously valuable to me in a recent talent search. She was fast, reliable and thorough. Excellent!”
+
+![](data:image/svg+xml,%
+...
+rs\] means you really can leverage experience from everything. Having broad information about what’s going on, having that information source for me and for a small company as we are, that’s something
+...
+ Inc.
+
+“The diversity \[OI offers\] means you really can leverage experience from everything. Having broad information about what’s going on, having that information source for me and for a small company as we are, that’s something that’s almost priceless.”
+
+##### Sascha Huber | President, RUAG Inc.
+[2023-02-20T05:39:00, Mon] 11.User: What are the best practices for waste management in urban areas?
+[2023-02-20T05:39:00.500000, Mon] 12.User: What happens if people don't follow these waste management practices in urban areas?
+[2023-02-20T05:39:01, Mon] 13.User: It seems like implementing waste management practices can be costly. Is it really worth it?
+[2023-02-20T05:39:01.500000, Mon] 14.User: Do you think governments should enforce penalties for individuals or businesses who don't follow proper waste management practices?
+[2023-02-20T18:53:00, Mon] 15.User: Can you recommend any nearby restaurants or cafes that serve traditional or iconic Leyton cuisine?

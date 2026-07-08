@@ -1,0 +1,32 @@
+{
+  "id": "2eb77996-2e62-4ccb-b5d7-d347c1c91d5f",
+  "object": "chat.completion",
+  "created": 1783356320,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"query_anchor\": \"What is the total amount the user spent on gifts for the user's coworker and brother?\",\n  \"need_assistant_context\": false,\n  \"dimension\": {\n    \"target_memory_type\": [\"episodic\"],\n    \"keywords\": [\"gifts\", \"coworker\", \"brother\"],\n    \"time\": \"\",\n    \"location\": \"\"\n  },\n  \"answer_dim\": \"\"\n}",
+        "reasoning_content": "We need to parse the question: \"What is the total amount I spent on gifts for my coworker and brother?\" The question date is 2023/05/30 (Tue) 21:10. No explicit time constraint. The question asks for a total amount spent, which involves calculation/summarization. So answer_dim should be \"\" (requires calculation). The query_anchor should rewrite to \"the user\" instead of \"I\". need_assistant_context is false because it's not about a previous conversation. target_memory_type: likely \"episodic\" because it's about specific purchases/events (spending on gifts). keywords: gifts, coworker, brother. time: no explicit time constraint, so \"\". location: none, so \"\". answer_dim: \"\" because it's a sum."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 691,
+    "completion_tokens": 260,
+    "total_tokens": 951,
+    "prompt_tokens_details": {
+      "cached_tokens": 640
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 167
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 51
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

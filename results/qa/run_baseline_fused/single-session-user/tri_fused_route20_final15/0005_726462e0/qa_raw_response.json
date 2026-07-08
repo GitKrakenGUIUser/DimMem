@@ -1,0 +1,32 @@
+{
+  "id": "1dee5693-e98c-405c-8d00-c134a0266c66",
+  "object": "chat.completion",
+  "created": 1783427963,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "Reasoning: The question asks about a discount on a first purchase from a new clothing brand. None of the retrieved memories mention any clothing brand, purchase, or discount. There is no evidence to support an answer.\n\nAnswer: I don't know.",
+        "reasoning_content": "We need to answer: \"What was the discount I got on my first purchase from the new clothing brand?\" The question date is 2023-05-30. Retrieved memories: none mention any clothing brand, purchase, or discount. No memory refers to a clothing brand or discount on first purchase. So insufficient evidence."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1046,
+    "completion_tokens": 116,
+    "total_tokens": 1162,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 65
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 790
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

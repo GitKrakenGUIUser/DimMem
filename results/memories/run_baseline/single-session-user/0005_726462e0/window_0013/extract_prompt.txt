@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-26T04:11:00.500000, Fri] 1.User: Describe it in detail
+[2023-05-26T04:11:01, Fri] 2.User: Describe it, only objectively , in 100 words,
+[2023-05-26T05:04:00, Fri] 3.User: Is there a tour or itinerary available for visiting all the major tourist attractions in Quezon City?
+[2023-05-26T05:04:00.500000, Fri] 4.User: Wow, those tours sound amazing! Which one would you recommend the most?
+[2023-05-26T05:04:01, Fri] 5.User: I think I am interested in trying out the food trip tour. Are there any specific dishes or restaurants that I must try while in Quezon City?
+[2023-05-26T05:04:01.500000, Fri] 6.User: I love trying out different cuisines! Are there any international restaurants in Quezon City that you can recommend?
+[2023-05-26T05:48:00, Fri] 7.User: I'm looking for some game recommendations. I just finished the main storyline of The Last of Us Part II on my PS4, which took me around 20 hours to finish. It was an amazing experience, and I'm looking for something similar. Do you have any suggestions?
+[2023-05-26T05:48:00.500000, Fri] 8.User: I'll definitely check out some of these games. Do you think any of them would be available on PC, or are they mostly PS4 exclusives?
+[2023-05-26T05:48:01, Fri] 9.User: I'm glad you could help me with some game recommendations. I've been playing video games a lot lately, and I'm always looking for new games to play. By the way, speaking of PC gaming, I recently built a new gaming PC with my friend's help, and it's been handling demanding games like Cyberpunk 2077 and Assassin's Creed Valhalla with ease. Do you think any of the games you recommended would be a good fit for my new PC?
+[2023-05-26T05:48:01.500000, Fri] 10.User: That's great to know! I think I'll start with Horizon Zero Dawn and see how it runs on my PC. I've heard great things about the game, and I'm excited to play it. Do you think I could get a good deal on the game during any upcoming sales?
+[2023-05-26T05:48:02, Fri] 11.User: I'm thinking of starting a gaming YouTube channel, where I can upload walkthroughs and reviews of the games I play. I've already set up a new YouTube account and have been watching tutorials on video editing and recording gameplay footage. Do you have any tips on how to get started with recording gameplay footage on my PC?
+[2023-05-26T05:48:02.500000, Fri] 12.User: I'm thinking of recording gameplay footage of Horizon Zero Dawn, since I just got it and I'm really enjoying it. Do you think that's a good idea, or should I start with a more popular game like Cyberpunk 2077 or Assassin's Creed Valhalla?
+[2023-05-26T06:36:00, Fri] 13.User: Cite examples from "The Port-Royal Grammar" to illustrate his view on this: The Port-Royal Grammar, authored by Antoine Arnauld and Claude Lancelot in the 17th century, was an influential work in linguistics and the study of language. It aimed to provide a rational basis for grammar and emphasized the importance of logic and reasoning in understanding language. The authors focused on the relationship between syntax, semantics, and the logical structure of sentences, arguing that meaning is derived from the relationships between words in a sentence. This work laid the foundation for later theories of generative grammar and formal semantics.
+[2023-05-26T06:36:00.500000, Fri] 14.User: Cite examples from Immanuel Kant's ""The Critique of Pure Reason" to illustrate his view on this: He posited that meaning is a product of the interaction between our innate mental structures (categories) and our sensory experiences. According to Kant, our understanding of the world is shaped by these categories, which provide the basis for our ability to make sense of our experiences and give meaning to the words we use to describe them.
+[2023-05-26T06:36:01, Fri] 15.User: Cite examples from August Schleicher's "Stammbaumtheorie" to illustrate his view on this: August Schleicher was a 19th-century German linguist who contributed to the study of word meanings through his work on historical and comparative linguistics. He developed the idea of language families, proposing that languages evolve over time through a process of change and divergence, similar to the evolution of species in biology. Schleicher's work helped to establish the field of historical linguistics and showed how the meanings of words can change over time as languages evolve.

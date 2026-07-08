@@ -1,0 +1,903 @@
+[
+  {
+    "user_id": "0012_07741c45",
+    "memory_type": "fact",
+    "content": "User's old sneakers are currently taking up space.",
+    "dimension": {
+      "time": "2023-05-29",
+      "location": "closet",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "sneakers",
+        "taking up space",
+        "current status"
+      ]
+    },
+    "entities": [
+      "sneakers",
+      "taking up space",
+      "current status"
+    ],
+    "embedding_text": "User's old sneakers are currently taking up space.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0105",
+    "source_time": "2023-05-29 12:22:01",
+    "record_time": "2026-07-07T19:50:12.076469",
+    "score": 12.386215774889006,
+    "score_components": {
+      "bm25_score": 12.386215774889006,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 12.386215774889006,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 12.386215774889006
+      },
+      {
+        "method": "structured",
+        "rank": 2,
+        "score": 1.0
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.7753337901132923
+      }
+    ]
+  },
+  {
+    "user_id": "0012_07741c45",
+    "memory_type": "episodic",
+    "content": "User plans to organize closet this weekend on 2023-06-03 and store old sneakers in a shoe rack.",
+    "dimension": {
+      "time": "2023-06-03",
+      "location": "closet",
+      "reason": "old sneakers are currently taking up space",
+      "purpose": "to store sneakers in a shoe rack",
+      "keywords": [
+        "closet organization",
+        "sneakers",
+        "shoe rack",
+        "weekend plan"
+      ]
+    },
+    "entities": [
+      "closet organization",
+      "sneakers",
+      "shoe rack",
+      "weekend plan"
+    ],
+    "embedding_text": "User plans to organize closet this weekend on 2023-06-03 and store old sneakers in a shoe rack.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0104",
+    "source_time": "2023-05-29 12:22:00.500000",
+    "record_time": "2026-07-07T19:50:12.076463",
+    "score": 10.66937257946048,
+    "score_components": {
+      "bm25_score": 10.66937257946048,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 10.66937257946048,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 10.66937257946048
+      },
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 3,
+        "score": 0.6929598525901365
+      }
+    ]
+  },
+  {
+    "user_id": "0012_07741c45",
+    "memory_type": "episodic",
+    "content": "User plans to get their old sneakers polished and conditioned at a cobbler this weekend.",
+    "dimension": {
+      "time": "",
+      "location": "cobbler",
+      "reason": "",
+      "purpose": "to polish and condition old sneakers",
+      "keywords": [
+        "old sneakers",
+        "cobbler",
+        "polishing",
+        "conditioning"
+      ]
+    },
+    "entities": [
+      "old sneakers",
+      "cobbler",
+      "polishing",
+      "conditioning"
+    ],
+    "embedding_text": "User plans to get their old sneakers polished and conditioned at a cobbler this weekend.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0007",
+    "source_time": "2023-05-25 10:04:01",
+    "record_time": "2026-07-07T19:50:12.075821",
+    "score": 9.838426871353706,
+    "score_components": {
+      "bm25_score": 9.838426871353706,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 9.838426871353706,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 9.838426871353706
+      },
+      {
+        "method": "structured",
+        "rank": 3,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 5,
+        "score": 0.6149405015348551
+      }
+    ]
+  },
+  {
+    "user_id": "0012_07741c45",
+    "memory_type": "fact",
+    "content": "User has old sneakers stored under their bed that are starting to smell.",
+    "dimension": {
+      "time": "2023-05-25",
+      "location": "under user's bed",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "old sneakers",
+        "storage",
+        "under bed",
+        "smell"
+      ]
+    },
+    "entities": [
+      "old sneakers",
+      "storage",
+      "under bed",
+      "smell"
+    ],
+    "embedding_text": "User has old sneakers stored under their bed that are starting to smell.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0006",
+    "source_time": "2023-05-25 10:04:00.500000",
+    "record_time": "2026-07-07T19:50:12.075815",
+    "score": 9.596785527870477,
+    "score_components": {
+      "bm25_score": 9.596785527870477,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 9.596785527870477,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 9.596785527870477
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 1.0
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.6959988361232365
+      }
+    ]
+  },
+  {
+    "user_id": "0012_07741c45",
+    "memory_type": "episodic",
+    "content": "User plans to organize their closet and get rid of old sneakers on the weekend of 2023-05-27.",
+    "dimension": {
+      "time": "2023-05-27",
+      "location": "",
+      "reason": "",
+      "purpose": "decluttering",
+      "keywords": [
+        "closet organization",
+        "discard sneakers",
+        "decluttering"
+      ]
+    },
+    "entities": [
+      "closet organization",
+      "discard sneakers",
+      "decluttering"
+    ],
+    "embedding_text": "User plans to organize their closet and get rid of old sneakers on the weekend of 2023-05-27.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0096",
+    "source_time": "2023-05-29 15:01:00",
+    "record_time": "2026-07-07T19:50:12.076415",
+    "score": 8.430752270255883,
+    "score_components": {
+      "bm25_score": 8.430752270255883,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 8.430752270255883,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 8.430752270255883
+      },
+      {
+        "method": "structured",
+        "rank": 4,
+        "score": 0.6666666666666667
+      },
+      {
+        "method": "minilm",
+        "rank": 4,
+        "score": 0.6732475043643735
+      }
+    ]
+  },
+  {
+    "user_id": "0012_07741c45",
+    "memory_type": "profile",
+    "content": "The user relies on their own motivation and does not have a workout buddy.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "self-motivation",
+        "no workout buddy"
+      ]
+    },
+    "entities": [
+      "self-motivation",
+      "no workout buddy"
+    ],
+    "embedding_text": "The user relies on their own motivation and does not have a workout buddy.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0110",
+    "source_time": "2023-05-30 04:12:01.500000",
+    "record_time": "2026-07-07T19:50:12.076500",
+    "score": 6.916668605379982,
+    "score_components": {
+      "bm25_score": 6.916668605379982,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 6.916668605379982,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 6.916668605379982
+      }
+    ]
+  },
+  {
+    "user_id": "0012_07741c45",
+    "memory_type": "episodic",
+    "content": "User is trying to keep track of expenses and wants to create a budget for their vehicles.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "create a budget for vehicles",
+      "keywords": [
+        "budget",
+        "vehicles",
+        "expenses"
+      ]
+    },
+    "entities": [
+      "budget",
+      "vehicles",
+      "expenses"
+    ],
+    "embedding_text": "User is trying to keep track of expenses and wants to create a budget for their vehicles.",
+    "source_message_ids": [
+      "5"
+    ],
+    "source_boundary_id": "5_0039",
+    "source_time": "2023-05-26 04:54:00",
+    "record_time": "2026-07-07T19:50:12.076016",
+    "score": 5.807793710968311,
+    "score_components": {
+      "bm25_score": 5.807793710968311,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 5.807793710968311,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 5.807793710968311
+      }
+    ]
+  },
+  {
+    "user_id": "0012_07741c45",
+    "memory_type": "episodic",
+    "content": "User is considering organizing their closet by type (e.g., boots together, sneakers together).",
+    "dimension": {
+      "time": "2023-05-25",
+      "location": "their closet",
+      "reason": "",
+      "purpose": "to organize closet by type of footwear",
+      "keywords": [
+        "closet organization",
+        "by type",
+        "boots",
+        "sneakers"
+      ]
+    },
+    "entities": [
+      "closet organization",
+      "by type",
+      "boots",
+      "sneakers"
+    ],
+    "embedding_text": "User is considering organizing their closet by type (e.g., boots together, sneakers together).",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0010",
+    "source_time": "2023-05-25 10:04:02.500000",
+    "record_time": "2026-07-07T19:50:12.075839",
+    "score": 5.3727428579517875,
+    "score_components": {
+      "bm25_score": 5.3727428579517875,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 5.3727428579517875,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 5.3727428579517875
+      },
+      {
+        "method": "minilm",
+        "rank": 13,
+        "score": 0.4731920933269412
+      }
+    ]
+  },
+  {
+    "user_id": "0012_07741c45",
+    "memory_type": "episodic",
+    "content": "The user plans to track their cultural heritage research findings using a spreadsheet and a digital note-taking app.",
+    "dimension": {
+      "time": "2023-06-08",
+      "location": "",
+      "reason": "to organize research findings",
+      "purpose": "to keep track of findings",
+      "keywords": [
+        "spreadsheet",
+        "digital note-taking app",
+        "research",
+        "cultural heritage"
+      ]
+    },
+    "entities": [
+      "spreadsheet",
+      "digital note-taking app",
+      "research",
+      "cultural heritage"
+    ],
+    "embedding_text": "The user plans to track their cultural heritage research findings using a spreadsheet and a digital note-taking app.",
+    "source_message_ids": [
+      "16"
+    ],
+    "source_boundary_id": "16_0126",
+    "source_time": "2023-06-08 15:26:00.500000",
+    "record_time": "2026-07-07T19:50:12.076591",
+    "score": 5.309606651511034,
+    "score_components": {
+      "bm25_score": 5.309606651511034,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 5.309606651511034,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 5.309606651511034
+      }
+    ]
+  },
+  {
+    "user_id": "0012_07741c45",
+    "memory_type": "episodic",
+    "content": "User plans to donate their old dress shoes to a local charity thrift store this Saturday.",
+    "dimension": {
+      "time": "2023-05-27",
+      "location": "local charity thrift store",
+      "reason": "",
+      "purpose": "to donate old dress shoes",
+      "keywords": [
+        "old dress shoes",
+        "donation",
+        "charity thrift store",
+        "Saturday"
+      ]
+    },
+    "entities": [
+      "old dress shoes",
+      "donation",
+      "charity thrift store",
+      "Saturday"
+    ],
+    "embedding_text": "User plans to donate their old dress shoes to a local charity thrift store this Saturday.",
+    "source_message_ids": [
+      "1"
+    ],
+    "source_boundary_id": "1_0008",
+    "source_time": "2023-05-25 10:04:01.500000",
+    "record_time": "2026-07-07T19:50:12.075827",
+    "score": 5.274686588521208,
+    "score_components": {
+      "bm25_score": 5.274686588521208,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 5.274686588521208,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 5.274686588521208
+      },
+      {
+        "method": "minilm",
+        "rank": 9,
+        "score": 0.5610389613692971
+      }
+    ]
+  },
+  {
+    "user_id": "0012_07741c45",
+    "memory_type": "profile",
+    "content": "User wears white sneakers frequently.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "white sneakers",
+        "frequent wear"
+      ]
+    },
+    "entities": [
+      "white sneakers",
+      "frequent wear"
+    ],
+    "embedding_text": "User wears white sneakers frequently.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0075",
+    "source_time": "2023-05-28 06:33:01.500000",
+    "record_time": "2026-07-07T19:50:12.076295",
+    "score": 4.795813215789596,
+    "score_components": {
+      "bm25_score": 4.795813215789596,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 4.795813215789596,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 4.795813215789596
+      },
+      {
+        "method": "minilm",
+        "rank": 8,
+        "score": 0.5711684899940198
+      }
+    ]
+  },
+  {
+    "user_id": "0012_07741c45",
+    "memory_type": "episodic",
+    "content": "User is considering buying cargo pants to go with white sneakers.",
+    "dimension": {
+      "time": "future",
+      "location": "",
+      "reason": "",
+      "purpose": "to go with white sneakers",
+      "keywords": [
+        "cargo pants",
+        "white sneakers",
+        "considering purchase"
+      ]
+    },
+    "entities": [
+      "cargo pants",
+      "white sneakers",
+      "considering purchase"
+    ],
+    "embedding_text": "User is considering buying cargo pants to go with white sneakers.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0079",
+    "source_time": "2023-05-28 12:43:00",
+    "record_time": "2026-07-07T19:50:12.076320",
+    "score": 4.608295963287818,
+    "score_components": {
+      "bm25_score": 4.608295963287818,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 4.608295963287818,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 4.608295963287818
+      },
+      {
+        "method": "minilm",
+        "rank": 12,
+        "score": 0.4856348144414161
+      }
+    ]
+  },
+  {
+    "user_id": "0012_07741c45",
+    "memory_type": "episodic",
+    "content": "The user is thinking of listing their old motorcycle on Craigslist or Facebook Marketplace because they haven't ridden it in years.",
+    "dimension": {
+      "time": "",
+      "location": "Craigslist or Facebook Marketplace",
+      "reason": "not ridden in years",
+      "purpose": "to sell and free up space and cash",
+      "keywords": [
+        "sell motorcycle",
+        "Craigslist",
+        "Facebook Marketplace",
+        "old motorcycle"
+      ]
+    },
+    "entities": [
+      "sell motorcycle",
+      "Craigslist",
+      "Facebook Marketplace",
+      "old motorcycle"
+    ],
+    "embedding_text": "The user is thinking of listing their old motorcycle on Craigslist or Facebook Marketplace because they haven't ridden it in years.",
+    "source_message_ids": [
+      "20"
+    ],
+    "source_boundary_id": "20_0149",
+    "source_time": "2023-06-16 08:39:02",
+    "record_time": "2026-07-07T19:50:12.076722",
+    "score": 4.529837239337195,
+    "score_components": {
+      "bm25_score": 4.529837239337195,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 4.529837239337195,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 4.529837239337195
+      }
+    ]
+  },
+  {
+    "user_id": "0012_07741c45",
+    "memory_type": "episodic",
+    "content": "The user attended a conference on emerging technologies around May 18-24, 2023, where the latest developments in AI, blockchain, and cybersecurity were discussed.",
+    "dimension": {
+      "time": "2023-05-18 to 2023-05-24",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "conference",
+        "emerging technologies",
+        "AI",
+        "blockchain",
+        "cybersecurity"
+      ]
+    },
+    "entities": [
+      "conference",
+      "emerging technologies",
+      "AI",
+      "blockchain",
+      "cybersecurity"
+    ],
+    "embedding_text": "The user attended a conference on emerging technologies around May 18-24, 2023, where the latest developments in AI, blockchain, and cybersecurity were discussed.",
+    "source_message_ids": [
+      "2"
+    ],
+    "source_boundary_id": "2_0015",
+    "source_time": "2023-05-25 04:26:01",
+    "record_time": "2026-07-07T19:50:12.075872",
+    "score": 4.501952630354245,
+    "score_components": {
+      "bm25_score": 4.501952630354245,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 4.501952630354245,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 4.501952630354245
+      }
+    ]
+  },
+  {
+    "user_id": "0012_07741c45",
+    "memory_type": "episodic",
+    "content": "User bought white sneakers on sale at the Adidas store in a mall on 2023-05-27.",
+    "dimension": {
+      "time": "2023-05-27",
+      "location": "Adidas store, mall",
+      "reason": "on sale",
+      "purpose": "",
+      "keywords": [
+        "white sneakers",
+        "Adidas",
+        "sale",
+        "purchase"
+      ]
+    },
+    "entities": [
+      "white sneakers",
+      "Adidas",
+      "sale",
+      "purchase"
+    ],
+    "embedding_text": "User bought white sneakers on sale at the Adidas store in a mall on 2023-05-27.",
+    "source_message_ids": [
+      "11"
+    ],
+    "source_boundary_id": "11_0076",
+    "source_time": "2023-05-28 06:33:02",
+    "record_time": "2026-07-07T19:50:12.076301",
+    "score": 4.4369476630997635,
+    "score_components": {
+      "bm25_score": 4.4369476630997635,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 4.4369476630997635,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 4.4369476630997635
+      },
+      {
+        "method": "minilm",
+        "rank": 7,
+        "score": 0.5811280736763228
+      }
+    ]
+  }
+]

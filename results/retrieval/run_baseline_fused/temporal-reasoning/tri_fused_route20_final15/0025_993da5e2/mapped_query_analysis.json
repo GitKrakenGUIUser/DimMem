@@ -1,0 +1,68 @@
+{
+  "query_text": "How long did the user use the new area rug before rearranging the living room furniture?",
+  "query_anchor": "How long did the user use the new area rug before rearranging the living room furniture?",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "",
+    "location": "living room",
+    "keywords": [
+      "new area rug",
+      "rearranged",
+      "living room furniture"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "How long did the user use the new area rug before rearranging the living room furniture?",
+      "keywords": [
+        "new area rug",
+        "rearranged",
+        "living room furniture"
+      ],
+      "query_terms": [
+        "how",
+        "long",
+        "did",
+        "the",
+        "user",
+        "use",
+        "new",
+        "area",
+        "rug",
+        "before",
+        "rearranging",
+        "living",
+        "room",
+        "furniture",
+        "rearranged"
+      ]
+    },
+    "structured": {
+      "query_text": "How long did the user use the new area rug before rearranging the living room furniture?",
+      "rewrite": "How long did the user use the new area rug before rearranging the living room furniture?",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "How long did the user use the new area rug before rearranging the living room furniture?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {
+        "location": [
+          "living room"
+        ]
+      },
+      "keywords": [
+        "new area rug",
+        "rearranged",
+        "living room furniture"
+      ],
+      "canonical_text": "How long did the user use the new area rug before rearranging the living room furniture?"
+    },
+    "minilm": {
+      "query_text": "How long did the user use the new area rug before rearranging the living room furniture?"
+    }
+  }
+}

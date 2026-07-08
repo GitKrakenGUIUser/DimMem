@@ -1,0 +1,852 @@
+[
+  {
+    "user_id": "0016_71017277",
+    "memory_type": "fact",
+    "content": "User inherited a crystal chandelier from their great-grandmother on 2023-03-04.",
+    "dimension": {
+      "time": "2023-03-04",
+      "location": "",
+      "reason": "inherited from great-grandmother",
+      "purpose": "",
+      "keywords": [
+        "crystal chandelier",
+        "great-grandmother",
+        "inheritance"
+      ]
+    },
+    "entities": [
+      "crystal chandelier",
+      "great-grandmother",
+      "inheritance"
+    ],
+    "embedding_text": "User inherited a crystal chandelier from their great-grandmother on 2023-03-04.",
+    "source_message_ids": [
+      "14"
+    ],
+    "source_boundary_id": "14_0140",
+    "source_time": "2023-03-03 20:06:00",
+    "record_time": "2026-07-07T19:51:01.369513",
+    "score": 14.711514805899899,
+    "score_components": {
+      "bm25_score": 14.711514805899899,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 1,
+    "retrieval_score": 14.711514805899899,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 1,
+        "score": 14.711514805899899
+      },
+      {
+        "method": "minilm",
+        "rank": 1,
+        "score": 0.508866405628544
+      }
+    ]
+  },
+  {
+    "user_id": "0016_71017277",
+    "memory_type": "episodic",
+    "content": "On 2023-03-04, the user sanded and primed a wooden rocking chair as part of a refurbishing project.",
+    "dimension": {
+      "time": "2023-03-04",
+      "location": "",
+      "reason": "",
+      "purpose": "to refurbish the rocking chair",
+      "keywords": [
+        "wooden rocking chair",
+        "sanding",
+        "priming",
+        "refurbishing"
+      ]
+    },
+    "entities": [
+      "wooden rocking chair",
+      "sanding",
+      "priming",
+      "refurbishing"
+    ],
+    "embedding_text": "On 2023-03-04, the user sanded and primed a wooden rocking chair as part of a refurbishing project.",
+    "source_message_ids": [
+      "19"
+    ],
+    "source_boundary_id": "19_0174",
+    "source_time": "2023-03-04 18:26:00",
+    "record_time": "2026-07-07T19:51:01.369709",
+    "score": 11.785439787834624,
+    "score_components": {
+      "bm25_score": 11.785439787834624,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 2,
+    "retrieval_score": 11.785439787834624,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 2,
+        "score": 11.785439787834624
+      }
+    ]
+  },
+  {
+    "user_id": "0016_71017277",
+    "memory_type": "episodic",
+    "content": "On 2023-03-04, the user changed the target to Kirkwood Ski Resort for the food truck operation request.",
+    "dimension": {
+      "time": "2023-03-04",
+      "location": "Kirkwood Ski Resort, Lake Tahoe",
+      "reason": "changed from Northstar",
+      "purpose": "to request permission for food truck operation at Kirkwood",
+      "keywords": [
+        "food truck",
+        "Kirkwood Ski Resort",
+        "permission request"
+      ]
+    },
+    "entities": [
+      "food truck",
+      "Kirkwood Ski Resort",
+      "permission request"
+    ],
+    "embedding_text": "On 2023-03-04, the user changed the target to Kirkwood Ski Resort for the food truck operation request.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0147",
+    "source_time": "2023-03-04 20:16:00",
+    "record_time": "2026-07-07T19:51:01.369554",
+    "score": 10.658822198934493,
+    "score_components": {
+      "bm25_score": 10.658822198934493,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 3,
+    "retrieval_score": 10.658822198934493,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 3,
+        "score": 10.658822198934493
+      },
+      {
+        "method": "structured",
+        "rank": 6,
+        "score": 0.6
+      }
+    ]
+  },
+  {
+    "user_id": "0016_71017277",
+    "memory_type": "episodic",
+    "content": "User has read and loved 'The Seven Husbands of Evelyn Hugo', which was narrated by Julia Whelan.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "The Seven Husbands of Evelyn Hugo",
+        "Julia Whelan",
+        "audiobook"
+      ]
+    },
+    "entities": [
+      "The Seven Husbands of Evelyn Hugo",
+      "Julia Whelan",
+      "audiobook"
+    ],
+    "embedding_text": "User has read and loved 'The Seven Husbands of Evelyn Hugo', which was narrated by Julia Whelan.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0077",
+    "source_time": "2023-02-14 02:40:02",
+    "record_time": "2026-07-07T19:51:01.369148",
+    "score": 10.584250554716,
+    "score_components": {
+      "bm25_score": 10.584250554716,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 4,
+    "retrieval_score": 10.584250554716,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 4,
+        "score": 10.584250554716
+      }
+    ]
+  },
+  {
+    "user_id": "0016_71017277",
+    "memory_type": "episodic",
+    "content": "The user asked for recommendations of true-crime podcasts similar to 'Last Seen' on 2023-02-10.",
+    "dimension": {
+      "time": "2023-02-10",
+      "location": "",
+      "reason": "",
+      "purpose": "discover new true-crime podcasts",
+      "keywords": [
+        "recommendation",
+        "true-crime podcast",
+        "Last Seen"
+      ]
+    },
+    "entities": [
+      "recommendation",
+      "true-crime podcast",
+      "Last Seen"
+    ],
+    "embedding_text": "The user asked for recommendations of true-crime podcasts similar to 'Last Seen' on 2023-02-10.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0034",
+    "source_time": "2023-02-10 01:31:01.500000",
+    "record_time": "2026-07-07T19:51:01.368821",
+    "score": 9.634931461024745,
+    "score_components": {
+      "bm25_score": 9.634931461024745,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 5,
+    "retrieval_score": 9.634931461024745,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 5,
+        "score": 9.634931461024745
+      }
+    ]
+  },
+  {
+    "user_id": "0016_71017277",
+    "memory_type": "episodic",
+    "content": "On 2023-02-04, the user achieved a personal best of 12,345 steps while running errands.",
+    "dimension": {
+      "time": "2023-02-04",
+      "location": "around town",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "personal best",
+        "steps",
+        "12,345"
+      ]
+    },
+    "entities": [
+      "personal best",
+      "steps",
+      "12,345"
+    ],
+    "embedding_text": "On 2023-02-04, the user achieved a personal best of 12,345 steps while running errands.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0039",
+    "source_time": "2023-02-11 02:09:00.500000",
+    "record_time": "2026-07-07T19:51:01.368851",
+    "score": 9.560690219130887,
+    "score_components": {
+      "bm25_score": 9.560690219130887,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 6,
+    "retrieval_score": 9.560690219130887,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 6,
+        "score": 9.560690219130887
+      }
+    ]
+  },
+  {
+    "user_id": "0016_71017277",
+    "memory_type": "episodic",
+    "content": "On 2023-03-04, the user planned to contact Northstar Ski Resort to request permission to operate their food truck there.",
+    "dimension": {
+      "time": "2023-03-04",
+      "location": "Northstar Ski Resort, Lake Tahoe",
+      "reason": "wanted to operate food truck",
+      "purpose": "to obtain permission for food truck operation",
+      "keywords": [
+        "food truck",
+        "Northstar Ski Resort",
+        "permission request"
+      ]
+    },
+    "entities": [
+      "food truck",
+      "Northstar Ski Resort",
+      "permission request"
+    ],
+    "embedding_text": "On 2023-03-04, the user planned to contact Northstar Ski Resort to request permission to operate their food truck there.",
+    "source_message_ids": [
+      "15"
+    ],
+    "source_boundary_id": "15_0146",
+    "source_time": "2023-03-04 10:34:01",
+    "record_time": "2026-07-07T19:51:01.369548",
+    "score": 8.287790804178602,
+    "score_components": {
+      "bm25_score": 8.287790804178602,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 7,
+    "retrieval_score": 8.287790804178602,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 7,
+        "score": 8.287790804178602
+      },
+      {
+        "method": "structured",
+        "rank": 5,
+        "score": 0.6
+      }
+    ]
+  },
+  {
+    "user_id": "0016_71017277",
+    "memory_type": "fact",
+    "content": "The user's foam roller arrived on 2023-03-02.",
+    "dimension": {
+      "time": "2023-03-02",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "foam roller",
+        "arrived",
+        "Amazon"
+      ]
+    },
+    "entities": [
+      "foam roller",
+      "arrived",
+      "Amazon"
+    ],
+    "embedding_text": "The user's foam roller arrived on 2023-03-02.",
+    "source_message_ids": [
+      "4"
+    ],
+    "source_boundary_id": "4_0043",
+    "source_time": "2023-02-11 02:09:01.500000",
+    "record_time": "2026-07-07T19:51:01.368875",
+    "score": 8.084042900365873,
+    "score_components": {
+      "bm25_score": 8.084042900365873,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 8,
+    "retrieval_score": 8.084042900365873,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 8,
+        "score": 8.084042900365873
+      },
+      {
+        "method": "minilm",
+        "rank": 2,
+        "score": 0.48544812217467387
+      }
+    ]
+  },
+  {
+    "user_id": "0016_71017277",
+    "memory_type": "fact",
+    "content": "As of 2023-03-01, User had never tried Huachinango a la Veracruzana.",
+    "dimension": {
+      "time": "2023-03-01",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Huachinango a la Veracruzana",
+        "never tried"
+      ]
+    },
+    "entities": [
+      "Huachinango a la Veracruzana",
+      "never tried"
+    ],
+    "embedding_text": "As of 2023-03-01, User had never tried Huachinango a la Veracruzana.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0127",
+    "source_time": "2023-02-28 10:47:02.500000",
+    "record_time": "2026-07-07T19:51:01.369439",
+    "score": 7.998400136406149,
+    "score_components": {
+      "bm25_score": 7.998400136406149,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 9,
+    "retrieval_score": 7.998400136406149,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 9,
+        "score": 7.998400136406149
+      }
+    ]
+  },
+  {
+    "user_id": "0016_71017277",
+    "memory_type": "episodic",
+    "content": "User completed a set of Marvel Comic's 'The Avengers' action figures in the week of February 8-14, 2023, after 6 months of searching for the last Black Widow figure.",
+    "dimension": {
+      "time": "2023-02-08 to 2023-02-14",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Marvel",
+        "Avengers",
+        "action figures",
+        "Black Widow",
+        "collection"
+      ]
+    },
+    "entities": [
+      "Marvel",
+      "Avengers",
+      "action figures",
+      "Black Widow",
+      "collection"
+    ],
+    "embedding_text": "User completed a set of Marvel Comic's 'The Avengers' action figures in the week of February 8-14, 2023, after 6 months of searching for the last Black Widow figure.",
+    "source_message_ids": [
+      "7"
+    ],
+    "source_boundary_id": "7_0083",
+    "source_time": "2023-02-15 00:24:02",
+    "record_time": "2026-07-07T19:51:01.369184",
+    "score": 7.37871834599068,
+    "score_components": {
+      "bm25_score": 7.37871834599068,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 10,
+    "retrieval_score": 7.37871834599068,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 10,
+        "score": 7.37871834599068
+      },
+      {
+        "method": "minilm",
+        "rank": 17,
+        "score": 0.3305445128042754
+      }
+    ]
+  },
+  {
+    "user_id": "0016_71017277",
+    "memory_type": "episodic",
+    "content": "The user listens to the true-crime podcast 'Last Seen' and is currently on episode 7.",
+    "dimension": {
+      "time": "2023-02-10",
+      "location": "",
+      "reason": "",
+      "purpose": "",
+      "keywords": [
+        "Last Seen",
+        "true-crime",
+        "podcast",
+        "episode 7"
+      ]
+    },
+    "entities": [
+      "Last Seen",
+      "true-crime",
+      "podcast",
+      "episode 7"
+    ],
+    "embedding_text": "The user listens to the true-crime podcast 'Last Seen' and is currently on episode 7.",
+    "source_message_ids": [
+      "3"
+    ],
+    "source_boundary_id": "3_0031",
+    "source_time": "2023-02-10 01:31:01",
+    "record_time": "2026-07-07T19:51:01.368804",
+    "score": 7.190226375410652,
+    "score_components": {
+      "bm25_score": 7.190226375410652,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 11,
+    "retrieval_score": 7.190226375410652,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 11,
+        "score": 7.190226375410652
+      }
+    ]
+  },
+  {
+    "user_id": "0016_71017277",
+    "memory_type": "episodic",
+    "content": "On 2023-02-28, User had last changed their car's oil about 5,000 miles prior and planned to check the car manual for the recommended oil change interval.",
+    "dimension": {
+      "time": "2023-02-28",
+      "location": "",
+      "reason": "last oil change 5000 miles ago",
+      "purpose": "to determine recommended interval",
+      "keywords": [
+        "car",
+        "oil change",
+        "manual",
+        "interval"
+      ]
+    },
+    "entities": [
+      "car",
+      "oil change",
+      "manual",
+      "interval"
+    ],
+    "embedding_text": "On 2023-02-28, User had last changed their car's oil about 5,000 miles prior and planned to check the car manual for the recommended oil change interval.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0122",
+    "source_time": "2023-02-28 10:47:00",
+    "record_time": "2026-07-07T19:51:01.369410",
+    "score": 6.919096945021556,
+    "score_components": {
+      "bm25_score": 6.919096945021556,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 12,
+    "retrieval_score": 6.919096945021556,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 12,
+        "score": 6.919096945021556
+      }
+    ]
+  },
+  {
+    "user_id": "0016_71017277",
+    "memory_type": "episodic",
+    "content": "The user made chicken fajitas using a recipe from the NYT Cooking app on 2023-02-28.",
+    "dimension": {
+      "time": "2023-02-28",
+      "location": "",
+      "reason": "experimenting with seasonings",
+      "purpose": "cooking",
+      "keywords": [
+        "chicken fajitas",
+        "NYT Cooking app",
+        "2023-02-28"
+      ]
+    },
+    "entities": [
+      "chicken fajitas",
+      "NYT Cooking app",
+      "2023-02-28"
+    ],
+    "embedding_text": "The user made chicken fajitas using a recipe from the NYT Cooking app on 2023-02-28.",
+    "source_message_ids": [
+      "13"
+    ],
+    "source_boundary_id": "13_0132",
+    "source_time": "2023-03-02 07:50:00",
+    "record_time": "2026-07-07T19:51:01.369468",
+    "score": 6.837810936955117,
+    "score_components": {
+      "bm25_score": 6.837810936955117,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 13,
+    "retrieval_score": 6.837810936955117,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 13,
+        "score": 6.837810936955117
+      }
+    ]
+  },
+  {
+    "user_id": "0016_71017277",
+    "memory_type": "episodic",
+    "content": "User is considering using wire-wrapped jewelry-making tools to create decorative accents for the wooden coasters.",
+    "dimension": {
+      "time": "",
+      "location": "",
+      "reason": "",
+      "purpose": "decorative accents for coasters",
+      "keywords": [
+        "wire-wrapped jewelry-making tools",
+        "decorative accents",
+        "coasters"
+      ]
+    },
+    "entities": [
+      "wire-wrapped jewelry-making tools",
+      "decorative accents",
+      "coasters"
+    ],
+    "embedding_text": "User is considering using wire-wrapped jewelry-making tools to create decorative accents for the wooden coasters.",
+    "source_message_ids": [
+      "20"
+    ],
+    "source_boundary_id": "20_0179",
+    "source_time": "2023-03-04 18:26:02.500000",
+    "record_time": "2026-07-07T19:51:01.369738",
+    "score": 6.628838773413003,
+    "score_components": {
+      "bm25_score": 6.628838773413003,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 14,
+    "retrieval_score": 6.628838773413003,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 14,
+        "score": 6.628838773413003
+      },
+      {
+        "method": "structured",
+        "rank": 1,
+        "score": 0.9999999999999999
+      }
+    ]
+  },
+  {
+    "user_id": "0016_71017277",
+    "memory_type": "episodic",
+    "content": "On 2023-02-28, User noticed their car's battery was draining faster than usual and planned to have it checked at a local mechanic.",
+    "dimension": {
+      "time": "2023-02-28",
+      "location": "",
+      "reason": "faster battery drain",
+      "purpose": "to check for a bigger issue",
+      "keywords": [
+        "car",
+        "battery",
+        "drain",
+        "mechanic"
+      ]
+    },
+    "entities": [
+      "car",
+      "battery",
+      "drain",
+      "mechanic"
+    ],
+    "embedding_text": "On 2023-02-28, User noticed their car's battery was draining faster than usual and planned to have it checked at a local mechanic.",
+    "source_message_ids": [
+      "12"
+    ],
+    "source_boundary_id": "12_0120",
+    "source_time": "2023-02-28 17:55:01.500000",
+    "record_time": "2026-07-07T19:51:01.369398",
+    "score": 6.4381564744146145,
+    "score_components": {
+      "bm25_score": 6.4381564744146145,
+      "bm25_k1": 1.2,
+      "bm25_b": 0.75,
+      "query_fields": [
+        "query_anchor",
+        "dimension.keywords"
+      ],
+      "memory_fields": [
+        "content",
+        "dimension.reason",
+        "dimension.purpose",
+        "dimension.keywords"
+      ]
+    },
+    "retrieval_method": "bm25",
+    "retrieval_rank": 15,
+    "retrieval_score": 6.4381564744146145,
+    "fusion_sources": [
+      {
+        "method": "bm25",
+        "rank": 15,
+        "score": 6.4381564744146145
+      }
+    ]
+  }
+]

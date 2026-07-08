@@ -1,0 +1,32 @@
+{
+  "id": "1e1bab48-41ec-4b06-b1e6-c527096b5c76",
+  "object": "chat.completion",
+  "created": 1783428067,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\": \"WRONG\"}",
+        "reasoning_content": "We need to evaluate if the generated answer matches the gold answer. Gold: \"One week. Answers ranging from 7 days to 10 days are also acceptable.\" Generated: \"I don't know.\" This does not provide any time duration, so it is not correct. Label WRONG."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 424,
+    "completion_tokens": 67,
+    "total_tokens": 491,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 59
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 168
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

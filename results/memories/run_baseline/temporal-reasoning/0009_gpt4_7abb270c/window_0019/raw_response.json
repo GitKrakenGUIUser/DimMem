@@ -1,0 +1,32 @@
+{
+  "id": "36899113-843d-41b4-b63a-4fabf5752de2",
+  "object": "chat.completion",
+  "created": 1783358311,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"memories\": []\n}",
+        "reasoning_content": "We need to extract memories from the conversation. The first 3 messages are overlapping context, so we only consider from message 4: \"suggest me 5 more\". That's a short request. It seems the user is asking for suggestions of 5 more values? But the context from earlier messages (overlap) indicate they were discussing company values. However, we cannot use those as sources. The message 4 alone is ambiguous. It says \"suggest me 5 more\" which implies a continuation of a previous topic. But without context, we don't know what \"5 more\" refers to. It might be asking for 5 more values, but that's not explicit. Since we only have that message and cannot use overlapping context, we should treat it as a request for suggestions. However, it's a one-off instruction without long-term value. There's no factual, episodic, or profile information to extract. The user is just asking for a suggestion. We should not extract anything. So output empty memories array."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1420,
+    "completion_tokens": 218,
+    "total_tokens": 1638,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 209
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 268
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

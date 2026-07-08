@@ -1,0 +1,59 @@
+{
+  "query_text": "the user's cousin's wedding and Michael's engagement party, which event occurred first",
+  "query_anchor": "the user's cousin's wedding and Michael's engagement party, which event occurred first",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "",
+    "location": "",
+    "keywords": [
+      "cousin's wedding",
+      "Michael's engagement party"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "the user's cousin's wedding and Michael's engagement party, which event occurred first",
+      "keywords": [
+        "cousin's wedding",
+        "Michael's engagement party"
+      ],
+      "query_terms": [
+        "the",
+        "user",
+        "s",
+        "cousin",
+        "wedding",
+        "and",
+        "michael",
+        "engagement",
+        "party",
+        "which",
+        "event",
+        "occurred",
+        "first"
+      ]
+    },
+    "structured": {
+      "query_text": "the user's cousin's wedding and Michael's engagement party, which event occurred first",
+      "rewrite": "the user's cousin's wedding and Michael's engagement party, which event occurred first",
+      "intent": "lookup",
+      "answer_field": "time",
+      "content_query": "the user's cousin's wedding and Michael's engagement party, which event occurred first",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "cousin's wedding",
+        "Michael's engagement party"
+      ],
+      "canonical_text": "the user's cousin's wedding and Michael's engagement party, which event occurred first"
+    },
+    "minilm": {
+      "query_text": "the user's cousin's wedding and Michael's engagement party, which event occurred first"
+    }
+  }
+}

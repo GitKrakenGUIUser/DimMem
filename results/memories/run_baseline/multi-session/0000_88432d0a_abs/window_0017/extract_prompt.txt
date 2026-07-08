@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-05-28T20:13:01, Sun] 1.User: I was thinking of trying out some new herbs and spices to add more flavor to my roasted vegetables. Do you have any recommendations for herbs that pair well with the convection-roasted veggies I mentioned earlier?
+[2023-05-28T20:13:01.500000, Sun] 2.User: I'm thinking of making some roasted sweet potatoes to go along with the crispy chicken wings and roasted veggies. Do you have any tips on how to achieve that perfect caramelized crust on sweet potatoes using convection?
+[2023-05-28T20:13:02, Sun] 3.User: I'm thinking of trying out a new bread recipe this weekend, possibly something with whole wheat flour. Do you have any recommendations for whole wheat bread recipes that would pair well with the crispy chicken wings and roasted veggies?
+[2023-05-28T20:13:02.500000, Sun] 4.User: I think I'll try out the Garlic and Herb Whole Wheat Focaccia recipe. I love the idea of a flavorful bread that can complement the savory flavors of the chicken wings and roasted veggies. Plus, the garlic and herbs will add a nice aroma to the bread. Can you give me some tips on how to get the perfect crumb and crust on the focaccia?
+[2023-05-28T20:26:00, Sun] 5.User: I'm thinking of trying out a new recipe for a rustic Italian bread this weekend. Do you have any tips on how to achieve a crispy crust? By the way, I made a delicious whole wheat baguette last Saturday, and I'm considering using the same flour for this recipe.
+[2023-05-28T20:26:00.500000, Sun] 6.User: I'll definitely consider using a higher protein flour for this recipe. Do you think the convection setting on my oven would help with browning and crisping the crust?
+[2023-05-28T20:26:01, Sun] 7.User: I've had good results with the convection setting on my oven, like when I used it to bake a batch of cookies last Thursday. They turned out perfectly crispy on the outside and chewy on the inside. Do you think I should try a slower rise or delayed fermentation for this Italian bread recipe?
+[2023-05-28T20:26:01.500000, Sun] 8.User: I'm thinking of trying a slower rise for this Italian bread recipe. Do you think I could use my sourdough starter instead of commercial yeast to add more complexity to the flavor?
+[2023-05-28T20:26:02, Sun] 9.User: I've had some experience with sourdough starters, although my last attempt at making bread with it didn't turn out so well. I tried out a new bread recipe using sourdough starter on Tuesday, but the dough didn't rise as much as I expected, and the bread came out dense and heavy. I think I need to work on my sourdough starter's health and maybe adjust the recipe. But I'm willing to give it another try for this Italian bread recipe. Do you have any tips on how to create a preferment using my sourdough starter?
+[2023-05-28T20:26:02.500000, Sun] 10.User: I'll definitely keep those tips in mind when creating the preferment. Since I'm planning to use a slower rise for this Italian bread recipe, do you think I should adjust the yeast amount or the salt content to compensate for the longer fermentation time?
+[2023-05-28T20:27:00, Sun] 11.User: I'm looking for some new TV show recommendations. I just finished binge-watching the third season of Stranger Things and I'm craving something similar.
+[2023-05-28T20:27:00.500000, Sun] 12.User: I'll definitely check those out, thanks for the recs! By the way, I was thinking of hosting a TV show marathon party soon and I was wondering if you could give me some suggestions for theme ideas, decorations, and snacks that would fit well with the shows I mentioned.
+[2023-05-28T20:27:01, Sun] 13.User: I love these ideas! I was thinking of having the party at my place, but now I'm considering renting a bigger space to fit all these awesome decorations and activities. By the way, speaking of Stranger Things, do you think it's weird that I finished the third season within a week?
+[2023-05-28T20:27:01.500000, Sun] 14.User: I'm really excited about the decorations and the obstacle course for the superhero training area. I think it'll be so much fun for my friends to feel like they're part of a superhero team. Also, I was thinking of having a "TV show-themed" costume contest, where people can dress up as their favorite characters from any TV show, not just the ones we're featuring. What do you think?
+[2023-05-28T20:27:02, Sun] 15.User: I'm really excited about the costume contest and the photo booth idea! I think it'll be a great way to capture the fun and creativity of the party. I was also thinking of having a "TV show trivia" contest, where we test our knowledge of different TV shows. Do you think that's a good idea?

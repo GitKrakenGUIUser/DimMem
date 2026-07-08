@@ -1,0 +1,32 @@
+{
+  "id": "42a12aee-1642-4094-8dfa-c01c7642e0a0",
+  "object": "chat.completion",
+  "created": 1783427810,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"label\":\"CORRECT\"}",
+        "reasoning_content": "We need to compare generated answer \"70 pounds\" with gold answer \"70 pounds\". They match exactly. So it's correct. Explanation: The generated answer matches the gold answer exactly. Label: CORRECT."
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 408,
+    "completion_tokens": 49,
+    "total_tokens": 457,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 42
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 152
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

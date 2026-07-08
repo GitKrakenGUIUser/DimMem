@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-02-15T00:24:02, Wed] 1.User: That's a great point about the heat level and flavor profile of my roasted Anaheim pepper sauce. I think I'll start with a small amount and adjust to taste. I'm also curious to see how the smokiness of the Anaheim peppers will complement the tequila and mango flavors. Thanks for the advice!
+[2023-02-15T00:24:02.500000, Wed] 2.User: I'm going to try making a batch of chipotle peppers in adobo sauce from scratch. Can you give me some tips on how to smoke the jalapeño peppers to get that rich, smoky flavor?
+[2023-02-15T19:30:00, Wed] 3.User: I'm looking for some advice on how to store and display my growing vinyl record collection. I've got about 25 records now and I want to make sure I'm keeping them in good condition. By the way, I just got back from a flea market and scored a great deal on a mint condition "Sgt. Pepper's Lonely Hearts Club Band" album, and I also finally completed my set of Marvel Comic's "The Avengers" action figures last week, which is a huge relief after 6 months of searching for that last Black Widow figure.
+[2023-02-15T19:30:00.500000, Wed] 4.User: I'm also looking to expand my vinyl collection by finding rare and unique albums. Do you know any online marketplaces or stores that specialize in rare vinyl records?
+[2023-02-15T19:30:01, Wed] 5.User: I'll definitely check out those online marketplaces and stores. I've had some luck finding rare albums at local thrift stores and garage sales, but I'm sure I can find even more online. By the way, I've also been thinking about displaying my autographed baseballs, do you have any suggestions on how to do that?
+[2023-02-15T19:30:01.500000, Wed] 6.User: I'm also thinking of displaying my Marvel Comic's "The Avengers" action figures. Do you have any suggestions on how to display them?
+[2023-02-15T19:30:02, Wed] 7.User: I'm thinking of displaying my vintage cameras alongside my action figures. Do you think that would work, or would it be too cluttered?
+[2023-02-15T19:30:02.500000, Wed] 8.User: I think I'll give it a shot! I'll try to choose a unifying theme, like a retro-futuristic vibe, and group similar items together. I'll also make sure to balance the display and use a neutral background to avoid clutter. Thanks for the tips!
+[2023-02-15T10:49:00, Wed] 9.User: I'm looking for some advice on how to recover from a intense running event. I just finished a charity 5K run last weekend and I'm feeling a bit sore. I had been training for it for the past 6 weeks, doing 3 runs per week with a gradual increase in distance and intensity.
+[2023-02-15T10:49:00.500000, Wed] 10.User: I'm glad you provided these tips, but I'm a bit concerned about my ankle mobility, which has been a problem area for me in the past. Do you think I should focus on some specific exercises or stretches to improve it, especially since I'm planning to continue running and eventually participate in a sprint triathlon?
+[2023-02-15T10:49:01, Wed] 11.User: I'm glad you mentioned that. I've actually been taking yoga classes twice a week since July, and my instructor has been helping me with some specific stretches to improve my ankle mobility, which has been a problem area for me in the past. Do you think these exercises and stretches you mentioned will be enough to prepare my ankles for the demands of a sprint triathlon, or should I consider seeing a specialist or getting custom orthotics?
+[2023-02-15T10:49:01.500000, Wed] 12.User: I'll definitely consider seeing a sports medicine specialist or podiatrist to get a more detailed assessment of my ankle mobility and biomechanics. I've been doing yoga twice a week since July, which has helped, but I want to make sure I'm doing everything I can to prevent injuries and improve my performance. Do you think I should also focus on building up my core and glute strength to improve my running efficiency and reduce the risk of ankle injuries?
+[2023-02-15T10:49:02, Wed] 13.User: I'll start incorporating core and glute strengthening exercises into my training routine, focusing on proper form and technique. I'll aim to do 2-3 strength training sessions per week and gradually increase the intensity and weight as my body adapts. Do you think I should also focus on improving my running form and efficiency to reduce the risk of ankle injuries and improve my overall performance?
+[2023-02-15T10:49:02.500000, Wed] 14.User: I'll definitely work on improving my running form and efficiency. I'll start by getting a gait analysis and incorporating running drills into my training routine. I'll also focus on strengthening my core, glutes, and legs to improve my running efficiency and reduce my risk of injuries. Can you recommend some specific running drills that I can do to improve my running form and efficiency?
+[2023-02-15T19:24:00, Wed] 15.User: could you have the rap done in a style more like the notorious BIG

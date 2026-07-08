@@ -1,0 +1,62 @@
+{
+  "query_text": "What time did the user reach the clinic on Monday, 2023/05/29?",
+  "query_anchor": "What time did the user reach the clinic on Monday, 2023/05/29?",
+  "dimension": {
+    "target_memory_type": [
+      "episodic"
+    ],
+    "time": "on 2023/05/29",
+    "location": "clinic",
+    "keywords": [
+      "clinic"
+    ]
+  },
+  "routes": {
+    "bm25": {
+      "query_text": "What time did the user reach the clinic on Monday, 2023/05/29?",
+      "keywords": [
+        "clinic"
+      ],
+      "query_terms": [
+        "what",
+        "time",
+        "did",
+        "the",
+        "user",
+        "reach",
+        "clinic",
+        "on",
+        "monday",
+        "2023",
+        "05",
+        "29"
+      ]
+    },
+    "structured": {
+      "query_text": "What time did the user reach the clinic on Monday, 2023/05/29?",
+      "rewrite": "What time did the user reach the clinic on Monday, 2023/05/29?",
+      "intent": "lookup",
+      "answer_field": "time",
+      "content_query": "What time did the user reach the clinic on Monday, 2023/05/29?",
+      "target_memory_types": [
+        "episodic"
+      ],
+      "entities": [],
+      "constraints": {
+        "time": [
+          "on 2023/05/29"
+        ],
+        "location": [
+          "clinic"
+        ]
+      },
+      "keywords": [
+        "clinic"
+      ],
+      "canonical_text": "What time did the user reach the clinic on Monday, 2023/05/29?"
+    },
+    "minilm": {
+      "query_text": "What time did the user reach the clinic on Monday, 2023/05/29?"
+    }
+  }
+}

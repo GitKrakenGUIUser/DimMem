@@ -1,0 +1,133 @@
+You are a structured memory extractor.
+
+Task: Extract structured memories with long-term value from the input user-assistant conversation, and strictly output valid JSON.
+Only output JSON. Do not output explanations, analysis, Markdown, or any extra text.
+
+========================
+Output Format
+========================
+
+{
+  "memories": [
+    {
+      "source_id": 1,
+      "content": "",
+      "dimension": {
+        "memory_type": "",
+        "time": "",
+        "location": "",
+        "reason": "",
+        "purpose": "",
+        "keywords": []
+      }
+    }
+  ]
+}
+
+========================
+Extraction Targets
+========================
+
+Extract:
+1. Factual information, identity/background, relationships, current status, tools, models, datasets, and project configurations;
+2. Specific experiences, events, actions, behavioral records, stage progress, and future plans;
+3. Long-term preferences, habits, interests, values, goals, abilities, interaction style, or writing style;
+4. Information that helps understand the user's future needs or retrieve the user's background.
+
+Do not extract:
+1. Greetings, thanks, simple confirmations, or meaningless small talk;
+2. Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.
+
+========================
+memory_type
+========================
+
+dimension.memory_type must be one of: fact, episodic, profile.
+
+fact: stable facts, answering "what it is / what exists / what is used / what the relationship is / what the current status is".
+Includes identity, background, relationships, status, tools, models, datasets, configurations, confirmed choices, and stable objective attributes.
+Example: The user uses LLaMA2-7B as the base model.
+
+episodic: specific events, answering "what happened / what someone did / what someone experienced / what someone plans to do".
+Includes a specific event, experience, action, stage progress, future plan, or concrete fact with time/location/context.
+Example: The user plans to train a local LLaMA2-7B model using Urdu data.
+
+profile: long-term user profile, answering "what someone is like long-term / what someone likes / what someone usually does / what someone believes".
+Includes preferences, habits, interests, values, long-term goals, abilities, style preferences, and stable behavior patterns.
+Example: The user prefers concise Java code with a single main function.
+
+Do not extract content that cannot be classified as fact, episodic, or profile.
+
+========================
+content Rules
+========================
+
+content is the main text of the memory and must be one complete, self-contained, retrievable sentence.
+
+Requirements:
+1. Clearly state who the memory is about and the core fact, event, or profile information.
+2. If the source text contains time, location, reason, or purpose, include them in content when possible.
+3. Remove ambiguous pronouns so that content does not depend on the original context.
+4. Normalize relative time expressions based on the message timestamp, e.g., yesterday → a specific date.
+5. Do not add unsupported information, and do not overgeneralize a single event into a long-term profile.
+
+========================
+dimension Rules
+========================
+
+dimension is used for structured retrieval. Except for memory_type, use "" when there is no clear evidence; use [] for keywords when there are no clear keywords.
+
+time: the time when the memory is valid, happened, is planned to happen, or repeatedly occurs.
+Use an absolute date if available. Normalize relative time if the message timestamp is available. Use "" if there is no time.
+Do not use the current system time unless it is the message timestamp.
+
+location: physical place, online platform, organizational context, home space, workplace, system environment, or activity venue.
+Fill this only when the source text explicitly mentions or strongly implies it. Do not force ordinary topics into location.
+
+reason: cause, motivation, trigger, or background condition.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer hidden motivations. Do not confuse it with purpose.
+
+purpose: goal, intention, or expected outcome.
+Fill this only when the source text explicitly states or strongly implies it. Do not infer unstated purposes.
+
+keywords: key terms or phrases for retrieval, deduplication, and query-memory alignment.
+Extract subjects, objects, tools, models, datasets, projects, people, locations, activities, results, preference objects, interest domains, etc.
+Keywords must be short words or noun phrases. Do not include full sentences. Do not repeat keywords. Do not extract ordinary words without retrieval value.
+
+========================
+Extraction Rules
+========================
+
+1. Process messages in chronological order.
+2. Extract memories mainly from user messages.
+3. Each memory should be as atomic as possible. If a message is long or contains multiple independent information points, split it into multiple memories, preserving key details such as people, time, location, events, reasons, purposes, preferences, and objects separately. Avoid over-merging or omitting details.
+4. The `content` field must be self-contained and must not rely on the original dialogue context.
+5. The `time` field should be normalized based on the message timestamp: relative time expressions must be converted into absolute dates or time ranges. For example, if the message timestamp is `2023-05-08` and the original text says `yesterday`, then `time` should be `2023-05-07`.
+6. Simple confirmations, temporary formatting requirements, and one-off tasks in the current conversation should generally not be extracted.
+7. The output must be valid JSON. Do not output any text outside the JSON.
+
+========================
+Input and Overlap Context Rules
+========================
+
+You will receive a "current conversation segment".
+The first 3 messages in the input, namely messages numbered 1 to 3, are overlapping context from the previous segment and must not be used as new memory sources.
+The first 3 messages may only be used to understand later messages; the content that is actually allowed for extraction starts from message 4.
+
+Here is the real input you need to process:
+
+[2023-03-02T11:54:00, Thu] 1.User: What distinguishes the artistic styles of Renaissance and Baroque art from those of Impressionism and Post-Impressionism?
+[2023-03-02T11:54:00.500000, Thu] 2.User: That's really interesting! Do you have any favorite artists from these different styles?
+[2023-03-02T11:54:01, Thu] 3.User: It's amazing how different artistic styles can capture such unique perspectives on the world. Have you seen any art exhibits lately that you enjoyed?
+[2023-03-02T11:54:01.500000, Thu] 4.User: Yes, I love contemporary art! Do you have any recommendations for art exhibits happening in my area that feature modern works?
+[2023-03-02T11:54:02, Thu] 5.User: I'll definitely check out Artsy and ArtNet, and see what local art museums and galleries have to offer. I'm always excited to discover new contemporary artists and their work.
+[2023-03-02T11:54:02.500000, Thu] 6.User: I've actually been really interested in art installations lately. Do you have any recommendations for upcoming events or exhibitions featuring installation art?
+[2023-03-04T19:42:00, Sat] 7.User: I'm planning a family outing to a museum and I'm looking for some recommendations. I took my niece to the Natural History Museum to see the "Dinosaur Fossils" exhibition today, and she loved the life-sized T-Rex replica. Do you have any suggestions for other kid-friendly exhibitions or museums in the area?
+[2023-03-04T19:42:00.500000, Sat] 8.User: That's really helpful! I'll definitely consider those options. I'm also curious, do you have any information on the Metropolitan Museum of Art? I've been there recently to see the Ancient Egyptian Artifacts exhibition, and I was really impressed by the golden mask of Pharaoh Tutankhamun.
+[2023-03-04T19:42:01, Sat] 9.User: That's great to know! The Met is definitely a treasure trove of art and history. I'm thinking of taking my niece to the Children's Museum next, but I was wondering if you know of any interactive exhibits or play areas that might be similar to the hands-on activities section we enjoyed at the Natural History Museum's "Dinosaur Fossils" exhibition?
+[2023-03-04T19:42:01.500000, Sat] 10.User: That's really helpful! I'll definitely check the Children's Museum's website to see what exhibits they have. By the way, I recently attended a guided tour of the Modern Art Museum's newest installation, "The Evolution of Abstract Expressionism", and I was quite moved by the large-scale installation by Anselm Kiefer. Have you any information on the Modern Art Museum or any other art museums in the area that might be of interest to me or my niece?
+[2023-03-04T19:42:02, Sat] 11.User: I'm interested in learning more about the Museum of Contemporary Art, where I attended a lectures series recently. Dr. Maria Rodriguez spoke about the role of feminist art in the 1970s, and I enjoyed networking with other art enthusiasts during the reception that followed.
+[2023-03-04T13:19:00, Sat] 12.User: I'm thinking of reorganizing my living room and I'm stuck on where to place my couch. Can you give me some tips on creating a cozy atmosphere with furniture arrangement? By the way, I removed the old curtains last weekend and it's made a huge difference in letting in natural light.
+[2023-03-04T13:19:00.500000, Sat] 13.User: That's really helpful, thanks for the tips! I'll definitely experiment with different arrangements. Speaking of natural light, I also removed them last weekend, and it's amazing how much brighter my bedroom feels now. Do you have any suggestions on what kind of window treatments would be best for my bedroom?
+[2023-03-04T13:19:01, Sat] 14.User: I meant to say that I removed the heavy drapes from the windows in my bedroom last weekend, not the curtains. Now, can you tell me more about plantation shutters? Are they expensive and difficult to install?
+[2023-03-04T13:19:01.500000, Sat] 15.User: I'm still deciding on what to do with my couch in the living room. Do you have any suggestions on how to incorporate a home office area into the room without making it look cluttered?

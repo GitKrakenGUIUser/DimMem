@@ -1,0 +1,32 @@
+{
+  "id": "d3b371d6-0fdf-402c-b8b9-11d7543eefb5",
+  "object": "chat.completion",
+  "created": 1783347381,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"memories\": []}",
+        "reasoning_content": "We need to extract memories from the conversation. The first 3 messages are overlapping context and must not be used. Only message 4 is a user message for extraction. Message 4: \"Could you please teach me how did you improve my original writing? thanks\" This is a request for explanation about how the assistant improved the user's writing. It's a question, not a memory with long-term value. It's a one-off task or small talk? The user is asking for a teaching explanation. That might be considered a request for information, not a fact, episodic, or profile. It doesn't contain factual information about the user, specific events, or long-term profile. It's a current conversation request. According to rules: \"Do not extract: ... Temporary formatting requirements, one-off operation instructions, or current-task details without long-term value.\" This seems like a current-task detail. Also the user is thanking, but that's not extractable. So likely no memories to extract. But we must output valid JSON. If no memories, output empty array.\n\nCheck: The input includes a timestamp for message 4: 2023-05-30T18:28:01.500000. Content: \"Could you please teach me how did you improve my original writing? thanks\" No factual info, no event, no profile. So no extraction.\n\nThus output: {\"memories\": []}"
+      },
+      "logprobs": null,
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2846,
+    "completion_tokens": 293,
+    "total_tokens": 3139,
+    "prompt_tokens_details": {
+      "cached_tokens": 1152
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 286
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 1694
+  },
+  "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+}

@@ -1,0 +1,3395 @@
+{
+  "bm25": {
+    "mapped_query_analysis": {
+      "query_text": "the number of projects the user has led or is currently leading",
+      "keywords": [
+        "projects",
+        "led",
+        "leading"
+      ],
+      "query_terms": [
+        "the",
+        "number",
+        "of",
+        "projects",
+        "user",
+        "has",
+        "led",
+        "or",
+        "is",
+        "currently",
+        "leading"
+      ]
+    },
+    "top_records": [
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "The user has a good understanding of their team members' strengths and weaknesses from leading the team.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "from leading the team",
+          "purpose": "",
+          "keywords": [
+            "team strengths",
+            "team weaknesses",
+            "leadership experience"
+          ]
+        },
+        "entities": [
+          "team strengths",
+          "team weaknesses",
+          "leadership experience"
+        ],
+        "embedding_text": "The user has a good understanding of their team members' strengths and weaknesses from leading the team.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0103",
+        "source_time": "2023-05-28 03:42:01",
+        "record_time": "2026-07-07T19:50:56.186696",
+        "score": 10.150666691276669,
+        "score_components": {
+          "bm25_score": 10.150666691276669,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "The user is currently doing a buddy read of 'The Seven Husbands of Evelyn Hugo' by Taylor Jenkins Reid with a friend and enjoys discussing it.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "buddy read",
+            "The Seven Husbands of Evelyn Hugo",
+            "Taylor Jenkins Reid",
+            "discussion"
+          ]
+        },
+        "entities": [
+          "buddy read",
+          "The Seven Husbands of Evelyn Hugo",
+          "Taylor Jenkins Reid",
+          "discussion"
+        ],
+        "embedding_text": "The user is currently doing a buddy read of 'The Seven Husbands of Evelyn Hugo' by Taylor Jenkins Reid with a friend and enjoys discussing it.",
+        "source_message_ids": [
+          "17"
+        ],
+        "source_boundary_id": "17_0118",
+        "source_time": "2023-05-29 10:53:01",
+        "record_time": "2026-07-07T19:50:56.186786",
+        "score": 7.645694668271663,
+        "score_components": {
+          "bm25_score": 7.645694668271663,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "profile",
+        "content": "The user is interested in combining wood and stone in sculpting projects, appreciating the contrast between them.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "wood",
+            "stone",
+            "combination",
+            "sculpting",
+            "contrast"
+          ]
+        },
+        "entities": [
+          "wood",
+          "stone",
+          "combination",
+          "sculpting",
+          "contrast"
+        ],
+        "embedding_text": "The user is interested in combining wood and stone in sculpting projects, appreciating the contrast between them.",
+        "source_message_ids": [
+          "6"
+        ],
+        "source_boundary_id": "6_0047",
+        "source_time": "2023-05-24 06:35:01.500000",
+        "record_time": "2026-07-07T19:50:56.186291",
+        "score": 6.175778704631522,
+        "score_components": {
+          "bm25_score": 6.175778704631522,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "profile",
+        "content": "User enjoys the convenience of a USB port on their lamp for charging devices while watching TV or reading in the living room.",
+        "dimension": {
+          "time": "",
+          "location": "living room",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "USB port",
+            "charging devices",
+            "watching TV",
+            "reading"
+          ]
+        },
+        "entities": [
+          "USB port",
+          "charging devices",
+          "watching TV",
+          "reading"
+        ],
+        "embedding_text": "User enjoys the convenience of a USB port on their lamp for charging devices while watching TV or reading in the living room.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0002",
+        "source_time": "2023-05-20 05:54:02",
+        "record_time": "2026-07-07T19:50:56.186014",
+        "score": 5.326509415979553,
+        "score_components": {
+          "bm25_score": 5.326509415979553,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "User is planning to start a web design company and is researching how to set it up and price projects for large companies.",
+        "dimension": {
+          "time": "",
+          "location": "web design company",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "user",
+            "web design company",
+            "setup",
+            "pricing",
+            "large company"
+          ]
+        },
+        "entities": [
+          "user",
+          "web design company",
+          "setup",
+          "pricing",
+          "large company"
+        ],
+        "embedding_text": "User is planning to start a web design company and is researching how to set it up and price projects for large companies.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0013",
+        "source_time": "2023-05-21 22:09:00",
+        "record_time": "2026-07-07T19:50:56.186089",
+        "score": 5.31204521524653,
+        "score_components": {
+          "bm25_score": 5.31204521524653,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "User has experience leading a data analysis team in a Marketing Research class project, where they performed a comprehensive market analysis for a new product launch.",
+        "dimension": {
+          "time": "",
+          "location": "Marketing Research class",
+          "reason": "",
+          "purpose": "to perform market analysis for a new product launch",
+          "keywords": [
+            "Marketing Research",
+            "data analysis team",
+            "market analysis",
+            "new product launch",
+            "experience"
+          ]
+        },
+        "entities": [
+          "Marketing Research",
+          "data analysis team",
+          "market analysis",
+          "new product launch",
+          "experience"
+        ],
+        "embedding_text": "User has experience leading a data analysis team in a Marketing Research class project, where they performed a comprehensive market analysis for a new product launch.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0011",
+        "source_time": "2023-05-20 23:58:04.500000",
+        "record_time": "2026-07-07T19:50:56.186076",
+        "score": 5.0664485428830135,
+        "score_components": {
+          "bm25_score": 5.0664485428830135,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "On 2023-05-24, the user checked their email to see if a UFO expert or Robert Bigelow had replied.",
+        "dimension": {
+          "time": "2023-05-24",
+          "location": "",
+          "reason": "to check for replies from UFO expert or Robert Bigelow",
+          "purpose": "to see if they got back",
+          "keywords": [
+            "UFO expert",
+            "Robert Bigelow",
+            "email",
+            "check"
+          ]
+        },
+        "entities": [
+          "UFO expert",
+          "Robert Bigelow",
+          "email",
+          "check"
+        ],
+        "embedding_text": "On 2023-05-24, the user checked their email to see if a UFO expert or Robert Bigelow had replied.",
+        "source_message_ids": [
+          "9"
+        ],
+        "source_boundary_id": "9_0058",
+        "source_time": "2023-05-24 18:58:03.500000",
+        "record_time": "2026-07-07T19:50:56.186356",
+        "score": 4.4892450822032,
+        "score_components": {
+          "bm25_score": 4.4892450822032,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "The user has smart light bulbs in the living room and intends to adjust their timing.",
+        "dimension": {
+          "time": "2023-05-24",
+          "location": "living room",
+          "reason": "",
+          "purpose": "to adjust timing of smart light bulbs",
+          "keywords": [
+            "smart light bulbs",
+            "living room",
+            "timing"
+          ]
+        },
+        "entities": [
+          "smart light bulbs",
+          "living room",
+          "timing"
+        ],
+        "embedding_text": "The user has smart light bulbs in the living room and intends to adjust their timing.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0057",
+        "source_time": "2023-05-24 17:05:02",
+        "record_time": "2026-07-07T19:50:56.186350",
+        "score": 4.32577174914735,
+        "score_components": {
+          "bm25_score": 4.32577174914735,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "The user has contacted a UFO expert and Robert Bigelow, and was awaiting their replies as of 2023-05-24.",
+        "dimension": {
+          "time": "2023-05-24",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "UFO expert",
+            "Robert Bigelow",
+            "contact",
+            "awaiting reply"
+          ]
+        },
+        "entities": [
+          "UFO expert",
+          "Robert Bigelow",
+          "contact",
+          "awaiting reply"
+        ],
+        "embedding_text": "The user has contacted a UFO expert and Robert Bigelow, and was awaiting their replies as of 2023-05-24.",
+        "source_message_ids": [
+          "9"
+        ],
+        "source_boundary_id": "9_0059",
+        "source_time": "2023-05-24 18:58:04",
+        "record_time": "2026-07-07T19:50:56.186362",
+        "score": 4.306739616106693,
+        "score_components": {
+          "bm25_score": 4.306739616106693,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "Alex is a junior engineer on the user's team who has been performing well under the user's guidance.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Alex",
+            "junior engineer",
+            "mentorship",
+            "performance"
+          ]
+        },
+        "entities": [
+          "Alex",
+          "junior engineer",
+          "mentorship",
+          "performance"
+        ],
+        "embedding_text": "Alex is a junior engineer on the user's team who has been performing well under the user's guidance.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0105",
+        "source_time": "2023-05-28 03:42:01.500000",
+        "record_time": "2026-07-07T19:50:56.186709",
+        "score": 4.146243387100952,
+        "score_components": {
+          "bm25_score": 4.146243387100952,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "profile",
+        "content": "The user is interested in visiting Universal Studios Japan, especially the Wizarding World of Harry Potter.",
+        "dimension": {
+          "time": "",
+          "location": "Universal Studios Japan",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Universal Studios Japan",
+            "Wizarding World of Harry Potter"
+          ]
+        },
+        "entities": [
+          "Universal Studios Japan",
+          "Wizarding World of Harry Potter"
+        ],
+        "embedding_text": "The user is interested in visiting Universal Studios Japan, especially the Wizarding World of Harry Potter.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0075",
+        "source_time": "2023-05-27 05:10:00.500000",
+        "record_time": "2026-07-07T19:50:56.186459",
+        "score": 3.8368547634230943,
+        "score_components": {
+          "bm25_score": 3.8368547634230943,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "profile",
+        "content": "User has a long-term interest in watercolor painting and is actively seeking art supplies and techniques.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "user",
+            "watercolor painting",
+            "art supplies",
+            "techniques"
+          ]
+        },
+        "entities": [
+          "user",
+          "watercolor painting",
+          "art supplies",
+          "techniques"
+        ],
+        "embedding_text": "User has a long-term interest in watercolor painting and is actively seeking art supplies and techniques.",
+        "source_message_ids": [
+          "20"
+        ],
+        "source_boundary_id": "20_0139",
+        "source_time": "2023-05-30 22:48:00",
+        "record_time": "2026-07-07T19:50:56.186908",
+        "score": 3.7194963608400715,
+        "score_components": {
+          "bm25_score": 3.7194963608400715,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "profile",
+        "content": "User enjoys writing creative scenes featuring characters Wukong, Macaque, and MK from a mythological or fictional narrative.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "user",
+            "creative writing",
+            "Wukong",
+            "Macaque",
+            "MK",
+            "mythological narrative"
+          ]
+        },
+        "entities": [
+          "user",
+          "creative writing",
+          "Wukong",
+          "Macaque",
+          "MK",
+          "mythological narrative"
+        ],
+        "embedding_text": "User enjoys writing creative scenes featuring characters Wukong, Macaque, and MK from a mythological or fictional narrative.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0014",
+        "source_time": "2023-05-23 08:52:00",
+        "record_time": "2026-07-07T19:50:56.186096",
+        "score": 3.6224456311631656,
+        "score_components": {
+          "bm25_score": 3.6224456311631656,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "The user's new lampshade is a drum shape made of translucent white fabric.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "drum shape",
+            "translucent white fabric",
+            "lampshade"
+          ]
+        },
+        "entities": [
+          "drum shape",
+          "translucent white fabric",
+          "lampshade"
+        ],
+        "embedding_text": "The user's new lampshade is a drum shape made of translucent white fabric.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0053",
+        "source_time": "2023-05-24 17:05:00.500000",
+        "record_time": "2026-07-07T19:50:56.186327",
+        "score": 3.34691089260091,
+        "score_components": {
+          "bm25_score": 3.34691089260091,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "The user is writing a book about a mirror with a past history in England before being shipped to America, and has a chapter one outline with multiple sections.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "writing",
+            "book",
+            "mirror",
+            "history",
+            "England",
+            "America",
+            "chapter one outline"
+          ]
+        },
+        "entities": [
+          "writing",
+          "book",
+          "mirror",
+          "history",
+          "England",
+          "America",
+          "chapter one outline"
+        ],
+        "embedding_text": "The user is writing a book about a mirror with a past history in England before being shipped to America, and has a chapter one outline with multiple sections.",
+        "source_message_ids": [
+          "19"
+        ],
+        "source_boundary_id": "19_0137",
+        "source_time": "2023-05-30 18:15:02.500000",
+        "record_time": "2026-07-07T19:50:56.186896",
+        "score": 3.333666460099944,
+        "score_components": {
+          "bm25_score": 3.333666460099944,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "User has attended concerts by Ariana Grande.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Ariana Grande",
+            "concerts"
+          ]
+        },
+        "entities": [
+          "Ariana Grande",
+          "concerts"
+        ],
+        "embedding_text": "User has attended concerts by Ariana Grande.",
+        "source_message_ids": [
+          "5"
+        ],
+        "source_boundary_id": "5_0026",
+        "source_time": "2023-05-23 16:17:02.500000",
+        "record_time": "2026-07-07T19:50:56.186169",
+        "score": 3.2252347777878625,
+        "score_components": {
+          "bm25_score": 3.2252347777878625,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "The user has tried Butterbeer ice cream at Universal Studios Japan and found it amazing.",
+        "dimension": {
+          "time": "",
+          "location": "Universal Studios Japan",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Butterbeer ice cream",
+            "Universal Studios Japan"
+          ]
+        },
+        "entities": [
+          "Butterbeer ice cream",
+          "Universal Studios Japan"
+        ],
+        "embedding_text": "The user has tried Butterbeer ice cream at Universal Studios Japan and found it amazing.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0076",
+        "source_time": "2023-05-27 05:10:01",
+        "record_time": "2026-07-07T19:50:56.186532",
+        "score": 3.066860308894385,
+        "score_components": {
+          "bm25_score": 3.066860308894385,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "User plans to take it easy for the first few weeks after moving into the new home, unpacking essentials and setting up utilities, without rushing into decorating or major changes.",
+        "dimension": {
+          "time": "",
+          "location": "new home",
+          "reason": "want to enjoy the new home and assess what works before making decisions",
+          "purpose": "to get settled and understand the space",
+          "keywords": [
+            "unpack essentials",
+            "set up utilities",
+            "taking it easy",
+            "no rush decorating"
+          ]
+        },
+        "entities": [
+          "unpack essentials",
+          "set up utilities",
+          "taking it easy",
+          "no rush decorating"
+        ],
+        "embedding_text": "User plans to take it easy for the first few weeks after moving into the new home, unpacking essentials and setting up utilities, without rushing into decorating or major changes.",
+        "source_message_ids": [
+          "11"
+        ],
+        "source_boundary_id": "11_0069",
+        "source_time": "2023-05-26 06:36:02",
+        "record_time": "2026-07-07T19:50:56.186424",
+        "score": 2.8646050993889878,
+        "score_components": {
+          "bm25_score": 2.8646050993889878,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "User is considering creating a series of watercolor pieces inspired by emotions from a hot air balloon ride, which was inspiration for the artist of 'Euphoria'.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "inspired by hot air balloon ride and Euphoria artist",
+          "purpose": "to create a watercolor series",
+          "keywords": [
+            "watercolor series",
+            "hot air balloon ride",
+            "Euphoria",
+            "artist inspiration"
+          ]
+        },
+        "entities": [
+          "watercolor series",
+          "hot air balloon ride",
+          "Euphoria",
+          "artist inspiration"
+        ],
+        "embedding_text": "User is considering creating a series of watercolor pieces inspired by emotions from a hot air balloon ride, which was inspiration for the artist of 'Euphoria'.",
+        "source_message_ids": [
+          "20"
+        ],
+        "source_boundary_id": "20_0144",
+        "source_time": "2023-05-30 22:48:02.500000",
+        "record_time": "2026-07-07T19:50:56.186937",
+        "score": 2.809493428649053,
+        "score_components": {
+          "bm25_score": 2.809493428649053,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "profile",
+        "content": "The user is researching consumer behavior and social media, specifically the effects of social media influencers on consumer purchasing decisions, with a focus on credibility, authenticity, and social identity.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "consumer behavior",
+            "social media influencers",
+            "credibility",
+            "authenticity",
+            "social identity",
+            "consumer purchasing decisions"
+          ]
+        },
+        "entities": [
+          "consumer behavior",
+          "social media influencers",
+          "credibility",
+          "authenticity",
+          "social identity",
+          "consumer purchasing decisions"
+        ],
+        "embedding_text": "The user is researching consumer behavior and social media, specifically the effects of social media influencers on consumer purchasing decisions, with a focus on credibility, authenticity, and social identity.",
+        "source_message_ids": [
+          "10"
+        ],
+        "source_boundary_id": "10_0064",
+        "source_time": "2023-05-25 06:48:00",
+        "record_time": "2026-07-07T19:50:56.186393",
+        "score": 2.6213137293403928,
+        "score_components": {
+          "bm25_score": 2.6213137293403928,
+          "bm25_k1": 1.2,
+          "bm25_b": 0.75,
+          "query_fields": [
+            "query_anchor",
+            "dimension.keywords"
+          ],
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose",
+            "dimension.keywords"
+          ]
+        }
+      }
+    ]
+  },
+  "structured": {
+    "mapped_query_analysis": {
+      "query_text": "the number of projects the user has led or is currently leading",
+      "rewrite": "the number of projects the user has led or is currently leading",
+      "intent": "lookup",
+      "answer_field": "content",
+      "content_query": "the number of projects the user has led or is currently leading",
+      "target_memory_types": [
+        "episodic",
+        "fact"
+      ],
+      "entities": [],
+      "constraints": {},
+      "keywords": [
+        "projects",
+        "led",
+        "leading"
+      ],
+      "canonical_text": "the number of projects the user has led or is currently leading"
+    },
+    "top_records": [
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "User has experience leading a data analysis team in a Marketing Research class project, where they performed a comprehensive market analysis for a new product launch.",
+        "dimension": {
+          "time": "",
+          "location": "Marketing Research class",
+          "reason": "",
+          "purpose": "to perform market analysis for a new product launch",
+          "keywords": [
+            "Marketing Research",
+            "data analysis team",
+            "market analysis",
+            "new product launch",
+            "experience"
+          ]
+        },
+        "entities": [
+          "Marketing Research",
+          "data analysis team",
+          "market analysis",
+          "new product launch",
+          "experience"
+        ],
+        "embedding_text": "User has experience leading a data analysis team in a Marketing Research class project, where they performed a comprehensive market analysis for a new product launch.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0011",
+        "source_time": "2023-05-20 23:58:04.500000",
+        "record_time": "2026-07-07T19:50:56.186076",
+        "score": 0.5555555555555556,
+        "structural_score": 0.5555555555555556,
+        "score_components": {
+          "score": 0.5555555555555556,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.3333333333333333,
+          "keyword_token_overlap_score": 0.3333333333333333,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.3333333333333333,
+            "keyword_token_overlap": 0.3333333333333333
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User has experience leading a data analysis team in a Marketing Research class project, where they performed a comprehensive market analysis for a new product launch. | Marketing Research | data analysis team | market analysis | new product launch | experience | Marketing Research class | to perform market analysis for a new product launch | Marketing Research | data analysis team | market analysis | new product launch | experience"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "User is planning to start a web design company and is researching how to set it up and price projects for large companies.",
+        "dimension": {
+          "time": "",
+          "location": "web design company",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "user",
+            "web design company",
+            "setup",
+            "pricing",
+            "large company"
+          ]
+        },
+        "entities": [
+          "user",
+          "web design company",
+          "setup",
+          "pricing",
+          "large company"
+        ],
+        "embedding_text": "User is planning to start a web design company and is researching how to set it up and price projects for large companies.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0013",
+        "source_time": "2023-05-21 22:09:00",
+        "record_time": "2026-07-07T19:50:56.186089",
+        "score": 0.5555555555555556,
+        "structural_score": 0.5555555555555556,
+        "score_components": {
+          "score": 0.5555555555555556,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.3333333333333333,
+          "keyword_token_overlap_score": 0.3333333333333333,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.3333333333333333,
+            "keyword_token_overlap": 0.3333333333333333
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is planning to start a web design company and is researching how to set it up and price projects for large companies. | user | web design company | setup | pricing | large company | web design company | user | web design company | setup | pricing | large company"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "The user has a good understanding of their team members' strengths and weaknesses from leading the team.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "from leading the team",
+          "purpose": "",
+          "keywords": [
+            "team strengths",
+            "team weaknesses",
+            "leadership experience"
+          ]
+        },
+        "entities": [
+          "team strengths",
+          "team weaknesses",
+          "leadership experience"
+        ],
+        "embedding_text": "The user has a good understanding of their team members' strengths and weaknesses from leading the team.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0103",
+        "source_time": "2023-05-28 03:42:01",
+        "record_time": "2026-07-07T19:50:56.186696",
+        "score": 0.5555555555555556,
+        "structural_score": 0.5555555555555556,
+        "score_components": {
+          "score": 0.5555555555555556,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.3333333333333333,
+          "keyword_token_overlap_score": 0.3333333333333333,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.3333333333333333,
+            "keyword_token_overlap": 0.3333333333333333
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user has a good understanding of their team members' strengths and weaknesses from leading the team. | team strengths | team weaknesses | leadership experience | from leading the team | team strengths | team weaknesses | leadership experience"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "User plans to take it easy for the first few weeks after moving into the new home, unpacking essentials and setting up utilities, without rushing into decorating or major changes.",
+        "dimension": {
+          "time": "",
+          "location": "new home",
+          "reason": "want to enjoy the new home and assess what works before making decisions",
+          "purpose": "to get settled and understand the space",
+          "keywords": [
+            "unpack essentials",
+            "set up utilities",
+            "taking it easy",
+            "no rush decorating"
+          ]
+        },
+        "entities": [
+          "unpack essentials",
+          "set up utilities",
+          "taking it easy",
+          "no rush decorating"
+        ],
+        "embedding_text": "User plans to take it easy for the first few weeks after moving into the new home, unpacking essentials and setting up utilities, without rushing into decorating or major changes.",
+        "source_message_ids": [
+          "11"
+        ],
+        "source_boundary_id": "11_0069",
+        "source_time": "2023-05-26 06:36:02",
+        "record_time": "2026-07-07T19:50:56.186424",
+        "score": 0.4444444444444445,
+        "structural_score": 0.4444444444444445,
+        "score_components": {
+          "score": 0.4444444444444445,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.3333333333333333,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.3333333333333333,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User plans to take it easy for the first few weeks after moving into the new home, unpacking essentials and setting up utilities, without rushing into decorating or major changes. | unpack essentials | set up utilities | taking it easy | no rush decorating | new home | want to enjoy the new home and assess what works before making decisions | to get settled and understand the space | unpack essentials | set up utilities | taking it easy | no rush decorating"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "User rearranged their living room furniture and created a cozy reading nook with an armchair and a floor lamp about three weeks before 2023-05-20.",
+        "dimension": {
+          "time": "2023-04-29",
+          "location": "living room",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "rearrange furniture",
+            "cozy reading nook",
+            "armchair",
+            "floor lamp"
+          ]
+        },
+        "entities": [
+          "rearrange furniture",
+          "cozy reading nook",
+          "armchair",
+          "floor lamp"
+        ],
+        "embedding_text": "User rearranged their living room furniture and created a cozy reading nook with an armchair and a floor lamp about three weeks before 2023-05-20.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0000",
+        "source_time": "2023-05-20 05:54:01",
+        "record_time": "2026-07-07T19:50:56.185991",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User rearranged their living room furniture and created a cozy reading nook with an armchair and a floor lamp about three weeks before 2023-05-20. | rearrange furniture | cozy reading nook | armchair | floor lamp | 2023-04-29 | living room | rearrange furniture | cozy reading nook | armchair | floor lamp"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "User replaced the table lamp on their coffee table with a new IKEA lamp that has a USB port, about two weekends before 2023-05-20.",
+        "dimension": {
+          "time": "2023-05-06",
+          "location": "living room",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "IKEA lamp",
+            "USB port",
+            "coffee table"
+          ]
+        },
+        "entities": [
+          "IKEA lamp",
+          "USB port",
+          "coffee table"
+        ],
+        "embedding_text": "User replaced the table lamp on their coffee table with a new IKEA lamp that has a USB port, about two weekends before 2023-05-20.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0001",
+        "source_time": "2023-05-20 05:54:01.500000",
+        "record_time": "2026-07-07T19:50:56.186006",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User replaced the table lamp on their coffee table with a new IKEA lamp that has a USB port, about two weekends before 2023-05-20. | IKEA lamp | USB port | coffee table | 2023-05-06 | living room | IKEA lamp | USB port | coffee table"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "User received throw pillows that match their rug and wallpaper on 2023-05-19.",
+        "dimension": {
+          "time": "2023-05-19",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "throw pillows",
+            "rug",
+            "wallpaper"
+          ]
+        },
+        "entities": [
+          "throw pillows",
+          "rug",
+          "wallpaper"
+        ],
+        "embedding_text": "User received throw pillows that match their rug and wallpaper on 2023-05-19.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0004",
+        "source_time": "2023-05-20 05:54:02.500000",
+        "record_time": "2026-07-07T19:50:56.186027",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User received throw pillows that match their rug and wallpaper on 2023-05-19. | throw pillows | rug | wallpaper | 2023-05-19 | throw pillows | rug | wallpaper"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "User lives near Shin-Okubo station on the JR Yamanote line in Tokyo.",
+        "dimension": {
+          "time": "",
+          "location": "Tokyo, near Shin-Okubo station",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Shin-Okubo station",
+            "JR Yamanote line",
+            "Tokyo"
+          ]
+        },
+        "entities": [
+          "Shin-Okubo station",
+          "JR Yamanote line",
+          "Tokyo"
+        ],
+        "embedding_text": "User lives near Shin-Okubo station on the JR Yamanote line in Tokyo.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0005",
+        "source_time": "2023-05-20 10:44:01.500000",
+        "record_time": "2026-07-07T19:50:56.186035",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User lives near Shin-Okubo station on the JR Yamanote line in Tokyo. | Shin-Okubo station | JR Yamanote line | Tokyo | Tokyo, near Shin-Okubo station | Shin-Okubo station | JR Yamanote line | Tokyo"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "User is looking for a casual, mid-range tonkatsu restaurant near their place in Tokyo, with no dietary restrictions.",
+        "dimension": {
+          "time": "",
+          "location": "near Shin-Okubo, Tokyo",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "tonkatsu",
+            "Tokyo",
+            "casual",
+            "mid-range"
+          ]
+        },
+        "entities": [
+          "tonkatsu",
+          "Tokyo",
+          "casual",
+          "mid-range"
+        ],
+        "embedding_text": "User is looking for a casual, mid-range tonkatsu restaurant near their place in Tokyo, with no dietary restrictions.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0006",
+        "source_time": "2023-05-20 10:44:00.500000",
+        "record_time": "2026-07-07T19:50:56.186041",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is looking for a casual, mid-range tonkatsu restaurant near their place in Tokyo, with no dietary restrictions. | tonkatsu | Tokyo | casual | mid-range | near Shin-Okubo, Tokyo | tonkatsu | Tokyo | casual | mid-range"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "User is interested in buying a snake plant for their apartment in Tokyo, which would be placed in a room with limited natural light.",
+        "dimension": {
+          "time": "",
+          "location": "apartment in Tokyo",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "snake plant",
+            "low-maintenance",
+            "indoor plant",
+            "limited natural light"
+          ]
+        },
+        "entities": [
+          "snake plant",
+          "low-maintenance",
+          "indoor plant",
+          "limited natural light"
+        ],
+        "embedding_text": "User is interested in buying a snake plant for their apartment in Tokyo, which would be placed in a room with limited natural light.",
+        "source_message_ids": [
+          "all_memories"
+        ],
+        "source_boundary_id": "all_memories_0007",
+        "source_time": "2023-05-20 10:44:02",
+        "record_time": "2026-07-07T19:50:56.186047",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is interested in buying a snake plant for their apartment in Tokyo, which would be placed in a room with limited natural light. | snake plant | low-maintenance | indoor plant | limited natural light | apartment in Tokyo | snake plant | low-maintenance | indoor plant | limited natural light"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "The user posted multiple-choice questions on anthropology, philosophy, psychology, and religious studies, including figures such as Frankl, Jung, Freud, Adler, Marx, Nietzsche, Comte, and references to Vatican documents and Einstein.",
+        "dimension": {
+          "time": "2023-05-20",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "multiple-choice questions",
+            "anthropology",
+            "philosophy",
+            "psychology",
+            "religious studies",
+            "Viktor Frankl",
+            "Carl Jung",
+            "Sigmund Freud",
+            "Alfred Adler",
+            "Karl Marx",
+            "Friedrich Nietzsche",
+            "Auguste Comte",
+            "Einstein",
+            "Vatican",
+            "Gaudium et Spes"
+          ]
+        },
+        "entities": [
+          "multiple-choice questions",
+          "anthropology",
+          "philosophy",
+          "psychology",
+          "religious studies",
+          "Viktor Frankl",
+          "Carl Jung",
+          "Sigmund Freud",
+          "Alfred Adler",
+          "Karl Marx",
+          "Friedrich Nietzsche",
+          "Auguste Comte",
+          "Einstein",
+          "Vatican",
+          "Gaudium et Spes"
+        ],
+        "embedding_text": "The user posted multiple-choice questions on anthropology, philosophy, psychology, and religious studies, including figures such as Frankl, Jung, Freud, Adler, Marx, Nietzsche, Comte, and references to Vatican documents and Einstein.",
+        "source_message_ids": [
+          "1"
+        ],
+        "source_boundary_id": "1_0008",
+        "source_time": "2023-05-20 23:58:00",
+        "record_time": "2026-07-07T19:50:56.186056",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user posted multiple-choice questions on anthropology, philosophy, psychology, and religious studies, including figures such as Frankl, Jung, Freud, Adler, Marx, Nietzsche, Comte, and references to Vatican documents and Einstein. | multiple-choice questions | anthropology | philosophy | psychology | religious studies | Viktor Frankl | Carl Jung | Sigmund Freud | Alfred Adler | Karl Marx | Friedrich Nietzsche | Auguste Comte | Einstein | Vatican | Gaudium et Spes | 2023-05-20 | multiple-choice questions | anthropology | philosophy | psychology | religious studies | Viktor Frankl | Carl Jung | Sigmund Freud | Alfred Adler | Karl Marx | Friedrich Nietzsche | Auguste Comte | Einstein | Vatican | Gaudium et Spes"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "User is planning a project in Nigeria to connect 100 rural villages to running water.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "Nigeria",
+          "reason": "",
+          "purpose": "to connect 100 rural villages to running water",
+          "keywords": [
+            "Nigeria",
+            "rural villages",
+            "running water",
+            "project"
+          ]
+        },
+        "entities": [
+          "Nigeria",
+          "rural villages",
+          "running water",
+          "project"
+        ],
+        "embedding_text": "User is planning a project in Nigeria to connect 100 rural villages to running water.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0009",
+        "source_time": "2023-05-20 23:58:03.500000",
+        "record_time": "2026-07-07T19:50:56.186063",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is planning a project in Nigeria to connect 100 rural villages to running water. | Nigeria | rural villages | running water | project | 2023-05-21 | Nigeria | to connect 100 rural villages to running water | Nigeria | rural villages | running water | project"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "User is working on a project analyzing customer data to identify trends and patterns, and is considering using clustering methods.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "",
+          "reason": "",
+          "purpose": "to identify trends and patterns in customer data",
+          "keywords": [
+            "customer data analysis",
+            "clustering",
+            "project"
+          ]
+        },
+        "entities": [
+          "customer data analysis",
+          "clustering",
+          "project"
+        ],
+        "embedding_text": "User is working on a project analyzing customer data to identify trends and patterns, and is considering using clustering methods.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0010",
+        "source_time": "2023-05-20 23:58:04",
+        "record_time": "2026-07-07T19:50:56.186069",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User is working on a project analyzing customer data to identify trends and patterns, and is considering using clustering methods. | customer data analysis | clustering | project | 2023-05-21 | to identify trends and patterns in customer data | customer data analysis | clustering | project"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "User has experience with data visualization from a Marketing Research class project where they created reports and presentations for stakeholders.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "user",
+            "data visualization",
+            "Marketing Research class project",
+            "reports",
+            "presentations",
+            "stakeholders"
+          ]
+        },
+        "entities": [
+          "user",
+          "data visualization",
+          "Marketing Research class project",
+          "reports",
+          "presentations",
+          "stakeholders"
+        ],
+        "embedding_text": "User has experience with data visualization from a Marketing Research class project where they created reports and presentations for stakeholders.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0012",
+        "source_time": "2023-05-21 19:38:02",
+        "record_time": "2026-07-07T19:50:56.186083",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "User has experience with data visualization from a Marketing Research class project where they created reports and presentations for stakeholders. | user | data visualization | Marketing Research class project | reports | presentations | stakeholders | user | data visualization | Marketing Research class project | reports | presentations | stakeholders"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "On 2023-05-23, user requested a scene where a drunk Wukong mocks Macaque and MK praying.",
+        "dimension": {
+          "time": "2023-05-23",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "user",
+            "drunk Wukong",
+            "mocking",
+            "Macaque",
+            "MK",
+            "praying scene"
+          ]
+        },
+        "entities": [
+          "user",
+          "drunk Wukong",
+          "mocking",
+          "Macaque",
+          "MK",
+          "praying scene"
+        ],
+        "embedding_text": "On 2023-05-23, user requested a scene where a drunk Wukong mocks Macaque and MK praying.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0015",
+        "source_time": "2023-05-23 08:52:00",
+        "record_time": "2026-07-07T19:50:56.186102",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "On 2023-05-23, user requested a scene where a drunk Wukong mocks Macaque and MK praying. | user | drunk Wukong | mocking | Macaque | MK | praying scene | 2023-05-23 | user | drunk Wukong | mocking | Macaque | MK | praying scene"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "On 2023-05-23, user requested a scene where MK watches Macaque experiment with his gradually returning powers and feels hope.",
+        "dimension": {
+          "time": "2023-05-23",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "user",
+            "MK",
+            "Macaque",
+            "powers returning",
+            "hope",
+            "experiment scene"
+          ]
+        },
+        "entities": [
+          "user",
+          "MK",
+          "Macaque",
+          "powers returning",
+          "hope",
+          "experiment scene"
+        ],
+        "embedding_text": "On 2023-05-23, user requested a scene where MK watches Macaque experiment with his gradually returning powers and feels hope.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0016",
+        "source_time": "2023-05-23 08:52:00.500000",
+        "record_time": "2026-07-07T19:50:56.186109",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "On 2023-05-23, user requested a scene where MK watches Macaque experiment with his gradually returning powers and feels hope. | user | MK | Macaque | powers returning | hope | experiment scene | 2023-05-23 | user | MK | Macaque | powers returning | hope | experiment scene"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "On 2023-05-23, user requested a scene where Wukong drags MK out of a cage, Macaque intervenes with unexpected magic, and MK is surprised but Macaque is not strong enough.",
+        "dimension": {
+          "time": "2023-05-23",
+          "location": "cage",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "user",
+            "Wukong",
+            "drags MK",
+            "cage",
+            "Macaque intervenes",
+            "magic",
+            "not enough"
+          ]
+        },
+        "entities": [
+          "user",
+          "Wukong",
+          "drags MK",
+          "cage",
+          "Macaque intervenes",
+          "magic",
+          "not enough"
+        ],
+        "embedding_text": "On 2023-05-23, user requested a scene where Wukong drags MK out of a cage, Macaque intervenes with unexpected magic, and MK is surprised but Macaque is not strong enough.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0017",
+        "source_time": "2023-05-23 08:52:01.500000",
+        "record_time": "2026-07-07T19:50:56.186115",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "On 2023-05-23, user requested a scene where Wukong drags MK out of a cage, Macaque intervenes with unexpected magic, and MK is surprised but Macaque is not strong enough. | user | Wukong | drags MK | cage | Macaque intervenes | magic | not enough | 2023-05-23 | cage | user | Wukong | drags MK | cage | Macaque intervenes | magic | not enough"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "The user plans to attend a painting workshop at the Local Artists' Co-op on the weekend starting 2023-05-27.",
+        "dimension": {
+          "time": "2023-05-27",
+          "location": "Local Artists' Co-op",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "painting workshop",
+            "Local Artists' Co-op"
+          ]
+        },
+        "entities": [
+          "painting workshop",
+          "Local Artists' Co-op"
+        ],
+        "embedding_text": "The user plans to attend a painting workshop at the Local Artists' Co-op on the weekend starting 2023-05-27.",
+        "source_message_ids": [
+          "4"
+        ],
+        "source_boundary_id": "4_0019",
+        "source_time": "2023-05-23 08:52:01.500000",
+        "record_time": "2026-07-07T19:50:56.186127",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to attend a painting workshop at the Local Artists' Co-op on the weekend starting 2023-05-27. | painting workshop | Local Artists' Co-op | 2023-05-27 | Local Artists' Co-op | painting workshop | Local Artists' Co-op"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "The user plans to meet Rachel for coffee before the painting workshop near the Local Artists' Co-op.",
+        "dimension": {
+          "time": "2023-05-27",
+          "location": "near Local Artists' Co-op",
+          "reason": "",
+          "purpose": "to have coffee before the workshop",
+          "keywords": [
+            "Rachel",
+            "coffee",
+            "Local Artists' Co-op"
+          ]
+        },
+        "entities": [
+          "Rachel",
+          "coffee",
+          "Local Artists' Co-op"
+        ],
+        "embedding_text": "The user plans to meet Rachel for coffee before the painting workshop near the Local Artists' Co-op.",
+        "source_message_ids": [
+          "4"
+        ],
+        "source_boundary_id": "4_0020",
+        "source_time": "2023-05-23 08:52:02",
+        "record_time": "2026-07-07T19:50:56.186132",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user plans to meet Rachel for coffee before the painting workshop near the Local Artists' Co-op. | Rachel | coffee | Local Artists' Co-op | 2023-05-27 | near Local Artists' Co-op | to have coffee before the workshop | Rachel | coffee | Local Artists' Co-op"
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "The user met Rachel at the Modern Art Museum on 2023-05-20 at the 'Women in Art' exhibition and exchanged numbers.",
+        "dimension": {
+          "time": "2023-05-20",
+          "location": "Modern Art Museum",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Rachel",
+            "Modern Art Museum",
+            "Women in Art exhibition"
+          ]
+        },
+        "entities": [
+          "Rachel",
+          "Modern Art Museum",
+          "Women in Art exhibition"
+        ],
+        "embedding_text": "The user met Rachel at the Modern Art Museum on 2023-05-20 at the 'Women in Art' exhibition and exchanged numbers.",
+        "source_message_ids": [
+          "4"
+        ],
+        "source_boundary_id": "4_0021",
+        "source_time": "2023-05-23 12:03:00",
+        "record_time": "2026-07-07T19:50:56.186138",
+        "score": 0.33333333333333337,
+        "structural_score": 0.33333333333333337,
+        "score_components": {
+          "score": 0.33333333333333337,
+          "answer_field_score": 1.0,
+          "memory_type_score": 1.0,
+          "time_constraint_score": 0.0,
+          "time_constraint_match": {
+            "score": 0.0,
+            "matched": false,
+            "mode": "",
+            "matched_constraints": [],
+            "record_time_spans": []
+          },
+          "location_constraint_score": 0.0,
+          "keyword_phrase_match_score": 0.0,
+          "keyword_token_overlap_score": 0.0,
+          "weights": {
+            "memory_type": 0.33333333333333337,
+            "keyword_phrase_match": 0.33333333333333337,
+            "keyword_token_overlap": 0.33333333333333337
+          },
+          "active_components": {
+            "memory_type": 1.0,
+            "keyword_phrase_match": 0.0,
+            "keyword_token_overlap": 0.0
+          },
+          "base_weights": {
+            "memory_type": 0.15,
+            "time_constraint": 0.3,
+            "location_constraint": 0.2,
+            "keyword_phrase_match": 0.15,
+            "keyword_token_overlap": 0.15
+          },
+          "query_fields": [
+            "dimension.time",
+            "dimension.location",
+            "dimension.target_memory_type",
+            "dimension.keywords",
+            "query_anchor"
+          ],
+          "memory_fields": [
+            "dimension.memory_type",
+            "dimension.time",
+            "dimension.location",
+            "dimension.keywords",
+            "content"
+          ],
+          "record_text": "The user met Rachel at the Modern Art Museum on 2023-05-20 at the 'Women in Art' exhibition and exchanged numbers. | Rachel | Modern Art Museum | Women in Art exhibition | 2023-05-20 | Modern Art Museum | Rachel | Modern Art Museum | Women in Art exhibition"
+        }
+      }
+    ]
+  },
+  "minilm": {
+    "mapped_query_analysis": {
+      "query_text": "the number of projects the user has led or is currently leading"
+    },
+    "top_records": [
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "The user will start the meeting by covering the project's goals and objectives, then move to discussing the project plan and task assignments.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "to ensure everyone understands goals before planning",
+          "keywords": [
+            "meeting agenda",
+            "goals and objectives",
+            "project plan",
+            "task assignments"
+          ]
+        },
+        "entities": [
+          "meeting agenda",
+          "goals and objectives",
+          "project plan",
+          "task assignments"
+        ],
+        "embedding_text": "The user will start the meeting by covering the project's goals and objectives, then move to discussing the project plan and task assignments.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0107",
+        "source_time": "2023-05-28 03:42:02.500000",
+        "record_time": "2026-07-07T19:50:56.186721",
+        "score": 0.4236935191100991,
+        "score_components": {
+          "dense_cosine_score": 0.4236935191100991,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "The user was promoted to senior software engineer approximately three months before May 28, 2023, and now leads a team of five engineers.",
+        "dimension": {
+          "time": "2023-02-28",
+          "location": "workplace",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "senior software engineer",
+            "promotion",
+            "team lead",
+            "five engineers"
+          ]
+        },
+        "entities": [
+          "senior software engineer",
+          "promotion",
+          "team lead",
+          "five engineers"
+        ],
+        "embedding_text": "The user was promoted to senior software engineer approximately three months before May 28, 2023, and now leads a team of five engineers.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0099",
+        "source_time": "2023-05-28 03:42:00",
+        "record_time": "2026-07-07T19:50:56.186673",
+        "score": 0.4166313056612134,
+        "score_components": {
+          "dense_cosine_score": 0.4166313056612134,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "The user plans to organize a meeting with the team to discuss the project plan and assign tasks, and wants to include junior engineer Alex.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "to discuss project plan and assign tasks",
+          "keywords": [
+            "meeting",
+            "team",
+            "project plan",
+            "task assignment",
+            "Alex"
+          ]
+        },
+        "entities": [
+          "meeting",
+          "team",
+          "project plan",
+          "task assignment",
+          "Alex"
+        ],
+        "embedding_text": "The user plans to organize a meeting with the team to discuss the project plan and assign tasks, and wants to include junior engineer Alex.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0104",
+        "source_time": "2023-05-28 03:42:01.500000",
+        "record_time": "2026-07-07T19:50:56.186703",
+        "score": 0.4041452304867498,
+        "score_components": {
+          "dense_cosine_score": 0.4041452304867498,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "The user previously completed a high-priority project two months ahead of schedule, which significantly increased company revenue.",
+        "dimension": {
+          "time": "",
+          "location": "workplace",
+          "reason": "",
+          "purpose": "to increase revenue",
+          "keywords": [
+            "high-priority project",
+            "ahead of schedule",
+            "company revenue increase"
+          ]
+        },
+        "entities": [
+          "high-priority project",
+          "ahead of schedule",
+          "company revenue increase"
+        ],
+        "embedding_text": "The user previously completed a high-priority project two months ahead of schedule, which significantly increased company revenue.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0101",
+        "source_time": "2023-05-28 03:42:00.500000",
+        "record_time": "2026-07-07T19:50:56.186685",
+        "score": 0.4040416300015657,
+        "score_components": {
+          "dense_cosine_score": 0.4040416300015657,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "User is planning to start a web design company and is researching how to set it up and price projects for large companies.",
+        "dimension": {
+          "time": "",
+          "location": "web design company",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "user",
+            "web design company",
+            "setup",
+            "pricing",
+            "large company"
+          ]
+        },
+        "entities": [
+          "user",
+          "web design company",
+          "setup",
+          "pricing",
+          "large company"
+        ],
+        "embedding_text": "User is planning to start a web design company and is researching how to set it up and price projects for large companies.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0013",
+        "source_time": "2023-05-21 22:09:00",
+        "record_time": "2026-07-07T19:50:56.186089",
+        "score": 0.3828214535094761,
+        "score_components": {
+          "dense_cosine_score": 0.3828214535094761,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "The user has a good understanding of their team members' strengths and weaknesses from leading the team.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "from leading the team",
+          "purpose": "",
+          "keywords": [
+            "team strengths",
+            "team weaknesses",
+            "leadership experience"
+          ]
+        },
+        "entities": [
+          "team strengths",
+          "team weaknesses",
+          "leadership experience"
+        ],
+        "embedding_text": "The user has a good understanding of their team members' strengths and weaknesses from leading the team.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0103",
+        "source_time": "2023-05-28 03:42:01",
+        "record_time": "2026-07-07T19:50:56.186696",
+        "score": 0.36639078279353077,
+        "score_components": {
+          "dense_cosine_score": 0.36639078279353077,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "The user plans to create a formal presentation with interactive visualizations (bar charts, scatter plots, heatmaps) to present data mining project findings.",
+        "dimension": {
+          "time": "2023-05-29",
+          "location": "",
+          "reason": "to present findings to professor and classmates",
+          "purpose": "to effectively communicate data mining project insights",
+          "keywords": [
+            "presentation",
+            "interactive visualizations",
+            "bar charts",
+            "scatter plots",
+            "heatmaps",
+            "data mining project"
+          ]
+        },
+        "entities": [
+          "presentation",
+          "interactive visualizations",
+          "bar charts",
+          "scatter plots",
+          "heatmaps",
+          "data mining project"
+        ],
+        "embedding_text": "The user plans to create a formal presentation with interactive visualizations (bar charts, scatter plots, heatmaps) to present data mining project findings.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0112",
+        "source_time": "2023-05-28 15:37:01.500000",
+        "record_time": "2026-07-07T19:50:56.186751",
+        "score": 0.3434581071442802,
+        "score_components": {
+          "dense_cosine_score": 0.3434581071442802,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "User is planning a project in Nigeria to connect 100 rural villages to running water.",
+        "dimension": {
+          "time": "2023-05-21",
+          "location": "Nigeria",
+          "reason": "",
+          "purpose": "to connect 100 rural villages to running water",
+          "keywords": [
+            "Nigeria",
+            "rural villages",
+            "running water",
+            "project"
+          ]
+        },
+        "entities": [
+          "Nigeria",
+          "rural villages",
+          "running water",
+          "project"
+        ],
+        "embedding_text": "User is planning a project in Nigeria to connect 100 rural villages to running water.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0009",
+        "source_time": "2023-05-20 23:58:03.500000",
+        "record_time": "2026-07-07T19:50:56.186063",
+        "score": 0.3147863749017727,
+        "score_components": {
+          "dense_cosine_score": 0.3147863749017727,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "The user plans to launch a new product feature in June 2023 and needs to create a project timeline.",
+        "dimension": {
+          "time": "2023-06",
+          "location": "workplace",
+          "reason": "",
+          "purpose": "to launch the new feature",
+          "keywords": [
+            "product feature launch",
+            "project timeline",
+            "June 2023"
+          ]
+        },
+        "entities": [
+          "product feature launch",
+          "project timeline",
+          "June 2023"
+        ],
+        "embedding_text": "The user plans to launch a new product feature in June 2023 and needs to create a project timeline.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0100",
+        "source_time": "2023-05-28 03:42:00",
+        "record_time": "2026-07-07T19:50:56.186679",
+        "score": 0.31263757990948127,
+        "score_components": {
+          "dense_cosine_score": 0.31263757990948127,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "User has experience leading a data analysis team in a Marketing Research class project, where they performed a comprehensive market analysis for a new product launch.",
+        "dimension": {
+          "time": "",
+          "location": "Marketing Research class",
+          "reason": "",
+          "purpose": "to perform market analysis for a new product launch",
+          "keywords": [
+            "Marketing Research",
+            "data analysis team",
+            "market analysis",
+            "new product launch",
+            "experience"
+          ]
+        },
+        "entities": [
+          "Marketing Research",
+          "data analysis team",
+          "market analysis",
+          "new product launch",
+          "experience"
+        ],
+        "embedding_text": "User has experience leading a data analysis team in a Marketing Research class project, where they performed a comprehensive market analysis for a new product launch.",
+        "source_message_ids": [
+          "2"
+        ],
+        "source_boundary_id": "2_0011",
+        "source_time": "2023-05-20 23:58:04.500000",
+        "record_time": "2026-07-07T19:50:56.186076",
+        "score": 0.275602739122516,
+        "score_components": {
+          "dense_cosine_score": 0.275602739122516,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "User has experience with data visualization from a Marketing Research class project where they created reports and presentations for stakeholders.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "user",
+            "data visualization",
+            "Marketing Research class project",
+            "reports",
+            "presentations",
+            "stakeholders"
+          ]
+        },
+        "entities": [
+          "user",
+          "data visualization",
+          "Marketing Research class project",
+          "reports",
+          "presentations",
+          "stakeholders"
+        ],
+        "embedding_text": "User has experience with data visualization from a Marketing Research class project where they created reports and presentations for stakeholders.",
+        "source_message_ids": [
+          "3"
+        ],
+        "source_boundary_id": "3_0012",
+        "source_time": "2023-05-21 19:38:02",
+        "record_time": "2026-07-07T19:50:56.186083",
+        "score": 0.25813838807907474,
+        "score_components": {
+          "dense_cosine_score": 0.25813838807907474,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "Alex is a junior engineer on the user's team who has been performing well under the user's guidance.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "Alex",
+            "junior engineer",
+            "mentorship",
+            "performance"
+          ]
+        },
+        "entities": [
+          "Alex",
+          "junior engineer",
+          "mentorship",
+          "performance"
+        ],
+        "embedding_text": "Alex is a junior engineer on the user's team who has been performing well under the user's guidance.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0105",
+        "source_time": "2023-05-28 03:42:01.500000",
+        "record_time": "2026-07-07T19:50:56.186709",
+        "score": 0.24711050731954926,
+        "score_components": {
+          "dense_cosine_score": 0.24711050731954926,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "The user's team previously applied to the Ethereum Foundation's Ecosystem Support Program (ESP) to host events during The Merge, hosting 3 events in 3 different cities for 80-100 people each.",
+        "dimension": {
+          "time": "2022-09 (The Merge)",
+          "location": "3 different cities (unspecified)",
+          "reason": "",
+          "purpose": "to host events during The Merge",
+          "keywords": [
+            "ESP application",
+            "The Merge",
+            "community events",
+            "80-100 attendees"
+          ]
+        },
+        "entities": [
+          "ESP application",
+          "The Merge",
+          "community events",
+          "80-100 attendees"
+        ],
+        "embedding_text": "The user's team previously applied to the Ethereum Foundation's Ecosystem Support Program (ESP) to host events during The Merge, hosting 3 events in 3 different cities for 80-100 people each.",
+        "source_message_ids": [
+          "12"
+        ],
+        "source_boundary_id": "12_0072",
+        "source_time": "2023-05-27 02:54:01.500000",
+        "record_time": "2026-07-07T19:50:56.186442",
+        "score": 0.23507349832063204,
+        "score_components": {
+          "dense_cosine_score": 0.23507349832063204,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "profile",
+        "content": "The user prefers soft, warm glow for living room lighting.",
+        "dimension": {
+          "time": "",
+          "location": "living room",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "soft warm glow",
+            "living room lighting"
+          ]
+        },
+        "entities": [
+          "soft warm glow",
+          "living room lighting"
+        ],
+        "embedding_text": "The user prefers soft, warm glow for living room lighting.",
+        "source_message_ids": [
+          "7"
+        ],
+        "source_boundary_id": "7_0054",
+        "source_time": "2023-05-24 17:05:00.500000",
+        "record_time": "2026-07-07T19:50:56.186333",
+        "score": 0.23413902759006555,
+        "score_components": {
+          "dense_cosine_score": 0.23413902759006555,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "User is a student.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "student"
+          ]
+        },
+        "entities": [
+          "student"
+        ],
+        "embedding_text": "User is a student.",
+        "source_message_ids": [
+          "18"
+        ],
+        "source_boundary_id": "18_0129",
+        "source_time": "2023-05-30 13:08:02.500000",
+        "record_time": "2026-07-07T19:50:56.186849",
+        "score": 0.23168143341700645,
+        "score_components": {
+          "dense_cosine_score": 0.23168143341700645,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "The user plans to attend a painting workshop at the Local Artists' Co-op on the weekend starting 2023-05-27.",
+        "dimension": {
+          "time": "2023-05-27",
+          "location": "Local Artists' Co-op",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "painting workshop",
+            "Local Artists' Co-op"
+          ]
+        },
+        "entities": [
+          "painting workshop",
+          "Local Artists' Co-op"
+        ],
+        "embedding_text": "The user plans to attend a painting workshop at the Local Artists' Co-op on the weekend starting 2023-05-27.",
+        "source_message_ids": [
+          "4"
+        ],
+        "source_boundary_id": "4_0019",
+        "source_time": "2023-05-23 08:52:01.500000",
+        "record_time": "2026-07-07T19:50:56.186127",
+        "score": 0.21046552247568562,
+        "score_components": {
+          "dense_cosine_score": 0.21046552247568562,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "The user and their partner are in the process of buying a new home; they started looking approximately three months ago and have found a place they are excited about, particularly the natural light in the living room.",
+        "dimension": {
+          "time": "2023-02-26",
+          "location": "",
+          "reason": "",
+          "purpose": "to have a living room with natural light",
+          "keywords": [
+            "buying a new home",
+            "natural light",
+            "living room",
+            "partner"
+          ]
+        },
+        "entities": [
+          "buying a new home",
+          "natural light",
+          "living room",
+          "partner"
+        ],
+        "embedding_text": "The user and their partner are in the process of buying a new home; they started looking approximately three months ago and have found a place they are excited about, particularly the natural light in the living room.",
+        "source_message_ids": [
+          "10"
+        ],
+        "source_boundary_id": "10_0065",
+        "source_time": "2023-05-25 06:48:00.500000",
+        "record_time": "2026-07-07T19:50:56.186399",
+        "score": 0.2078886828543159,
+        "score_components": {
+          "dense_cosine_score": 0.2078886828543159,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "profile",
+        "content": "User has a long-term interest in watercolor painting and is actively seeking art supplies and techniques.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "",
+          "keywords": [
+            "user",
+            "watercolor painting",
+            "art supplies",
+            "techniques"
+          ]
+        },
+        "entities": [
+          "user",
+          "watercolor painting",
+          "art supplies",
+          "techniques"
+        ],
+        "embedding_text": "User has a long-term interest in watercolor painting and is actively seeking art supplies and techniques.",
+        "source_message_ids": [
+          "20"
+        ],
+        "source_boundary_id": "20_0139",
+        "source_time": "2023-05-30 22:48:00",
+        "record_time": "2026-07-07T19:50:56.186908",
+        "score": 0.20356783086364164,
+        "score_components": {
+          "dense_cosine_score": 0.20356783086364164,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "fact",
+        "content": "The user is a student working on a solo Data Mining class project using customer purchase data.",
+        "dimension": {
+          "time": "2023-05-29",
+          "location": "",
+          "reason": "for a Data Mining class project",
+          "purpose": "to identify patterns and trends in customer purchase data",
+          "keywords": [
+            "Data Mining class",
+            "student",
+            "solo project",
+            "customer purchase data"
+          ]
+        },
+        "entities": [
+          "Data Mining class",
+          "student",
+          "solo project",
+          "customer purchase data"
+        ],
+        "embedding_text": "The user is a student working on a solo Data Mining class project using customer purchase data.",
+        "source_message_ids": [
+          "16"
+        ],
+        "source_boundary_id": "16_0110",
+        "source_time": "2023-05-28 15:37:00.500000",
+        "record_time": "2026-07-07T19:50:56.186739",
+        "score": 0.20084314235218043,
+        "score_components": {
+          "dense_cosine_score": 0.20084314235218043,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      },
+      {
+        "user_id": "0021_6d550036",
+        "memory_type": "episodic",
+        "content": "The user plans to use Asana for creating a Gantt chart for the new product feature project.",
+        "dimension": {
+          "time": "",
+          "location": "",
+          "reason": "",
+          "purpose": "to create a Gantt chart",
+          "keywords": [
+            "Asana",
+            "Gantt chart"
+          ]
+        },
+        "entities": [
+          "Asana",
+          "Gantt chart"
+        ],
+        "embedding_text": "The user plans to use Asana for creating a Gantt chart for the new product feature project.",
+        "source_message_ids": [
+          "15"
+        ],
+        "source_boundary_id": "15_0102",
+        "source_time": "2023-05-28 03:42:00.500000",
+        "record_time": "2026-07-07T19:50:56.186691",
+        "score": 0.1992442848128339,
+        "score_components": {
+          "dense_cosine_score": 0.1992442848128339,
+          "query_field": "query_anchor",
+          "memory_fields": [
+            "content",
+            "dimension.reason",
+            "dimension.purpose"
+          ]
+        }
+      }
+    ]
+  }
+}

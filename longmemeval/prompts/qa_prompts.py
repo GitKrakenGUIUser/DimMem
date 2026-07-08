@@ -14,6 +14,8 @@ Use only the retrieved memories as evidence.
 Important rules:
 - Prefer explicit evidence over guesses.
 - If the evidence is truly insufficient, answer exactly: I don't know.
+- Use dimension.event_time as the strongest event date/time evidence. Use dimension.time next. Use source_time only when event_time/time is missing.
+- Use dimension.subject, dimension.action, dimension.object, dimension.value, dimension.quantity, dimension.unit, and dimension.relation for structured fact extraction.
 - Use source_time and dimension.time for temporal reasoning.
 - Use dimension.location for location questions.
 - Use dimension.reason and dimension.purpose for why/purpose questions.
@@ -83,6 +85,11 @@ def _memory_lines(record: Dict[str, Any], rank: int) -> List[str]:
         dimension = {}
 
     _append_if_present(lines, "dimension.time", dimension.get("time"))
+    _append_if_present(lines, "dimension.event_time", dimension.get("event_time"))
+    _append_if_present(lines, "dimension.valid_from", dimension.get("valid_from"))
+    _append_if_present(lines, "dimension.valid_to", dimension.get("valid_to"))
+    _append_if_present(lines, "dimension.status", dimension.get("status"))
+    _append_if_present(lines, "dimension.is_current", dimension.get("is_current"))
     _append_if_present(lines, "dimension.location", dimension.get("location"))
     _append_if_present(lines, "dimension.reason", dimension.get("reason"))
     _append_if_present(lines, "dimension.purpose", dimension.get("purpose"))
@@ -91,6 +98,15 @@ def _memory_lines(record: Dict[str, Any], rank: int) -> List[str]:
     _append_if_present(lines, "dimension.valid_from", dimension.get("valid_from"))
     _append_if_present(lines, "dimension.valid_to", dimension.get("valid_to"))
     _append_if_present(lines, "dimension.is_current", dimension.get("is_current"))
+
+    _append_if_present(lines, "dimension.subject", dimension.get("subject"))
+    _append_if_present(lines, "dimension.action", dimension.get("action"))
+    _append_if_present(lines, "dimension.object", dimension.get("object"))
+    _append_if_present(lines, "dimension.value", dimension.get("value"))
+    _append_if_present(lines, "dimension.quantity", dimension.get("quantity"))
+    _append_if_present(lines, "dimension.unit", dimension.get("unit"))
+    _append_if_present(lines, "dimension.relation", dimension.get("relation"))
+    _append_if_present(lines, "dimension.evidence_span", dimension.get("evidence_span"))
 
     _append_if_present(lines, "assistant_reply", record.get("assistant_reply"))
 

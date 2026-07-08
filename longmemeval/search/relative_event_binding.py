@@ -53,9 +53,21 @@ def _record_text(record: Dict[str, Any]) -> str:
         record.get("source_time", ""),
         record.get("assistant_reply", ""),
         dim.get("time", ""),
+        dim.get("event_time", ""),
+        dim.get("valid_from", ""),
+        dim.get("valid_to", ""),
+        dim.get("status", ""),
         dim.get("location", ""),
         dim.get("reason", ""),
         dim.get("purpose", ""),
+        dim.get("subject", ""),
+        dim.get("action", ""),
+        dim.get("object", ""),
+        dim.get("value", ""),
+        dim.get("quantity", ""),
+        dim.get("unit", ""),
+        dim.get("relation", ""),
+        dim.get("evidence_span", ""),
         " ".join(_as_list(dim.get("keywords"))),
     ]
     return " ".join(_clean(x) for x in parts if _clean(x))
@@ -178,7 +190,12 @@ def _candidate_score(
         if c in query_tokens and c in record_tokens:
             category_bonus += 0.12
 
-    cand_time = _parse_dt(record.get("source_time") or _dimension(record).get("time"))
+    dim_for_time = _dimension(record)
+    cand_time = _parse_dt(
+        dim_for_time.get("event_time")
+        or dim_for_time.get("time")
+        or record.get("source_time")
+    )
     relation_score = 0.0
     relation_label = "unknown"
 
@@ -324,7 +341,11 @@ def apply_relative_event_binding(
         return records
 
     anchor_times = [
-        _parse_dt(r.get("source_time") or _dimension(r).get("time"))
+        _parse_dt(
+            _dimension(r).get("event_time")
+            or _dimension(r).get("time")
+            or r.get("source_time")
+        )
         for r in anchors
     ]
     anchor_times = [t for t in anchor_times if t is not None]

@@ -109,18 +109,56 @@ def load_records(memory_dir: Path) -> List[Dict[str, Any]]:
                     source_time = datetime.fromisoformat(source_time_str)
                 except ValueError:
                     pass
-            record = {
-                "user_id": memory_dir.name,
-                "memory_type": dimension_model.memory_type or "other",
-                "content": _clean(row.get("content")),
-                "dimension": dimension_model.to_dict(include_memory_type=False),
-                "entities": keywords,
-                "embedding_text": _clean(row.get("content")),
-                "source_message_ids": [window_name],
-                "source_boundary_id": f"{window_name}_{idx:04d}",
-                "source_time": source_time,
-                "record_time": datetime.now().isoformat(),
-            }
+            content = _clean(row.get("content"))
+
+                            # P3 extraction schema support:
+                            # Put event/value/relation/action fields into both retrieval entities
+                            # and embedding_text so BM25/structured/dense search can use them.
+                            schema_terms = [
+                                getattr(dimension_model, "event_time", ""),
+                                getattr(dimension_model, "valid_from", ""),
+                                getattr(dimension_model, "valid_to", ""),
+                                getattr(dimension_model, "status", ""),
+                                getattr(dimension_model, "subject", ""),
+                                getattr(dimension_model, "action", ""),
+                                getattr(dimension_model, "object", ""),
+                                getattr(dimension_model, "value", ""),
+                                getattr(dimension_model, "quantity", ""),
+                                getattr(dimension_model, "unit", ""),
+                                getattr(dimension_model, "relation", ""),
+                                getattr(dimension_model, "evidence_span", ""),
+                            ]
+
+                            try:
+                                embedding_text = dimension_model.searchable_text(include_content=content)
+                            except AttributeError:
+                                # Backward-compatible fallback if models/memory.py has not been updated yet.
+                                embedding_text = " | ".join(
+                                    part
+                                    for part in [
+                                        content,
+                                        getattr(dimension_model, "time", ""),
+                                        getattr(dimension_model, "location", ""),
+                                        getattr(dimension_model, "reason", ""),
+                                        getattr(dimension_model, "purpose", ""),
+                                        " ".join(getattr(dimension_model, "keywords", []) or []),
+                                        *schema_terms,
+                                    ]
+                                    if _clean(part)
+                                )
+
+                            record = {
+                                "user_id": memory_dir.name,
+                                "memory_type": dimension_model.memory_type or "other",
+                                "content": content,
+                                "dimension": dimension_model.to_dict(include_memory_type=False),
+                                "entities": _string_list(list(keywords) + schema_terms),
+                                "embedding_text": embedding_text,
+                                "source_message_ids": [window_name],
+                                "source_boundary_id": f"{window_name}_{idx:04d}",
+                                "source_time": source_time,
+                                "record_time": datetime.now().isoformat(),
+                            }
             records.append(record)
     return records
 

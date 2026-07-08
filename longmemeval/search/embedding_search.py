@@ -45,13 +45,9 @@ def search_embedding(
     record_texts = []
     for record in records:
         dimension = DimensionMemory.from_dict(record.get("dimension"))
-        text = " ".join(
-            [
-                _clean(record.get("content")),
-                dimension.reason,
-                dimension.purpose,
-            ]
-        ).strip()
+        text = _clean(record.get("embedding_text")) or dimension.searchable_text(
+            include_content=_clean(record.get("content"))
+        )
         record_texts.append(text)
 
     try:

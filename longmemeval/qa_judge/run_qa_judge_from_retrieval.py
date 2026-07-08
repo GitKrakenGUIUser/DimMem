@@ -114,14 +114,25 @@ def _filter_record(record: Dict[str, Any]) -> Dict[str, Any]:
 
     dimension_fields = [
         "time",
+        "event_time",
+        "valid_from",
+        "valid_to",
+        "status",
+        "is_current",
         "location",
         "reason",
         "purpose",
         "keywords",
-        "status",
-        "valid_from",
-        "valid_to",
-        "is_current",
+
+        "subject",
+        "action",
+        "object",
+        "value",
+        "quantity",
+        "unit",
+        "relation",
+        "evidence_span",
+
         "supersedes",
     ]
 

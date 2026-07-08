@@ -71,10 +71,11 @@ def _safe_ratio(numerator: float, denominator: float) -> float:
 
 def _record_text(record: Dict[str, Any]) -> str:
     dimension = DimensionMemory.from_dict(record.get("dimension"))
-    parts = [_clean(record.get("content"))]
+    parts = [
+        _clean(record.get("embedding_text")),
+        dimension.searchable_text(include_content=_clean(record.get("content"))),
+    ]
     parts.extend(_clean(x) for x in (record.get("entities") or []) if _clean(x))
-    parts.extend([dimension.time, dimension.location, dimension.reason, dimension.purpose])
-    parts.extend(dimension.keywords)
     return " | ".join(part for part in parts if part)
 
 

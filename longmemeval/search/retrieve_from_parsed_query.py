@@ -37,6 +37,14 @@ from search.assistant_reply_search import (
     search_assistant_replies,
     should_search_assistant_replies,
 )
+from search.assistant_pair_search import (
+    search_assistant_pairs,
+    should_search_assistant_pairs,
+)
+from search.structured_task_reader import (
+    apply_structured_task_reader,
+    structured_task_reader_stats,
+)
 from search.relative_event_binding import (
     apply_relative_event_binding,
     relative_event_stats,
@@ -325,12 +333,29 @@ def run_retrieval(
         ranked = assistant_reply_hits + ranked
         top_records = assistant_reply_hits + top_records
 
+    # P4: assistant pair search route.
+    assistant_pair_hits = search_assistant_pairs(
+        parsed_query=parsed_query,
+        memory_dir=memory_dir,
+        top_k=top_k,
+    )
+    if assistant_pair_hits:
+        ranked = assistant_pair_hits + ranked
+        top_records = assistant_pair_hits + top_records
+
     # P22 + P3: relative-event binding.
     # P3 relative_event_binding.py should prefer dimension.event_time over source_time.
     ranked = apply_relative_event_binding(
         parsed_query=parsed_query,
         records=ranked,
         final_top_k=max(top_k * 3, final_top_k * 2),
+    )
+
+    # P4: structured task reader hint before rerank.
+    ranked = apply_structured_task_reader(
+        parsed_query=parsed_query,
+        records=ranked,
+        final_top_k=final_top_k,
     )
 
     if enable_rerank:
@@ -398,8 +423,11 @@ def run_retrieval(
         "enable_assistant_context": enable_assistant_context,
         "assistant_reply_search_hit_count": len(assistant_reply_hits),
         "assistant_reply_search_enabled": should_search_assistant_replies(parsed_query),
+        "assistant_pair_search_hit_count": len(assistant_pair_hits),
+        "assistant_pair_search_enabled": should_search_assistant_pairs(parsed_query),
         "assistant_context_stats_final": assistant_context_stats(top_records),
         "relative_event_stats_final": relative_event_stats(top_records),
+        "structured_task_reader_stats_final": structured_task_reader_stats(top_records),
         "output_dir": str(run_dir),
         "top_records": [
             {
@@ -419,6 +447,8 @@ def run_retrieval(
                 "has_assistant_reply": bool(_clean(row.get("assistant_reply"))),
                 "assistant_debug": row.get("_assistant_context_debug"),
                 "assistant_reply_search": row.get("_assistant_reply_search"),
+                "assistant_pair_search": row.get("_assistant_pair_search"),
+                "structured_task_reader": row.get("_structured_task_reader"),
                 "relative_event_binding": row.get("_relative_event_binding"),
                 "score_components": row.get("score_components"),
                 "dimension": row.get("dimension"),

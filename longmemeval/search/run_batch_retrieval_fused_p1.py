@@ -38,6 +38,14 @@ from search.assistant_reply_search import (
     search_assistant_replies,
     should_search_assistant_replies,
 )
+from search.assistant_pair_search import (
+    search_assistant_pairs,
+    should_search_assistant_pairs,
+)
+from search.structured_task_reader import (
+    apply_structured_task_reader,
+    structured_task_reader_stats,
+)
 from search.relative_event_binding import (
     apply_relative_event_binding,
     relative_event_stats,
@@ -216,6 +224,8 @@ def _brief_top_records(records: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
                 "has_assistant_reply": bool(_clean(row.get("assistant_reply"))),
                 "assistant_debug": row.get("_assistant_context_debug"),
                 "assistant_reply_search": row.get("_assistant_reply_search"),
+                "assistant_pair_search": row.get("_assistant_pair_search"),
+                "structured_task_reader": row.get("_structured_task_reader"),
                 "relative_event_binding": row.get("_relative_event_binding"),
                 "fusion_sources": row.get("fusion_sources"),
                 "score_components": row.get("score_components"),
@@ -287,12 +297,30 @@ def run_one_case(
         all_ranked = assistant_reply_hits + all_ranked
         fused_top_records = assistant_reply_hits + fused_top_records
 
+    # P4: assistant pair search route.
+    # Uses previous_user_message + assistant_reply from assistant_pair_index.json.
+    assistant_pair_hits = search_assistant_pairs(
+        parsed_query=parsed_query,
+        memory_dir=memory_dir,
+        top_k=route_top_k,
+    )
+    if assistant_pair_hits:
+        all_ranked = assistant_pair_hits + all_ranked
+        fused_top_records = assistant_pair_hits + fused_top_records
+
     # P2.2: relative-event binding for questions like
     # "before/after getting X". This enriches records and adds a derived binding hint.
     all_ranked = apply_relative_event_binding(
         parsed_query=parsed_query,
         records=all_ranked,
         final_top_k=max(route_top_k * 3, final_top_k * 2),
+    )
+
+    # P4: structured task reader hint before rerank.
+    all_ranked = apply_structured_task_reader(
+        parsed_query=parsed_query,
+        records=all_ranked,
+        final_top_k=final_top_k,
     )
 
     if enable_rerank:
@@ -352,9 +380,13 @@ def run_one_case(
             1 for row in final_top_records if _clean(row.get("assistant_reply"))
         ),
         "assistant_reply_search_hit_count": len(assistant_reply_hits),
+        "assistant_pair_search_hit_count": len(assistant_pair_hits),
         "assistant_reply_search_enabled": should_search_assistant_replies(parsed_query),
+        "assistant_pair_search_hit_count": len(assistant_pair_hits),
+        "assistant_pair_search_enabled": should_search_assistant_pairs(parsed_query),
         "assistant_context_stats_final": assistant_context_stats(final_top_records),
         "relative_event_stats_final": relative_event_stats(final_top_records),
+        "structured_task_reader_stats_final": structured_task_reader_stats(final_top_records),
         "output_dir": str(run_dir),
         "top_records": _brief_top_records(final_top_records),
         "elapsed_seconds": time.time() - started,
